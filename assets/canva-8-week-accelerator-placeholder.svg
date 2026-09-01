@@ -1,0 +1,29 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Eight-week enablement accelerator architecture placeholder</title>
+  <desc id="desc">A Canva-ready placeholder showing an eight-week enablement accelerator from diagnosis through scale.</desc>
+  <defs>
+    <pattern id="grain" width="12" height="12" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#ffffff" opacity=".07"/></pattern>
+  </defs>
+  <rect width="1200" height="760" fill="#101010"/>
+  <rect width="1200" height="760" fill="url(#grain)"/>
+  <text x="64" y="74" fill="#d9ef67" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" letter-spacing="3">CANVA SLOT 02 / 1200 × 760</text>
+  <text x="64" y="132" fill="#ffffff" font-family="Georgia, serif" font-size="50">Eight weeks from friction to field.</text>
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="64" y="206" fill="#f26745" font-size="13" font-weight="700" letter-spacing="2">PHASE 01 / DIAGNOSE</text>
+    <text x="344" y="206" fill="#d9ef67" font-size="13" font-weight="700" letter-spacing="2">PHASE 02 / BUILD</text>
+    <text x="904" y="206" fill="#f26745" font-size="13" font-weight="700" letter-spacing="2">PHASE 03 / SCALE</text>
+    <g font-size="18" font-weight="700" text-anchor="middle">
+      <rect x="64" y="238" width="126" height="210" fill="#3144d8" stroke="#ffffff" stroke-width="2"/><text x="127" y="290" fill="#d9ef67" font-size="13">WEEK 01</text><text x="127" y="345" fill="#ffffff">Align</text><text x="127" y="374" fill="#ffffff">+ audit</text>
+      <rect x="204" y="238" width="126" height="210" fill="#4053df" stroke="#ffffff" stroke-width="2"/><text x="267" y="290" fill="#d9ef67" font-size="13">WEEK 02</text><text x="267" y="345" fill="#ffffff">Map</text><text x="267" y="374" fill="#ffffff">gaps</text>
+      <rect x="344" y="238" width="126" height="210" fill="#d9ef67" stroke="#ffffff" stroke-width="2"/><text x="407" y="290" fill="#3144d8" font-size="13">WEEK 03</text><text x="407" y="345" fill="#141414">Design</text><text x="407" y="374" fill="#141414">system</text>
+      <rect x="484" y="238" width="126" height="210" fill="#e4f58c" stroke="#ffffff" stroke-width="2"/><text x="547" y="290" fill="#3144d8" font-size="13">WEEK 04</text><text x="547" y="345" fill="#141414">Build</text><text x="547" y="374" fill="#141414">assets</text>
+      <rect x="624" y="238" width="126" height="210" fill="#f26745" stroke="#ffffff" stroke-width="2"/><text x="687" y="290" fill="#141414" font-size="13">WEEK 05</text><text x="687" y="345" fill="#141414">Practice</text><text x="687" y="374" fill="#141414">+ coach</text>
+      <rect x="764" y="238" width="126" height="210" fill="#ff8668" stroke="#ffffff" stroke-width="2"/><text x="827" y="290" fill="#141414" font-size="13">WEEK 06</text><text x="827" y="345" fill="#141414">Pilot</text><text x="827" y="374" fill="#141414">+ prove</text>
+      <rect x="904" y="238" width="126" height="210" fill="#3144d8" stroke="#ffffff" stroke-width="2"/><text x="967" y="290" fill="#d9ef67" font-size="13">WEEK 07</text><text x="967" y="345" fill="#ffffff">Launch</text><text x="967" y="374" fill="#ffffff">field</text>
+      <rect x="1044" y="238" width="92" height="210" fill="#f1ece3" stroke="#ffffff" stroke-width="2"/><text x="1090" y="290" fill="#3144d8" font-size="13">WEEK 08</text><text x="1090" y="345" fill="#141414">Scale</text><text x="1090" y="374" fill="#141414">+ tune</text>
+    </g>
+    <path d="M64 506h1072" stroke="#d9ef67" stroke-width="4"/><path d="M1136 506l-24-17v34z" fill="#d9ef67"/>
+    <g fill="#ffffff" font-size="16"><text x="64" y="560">Executive alignment</text><text x="366" y="560">Role-based capability</text><text x="672" y="560">Observed practice</text><text x="950" y="560">Performance telemetry</text></g>
+    <text x="64" y="708" fill="#9f9f9f" font-size="14">Replace this SVG with the final Canva export using the same filename.</text>
+  </g>
+</svg>

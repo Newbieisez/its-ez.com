@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">KPI impact metrics background placeholder</title>
+  <desc id="desc">An abstract Canva-ready background for the KPI metrics card.</desc>
+  <defs>
+    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3144d8"/><stop offset="1" stop-color="#101010"/></linearGradient>
+    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse"><path d="M60 0H0v60" fill="none" stroke="#ffffff" stroke-opacity=".09"/></pattern>
+  </defs>
+  <rect width="1200" height="760" fill="url(#blue)"/>
+  <rect width="1200" height="760" fill="url(#grid)"/>
+  <circle cx="1000" cy="120" r="260" fill="#f26745" opacity=".9"/>
+  <circle cx="1000" cy="120" r="150" fill="#d9ef67" opacity=".95"/>
+  <path d="M0 650C230 510 370 710 610 554S960 470 1200 320V760H0Z" fill="#101010" opacity=".72"/>
+  <text x="64" y="74" fill="#d9ef67" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" letter-spacing="3">CANVA SLOT 03 / BACKGROUND</text>
+  <text x="64" y="708" fill="#ffffff" opacity=".7" font-family="Arial, Helvetica, sans-serif" font-size="14">Replace this SVG with the final Canva export using the same filename; HTML metrics remain live.</text>
+</svg>

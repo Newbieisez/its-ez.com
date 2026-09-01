@@ -1,0 +1,61 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Enterprise enablement playbook framework</title>
+  <desc id="desc">A sanitized field playbook framework connecting diagnose, learn, practice, prove, perform, and measure.</desc>
+  <defs>
+    <pattern id="dots" width="14" height="14" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#141414" opacity=".09"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="760" fill="#f1ece3"/>
+  <rect width="1200" height="760" fill="url(#dots)"/>
+  <rect x="50" y="50" width="1100" height="660" fill="#fbf9f4" stroke="#141414" stroke-width="3"/>
+  <rect x="50" y="50" width="1100" height="84" fill="#101010"/>
+  <text x="82" y="86" fill="#d9ef67" font-family="Arial, Helvetica, sans-serif" font-size="14" font-weight="700" letter-spacing="3">SENTINELONE / TWILIO — SANITIZED PORTFOLIO VIEW</text>
+  <text x="82" y="116" fill="#ffffff" font-family="Arial, Helvetica, sans-serif" font-size="24" font-weight="700">Field Enablement Playbook</text>
+
+  <g font-family="Arial, Helvetica, sans-serif">
+    <text x="82" y="186" fill="#3144d8" font-size="13" font-weight="700" letter-spacing="2">OPERATING LOOP</text>
+    <g font-size="17" font-weight="700" text-anchor="middle">
+      <rect x="82" y="212" width="152" height="76" fill="#3144d8" stroke="#141414" stroke-width="2"/>
+      <text x="158" y="257" fill="#ffffff">DIAGNOSE</text>
+      <rect x="252" y="212" width="152" height="76" fill="#4053df" stroke="#141414" stroke-width="2"/>
+      <text x="328" y="257" fill="#ffffff">LEARN</text>
+      <rect x="422" y="212" width="152" height="76" fill="#d9ef67" stroke="#141414" stroke-width="2"/>
+      <text x="498" y="257" fill="#141414">PRACTICE</text>
+      <rect x="592" y="212" width="152" height="76" fill="#f26745" stroke="#141414" stroke-width="2"/>
+      <text x="668" y="257" fill="#141414">PROVE</text>
+      <rect x="762" y="212" width="152" height="76" fill="#101010" stroke="#141414" stroke-width="2"/>
+      <text x="838" y="257" fill="#ffffff">PERFORM</text>
+      <rect x="932" y="212" width="152" height="76" fill="#f1ece3" stroke="#141414" stroke-width="2"/>
+      <text x="1008" y="257" fill="#141414">MEASURE</text>
+    </g>
+
+    <text x="82" y="350" fill="#3144d8" font-size="13" font-weight="700" letter-spacing="2">FIELD MOMENT → ASSET → SIGNAL</text>
+    <g font-size="16">
+      <rect x="82" y="378" width="300" height="218" fill="#ffffff" stroke="#141414" stroke-width="2"/>
+      <text x="108" y="416" fill="#f26745" font-size="12" font-weight="700" letter-spacing="2">01 / MOMENT</text>
+      <text x="108" y="456" fill="#141414" font-size="24" font-weight="700">What must change?</text>
+      <line x1="108" y1="478" x2="356" y2="478" stroke="#141414"/>
+      <text x="108" y="516" fill="#141414">New-hire ramp</text>
+      <text x="108" y="548" fill="#141414">Discovery + qualification</text>
+      <text x="108" y="580" fill="#141414">Partner-led opportunity</text>
+
+      <rect x="450" y="378" width="300" height="218" fill="#d9ef67" stroke="#141414" stroke-width="2"/>
+      <text x="476" y="416" fill="#3144d8" font-size="12" font-weight="700" letter-spacing="2">02 / ASSET</text>
+      <text x="476" y="456" fill="#141414" font-size="24" font-weight="700">What enables it?</text>
+      <line x1="476" y1="478" x2="724" y2="478" stroke="#141414"/>
+      <text x="476" y="516" fill="#141414">Role-based learning</text>
+      <text x="476" y="548" fill="#141414">Manager coaching guide</text>
+      <text x="476" y="580" fill="#141414">Practice + certification</text>
+
+      <rect x="818" y="378" width="266" height="218" fill="#3144d8" stroke="#141414" stroke-width="2"/>
+      <text x="844" y="416" fill="#d9ef67" font-size="12" font-weight="700" letter-spacing="2">03 / SIGNAL</text>
+      <text x="844" y="456" fill="#ffffff" font-size="24" font-weight="700">How do we know?</text>
+      <line x1="844" y1="478" x2="1058" y2="478" stroke="#ffffff"/>
+      <text x="844" y="516" fill="#ffffff">Readiness</text>
+      <text x="844" y="548" fill="#ffffff">Behavior adoption</text>
+      <text x="844" y="580" fill="#ffffff">Pipeline + revenue</text>
+    </g>
+    <text x="82" y="662" fill="#706d66" font-size="14">Representative framework. Client-confidential content and data have been removed.</text>
+  </g>
+</svg>

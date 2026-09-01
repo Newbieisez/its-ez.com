@@ -1,0 +1,67 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">GPT prompt architecture</title>
+  <desc id="desc">A five-layer prompt architecture moving from business outcome through context, instructions, guardrails, and an evaluation loop.</desc>
+  <defs>
+    <filter id="shadow" x="-10%" y="-10%" width="120%" height="130%">
+      <feDropShadow dx="8" dy="8" stdDeviation="0" flood-color="#141414" flood-opacity="1"/>
+    </filter>
+    <pattern id="grain" width="12" height="12" patternUnits="userSpaceOnUse">
+      <circle cx="2" cy="2" r="1" fill="#141414" opacity=".08"/>
+    </pattern>
+  </defs>
+  <rect width="1200" height="760" fill="#fbf9f4"/>
+  <rect width="1200" height="760" fill="url(#grain)"/>
+  <text x="64" y="72" fill="#3144d8" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" letter-spacing="3">REPRESENTATIVE ARCHITECTURE / SANITIZED</text>
+  <text x="64" y="132" fill="#141414" font-family="Georgia, serif" font-size="52">From prompt to performance.</text>
+
+  <g font-family="Arial, Helvetica, sans-serif" filter="url(#shadow)">
+    <rect x="64" y="192" width="200" height="390" fill="#101010" stroke="#141414" stroke-width="3"/>
+    <text x="88" y="232" fill="#d9ef67" font-size="14" font-weight="700" letter-spacing="2">01 / OUTCOME</text>
+    <text x="88" y="290" fill="#ffffff" font-size="28" font-weight="700">Define the</text>
+    <text x="88" y="326" fill="#ffffff" font-size="28" font-weight="700">job to be done</text>
+    <line x1="88" y1="362" x2="240" y2="362" stroke="#d9ef67" stroke-width="3"/>
+    <text x="88" y="406" fill="#ffffff" font-size="17">Audience</text>
+    <text x="88" y="438" fill="#ffffff" font-size="17">Decision</text>
+    <text x="88" y="470" fill="#ffffff" font-size="17">Success signal</text>
+
+    <rect x="288" y="192" width="200" height="390" fill="#3144d8" stroke="#141414" stroke-width="3"/>
+    <text x="312" y="232" fill="#d9ef67" font-size="14" font-weight="700" letter-spacing="2">02 / CONTEXT</text>
+    <text x="312" y="290" fill="#ffffff" font-size="28" font-weight="700">Ground the</text>
+    <text x="312" y="326" fill="#ffffff" font-size="28" font-weight="700">model</text>
+    <line x1="312" y1="362" x2="464" y2="362" stroke="#d9ef67" stroke-width="3"/>
+    <text x="312" y="406" fill="#ffffff" font-size="17">Source truth</text>
+    <text x="312" y="438" fill="#ffffff" font-size="17">Role + situation</text>
+    <text x="312" y="470" fill="#ffffff" font-size="17">Known constraints</text>
+
+    <rect x="512" y="192" width="200" height="390" fill="#d9ef67" stroke="#141414" stroke-width="3"/>
+    <text x="536" y="232" fill="#141414" font-size="14" font-weight="700" letter-spacing="2">03 / METHOD</text>
+    <text x="536" y="290" fill="#141414" font-size="28" font-weight="700">Make the work</text>
+    <text x="536" y="326" fill="#141414" font-size="28" font-weight="700">repeatable</text>
+    <line x1="536" y1="362" x2="688" y2="362" stroke="#141414" stroke-width="3"/>
+    <text x="536" y="406" fill="#141414" font-size="17">Steps</text>
+    <text x="536" y="438" fill="#141414" font-size="17">Format</text>
+    <text x="536" y="470" fill="#141414" font-size="17">Examples</text>
+
+    <rect x="736" y="192" width="200" height="390" fill="#f26745" stroke="#141414" stroke-width="3"/>
+    <text x="760" y="232" fill="#141414" font-size="14" font-weight="700" letter-spacing="2">04 / GUARDRAILS</text>
+    <text x="760" y="290" fill="#141414" font-size="28" font-weight="700">Control the</text>
+    <text x="760" y="326" fill="#141414" font-size="28" font-weight="700">edges</text>
+    <line x1="760" y1="362" x2="912" y2="362" stroke="#141414" stroke-width="3"/>
+    <text x="760" y="406" fill="#141414" font-size="17">Do / do not</text>
+    <text x="760" y="438" fill="#141414" font-size="17">Escalation</text>
+    <text x="760" y="470" fill="#141414" font-size="17">Data safety</text>
+
+    <rect x="960" y="192" width="176" height="390" fill="#f1ece3" stroke="#141414" stroke-width="3"/>
+    <text x="984" y="232" fill="#3144d8" font-size="14" font-weight="700" letter-spacing="2">05 / PROVE</text>
+    <text x="984" y="290" fill="#141414" font-size="28" font-weight="700">Evaluate</text>
+    <text x="984" y="326" fill="#141414" font-size="28" font-weight="700">and improve</text>
+    <line x1="984" y1="362" x2="1112" y2="362" stroke="#3144d8" stroke-width="3"/>
+    <text x="984" y="406" fill="#141414" font-size="17">Rubric</text>
+    <text x="984" y="438" fill="#141414" font-size="17">Human review</text>
+    <text x="984" y="470" fill="#141414" font-size="17">Iteration</text>
+  </g>
+
+  <path d="M1048 620 C1048 694 188 694 188 620" fill="none" stroke="#3144d8" stroke-width="4" stroke-dasharray="10 10"/>
+  <path d="M188 620 l-14 16 h28 z" fill="#3144d8"/>
+  <text x="470" y="704" fill="#3144d8" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" letter-spacing="2">EVALUATION LOOP → IMPROVE THE INPUT</text>
+</svg>

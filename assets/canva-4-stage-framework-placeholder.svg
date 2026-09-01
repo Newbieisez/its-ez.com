@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
+  <title id="title">Four-stage enablement framework placeholder</title>
+  <desc id="desc">A Canva-ready placeholder showing Know, Practice, Prove, and Perform in a four-stage flow.</desc>
+  <defs>
+    <pattern id="dots" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#141414" opacity=".08"/></pattern>
+  </defs>
+  <rect width="1200" height="760" fill="#fbf9f4"/>
+  <rect width="1200" height="760" fill="url(#dots)"/>
+  <text x="64" y="74" fill="#3144d8" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" letter-spacing="3">CANVA SLOT 01 / 1200 × 760</text>
+  <text x="64" y="132" fill="#141414" font-family="Georgia, serif" font-size="50">Four stages. One performance loop.</text>
+  <g font-family="Arial, Helvetica, sans-serif" font-weight="700" text-anchor="middle">
+    <circle cx="174" cy="354" r="104" fill="#3144d8" stroke="#141414" stroke-width="4"/>
+    <text x="174" y="342" fill="#d9ef67" font-size="16" letter-spacing="2">01</text><text x="174" y="382" fill="#ffffff" font-size="31">KNOW</text>
+    <path d="M280 354h90" stroke="#141414" stroke-width="5"/><path d="M370 354l-22-16v32z" fill="#141414"/>
+    <circle cx="472" cy="354" r="104" fill="#d9ef67" stroke="#141414" stroke-width="4"/>
+    <text x="472" y="342" fill="#3144d8" font-size="16" letter-spacing="2">02</text><text x="472" y="382" fill="#141414" font-size="31">PRACTICE</text>
+    <path d="M578 354h90" stroke="#141414" stroke-width="5"/><path d="M668 354l-22-16v32z" fill="#141414"/>
+    <circle cx="770" cy="354" r="104" fill="#f26745" stroke="#141414" stroke-width="4"/>
+    <text x="770" y="342" fill="#141414" font-size="16" letter-spacing="2">03</text><text x="770" y="382" fill="#141414" font-size="31">PROVE</text>
+    <path d="M876 354h90" stroke="#141414" stroke-width="5"/><path d="M966 354l-22-16v32z" fill="#141414"/>
+    <circle cx="1068" cy="354" r="104" fill="#101010" stroke="#141414" stroke-width="4"/>
+    <text x="1068" y="342" fill="#d9ef67" font-size="16" letter-spacing="2">04</text><text x="1068" y="382" fill="#ffffff" font-size="31">PERFORM</text>
+  </g>
+  <path d="M1068 486c0 160-894 160-894 0" fill="none" stroke="#3144d8" stroke-width="4" stroke-dasharray="12 10"/>
+  <path d="M174 486l-16 24h32z" fill="#3144d8"/>
+  <text x="600" y="632" fill="#3144d8" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" text-anchor="middle" letter-spacing="3">MEASURE → LEARN → IMPROVE</text>
+  <text x="64" y="708" fill="#706d66" font-family="Arial, Helvetica, sans-serif" font-size="14">Replace this SVG with the final Canva export using the same filename.</text>
+</svg>
