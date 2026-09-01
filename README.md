@@ -1,6 +1,8 @@
 # Erez Haimowicz Portfolio
 
-Static portfolio site for Erez Haimowicz, hosted through GitHub Pages.
+Live site: https://its-ez.com/
+
+Static portfolio site for Erez Haimowicz, hosted through GitHub Pages with the custom domain `its-ez.com` and HTTPS enabled.
 
 ## Canva gallery slots
 
@@ -15,6 +17,12 @@ The KPI values are live HTML layered over the third image so recruiters and sear
 ## Executive resume gate
 
 The resume CTAs collect a valid email through FormSubmit before downloading `Erez-Haimowicz-Executive-Resume.pdf`. FormSubmit sends a one-time activation message to `ErezHaimowicz@gmail.com`; submit the form once after deployment and approve that message to activate delivery.
+
+## Search discovery
+
+- `robots.txt` allows crawling and points search engines to the sitemap.
+- `sitemap.xml` identifies `https://its-ez.com/` as the canonical public page to crawl.
+- `CNAME` keeps GitHub Pages mapped to `its-ez.com`.
 
 ## Local preview
 
