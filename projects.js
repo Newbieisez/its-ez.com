@@ -6,7 +6,7 @@
   if(!head||!list)return;
 
   var intro=head.querySelector('.body-copy');
-  if(intro)intro.textContent='Start with the numbers. Expand any project to see why it mattered, how I ran it, the processes I installed, the systems I used, and how the work connected to business performance.';
+  if(intro)intro.textContent='Start with the numbers. Expand any project to see the why, the build, the project plan, the systems architecture, the operating process, and the proof behind the outcome.';
 
   var impact=document.createElement('div');
   impact.className='impact-strip';
@@ -94,12 +94,90 @@
     }
   ];
 
+  var visuals={
+    'sentinelone-partner-architecture':{
+      window:'2024–2025 · iterative global rollout',
+      phases:[['01','Discover','Audit content, journeys, roles, tracking gaps'],['02','Architect','Segment partner types and capability paths'],['03','Build','Courses, content model, widgets, automations'],['04','Launch','PartnerPulse + role-based program deployment'],['05','Optimize','Completion, drop-off, readiness and revenue signals']],
+      architecture:[['Partner identity','Reseller · Distributor · MSSP · SI · Technical · Sales'],['Portal + access','Impartner PRM · custom portal logic'],['Learning','Thought Industries · Articulate Rise · Wistia'],['Content + knowledge','Highspot · Glean · Google Workspace · Canva'],['Intelligence','Analytics · custom widgets · conversational AI'],['Business output','Accreditation · readiness · partner-sourced revenue']],
+      evidence:[
+        ['Video learning','Working with Channel Partners','Field-facing partner learning example paired with practice and reinforcement.','Working%20with%20Channel%20Partners.mp4'],
+        ['Architecture','8-Week Enablement Accelerator','Representative implementation architecture for diagnosing, building, piloting and measuring enablement.','#artifact-accelerator'],
+        ['Playbook','Enablement Playbook Framework','Representative operating framework showing how process and field execution connect.','assets/enablement-playbook-framework.svg']
+      ]
+    },
+    'twilio-meddpicc':{
+      window:'2022–2024 · methodology rollout + reinforcement',
+      phases:[['01','Diagnose','Find qualification and conversion friction'],['02','Define','Translate MEDDPICC into observable behaviors'],['03','Enable','Global workshops + opportunity practice'],['04','Reinforce','Manager coaching + deal inspection'],['05','Measure','Adoption + stage/deal conversion']],
+      architecture:[['Methodology','MEDDPICC + value selling'],['Practice','Workshops · live opportunities · role application'],['Workflow','Salesforce qualification + opportunity signals'],['Inspection','Managers · pipeline reviews · deal coaching'],['Reinforcement','Gong · Highspot · Slack'],['Business output','82% adoption · 40% conversion lift']],
+      evidence:[
+        ['Operating model','4-Stage Enablement Framework','Know → Practice → Prove → Perform: the behavior model behind sustained methodology adoption.','#artifact-framework'],
+        ['Playbook','SentinelOne / Twilio Playbook','Representative field playbook architecture for translating strategy into repeatable execution.','assets/enablement-playbook-framework.svg'],
+        ['Scorecard','Measurable Impact','Executive KPI view connecting enablement activity to adoption and pipeline outcomes.','#artifact-kpis']
+      ]
+    },
+    'twilio-productivity-ai':{
+      window:'2022–2024 · continuous productivity program',
+      phases:[['01','Inventory','Map tools, knowledge and duplicate capability'],['02','Friction map','Identify seller search and workflow waste'],['03','AI layer','Operationalize WiseOwl in Slack / Salesforce'],['04','Adoption','Tool Tips + workflow reinforcement'],['05','Optimize','Consolidate licenses and measure productivity']],
+      architecture:[['Seller need','Question · task · opportunity friction'],['Knowledge layer','WiseOwl · LLM-assisted retrieval'],['Workflow','Slack · Salesforce · Rattle'],['Execution stack','Gong · Highspot · Outreach · 6sense · ZoomInfo'],['Enablement layer','Tool Tips · job aids · reinforcement'],['Business output','−60% search time · +9% productivity · $700K saved']],
+      evidence:[
+        ['AI architecture','GPT Prompt Architecture','Representative view of how structured AI instructions can turn knowledge into repeatable performance support.','assets/gpt-prompt-architecture.svg'],
+        ['Performance model','4-Stage Enablement Framework','Framework for moving from tool awareness to demonstrated workflow behavior.','#artifact-framework'],
+        ['Scorecard','GTM Productivity Outcomes','9% productivity lift and $700K annual savings displayed alongside other validated portfolio outcomes.','#artifact-kpis']
+      ]
+    },
+    'tessian-zero-to-one':{
+      window:'2019–2020 · approximately 12-month 0→1 build',
+      phases:[['01','Baseline','Assess onboarding, messaging and readiness gaps'],['02','Standardize','Create global onboarding + role structure'],['03','Build','Persona messaging, multi-threading, practice'],['04','Validate','Certification + readiness proof'],['05','Scale','Manager reinforcement + regional delivery']],
+      architecture:[['New seller','Role + region + starting capability'],['Onboarding','Sequenced learning + core messaging'],['Selling skills','Personas · discovery · multi-threading'],['Practice','Roleplay · workshops · applied exercises'],['Proof','Certification + readiness checks'],['Performance','Faster ramp + repeatable global execution']],
+      evidence:[
+        ['Program artifact','Onboarding architecture','Sequenced capability path from foundational knowledge through applied enterprise selling.',null],
+        ['Readiness artifact','Certification model','Demonstration-based readiness rather than attendance-only completion.',null],
+        ['Operating artifact','Global / regional delivery model','Standard core architecture with localized workshop and reinforcement delivery.',null]
+      ]
+    },
+    'cofense-academy':{
+      window:'2018–2019 · approximately 12-month transformation',
+      phases:[['01','Align','Translate PhishMe → Cofense strategy'],['02','Message','Build field narrative + objections'],['03','Platform','Deploy Allego learning environment'],['04','Practice','Scenario learning + video practice'],['05','Certify','Readiness validation + reinforcement']],
+      architecture:[['Corporate change','Brand · strategy · product narrative'],['Field story','Messaging · prospecting · objection handling'],['Learning platform','Allego'],['Practice','Scenario learning · video practice'],['Readiness','Certification + coaching'],['Commercial output','Consistent rebrand execution + ARR influence']],
+      evidence:[
+        ['Change artifact','Rebrand-to-field map','Corporate narrative translated into seller language, practice and customer-facing behavior.',null],
+        ['Learning artifact','Cofense Academy','Structured global learning and certification environment.',null],
+        ['Readiness artifact','Scenario certification','Applied selling proof supported by Allego video practice and coaching.',null]
+      ]
+    },
+    'reup-gtm':{
+      window:'2020–2022 · founder-led 0→1 operating build',
+      phases:[['01','Market','Clarify problem and target customer'],['02','Position','Define value proposition + messaging'],['03','Sell','Qualification + full-funnel playbooks'],['04','Partner','Activation + onboarding motion'],['05','Learn','Pipeline feedback → GTM iteration']],
+      architecture:[['Market signal','Customer + partner problem'],['Positioning','Value proposition + narrative'],['Sales motion','Qualification · discovery · playbooks'],['Partner motion','Recruit · activate · onboard'],['Feedback','Pipeline + market learning'],['Business output','Repeatable commercial operating foundation']],
+      evidence:[
+        ['Founder artifact','GTM operating model','Market problem → positioning → sales motion → partner motion → pipeline.',null],
+        ['Sales artifact','Full-funnel playbooks','Repeatable messaging, qualification and execution instead of founder-only knowledge.',null],
+        ['Partner artifact','Activation + onboarding','A structured external-partner motion connected to the commercial strategy.',null]
+      ]
+    },
+    'ggw-ai-academy':{
+      window:'2026–Present · active build and validation',
+      phases:[['01','Prioritize','Choose high-value everyday work use cases'],['02','Design','5 complete modules + adult-learning flow'],['03','Build','35+ prompts + step-by-step job aids'],['04','Productize','Google-native portal + progress tracking'],['05','Validate','Learner feedback + ongoing AI governance']],
+      architecture:[['Employee task','Email · document · analysis · meeting · planning'],['Learning layer','Short modules · examples · activities'],['AI layer','Gemini · NotebookLM · reusable prompts'],['Workspace','Gmail · Docs · Sheets · Slides · Drive · Calendar'],['Support layer','Quick tips · prompt library · reference paths'],['Performance output','Confidence · adoption · workflow efficiency']],
+      evidence:[
+        ['Learning artifact','5 Core Modules','Complete learning experiences built around real work rather than feature tours.',null],
+        ['Performance support','35+ Master Prompts','Solution-filtered reusable prompts connected to specific Google workflows.',null],
+        ['Product artifact','Google-native Academy','Interactive learning portal with progress, activities, quick tips and performance support.',null]
+      ]
+    }
+  };
+
   function chips(items,className){return '<div class="'+className+'">'+items.map(function(item){return '<span>'+item+'</span>'}).join('')+'</div>'}
   function listItems(items){return '<ul>'+items.map(function(item){return '<li>'+item+'</li>'}).join('')+'</ul>'}
   function process(items){return '<div class="process-flow">'+items.map(function(item){return '<span class="process-step">'+item+'</span>'}).join('')+'</div>'}
   function outcomes(items){return '<div class="outcome-grid">'+items.map(function(item){return '<div class="outcome"><strong>'+item[0]+'</strong><span>'+item[1]+'</span></div>'}).join('')+'</div>'}
+  function timelineViz(v){return '<div class="visual-card timeline-card"><div class="visual-card-head"><span>Delivery timeline</span><small>'+v.window+'</small></div><div class="project-timeline">'+v.phases.map(function(item){return '<div class="timeline-phase"><span class="timeline-index">'+item[0]+'</span><strong>'+item[1]+'</strong><p>'+item[2]+'</p></div>'}).join('')+'</div></div>'}
+  function architectureViz(v){return '<div class="visual-card architecture-card"><div class="visual-card-head"><span>Systems architecture</span><small>How the work connected</small></div><div class="architecture-flow">'+v.architecture.map(function(item,i){return '<div class="architecture-node"><small>'+String(i+1).padStart(2,'0')+'</small><strong>'+item[0]+'</strong><span>'+item[1]+'</span></div>'}).join('')+'</div></div>'}
+  function evidenceViz(v){return '<div class="visual-card evidence-card-wrap"><div class="visual-card-head"><span>Proof + artifacts</span><small>Representative evidence without exposing confidential material</small></div><div class="evidence-grid">'+v.evidence.map(function(item){var body='<span class="evidence-type">'+item[0]+'</span><strong>'+item[1]+'</strong><p>'+item[2]+'</p><span class="evidence-cta">'+(item[3]?'View artifact ↗':'Program proof')+'</span>';return item[3]?'<a class="evidence-card" href="'+item[3]+'">'+body+'</a>':'<div class="evidence-card evidence-card-static">'+body+'</div>'}).join('')+'</div></div>'}
+  function visualProof(p){var v=visuals[p.id];if(!v)return '';return '<section class="project-proof" aria-label="Visual proof for '+p.title+'"><div class="proof-intro"><span>Visual proof</span><p>The project at a glance: sequence, system design, and representative evidence.</p></div><div class="proof-grid">'+timelineViz(v)+architectureViz(v)+'</div>'+evidenceViz(v)+'</section>'}
 
-  list.innerHTML=projects.map(function(p,i){
+  list.classList.add('project-list');
+  list.innerHTML=projects.map(function(p){
     var current=p.timeline.indexOf('Present')>-1?' current-build':'';
     return '<article class="project-case'+current+'" id="'+p.id+'">'+
       '<button class="project-toggle" type="button" data-project-toggle aria-expanded="false" aria-controls="'+p.id+'-detail">'+
@@ -111,6 +189,7 @@
       '<div class="project-detail" id="'+p.id+'-detail" hidden><div class="project-detail-inner">'+
         '<p class="project-lede">'+p.lede+'</p>'+
         '<div class="project-meta"><span>'+p.company+'</span><span>'+p.timeline+'</span><span>'+p.type+'</span></div>'+
+        visualProof(p)+
         '<div class="project-grid">'+
           '<section class="project-block"><h4>Why this mattered</h4><p>'+p.why+'</p></section>'+
           '<section class="project-block"><h4>How I approached it</h4><p>'+p.how+'</p></section>'+
@@ -119,7 +198,7 @@
           '<section class="project-block"><h4>Programs + deliverables</h4>'+listItems(p.programs)+'</section>'+
           '<section class="project-block"><h4>Tools + systems</h4>'+chips(p.tools,'tool-cloud')+'</section>'+
         '</div>'+
-        '<section class="project-block" style="margin-top:40px"><h4>Measured outcomes</h4>'+outcomes(p.outcomes)+'</section>'+
+        '<section class="project-block measured-outcomes"><h4>Measured outcomes</h4>'+outcomes(p.outcomes)+'</section>'+
         '<div class="project-note"><strong>Operating logic:</strong> '+p.note+'</div>'+
       '</div></div>'+
     '</article>';
