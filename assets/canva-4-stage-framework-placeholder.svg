@@ -1,28 +1,65 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
-  <title id="title">Four-stage enablement framework placeholder</title>
-  <desc id="desc">A Canva-ready placeholder showing Know, Practice, Prove, and Perform in a four-stage flow.</desc>
-  <defs>
-    <pattern id="dots" width="14" height="14" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#141414" opacity=".08"/></pattern>
-  </defs>
-  <rect width="1200" height="760" fill="#fbf9f4"/>
-  <rect width="1200" height="760" fill="url(#dots)"/>
-  <text x="64" y="74" fill="#3144d8" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" letter-spacing="3">CANVA SLOT 01 / 1200 × 760</text>
-  <text x="64" y="132" fill="#141414" font-family="Georgia, serif" font-size="50">Four stages. One performance loop.</text>
-  <g font-family="Arial, Helvetica, sans-serif" font-weight="700" text-anchor="middle">
-    <circle cx="174" cy="354" r="104" fill="#3144d8" stroke="#141414" stroke-width="4"/>
-    <text x="174" y="342" fill="#d9ef67" font-size="16" letter-spacing="2">01</text><text x="174" y="382" fill="#ffffff" font-size="31">KNOW</text>
-    <path d="M280 354h90" stroke="#141414" stroke-width="5"/><path d="M370 354l-22-16v32z" fill="#141414"/>
-    <circle cx="472" cy="354" r="104" fill="#d9ef67" stroke="#141414" stroke-width="4"/>
-    <text x="472" y="342" fill="#3144d8" font-size="16" letter-spacing="2">02</text><text x="472" y="382" fill="#141414" font-size="31">PRACTICE</text>
-    <path d="M578 354h90" stroke="#141414" stroke-width="5"/><path d="M668 354l-22-16v32z" fill="#141414"/>
-    <circle cx="770" cy="354" r="104" fill="#f26745" stroke="#141414" stroke-width="4"/>
-    <text x="770" y="342" fill="#141414" font-size="16" letter-spacing="2">03</text><text x="770" y="382" fill="#141414" font-size="31">PROVE</text>
-    <path d="M876 354h90" stroke="#141414" stroke-width="5"/><path d="M966 354l-22-16v32z" fill="#141414"/>
-    <circle cx="1068" cy="354" r="104" fill="#101010" stroke="#141414" stroke-width="4"/>
-    <text x="1068" y="342" fill="#d9ef67" font-size="16" letter-spacing="2">04</text><text x="1068" y="382" fill="#ffffff" font-size="31">PERFORM</text>
+<title id="title">Know Practice Prove Perform enablement operating model</title>
+<desc id="desc">A four-stage performance system connecting knowledge, practice, observed proof, field behavior, and business outcomes.</desc>
+<defs>
+  <pattern id="dots" width="16" height="16" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#141414" opacity=".07"/></pattern>
+</defs>
+<rect width="1200" height="760" fill="#fbf9f4"/><rect width="1200" height="760" fill="url(#dots)"/>
+<g font-family="Arial,Helvetica,sans-serif">
+  <text x="58" y="64" fill="#3144d8" font-size="14" font-weight="800" letter-spacing="3">PERFORMANCE OPERATING MODEL</text>
+  <text x="58" y="116" fill="#141414" font-family="Georgia,serif" font-size="44">Learning is only useful when behavior changes.</text>
+  <text x="58" y="151" fill="#706d66" font-size="17">Each stage has a field action, an evidence gate, and a measurement signal.</text>
+
+  <g transform="translate(58 205)">
+    <rect width="250" height="330" rx="2" fill="#3144d8"/>
+    <text x="24" y="36" fill="#d9ef67" font-size="13" font-weight="800" letter-spacing="2">01 / KNOW</text>
+    <text x="24" y="82" fill="#fff" font-size="27" font-weight="800">Understand the</text><text x="24" y="113" fill="#fff" font-size="27" font-weight="800">business move.</text>
+    <line x1="24" y1="140" x2="226" y2="140" stroke="#fff" opacity=".3"/>
+    <text x="24" y="174" fill="#fff" font-size="14" font-weight="700">FIELD ACTION</text>
+    <text x="24" y="199" fill="#fff" font-size="14">Explain value, persona,</text><text x="24" y="220" fill="#fff" font-size="14">use case, and next step.</text>
+    <text x="24" y="258" fill="#d9ef67" font-size="12" font-weight="800">EVIDENCE GATE</text>
+    <text x="24" y="282" fill="#fff" font-size="14">Knowledge benchmark +</text><text x="24" y="303" fill="#fff" font-size="14">message recall.</text>
   </g>
-  <path d="M1068 486c0 160-894 160-894 0" fill="none" stroke="#3144d8" stroke-width="4" stroke-dasharray="12 10"/>
-  <path d="M174 486l-16 24h32z" fill="#3144d8"/>
-  <text x="600" y="632" fill="#3144d8" font-family="Arial, Helvetica, sans-serif" font-size="16" font-weight="700" text-anchor="middle" letter-spacing="3">MEASURE → LEARN → IMPROVE</text>
-  <text x="64" y="708" fill="#706d66" font-family="Arial, Helvetica, sans-serif" font-size="14">Replace this SVG with the final Canva export using the same filename.</text>
+
+  <g transform="translate(336 205)">
+    <rect width="250" height="330" rx="2" fill="#d9ef67"/>
+    <text x="24" y="36" fill="#3144d8" font-size="13" font-weight="800" letter-spacing="2">02 / PRACTICE</text>
+    <text x="24" y="82" fill="#141414" font-size="27" font-weight="800">Rehearse in the</text><text x="24" y="113" fill="#141414" font-size="27" font-weight="800">real workflow.</text>
+    <line x1="24" y1="140" x2="226" y2="140" stroke="#141414" opacity=".25"/>
+    <text x="24" y="174" fill="#141414" font-size="14" font-weight="700">FIELD ACTION</text>
+    <text x="24" y="199" fill="#141414" font-size="14">Run scenarios, discovery,</text><text x="24" y="220" fill="#141414" font-size="14">objections, demos, coaching.</text>
+    <text x="24" y="258" fill="#3144d8" font-size="12" font-weight="800">EVIDENCE GATE</text>
+    <text x="24" y="282" fill="#141414" font-size="14">Observed practice +</text><text x="24" y="303" fill="#141414" font-size="14">manager feedback.</text>
+  </g>
+
+  <g transform="translate(614 205)">
+    <rect width="250" height="330" rx="2" fill="#f26745"/>
+    <text x="24" y="36" fill="#141414" font-size="13" font-weight="800" letter-spacing="2">03 / PROVE</text>
+    <text x="24" y="82" fill="#141414" font-size="27" font-weight="800">Demonstrate the</text><text x="24" y="113" fill="#141414" font-size="27" font-weight="800">skill under pressure.</text>
+    <line x1="24" y1="140" x2="226" y2="140" stroke="#141414" opacity=".25"/>
+    <text x="24" y="174" fill="#141414" font-size="14" font-weight="700">FIELD ACTION</text>
+    <text x="24" y="199" fill="#141414" font-size="14">Certify against observable</text><text x="24" y="220" fill="#141414" font-size="14">performance criteria.</text>
+    <text x="24" y="258" fill="#141414" font-size="12" font-weight="800">EVIDENCE GATE</text>
+    <text x="24" y="282" fill="#141414" font-size="14">Skill score + readiness</text><text x="24" y="303" fill="#141414" font-size="14">threshold.</text>
+  </g>
+
+  <g transform="translate(892 205)">
+    <rect width="250" height="330" rx="2" fill="#101010"/>
+    <text x="24" y="36" fill="#d9ef67" font-size="13" font-weight="800" letter-spacing="2">04 / PERFORM</text>
+    <text x="24" y="82" fill="#fff" font-size="27" font-weight="800">Use it where the</text><text x="24" y="113" fill="#fff" font-size="27" font-weight="800">business feels it.</text>
+    <line x1="24" y1="140" x2="226" y2="140" stroke="#fff" opacity=".3"/>
+    <text x="24" y="174" fill="#fff" font-size="14" font-weight="700">FIELD ACTION</text>
+    <text x="24" y="199" fill="#fff" font-size="14">Apply in live deals, partner</text><text x="24" y="220" fill="#fff" font-size="14">motions, and customer work.</text>
+    <text x="24" y="258" fill="#d9ef67" font-size="12" font-weight="800">EVIDENCE GATE</text>
+    <text x="24" y="282" fill="#fff" font-size="14">CRM behavior + pipeline +</text><text x="24" y="303" fill="#fff" font-size="14">revenue movement.</text>
+  </g>
+
+  <path d="M308 370h28M586 370h28M864 370h28" stroke="#141414" stroke-width="4"/>
+  <path d="M329 362l13 8-13 8M607 362l13 8-13 8M885 362l13 8-13 8" fill="none" stroke="#141414" stroke-width="4"/>
+
+  <rect x="58" y="575" width="1084" height="111" fill="#fff" stroke="#141414"/>
+  <text x="82" y="607" fill="#3144d8" font-size="12" font-weight="800" letter-spacing="2">MEASUREMENT CHAIN</text>
+  <text x="82" y="644" fill="#141414" font-size="20" font-weight="800">Knowledge → observed behavior → field adoption → pipeline movement → business impact</text>
+  <text x="82" y="672" fill="#706d66" font-size="14">The loop does not end at completion. Data from performance becomes the input for the next enablement decision.</text>
+</g>
 </svg>
