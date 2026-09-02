@@ -1,3 +1,4 @@
+# Triggered after source verification
 name: Restore Josh Applebaum recommendation
 
 on:
