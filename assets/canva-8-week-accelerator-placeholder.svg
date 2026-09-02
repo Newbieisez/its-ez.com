@@ -1,29 +1,49 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
-  <title id="title">Eight-week enablement accelerator architecture placeholder</title>
-  <desc id="desc">A Canva-ready placeholder showing an eight-week enablement accelerator from diagnosis through scale.</desc>
-  <defs>
-    <pattern id="grain" width="12" height="12" patternUnits="userSpaceOnUse"><circle cx="2" cy="2" r="1" fill="#ffffff" opacity=".07"/></pattern>
-  </defs>
-  <rect width="1200" height="760" fill="#101010"/>
-  <rect width="1200" height="760" fill="url(#grain)"/>
-  <text x="64" y="74" fill="#d9ef67" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" letter-spacing="3">CANVA SLOT 02 / 1200 × 760</text>
-  <text x="64" y="132" fill="#ffffff" font-family="Georgia, serif" font-size="50">Eight weeks from friction to field.</text>
-  <g font-family="Arial, Helvetica, sans-serif">
-    <text x="64" y="206" fill="#f26745" font-size="13" font-weight="700" letter-spacing="2">PHASE 01 / DIAGNOSE</text>
-    <text x="344" y="206" fill="#d9ef67" font-size="13" font-weight="700" letter-spacing="2">PHASE 02 / BUILD</text>
-    <text x="904" y="206" fill="#f26745" font-size="13" font-weight="700" letter-spacing="2">PHASE 03 / SCALE</text>
-    <g font-size="18" font-weight="700" text-anchor="middle">
-      <rect x="64" y="238" width="126" height="210" fill="#3144d8" stroke="#ffffff" stroke-width="2"/><text x="127" y="290" fill="#d9ef67" font-size="13">WEEK 01</text><text x="127" y="345" fill="#ffffff">Align</text><text x="127" y="374" fill="#ffffff">+ audit</text>
-      <rect x="204" y="238" width="126" height="210" fill="#4053df" stroke="#ffffff" stroke-width="2"/><text x="267" y="290" fill="#d9ef67" font-size="13">WEEK 02</text><text x="267" y="345" fill="#ffffff">Map</text><text x="267" y="374" fill="#ffffff">gaps</text>
-      <rect x="344" y="238" width="126" height="210" fill="#d9ef67" stroke="#ffffff" stroke-width="2"/><text x="407" y="290" fill="#3144d8" font-size="13">WEEK 03</text><text x="407" y="345" fill="#141414">Design</text><text x="407" y="374" fill="#141414">system</text>
-      <rect x="484" y="238" width="126" height="210" fill="#e4f58c" stroke="#ffffff" stroke-width="2"/><text x="547" y="290" fill="#3144d8" font-size="13">WEEK 04</text><text x="547" y="345" fill="#141414">Build</text><text x="547" y="374" fill="#141414">assets</text>
-      <rect x="624" y="238" width="126" height="210" fill="#f26745" stroke="#ffffff" stroke-width="2"/><text x="687" y="290" fill="#141414" font-size="13">WEEK 05</text><text x="687" y="345" fill="#141414">Practice</text><text x="687" y="374" fill="#141414">+ coach</text>
-      <rect x="764" y="238" width="126" height="210" fill="#ff8668" stroke="#ffffff" stroke-width="2"/><text x="827" y="290" fill="#141414" font-size="13">WEEK 06</text><text x="827" y="345" fill="#141414">Pilot</text><text x="827" y="374" fill="#141414">+ prove</text>
-      <rect x="904" y="238" width="126" height="210" fill="#3144d8" stroke="#ffffff" stroke-width="2"/><text x="967" y="290" fill="#d9ef67" font-size="13">WEEK 07</text><text x="967" y="345" fill="#ffffff">Launch</text><text x="967" y="374" fill="#ffffff">field</text>
-      <rect x="1044" y="238" width="92" height="210" fill="#f1ece3" stroke="#ffffff" stroke-width="2"/><text x="1090" y="290" fill="#3144d8" font-size="13">WEEK 08</text><text x="1090" y="345" fill="#141414">Scale</text><text x="1090" y="374" fill="#141414">+ tune</text>
+<title id="title">Eight-week enablement execution architecture</title>
+<desc id="desc">A practical eight-week operating architecture showing business alignment, build work, field activation, and measurement with thirty, sixty, and ninety day reinforcement.</desc>
+<defs>
+  <pattern id="grid" width="32" height="32" patternUnits="userSpaceOnUse"><path d="M32 0H0v32" fill="none" stroke="#fff" stroke-opacity=".045"/></pattern>
+</defs>
+<rect width="1200" height="760" fill="#101010"/><rect width="1200" height="760" fill="url(#grid)"/>
+<g font-family="Arial,Helvetica,sans-serif">
+  <text x="58" y="62" fill="#d9ef67" font-size="14" font-weight="800" letter-spacing="3">EXECUTION ARCHITECTURE</text>
+  <text x="58" y="112" fill="#fff" font-family="Georgia,serif" font-size="43">Eight weeks to field. Ninety days to prove impact.</text>
+  <text x="58" y="147" fill="#b9b9b9" font-size="16">Workstreams overlap by design: diagnose the business problem, build the minimum useful system, pilot it, then instrument adoption.</text>
+
+  <g transform="translate(58 196)">
+    <text x="0" y="20" fill="#f26745" font-size="12" font-weight="800" letter-spacing="2">WORKSTREAM</text>
+    <g fill="#9f9f9f" font-size="12" font-weight="700" text-anchor="middle">
+      <text x="260" y="20">W1</text><text x="370" y="20">W2</text><text x="480" y="20">W3</text><text x="590" y="20">W4</text><text x="700" y="20">W5</text><text x="810" y="20">W6</text><text x="920" y="20">W7</text><text x="1030" y="20">W8</text>
     </g>
-    <path d="M64 506h1072" stroke="#d9ef67" stroke-width="4"/><path d="M1136 506l-24-17v34z" fill="#d9ef67"/>
-    <g fill="#ffffff" font-size="16"><text x="64" y="560">Executive alignment</text><text x="366" y="560">Role-based capability</text><text x="672" y="560">Observed practice</text><text x="950" y="560">Performance telemetry</text></g>
-    <text x="64" y="708" fill="#9f9f9f" font-size="14">Replace this SVG with the final Canva export using the same filename.</text>
+    <line x1="205" y1="38" x2="1085" y2="38" stroke="#fff" opacity=".25"/>
+    <g stroke="#fff" stroke-opacity=".12"><line x1="205" y1="38" x2="205" y2="390"/><line x1="315" y1="38" x2="315" y2="390"/><line x1="425" y1="38" x2="425" y2="390"/><line x1="535" y1="38" x2="535" y2="390"/><line x1="645" y1="38" x2="645" y2="390"/><line x1="755" y1="38" x2="755" y2="390"/><line x1="865" y1="38" x2="865" y2="390"/><line x1="975" y1="38" x2="975" y2="390"/><line x1="1085" y1="38" x2="1085" y2="390"/></g>
+
+    <g font-size="14" font-weight="800">
+      <text x="0" y="84" fill="#fff">Business + field</text><text x="0" y="104" fill="#8f8f8f" font-size="11" font-weight="500">Priorities, friction, role outcomes</text>
+      <rect x="205" y="58" width="220" height="58" fill="#3144d8"/><text x="225" y="82" fill="#d9ef67" font-size="11">ALIGN + DIAGNOSE</text><text x="225" y="103" fill="#fff" font-size="12">Leaders · calls · pipeline · field</text>
+      <rect x="425" y="58" width="220" height="58" fill="#4053df"/><text x="445" y="82" fill="#d9ef67" font-size="11">DEFINE CAPABILITY</text><text x="445" y="103" fill="#fff" font-size="12">Role outcomes · success criteria</text>
+
+      <text x="0" y="176" fill="#fff">Build + systems</text><text x="0" y="196" fill="#8f8f8f" font-size="11" font-weight="500">Content, workflows, practice, tooling</text>
+      <rect x="315" y="150" width="330" height="58" fill="#d9ef67"/><text x="335" y="174" fill="#3144d8" font-size="11">ARCHITECT + BUILD</text><text x="335" y="195" fill="#141414" font-size="12">Learning path · assets · manager system</text>
+      <rect x="645" y="150" width="220" height="58" fill="#f26745"/><text x="665" y="174" fill="#141414" font-size="11">PRACTICE + PILOT</text><text x="665" y="195" fill="#141414" font-size="12">Observed skill · feedback loop</text>
+
+      <text x="0" y="268" fill="#fff">Activation</text><text x="0" y="288" fill="#8f8f8f" font-size="11" font-weight="500">Launch, manager reinforcement, scale</text>
+      <rect x="755" y="242" width="220" height="58" fill="#3144d8"/><text x="775" y="266" fill="#d9ef67" font-size="11">FIELD LAUNCH</text><text x="775" y="287" fill="#fff" font-size="12">Managers · cohorts · workflow</text>
+      <rect x="975" y="242" width="110" height="58" fill="#f1ece3"/><text x="990" y="266" fill="#3144d8" font-size="11">SCALE</text><text x="990" y="287" fill="#141414" font-size="12">Tune</text>
+
+      <text x="0" y="360" fill="#fff">Measurement</text><text x="0" y="380" fill="#8f8f8f" font-size="11" font-weight="500">Baseline → behavior → pipeline</text>
+      <rect x="205" y="334" width="220" height="58" fill="#242424" stroke="#777"/><text x="225" y="358" fill="#f26745" font-size="11">BASELINE</text><text x="225" y="379" fill="#fff" font-size="12">Current state + benchmark</text>
+      <rect x="645" y="334" width="220" height="58" fill="#242424" stroke="#777"/><text x="665" y="358" fill="#d9ef67" font-size="11">LEADING SIGNALS</text><text x="665" y="379" fill="#fff" font-size="12">Practice · adoption · usage</text>
+      <rect x="865" y="334" width="220" height="58" fill="#242424" stroke="#777"/><text x="885" y="358" fill="#d9ef67" font-size="11">FIELD SIGNALS</text><text x="885" y="379" fill="#fff" font-size="12">Conversion · velocity · quality</text>
+    </g>
   </g>
+
+  <g transform="translate(58 625)">
+    <rect width="1084" height="87" fill="#181818" stroke="#555"/>
+    <text x="20" y="29" fill="#f26745" font-size="11" font-weight="800" letter-spacing="2">REINFORCEMENT GATES</text>
+    <text x="20" y="59" fill="#fff" font-size="14" font-weight="700">30 days: adoption + coaching</text>
+    <text x="300" y="59" fill="#fff" font-size="14" font-weight="700">60 days: behavior + opportunity quality</text>
+    <text x="670" y="59" fill="#fff" font-size="14" font-weight="700">90 days: conversion + velocity + revenue signal</text>
+  </g>
+</g>
 </svg>
