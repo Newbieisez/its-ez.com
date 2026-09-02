@@ -1,15 +1,35 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 760" role="img" aria-labelledby="title desc">
-  <title id="title">KPI impact metrics background placeholder</title>
-  <desc id="desc">An abstract Canva-ready background for the KPI metrics card.</desc>
-  <defs>
-    <linearGradient id="blue" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3144d8"/><stop offset="1" stop-color="#101010"/></linearGradient>
-    <pattern id="grid" width="60" height="60" patternUnits="userSpaceOnUse"><path d="M60 0H0v60" fill="none" stroke="#ffffff" stroke-opacity=".09"/></pattern>
-  </defs>
-  <rect width="1200" height="760" fill="url(#blue)"/>
-  <rect width="1200" height="760" fill="url(#grid)"/>
-  <circle cx="1000" cy="120" r="260" fill="#f26745" opacity=".9"/>
-  <circle cx="1000" cy="120" r="150" fill="#d9ef67" opacity=".95"/>
-  <path d="M0 650C230 510 370 710 610 554S960 470 1200 320V760H0Z" fill="#101010" opacity=".72"/>
-  <text x="64" y="74" fill="#d9ef67" font-family="Arial, Helvetica, sans-serif" font-size="15" font-weight="700" letter-spacing="3">CANVA SLOT 03 / BACKGROUND</text>
-  <text x="64" y="708" fill="#ffffff" opacity=".7" font-family="Arial, Helvetica, sans-serif" font-size="14">Replace this SVG with the final Canva export using the same filename; HTML metrics remain live.</text>
+<title id="title">Enablement business impact evidence background</title>
+<desc id="desc">A clean executive impact background showing how enablement evidence progresses from adoption and behavior to pipeline and revenue outcomes.</desc>
+<defs>
+  <linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#3144d8"/><stop offset=".58" stop-color="#2536b8"/><stop offset="1" stop-color="#101010"/></linearGradient>
+  <pattern id="grid" width="52" height="52" patternUnits="userSpaceOnUse"><path d="M52 0H0v52" fill="none" stroke="#fff" stroke-opacity=".055"/></pattern>
+</defs>
+<rect width="1200" height="760" fill="url(#bg)"/><rect width="1200" height="760" fill="url(#grid)"/>
+<g font-family="Arial,Helvetica,sans-serif">
+  <text x="58" y="62" fill="#d9ef67" font-size="14" font-weight="800" letter-spacing="3">ENABLEMENT IMPACT MODEL</text>
+  <text x="58" y="108" fill="#fff" font-family="Georgia,serif" font-size="38">Measure what changes in the business.</text>
+  <text x="58" y="140" fill="#d8dcff" font-size="15">Completion is a leading signal. Performance, pipeline, and revenue are the proof.</text>
+
+  <g transform="translate(720 188)">
+    <rect width="422" height="392" fill="#111" opacity=".42" stroke="#fff" stroke-opacity=".18"/>
+    <text x="24" y="40" fill="#d9ef67" font-size="11" font-weight="800" letter-spacing="2">EVIDENCE CHAIN</text>
+    <g font-size="14" font-weight="700">
+      <circle cx="46" cy="94" r="15" fill="#d9ef67"/><text x="76" y="100" fill="#fff">Adoption</text><text x="245" y="100" fill="#c9c9c9" font-size="12" font-weight="500">usage · completion · participation</text>
+      <line x1="46" y1="109" x2="46" y2="145" stroke="#fff" opacity=".35"/>
+      <circle cx="46" cy="160" r="15" fill="#d9ef67"/><text x="76" y="166" fill="#fff">Behavior</text><text x="245" y="166" fill="#c9c9c9" font-size="12" font-weight="500">skill · coaching · workflow execution</text>
+      <line x1="46" y1="175" x2="46" y2="211" stroke="#fff" opacity=".35"/>
+      <circle cx="46" cy="226" r="15" fill="#f26745"/><text x="76" y="232" fill="#fff">Pipeline</text><text x="245" y="232" fill="#c9c9c9" font-size="12" font-weight="500">conversion · stage quality · velocity</text>
+      <line x1="46" y1="241" x2="46" y2="277" stroke="#fff" opacity=".35"/>
+      <circle cx="46" cy="292" r="15" fill="#f26745"/><text x="76" y="298" fill="#fff">Business</text><text x="245" y="298" fill="#c9c9c9" font-size="12" font-weight="500">revenue · ramp · efficiency · win rate</text>
+    </g>
+    <text x="24" y="356" fill="#fff" font-size="13" font-weight="700">The goal: connect the intervention to a measurable change.</text>
+  </g>
+
+  <g transform="translate(58 602)">
+    <line x1="0" y1="0" x2="1084" y2="0" stroke="#fff" stroke-opacity=".35"/>
+    <text x="0" y="34" fill="#fff" font-size="12" font-weight="800" letter-spacing="1.5">READ THE METRICS WITH CONTEXT</text>
+    <text x="0" y="64" fill="#d8dcff" font-size="14">Baseline → intervention → adoption → behavior change → pipeline signal → business result</text>
+  </g>
+</g>
 </svg>
