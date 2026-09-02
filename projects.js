@@ -6,164 +6,143 @@
   if(!head||!list)return;
 
   var intro=head.querySelector('.body-copy');
-  if(intro)intro.textContent='Start with the numbers. Expand any project to see the why, the build, the project plan, the systems architecture, the operating process, and the proof behind the outcome.';
+  if(intro)intro.textContent='Start with the outcome. Expand any project to see the business problem, the build, the process, the systems architecture, and the proof behind the result.';
 
   var impact=document.createElement('div');
   impact.className='impact-strip';
-  impact.setAttribute('aria-label','Historical enterprise enablement benchmarks');
-  impact.innerHTML='<div class="impact-stat"><strong>+8.75%</strong><span>Bottom-line revenue · historical benchmark</span></div><div class="impact-stat"><strong>+4%</strong><span>Win rate · historical benchmark</span></div><div class="impact-stat"><strong>−37 days</strong><span>Average sales cycle · historical benchmark</span></div>';
+  impact.setAttribute('aria-label','Selected enterprise enablement outcomes');
+  impact.innerHTML='<div class="impact-stat"><strong>$3.1M</strong><span>Partner-driven revenue influenced</span></div><div class="impact-stat"><strong>+40%</strong><span>Deal conversion lift</span></div><div class="impact-stat"><strong>−37 days</strong><span>Average sales cycle reduction</span></div>';
   head.parentNode.insertBefore(impact,list);
 
   var projects=[
     {
-      id:'sentinelone-partner-architecture',index:'01',company:'SentinelOne',title:'Global Partner Enablement Ecosystem & Intelligence Architecture',timeline:'2024–2025',type:'Global partner transformation',metrics:['$3.1M revenue influenced','40–50% faster ramp','4,000+ partners'],lede:'Replaced a fragmented partner learning and content environment with a connected operating architecture built to scale partner readiness across multiple partner models, roles, regions, and technical depths.',
-      why:'Partner content, learning, accreditation, analytics, and support were operating as separate experiences. Partners had difficulty finding current resources, legacy paths did not reflect different partner motions, leadership lacked useful learning visibility, and internal teams absorbed repeat questions manually.',
-      how:'I treated the problem as a systems transformation rather than a course-production request. The work connected partner segmentation, capability mapping, learning architecture, content governance, LMS/PRM workflows, analytics, custom portal components, and an emerging conversational-AI knowledge layer.',
-      process:['Audit the baseline','Segment partner roles','Map required capabilities','Architect learning paths','Build + quality review','Integrate + automate','Launch + drive adoption','Measure + optimize'],
-      pm:['Ran parallel workstreams across curriculum, systems, content, analytics, portal experience, and AI/knowledge support.','Managed dependencies between partner identity/access, learning enrollment, accreditation logic, content availability, reporting, and launch communications.','Used iterative releases and quality gates so priority experiences could ship while the broader architecture continued to mature.','Established governance around content freshness, learner journeys, analytics, and ongoing program optimization.'],
-      programs:['Partner Pre-Sales Fundamentals (~2h)','Sales Fundamentals','Sales Applied track (~6–8h)','Pre-Sales Technical Fundamentals (~2.5h)','PurpleAI Partner Specialization','Cloud Fundamentals + personas','Unified Demo Introduction','Competitive Edge weekly enablement'],
+      id:'sentinelone-partner-architecture',index:'01',company:'SentinelOne',title:'Partner Enablement Ecosystem & Intelligence Architecture',role:'Content and Systems Manager, Partner Enablement',timeline:'2024–2025',type:'Partner ecosystem transformation',metrics:['$3.1M revenue influenced','40–50% faster ramp','Analytics baseline'],
+      lede:'Replaced a fragmented partner enablement environment with a unified, scalable ecosystem featuring automated course tracking, segmented accreditation paths, searchable knowledge, and conversational AI support.',
+      why:'GTM collateral was decentralized, leadership lacked analytics visibility into partner learning, and legacy accreditation paths did not differentiate between distinct partner models such as resellers, MSPs, distributors, and system integrators.',
+      how:'Designed a modular partner enablement ecosystem tailored to specific partner tracks. Engineered custom widgets and backend portal automations to bridge integration gaps and capture real-time user telemetry. Consolidated legacy materials into a searchable repository and pioneered the initial architecture for an intelligent conversational bot to handle complex partner queries.',
+      process:['Audit fragmented content + journeys','Segment partner models + roles','Map capabilities + accreditation paths','Rebuild learning architecture','Connect LMS + PRM workflows','Add telemetry + custom widgets','Create searchable knowledge layer','Prototype conversational AI support','Measure ramp + accreditation velocity'],
+      pm:['Ran parallel workstreams across curriculum, portal experience, systems integration, analytics, content governance, and AI knowledge support.','Managed dependencies between partner identity, enrollment, accreditation logic, content access, reporting, and launch communications.','Used modular releases so priority learning paths could launch while analytics and portal integrations continued to mature.','Established a measurable baseline for accreditation velocity, learner behavior, and partner readiness.'],
+      programs:['Partner Pre-Sales Fundamentals','Sales Fundamentals','Sales Applied track','Pre-Sales Technical Fundamentals','PurpleAI Partner Specialization','Cloud Fundamentals + personas','Unified Demo Introduction','Competitive Edge','PartnerPulse learning series'],
       tools:['Thought Industries / SentinelOne University','Highspot / SalesEdge','Impartner PRM','Wistia','Articulate 360 / Rise','Glean','11Labs','Canva','Google Workspace','Slack Canvas','Custom widgets + portal automations','Conversational AI architecture'],
-      outcomes:[['$3.1M','Partner-driven revenue influenced'],['40–50%','Partner ramp-time reduction'],['4,000+','Partners reached globally']],
-      note:'The strategic shift: partner enablement moved from “content + courses” to Partner Type → Role → Capability → Learning → Accreditation → Data → Readiness → Revenue.'
+      outcomes:[['$3.1M','Partner-driven revenue influenced'],['40–50%','Global partner ramp-time reduction'],['First','True analytics baseline for accreditation velocity']],
+      note:'Partner Type → Role → Capability → Learning → Accreditation → Telemetry → Readiness → Revenue.'
     },
     {
-      id:'twilio-meddpicc',index:'02',company:'Twilio',title:'MEDDPICC Revenue Execution & Behavior Architecture',timeline:'2022–2024',type:'Global methodology + sales readiness',metrics:['82% adoption','40% conversion lift','NPS 80'],lede:'Operationalized MEDDPICC as a revenue-execution system—connecting learning, opportunity behavior, manager coaching, CRM discipline, and deal inspection instead of treating methodology as a one-time training event.',
-      why:'Methodology only matters when it changes live opportunity behavior. The risk was a familiar one: sellers could learn the vocabulary without consistently using it to qualify deals, expose risk, improve discovery, or support manager inspection.',
-      how:'I designed the rollout around observable behaviors. Workshops introduced the methodology, applied practice connected it to real opportunities, manager reinforcement sustained it, and workflow integration created recurring moments where the methodology had to be used.',
-      process:['Baseline execution gaps','Define observable behaviors','Teach + practice','Embed in opportunity workflow','Manager inspection + coaching','Reinforce in field','Measure adoption + conversion'],
-      pm:['Coordinated enablement, frontline management, sales leadership, Revenue Operations, and system owners around one behavior model.','Sequenced seller training with manager readiness so reinforcement existed immediately after launch.','Connected enablement milestones to pipeline inspection and CRM execution rather than course completion alone.','Used adoption and conversion signals to identify where reinforcement was still required.'],
-      programs:['Global MEDDPICC workshops','Opportunity-based practice','Manager coaching guides','Deal inspection routines','Pipeline reinforcement','Value-selling application'],
-      tools:['Salesforce','Gong','Highspot','Slack','Manager coaching workflows','CRM stage / qualification signals'],
-      outcomes:[['82%','MEDDPICC adoption'],['40%','Deal / stage conversion lift'],['80','Workshop NPS']],
-      note:'The operating loop: Learn → Apply → Inspect → Coach → Reinforce → Measure. The goal was not methodology knowledge; it was repeatable revenue behavior.'
+      id:'sentinelone-partnerstruck',index:'02',company:'SentinelOne',title:'Partnerstruck — Gamified SKO Engagement & Certification',role:'Content and Systems Manager, Partner Enablement',timeline:'Global SKO',type:'Gamified learning + automated remediation',metrics:['99% entry rate','68% first-pass','+30 remediated'],
+      lede:'Turned a global Sales Kickoff into an interactive partner-learning environment that measured comprehension in real time and automatically remediated knowledge gaps.',
+      why:'Traditional presentation formats at SKO were not creating genuine comprehension of partner strategy. Leadership also needed a scalable way to measure baseline knowledge across hundreds of attendees at the same time.',
+      how:'Deployed physical and digital QR codes across the venue linked to a mobile ecosystem assessment. Built an automated backend tracking system that instantly scored submissions and routed failing scores to targeted micro-learning remediation. Anchored the campaign with a memorable branded fuzzy-goat reward that made ecosystem mastery visible and fun.',
+      process:['Define partner-literacy objectives','Build mobile assessment','Place QR entry points across SKO','Capture + score responses instantly','Flag knowledge gaps','Route failures to micro-learning','Reassess after remediation','Reward mastery + report coverage'],
+      pm:['Designed the learner journey across physical venue moments, mobile assessment, scoring logic, remediation, and rewards.','Coordinated event logistics, content, scoring thresholds, follow-up learning, and completion tracking.','Used real-time participation and pass-rate data to identify where additional reinforcement was needed during and after SKO.','Closed the loop after the event rather than treating the live session as the finish line.'],
+      programs:['Partnerstruck ecosystem assessment','QR-based SKO learning journey','Automated remediation loops','Targeted micro-learning','Certification follow-up','Gamified reward experience'],
+      tools:['QR workflow','Mobile assessment','Automated scoring logic','Learning remediation modules','Partner enablement content','Event analytics dashboard','Backend tracking automation'],
+      outcomes:[['99%','Entry rate among SKO attendees'],['68%','First-pass certification rate'],['+30','Additional attendees converted through remediation']],
+      note:'Engage → Assess → Score → Diagnose → Remediate → Reassess → Certify.'
     },
     {
-      id:'twilio-productivity-ai',index:'03',company:'Twilio',title:'AI-Powered GTM Knowledge & Productivity Engine',timeline:'2022–2024',type:'AI + workflow + GTM technology optimization',metrics:['+9% productivity','$700K annual savings','−60% search time'],lede:'Connected AI knowledge retrieval, workflow education, and technology rationalization to attack two expensive forms of GTM friction: time lost finding answers and money lost maintaining tools that were not producing enough value.',
-      why:'Sellers had powerful systems and deep technical knowledge available to them, but information was distributed and the revenue stack had overlapping capabilities. The business needed faster answers, clearer workflows, stronger adoption, and disciplined technology economics.',
-      how:'I combined WiseOwl—an AI knowledge assistant available in seller workflows—with an ongoing Tool Tips program and a stack-rationalization workstream. Rather than teach tools in isolation, the program focused on what sellers were trying to accomplish and removed friction around those workflows.',
-      process:['Inventory tools + knowledge','Map seller friction','Build AI retrieval path','Launch Tool Tips','Analyze usage + overlap','Consolidate licenses','Reinforce adoption','Measure time + productivity + cost'],
-      pm:['Managed a cross-functional program spanning enablement, Revenue Operations, system owners, knowledge contributors, managers, and end users.','Balanced adoption, capability coverage, license economics, and workflow dependencies before consolidating technology.','Maintained a continuous learning cadence through Tool Tips so process and system changes translated into usable behavior.','Used seller friction and usage signals to prioritize the highest-value productivity improvements.'],
-      programs:['WiseOwl AI assistant','Tool Tips microlearning series','GTM stack rationalization','Workflow automation','Knowledge retrieval optimization'],
-      tools:['Salesforce','Slack','WiseOwl','Gong','Highspot','Rattle','6sense','Outreach','ZoomInfo','LinkedIn Sales Navigator','LLM / AI systems'],
-      outcomes:[['+9%','Sales productivity'],['$700K','Annual savings'],['−60%','Technical-answer search time']],
-      note:'The architecture connected Seller Question → AI Retrieval → Workflow Guidance → System Adoption → Productivity → Revenue Execution.'
+      id:'twilio-soar',index:'03',company:'Twilio',title:'SOAR — Sales Outcomes Achieve Results Enablement Framework',role:'Senior Sales Enablement Manager',timeline:'2022–2024',type:'Global sales + partner accreditation',metrics:['+9% productivity','+40% conversion','82% MEDDPICC'],
+      lede:'Designed and launched a multi-tiered enablement and accreditation program for internal sales teams and external partners to standardize the competencies that drive revenue execution.',
+      why:'Sales reps and partners lacked a standardized framework for value-based conversations and complex competitive situations. Hyper-growth demanded a scalable system that could upskill hundreds of stakeholders without reducing enablement to disconnected training events.',
+      how:'Developed a five-module curriculum spanning value-based selling, advanced competitive intelligence, customer discovery, revenue execution, and management coaching. Rolled the program to an initial cohort of 400 people with an automated certification pipeline issuing badges and completion certificates. Workflow automation and AI systems were integrated into the surrounding enablement stack to reinforce execution in the flow of work.',
+      process:['Diagnose revenue skill gaps','Define SOAR competency model','Build five-module curriculum','Pilot with core cohorts','Practice against real opportunities','Automate accreditation + badging','Embed MEDDPICC + manager reinforcement','Connect workflow automation','Measure adoption + productivity + conversion'],
+      pm:['Aligned sales leadership, managers, Revenue Operations, partner stakeholders, and system owners around one competency model.','Sequenced learner readiness, manager reinforcement, accreditation, and workflow integration so behavior continued after formal training.','Used adoption and conversion signals to identify where the framework required reinforcement or iteration.','Scaled the program through repeatable learning assets, automation, and certification infrastructure.'],
+      programs:['Value-based selling','Advanced competitive intelligence','Customer discovery','Revenue execution','Management coaching','MEDDPICC reinforcement','Automated certification + badging'],
+      tools:['Salesforce','Gong','Highspot','Rattle','Slack','6sense','WiseOwl','LLM / AI systems','Workflow automation','Certification pipeline'],
+      outcomes:[['+9%','Sales productivity'],['+40%','Deal conversion rates'],['82%','MEDDPICC adoption'],['$700K','Annual savings from GTM technology optimization']],
+      note:'Diagnose → Learn → Practice → Apply → Certify → Reinforce → Measure.'
     },
     {
-      id:'tessian-zero-to-one',index:'04',company:'Tessian',title:'Global Enablement 0→1 Architecture',timeline:'2019–2020',type:'Global sales enablement build',metrics:['0→1 function','−40% onboarding time','94% certification'],lede:'Took global enablement from 0 to 1—building the onboarding, messaging, practice, certification, content, and reinforcement infrastructure needed for a scaling enterprise sales organization.',
-      why:'Rapid growth created inconsistent ramp experiences and too much dependency on tribal knowledge. Sellers needed a shared operating model for how to learn the business, engage buyers, practice enterprise selling, and demonstrate readiness.',
-      how:'I created a sequenced capability journey that moved from onboarding and persona understanding into applied enterprise-selling behavior, multi-threading, practice, and certification. The program balanced global consistency with regional delivery needs.',
-      process:['Assess readiness gaps','Standardize onboarding','Build persona messaging','Install role-based learning','Practice + certify','Reinforce through managers','Measure ramp + readiness'],
-      pm:['Built the enablement operating model while simultaneously delivering against active field needs.','Managed regional requirements, role differences, content sequencing, launch schedules, and stakeholder expectations.','Created repeatable onboarding and certification rather than relying on manager-by-manager interpretation.','Used readiness and ramp performance to guide iteration.'],
-      programs:['Structured onboarding','Persona-based messaging','Multi-threading enablement','Role-based tracks','Applied roleplay','Certification','Localized workshops + SKO programming'],
-      tools:['LMS learning journeys','Sales playbooks','Certification workflows','Live workshops','Manager reinforcement','Governed content architecture'],
-      outcomes:[['0→1','Global enablement function'],['−40%','Onboarding time'],['94%','Certification pass rate']],
-      note:'The build created a repeatable system: Onboard → Learn → Practice → Certify → Perform → Reinforce → Measure.'
+      id:'twilio-gong-intelligence',index:'04',company:'Twilio',title:'Gong Conversational Intelligence Architecture & Data Pipeline',role:'Senior Sales Enablement Manager',timeline:'2022–2024',type:'Conversation intelligence + performance analytics',metrics:['400+ enabled','SOAR catalyst','VoC telemetry'],
+      lede:'Configured Gong as a revenue intelligence system that captured what was actually happening in customer conversations and converted those signals into targeted enablement decisions.',
+      why:'Leadership lacked empirical data showing what top reps were doing differently on calls or where deals were stalling. GTM strategy was too dependent on anecdotal feedback instead of scalable conversational analytics.',
+      how:'Built custom keyword dictionaries, trackers, and advanced filters in Gong to map critical sales behaviors, objections, competitive friction, and discovery patterns. Partnered with Sales Operations to extract telemetry such as talk-to-listen ratios, call duration, objection frequency, and recurring topics, then converted those insights into a closed-loop data-to-action pipeline that became a catalyst for SOAR.',
+      process:['Define behaviors + questions to observe','Build keyword dictionaries','Configure custom trackers','Segment calls + cohorts','Extract conversation telemetry','Compare top-performer patterns','Identify repeat skill gaps','Feed insights into SOAR','Measure behavior changes over time'],
+      pm:['Partnered with Sales Operations and sales leadership to define useful signals instead of collecting data for its own sake.','Established a repeatable analysis cadence that connected call telemetry to curriculum, coaching, and manager reinforcement.','Created a closed loop between field evidence, enablement design, and follow-up measurement.','Used conversational data to prioritize skill gaps with the highest likely impact on pipeline execution.'],
+      programs:['Voice-of-customer analysis','Custom conversation trackers','Behavior analytics','Objection intelligence','Competitive friction analysis','SOAR curriculum inputs','Manager coaching insights'],
+      tools:['Gong','Salesforce','Sales Operations data pipeline','Highspot','Custom trackers','Keyword dictionaries','Analytics filters','Manager coaching workflows'],
+      outcomes:[['400+','SOAR participants informed by the intelligence loop'],['+9%','Productivity lift in the surrounding enablement program'],['+40%','Deal conversion gain in the surrounding enablement program']],
+      note:'Conversation → Signal → Pattern → Skill Gap → Enablement → Coaching → Behavior Change → Revenue.'
     },
     {
-      id:'cofense-academy',index:'05',company:'Cofense',title:'Global Sales Academy & Rebrand Enablement Transformation',timeline:'2018–2019',type:'Change management + sales academy',metrics:['96% certification','$3M ARR influenced','Global rebrand'],lede:'Built global sales enablement while helping translate the PhishMe-to-Cofense transformation into field behavior—connecting the new company story to messaging, practice, certification, and revenue execution.',
-      why:'A rebrand is only successful when the field can explain what changed, why it matters, and how the new story should influence customer conversations. At the same time, the organization needed a more consistent system for seller readiness and practice.',
-      how:'I used the rebrand as a structured change-management program: align the narrative, convert it into seller messaging, deploy the learning environment, create scenario-based practice, certify readiness, and reinforce the behaviors required in market.',
-      process:['Align corporate narrative','Translate to field messaging','Deploy Allego','Build scenario practice','Certify readiness','Reinforce objections + competition','Measure field impact'],
-      pm:['Aligned Sales, Marketing, Product, Revenue Operations, and Enablement around one field-readiness plan.','Managed the platform, content, practice, certification, launch communications, and adoption workstreams together.','Sequenced rebrand messaging and certification so the field could demonstrate the new story before relying on it in market.','Established repeatable learning and practice beyond the rebrand itself.'],
-      programs:['Cofense Academy','Scenario-based practice','Messaging + objection handling','Competitive enablement','Prospecting readiness','Certification'],
-      tools:['Allego','Video practice','LMS learning paths','Certification workflows','Competitive playbooks','Live enablement'],
-      outcomes:[['96%','Certification pass rate'],['$3M','ARR influenced'],['Global','Rebrand field activation']],
-      note:'The change model: Corporate Strategy → GTM Messaging → Learning → Practice → Certification → Field Execution → Revenue.'
+      id:'enterprise-revenue-acceleration',index:'05',company:'Cofense & Prior Enterprise Roles',title:'Revenue Acceleration & Sales Cycle Optimization',role:'Senior Revenue & Go-To-Market Enablement Leader',timeline:'Enterprise GTM leadership',type:'Revenue performance + onboarding',metrics:['+8.75% revenue','+4% win rate','−37 days cycle'],
+      lede:'Executed enterprise sales enablement strategies, structured onboarding, coaching, and revenue workflows designed to reduce friction across complex sales cycles and improve field performance.',
+      why:'Complex enterprise sales cycles and inconsistent discovery methodologies caused opportunities to stall while new hires faced long ramp times because training and operating guidance were fragmented.',
+      how:'Standardized discovery and qualification frameworks across the revenue organization. Deployed targeted coaching modules, manager enablement, structured onboarding, and continuous education cadences while integrating modern enablement tooling to reduce administrative friction and support consistent execution.',
+      process:['Diagnose pipeline friction','Standardize discovery + qualification','Rebuild onboarding sequence','Create targeted coaching modules','Enable frontline managers','Install continuous learning cadence','Automate repeatable workflows','Inspect win rate + cycle movement','Iterate from field performance'],
+      pm:['Connected enablement priorities to pipeline metrics instead of training-volume metrics.','Balanced onboarding, continuous education, manager coaching, and field execution as one operating system.','Used repeatable frameworks to reduce variability in discovery and qualification across teams.','Maintained ongoing reinforcement rather than relying on one-time launches.'],
+      programs:['Structured enterprise onboarding','Discovery + qualification frameworks','Manager enablement','Targeted coaching modules','Continuous education','Competitive deal reinforcement','Revenue workflow optimization'],
+      tools:['Allego','LMS learning paths','Sales playbooks','CRM workflows','Video practice','Certification workflows','Manager coaching','Enablement analytics'],
+      outcomes:[['+8.75%','Overall bottom-line revenue'],['+4%','Win rate across competitive deals'],['−37 days','Average sales cycle length']],
+      note:'Diagnose → Standardize → Coach → Reinforce → Inspect → Improve.'
     },
     {
-      id:'reup-gtm',index:'06',company:'ReUp Technologies',title:'0→1 GTM & Partner Commercialization Engine',timeline:'2020–2022',type:'Co-founder · business + GTM build',metrics:['0→1 build','2-year operating window','GTM + partner motion'],lede:'Built the commercial operating foundation from the company side—positioning, value proposition, sales process, partner activation, onboarding, and execution—providing direct experience with the business systems enablement is ultimately designed to improve.',
-      why:'An early-stage company cannot rely on established messaging, sales motions, partner programs, or institutional knowledge. The business needed to determine who it served, what value it created, how to communicate that value, and how to turn successful motions into repeatable execution.',
-      how:'I worked across strategy and execution rather than separating them. Customer and partner needs informed positioning; positioning informed messaging; messaging informed qualification and playbooks; and the resulting operating model informed onboarding and partner activation.',
+      id:'reup-gtm',index:'06',company:'ReUp Technologies',title:'0→1 GTM & Partner Commercialization Engine',role:'Co-Founder',timeline:'2020–2022',type:'Business + GTM build',metrics:['0→1 build','GTM + partner motion','Founder-led'],
+      lede:'Built the commercial operating foundation from the company side: positioning, value proposition, sales process, partner activation, onboarding, and execution.',
+      why:'An early-stage company cannot rely on established messaging, sales motions, partner programs, or institutional knowledge. The business had to determine who it served, what value it created, how to communicate that value, and how to make successful motions repeatable.',
+      how:'Connected customer and partner needs to positioning, messaging, qualification, playbooks, onboarding, and partner activation. The goal was to turn founder knowledge into a commercial operating system that other people could actually use.',
       process:['Define market problem','Clarify customer + partner','Build value proposition','Create messaging','Install qualification','Build playbooks','Activate + onboard partners','Learn from pipeline'],
-      pm:['Managed priorities across business-building workstreams with limited early-stage resources.','Connected product/market decisions to the commercial processes required to execute them.','Created repeatable operating assets instead of leaving critical knowledge in founder conversations.','Used active market feedback to refine positioning, process, and partner execution.'],
+      pm:['Managed priorities across business-building workstreams with limited early-stage resources.','Connected product and market decisions to the commercial processes required to execute them.','Created repeatable operating assets instead of leaving critical knowledge inside founder conversations.','Used active market feedback to refine positioning, process, and partner execution.'],
       programs:['GTM positioning','Full-funnel messaging','Sales playbooks','Qualification architecture','Partner activation','Partner onboarding'],
       tools:['GTM operating model','Sales playbooks','Partner onboarding workflows','Qualification frameworks','Pipeline feedback loops'],
       outcomes:[['0→1','Commercial foundation'],['2020–22','Build period'],['GTM + Partner','Integrated motion']],
-      note:'ReUp demonstrates both sides of the discipline: building the GTM system itself and building enablement systems that improve GTM performance.'
+      note:'Market Problem → Positioning → Sales Motion → Partner Motion → Pipeline → Learning.'
     },
     {
-      id:'ggw-ai-academy',index:'07',company:'Global Gaming Women',title:'AI Learning & Performance Support Academy',timeline:'2026–Present',type:'Current build · workforce AI adoption',metrics:['5 core modules','35+ master prompts','Google-native'],lede:'Designing a beginner-friendly AI academy that teaches people how to use AI inside real work—not just what generative AI is—through structured learning, reusable prompts, activities, quick-reference support, and Google Workspace workflows.',
-      why:'Most AI education is either too conceptual or too advanced. Beginners need a clear bridge between “AI exists” and “here is exactly how I use it to complete a real task correctly and efficiently.”',
-      how:'The academy is being built as both learning and performance support: concise modules build understanding, activities create practice, the prompt library accelerates application, and tool-specific guidance lets employees return at the exact moment they need help.',
+      id:'ggw-ai-academy',index:'07',company:'Global Gaming Women',title:'AI Learning & Performance Support Academy',role:'Program Architect + Builder',timeline:'2026–Present',type:'Workforce AI adoption',metrics:['5 core modules','35+ master prompts','Google-native'],
+      lede:'Designing a beginner-friendly AI academy that teaches people how to use AI inside real work through structured learning, reusable prompts, activities, quick-reference support, and Google Workspace workflows.',
+      why:'Most AI education is either too conceptual or too advanced. Beginners need a practical bridge between understanding AI and using it correctly to complete real work.',
+      how:'Built the academy as both learning and performance support: concise modules build understanding, activities create practice, the prompt library accelerates application, and tool-specific guidance gives employees support at the moment of need.',
       process:['Prioritize work use cases','Design 5 core modules','Build 35+ prompt library','Add practice + checks','Connect Google workflows','Install progress tracking','Validate usability','Iterate from learner data'],
-      pm:['Managing curriculum, UX, content production, prompt architecture, web development, deployment, and governance as connected workstreams.','Using scoped releases rather than producing a large library before validating whether learners can actually use it.','Designing for adult-learning needs through step-by-step instruction, activities, visual support, and reusable job aids.','Maintaining accuracy as AI and Google capabilities change.'],
+      pm:['Managing curriculum, UX, content production, prompt architecture, web development, deployment, and governance as connected workstreams.','Using scoped releases rather than producing a large library before validating learner usability.','Designing for adult-learning needs through step-by-step instruction, activities, visual support, and reusable job aids.','Maintaining accuracy as AI and Google capabilities change.'],
       programs:['Everyday AI workflows','Prompt Library','NotebookLM learning','Gemini workflows','Google Workspace quick tips','Applied activities + knowledge checks'],
       tools:['Gemini','NotebookLM','Gmail','Google Docs','Google Sheets','Google Slides','Google Drive','Google Calendar','GitHub','Vercel'],
       outcomes:[['5','Core modules'],['35+','Reusable master prompts'],['Current','Build + validation']],
-      note:'The learning loop: Understand → See It → Practice It → Use It → Reference It → Improve It.'
+      note:'Understand → See It → Practice It → Use It → Reference It → Improve It.'
     }
   ];
 
   var visuals={
     'sentinelone-partner-architecture':{
       window:'2024–2025 · iterative global rollout',
-      phases:[['01','Discover','Audit content, journeys, roles, tracking gaps'],['02','Architect','Segment partner types and capability paths'],['03','Build','Courses, content model, widgets, automations'],['04','Launch','PartnerPulse + role-based program deployment'],['05','Optimize','Completion, drop-off, readiness and revenue signals']],
-      architecture:[['Partner identity','Reseller · Distributor · MSSP · SI · Technical · Sales'],['Portal + access','Impartner PRM · custom portal logic'],['Learning','Thought Industries · Articulate Rise · Wistia'],['Content + knowledge','Highspot · Glean · Google Workspace · Canva'],['Intelligence','Analytics · custom widgets · conversational AI'],['Business output','Accreditation · readiness · partner-sourced revenue']],
-      evidence:[
-        ['Video learning','Working with Channel Partners','Field-facing partner learning example paired with practice and reinforcement.','Working%20with%20Channel%20Partners.mp4'],
-        ['Architecture','8-Week Enablement Accelerator','Representative implementation architecture for diagnosing, building, piloting and measuring enablement.','#artifact-accelerator'],
-        ['Playbook','Enablement Playbook Framework','Representative operating framework showing how process and field execution connect.','assets/enablement-playbook-framework.svg']
-      ]
+      phases:[['01','Audit','Map fragmented content, paths and reporting gaps'],['02','Segment','Differentiate partner models, roles and needs'],['03','Architect','Build modular learning + accreditation paths'],['04','Integrate','Connect PRM, LMS, knowledge and telemetry'],['05','Intelligence','Add analytics + conversational AI foundation'],['06','Optimize','Measure ramp, velocity and revenue signals']],
+      architecture:[['Partner identity','Reseller · Distributor · MSP/MSSP · SI · Technical · Sales'],['Portal + access','Impartner PRM · custom portal logic'],['Learning','Thought Industries · Articulate Rise · Wistia'],['Content + knowledge','Highspot · Glean · Google Workspace · Canva'],['Intelligence','Telemetry · custom widgets · conversational AI'],['Business output','Accreditation · readiness · partner revenue']],
+      evidence:[['Video learning','Working with Channel Partners','Representative partner learning asset connected to the broader readiness architecture.','Working%20with%20Channel%20Partners.mp4'],['Architecture','8-Week Enablement Accelerator','Representative implementation architecture for diagnosing, building, piloting and measuring enablement.','#artifact-accelerator'],['Framework','4-Stage Enablement Framework','Know → Practice → Prove → Perform applied as a readiness model.','#artifact-framework']]
     },
-    'twilio-meddpicc':{
-      window:'2022–2024 · methodology rollout + reinforcement',
-      phases:[['01','Diagnose','Find qualification and conversion friction'],['02','Define','Translate MEDDPICC into observable behaviors'],['03','Enable','Global workshops + opportunity practice'],['04','Reinforce','Manager coaching + deal inspection'],['05','Measure','Adoption + stage/deal conversion']],
-      architecture:[['Methodology','MEDDPICC + value selling'],['Practice','Workshops · live opportunities · role application'],['Workflow','Salesforce qualification + opportunity signals'],['Inspection','Managers · pipeline reviews · deal coaching'],['Reinforcement','Gong · Highspot · Slack'],['Business output','82% adoption · 40% conversion lift']],
-      evidence:[
-        ['Operating model','4-Stage Enablement Framework','Know → Practice → Prove → Perform: the behavior model behind sustained methodology adoption.','#artifact-framework'],
-        ['Playbook','SentinelOne / Twilio Playbook','Representative field playbook architecture for translating strategy into repeatable execution.','assets/enablement-playbook-framework.svg'],
-        ['Scorecard','Measurable Impact','Executive KPI view connecting enablement activity to adoption and pipeline outcomes.','#artifact-kpis']
-      ]
+    'sentinelone-partnerstruck':{
+      window:'Global SKO · live event + post-event remediation',
+      phases:[['01','Engage','QR touchpoints create curiosity and participation'],['02','Assess','Mobile ecosystem assessment captures baseline literacy'],['03','Score','Backend automation evaluates submissions instantly'],['04','Remediate','Targeted micro-learning closes failed knowledge areas'],['05','Reassess','Post-event follow-up converts remaining gaps'],['06','Certify','Reward mastery and report organizational coverage']],
+      architecture:[['Venue layer','Physical + digital QR entry points'],['Assessment','Mobile partner-ecosystem quiz'],['Automation','Instant scoring + pass/fail logic'],['Learning','Targeted remediation modules'],['Engagement','Gamified fuzzy-goat reward'],['Output','Participation · certification · coverage']],
+      evidence:[['Experience design','QR Learning Journey','A venue-wide learning experience that connected physical moments to measurable mobile participation.',null],['Automation','Remediation Loop','Failing scores automatically triggered targeted learning instead of manual follow-up.',null],['Engagement','Partnerstruck Reward','A deliberately memorable branded reward made partner knowledge visible, social, and fun.',null]]
     },
-    'twilio-productivity-ai':{
-      window:'2022–2024 · continuous productivity program',
-      phases:[['01','Inventory','Map tools, knowledge and duplicate capability'],['02','Friction map','Identify seller search and workflow waste'],['03','AI layer','Operationalize WiseOwl in Slack / Salesforce'],['04','Adoption','Tool Tips + workflow reinforcement'],['05','Optimize','Consolidate licenses and measure productivity']],
-      architecture:[['Seller need','Question · task · opportunity friction'],['Knowledge layer','WiseOwl · LLM-assisted retrieval'],['Workflow','Slack · Salesforce · Rattle'],['Execution stack','Gong · Highspot · Outreach · 6sense · ZoomInfo'],['Enablement layer','Tool Tips · job aids · reinforcement'],['Business output','−60% search time · +9% productivity · $700K saved']],
-      evidence:[
-        ['AI architecture','GPT Prompt Architecture','Representative view of how structured AI instructions can turn knowledge into repeatable performance support.','assets/gpt-prompt-architecture.svg'],
-        ['Performance model','4-Stage Enablement Framework','Framework for moving from tool awareness to demonstrated workflow behavior.','#artifact-framework'],
-        ['Scorecard','GTM Productivity Outcomes','9% productivity lift and $700K annual savings displayed alongside other validated portfolio outcomes.','#artifact-kpis']
-      ]
+    'twilio-soar':{
+      window:'2022–2024 · global rollout + accreditation',
+      phases:[['01','Diagnose','Identify revenue skills and execution gaps'],['02','Design','Define five-module SOAR competency architecture'],['03','Enable','Launch to 400-person initial cohort'],['04','Practice','Apply skills to real opportunities + competitive situations'],['05','Certify','Automate badges and completion credentials'],['06','Reinforce','Embed MEDDPICC, managers, workflow and AI support'],['07','Measure','Track adoption, productivity and conversion']],
+      architecture:[['Competencies','Value · competition · discovery · execution · coaching'],['Learning','Five-module SOAR curriculum'],['Practice','Applied opportunity work + manager reinforcement'],['Accreditation','Automated badges + certificates'],['Workflow','Salesforce · Rattle · AI / LLM support'],['Business output','9% productivity · 40% conversion · 82% MEDDPICC']],
+      evidence:[['Performance model','4-Stage Enablement Framework','Representative readiness model for moving from knowledge to demonstrated performance.','#artifact-framework'],['Architecture','8-Week Enablement Accelerator','Representative structure for sequencing enablement design, pilot, rollout and measurement.','#artifact-accelerator'],['Scorecard','GTM Productivity Outcomes','Validated portfolio outcomes presented as measurable performance evidence.','#artifact-kpis']]
     },
-    'tessian-zero-to-one':{
-      window:'2019–2020 · approximately 12-month 0→1 build',
-      phases:[['01','Baseline','Assess onboarding, messaging and readiness gaps'],['02','Standardize','Create global onboarding + role structure'],['03','Build','Persona messaging, multi-threading, practice'],['04','Validate','Certification + readiness proof'],['05','Scale','Manager reinforcement + regional delivery']],
-      architecture:[['New seller','Role + region + starting capability'],['Onboarding','Sequenced learning + core messaging'],['Selling skills','Personas · discovery · multi-threading'],['Practice','Roleplay · workshops · applied exercises'],['Proof','Certification + readiness checks'],['Performance','Faster ramp + repeatable global execution']],
-      evidence:[
-        ['Program artifact','Onboarding architecture','Sequenced capability path from foundational knowledge through applied enterprise selling.',null],
-        ['Readiness artifact','Certification model','Demonstration-based readiness rather than attendance-only completion.',null],
-        ['Operating artifact','Global / regional delivery model','Standard core architecture with localized workshop and reinforcement delivery.',null]
-      ]
+    'twilio-gong-intelligence':{
+      window:'2022–2024 · continuous intelligence loop',
+      phases:[['01','Observe','Define sales behaviors and friction to inspect'],['02','Instrument','Build trackers, keywords and filters'],['03','Analyze','Extract talk, objection and topic telemetry'],['04','Compare','Identify top-performer and stalled-deal patterns'],['05','Enable','Translate patterns into SOAR content + coaching'],['06','Measure','Watch behavior signals after reinforcement']],
+      architecture:[['Conversation layer','Gong calls + transcripts'],['Detection','Keyword dictionaries · custom trackers'],['Analytics','Filters · talk ratios · duration · objections'],['Data partnership','Sales Operations telemetry pipeline'],['Action layer','SOAR · coaching · manager reinforcement'],['Business output','Evidence-based skill priorities']],
+      evidence:[['Intelligence map','Conversation-to-Enablement Loop','Customer conversations became a structured input into program design rather than anecdotal feedback.',null],['Analytics','Custom Tracker Architecture','Behavioral, competitive, and objection signals organized for repeatable analysis.',null],['Program linkage','SOAR Catalyst','Conversation intelligence directly informed the competency gaps addressed by SOAR.',null]]
     },
-    'cofense-academy':{
-      window:'2018–2019 · approximately 12-month transformation',
-      phases:[['01','Align','Translate PhishMe → Cofense strategy'],['02','Message','Build field narrative + objections'],['03','Platform','Deploy Allego learning environment'],['04','Practice','Scenario learning + video practice'],['05','Certify','Readiness validation + reinforcement']],
-      architecture:[['Corporate change','Brand · strategy · product narrative'],['Field story','Messaging · prospecting · objection handling'],['Learning platform','Allego'],['Practice','Scenario learning · video practice'],['Readiness','Certification + coaching'],['Commercial output','Consistent rebrand execution + ARR influence']],
-      evidence:[
-        ['Change artifact','Rebrand-to-field map','Corporate narrative translated into seller language, practice and customer-facing behavior.',null],
-        ['Learning artifact','Cofense Academy','Structured global learning and certification environment.',null],
-        ['Readiness artifact','Scenario certification','Applied selling proof supported by Allego video practice and coaching.',null]
-      ]
+    'enterprise-revenue-acceleration':{
+      window:'Multi-role enterprise enablement leadership',
+      phases:[['01','Diagnose','Find onboarding, discovery and pipeline friction'],['02','Standardize','Create repeatable qualification + discovery behavior'],['03','Ramp','Sequence onboarding and readiness'],['04','Coach','Install targeted modules + manager reinforcement'],['05','Automate','Reduce repeatable administrative friction'],['06','Inspect','Track win rate, cycle length and revenue movement']],
+      architecture:[['Revenue motion','Enterprise pipeline + complex deal cycles'],['Method','Discovery · qualification · competitive execution'],['Learning','Onboarding · coaching · continuous education'],['Manager layer','Reinforcement + inspection'],['Workflow','CRM + enablement automation'],['Business output','Revenue lift · win-rate lift · shorter cycles']],
+      evidence:[['Operating model','Revenue Acceleration Loop','A repeatable system connecting field skill, manager reinforcement, workflow and measurement.',null],['Readiness','Enterprise Onboarding','Structured ramp architecture replacing fragmented training materials.',null],['Scorecard','Enterprise Performance Outcomes','Revenue, win-rate and cycle-time improvements used as the proof layer.','#artifact-kpis']]
     },
     'reup-gtm':{
       window:'2020–2022 · founder-led 0→1 operating build',
       phases:[['01','Market','Clarify problem and target customer'],['02','Position','Define value proposition + messaging'],['03','Sell','Qualification + full-funnel playbooks'],['04','Partner','Activation + onboarding motion'],['05','Learn','Pipeline feedback → GTM iteration']],
       architecture:[['Market signal','Customer + partner problem'],['Positioning','Value proposition + narrative'],['Sales motion','Qualification · discovery · playbooks'],['Partner motion','Recruit · activate · onboard'],['Feedback','Pipeline + market learning'],['Business output','Repeatable commercial operating foundation']],
-      evidence:[
-        ['Founder artifact','GTM operating model','Market problem → positioning → sales motion → partner motion → pipeline.',null],
-        ['Sales artifact','Full-funnel playbooks','Repeatable messaging, qualification and execution instead of founder-only knowledge.',null],
-        ['Partner artifact','Activation + onboarding','A structured external-partner motion connected to the commercial strategy.',null]
-      ]
+      evidence:[['Founder artifact','GTM Operating Model','Market problem → positioning → sales motion → partner motion → pipeline.',null],['Sales artifact','Full-Funnel Playbooks','Repeatable messaging, qualification and execution rather than founder-only knowledge.',null],['Partner artifact','Activation + Onboarding','A structured external-partner motion connected to the commercial strategy.',null]]
     },
     'ggw-ai-academy':{
       window:'2026–Present · active build and validation',
-      phases:[['01','Prioritize','Choose high-value everyday work use cases'],['02','Design','5 complete modules + adult-learning flow'],['03','Build','35+ prompts + step-by-step job aids'],['04','Productize','Google-native portal + progress tracking'],['05','Validate','Learner feedback + ongoing AI governance']],
+      phases:[['01','Prioritize','Choose high-value everyday work use cases'],['02','Design','Five complete modules + adult-learning flow'],['03','Build','35+ prompts + step-by-step job aids'],['04','Productize','Google-native portal + progress tracking'],['05','Validate','Learner feedback + ongoing AI governance']],
       architecture:[['Employee task','Email · document · analysis · meeting · planning'],['Learning layer','Short modules · examples · activities'],['AI layer','Gemini · NotebookLM · reusable prompts'],['Workspace','Gmail · Docs · Sheets · Slides · Drive · Calendar'],['Support layer','Quick tips · prompt library · reference paths'],['Performance output','Confidence · adoption · workflow efficiency']],
-      evidence:[
-        ['Learning artifact','5 Core Modules','Complete learning experiences built around real work rather than feature tours.',null],
-        ['Performance support','35+ Master Prompts','Solution-filtered reusable prompts connected to specific Google workflows.',null],
-        ['Product artifact','Google-native Academy','Interactive learning portal with progress, activities, quick tips and performance support.',null]
-      ]
+      evidence:[['Learning artifact','5 Core Modules','Complete learning experiences built around real work rather than feature tours.',null],['Performance support','35+ Master Prompts','Solution-filtered reusable prompts connected to specific Google workflows.',null],['Product artifact','Google-Native Academy','Interactive learning portal with progress, activities, quick tips and performance support.',null]]
     }
   };
 
@@ -188,17 +167,17 @@
       '</button>'+
       '<div class="project-detail" id="'+p.id+'-detail" hidden><div class="project-detail-inner">'+
         '<p class="project-lede">'+p.lede+'</p>'+
-        '<div class="project-meta"><span>'+p.company+'</span><span>'+p.timeline+'</span><span>'+p.type+'</span></div>'+
+        '<div class="project-meta"><span>'+p.role+'</span><span>'+p.timeline+'</span><span>'+p.type+'</span></div>'+
         visualProof(p)+
         '<div class="project-grid">'+
-          '<section class="project-block"><h4>Why this mattered</h4><p>'+p.why+'</p></section>'+
-          '<section class="project-block"><h4>How I approached it</h4><p>'+p.how+'</p></section>'+
+          '<section class="project-block"><h4>The challenge</h4><p>'+p.why+'</p></section>'+
+          '<section class="project-block"><h4>Execution</h4><p>'+p.how+'</p></section>'+
           '<section class="project-block"><h4>Process implemented</h4>'+process(p.process)+'</section>'+
           '<section class="project-block"><h4>Project management + operating cadence</h4>'+listItems(p.pm)+'</section>'+
           '<section class="project-block"><h4>Programs + deliverables</h4>'+listItems(p.programs)+'</section>'+
           '<section class="project-block"><h4>Tools + systems</h4>'+chips(p.tools,'tool-cloud')+'</section>'+
         '</div>'+
-        '<section class="project-block measured-outcomes"><h4>Measured outcomes</h4>'+outcomes(p.outcomes)+'</section>'+
+        '<section class="project-block measured-outcomes"><h4>Outcomes + KPIs</h4>'+outcomes(p.outcomes)+'</section>'+
         '<div class="project-note"><strong>Operating logic:</strong> '+p.note+'</div>'+
       '</div></div>'+
     '</article>';
