@@ -192,7 +192,7 @@
             <div class="field full"><label for="company">Company / role</label><input id="company" name="company"></div>
             <div class="field full"><label for="message">What should we talk about?</label><textarea id="message" name="message" required></textarea></div>
           </div>
-          <div class="form-actions"><button class="button button-dark" type="submit">Start the conversation ↗</button><span class="form-help">Your email app will open with the details ready to send.</span></div>
+          <div class="form-actions"><button class="button button-dark" type="submit">Start the conversation ↗</button><span class="form-help">Opens Gmail with your message ready to send.</span></div>
           <p class="status" id="status" role="status" aria-live="polite"></p>
         </form>
       </div>
@@ -211,7 +211,21 @@
   if(links&&nav){links.addEventListener('click',function(e){if(e.target.tagName==='A'){nav.classList.remove('open');if(menu)menu.setAttribute('aria-expanded','false')}})}
   var form=document.getElementById('contact-form');
   var status=document.getElementById('status');
-  if(form&&status){form.addEventListener('submit',function(e){e.preventDefault();var d=new FormData(form);var name=String(d.get('name')||'').trim();var email=String(d.get('email')||'').trim();var company=String(d.get('company')||'').trim();var message=String(d.get('message')||'').trim();var body=['Name: '+name,'Email: '+email,'Company / role: '+(company||'Not provided'),'','Message:',message].join('\n');status.textContent='Opening your email app…';window.location.href='mailto:ErezHaimowicz@gmail.com?subject='+encodeURIComponent('Website conversation from '+name)+'&body='+encodeURIComponent(body);window.setTimeout(function(){status.textContent='If your email app did not open, email ErezHaimowicz@gmail.com directly.'},900)})}
+  if(form&&status){form.addEventListener('submit',function(e){
+    e.preventDefault();
+    var d=new FormData(form);
+    var name=String(d.get('name')||'').trim();
+    var email=String(d.get('email')||'').trim();
+    var company=String(d.get('company')||'').trim();
+    var message=String(d.get('message')||'').trim();
+    var subject='Website conversation from '+name;
+    var body=['Name: '+name,'Email: '+email,'Company / role: '+(company||'Not provided'),'','Message:',message].join('\n');
+    var gmailUrl='https://mail.google.com/mail/?view=cm&fs=1&to='+encodeURIComponent('ErezHaimowicz@gmail.com')+'&su='+encodeURIComponent(subject)+'&body='+encodeURIComponent(body);
+    status.textContent='Opening Gmail…';
+    var gmailWindow=window.open(gmailUrl,'_blank','noopener,noreferrer');
+    if(gmailWindow){status.textContent='Gmail opened with your message ready to send.'}
+    else{status.textContent='Your browser blocked the Gmail window. Allow pop-ups for this site and try again.'}
+  })}
   var year=document.getElementById('year');if(year)year.textContent=new Date().getFullYear();
 }());
 </script>
