@@ -49,9 +49,6 @@ body:before{
 .hero-sub,.hero-availability{color:#4c5057!important}
 .hero-kicker span{background:#fff!important;color:var(--ez-black)!important;border-color:var(--ez-black)!important}
 .hero-kicker span:last-child{background:var(--ez-red)!important;color:#fff!important;border-color:var(--ez-red)!important}
-/* Replace TEACHER visually with COACH */
-.hero-kicker span:nth-child(3){font-size:0!important}
-.hero-kicker span:nth-child(3)::after{content:"COACH";font-size:.73rem!important;letter-spacing:.08em;font-weight:900}
 .hero:after{color:rgba(11,11,12,.038)!important}
 .portrait-stage:before{color:var(--ez-red)!important;opacity:.92!important}
 .portrait{background:var(--ez-black)!important;border-color:var(--ez-black)!important}
@@ -69,11 +66,40 @@ body:before{
 /* About */
 .positioning{background:#fff!important;color:var(--ez-black)!important;border-top:1px solid #d9d4ce!important}
 .solve-grid{background:var(--ez-black)!important;border-color:var(--ez-black)!important}
-.solve-card{background:#fff!important;color:var(--ez-black)!important;border-color:var(--ez-black)!important}
+.solve-card{
+  background:#fff!important;
+  color:var(--ez-black)!important;
+  border-color:var(--ez-black)!important;
+  min-height:280px!important;
+  padding:30px 32px 34px!important;
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:flex-start!important;
+  justify-content:flex-start!important;
+  overflow:visible!important;
+}
+.solve-card:nth-child(odd),.solve-card:nth-child(even){padding:30px 32px 34px!important}
 .solve-card:nth-child(2),.solve-card:nth-child(3){background:#f1eeea!important}
-.solve-card b{color:var(--ez-red)!important}
-.solve-card h3{color:var(--ez-black)!important}
-.solve-card p{color:#454950!important;font-size:14px!important;line-height:1.64!important}
+.solve-card b{
+  color:var(--ez-red)!important;
+  display:block!important;
+  margin:0 0 34px!important;
+  line-height:1.25!important;
+}
+.solve-card h3{
+  color:var(--ez-black)!important;
+  margin:0 0 14px!important;
+  padding:0!important;
+  line-height:1.06!important;
+  overflow:visible!important;
+}
+.solve-card p{
+  color:#454950!important;
+  font-size:14px!important;
+  line-height:1.64!important;
+  margin:0!important;
+  padding:0!important;
+}
 .solve-card:hover{background:#faeeee!important;transform:translateY(-3px)!important}
 
 /* Case studies */
@@ -174,5 +200,7 @@ body:before{
 
 @media (max-width:900px){
   .solve-card:nth-child(2),.solve-card:nth-child(3),.framework-stage:nth-child(even){background:#fff!important}
+  .solve-card,.solve-card:nth-child(odd),.solve-card:nth-child(even){padding:26px!important;min-height:auto!important}
+  .solve-card b{margin-bottom:24px!important}
   .project-detail-inner{padding:26px 22px!important}
 }
