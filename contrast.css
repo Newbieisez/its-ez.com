@@ -1,0 +1,123 @@
+/* High-contrast readability layer for its-ez.com */
+:root{
+  --ez-ink:#101214;
+  --ez-muted:#45484d;
+  --ez-paper:#f7f4ee;
+  --ez-white:#ffffff;
+  --ez-dark:#15191f;
+  --ez-dark-2:#202630;
+  --ez-accent:#ff6242;
+  --ez-lime:#d7f45f;
+  --ez-blue:#2438a8;
+}
+
+body{background:var(--ez-paper)!important;color:var(--ez-ink)!important}
+.site-header{background:rgba(255,255,255,.96)!important;color:var(--ez-ink)!important}
+.nav-links a,.brand{color:var(--ez-ink)!important}
+
+.hero,.positioning,.proof{background:var(--ez-paper)!important;color:var(--ez-ink)!important}
+.hero-sub,.hero-availability,.body-copy,.positioning-copy,.solve-card p,.fit-panel p{color:var(--ez-muted)!important}
+.hero-kicker span{background:var(--ez-white)!important;color:var(--ez-ink)!important;border-color:var(--ez-ink)!important}
+
+/* About / capability tiles */
+.solve-grid{background:var(--ez-white)!important;border-color:var(--ez-ink)!important}
+.solve-card{
+  background:var(--ez-white)!important;
+  color:var(--ez-ink)!important;
+  border-color:var(--ez-ink)!important;
+}
+.solve-card:nth-child(2),.solve-card:nth-child(3){background:#f0f1f2!important}
+.solve-card b{color:#b13220!important}
+.solve-card h3{color:var(--ez-ink)!important}
+.solve-card p{color:#34383d!important;font-size:14px!important;line-height:1.6!important}
+.solve-card:hover{background:#fff7ef!important}
+
+/* Case studies: dark section, bright cards, explicit text colors */
+.work{background:var(--ez-dark)!important;color:var(--ez-white)!important}
+.work .section-title{color:var(--ez-white)!important}
+.work .eyebrow,.work .body-copy{color:#d8dde4!important}
+.work .project-list,.work .work-list{color:var(--ez-ink)!important}
+.project-case{
+  background:var(--ez-white)!important;
+  color:var(--ez-ink)!important;
+  border-color:#3a414d!important;
+}
+.project-toggle{background:var(--ez-white)!important;color:var(--ez-ink)!important}
+.project-toggle:hover{background:#f7f8fa!important}
+.project-index{color:var(--ez-blue)!important}
+.project-heading small{color:#555b64!important}
+.project-heading h3{color:var(--ez-ink)!important}
+.project-metric{
+  background:#eef1f4!important;
+  color:#15191f!important;
+  border-color:#252a31!important;
+  font-size:10px!important;
+}
+.project-case.is-open .project-metric{
+  background:var(--ez-lime)!important;
+  color:#121417!important;
+}
+.project-action{color:#1d2229!important}
+.project-action-icon{border-color:#1d2229!important;color:#1d2229!important}
+.project-detail{background:var(--ez-white)!important;color:var(--ez-ink)!important;border-color:#262b32!important}
+.project-lede{color:#11151a!important}
+.project-meta span{background:#f3f4f6!important;color:#23272d!important;border-color:#353a42!important}
+.project-objective,.project-note,.process-step,.visual-card{background:#f7f7f5!important;color:#20242a!important}
+.project-block h4{color:#2438a8!important}
+.project-block p,.project-block ul,.project-note{color:#3e434a!important}
+.process-step{border-color:#3d4249!important;font-size:10px!important}
+.tool-cloud span{background:#fff!important;color:#171b20!important;border-color:#3a3f46!important}
+.outcome{background:#171c22!important;color:#fff!important;border-color:#555c66!important}
+.outcome strong{color:var(--ez-lime)!important}
+.outcome span{color:#f1f3f5!important}
+.visual-card-head{background:#1b2026!important;color:#fff!important}
+.visual-card-head small{color:#d5d9de!important}
+.analytics-row,.architecture-node,.evidence-card{background:#fff!important;color:#1b2026!important}
+.analytics-row span,.architecture-node span{color:#454b54!important}
+
+/* Operating model */
+.operating{background:var(--ez-white)!important;color:var(--ez-ink)!important}
+.framework-stage{background:#fff!important;color:#11151a!important;border-color:#20242a!important}
+.framework-stage:nth-child(even){background:#f2f3f4!important}
+.framework-stage b{color:#9c2c1c!important}
+.framework-stage p{color:#3e4349!important}
+.framework-stage span{color:#1f252c!important}
+.horizon{background:#fff!important;color:#11151a!important;border-color:#c6cad0!important}
+.horizon p{color:#40464e!important}
+
+/* Proof / tools */
+.media-proof,.stack-group{background:#fff!important;color:#11151a!important;border:1px solid #c7cbd1!important}
+.media-proof-copy p,.stack-group p{color:#3d434b!important}
+.stack-group strong{color:#11151a!important}
+
+/* Recommendations: keep energy, improve contrast */
+.voice{background:#d7ee72!important;color:#11151a!important}
+.voice .eyebrow,.voice .body-copy{color:#242a31!important}
+.recommendation-card{background:#fff!important;color:#11151a!important;border-color:#20242a!important}
+.recommendation-card blockquote{color:#11151a!important}
+.recommendation-role{color:#4b5159!important}
+.recommendation-link{color:#1f338f!important;font-weight:800!important}
+
+/* Fit */
+.fit{background:#f8f8f7!important;color:#11151a!important}
+.fit-panel{color:#11151a!important;border-color:#343940!important}
+.fit-panel p{color:#3f454c!important}
+
+/* Contact */
+.contact{background:#d94f35!important;color:#fff!important}
+.contact .eyebrow,.contact .body-copy{color:#fff!important}
+.contact .section-title,.contact .email{color:#fff!important}
+.form{background:#fff!important;color:#11151a!important}
+.field label{color:#11151a!important;font-weight:800!important}
+.field input,.field textarea{background:#fff!important;color:#11151a!important;border-color:#69717b!important}
+.form-help,.status{color:#454b52!important}
+
+/* Never allow tiny washed-out text on desktop */
+@media (min-width:900px){
+  .project-heading small,.project-metric,.project-action,.project-block h4,.project-meta span,.outcome span,.visual-card-head>span,.visual-card-head small{font-size:10px!important}
+}
+
+@media (max-width:900px){
+  .solve-card:nth-child(2),.solve-card:nth-child(3),.framework-stage:nth-child(even){background:#fff!important}
+  .project-detail-inner{padding:26px 22px!important}
+}
