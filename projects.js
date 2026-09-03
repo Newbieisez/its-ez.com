@@ -6,13 +6,17 @@
   if(!head||!list)return;
 
   var intro=head.querySelector('.body-copy');
-  if(intro)intro.textContent='These are not training summaries. Each case study shows the business problem, operating model, execution window, systems, reinforcement plan, and measurable outcome.';
+  if(intro)intro.textContent='Each case study follows the business story: what changed, where execution broke down, how the enablement system was built, how it was reinforced, and what moved as a result.';
 
-  var impact=document.createElement('div');
-  impact.className='impact-strip';
-  impact.setAttribute('aria-label','Selected enablement outcomes');
-  impact.innerHTML='<div class="impact-stat"><strong>$3.1M</strong><span>Partner-driven revenue influenced</span></div><div class="impact-stat"><strong>+40%</strong><span>Deal conversion lift</span></div><div class="impact-stat"><strong>40–50%</strong><span>Faster partner ramp</span></div><div class="impact-stat"><strong>$700K</strong><span>Annual GTM technology savings</span></div>';
-  head.parentNode.insertBefore(impact,list);
+  var homepageImpact=document.querySelector('.impact-grid');
+  if(homepageImpact){
+    homepageImpact.innerHTML=''
+      +'<div class="impact-item"><strong>$13M</strong><span>Partner pipeline influenced at SentinelOne</span></div>'
+      +'<div class="impact-item"><strong>$8M</strong><span>Pipeline growth supported at Twilio</span></div>'
+      +'<div class="impact-item"><strong>+40%</strong><span>Deal conversion lift through Twilio enablement</span></div>'
+      +'<div class="impact-item"><strong>40–50%</strong><span>Faster global partner ramp at SentinelOne</span></div>'
+      +'<div class="impact-item"><strong>4,000+</strong><span>Partners reached through structured enablement</span></div>';
+  }
 
   var projects=[
     {
@@ -22,20 +26,20 @@
       role:'Senior Content & Systems Manager, Partner Enablement',
       timeline:'2024–2025',
       type:'Partner ecosystem transformation',
-      metrics:['$3.1M revenue influenced','40–50% faster ramp','4,000+ partners reached'],
-      objective:'Replace fragmented partner learning, content, accreditation, and portal experiences with a connected enablement ecosystem that could scale across distinct partner motions while producing usable readiness data.',
-      lede:'Rebuilt partner enablement as an operating system: segmented journeys, connected platforms, measurable accreditation, searchable knowledge, and an AI-ready support layer.',
-      why:'Partner content and learning lived across disconnected repositories, accreditation paths did not reflect different partner models, and leadership lacked a dependable view of readiness or accreditation velocity.',
-      how:'Designed modular learning and accreditation paths for reseller, distributor, MSP/MSSP, system-integrator, technical, and sales audiences. Connected Thought Industries, Impartner, Highspot, Wistia, Articulate, Glean, Google Workspace, and custom portal automations so access, learning, knowledge, telemetry, and reporting worked as one system.',
-      process:['Audit content, journeys, and reporting','Segment partner models and roles','Map role capabilities and readiness criteria','Design modular accreditation paths','Connect PRM, LMS, content, and access logic','Instrument telemetry and reporting','Launch priority programs in waves','Reinforce through PartnerPulse and competitive learning','Optimize ramp and accreditation velocity'],
-      pm:['Ran curriculum, portal experience, systems integration, analytics, content governance, and AI knowledge support as connected workstreams.','Used overlapping releases instead of waiting for a single large launch: priority learning shipped while deeper integrations continued.','Tracked early adoption and accreditation signals first, then tied mature cohorts to ramp and partner-influenced business outcomes.'],
+      metrics:['$13M pipeline influenced','40–50% faster ramp','4,000+ partners reached'],
+      objective:'Create a scalable partner operating system that could support distinct partner motions, shorten time-to-readiness, and connect learning activity to commercial outcomes.',
+      lede:'As SentinelOne expanded its partner ecosystem, the challenge was no longer producing more content. The challenge was making the ecosystem coherent: the right journey for each partner, the right knowledge at the right moment, and enough telemetry to see whether readiness translated into pipeline.',
+      story:'The work began by mapping a fragmented partner experience across learning, portal access, content, accreditation, and reporting. From there, partner types and roles were segmented into modular capability paths. The architecture connected the PRM, LMS, content, video, knowledge, and analytics layers so partners could move through a consistent journey while the business could finally see adoption and readiness. Once the foundation was in place, recurring programs such as PartnerPulse, Competitive Edge, PurpleAI specialization, and technical accreditation reinforced the system instead of operating as isolated launches.',
+      why:'Partner learning and GTM content lived across disconnected systems, accreditation paths did not reflect the needs of different partner models, and leadership lacked a dependable view of readiness, ramp, and accreditation velocity.',
+      how:'Built role-based partner journeys and connected Thought Industries, Impartner, Highspot, Wistia, Articulate, Glean, Google Workspace, and custom portal automations into one operating model spanning access, learning, knowledge, accreditation, telemetry, and reporting.',
+      process:['Map the existing partner journey and identify friction','Segment partner models, roles, and commercial motions','Define the capabilities each role needed to demonstrate','Rebuild learning and accreditation as modular paths','Connect PRM, LMS, content, knowledge, and access logic','Instrument adoption, readiness, and accreditation telemetry','Launch priority programs in waves rather than one large release','Reinforce with PartnerPulse, competitive learning, and specialization','Use performance data to improve ramp and partner contribution'],
+      pm:['The program moved from architecture to activation in overlapping waves, allowing high-priority learning to ship while deeper integrations continued.','Content governance, system design, analytics, and learning were managed as one program so partners did not experience the organization as separate internal teams.','Measurement matured from adoption and accreditation signals into ramp, pipeline, and realized partner-revenue outcomes.'],
       programs:['Partner Pre-Sales Fundamentals','Sales Fundamentals','Sales Applied track','Pre-Sales Technical Fundamentals','PurpleAI Partner Specialization','Cloud Fundamentals and personas','Unified Demo Introduction','Competitive Edge','PartnerPulse learning series'],
       tools:['Thought Industries / SentinelOne University','Impartner PRM','Highspot / SalesEdge','Wistia','Articulate 360 / Rise','Glean','11Labs','Canva','Google Workspace','Slack Canvas','Custom widgets and portal automations'],
-      outcomes:[['$3.1M','Partner-driven revenue influenced'],['40–50%','Reduction in partner ramp time'],['4,000+','Partners reached through structured enablement']],
-      note:'Partner type → role → capability → learning → accreditation → telemetry → readiness → partner revenue.',
-      phases:[['01','Diagnose','Inventory fragmented learning, content, access, and reporting'],['02','Segment','Define partner types, roles, and capability requirements'],['03','Architect','Build modular journeys, accreditation, and governance'],['04','Integrate','Connect PRM, LMS, knowledge, content, and telemetry'],['05','Activate','Launch priority programs and recurring reinforcement'],['06','Optimize','Use readiness, ramp, and accreditation data to improve the system']],
-      architecture:[['Audience model','Reseller · Distributor · MSP/MSSP · SI · Technical · Sales'],['Access layer','Impartner PRM · role and portal logic'],['Learning layer','Thought Industries · Articulate Rise · Wistia'],['Knowledge layer','Highspot · Glean · Google Workspace'],['Intelligence layer','Telemetry · reporting · custom automations'],['Business layer','Accreditation · readiness · partner revenue']],
-      evidence:[['Learning example','Working with Channel Partners','A shareable partner-learning example showing how strategy was translated into concise field-facing learning.','Working%20with%20Channel%20Partners.mp4']]
+      outcomes:[['$13M','Partner pipeline influenced'],['$3.1M','Partner-driven revenue influenced'],['40–50%','Reduction in partner ramp time'],['4,000+','Partners reached through structured enablement']],
+      companyContext:[['$198.9M → $242.2M','Quarterly revenue from Q2 FY2025 to Q2 FY2026'],['+22%','Year-over-year revenue growth in Q2 FY2026'],['$806M → $1B+','ARR across the comparable Q2 periods']],
+      contextNote:'Company-reported financial context spanning the year that closely overlaps the 2024–2025 tenure. It shows the scale and growth environment; it is not presented as personal revenue attribution.',
+      note:'Partner type → role → capability → learning → accreditation → telemetry → readiness → pipeline → revenue.'
     },
     {
       id:'twilio-soar',
@@ -44,20 +48,20 @@
       role:'Senior Sales Enablement Manager, Growth & Training',
       timeline:'2022–2024',
       type:'Global revenue readiness + methodology adoption',
-      metrics:['82% MEDDPICC adoption','+40% conversion','+9% productivity'],
-      objective:'Create a repeatable global readiness system that connected sales methodology, value-based selling, competitive execution, coaching, accreditation, and workflow reinforcement to measurable field performance.',
-      lede:'Built a competency and accreditation engine around the seller behaviors that mattered most to opportunity quality, conversion, and productivity.',
-      why:'Rapid growth created inconsistent discovery, qualification, competitive execution, and manager reinforcement. Training alone could not solve the problem; the behavior had to appear in live opportunities and manager inspection.',
-      how:'Built a five-module SOAR curriculum spanning value-based selling, competitive intelligence, customer discovery, revenue execution, and manager coaching. Launched an initial 400-person cohort, automated certification and badging, reinforced MEDDPICC inside the operating rhythm, and used adoption plus conversion signals to guide follow-up.',
-      process:['Diagnose revenue skill and pipeline friction','Define the SOAR competency model','Build the five-module curriculum','Prepare managers and reinforcement motions','Launch cohort-based learning','Practice against real selling situations','Certify observable performance','Reinforce methodology in workflow','Inspect adoption, productivity, and conversion'],
-      pm:['Aligned Sales, Enablement, managers, Revenue Operations, partners, and system owners around a common performance model.','Separated time-to-launch from time-to-impact: the curriculum launched quickly, while behavior and pipeline signals were measured over 30, 60, 90, and 180 days.','Used manager reinforcement and workflow support so accreditation was a gate into field application, not the finish line.'],
+      metrics:['$8M pipeline growth','82% MEDDPICC adoption','+40% conversion'],
+      objective:'Turn methodology and readiness into repeatable field behavior that improved opportunity quality, pipeline movement, conversion, and seller productivity at global scale.',
+      lede:'Twilio did not need another training calendar. It needed a way to make discovery, qualification, competitive execution, and coaching show up consistently inside real opportunities across a multi-billion-dollar sales organization.',
+      story:'SOAR was built as a competency engine rather than a course. The program defined the seller behaviors that mattered, translated them into a five-module readiness path, gave managers a reinforcement role, and connected accreditation to the tools sellers already used. MEDDPICC became something leaders could inspect in workflow instead of a framework remembered after a workshop. Adoption, opportunity quality, conversion, pipeline movement, and productivity then became the evidence for where the program was working and where reinforcement was still required.',
+      why:'Rapid growth had created inconsistency in discovery, qualification, competitive execution, and manager reinforcement. Completion data could show who attended training, but it could not show whether the selling motion changed.',
+      how:'Built the SOAR competency model, launched a five-module curriculum and initial 400-person cohort, automated accreditation and badging, embedded MEDDPICC reinforcement into the operating rhythm, and connected Salesforce, Gong, Highspot, Rattle, 6sense, Slack, and WiseOwl to support execution in workflow.',
+      process:['Diagnose pipeline friction and the behaviors behind it','Define the SOAR competency and evidence model','Build learning around real opportunity decisions','Prepare managers to coach and inspect the same behaviors','Launch cohort-based learning and realistic practice','Certify observable performance rather than attendance','Reinforce MEDDPICC and messaging inside seller workflow','Inspect calls, CRM behavior, pipeline movement, and conversion','Target follow-up enablement where field evidence showed gaps'],
+      pm:['The rollout separated time-to-launch from time-to-impact: learning could ship quickly while behavior, pipeline, and conversion were measured over longer horizons.','Managers, Revenue Operations, Sales, and Enablement worked from the same performance model so coaching and inspection reinforced the program after certification.','Technology consolidation ran alongside the readiness work, removing duplicate tooling while preserving the workflows that sellers actually used.'],
       programs:['SOAR five-module curriculum','MEDDPICC reinforcement','Value-based selling','Customer discovery','Competitive intelligence','Manager coaching','Automated accreditation and badging'],
       tools:['Salesforce','Gong','Highspot','Rattle','Slack','6sense','WiseOwl','Workflow automation','Certification pipeline'],
-      outcomes:[['82%','MEDDPICC adoption'],['+40%','Deal conversion lift'],['+9%','Global sales productivity'],['$700K','Annual GTM technology savings']],
-      note:'Diagnose → learn → practice → prove → apply → reinforce → inspect → improve.',
-      phases:[['01','Diagnose','Identify skill gaps, pipeline friction, and target behaviors'],['02','Design','Define competencies, curriculum, manager role, and evidence gates'],['03','Build','Create learning, practice, certification, and workflow support'],['04','Activate','Launch cohorts and manager reinforcement'],['05','Prove','Certify observable performance and inspect methodology use'],['06','Reinforce','Coach in workflow and target gaps from field evidence'],['07','Measure','Validate productivity, conversion, and adoption over time']],
-      architecture:[['Business signal','Pipeline friction · conversion · productivity'],['Capability model','Value · discovery · competition · execution · coaching'],['Learning','SOAR curriculum and practice'],['Proof','Certification · manager observation · MEDDPICC adoption'],['Workflow','Salesforce · Gong · Rattle · Highspot'],['Business output','Productivity · conversion · opportunity quality']],
-      evidence:[]
+      outcomes:[['$8M','Pipeline growth supported'],['82%','MEDDPICC adoption'],['+40%','Deal conversion lift'],['+9%','Global sales productivity'],['$700K','Annual GTM technology savings']],
+      companyContext:[['$3.83B → $4.15B','Twilio full-year revenue, 2022 to 2023'],['+9%','Reported full-year revenue growth in 2023'],['$327.6M','Increase in reported annual revenue']],
+      contextNote:'Company-reported 2022 and 2023 financials, the two full fiscal years overlapping the 2022–2024 tenure. These figures establish organizational scale and growth context; they are not personal attribution.',
+      note:'Business friction → target behavior → practice → proof → workflow reinforcement → inspection → pipeline and revenue evidence.'
     },
     {
       id:'twilio-wiseowl',
@@ -67,19 +71,17 @@
       timeline:'2022–2024',
       type:'AI-enabled knowledge + seller productivity',
       metrics:['60% less search time','Slack + Salesforce access','AI-assisted answers'],
-      objective:'Reduce seller time lost searching for technical API information by putting a practical AI knowledge assistant directly inside the workflows where sellers already worked.',
-      lede:'Moved technical knowledge from “go find the answer” to “ask in the workflow,” reducing search friction and helping sellers get back to customer conversations faster.',
-      why:'Technical API questions routinely forced sellers to leave their workflow, search across multiple sources, or wait for subject-matter experts. The cost was not only time; it interrupted live deal momentum.',
-      how:'Designed WiseOwl as an AI-assisted knowledge experience accessible through Slack and Salesforce. Structured the knowledge interaction around seller questions, usable answers, and fast retrieval rather than exposing the complexity of the underlying content estate.',
-      process:['Map repetitive seller questions','Identify trusted knowledge sources','Define answer and escalation patterns','Design in-workflow access','Pilot common technical queries','Tune answer usefulness and retrieval','Launch to seller workflows','Measure time saved and usage','Iterate from unanswered questions'],
-      pm:['Treated retrieval quality and seller trust as adoption requirements, not just technical requirements.','Prioritized the highest-frequency questions first so the MVP solved visible field friction quickly.','Used unanswered and repeated questions as a feedback loop for knowledge governance and future enablement.'],
+      objective:'Remove technical knowledge friction from live selling by giving sellers fast, trusted answers inside the workflows where they already worked.',
+      lede:'Technical questions were slowing seller momentum because the answer often lived somewhere else. WiseOwl changed the experience from “go find it” to “ask where you work.”',
+      story:'The project started with the questions sellers repeatedly asked and the places they lost time searching. Trusted sources were curated, answer and escalation patterns were defined, and the assistant was placed inside Slack and Salesforce rather than launching as another destination. Usage and unanswered questions then became a knowledge-governance loop: every gap exposed where content, documentation, or enablement needed to improve.',
+      why:'Sellers routinely left their workflow to search across multiple sources or wait for subject-matter experts when technical API questions surfaced during active deals.',
+      how:'Designed an AI-assisted knowledge experience around common seller questions, curated knowledge, usable answers, escalation paths, and direct access from Slack and Salesforce.',
+      process:['Identify recurring seller questions and search friction','Prioritize high-frequency technical use cases','Curate trusted sources and answer standards','Define escalation when confidence or coverage was insufficient','Build access directly into Slack and Salesforce','Pilot with real seller questions','Measure usefulness, repeat usage, and search-time reduction','Feed unanswered questions back into knowledge governance'],
+      pm:['Trust and usefulness were treated as adoption requirements, not just technical requirements.','The MVP focused on visible, high-frequency friction so sellers could feel the value immediately.','Unanswered questions became a roadmap for both assistant improvement and future enablement content.'],
       programs:['AI-assisted technical Q&A','Seller workflow support','Knowledge retrieval','Escalation patterns','Continuous knowledge improvement'],
       tools:['Slack','Salesforce','AI assistant architecture','Curated knowledge sources','Workflow integration','Usage telemetry'],
       outcomes:[['60%','Reduction in seller search time for technical API questions'],['2','Primary seller workflows: Slack and Salesforce'],['Continuous','Knowledge gaps fed back into enablement']],
-      note:'Seller question → trusted retrieval → usable answer → customer action → gap telemetry → better knowledge.',
-      phases:[['01','Discover','Identify recurring questions and workflow friction'],['02','Curate','Define trusted sources and answer standards'],['03','Build','Create the assistant experience and workflow connections'],['04','Pilot','Test high-frequency technical questions with sellers'],['05','Launch','Put the assistant into Slack and Salesforce workflows'],['06','Optimize','Use adoption and unanswered questions to improve usefulness']],
-      architecture:[['User layer','Seller question in Slack or Salesforce'],['Retrieval layer','Curated technical knowledge'],['Answer layer','AI-assisted response'],['Trust layer','Source quality · escalation path'],['Telemetry layer','Usage · unanswered questions · repeat topics'],['Business layer','Less search time · faster seller response']],
-      evidence:[]
+      note:'Seller question → trusted retrieval → usable answer → customer action → gap telemetry → better knowledge.'
     },
     {
       id:'reup-gtm',
@@ -89,19 +91,17 @@
       timeline:'2020–2022',
       type:'Founder-led 0→1 GTM build',
       metrics:['$1M revenue','0→1 GTM build','Partner commercialization'],
-      objective:'Turn an early-stage idea into a repeatable commercial motion by building positioning, discovery, qualification, sales execution, partner activation, onboarding, and feedback loops from the ground up.',
-      lede:'Co-founded ReUp and built the commercial foundation that helped take the business from zero to $1M in revenue.',
-      why:'There was no mature GTM infrastructure to inherit. The company needed a clear market problem, credible value proposition, repeatable sales motion, partner strategy, and operating discipline while simultaneously learning from the market.',
-      how:'Built positioning and messaging, discovery and qualification, sales playbooks, partner activation, onboarding, and operating processes. Customer, partner, and pipeline feedback was continuously fed back into the commercial model instead of being treated as a separate research exercise.',
-      process:['Define the market problem','Clarify target customers and partners','Build the value proposition','Create commercial messaging','Install discovery and qualification','Build sales playbooks','Activate and onboard partners','Capture pipeline and customer feedback','Refine the GTM motion','Scale repeatable execution'],
-      pm:['Balanced company-building priorities across product feedback, positioning, pipeline, partnerships, sales execution, and operations.','Converted founder knowledge into repeatable assets so execution could extend beyond individual conversations.','Used market evidence to refine the motion rather than locking the company into an early hypothesis.'],
+      objective:'Turn an early-stage idea into a commercial system that could consistently position, sell, onboard, learn from the market, and scale.',
+      lede:'At ReUp there was no inherited GTM machine to optimize. The job was to create the commercial motion itself — from market problem and positioning through pipeline, partners, onboarding, and operating discipline.',
+      story:'The company moved from hypothesis to repeatable execution by treating every customer and partner interaction as both a commercial opportunity and a source of market intelligence. Positioning led into discovery and qualification; those conversations shaped sales playbooks and partner motions; pipeline and customer feedback then refined the message and operating model. That closed loop helped turn founder knowledge into a system and supported the company’s path from zero to $1M in revenue.',
+      why:'An early-stage company needed to discover product-market fit while simultaneously creating enough commercial structure to sell consistently and activate partners.',
+      how:'Built positioning, messaging, discovery, qualification, sales playbooks, partner activation, onboarding, and commercial operating processes, with market feedback continuously feeding the next iteration.',
+      process:['Define the market problem and strongest customer pain','Clarify target customers, buyers, and partner motions','Build the value proposition and commercial narrative','Create discovery and qualification discipline','Turn winning conversations into reusable sales playbooks','Develop partner activation and onboarding','Capture customer, partner, and pipeline feedback','Refine positioning and execution from market evidence','Scale the parts of the motion that proved repeatable'],
+      pm:['Product feedback, positioning, pipeline, partnerships, and sales execution were managed as one connected learning loop.','Founder knowledge was progressively converted into repeatable assets and workflows so execution could extend beyond individual conversations.','The commercial model stayed evidence-led rather than locking into an early hypothesis.'],
       programs:['GTM positioning','Sales messaging','Discovery and qualification','Sales playbooks','Partner activation','Partner onboarding','Commercial operating processes'],
       tools:['GTM operating model','Qualification frameworks','Sales playbooks','Partner onboarding workflows','Messaging architecture','Pipeline feedback loops'],
       outcomes:[['$1M','Revenue built at ReUp Technologies'],['0→1','Commercial operating foundation'],['Founder','Direct ownership across GTM and partner execution']],
-      note:'Market problem → positioning → sales motion → partner motion → feedback → repeatable growth.',
-      phases:[['01','Define','Clarify the problem, audience, and commercial hypothesis'],['02','Position','Build the value proposition and company narrative'],['03','Sell','Create discovery, qualification, and pipeline discipline'],['04','Partner','Develop activation and onboarding motions'],['05','Systemize','Turn founder knowledge into repeatable processes'],['06','Scale','Use customer and pipeline data to refine growth']],
-      architecture:[['Market signal','Customer and partner problems'],['Positioning','Value proposition and narrative'],['Revenue motion','Discovery · qualification · playbooks'],['Partner motion','Activation · onboarding · enablement'],['Operating layer','Repeatable processes and feedback'],['Business output','$1M revenue and commercial foundation']],
-      evidence:[]
+      note:'Market signal → positioning → sales motion → partner motion → feedback → repeatable growth.'
     },
     {
       id:'tessian-zero-to-one',
@@ -111,19 +111,17 @@
       timeline:'2019–2020',
       type:'Global enablement build',
       metrics:['40% faster onboarding','94% certification pass','0→1 function build'],
-      objective:'Stand up a global enablement function that gave a scaling cybersecurity sales organization a consistent onboarding, readiness, certification, and reinforcement system.',
-      lede:'Took global enablement from 0 to 1 and turned fragmented ramp activity into a measurable readiness system.',
-      why:'A scaling field organization needed common expectations for what sellers should know, demonstrate, and apply. Without a unified program, ramp quality and manager expectations varied by team and region.',
-      how:'Built structured onboarding, role-based readiness, certification, manager reinforcement, and recurring enablement. The program focused on observable proficiency and field application rather than course completion alone.',
-      process:['Align leadership on role outcomes','Baseline onboarding friction','Define readiness milestones','Build structured onboarding','Create certification criteria','Prepare managers to reinforce','Launch global cohorts','Inspect ramp and certification data','Iterate from field performance'],
-      pm:['Built the function and operating cadence at the same time, prioritizing the highest-impact ramp moments first.','Defined common readiness expectations while preserving enough flexibility for manager coaching and regional context.','Measured both certification and time-to-readiness so learning quality and speed could be improved together.'],
+      objective:'Give a scaling cybersecurity sales organization one global standard for ramp, readiness, certification, and manager reinforcement.',
+      lede:'Tessian was scaling faster than its informal enablement habits could support. The opportunity was to turn scattered onboarding and tribal knowledge into a function with clear standards, observable readiness, and a repeatable operating cadence.',
+      story:'The build started with the outcomes sellers needed to demonstrate in role, not with a catalog of training. Those outcomes became onboarding milestones, practice expectations, certification criteria, and manager coaching moments. Global cohorts created consistency while field evidence identified where the program needed to adapt. The result was a true 0→1 enablement function that shortened onboarding while raising the standard for readiness.',
+      why:'Ramp quality and manager expectations varied by team and region because there was no unified readiness model or common definition of what “ready” meant.',
+      how:'Built structured onboarding, role-based readiness milestones, certification, manager reinforcement, and recurring enablement around observable proficiency and field application.',
+      process:['Align leadership on the outcomes expected in role','Baseline onboarding friction and readiness gaps','Define milestones from new hire to field-ready','Build structured learning and realistic practice','Create certification criteria around observable capability','Prepare managers to reinforce the same standards','Launch global cohorts','Inspect ramp and certification data','Use field performance to tune the system'],
+      pm:['The function and the operating cadence were built together, prioritizing the moments that most affected time-to-readiness.','Global standards created consistency while leaving managers enough room to coach for regional and individual context.','Certification quality and ramp speed were measured together so faster onboarding did not come at the expense of readiness.'],
       programs:['Global onboarding','Role-based readiness','Certification','Manager reinforcement','Continuous enablement'],
       tools:['LMS learning paths','Sales playbooks','Certification workflows','Manager coaching','Salesforce','Enablement analytics'],
       outcomes:[['40%','Reduction in onboarding time'],['94%','Certification pass rate'],['0→1','Global enablement function built']],
-      note:'Role outcome → onboarding → practice → certification → manager reinforcement → field readiness.',
-      phases:[['01','Align','Define role outcomes and business priorities'],['02','Diagnose','Baseline ramp friction and knowledge gaps'],['03','Build','Create onboarding, practice, and certification'],['04','Launch','Run global cohorts with manager reinforcement'],['05','Inspect','Track readiness, certification, and ramp'],['06','Improve','Use field evidence to tune the system']],
-      architecture:[['Business need','Scaling global field organization'],['Readiness model','Role outcomes and milestones'],['Learning','Structured onboarding and practice'],['Proof','Certification and manager observation'],['Reinforcement','Manager coaching and continuous enablement'],['Business output','Faster ramp and consistent readiness']],
-      evidence:[]
+      note:'Role outcome → onboarding → practice → certification → manager reinforcement → field readiness.'
     },
     {
       id:'cofense-global-enablement',
@@ -132,20 +130,18 @@
       role:'Director, Global Sales Enablement',
       timeline:'2018–2019',
       type:'Cybersecurity revenue enablement',
-      metrics:['$3M ARR influenced','96% certification pass','Global sales readiness'],
-      objective:'Build repeatable global readiness for complex cybersecurity selling by connecting technical fluency, discovery, qualification, competitive execution, certification, and manager reinforcement.',
-      lede:'Translated complex phishing-defense and threat-intelligence concepts into field behaviors sellers could use in enterprise conversations.',
-      why:'Enterprise cybersecurity selling required sellers to connect technical threat detail to business risk, buyer priorities, qualification, proof, and competitive differentiation without losing credibility with technical stakeholders.',
-      how:'Built threat-centric enablement, role-specific learning, sales playbooks, certification, discovery and qualification frameworks, competitive reinforcement, and manager coaching that connected technical understanding to enterprise execution.',
-      process:['Map buyer and threat scenarios','Translate technical detail into business impact','Define discovery and qualification standards','Build role-based learning','Practice objections and competitive scenarios','Certify observable readiness','Reinforce through managers','Inspect deal and readiness signals','Refresh content as threats and products changed'],
-      pm:['Managed enablement as a recurring field-readiness system rather than a sequence of launches.','Balanced technical depth with commercial usability for enterprise sellers and technical stakeholders.','Used certification and field reinforcement to keep global teams aligned around common standards.'],
+      metrics:['$3M ARR influenced','96% certification pass','Global readiness'],
+      objective:'Turn complex phishing-defense expertise into a repeatable enterprise selling motion that sellers could explain, demonstrate, and apply with credibility.',
+      lede:'Cofense sellers operated in a technically demanding category where credibility mattered. Enablement had to do more than teach product knowledge; it had to help sellers translate threat intelligence into buyer risk, discovery, qualification, proof, and competitive action.',
+      story:'The program connected technical fluency to the decisions sellers needed to make in enterprise opportunities. Threat and buyer scenarios informed role-based learning; practice turned that knowledge into discovery and objection handling; certification established a common readiness standard; and manager reinforcement kept the behavior alive after launch. That made enablement part of the revenue motion rather than a separate learning activity.',
+      why:'Complex cybersecurity conversations required sellers to connect technical detail to business impact without losing credibility with CISOs, security teams, and other technical stakeholders.',
+      how:'Built threat-centric curriculum, role-specific learning, sales playbooks, discovery and qualification standards, competitive reinforcement, certification, and manager coaching.',
+      process:['Map the buyer, threat, and opportunity scenarios that mattered most','Translate technical threat detail into business and buyer impact','Define discovery and qualification standards','Build role-based learning around live selling situations','Practice objections and competitive scenarios','Certify observable readiness','Reinforce through managers and recurring updates','Inspect readiness and deal signals','Refresh the program as threats and products evolved'],
+      pm:['Enablement operated as a recurring field-readiness system rather than a sequence of launches.','Technical depth was balanced with commercial usability so sellers could remain credible without overwhelming buyers.','Certification and manager reinforcement created a common standard across the global field.'],
       programs:['Threat-centric curriculum','Enterprise discovery and qualification','Competitive enablement','Role-based readiness','Certification','Manager coaching'],
       tools:['Salesforce','LMS learning paths','Sales playbooks','Competitive battlecards','Certification workflows','Manager coaching','Enablement analytics'],
       outcomes:[['$3M','ARR influenced'],['96%','Certification pass rate'],['Global','Common readiness standards across the field']],
-      note:'Threat context → buyer risk → discovery → qualification → proof → competitive execution → revenue.',
-      phases:[['01','Diagnose','Identify technical, buyer, and deal-execution gaps'],['02','Translate','Turn threat intelligence into buyer and business language'],['03','Build','Create role-based learning, playbooks, and practice'],['04','Activate','Launch global readiness and manager reinforcement'],['05','Prove','Certify observable field capability'],['06','Measure','Inspect readiness, deal execution, and revenue influence']],
-      architecture:[['Threat context','Phishing · BEC · human-layer risk'],['Buyer context','CISO · InfoSec · Compliance'],['Commercial motion','Discovery · qualification · value'],['Readiness','Learning · practice · certification'],['Reinforcement','Manager coaching · competitive updates'],['Business output','ARR influence and consistent execution']],
-      evidence:[]
+      note:'Threat context → buyer risk → discovery → qualification → proof → competitive execution → revenue.'
     },
     {
       id:'sentinelone-partnerstruck',
@@ -155,45 +151,68 @@
       timeline:'Global SKO campaign',
       type:'Experiential learning + automated remediation',
       metrics:['99% entry rate','68% first-pass','+30 remediated'],
-      objective:'Make partner-ecosystem learning measurable and memorable during a global SKO while automatically closing knowledge gaps after the event.',
-      lede:'Turned an SKO learning moment into a full loop: engage, assess, diagnose, remediate, reassess, and report.',
-      why:'A presentation could create awareness but could not prove comprehension across hundreds of attendees. Leadership needed a scalable way to see who understood the ecosystem and where knowledge was breaking down.',
-      how:'Used physical and digital QR touchpoints to drive attendees into a mobile ecosystem assessment. Automated scoring identified failed topics and routed people into targeted micro-learning, followed by reassessment and certification follow-through.',
-      process:['Define partner-literacy objectives','Build the mobile assessment','Design SKO engagement touchpoints','Capture and score submissions','Diagnose knowledge gaps','Route targeted micro-learning','Reassess after remediation','Report coverage and remaining gaps'],
-      pm:['Designed the campaign across event experience, assessment, scoring, remediation, follow-up, and reporting.','Used live participation and score data to identify where reinforcement was required instead of relying on event satisfaction.','Extended the learning loop beyond SKO so the campaign had a measurable post-event outcome.'],
+      objective:'Turn an SKO learning moment into measurable partner-literacy evidence and automatically close the gaps that the event exposed.',
+      lede:'Partnerstruck was designed around a simple principle: an event should not end when the presentation ends. It should reveal what people understood, what they missed, and what needs to happen next.',
+      story:'The experience used physical and digital QR touchpoints to pull attendees into a mobile partner-ecosystem assessment. Scoring created an immediate view of comprehension instead of relying on attendance or satisfaction. Failed topics then triggered targeted micro-learning and reassessment, extending the SKO into a measurable remediation loop. The campaign therefore moved from engagement to diagnosis, from diagnosis to action, and from action to verified coverage.',
+      why:'A presentation could create awareness, but it could not prove comprehension across hundreds of attendees or show leadership exactly where partner knowledge was breaking down.',
+      how:'Designed the assessment, engagement mechanics, scoring logic, backend tracking, targeted remediation, reassessment, and reporting as one connected campaign.',
+      process:['Define the partner-literacy outcomes the event needed to prove','Build a mobile assessment around those outcomes','Create QR touchpoints that made participation effortless','Capture and score responses in real time','Identify knowledge gaps by topic','Route targeted micro-learning to failed areas','Reassess after remediation','Report certification coverage and unresolved gaps'],
+      pm:['Event experience, assessment, scoring, remediation, follow-up, and reporting were designed as one program rather than separate tasks.','Live score data showed where reinforcement was required instead of using event satisfaction as a proxy for learning.','The learning loop continued after SKO so the campaign produced a measurable post-event outcome.'],
       programs:['Partner ecosystem assessment','QR learning journey','Automated remediation','Targeted micro-learning','Post-event reassessment'],
       tools:['QR workflow','Mobile assessment','Automated scoring logic','Backend tracking','Micro-learning','Event analytics'],
       outcomes:[['99%','Entry rate among SKO attendees'],['68%','First-pass certification rate'],['+30','Additional people remediated after the event']],
-      note:'Engage → assess → diagnose → remediate → reassess → certify → report.',
-      phases:[['01','Design','Define learning objectives, assessment, and event mechanics'],['02','Build','Create assessment, scoring, tracking, and remediation'],['03','Activate','Run the experience during the global SKO'],['04','Diagnose','Analyze score distribution and failed topics'],['05','Remediate','Route targeted learning and reassessment'],['06','Close','Report certification coverage and remaining gaps']],
-      architecture:[['Engagement','Physical and digital QR touchpoints'],['Assessment','Mobile partner-ecosystem questions'],['Automation','Instant scoring and pass/fail logic'],['Remediation','Targeted micro-learning'],['Reassessment','Follow-up certification'],['Business output','Measured literacy and coverage']],
-      evidence:[]
+      note:'Engage → assess → diagnose → remediate → reassess → certify → report.'
     }
   ];
 
-  var executionWindows={
-    'sentinelone-partner-architecture':{total:'16–24 week core build · 2–4 quarters to optimize impact',durations:['Weeks 1–3','Weeks 2–5','Weeks 4–9','Weeks 7–16','Weeks 12–24','Quarter 2+'],analytics:[['0–30 days','Baseline','Findability · enrollment friction · active learner baseline'],['31–60 days','Adoption','Program starts · repeat usage · accreditation velocity'],['61–90 days','Readiness','Assessment quality · time-to-first accreditation · manager/partner feedback'],['90–180+ days','Business impact','Ramp movement · partner-influenced pipeline · revenue contribution']]},
-    'twilio-soar':{total:'8–12 week build · 30/60/90 reinforcement · 90–180 day revenue validation',durations:['Weeks 1–2','Weeks 2–4','Weeks 3–7','Weeks 6–10','Weeks 8–12','Days 30–90','Days 90–180'],analytics:[['0–30 days','Adoption','Participation · practice · manager reinforcement · certification starts'],['31–60 days','Behavior','MEDDPICC use · call behaviors · opportunity hygiene'],['61–90 days','Performance','Stage conversion · productivity · opportunity quality'],['90–180 days','Business impact','Conversion trend · productivity trend · savings realization']]},
-    'twilio-wiseowl':{total:'6–10 week MVP-to-launch · 90-day optimization loop',durations:['Week 1','Weeks 1–2','Weeks 2–5','Weeks 4–7','Weeks 6–10','Days 30–90'],analytics:[['0–30 days','Trust + adoption','Usage · repeat users · answer usefulness'],['31–60 days','Productivity','Search-time reduction · escalation rate · unanswered questions'],['61–90 days','Workflow value','Repeat usage · seller response speed · knowledge-gap themes'],['Quarterly','Knowledge improvement','Source freshness · new intents · governance backlog']]},
-    'reup-gtm':{total:'6–12 month commercialization build',durations:['Month 1','Months 1–2','Months 2–4','Months 3–6','Months 4–9','Months 6–12+'],analytics:[['0–30 days','Market signal','ICP response · discovery quality · message resonance'],['31–90 days','Motion fit','Pipeline creation · qualification consistency · partner activation'],['90–180 days','Repeatability','Win/loss themes · cycle movement · partner contribution'],['6–12 months','Business impact','Revenue growth · repeatable acquisition · partner productivity']]},
-    'tessian-zero-to-one':{total:'8–12 week 0→1 launch · 90–180 day ramp validation',durations:['Weeks 1–2','Weeks 1–3','Weeks 3–7','Weeks 6–10','Weeks 8–12','Days 90–180'],analytics:[['0–30 days','Adoption','Onboarding progress · manager participation · practice completion'],['31–60 days','Readiness','Certification progress · skill gaps · manager observation'],['61–90 days','Ramp','Time-to-readiness · early opportunity behaviors'],['90–180 days','Business impact','Ramp-time trend · certification quality · productivity signals']]},
-    'cofense-global-enablement':{total:'10–16 week rollout · 90–180 day impact measurement',durations:['Weeks 1–2','Weeks 2–4','Weeks 3–8','Weeks 6–11','Weeks 8–14','Weeks 12–16+'],analytics:[['0–30 days','Knowledge + adoption','Participation · assessment · asset usage'],['31–60 days','Application','Discovery quality · objection handling · manager coaching'],['61–90 days','Deal execution','Qualification consistency · competitive progression'],['90–180 days','Business impact','ARR influence · certification quality · performance trend']]},
-    'sentinelone-partnerstruck':{total:'3–5 week build · event activation · 30-day remediation · 90-day follow-through',durations:['Weeks 1–2','Weeks 2–4','Event week','48 hours','Days 1–30','Days 30–90'],analytics:[['Live','Engagement','Entry rate · completion · score distribution'],['48 hours','Diagnosis','Knowledge gaps by topic and cohort'],['0–30 days','Remediation','Targeted learning · reassessment conversion'],['30–90 days','Follow-through','Certification coverage · unresolved gaps · manager action']]}
-  };
-
-  function chips(items){return '<div class="tool-cloud">'+items.map(function(item){return '<span>'+item+'</span>'}).join('')+'</div>'}
-  function listItems(items){return '<ul>'+items.map(function(item){return '<li>'+item+'</li>'}).join('')+'</ul>'}
-  function processFlow(items){return '<div class="process-flow">'+items.map(function(item,i){return '<span class="process-step"><b>'+String(i+1).padStart(2,'0')+'</b>'+item+'</span>'}).join('')+'</div>'}
-  function outcomeGrid(items){return '<div class="outcome-grid">'+items.map(function(item){return '<div class="outcome"><strong>'+item[0]+'</strong><span>'+item[1]+'</span></div>'}).join('')+'</div>'}
-  function getWindow(p){return executionWindows[p.id]}
-  function timelineViz(p){var w=getWindow(p);return '<div class="visual-card timeline-card"><div class="visual-card-head"><span>Execution roadmap</span><small>'+w.total+'</small></div><div class="execution-roadmap">'+p.phases.map(function(item,i){return '<div class="roadmap-phase"><div class="roadmap-marker"><span>'+item[0]+'</span></div><div class="roadmap-copy"><small>'+w.durations[i]+'</small><strong>'+item[1]+'</strong><p>'+item[2]+'</p></div></div>'}).join('')+'</div></div>'}
-  function analyticsViz(p){var w=getWindow(p);return '<div class="visual-card analytics-card"><div class="visual-card-head"><span>Measurement plan</span><small>Time to launch ≠ time to impact</small></div><div class="analytics-grid">'+w.analytics.map(function(item){return '<div class="analytics-row"><small>'+item[0]+'</small><strong>'+item[1]+'</strong><span>'+item[2]+'</span></div>'}).join('')+'</div></div>'}
-  function architectureViz(p){return '<div class="visual-card architecture-card"><div class="visual-card-head"><span>Operating architecture</span><small>How the work connected</small></div><div class="architecture-flow">'+p.architecture.map(function(item,i){return '<div class="architecture-node"><small>'+String(i+1).padStart(2,'0')+'</small><strong>'+item[0]+'</strong><span>'+item[1]+'</span></div>'}).join('')+'</div></div>'}
-  function evidenceViz(p){var usable=(p.evidence||[]).filter(function(item){return item[3]});if(!usable.length)return '';return '<div class="visual-card evidence-card-wrap"><div class="visual-card-head"><span>Shareable proof</span><small>Public-safe evidence only</small></div><div class="evidence-grid">'+usable.map(function(item){return '<a class="evidence-card" href="'+item[3]+'"><span class="evidence-type">'+item[0]+'</span><strong>'+item[1]+'</strong><p>'+item[2]+'</p><span class="evidence-cta">View example ↗</span></a>'}).join('')+'</div></div>'}
-  function visualProof(p){return '<section class="project-proof" aria-label="Operating model for '+p.title+'"><div class="proof-intro"><span>How the program operated</span><p>Build window, reinforcement horizon, measurement gates, and system design are separated so the timeline reflects real enablement execution.</p></div><div class="proof-grid">'+timelineViz(p)+analyticsViz(p)+'</div>'+architectureViz(p)+evidenceViz(p)+'</section>'}
+  function chips(items){return '<div class="tool-cloud">'+items.map(function(item){return '<span>'+item+'</span>'}).join('')+'</div>';}
+  function listItems(items){return '<ul>'+items.map(function(item){return '<li>'+item+'</li>';}).join('')+'</ul>';}
+  function processFlow(items){return '<div class="process-flow">'+items.map(function(item,i){return '<span class="process-step"><b>'+String(i+1).padStart(2,'0')+'</b>'+item+'</span>';}).join('')+'</div>';}
+  function outcomeGrid(items){return '<div class="outcome-grid">'+items.map(function(item){return '<div class="outcome"><strong>'+item[0]+'</strong><span>'+item[1]+'</span></div>';}).join('')+'</div>';}
+  function companyContext(p){
+    if(!p.companyContext)return '';
+    return '<section class="project-block measured-outcomes"><h4>Company scale during tenure</h4>'+outcomeGrid(p.companyContext)+'<p class="project-context-note">'+p.contextNote+'</p></section>';
+  }
 
   list.classList.add('project-list');
-  list.innerHTML=projects.map(function(p,index){var number=String(index+1).padStart(2,'0');return '<article class="project-case" id="'+p.id+'"><button class="project-toggle" type="button" data-project-toggle aria-expanded="false" aria-controls="'+p.id+'-detail"><span class="project-index">'+number+'</span><span class="project-heading"><small>'+p.company+' · '+p.timeline+'</small><h3>'+p.title+'</h3></span><span class="project-metrics">'+p.metrics.map(function(metric){return '<span class="project-metric">'+metric+'</span>'}).join('')+'</span><span class="project-action"><span>Open case study</span><span class="project-action-icon" aria-hidden="true">+</span></span></button><div class="project-detail" id="'+p.id+'-detail" hidden><div class="project-detail-inner"><p class="project-lede">'+p.lede+'</p><div class="project-meta"><span>'+p.role+'</span><span>'+p.timeline+'</span><span>'+p.type+'</span></div><section class="project-block project-objective"><h4>Business objective</h4><p>'+p.objective+'</p></section>'+visualProof(p)+'<div class="project-grid"><section class="project-block"><h4>The problem</h4><p>'+p.why+'</p></section><section class="project-block"><h4>What I built</h4><p>'+p.how+'</p></section><section class="project-block"><h4>Execution process</h4>'+processFlow(p.process)+'</section><section class="project-block"><h4>Operating cadence</h4>'+listItems(p.pm)+'</section><section class="project-block"><h4>Programs + deliverables</h4>'+listItems(p.programs)+'</section><section class="project-block"><h4>Tools + systems</h4>'+chips(p.tools)+'</section></div><section class="project-block measured-outcomes"><h4>Measured outcomes</h4>'+outcomeGrid(p.outcomes)+'</section><div class="project-note"><strong>Operating logic:</strong> '+p.note+'</div></div></div></article>'}).join('');
+  list.innerHTML=projects.map(function(p,index){
+    var number=String(index+1).padStart(2,'0');
+    return '<article class="project-case" id="'+p.id+'">'
+      +'<button class="project-toggle" type="button" data-project-toggle aria-expanded="false" aria-controls="'+p.id+'-detail">'
+      +'<span class="project-index">'+number+'</span>'
+      +'<span class="project-heading"><small>'+p.company+' · '+p.timeline+'</small><h3>'+p.title+'</h3></span>'
+      +'<span class="project-metrics">'+p.metrics.map(function(metric){return '<span class="project-metric">'+metric+'</span>';}).join('')+'</span>'
+      +'<span class="project-action"><span>Open case study</span><span class="project-action-icon" aria-hidden="true">+</span></span>'
+      +'</button>'
+      +'<div class="project-detail" id="'+p.id+'-detail" hidden><div class="project-detail-inner">'
+      +'<p class="project-lede">'+p.lede+'</p>'
+      +'<div class="project-meta"><span>'+p.role+'</span><span>'+p.timeline+'</span><span>'+p.type+'</span></div>'
+      +'<section class="project-block project-objective"><h4>Business objective</h4><p>'+p.objective+'</p></section>'
+      +'<section class="project-block"><h4>How the program unfolded</h4><p>'+p.story+'</p></section>'
+      +companyContext(p)
+      +'<div class="project-grid">'
+      +'<section class="project-block"><h4>The business problem</h4><p>'+p.why+'</p></section>'
+      +'<section class="project-block"><h4>The system built</h4><p>'+p.how+'</p></section>'
+      +'<section class="project-block"><h4>Execution sequence</h4>'+processFlow(p.process)+'</section>'
+      +'<section class="project-block"><h4>How it stayed alive</h4>'+listItems(p.pm)+'</section>'
+      +'<section class="project-block"><h4>Programs + deliverables</h4>'+listItems(p.programs)+'</section>'
+      +'<section class="project-block"><h4>Tools + systems</h4>'+chips(p.tools)+'</section>'
+      +'</div>'
+      +'<section class="project-block measured-outcomes"><h4>Measured outcomes</h4>'+outcomeGrid(p.outcomes)+'</section>'
+      +'<div class="project-note"><strong>Operating logic:</strong> '+p.note+'</div>'
+      +'</div></div></article>';
+  }).join('');
 
-  list.querySelectorAll('[data-project-toggle]').forEach(function(button){button.addEventListener('click',function(){var expanded=button.getAttribute('aria-expanded')==='true';var caseEl=button.closest('.project-case');var detail=document.getElementById(button.getAttribute('aria-controls'));button.setAttribute('aria-expanded',String(!expanded));if(detail)detail.hidden=expanded;if(caseEl)caseEl.classList.toggle('is-open',!expanded);var label=button.querySelector('.project-action > span:first-child');if(label)label.textContent=expanded?'Open case study':'Close case study';});});
+  list.querySelectorAll('[data-project-toggle]').forEach(function(button){
+    button.addEventListener('click',function(){
+      var expanded=button.getAttribute('aria-expanded')==='true';
+      var caseEl=button.closest('.project-case');
+      var detail=document.getElementById(button.getAttribute('aria-controls'));
+      button.setAttribute('aria-expanded',String(!expanded));
+      if(detail)detail.hidden=expanded;
+      if(caseEl)caseEl.classList.toggle('is-open',!expanded);
+      var label=button.querySelector('.project-action > span:first-child');
+      if(label)label.textContent=expanded?'Open case study':'Close case study';
+    });
+  });
 }());
