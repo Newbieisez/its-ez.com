@@ -376,6 +376,22 @@ body:before{
 .fit-panel:hover{padding-left:1rem!important;background:linear-gradient(90deg,rgba(217,255,82,.22),transparent)!important}
 .fit-panel:hover:after{opacity:1;transform:translate(.2rem,-50%)}
 
+.pathways{background:var(--paper-2)!important;border-top:1px solid var(--line);border-bottom:1px solid var(--line)}
+.pathways .section-title{max-width:9ch}
+.pathway-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;margin-top:3rem}
+.pathway-card{position:relative;display:flex;min-height:280px;flex-direction:column;justify-content:space-between;padding:1.5rem;border:1px solid var(--ink);border-radius:1.5rem;background:var(--paper);overflow:hidden;transition:transform .28s var(--ease-out),box-shadow .28s ease,background .28s ease}
+.pathway-card:after{content:"↗";position:absolute;right:1.25rem;top:1.15rem;font-size:1.6rem;opacity:.25;transition:opacity .2s ease,transform .28s var(--ease-out)}
+.pathway-card small{font-size:.7rem;font-weight:900;letter-spacing:.14em;color:var(--hot)}
+.pathway-card strong{max-width:11ch;font-size:clamp(1.8rem,3vw,3rem);line-height:.96;letter-spacing:-.05em}
+.pathway-card span{max-width:30ch;color:var(--soft);font-size:.92rem;line-height:1.5}
+.pathway-card:hover{transform:translateY(-8px);background:#fff;box-shadow:0 26px 55px rgba(17,17,17,.1)}
+.pathway-card:hover:after{opacity:1;transform:translate(.2rem,-.2rem)}
+.pathway-card:nth-child(2){background:var(--ink);color:#fff}
+.pathway-card:nth-child(2) span{color:rgba(255,255,255,.68)}
+.pathway-card:nth-child(2) small{color:var(--acid)}
+.pathway-card:nth-child(3){background:var(--acid)}
+.pathway-card:nth-child(3) span{color:rgba(17,17,17,.68)}
+
 .contact{position:relative;overflow:hidden;background:linear-gradient(135deg,#ff5a36,#ff6845 52%,#ff4f2a)!important}
 .contact:before{content:"LET’S BUILD";position:absolute;right:-.04em;bottom:-.16em;font-size:clamp(7rem,20vw,19rem);font-weight:950;letter-spacing:-.085em;color:rgba(255,255,255,.08);pointer-events:none}
 .form{position:relative;box-shadow:0 28px 80px rgba(73,19,5,.22)!important}
@@ -394,6 +410,8 @@ body:before{
   .portrait-stage:after{left:1rem;top:1rem}
   .framework-grid:after{display:none}
   .work .project-case{border-radius:1rem}
+  .pathway-grid{grid-template-columns:1fr}
+  .pathway-card{min-height:220px}
 }
 
 @media (max-width:620px){
@@ -405,6 +423,9 @@ body:before{
   .framework-stage:hover{transform:none}
   .recommendation-card:hover{transform:rotate(0deg)!important}
   .fit-panel:hover{padding-left:0!important}
+  .pathway-grid{margin-top:2rem}
+  .pathway-card{min-height:200px;padding:1.25rem}
+  .pathway-card:hover{transform:none}
 }
 
 @media (prefers-reduced-motion:no-preference){
