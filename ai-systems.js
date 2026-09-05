@@ -71,3 +71,9 @@ const menu=document.querySelector('.menu-button');
 const nav=document.querySelector('.nav');
 menu.addEventListener('click',()=>{const open=nav.classList.toggle('is-open');menu.setAttribute('aria-expanded',open?'true':'false')});
 document.querySelectorAll('.nav-links a').forEach(a=>a.addEventListener('click',()=>{nav.classList.remove('is-open');menu.setAttribute('aria-expanded','false')}));
+
+// Keep the page aligned with the primary ITS-EZ site conventions.
+const buildLink=document.querySelector('.cta-actions .button-white');
+if(buildLink) buildLink.setAttribute('href','/#contact');
+const footerMeta=document.querySelector('.footer-grid p:last-child');
+if(footerMeta) footerMeta.textContent='Erez Haimowicz · Building since 1999';
