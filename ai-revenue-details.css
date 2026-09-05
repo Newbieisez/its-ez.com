@@ -1,0 +1,61 @@
+.workflow-card{display:flex;flex-direction:column;position:relative}
+.workflow-card ul{margin-bottom:18px}
+.workflow-open{
+  margin-top:auto;width:100%;display:flex;align-items:center;justify-content:space-between;
+  min-height:42px;padding:10px 12px;border:1px solid var(--ink);border-radius:999px;
+  background:#fff;color:var(--ink);font-size:.68rem;font-weight:900;cursor:pointer;
+  transition:background .18s ease,color .18s ease,transform .18s ease
+}
+.workflow-open:hover,.workflow-open:focus-visible{background:var(--ink);color:#fff;transform:translateY(-1px)}
+.workflow-open b{display:grid;place-items:center;width:24px;height:24px;border-radius:50%;background:var(--red);color:#fff}
+.revenue-workflow-dialog{
+  width:min(980px,calc(100% - 28px));max-height:92vh;margin:auto;padding:0;
+  border:1px solid var(--ink);border-radius:26px;background:#fff;color:var(--ink);
+  box-shadow:16px 16px 0 var(--red);overflow:auto
+}
+.revenue-workflow-dialog::backdrop{background:rgba(0,0,0,.76);backdrop-filter:blur(6px)}
+.revenue-dialog-close{
+  position:sticky;z-index:5;float:right;top:18px;margin:18px 18px 0 0;
+  width:42px;height:42px;border:0;border-radius:50%;background:var(--ink);color:#fff;
+  font-size:1.5rem;line-height:1;cursor:pointer
+}
+.revenue-dialog-close:hover{background:var(--red)}
+.revenue-dialog-stage{padding:34px 34px 0;color:var(--red);font-size:.72rem;font-weight:950;letter-spacing:.14em;text-transform:uppercase}
+.revenue-workflow-dialog h2{margin:8px 34px 10px;max-width:760px;font-size:clamp(3rem,7vw,6.4rem);line-height:.85;letter-spacing:-.075em}
+.revenue-dialog-summary{margin:0 34px 32px;max-width:760px;color:var(--muted);font-size:1.05rem;line-height:1.65}
+.revenue-label{display:block;margin-bottom:10px;color:var(--red);font-size:.64rem;font-weight:950;letter-spacing:.14em;text-transform:uppercase}
+.revenue-why,.revenue-system,.revenue-prompt,.revenue-human{margin:0 34px 22px;padding:22px;border:1px solid var(--ink);border-radius:18px;background:var(--paper)}
+.revenue-why p,.revenue-system p,.revenue-human p{margin:0;line-height:1.65}
+.revenue-detail-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:0 34px 22px}
+.revenue-detail-grid>section{padding:20px;border:1px solid var(--line);border-radius:18px;background:#fff}
+.revenue-detail-grid ul,.revenue-bottom-grid ul{margin:0;padding-left:18px;color:var(--muted);font-size:.84rem;line-height:1.55}
+.revenue-detail-grid li+li,.revenue-bottom-grid li+li{margin-top:6px}
+.revenue-tool-cloud{display:flex;flex-wrap:wrap;gap:7px}
+.revenue-tool-cloud span{padding:7px 9px;border:1px solid var(--ink);border-radius:999px;background:var(--ink);color:#fff;font-size:.66rem;font-weight:900}
+.revenue-run{margin:0 34px 22px}
+.revenue-run>.revenue-label{margin-left:2px}
+.revenue-step{display:grid;grid-template-columns:52px 1fr;gap:16px;padding:18px 0;border-top:1px solid var(--ink)}
+.revenue-step:last-child{border-bottom:1px solid var(--ink)}
+.revenue-step>b{display:grid;place-items:center;width:42px;height:42px;border-radius:50%;background:var(--red);color:#fff;font-size:.7rem}
+.revenue-step strong{font-size:1rem}
+.revenue-step p{margin:5px 0 0;color:var(--muted);font-size:.85rem;line-height:1.55}
+.revenue-prompt{background:var(--ink);color:#fff}
+.revenue-prompt .revenue-label{color:#ff8787}
+.revenue-prompt-head{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.copy-revenue-prompt{border:1px solid rgba(255,255,255,.5);border-radius:999px;padding:7px 11px;background:transparent;color:#fff;font-size:.66rem;font-weight:900;cursor:pointer}
+.copy-revenue-prompt:hover{background:#fff;color:var(--ink)}
+.revenue-prompt pre{margin:12px 0 0;white-space:pre-wrap;font-family:Arial,Helvetica,sans-serif;font-size:.84rem;line-height:1.6;color:#e5e5e5}
+.revenue-human{border-left:6px solid var(--red);background:#fff}
+.revenue-bottom-grid{margin-bottom:30px}
+.revenue-dialog-footer{position:sticky;bottom:0;display:flex;align-items:center;justify-content:space-between;gap:24px;padding:20px 34px;background:rgba(255,255,255,.96);backdrop-filter:blur(12px);border-top:1px solid var(--ink)}
+.revenue-dialog-footer div{display:grid;gap:3px}.revenue-dialog-footer b{font-size:.72rem;letter-spacing:.1em}.revenue-dialog-footer span{color:var(--muted);font-size:.72rem}
+@media(max-width:720px){
+  .revenue-workflow-dialog{border-radius:18px;box-shadow:8px 8px 0 var(--red)}
+  .revenue-dialog-stage{padding:26px 20px 0}
+  .revenue-workflow-dialog h2{margin:8px 20px 10px;font-size:3.4rem}
+  .revenue-dialog-summary{margin:0 20px 24px}
+  .revenue-why,.revenue-system,.revenue-prompt,.revenue-human,.revenue-run{margin-left:20px;margin-right:20px}
+  .revenue-detail-grid{grid-template-columns:1fr;margin-left:20px;margin-right:20px}
+  .revenue-dialog-footer{align-items:flex-start;flex-direction:column;padding:18px 20px}
+  .revenue-dialog-footer .button{width:100%}
+}
