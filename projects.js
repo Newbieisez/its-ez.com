@@ -27,7 +27,7 @@
     if(work){
       var title=work.querySelector('.section-title');
       var intro=work.querySelector('.body-copy');
-      if(title)title.textContent='Here’s what I’ve actually built.';
+      if(title)title.textContent='View my journey of building.';
       if(intro)intro.textContent='Real GTM challenges, the operational architectures designed to solve them, and the verified business outcomes.';
     }
 
