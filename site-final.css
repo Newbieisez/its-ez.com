@@ -1,0 +1,42 @@
+/* Final cinematic system: preserve the real site content, improve hierarchy, and keep every state readable. */
+:root{--ez-bg:#060708;--ez-panel:#0c0e10;--ez-panel-2:#111417;--ez-white:#f7f7f5;--ez-muted:#b7bbc0;--ez-red:#ef233c;--ez-red-2:#ff3147;--ez-border:rgba(255,255,255,.14)}
+html,body{background:var(--ez-bg)!important;color:var(--ez-white)!important}
+body:before{background:linear-gradient(180deg,#060708,#090b0d 55%,#070809)!important}
+.site-header{background:rgba(6,7,8,.94)!important;border-bottom:1px solid var(--ez-border)!important}
+.brand,.nav-links a{color:#fff!important}.brand-dot{background:var(--ez-red)!important}
+.button-dark,.button-orange{background:var(--ez-red)!important;color:#fff!important;border-color:var(--ez-red)!important}.button-dark:hover,.button-orange:hover{background:var(--ez-red-2)!important;color:#fff!important}.button-light{background:transparent!important;color:#fff!important;border-color:rgba(255,255,255,.55)!important}.button-light:hover{background:#fff!important;color:#08090a!important}
+
+/* Hero: dark studio with a restrained red-neon / brick feel. */
+.hero{position:relative!important;background:#070809!important;overflow:hidden!important;border-bottom:1px solid var(--ez-border)!important}
+.hero:before{content:""!important;position:absolute!important;inset:0!important;pointer-events:none!important;z-index:0!important;background:linear-gradient(90deg,rgba(0,0,0,.96) 0%,rgba(0,0,0,.78) 37%,rgba(0,0,0,.25) 65%,rgba(0,0,0,.45) 100%),repeating-linear-gradient(0deg,transparent 0 35px,rgba(239,35,60,.055) 36px 38px),repeating-linear-gradient(90deg,transparent 0 86px,rgba(239,35,60,.045) 87px 89px),radial-gradient(circle at 82% 38%,rgba(239,35,60,.18),transparent 24rem)!important}
+.cinematic-hero-grid{position:relative!important;z-index:1!important}
+.cinematic-portrait-wrap{background:#0a0c0e!important}.cinematic-portrait-glow{background:linear-gradient(90deg,rgba(0,0,0,.9),rgba(0,0,0,.12) 38%,transparent 60%),linear-gradient(180deg,transparent 62%,rgba(0,0,0,.6))!important}.cinematic-portrait{filter:contrast(1.02) brightness(.95) saturate(.98)!important;transform:scale(1.01)!important}.cinematic-wall-copy{display:none!important}
+.hero .cinematic-hero-copy h1{color:#fff!important}.hero .cinematic-hero-copy h1 em{color:var(--ez-red)!important}.cinematic-lede{color:#c9cdd1!important}.cinematic-signature strong,.cinematic-signature span{color:#fff!important}
+
+/* Decision pathways: restore the section and make every card readable. */
+.decision-pathways{background:#080a0b!important;border-top:1px solid var(--ez-border)!important;border-bottom:1px solid var(--ez-border)!important;padding:34px 0 44px!important}
+.decision-pathways .decision-label{margin:0 0 14px;color:#ff4554;font-size:11px;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+.decision-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:16px}
+.decision-card{position:relative;display:flex;min-height:220px;flex-direction:column;justify-content:space-between;padding:24px;border:1px solid var(--ez-border);border-radius:22px;text-decoration:none!important;overflow:hidden;transition:transform .22s ease,border-color .22s ease,background .22s ease}
+.decision-card:after{content:"↗";position:absolute;right:20px;top:18px;font-size:22px;color:currentColor;opacity:.55}
+.decision-card small{display:block;margin-bottom:10px;color:#ff4554!important;font-size:11px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
+.decision-card strong{display:block;max-width:12ch;font-size:clamp(28px,3vw,44px);line-height:.95;letter-spacing:-.05em;color:inherit!important}
+.decision-card span{display:block;margin-top:18px;max-width:34ch;font-size:15px;line-height:1.5;color:inherit!important;opacity:.78}
+.decision-card .decision-link{margin-top:18px;font-weight:900;opacity:1!important;color:inherit!important}
+.decision-card--light{background:#f4f1ec!important;color:#0b0c0d!important;border-color:#d7d1ca!important}.decision-card--light small{color:#d71931!important}.decision-card--dark{background:#0d1012!important;color:#fff!important}.decision-card--red{background:var(--ez-red)!important;color:#fff!important;border-color:var(--ez-red)!important}.decision-card--red small{color:#fff!important}.decision-card:hover{transform:translateY(-4px);border-color:#ff4554!important}
+
+/* Existing sections keep their purpose and content. */
+.work,.operating,.proof,.voice,.fit,.contact{position:relative!important}.work,.proof{background:#080a0b!important}.operating,.fit{background:#0c0f11!important}.voice{background:#0b0d0f!important}.section-title{color:#fff!important}.body-copy{color:#b7bbc0!important}.eyebrow{color:#ff4554!important}
+.project-case,.project-toggle,.project-detail,.media-proof,.stack-group,.framework-stage,.horizon,.fit-panel{background:#0f1214!important;color:#fff!important;border-color:var(--ez-border)!important}.project-heading h3,.project-lede,.stack-group h3,.framework-stage h3,.horizon strong,.fit-panel h3{color:#fff!important}.project-heading small,.project-scan,.project-scan p,.project-block p,.project-block li,.media-proof-copy p,.stack-group p,.framework-stage p,.horizon p,.fit-panel p{color:#c5c9ce!important}.project-action,.project-action *{color:#fff!important}.project-case:hover,.project-toggle:hover{background:#15191c!important}.project-case.is-open,.project-case.is-open .project-toggle{background:#111518!important}.project-case.is-open .project-detail{background:#0e1113!important}.project-case.is-open .project-heading h3,.project-case.is-open .project-scan,.project-case.is-open .project-scan p{color:#fff!important}
+.framework-stage:hover{background:#171b1e!important;color:#fff!important}.framework-stage:hover p,.framework-stage:hover span,.framework-stage:hover h3{color:#fff!important}.framework-stage:hover b{background:var(--ez-red)!important;color:#fff!important}
+.stack-group:hover{background:#15191c!important;color:#fff!important}.stack-group:hover p,.stack-group:hover strong,.stack-group:hover h3{color:#fff!important}
+.recommendation-card{background:#f4f1ec!important;color:#0b0c0d!important}.recommendation-card *{color:inherit!important}.recommendation-role{color:#555b60!important}
+
+/* Remove only the preview-label pills. Keep the live preview and its open button. */
+.site-preview-note{display:none!important}.site-preview-overlay{justify-content:flex-end!important;background:linear-gradient(to bottom,transparent 68%,rgba(0,0,0,.52))!important}.site-preview-open{background:#fff!important;color:#0a0b0c!important;border-color:#fff!important}.site-preview-open:hover{background:var(--ez-red)!important;color:#fff!important;border-color:var(--ez-red)!important}
+
+/* Contact remains a strong red finish with readable fields. */
+.contact{background:linear-gradient(135deg,#8c0d18,#d2172a)!important}.contact .section-title,.contact .eyebrow,.contact .body-copy,.contact .email{color:#fff!important}.form{background:#0b0d0f!important;color:#fff!important;border:1px solid rgba(255,255,255,.16)!important}.field label{color:#fff!important}.field input,.field textarea{background:#121619!important;color:#fff!important;border-color:rgba(255,255,255,.22)!important}
+
+@media(max-width:900px){.decision-grid{grid-template-columns:1fr}.decision-card{min-height:190px}.cinematic-portrait{object-position:center 18%!important}}
+@media(max-width:760px){.decision-pathways{padding:24px 0 32px!important}.decision-grid{gap:12px}.decision-card{padding:20px;min-height:170px}.decision-card strong{font-size:30px}.site-preview-overlay{padding:10px!important}.site-preview-open{min-height:40px!important;font-size:9px!important}}
