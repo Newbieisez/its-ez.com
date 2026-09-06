@@ -3,6 +3,10 @@
   brand.rel='stylesheet';
   brand.href='cinematic.css?v=20260906b';
   document.head.appendChild(brand);
+  var composition=document.createElement('link');
+  composition.rel='stylesheet';
+  composition.href='cinematic-v2.css?v=20260906';
+  document.head.appendChild(composition);
 
   function buildHero(){
     var hero=document.querySelector('.hero');
