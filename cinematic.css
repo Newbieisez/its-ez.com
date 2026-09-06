@@ -16,6 +16,19 @@ body:before{background:radial-gradient(circle at 78% 8%,rgba(237,28,46,.14),tran
 .contact{background:linear-gradient(135deg,#8f0c18,#d51627)!important}.form{background:#0b0d0f!important;color:#fff!important;border:1px solid rgba(255,255,255,.15)!important}.field label{color:#fff!important}.field input,.field textarea{background:#111518!important;color:#fff!important;border-color:rgba(255,255,255,.25)!important}.form-help,.status{color:#b7babd!important}.footer{background:#050607!important;color:#a7aaae!important}
 /* Contrast guards */
 .project-case *, .media-proof *, .stack-group *, .framework-stage *, .horizon *, .fit-panel *{text-shadow:none!important}.project-toggle,.project-toggle *,.project-detail,.project-detail *{color:inherit}.project-action,.project-action-icon{color:#fff!important;border-color:rgba(255,255,255,.5)!important}.project-action-icon{background:#111518!important}.recommendation-card blockquote,.recommendation-card p,.recommendation-card strong,.recommendation-card span{color:#0b0c0d!important}.recommendation-role{color:#555b60!important}.form input::placeholder,.form textarea::placeholder{color:#8f9499!important}button:disabled,.button:disabled,[aria-disabled="true"]{opacity:.58!important;color:#d4d7d9!important}
+/* Featured journey cards: explicit readable states */
+.project-case .project-heading h3{color:#fff!important}
+.project-case .project-heading small{color:#d8dbe0!important}
+.project-case .project-scan,.project-case .project-scan p,.project-case .project-scan span{color:#c7cbd0!important}
+.project-case .project-scan strong,.project-case .project-scan b{color:#ff4554!important}
+.project-case .project-action,.project-case .project-action span,.project-case .project-action strong{color:#fff!important}
+.project-case .journey-brand-mark{color:#fff!important}
+.project-case .journey-brand-mark img{display:block;max-width:220px;width:100%;height:auto;filter:none!important}
+.project-case.featured-journey{background:linear-gradient(145deg,#111417,#0b0d0f)!important}
+.project-case.featured-journey .project-toggle{background:transparent!important}
+.project-case.featured-journey .project-toggle:hover{background:rgba(255,255,255,.025)!important}
+.project-case.featured-journey .project-scan{opacity:1!important}
+.project-case.featured-journey .project-scan p{opacity:1!important}
 @media(max-width:900px){.hero{min-height:auto}.hero-grid{padding-top:72px!important;padding-bottom:72px!important}.portrait img{filter:grayscale(70%) contrast(1.05)!important}}
 
 /* Mobile layout guards */
@@ -56,4 +69,6 @@ body:before{background:radial-gradient(circle at 78% 8%,rgba(237,28,46,.14),tran
   .site-preview-shell{min-height:280px!important}
   .recommendation-card,.stack-group,.media-proof,.framework-stage,.horizon,.fit-panel{min-width:0!important}
   .contact .button,.form .button{width:100%!important}
+  .project-case .journey-brand-mark{grid-column:2!important;margin-top:10px!important}
+  .project-case .journey-brand-mark img{max-width:180px!important}
 }
