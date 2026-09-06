@@ -36,11 +36,11 @@ body:before{
 
 /* Buttons */
 .button-dark{background:var(--ez-black)!important;color:#fff!important;border-color:var(--ez-black)!important}
-.button-dark:hover{background:#29292d!important}
+.button-dark:hover{background:#29292d!important;color:#fff!important}
 .button-orange{background:var(--ez-red)!important;color:#fff!important;border-color:var(--ez-red)!important}
-.button-orange:hover{background:var(--ez-red-deep)!important}
+.button-orange:hover{background:var(--ez-red-deep)!important;color:#fff!important}
 .button-light{background:#fff!important;color:var(--ez-black)!important;border-color:var(--ez-black)!important}
-.button-light:hover{background:#f0ece7!important}
+.button-light:hover{background:#f0ece7!important;color:var(--ez-black)!important}
 .button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible{outline-color:var(--ez-red)!important}
 
 /* Hero */
@@ -80,27 +80,11 @@ body:before{
 }
 .solve-card:nth-child(odd),.solve-card:nth-child(even){padding:30px 32px 34px!important}
 .solve-card:nth-child(2),.solve-card:nth-child(3){background:#f1eeea!important}
-.solve-card b{
-  color:var(--ez-red)!important;
-  display:block!important;
-  margin:0 0 34px!important;
-  line-height:1.25!important;
-}
-.solve-card h3{
-  color:var(--ez-black)!important;
-  margin:0 0 14px!important;
-  padding:0!important;
-  line-height:1.06!important;
-  overflow:visible!important;
-}
-.solve-card p{
-  color:#454950!important;
-  font-size:14px!important;
-  line-height:1.64!important;
-  margin:0!important;
-  padding:0!important;
-}
+.solve-card b{color:var(--ez-red)!important;display:block!important;margin:0 0 34px!important;line-height:1.25!important}
+.solve-card h3{color:var(--ez-black)!important;margin:0 0 14px!important;padding:0!important;line-height:1.06!important;overflow:visible!important}
+.solve-card p{color:#454950!important;font-size:14px!important;line-height:1.64!important;margin:0!important;padding:0!important}
 .solve-card:hover{background:#faeeee!important;transform:translateY(-3px)!important}
+.solve-card:hover h3,.solve-card:hover p{color:var(--ez-black)!important}
 
 /* Case studies */
 .work{background:var(--ez-black)!important;color:#fff!important}
@@ -111,7 +95,7 @@ body:before{
 .project-case{background:#fff!important;color:var(--ez-black)!important;border:1px solid #4a4a4f!important;box-shadow:none!important}
 .project-case.is-open{box-shadow:0 18px 50px rgba(0,0,0,.28)!important}
 .project-toggle{background:#fff!important;color:var(--ez-black)!important}
-.project-toggle:hover{background:#f6f2ee!important}
+.project-toggle:hover{background:#f6f2ee!important;color:var(--ez-black)!important}
 .project-index{color:var(--ez-red)!important}
 .project-heading small{color:#666970!important}
 .project-heading h3{color:var(--ez-black)!important}
@@ -171,6 +155,7 @@ body:before{
 .recommendation-name{color:var(--ez-red-deep)!important}
 .recommendation-role{color:#5b5e64!important}
 .recommendation-link{color:var(--ez-red-deep)!important;font-weight:800!important}
+.recommendation-card:hover,.recommendation-card:hover blockquote,.recommendation-card:hover .recommendation-name,.recommendation-card:hover .recommendation-role{color:var(--ez-black)!important}
 
 /* Fit */
 .fit{background:var(--ez-paper)!important;color:var(--ez-black)!important}
@@ -187,12 +172,20 @@ body:before{
 .field label{color:var(--ez-black)!important;font-weight:800!important}
 .field input,.field textarea{background:#fff!important;color:var(--ez-black)!important;border-color:#79746f!important}
 .form-help,.status{color:#555960!important}
-
 .footer{background:var(--ez-black)!important;color:#d7d7da!important}
+
+/* Universal interaction contrast guards */
+[aria-selected="true"],[aria-pressed="true"],.active,.is-active{color:#fff!important}
+[aria-selected="true"] *,[aria-pressed="true"] *,.active *,.is-active *{color:inherit!important}
+.hero-kicker span[aria-pressed="true"],.hero-kicker span.active{background:var(--ez-red)!important;color:#fff!important;border-color:var(--ez-red)!important}
+.project-case.is-open .project-toggle,.project-case.is-open .project-toggle *{color:var(--ez-black)!important}
+.project-case.is-open .project-metric,.project-case.is-open .project-action-icon{color:#fff!important}
+a:hover strong,a:hover span,a:hover small,button:hover strong,button:hover span,button:hover small{color:inherit}
 
 /* Prevent any old lime/blue artifacts from surviving */
 .impact-item strong,.impact-stat strong,.evidence-card:hover,.recommendation-card:hover{color:inherit!important}
-.evidence-card:hover{background:#f2e7e8!important}
+.evidence-card:hover{background:#f2e7e8!important;color:var(--ez-black)!important}
+.evidence-card:hover *{color:inherit!important}
 
 @media (min-width:900px){
   .project-heading small,.project-metric,.project-action,.project-block h4,.project-meta span,.outcome span,.visual-card-head>span,.visual-card-head small{font-size:10px!important}
