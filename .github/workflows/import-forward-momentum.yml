@@ -27,7 +27,7 @@ jobs:
       - name: Import Forward Momentum from existing EZ Drive share
         run: |
           mkdir -p assets/audio
-          gdown --fuzzy 'https://drive.google.com/file/d/1mrVBaOA293zaiexTucMGim-POZl9peF6/view?usp=sharing' -O /tmp/forward-momentum-source
+          gdown '1mrVBaOA293zaiexTucMGim-POZl9peF6' -O /tmp/forward-momentum-source
           test -s /tmp/forward-momentum-source
           ffmpeg -y -i /tmp/forward-momentum-source -vn -codec:a libmp3lame -b:a 192k -ar 48000 assets/audio/forward-momentum.mp3
           test -s assets/audio/forward-momentum.mp3
