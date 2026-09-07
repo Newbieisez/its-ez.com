@@ -32,7 +32,6 @@
     frame.style.pointerEvents='none';
     frame.setAttribute('tabindex','-1');
     frame.setAttribute('scrolling','no');
-    frame.setAttribute('loading','lazy');
 
     var shell=document.createElement('div');
     shell.className='site-preview-shell';
@@ -87,11 +86,6 @@
     enhanceWork();
     enhancePreviews();
     setupNavHighlight();
-
-    /* The project renderer runs immediately before this file. A short retry
-       covers slow devices without introducing another loader chain. */
-    window.setTimeout(enhanceWork,120);
-    window.setTimeout(enhancePreviews,160);
   }
 
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});
