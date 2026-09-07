@@ -1,0 +1,47 @@
+{
+  "schemaVersion": 1,
+  "policy": {
+    "refreshHours": 6,
+    "minimumScoreComponents": 2,
+    "minimumUserSentimentSources": 1,
+    "blockedDomains": [
+      "g2.com",
+      "www.g2.com",
+      "capterra.com",
+      "www.capterra.com",
+      "softwareadvice.com",
+      "www.softwareadvice.com",
+      "getapp.com",
+      "www.getapp.com",
+      "gartner.com",
+      "www.gartner.com"
+    ]
+  },
+  "defaults": {
+    "priorUserScore": 7.5,
+    "priorReviewWeight": 30,
+    "weights": {
+      "userSentiment": 0.45,
+      "reviewConfidence": 0.10,
+      "integrationReadiness": 0.20,
+      "gtmFit": 0.15,
+      "marketMomentum": 0.10
+    }
+  },
+  "sources": {
+    "n8n": [
+      {
+        "type": "github",
+        "repo": "n8n-io/n8n",
+        "component": "marketMomentum",
+        "label": "Official GitHub repository"
+      }
+    ]
+  },
+  "notes": [
+    "Restricted review sites are intentionally blocked from automated collection.",
+    "TrustRadius API support is available in the refresh script when TRUSTRADIUS_API_KEY and per-product slugs are configured.",
+    "JSON-LD aggregateRating scraping is permitted only for explicitly configured allowlisted pages after robots.txt permits access.",
+    "Missing evidence produces Collecting data / Insufficient data, never an invented rating."
+  ]
+}
