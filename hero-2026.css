@@ -6,7 +6,7 @@
 .hero.hero-2026:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(90deg,#050709 0%,rgba(5,7,9,.98) 38%,rgba(5,7,9,.50) 57%,rgba(5,7,9,.10) 75%,rgba(5,7,9,.04) 100%);z-index:0}
 .hero-2026 .wrap{position:relative;z-index:1;width:min(1500px,calc(100% - 72px))!important;max-width:none!important}
 
-/* Keep the composition the user approved, but make the headline impossible to clip. */
+/* Keep the approved composition and preserve all proof elements. */
 .ez-hero-grid{display:grid;grid-template-columns:minmax(0,1.16fr) minmax(430px,.84fr);gap:40px;align-items:stretch}
 .ez-hero-copy{min-width:0;max-width:800px;overflow:visible;padding:26px 0 4px;position:relative;z-index:1}
 .ez-hero-kicker{margin:0 0 18px;color:#dedfe3;font-size:.72rem;font-weight:900;letter-spacing:.27em;text-transform:uppercase}
@@ -16,10 +16,12 @@
 .ez-hero-lede{max-width:650px;margin:0 0 28px;color:#ededf0;font-size:clamp(1.05rem,1.35vw,1.25rem);line-height:1.55}
 .ez-hero-actions{display:flex;flex-wrap:wrap;gap:14px;margin:0 0 34px}.ez-hero-actions .button{min-width:190px;padding:15px 23px!important}.ez-hero-actions .button-orange{background:#ef233c!important;border-color:#ef233c!important;color:#fff!important}.ez-hero-actions .button-light{background:rgba(5,7,9,.38)!important;border-color:rgba(255,255,255,.68)!important;color:#fff!important}.ez-hero-actions .button-light:hover{background:#fff!important;color:#050709!important}
 .ez-impact-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));max-width:760px;border-top:1px solid rgba(255,255,255,.20);border-bottom:1px solid rgba(255,255,255,.20)}.ez-impact{padding:19px 14px 17px 0;min-width:0;position:relative}.ez-impact+.ez-impact{padding-left:14px;border-left:1px solid rgba(255,255,255,.18)}.ez-impact strong{display:block;color:#fff;font-size:clamp(1.45rem,1.8vw,1.9rem);line-height:1;letter-spacing:-.04em}.ez-impact strong:before{content:"";display:inline-block;width:4px;height:22px;margin-right:9px;background:#ef233c;vertical-align:-2px}.ez-impact b{display:block;margin-top:8px;color:#fff;font-size:.61rem;line-height:1.25;letter-spacing:.055em;text-transform:uppercase}.ez-impact span{display:block;margin-top:5px;color:#aeb1b7;font-size:.64rem;line-height:1.35}
-.ez-hero-portrait-wrap{position:relative;z-index:2;min-height:620px;align-self:stretch;overflow:hidden;background:#090b0d}
-.ez-hero-portrait-wrap:before{display:none}.ez-hero-portrait{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 42%!important;border:0!important;border-radius:0!important;box-shadow:none!important;filter:saturate(.98) contrast(1.02) brightness(.98);-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 10%,#000 100%),linear-gradient(180deg,#000 0%,#000 90%,transparent 100%);-webkit-mask-composite:source-in;mask-image:linear-gradient(90deg,transparent 0%,#000 10%,#000 100%)}.ez-hero-portrait-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,7,9,.38) 0%,rgba(5,7,9,.06) 15%,transparent 38%,rgba(5,7,9,.02) 100%);pointer-events:none}
 
-/* Proof stays in the hero, but with better spacing and safer logo containment. */
+/* The portrait is fully opaque. No headline or UI can show through the image. */
+.ez-hero-portrait-wrap{position:relative;z-index:2;min-height:620px;align-self:stretch;overflow:hidden;background:#090b0d}
+.ez-hero-portrait-wrap:before{display:none}.ez-hero-portrait{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center 42%!important;border:0!important;border-radius:0!important;box-shadow:none!important;filter:saturate(.98) contrast(1.02) brightness(.98);mask-image:none!important;-webkit-mask-image:none!important}.ez-hero-portrait-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(5,7,9,.38) 0%,rgba(5,7,9,.06) 15%,transparent 38%,rgba(5,7,9,.02) 100%);pointer-events:none}
+
+/* Keep the company proof row intact. */
 .ez-client-strip{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:14px;align-items:stretch;margin-top:18px;padding:22px 0 10px;border-top:1px solid rgba(255,255,255,.14)}
 .ez-client{min-height:82px;border:1px solid rgba(255,255,255,.16);border-radius:12px;background-color:#fff;background-repeat:no-repeat;background-position:center;background-size:contain!important;overflow:hidden;padding:10px;background-origin:content-box;background-clip:padding-box}
 .ez-client img{display:none!important}
