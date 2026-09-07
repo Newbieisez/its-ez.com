@@ -51,6 +51,18 @@
     "folk-crm": [
       { "type":"licensed-json", "url":"https://itunes.apple.com/lookup?id=6761423430&country=us", "ratingPath":"results.0.averageUserRating", "countPath":"results.0.userRatingCount", "maxRating":5, "label":"Apple App Store — folk CRM mobile", "scope":"mobile_app" }
     ],
+    "zoominfo": [
+      { "type":"licensed-json", "url":"https://itunes.apple.com/lookup?id=1493170277&country=us", "ratingPath":"results.0.averageUserRating", "countPath":"results.0.userRatingCount", "maxRating":5, "label":"Apple App Store — ZoomInfo mobile", "scope":"mobile_app" }
+    ],
+    "outreach": [
+      { "type":"licensed-json", "url":"https://itunes.apple.com/lookup?id=6505089914&country=us", "ratingPath":"results.0.averageUserRating", "countPath":"results.0.userRatingCount", "maxRating":5, "label":"Apple App Store — Outreach.io mobile", "scope":"mobile_app" }
+    ],
+    "salesloft": [
+      { "type":"licensed-json", "url":"https://itunes.apple.com/lookup?id=1455032473&country=us", "ratingPath":"results.0.averageUserRating", "countPath":"results.0.userRatingCount", "maxRating":5, "label":"Apple App Store — Salesloft mobile", "scope":"mobile_app" }
+    ],
+    "instantly": [
+      { "type":"licensed-json", "url":"https://itunes.apple.com/lookup?id=6474658497&country=us", "ratingPath":"results.0.averageUserRating", "countPath":"results.0.userRatingCount", "maxRating":5, "label":"Apple App Store — Instantly AI mobile", "scope":"mobile_app" }
+    ],
     "gong": [
       { "type":"licensed-json", "url":"https://itunes.apple.com/lookup?id=1289289459&country=us", "ratingPath":"results.0.averageUserRating", "countPath":"results.0.userRatingCount", "maxRating":5, "label":"Apple App Store — Gong mobile", "scope":"mobile_app" }
     ],
