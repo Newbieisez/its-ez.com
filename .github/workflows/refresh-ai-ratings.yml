@@ -1,0 +1,73 @@
+name: Refresh AI Systems EZ Scores
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 */6 * * *'
+  push:
+    branches: [main]
+    paths:
+      - 'ai-systems.js'
+      - 'ai-systems-extended.js'
+      - 'ai-systems-ratings.js'
+      - 'ai-systems-ratings.css'
+      - 'scripts/refresh-ai-ratings.mjs'
+      - 'data/ai-rating-sources.json'
+      - '.github/workflows/refresh-ai-ratings.yml'
+  pull_request:
+    paths:
+      - 'ai-systems.js'
+      - 'ai-systems-extended.js'
+      - 'ai-systems-ratings.js'
+      - 'ai-systems-ratings.css'
+      - 'scripts/refresh-ai-ratings.mjs'
+      - 'data/ai-rating-sources.json'
+      - '.github/workflows/refresh-ai-ratings.yml'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-ai-systems-ratings-${{ github.ref }}
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Syntax check browser ratings code
+        run: node --check ai-systems-ratings.js
+
+      - name: Refresh scores
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TRUSTRADIUS_API_KEY: ${{ secrets.TRUSTRADIUS_API_KEY }}
+        run: node scripts/refresh-ai-ratings.mjs
+
+      - name: Validate output
+        run: |
+          node -e "const x=require('./data/ai-systems-ratings.json'); if(x.summary.total!==103) throw new Error('ratings inventory must contain 103 platforms'); if(Object.keys(x.items).length!==103) throw new Error('ratings output must contain 103 item records'); console.log(x.summary)"
+
+      - name: Commit changed snapshots
+        if: github.event_name != 'pull_request'
+        run: |
+          if git diff --quiet -- data/ai-systems-ratings.json data/ai-systems-rating-history.json; then
+            echo 'No rating changes.'
+            exit 0
+          fi
+          git config user.name 'EZ Ratings Bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add data/ai-systems-ratings.json data/ai-systems-rating-history.json
+          git commit -m 'chore: refresh AI Systems EZ Scores'
+          git push

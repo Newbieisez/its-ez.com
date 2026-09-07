@@ -1,5 +1,5 @@
 (() => {
-  const VERSION = '20260908-global-nav-6';
+  const VERSION = '20260908-global-nav-7';
   const ROOT = 'https://its-ez.com/';
   const css = `
   :root{--ez-nav-red:#ef1717;--ez-nav-black:#08090b;--ez-nav-line:rgba(255,255,255,.12)}
@@ -95,11 +95,29 @@
   function loadPageExtensions(){
     const path=location.pathname.toLowerCase();
     const isAiSystems=path.endsWith('/ai-systems.html') || path.endsWith('/ai-systems');
-    if(!isAiSystems || document.querySelector('script[data-ez-ai-systems-extension]')) return;
-    const script=document.createElement('script');
-    script.src='/ai-systems-extended.js?v=20260907-1';
-    script.dataset.ezAiSystemsExtension='true';
-    document.head.appendChild(script);
+    if(!isAiSystems) return;
+
+    if(!document.querySelector('script[data-ez-ai-systems-extension]')){
+      const script=document.createElement('script');
+      script.src='/ai-systems-extended.js?v=20260907-1';
+      script.dataset.ezAiSystemsExtension='true';
+      document.head.appendChild(script);
+    }
+
+    if(!document.querySelector('link[data-ez-ai-systems-ratings-style]')){
+      const link=document.createElement('link');
+      link.rel='stylesheet';
+      link.href='/ai-systems-ratings.css?v=20260908-1';
+      link.dataset.ezAiSystemsRatingsStyle='true';
+      document.head.appendChild(link);
+    }
+
+    if(!document.querySelector('script[data-ez-ai-systems-ratings]')){
+      const ratings=document.createElement('script');
+      ratings.src='/ai-systems-ratings.js?v=20260908-1';
+      ratings.dataset.ezAiSystemsRatings='true';
+      document.body.appendChild(ratings);
+    }
   }
 
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',()=>{render();loadPageExtensions();},{once:true}); else {render();loadPageExtensions();}
