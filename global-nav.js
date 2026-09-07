@@ -1,5 +1,5 @@
 (() => {
-  const VERSION = '20260908-global-nav-3';
+  const VERSION = '20260908-global-nav-4';
   const ROOT = 'https://its-ez.com/';
   const css = `
   :root{--ez-nav-red:#ef1717;--ez-nav-black:#08090b;--ez-nav-line:rgba(255,255,255,.12)}
@@ -68,15 +68,28 @@
     header.innerHTML=`<div class="ez-global-shell">
       <a class="ez-global-brand" href="${ROOT}" aria-label="EZ Enablement home"><span class="ez-global-mark">E<b>Z</b></span><span class="ez-global-brand-copy"><strong>EZ ENABLEMENT</strong><span>Enablement made possible</span></span></a>
       <nav class="ez-global-links" id="ez-global-links" aria-label="Primary navigation">
-        ${items.map(([label,href])=>`<a href="${href}"${currentFor(label,href)?' aria-current="page"':''}>${label}</a>`).join('')}
+        ${items.map(([label,href])=>`<a href="${href}" data-ez-label="${label}">${label}</a>`).join('')}
       </nav>
       <a class="ez-global-cta" href="${ROOT}#contact">Let's connect</a>
       <button class="ez-global-menu" type="button" aria-expanded="false" aria-controls="ez-global-links" aria-label="Open navigation">☰</button>
     </div>`;
     if(old) old.replaceWith(header); else document.body.prepend(header);
+
+    const updateActive=()=>{
+      header.querySelectorAll('.ez-global-links a').forEach(a=>{
+        const label=a.dataset.ezLabel;
+        const active=currentFor(label,a.href);
+        if(active) a.setAttribute('aria-current','page'); else a.removeAttribute('aria-current');
+      });
+    };
+    updateActive();
+    window.addEventListener('hashchange',updateActive);
+    window.addEventListener('popstate',updateActive);
+
     const button=header.querySelector('.ez-global-menu');
     button.addEventListener('click',()=>{const open=header.classList.toggle('is-open');button.setAttribute('aria-expanded',String(open));button.setAttribute('aria-label',open?'Close navigation':'Open navigation');button.textContent=open?'×':'☰';});
-    header.querySelector('.ez-global-links').addEventListener('click',e=>{if(e.target.closest('a')){header.classList.remove('is-open');button.setAttribute('aria-expanded','false');button.textContent='☰';}});
+    header.querySelector('.ez-global-links').addEventListener('click',e=>{if(e.target.closest('a')){header.classList.remove('is-open');button.setAttribute('aria-expanded','false');button.textContent='☰';setTimeout(updateActive,0);}});
+    document.addEventListener('keydown',e=>{if(e.key==='Escape'&&header.classList.contains('is-open')){header.classList.remove('is-open');button.setAttribute('aria-expanded','false');button.setAttribute('aria-label','Open navigation');button.textContent='☰';button.focus();}});
   }
 
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',render,{once:true}); else render();
