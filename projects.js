@@ -1,11 +1,11 @@
 (function(){
   'use strict';
 
-  var ASSET_VERSION='20260906-clean-v1';
+  var ASSET_VERSION='20260906-clean-v2';
 
   function loadStyles(){
-    ['cinematic.css','cinematic-v2.css','hero-2026.css'].forEach(function(href){
-      if(document.querySelector('link[href^="'+href+'"]')) return;
+    ['cinematic.css','cinematic-v2.css','hero-2026.css','homepage-extras.css'].forEach(function(href){
+      if(document.querySelector('link[href^="'+href+'"]'))return;
       var link=document.createElement('link');
       link.rel='stylesheet';
       link.href=href+'?v='+ASSET_VERSION;
@@ -60,6 +60,17 @@
     document.head.appendChild(script);
   }
 
+  function ensureAiRevenueNav(){
+    var nav=document.getElementById('nav-links');
+    if(!nav||nav.querySelector('[data-ai-revenue-link]'))return;
+    var link=document.createElement('a');
+    link.href='ai-systems.html#featured';
+    link.textContent='AI Revenue';
+    link.setAttribute('data-ai-revenue-link','true');
+    var how=nav.querySelector('a[href="#operating"]');
+    nav.insertBefore(link,how||null);
+  }
+
   function enhanceWork(){
     var work=document.getElementById('work');
     if(!work)return;
@@ -70,11 +81,9 @@
       if(index>1||card.querySelector('.journey-brand-mark'))return;
       var mark=document.createElement('div');
       mark.className='journey-brand-mark';
-      if(index===0){
-        mark.innerHTML='<img src="sentinelone-logo.svg?v='+ASSET_VERSION+'" alt="SentinelOne">';
-      }else{
-        mark.innerHTML='<img src="assets/twilio-logo.svg?v='+ASSET_VERSION+'" alt="Twilio">';
-      }
+      mark.innerHTML=index===0
+        ?'<img src="sentinelone-logo.svg?v='+ASSET_VERSION+'" alt="SentinelOne">'
+        :'<img src="assets/twilio-logo.svg?v='+ASSET_VERSION+'" alt="Twilio">';
       var toggle=card.querySelector('.project-toggle');
       if(toggle)toggle.appendChild(mark);
     });
@@ -125,6 +134,7 @@
   function init(){
     loadStyles();
     buildHero();
+    ensureAiRevenueNav();
     loadProjectCore(function(){
       enhanceWork();
       enhancePreviews();
