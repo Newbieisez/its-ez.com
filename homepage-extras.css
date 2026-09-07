@@ -2,9 +2,58 @@
 html{scroll-padding-top:94px}
 section[id]{scroll-margin-top:94px}
 
-/* The motion reel was rendering as a large empty panel when the video failed.
-   Keep the homepage focused on the real content instead of reserving dead space. */
-.ez-motion-break{display:none!important}
+/* Header contrast guard: never let legacy hover rules wash the nav out. */
+.site-header,
+.site-header:hover,
+.site-header:focus-within{
+  background:rgba(3,4,5,.98)!important;
+  color:#fff!important;
+  border-bottom:1px solid rgba(255,255,255,.14)!important;
+  backdrop-filter:blur(16px)!important;
+}
+.site-header .brand,
+.site-header .brand:hover,
+.site-header .brand:focus-visible,
+.site-header .nav-links a,
+.site-header .nav-links a:hover,
+.site-header .nav-links a:focus-visible,
+.site-header .menu,
+.site-header .menu:hover,
+.site-header .menu:focus-visible{
+  color:#fff!important;
+  opacity:1!important;
+}
+.site-header .nav-links a:hover,
+.site-header .nav-links a:focus-visible,
+.site-header .nav-links a.is-current{
+  border-color:#ef233c!important;
+  text-shadow:0 0 14px rgba(255,255,255,.18)!important;
+}
+.site-header .nav-cta,
+.site-header .nav-cta:hover,
+.site-header .nav-cta:focus-visible{
+  background:#ef233c!important;
+  color:#fff!important;
+  border-color:#ef233c!important;
+}
+
+/* The 10-second ESPN-style brand reel is intentionally part of the homepage. */
+.ez-motion-break{display:block!important}
+
+/* Company credibility strip is also a set of external links. */
+.ez-client-strip a.ez-client{
+  text-decoration:none!important;
+  cursor:pointer!important;
+  transition:background .18s ease,opacity .18s ease,transform .18s ease!important;
+}
+.ez-client-strip a.ez-client:hover,
+.ez-client-strip a.ez-client:focus-visible{
+  background:rgba(239,35,60,.10)!important;
+  opacity:1!important;
+  transform:translateY(-1px)!important;
+  outline:none!important;
+}
+.ez-client-strip a.ez-client:focus-visible{box-shadow:inset 0 0 0 2px #ef233c!important}
 
 /* Live-build previews stay visible without trapping page scroll. */
 .site-preview-shell{position:relative;overflow:hidden;background:#111;border-radius:20px 20px 0 0}
