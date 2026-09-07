@@ -1,7 +1,10 @@
 (function(){
   'use strict';
 
-  var ASSET_VERSION='20260906-clean';
+  var BRAND_ART={
+    sentinelone:'https://mms.businesswire.com/media/20240918271872/en/2042532/23/SentinelOne_Logo.jpg',
+    twilio:'https://logospng.org/wp-content/uploads/twilio-768x432.png'
+  };
 
   function enhanceWork(){
     var work=document.getElementById('work');
@@ -17,8 +20,8 @@
       var mark=document.createElement('div');
       mark.className='journey-brand-mark';
       mark.innerHTML=index===0
-        ?'<img src="sentinelone-logo.svg?v='+ASSET_VERSION+'" alt="SentinelOne">'
-        :'<img src="assets/twilio-logo.svg?v='+ASSET_VERSION+'" alt="Twilio">';
+        ?'<img src="'+BRAND_ART.sentinelone+'" alt="SentinelOne">'
+        :'<img src="'+BRAND_ART.twilio+'" alt="Twilio">';
 
       var toggle=card.querySelector('.project-toggle');
       if(toggle)toggle.appendChild(mark);
