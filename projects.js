@@ -83,6 +83,40 @@
     );
   }
 
+  function installMotionBreak(){
+    if(document.querySelector('.ez-motion-break'))return;
+    var hero=document.querySelector('.hero.hero-2026');
+    if(!hero||!hero.parentNode)return;
+
+    addStyle('ez-motion-break-style',
+      '.ez-motion-break{position:relative;background:#030405;border-top:1px solid rgba(255,255,255,.10);border-bottom:1px solid rgba(255,255,255,.10);overflow:hidden}'+
+      '.ez-motion-break-inner{position:relative;width:min(1540px,calc(100% - 72px));margin:0 auto;padding:26px 0}'+
+      '.ez-motion-break-frame{position:relative;overflow:hidden;border:1px solid rgba(255,255,255,.16);border-radius:20px;background:#050607;box-shadow:0 24px 70px rgba(0,0,0,.34)}'+
+      '.ez-motion-break video{display:block;width:100%;height:clamp(280px,34vw,520px);object-fit:cover;object-position:center center;background:#050607}'+
+      '.ez-motion-break-frame:after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(0,0,0,.02),rgba(0,0,0,.12)),linear-gradient(90deg,rgba(239,35,60,.07),transparent 22%,transparent 78%,rgba(239,35,60,.07))}'+
+      '.ez-motion-break-label{position:absolute;left:28px;bottom:24px;z-index:2;display:flex;align-items:center;gap:12px;padding:9px 12px;background:rgba(3,4,5,.72);border:1px solid rgba(255,255,255,.16);border-radius:999px;color:#fff;font-size:10px;font-weight:900;letter-spacing:.16em;text-transform:uppercase;backdrop-filter:blur(8px)}'+
+      '.ez-motion-break-label:before{content:"";display:block;width:28px;height:2px;background:#ef233c}'+
+      '@media(max-width:900px){.ez-motion-break-inner{width:min(100% - 32px,1180px);padding:18px 0}.ez-motion-break video{height:clamp(220px,52vw,420px)}.ez-motion-break-label{left:18px;bottom:16px}}'+
+      '@media(max-width:620px){.ez-motion-break-inner{width:100%;padding:0}.ez-motion-break-frame{border-radius:0;border-left:0;border-right:0}.ez-motion-break video{height:56vw;min-height:210px}.ez-motion-break-label{left:14px;bottom:12px;font-size:8px}}'+
+      '@media(prefers-reduced-motion:reduce){.ez-motion-break video{display:none}.ez-motion-break-frame{min-height:180px;background:linear-gradient(135deg,#080a0c,#17191c)}}'
+    );
+
+    var section=document.createElement('section');
+    section.className='ez-motion-break';
+    section.setAttribute('aria-label','EZ Enablement motion reel');
+    section.innerHTML='<div class="ez-motion-break-inner"><div class="ez-motion-break-frame"><video autoplay muted loop playsinline preload="auto" aria-hidden="true"><source src="motion_like_espn.mp4?v=20260907-motion" type="video/mp4"></video><div class="ez-motion-break-label">EZ Enablement · In Motion</div></div></div>';
+    hero.parentNode.insertBefore(section,hero.nextSibling);
+
+    var video=section.querySelector('video');
+    if(video){
+      video.muted=true;
+      video.defaultMuted=true;
+      video.playsInline=true;
+      var playPromise=video.play();
+      if(playPromise&&typeof playPromise.catch==='function')playPromise.catch(function(){});
+    }
+  }
+
   function enhanceWork(){
     var work=document.getElementById('work');
     if(!work)return;
@@ -145,6 +179,7 @@
     lockUniversalReadability();
     lockCaseStudyReadability();
     lockRecommendationReadability();
+    installMotionBreak();
     enhanceWork();
     enhancePreviews();
     setupNavHighlight();
