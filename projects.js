@@ -5,7 +5,7 @@
     if(document.querySelector('link[href^="hero-final.css"]'))return;
     var link=document.createElement('link');
     link.rel='stylesheet';
-    link.href='hero-final.css?v=20260907-final';
+    link.href='hero-final.css?v=20260907-final-2';
     document.head.appendChild(link);
   }());
 
@@ -70,17 +70,30 @@
 
   function enhanceWork(){
     var work=document.getElementById('work');
+    var hero=document.querySelector('.hero-2026');
     if(!work)return;
 
     work.classList.add('cinematic-work');
+    if(hero&&hero.nextElementSibling!==work){
+      hero.insertAdjacentElement('afterend',work);
+    }
+
+    var head=work.querySelector('.work-head');
     var heading=work.querySelector('.work-head .section-title');
     var intro=work.querySelector('.work-head .body-copy');
     if(heading)heading.textContent='View my journey of building.';
-    if(intro)intro.textContent='Real problems. Practical solutions. Measurable impact. Open a case study to inspect the systems, decisions, and outcomes behind the work.';
+    if(intro)intro.textContent='From global enablement programs to AI-powered workflows, here are a few of the systems I’ve built and the results they delivered.';
+    if(head&&!head.querySelector('.work-explore-all')){
+      var action=document.createElement('a');
+      action.className='button button-light work-explore-all';
+      action.href='#work';
+      action.textContent='Explore All Work →';
+      head.appendChild(action);
+    }
 
     var cards=[].slice.call(work.querySelectorAll('.project-case'));
     cards.forEach(function(card,index){
-      card.classList.toggle('featured-journey',index<2);
+      card.classList.toggle('featured-journey',index<3);
       if(index>1||card.querySelector('.journey-brand-mark'))return;
 
       var mark=document.createElement('div');
@@ -96,17 +109,14 @@
 
   function wrapPreview(frame,label){
     if(!frame||frame.closest('.site-preview-shell'))return;
-
     var src=frame.getAttribute('src')||'';
     frame.style.pointerEvents='none';
     frame.setAttribute('tabindex','-1');
     frame.setAttribute('scrolling','no');
-
     var shell=document.createElement('div');
     shell.className='site-preview-shell';
     frame.parentNode.insertBefore(shell,frame);
     shell.appendChild(frame);
-
     var overlay=document.createElement('div');
     overlay.className='site-preview-overlay';
     overlay.innerHTML='<a class="site-preview-open" href="'+src+'" target="_blank" rel="noopener">'+label+' ↗</a>';
@@ -116,7 +126,6 @@
   function enhancePreviews(){
     var proof=document.getElementById('proof');
     if(!proof)return;
-
     proof.querySelectorAll('.media-proof iframe').forEach(function(frame){
       var src=frame.getAttribute('src')||'';
       var label=src.indexOf('meddpicc')>-1
@@ -131,23 +140,15 @@
   function setupNavHighlight(){
     var nav=document.getElementById('nav-links');
     if(!nav||!('IntersectionObserver' in window))return;
-
     var links=[].slice.call(nav.querySelectorAll('a[href^="#"]'));
-    var sections=links.map(function(link){
-      return document.querySelector(link.getAttribute('href'));
-    }).filter(Boolean);
-
+    var sections=links.map(function(link){return document.querySelector(link.getAttribute('href'));}).filter(Boolean);
     if(!sections.length)return;
-
     var observer=new IntersectionObserver(function(entries){
       entries.forEach(function(entry){
         if(!entry.isIntersecting)return;
-        links.forEach(function(link){
-          link.classList.toggle('is-current',link.getAttribute('href')==='#'+entry.target.id);
-        });
+        links.forEach(function(link){link.classList.toggle('is-current',link.getAttribute('href')==='#'+entry.target.id);});
       });
     },{rootMargin:'-28% 0px -62% 0px',threshold:0});
-
     sections.forEach(function(section){observer.observe(section);});
   }
 
