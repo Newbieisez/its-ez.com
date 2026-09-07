@@ -1,0 +1,14 @@
+{
+  "schemaVersion": 1,
+  "generatedAt": null,
+  "refreshHours": 6,
+  "items": {},
+  "summary": {
+    "total": 103,
+    "live": 0,
+    "provisional": 0,
+    "collecting": 103,
+    "sourceFailures": 0
+  },
+  "failures": []
+}
