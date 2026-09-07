@@ -6,6 +6,23 @@
     twilio:'assets/twilio-logo.svg?v=20260907-readability'
   };
 
+  function lockHeroPolish(){
+    if(document.getElementById('ez-hero-polish'))return;
+    var style=document.createElement('style');
+    style.id='ez-hero-polish';
+    style.textContent='\
+/* Hero polish: calmer portrait treatment + separate EZ and Las Vegas neon marks */\
+.hero.hero-2026 .ez-hero-portrait{transform:scale(.97) translateY(4px)!important;transform-origin:center bottom!important;filter:saturate(.82) contrast(1.045) brightness(1.025)!important}\
+.hero.hero-2026 .ez-hero-portrait-wrap:before{background:radial-gradient(circle at 54% 24%,rgba(255,255,255,.085),transparent 27%),linear-gradient(90deg,rgba(2,3,4,.48),transparent 19%),linear-gradient(180deg,transparent 52%,rgba(2,3,4,.74) 100%)!important}\
+.hero.hero-2026 .ez-vegas-mark{right:2px!important;top:112px!important;z-index:8!important;transform:none!important}\
+.hero.hero-2026 .ez-vegas-mark strong{font-size:clamp(38px,2.75vw,55px)!important;line-height:.86!important;transform:rotate(-5deg)!important}\
+.hero.hero-2026 .ez-vegas-mark span{margin-top:16px!important;margin-left:74px!important;font-size:10px!important;background:rgba(2,3,4,.36)!important}\
+.hero.hero-2026 .ez-vegas-mark:before{content:"EZ"!important;position:absolute!important;right:215px!important;top:-66px!important;display:block!important;color:#fff!important;font-family:Arial,Helvetica,sans-serif!important;font-size:clamp(48px,3.7vw,70px)!important;font-weight:950!important;font-style:italic!important;letter-spacing:-.10em!important;line-height:.8!important;text-shadow:0 0 5px rgba(255,255,255,.95),0 0 11px rgba(239,35,60,.95),0 0 26px rgba(239,35,60,.72),18px 0 0 rgba(239,35,60,.92)!important;transform:skewX(-8deg)!important;white-space:nowrap!important}\
+@media(max-width:1180px){.hero.hero-2026 .ez-vegas-mark{top:94px!important}.hero.hero-2026 .ez-vegas-mark:before{right:175px!important;top:-58px!important}.hero.hero-2026 .ez-vegas-mark span{display:none!important}}\
+@media(max-width:900px){.hero.hero-2026 .ez-hero-portrait{transform:none!important;filter:saturate(.84) contrast(1.04) brightness(1.02)!important}.hero.hero-2026 .ez-vegas-mark{display:none!important}}';
+    document.head.appendChild(style);
+  }
+
   function lockCaseStudyReadability(){
     if(document.getElementById('ez-case-study-readability'))return;
     var style=document.createElement('style');
@@ -98,7 +115,7 @@
     sections.forEach(function(section){observer.observe(section);});
   }
 
-  function init(){lockCaseStudyReadability();enhanceWork();enhancePreviews();setupNavHighlight();}
+  function init(){lockHeroPolish();lockCaseStudyReadability();enhanceWork();enhancePreviews();setupNavHighlight();}
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});
   else init();
 }());
