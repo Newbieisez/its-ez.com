@@ -4,12 +4,21 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '17 */6 * * *'
+  pull_request:
+    paths:
+      - 'ai-systems.js'
+      - 'ai-systems-extended.js'
+      - 'ai-systems-ratings.js'
+      - 'ai-systems-ratings.css'
+      - 'scripts/refresh-ai-ratings.mjs'
+      - 'data/ai-rating-sources.json'
+      - '.github/workflows/refresh-ai-ratings.yml'
 
 permissions:
   contents: write
 
 concurrency:
-  group: refresh-ai-systems-ratings
+  group: refresh-ai-systems-ratings-${{ github.ref }}
   cancel-in-progress: false
 
 jobs:
@@ -27,6 +36,9 @@ jobs:
         with:
           node-version: '22'
 
+      - name: Syntax check browser ratings code
+        run: node --check ai-systems-ratings.js
+
       - name: Refresh scores
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -35,9 +47,10 @@ jobs:
 
       - name: Validate output
         run: |
-          node -e "const x=require('./data/ai-systems-ratings.json'); if(x.summary.total!==103) throw new Error('ratings inventory must contain 103 platforms'); console.log(x.summary)"
+          node -e "const x=require('./data/ai-systems-ratings.json'); if(x.summary.total!==103) throw new Error('ratings inventory must contain 103 platforms'); if(Object.keys(x.items).length!==103) throw new Error('ratings output must contain 103 item records'); console.log(x.summary)"
 
       - name: Commit changed snapshots
+        if: github.event_name != 'pull_request'
         run: |
           if git diff --quiet -- data/ai-systems-ratings.json data/ai-systems-rating-history.json; then
             echo 'No rating changes.'
