@@ -60,6 +60,48 @@
     "clari": [
       { "type":"licensed-json", "url":"https://itunes.apple.com/lookup?id=977304452&country=us", "ratingPath":"results.0.averageUserRating", "countPath":"results.0.userRatingCount", "maxRating":5, "label":"Apple App Store — Clari mobile", "scope":"mobile_app" }
     ],
+    "seismic": [
+      { "type":"licensed-json", "url":"https://itunes.apple.com/lookup?id=639973703&country=us", "ratingPath":"results.0.averageUserRating", "countPath":"results.0.userRatingCount", "maxRating":5, "label":"Apple App Store — Seismic mobile", "scope":"mobile_app" }
+    ],
+    "highspot": [
+      { "type":"licensed-json", "url":"https://itunes.apple.com/lookup?id=1173751523&country=us", "ratingPath":"results.0.averageUserRating", "countPath":"results.0.userRatingCount", "maxRating":5, "label":"Apple App Store — Highspot mobile", "scope":"mobile_app" }
+    ],
+    "allego": [
+      { "type":"licensed-json", "url":"https://itunes.apple.com/lookup?id=640352522&country=us", "ratingPath":"results.0.averageUserRating", "countPath":"results.0.userRatingCount", "maxRating":5, "label":"Apple App Store — Allego mobile", "scope":"mobile_app" }
+    ],
+    "mindtickle": [
+      { "type":"licensed-json", "url":"https://itunes.apple.com/lookup?id=965785490&country=us", "ratingPath":"results.0.averageUserRating", "countPath":"results.0.userRatingCount", "maxRating":5, "label":"Apple App Store — Mindtickle mobile", "scope":"mobile_app" }
+    ],
+    "showpad": [
+      { "type":"licensed-json", "url":"https://itunes.apple.com/lookup?id=432293783&country=us", "ratingPath":"results.0.averageUserRating", "countPath":"results.0.userRatingCount", "maxRating":5, "label":"Apple App Store — Showpad mobile", "scope":"mobile_app" }
+    ],
+    "workramp": [
+      { "type":"licensed-json", "url":"https://itunes.apple.com/lookup?id=1367739556&country=us", "ratingPath":"results.0.averageUserRating", "countPath":"results.0.userRatingCount", "maxRating":5, "label":"Apple App Store — WorkRamp mobile", "scope":"mobile_app" }
+    ],
+    "saleshood": [
+      { "type":"licensed-json", "url":"https://itunes.apple.com/lookup?id=894859274&country=us", "ratingPath":"results.0.averageUserRating", "countPath":"results.0.userRatingCount", "maxRating":5, "label":"Apple App Store — SalesHood mobile", "scope":"mobile_app" }
+    ],
+    "docebo": [
+      { "type":"licensed-json", "url":"https://itunes.apple.com/lookup?id=1362542319&country=us", "ratingPath":"results.0.averageUserRating", "countPath":"results.0.userRatingCount", "maxRating":5, "label":"Apple App Store — Docebo Go.Learn", "scope":"mobile_app" }
+    ],
+    "360learning": [
+      { "type":"licensed-json", "url":"https://itunes.apple.com/lookup?id=1080374585&country=us", "ratingPath":"results.0.averageUserRating", "countPath":"results.0.userRatingCount", "maxRating":5, "label":"Apple App Store — 360Learning mobile", "scope":"mobile_app" }
+    ],
+    "cornerstone": [
+      { "type":"licensed-json", "url":"https://itunes.apple.com/lookup?id=974833832&country=us", "ratingPath":"results.0.averageUserRating", "countPath":"results.0.userRatingCount", "maxRating":5, "label":"Apple App Store — Cornerstone LearningExperience", "scope":"mobile_app" }
+    ],
+    "degreed": [
+      { "type":"licensed-json", "url":"https://itunes.apple.com/lookup?id=1086998254&country=us", "ratingPath":"results.0.averageUserRating", "countPath":"results.0.userRatingCount", "maxRating":5, "label":"Apple App Store — Degreed mobile", "scope":"mobile_app" }
+    ],
+    "learnupon": [
+      { "type":"licensed-json", "url":"https://itunes.apple.com/lookup?id=947445473&country=us", "ratingPath":"results.0.averageUserRating", "countPath":"results.0.userRatingCount", "maxRating":5, "label":"Apple App Store — LearnUpon mobile", "scope":"mobile_app" }
+    ],
+    "absorb-lms": [
+      { "type":"licensed-json", "url":"https://itunes.apple.com/lookup?id=1450653475&country=us", "ratingPath":"results.0.averageUserRating", "countPath":"results.0.userRatingCount", "maxRating":5, "label":"Apple App Store — Absorb Learn", "scope":"mobile_app" }
+    ],
+    "sana": [
+      { "type":"licensed-json", "url":"https://itunes.apple.com/lookup?id=1211652260&country=us", "ratingPath":"results.0.averageUserRating", "countPath":"results.0.userRatingCount", "maxRating":5, "label":"Apple App Store — Sana Labs mobile", "scope":"mobile_app" }
+    ],
     "n8n": [
       {
         "type": "github",
