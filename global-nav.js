@@ -1,5 +1,6 @@
 (() => {
-  const VERSION = '20260907-global-nav-1';
+  const VERSION = '20260908-global-nav-2';
+  const ROOT = 'https://its-ez.com/';
   const css = `
   :root{--ez-nav-red:#ef1717;--ez-nav-black:#08090b;--ez-nav-line:rgba(255,255,255,.12)}
   body{padding-top:72px!important}
@@ -32,23 +33,29 @@
   }
 
   const items = [
-    ['Home','index.html'],
-    ['Work','index.html#work'],
-    ['Work With Me','work-with-me.html'],
-    ['AI Systems','ai-systems.html'],
+    ['Home',ROOT],
+    ['Work',ROOT+'#work'],
+    ['Work With Me',ROOT+'work-with-me.html'],
+    ['AI Systems',ROOT+'ai-systems.html'],
     ['MEDDPICC','https://meddpicc-is-ez.erezhaimowicz.workers.dev/'],
     ['Cybersecurity','https://ez-human-threat-academy.erezhaimowicz.workers.dev/'],
-    ['Music','music.html'],
-    ['People','recommendations.html'],
-    ['Contact','index.html#contact']
+    ['Music',ROOT+'music.html'],
+    ['People',ROOT+'recommendations.html'],
+    ['Contact',ROOT+'#contact']
   ];
 
-  function currentFor(href){
-    const p=(location.pathname.split('/').pop()||'index.html').toLowerCase();
-    if(href.startsWith('http')) return false;
-    const clean=href.split('#')[0].toLowerCase();
-    if(clean==='index.html' && p==='index.html') return !href.includes('#');
-    return clean===p;
+  function currentFor(label, href){
+    const host=location.hostname.toLowerCase();
+    const path=location.pathname.toLowerCase();
+    if(label==='MEDDPICC') return host.includes('meddpicc-is-ez');
+    if(label==='Cybersecurity') return host.includes('ez-human-threat-academy');
+    if(host!=='its-ez.com' && host!=='www.its-ez.com') return false;
+    const target=new URL(href);
+    const targetPath=target.pathname.toLowerCase();
+    if(label==='Home') return (path==='/' || path==='/index.html') && !location.hash;
+    if(label==='Work') return (path==='/' || path==='/index.html') && location.hash==='#work';
+    if(label==='Contact') return (path==='/' || path==='/index.html') && location.hash==='#contact';
+    return targetPath===path;
   }
 
   function render(){
@@ -58,11 +65,11 @@
     header.className='ez-global-header';
     header.setAttribute('data-version',VERSION);
     header.innerHTML=`<div class="ez-global-shell">
-      <a class="ez-global-brand" href="index.html" aria-label="EZ Enablement home"><span class="ez-global-mark">E<b>Z</b></span><span class="ez-global-brand-copy"><strong>EZ ENABLEMENT</strong><span>Enablement made possible</span></span></a>
+      <a class="ez-global-brand" href="${ROOT}" aria-label="EZ Enablement home"><span class="ez-global-mark">E<b>Z</b></span><span class="ez-global-brand-copy"><strong>EZ ENABLEMENT</strong><span>Enablement made possible</span></span></a>
       <nav class="ez-global-links" id="ez-global-links" aria-label="Primary navigation">
-        ${items.map(([label,href])=>`<a href="${href}"${href.startsWith('http')?' target="_blank" rel="noopener noreferrer"':''}${currentFor(href)?' aria-current="page"':''}>${label}</a>`).join('')}
+        ${items.map(([label,href])=>`<a href="${href}"${href.startsWith('https://') && !href.startsWith(ROOT)?' target="_blank" rel="noopener noreferrer"':''}${currentFor(label,href)?' aria-current="page"':''}>${label}</a>`).join('')}
       </nav>
-      <a class="ez-global-cta" href="index.html#contact">Let's connect</a>
+      <a class="ez-global-cta" href="${ROOT}#contact">Let's connect</a>
       <button class="ez-global-menu" type="button" aria-expanded="false" aria-controls="ez-global-links" aria-label="Open navigation">☰</button>
     </div>`;
     if(old) old.replaceWith(header); else document.body.prepend(header);
