@@ -1,6 +1,14 @@
 (function(){
   'use strict';
 
+  (function loadFinalHeroStyles(){
+    if(document.querySelector('link[href^="hero-final.css"]'))return;
+    var link=document.createElement('link');
+    link.rel='stylesheet';
+    link.href='hero-final.css?v=20260907-final';
+    document.head.appendChild(link);
+  }());
+
   var BRAND_ART={
     sentinelone:'https://mms.businesswire.com/media/20240918271872/en/2042532/23/SentinelOne_Logo.jpg',
     twilio:'https://logospng.org/wp-content/uploads/twilio-768x432.png'
@@ -50,6 +58,14 @@
     if(brand&&!brand.querySelector('.ez-brand-lockup')){
       brand.innerHTML='<span class="ez-brand-lockup"><b>EZ</b><small>ENABLEMENT</small></span>';
     }
+
+    var strip=hero.querySelector('.ez-client-strip');
+    if(strip&&!strip.querySelector('.reup-client')){
+      var reup=document.createElement('div');
+      reup.className='ez-client reup-client';
+      reup.textContent='re-up';
+      strip.appendChild(reup);
+    }
   }
 
   function enhanceWork(){
@@ -57,8 +73,12 @@
     if(!work)return;
 
     work.classList.add('cinematic-work');
-    var cards=[].slice.call(work.querySelectorAll('.project-case'));
+    var heading=work.querySelector('.work-head .section-title');
+    var intro=work.querySelector('.work-head .body-copy');
+    if(heading)heading.textContent='View my journey of building.';
+    if(intro)intro.textContent='Real problems. Practical solutions. Measurable impact. Open a case study to inspect the systems, decisions, and outcomes behind the work.';
 
+    var cards=[].slice.call(work.querySelectorAll('.project-case'));
     cards.forEach(function(card,index){
       card.classList.toggle('featured-journey',index<2);
       if(index>1||card.querySelector('.journey-brand-mark'))return;
