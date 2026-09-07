@@ -14,6 +14,17 @@ const clean=value=>String(value??'').trim();
 const nowIso=()=>new Date().toISOString();
 const getPath=(obj,dotted)=>String(dotted||'').split('.').filter(Boolean).reduce((value,key)=>value?.[key],obj);
 
+function resolveSourceFamily(source,fallbackUrl=null){
+  const explicit=clean(source?.sourceFamily).toLowerCase();
+  if(explicit) return explicit;
+  if(fallbackUrl){
+    try{return new URL(fallbackUrl).hostname.toLowerCase();}catch{}
+  }
+  if(source?.type==='github') return 'github.com';
+  if(source?.type==='component') return clean(source?.family||source?.label||'ez-owned').toLowerCase();
+  return clean(source?.type||'unknown').toLowerCase();
+}
+
 async function readJson(file,fallback){
   try{return JSON.parse(await fs.readFile(file,'utf8'));}catch{return fallback;}
 }
@@ -105,7 +116,7 @@ async function fetchJsonLdRating(source,config){
   const best=Number(rating.bestRating||5);
   const worst=Number(rating.worstRating||0);
   if(!Number.isFinite(value)||!Number.isFinite(best)||best<=worst) throw new Error('Invalid aggregate rating metadata.');
-  return {component:'userSentiment',score:clamp(((value-worst)/(best-worst))*10),reviewCount:Number.isFinite(count)?Math.max(0,count):0,label:source.label||new URL(source.url).hostname,url:source.url,observedAt:nowIso()};
+  return {component:'userSentiment',score:clamp(((value-worst)/(best-worst))*10),reviewCount:Number.isFinite(count)?Math.max(0,count):0,label:source.label||new URL(source.url).hostname,url:source.url,sourceFamily:resolveSourceFamily(source,source.url),observedAt:nowIso()};
 }
 
 async function fetchLicensedJson(source,config){
@@ -124,7 +135,7 @@ async function fetchLicensedJson(source,config){
   const max=Number(source.maxRating||10);
   const min=Number(source.minRating||0);
   if(!Number.isFinite(raw)||!Number.isFinite(max)||max<=min) throw new Error('Licensed JSON rating path did not resolve to a valid score.');
-  return {component:'userSentiment',score:clamp(((raw-min)/(max-min))*10),reviewCount:Number.isFinite(count)?Math.max(0,count):0,label:source.label||new URL(source.url).hostname,url:source.url,observedAt:nowIso()};
+  return {component:'userSentiment',score:clamp(((raw-min)/(max-min))*10),reviewCount:Number.isFinite(count)?Math.max(0,count):0,label:source.label||new URL(source.url).hostname,url:source.url,sourceFamily:resolveSourceFamily(source,source.url),observedAt:nowIso()};
 }
 
 function githubMomentumScore(repo){
@@ -144,7 +155,7 @@ async function fetchGithub(source){
   const res=await fetch(`https://api.github.com/repos/${source.repo}`,{headers});
   if(!res.ok) throw new Error(`GitHub HTTP ${res.status}`);
   const repo=await res.json();
-  return {component:source.component||'marketMomentum',score:githubMomentumScore(repo),reviewCount:0,label:source.label||'GitHub',url:repo.html_url||`https://github.com/${source.repo}`,observedAt:nowIso(),metadata:{stars:repo.stargazers_count||0,forks:repo.forks_count||0,pushedAt:repo.pushed_at||null}};
+  return {component:source.component||'marketMomentum',score:githubMomentumScore(repo),reviewCount:0,label:source.label||'GitHub',url:repo.html_url||`https://github.com/${source.repo}`,sourceFamily:resolveSourceFamily(source,'https://github.com'),observedAt:nowIso(),metadata:{stars:repo.stargazers_count||0,forks:repo.forks_count||0,pushedAt:repo.pushed_at||null}};
 }
 
 async function collectSource(source,config){
@@ -152,7 +163,7 @@ async function collectSource(source,config){
   if(source.type==='jsonld-aggregate-rating') return fetchJsonLdRating(source,config);
   if(source.type==='licensed-json') return fetchLicensedJson(source,config);
   if(source.type==='github') return fetchGithub(source);
-  if(source.type==='component') return {component:source.component,score:clamp(source.score),reviewCount:0,label:source.label||'EZ rubric',url:source.url||null,observedAt:nowIso()};
+  if(source.type==='component') return {component:source.component,score:clamp(source.score),reviewCount:0,label:source.label||'EZ rubric',url:source.url||null,sourceFamily:resolveSourceFamily(source,source.url||null),observedAt:nowIso()};
   throw new Error(`Unsupported rating source type: ${source.type}`);
 }
 
@@ -214,8 +225,13 @@ function scoreItem(product,signals,config,history){
   };
   const available=Object.values(components).filter(value=>value!==null&&value!==undefined).length;
   const score=composite(components,config.defaults?.weights||{});
-  const hasUser=components.userSentiment!==null;
-  const status=hasUser&&available>=Number(config.policy?.minimumScoreComponents||2)?'live':available>=2?'provisional':'collecting';
+  const sourceCount=new Set(signals.map(signal=>signal.label).filter(Boolean)).size;
+  const independentSourceCount=new Set(signals.map(signal=>signal.sourceFamily||signal.label).filter(Boolean)).size;
+  const minimumUserSources=Math.max(1,Number(config.policy?.minimumUserSentimentSources||1));
+  const minimumIndependentSources=Math.max(1,Number(config.policy?.minimumLiveIndependentSources||1));
+  const hasUser=components.userSentiment!==null&&(sentiment?.sourceCount||0)>=minimumUserSources;
+  const qualifiesLive=hasUser&&available>=Number(config.policy?.minimumScoreComponents||2)&&independentSourceCount>=minimumIndependentSources;
+  const status=qualifiesLive?'live':available>=2?'provisional':'collecting';
   const prior=[...(history.items?.[product.id]||[])].reverse().find(row=>Number.isFinite(Number(row.score)));
   const trend=score!==null&&prior?round(score-Number(prior.score)):null;
   return {
@@ -225,10 +241,11 @@ function scoreItem(product,signals,config,history){
     score:status==='collecting'?null:round(score),
     confidence:components.reviewConfidence===null?null:round(components.reviewConfidence),
     reviewCount:sentiment?.reviewCount||0,
-    sourceCount:new Set(signals.map(signal=>signal.label)).size,
+    sourceCount,
+    independentSourceCount,
     components:Object.fromEntries(Object.entries(components).map(([key,value])=>[key,value===null?null:round(value)])),
     trend,
-    sources:signals.map(signal=>({label:signal.label,url:signal.url||null,component:signal.component,score:round(signal.score),reviewCount:signal.reviewCount||0,observedAt:signal.observedAt,metadata:signal.metadata||undefined})),
+    sources:signals.map(signal=>({label:signal.label,url:signal.url||null,sourceFamily:signal.sourceFamily||null,component:signal.component,score:round(signal.score),reviewCount:signal.reviewCount||0,observedAt:signal.observedAt,metadata:signal.metadata||undefined})),
     lastRefreshed:nowIso()
   };
 }
