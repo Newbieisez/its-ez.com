@@ -1,0 +1,50 @@
+name: Refresh AI Systems EZ Scores
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 */6 * * *'
+
+permissions:
+  contents: write
+
+concurrency:
+  group: refresh-ai-systems-ratings
+  cancel-in-progress: false
+
+jobs:
+  refresh:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 1
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
+      - name: Refresh scores
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          TRUSTRADIUS_API_KEY: ${{ secrets.TRUSTRADIUS_API_KEY }}
+        run: node scripts/refresh-ai-ratings.mjs
+
+      - name: Validate output
+        run: |
+          node -e "const x=require('./data/ai-systems-ratings.json'); if(x.summary.total!==103) throw new Error('ratings inventory must contain 103 platforms'); console.log(x.summary)"
+
+      - name: Commit changed snapshots
+        run: |
+          if git diff --quiet -- data/ai-systems-ratings.json data/ai-systems-rating-history.json; then
+            echo 'No rating changes.'
+            exit 0
+          fi
+          git config user.name 'EZ Ratings Bot'
+          git config user.email 'actions@users.noreply.github.com'
+          git add data/ai-systems-ratings.json data/ai-systems-rating-history.json
+          git commit -m 'chore: refresh AI Systems EZ Scores'
+          git push
