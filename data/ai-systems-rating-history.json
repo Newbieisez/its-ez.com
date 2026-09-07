@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-07T21:54:43.693Z",
+  "updatedAt": "2026-09-07T22:07:30.231Z",
   "items": {
     "chatgpt": [],
     "claude": [],
@@ -9,13 +9,62 @@
     "perplexity": [],
     "notebooklm": [],
     "clay": [],
-    "salesforce": [],
-    "hubspot": [],
-    "dynamics": [],
-    "zoho": [],
-    "gong": [],
-    "chorus": [],
-    "clari": [],
+    "salesforce": [
+      {
+        "at": "2026-09-07T22:07:30.231Z",
+        "score": 9.3,
+        "status": "provisional",
+        "confidence": 8.4
+      }
+    ],
+    "hubspot": [
+      {
+        "at": "2026-09-07T22:07:30.231Z",
+        "score": 9.3,
+        "status": "provisional",
+        "confidence": 8.4
+      }
+    ],
+    "dynamics": [
+      {
+        "at": "2026-09-07T22:07:30.231Z",
+        "score": 8.4,
+        "status": "provisional",
+        "confidence": 7
+      }
+    ],
+    "zoho": [
+      {
+        "at": "2026-09-07T22:07:30.231Z",
+        "score": 8.6,
+        "status": "provisional",
+        "confidence": 7.7
+      }
+    ],
+    "gong": [
+      {
+        "at": "2026-09-07T22:07:30.231Z",
+        "score": 7.5,
+        "status": "provisional",
+        "confidence": 5.9
+      }
+    ],
+    "chorus": [
+      {
+        "at": "2026-09-07T22:07:30.231Z",
+        "score": 6.3,
+        "status": "provisional",
+        "confidence": 5.3
+      }
+    ],
+    "clari": [
+      {
+        "at": "2026-09-07T22:07:30.231Z",
+        "score": 8.9,
+        "status": "provisional",
+        "confidence": 7.2
+      }
+    ],
     "outreach": [],
     "salesloft": [],
     "rattle": [],
@@ -74,9 +123,30 @@
     "usergems": [],
     "bardeen": [],
     "rows": [],
-    "attio": [],
-    "close-crm": [],
-    "folk-crm": [],
+    "attio": [
+      {
+        "at": "2026-09-07T22:07:30.231Z",
+        "score": 6.9,
+        "status": "provisional",
+        "confidence": 5.2
+      }
+    ],
+    "close-crm": [
+      {
+        "at": "2026-09-07T22:07:30.231Z",
+        "score": 6.9,
+        "status": "provisional",
+        "confidence": 5.5
+      }
+    ],
+    "folk-crm": [
+      {
+        "at": "2026-09-07T22:07:30.231Z",
+        "score": 7,
+        "status": "provisional",
+        "confidence": 4
+      }
+    ],
     "reply": [],
     "unify": [],
     "regie-ai": [],

@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "generatedAt": "2026-09-07T21:54:43.693Z",
+  "generatedAt": "2026-09-07T22:07:30.231Z",
   "refreshHours": 6,
   "items": {
     "chatgpt": {
@@ -20,7 +20,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+      "lastRefreshed": "2026-09-07T22:07:30.231Z"
     },
     "claude": {
       "id": "claude",
@@ -39,7 +39,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+      "lastRefreshed": "2026-09-07T22:07:30.231Z"
     },
     "gemini": {
       "id": "gemini",
@@ -58,7 +58,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+      "lastRefreshed": "2026-09-07T22:07:30.231Z"
     },
     "copilot": {
       "id": "copilot",
@@ -77,7 +77,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+      "lastRefreshed": "2026-09-07T22:07:30.231Z"
     },
     "perplexity": {
       "id": "perplexity",
@@ -96,7 +96,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+      "lastRefreshed": "2026-09-07T22:07:30.231Z"
     },
     "notebooklm": {
       "id": "notebooklm",
@@ -115,7 +115,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+      "lastRefreshed": "2026-09-07T22:07:30.231Z"
     },
     "clay": {
       "id": "clay",
@@ -134,140 +134,203 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+      "lastRefreshed": "2026-09-07T22:07:30.231Z"
     },
     "salesforce": {
       "id": "salesforce",
       "name": "Salesforce",
-      "status": "collecting",
-      "score": null,
-      "confidence": null,
-      "reviewCount": 0,
-      "sourceCount": 0,
+      "status": "provisional",
+      "score": 9.3,
+      "confidence": 8.4,
+      "reviewCount": 351955,
+      "sourceCount": 1,
       "components": {
-        "userSentiment": null,
-        "reviewConfidence": null,
+        "userSentiment": 9.5,
+        "reviewConfidence": 8.4,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
-      "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+      "sources": [
+        {
+          "label": "Apple App Store — Salesforce mobile",
+          "url": "https://itunes.apple.com/lookup?id=404249815&country=us",
+          "component": "userSentiment",
+          "score": 9.5,
+          "reviewCount": 351955,
+          "observedAt": "2026-09-07T22:07:30.480Z"
+        }
+      ],
+      "lastRefreshed": "2026-09-07T22:07:30.480Z"
     },
     "hubspot": {
       "id": "hubspot",
       "name": "HubSpot",
-      "status": "collecting",
-      "score": null,
-      "confidence": null,
-      "reviewCount": 0,
-      "sourceCount": 0,
+      "status": "provisional",
+      "score": 9.3,
+      "confidence": 8.4,
+      "reviewCount": 15531,
+      "sourceCount": 1,
       "components": {
-        "userSentiment": null,
-        "reviewConfidence": null,
+        "userSentiment": 9.5,
+        "reviewConfidence": 8.4,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
-      "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+      "sources": [
+        {
+          "label": "Apple App Store — HubSpot mobile",
+          "url": "https://itunes.apple.com/lookup?id=1107711722&country=us",
+          "component": "userSentiment",
+          "score": 9.5,
+          "reviewCount": 15531,
+          "observedAt": "2026-09-07T22:07:30.512Z"
+        }
+      ],
+      "lastRefreshed": "2026-09-07T22:07:30.512Z"
     },
     "dynamics": {
       "id": "dynamics",
       "name": "Microsoft Dynamics 365",
-      "status": "collecting",
-      "score": null,
-      "confidence": null,
-      "reviewCount": 0,
-      "sourceCount": 0,
+      "status": "provisional",
+      "score": 8.4,
+      "confidence": 7,
+      "reviewCount": 827,
+      "sourceCount": 1,
       "components": {
-        "userSentiment": null,
-        "reviewConfidence": null,
+        "userSentiment": 8.7,
+        "reviewConfidence": 7,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
-      "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+      "sources": [
+        {
+          "label": "Apple App Store — Dynamics 365 Sales mobile",
+          "url": "https://itunes.apple.com/lookup?id=1485578688&country=us",
+          "component": "userSentiment",
+          "score": 8.7,
+          "reviewCount": 827,
+          "observedAt": "2026-09-07T22:07:30.781Z"
+        }
+      ],
+      "lastRefreshed": "2026-09-07T22:07:30.781Z"
     },
     "zoho": {
       "id": "zoho",
       "name": "Zoho CRM",
-      "status": "collecting",
-      "score": null,
-      "confidence": null,
-      "reviewCount": 0,
-      "sourceCount": 0,
+      "status": "provisional",
+      "score": 8.6,
+      "confidence": 7.7,
+      "reviewCount": 2685,
+      "sourceCount": 1,
       "components": {
-        "userSentiment": null,
-        "reviewConfidence": null,
+        "userSentiment": 8.8,
+        "reviewConfidence": 7.7,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
-      "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+      "sources": [
+        {
+          "label": "Apple App Store — Zoho CRM mobile",
+          "url": "https://itunes.apple.com/lookup?id=444908810&country=us",
+          "component": "userSentiment",
+          "score": 8.8,
+          "reviewCount": 2685,
+          "observedAt": "2026-09-07T22:07:30.867Z"
+        }
+      ],
+      "lastRefreshed": "2026-09-07T22:07:30.867Z"
     },
     "gong": {
       "id": "gong",
       "name": "Gong",
-      "status": "collecting",
-      "score": null,
-      "confidence": null,
-      "reviewCount": 0,
-      "sourceCount": 0,
+      "status": "provisional",
+      "score": 7.5,
+      "confidence": 5.9,
+      "reviewCount": 109,
+      "sourceCount": 1,
       "components": {
-        "userSentiment": null,
-        "reviewConfidence": null,
+        "userSentiment": 7.9,
+        "reviewConfidence": 5.9,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
-      "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+      "sources": [
+        {
+          "label": "Apple App Store — Gong mobile",
+          "url": "https://itunes.apple.com/lookup?id=1289289459&country=us",
+          "component": "userSentiment",
+          "score": 8,
+          "reviewCount": 109,
+          "observedAt": "2026-09-07T22:07:30.960Z"
+        }
+      ],
+      "lastRefreshed": "2026-09-07T22:07:30.960Z"
     },
     "chorus": {
       "id": "chorus",
       "name": "ZoomInfo Chorus",
-      "status": "collecting",
-      "score": null,
-      "confidence": null,
-      "reviewCount": 0,
-      "sourceCount": 0,
+      "status": "provisional",
+      "score": 6.3,
+      "confidence": 5.3,
+      "reviewCount": 37,
+      "sourceCount": 1,
       "components": {
-        "userSentiment": null,
-        "reviewConfidence": null,
+        "userSentiment": 6.5,
+        "reviewConfidence": 5.3,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
-      "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+      "sources": [
+        {
+          "label": "Apple App Store — Chorus by ZoomInfo mobile",
+          "url": "https://itunes.apple.com/lookup?id=1591442342&country=us",
+          "component": "userSentiment",
+          "score": 5.7,
+          "reviewCount": 37,
+          "observedAt": "2026-09-07T22:07:31.061Z"
+        }
+      ],
+      "lastRefreshed": "2026-09-07T22:07:31.061Z"
     },
     "clari": {
       "id": "clari",
       "name": "Clari",
-      "status": "collecting",
-      "score": null,
-      "confidence": null,
-      "reviewCount": 0,
-      "sourceCount": 0,
+      "status": "provisional",
+      "score": 8.9,
+      "confidence": 7.2,
+      "reviewCount": 1129,
+      "sourceCount": 1,
       "components": {
-        "userSentiment": null,
-        "reviewConfidence": null,
+        "userSentiment": 9.3,
+        "reviewConfidence": 7.2,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
-      "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+      "sources": [
+        {
+          "label": "Apple App Store — Clari mobile",
+          "url": "https://itunes.apple.com/lookup?id=977304452&country=us",
+          "component": "userSentiment",
+          "score": 9.3,
+          "reviewCount": 1129,
+          "observedAt": "2026-09-07T22:07:31.270Z"
+        }
+      ],
+      "lastRefreshed": "2026-09-07T22:07:31.270Z"
     },
     "outreach": {
       "id": "outreach",
@@ -286,7 +349,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+      "lastRefreshed": "2026-09-07T22:07:31.270Z"
     },
     "salesloft": {
       "id": "salesloft",
@@ -305,7 +368,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+      "lastRefreshed": "2026-09-07T22:07:31.270Z"
     },
     "rattle": {
       "id": "rattle",
@@ -324,7 +387,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+      "lastRefreshed": "2026-09-07T22:07:31.270Z"
     },
     "seismic": {
       "id": "seismic",
@@ -343,7 +406,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+      "lastRefreshed": "2026-09-07T22:07:31.270Z"
     },
     "highspot": {
       "id": "highspot",
@@ -362,7 +425,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+      "lastRefreshed": "2026-09-07T22:07:31.270Z"
     },
     "allego": {
       "id": "allego",
@@ -381,7 +444,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+      "lastRefreshed": "2026-09-07T22:07:31.270Z"
     },
     "letter-ai": {
       "id": "letter-ai",
@@ -400,7 +463,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+      "lastRefreshed": "2026-09-07T22:07:31.270Z"
     },
     "mindtickle": {
       "id": "mindtickle",
@@ -419,7 +482,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+      "lastRefreshed": "2026-09-07T22:07:31.270Z"
     },
     "showpad": {
       "id": "showpad",
@@ -438,7 +501,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+      "lastRefreshed": "2026-09-07T22:07:31.270Z"
     },
     "spekit": {
       "id": "spekit",
@@ -457,7 +520,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+      "lastRefreshed": "2026-09-07T22:07:31.270Z"
     },
     "workramp": {
       "id": "workramp",
@@ -476,7 +539,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+      "lastRefreshed": "2026-09-07T22:07:31.270Z"
     },
     "saleshood": {
       "id": "saleshood",
@@ -495,7 +558,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+      "lastRefreshed": "2026-09-07T22:07:31.270Z"
     },
     "second-nature": {
       "id": "second-nature",
@@ -514,7 +577,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+      "lastRefreshed": "2026-09-07T22:07:31.270Z"
     },
     "docebo": {
       "id": "docebo",
@@ -533,7 +596,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+      "lastRefreshed": "2026-09-07T22:07:31.270Z"
     },
     "360learning": {
       "id": "360learning",
@@ -552,7 +615,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+      "lastRefreshed": "2026-09-07T22:07:31.270Z"
     },
     "cornerstone": {
       "id": "cornerstone",
@@ -571,7 +634,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+      "lastRefreshed": "2026-09-07T22:07:31.270Z"
     },
     "degreed": {
       "id": "degreed",
@@ -590,7 +653,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+      "lastRefreshed": "2026-09-07T22:07:31.270Z"
     },
     "thought-industries": {
       "id": "thought-industries",
@@ -609,7 +672,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+      "lastRefreshed": "2026-09-07T22:07:31.270Z"
     },
     "skilljar": {
       "id": "skilljar",
@@ -628,7 +691,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+      "lastRefreshed": "2026-09-07T22:07:31.270Z"
     },
     "learnupon": {
       "id": "learnupon",
@@ -647,7 +710,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+      "lastRefreshed": "2026-09-07T22:07:31.270Z"
     },
     "absorb": {
       "id": "absorb",
@@ -666,7 +729,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+      "lastRefreshed": "2026-09-07T22:07:31.270Z"
     },
     "sana": {
       "id": "sana",
@@ -685,7 +748,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+      "lastRefreshed": "2026-09-07T22:07:31.270Z"
     },
     "glean": {
       "id": "glean",
@@ -704,7 +767,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+      "lastRefreshed": "2026-09-07T22:07:31.270Z"
     },
     "notion": {
       "id": "notion",
@@ -723,7 +786,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+      "lastRefreshed": "2026-09-07T22:07:31.270Z"
     },
     "guru": {
       "id": "guru",
@@ -742,7 +805,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+      "lastRefreshed": "2026-09-07T22:07:31.270Z"
     },
     "confluence": {
       "id": "confluence",
@@ -761,7 +824,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+      "lastRefreshed": "2026-09-07T22:07:31.270Z"
     },
     "articulate": {
       "id": "articulate",
@@ -780,7 +843,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+      "lastRefreshed": "2026-09-07T22:07:31.270Z"
     },
     "canva": {
       "id": "canva",
@@ -799,7 +862,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+      "lastRefreshed": "2026-09-07T22:07:31.270Z"
     },
     "synthesia": {
       "id": "synthesia",
@@ -818,7 +881,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+      "lastRefreshed": "2026-09-07T22:07:31.270Z"
     },
     "heygen": {
       "id": "heygen",
@@ -837,7 +900,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+      "lastRefreshed": "2026-09-07T22:07:31.270Z"
     },
     "elevenlabs": {
       "id": "elevenlabs",
@@ -856,7 +919,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+      "lastRefreshed": "2026-09-07T22:07:31.270Z"
     },
     "gamma": {
       "id": "gamma",
@@ -875,7 +938,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+      "lastRefreshed": "2026-09-07T22:07:31.270Z"
     },
     "vyond": {
       "id": "vyond",
@@ -894,7 +957,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+      "lastRefreshed": "2026-09-07T22:07:31.270Z"
     },
     "descript": {
       "id": "descript",
@@ -913,7 +976,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+      "lastRefreshed": "2026-09-07T22:07:31.270Z"
     },
     "loom": {
       "id": "loom",
@@ -932,7 +995,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+      "lastRefreshed": "2026-09-07T22:07:31.270Z"
     },
     "scribe": {
       "id": "scribe",
@@ -951,7 +1014,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+      "lastRefreshed": "2026-09-07T22:07:31.270Z"
     },
     "guidde": {
       "id": "guidde",
@@ -970,7 +1033,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+      "lastRefreshed": "2026-09-07T22:07:31.270Z"
     },
     "asana": {
       "id": "asana",
@@ -989,7 +1052,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+      "lastRefreshed": "2026-09-07T22:07:31.270Z"
     },
     "monday": {
       "id": "monday",
@@ -1008,7 +1071,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+      "lastRefreshed": "2026-09-07T22:07:31.270Z"
     },
     "jira": {
       "id": "jira",
@@ -1027,7 +1090,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+      "lastRefreshed": "2026-09-07T22:07:31.270Z"
     },
     "clickup": {
       "id": "clickup",
@@ -1046,7 +1109,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+      "lastRefreshed": "2026-09-07T22:07:31.270Z"
     },
     "smartsheet": {
       "id": "smartsheet",
@@ -1065,7 +1128,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+      "lastRefreshed": "2026-09-07T22:07:31.270Z"
     },
     "zapier": {
       "id": "zapier",
@@ -1084,7 +1147,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+      "lastRefreshed": "2026-09-07T22:07:31.270Z"
     },
     "make": {
       "id": "make",
@@ -1103,7 +1166,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+      "lastRefreshed": "2026-09-07T22:07:31.270Z"
     },
     "n8n": {
       "id": "n8n",
@@ -1128,15 +1191,15 @@
           "component": "marketMomentum",
           "score": 10,
           "reviewCount": 0,
-          "observedAt": "2026-09-07T21:54:44.098Z",
+          "observedAt": "2026-09-07T22:07:31.649Z",
           "metadata": {
-            "stars": 203664,
-            "forks": 60601,
+            "stars": 203663,
+            "forks": 60602,
             "pushedAt": "2026-09-07T21:09:28Z"
           }
         }
       ],
-      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+      "lastRefreshed": "2026-09-07T22:07:31.649Z"
     },
     "workato": {
       "id": "workato",
@@ -1155,7 +1218,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+      "lastRefreshed": "2026-09-07T22:07:31.649Z"
     },
     "impartner": {
       "id": "impartner",
@@ -1174,7 +1237,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+      "lastRefreshed": "2026-09-07T22:07:31.649Z"
     },
     "allbound": {
       "id": "allbound",
@@ -1193,7 +1256,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+      "lastRefreshed": "2026-09-07T22:07:31.649Z"
     },
     "channeltivity": {
       "id": "channeltivity",
@@ -1212,7 +1275,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+      "lastRefreshed": "2026-09-07T22:07:31.649Z"
     },
     "crossbeam": {
       "id": "crossbeam",
@@ -1231,7 +1294,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+      "lastRefreshed": "2026-09-07T22:07:31.649Z"
     },
     "partnerstack": {
       "id": "partnerstack",
@@ -1250,7 +1313,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+      "lastRefreshed": "2026-09-07T22:07:31.649Z"
     },
     "apollo": {
       "id": "apollo",
@@ -1269,7 +1332,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+      "lastRefreshed": "2026-09-07T22:07:31.649Z"
     },
     "zoominfo": {
       "id": "zoominfo",
@@ -1288,7 +1351,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+      "lastRefreshed": "2026-09-07T22:07:31.649Z"
     },
     "6sense": {
       "id": "6sense",
@@ -1307,7 +1370,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+      "lastRefreshed": "2026-09-07T22:07:31.649Z"
     },
     "common-room": {
       "id": "common-room",
@@ -1326,7 +1389,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+      "lastRefreshed": "2026-09-07T22:07:31.649Z"
     },
     "usergems": {
       "id": "usergems",
@@ -1345,7 +1408,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+      "lastRefreshed": "2026-09-07T22:07:31.649Z"
     },
     "bardeen": {
       "id": "bardeen",
@@ -1364,7 +1427,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+      "lastRefreshed": "2026-09-07T22:07:31.649Z"
     },
     "rows": {
       "id": "rows",
@@ -1383,64 +1446,91 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+      "lastRefreshed": "2026-09-07T22:07:31.649Z"
     },
     "attio": {
       "id": "attio",
       "name": "Attio",
-      "status": "collecting",
-      "score": null,
-      "confidence": null,
-      "reviewCount": 0,
-      "sourceCount": 0,
+      "status": "provisional",
+      "score": 6.9,
+      "confidence": 5.2,
+      "reviewCount": 28,
+      "sourceCount": 1,
       "components": {
-        "userSentiment": null,
-        "reviewConfidence": null,
+        "userSentiment": 7.3,
+        "reviewConfidence": 5.2,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
-      "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+      "sources": [
+        {
+          "label": "Apple App Store — Attio mobile",
+          "url": "https://itunes.apple.com/lookup?id=1511545395&country=us",
+          "component": "userSentiment",
+          "score": 7.1,
+          "reviewCount": 28,
+          "observedAt": "2026-09-07T22:07:31.747Z"
+        }
+      ],
+      "lastRefreshed": "2026-09-07T22:07:31.747Z"
     },
     "close-crm": {
       "id": "close-crm",
       "name": "Close",
-      "status": "collecting",
-      "score": null,
-      "confidence": null,
-      "reviewCount": 0,
-      "sourceCount": 0,
+      "status": "provisional",
+      "score": 6.9,
+      "confidence": 5.5,
+      "reviewCount": 50,
+      "sourceCount": 1,
       "components": {
-        "userSentiment": null,
-        "reviewConfidence": null,
+        "userSentiment": 7.2,
+        "reviewConfidence": 5.5,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
-      "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+      "sources": [
+        {
+          "label": "Apple App Store — Close CRM mobile",
+          "url": "https://itunes.apple.com/lookup?id=1668836284&country=us",
+          "component": "userSentiment",
+          "score": 7,
+          "reviewCount": 50,
+          "observedAt": "2026-09-07T22:07:31.843Z"
+        }
+      ],
+      "lastRefreshed": "2026-09-07T22:07:31.843Z"
     },
     "folk-crm": {
       "id": "folk-crm",
       "name": "folk",
-      "status": "collecting",
-      "score": null,
-      "confidence": null,
-      "reviewCount": 0,
-      "sourceCount": 0,
+      "status": "provisional",
+      "score": 7,
+      "confidence": 4,
+      "reviewCount": 2,
+      "sourceCount": 1,
       "components": {
-        "userSentiment": null,
-        "reviewConfidence": null,
+        "userSentiment": 7.7,
+        "reviewConfidence": 4,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
-      "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+      "sources": [
+        {
+          "label": "Apple App Store — folk CRM mobile",
+          "url": "https://itunes.apple.com/lookup?id=6761423430&country=us",
+          "component": "userSentiment",
+          "score": 10,
+          "reviewCount": 2,
+          "observedAt": "2026-09-07T22:07:31.951Z"
+        }
+      ],
+      "lastRefreshed": "2026-09-07T22:07:31.951Z"
     },
     "reply": {
       "id": "reply",
@@ -1459,7 +1549,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+      "lastRefreshed": "2026-09-07T22:07:31.951Z"
     },
     "unify": {
       "id": "unify",
@@ -1478,7 +1568,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+      "lastRefreshed": "2026-09-07T22:07:31.951Z"
     },
     "regie-ai": {
       "id": "regie-ai",
@@ -1497,7 +1587,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+      "lastRefreshed": "2026-09-07T22:07:31.951Z"
     },
     "instantly": {
       "id": "instantly",
@@ -1516,7 +1606,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+      "lastRefreshed": "2026-09-07T22:07:31.951Z"
     },
     "smartlead": {
       "id": "smartlead",
@@ -1535,7 +1625,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+      "lastRefreshed": "2026-09-07T22:07:31.951Z"
     },
     "lavender": {
       "id": "lavender",
@@ -1554,7 +1644,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+      "lastRefreshed": "2026-09-07T22:07:31.951Z"
     },
     "jason-ai": {
       "id": "jason-ai",
@@ -1573,7 +1663,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+      "lastRefreshed": "2026-09-07T22:07:31.951Z"
     },
     "artisan-ava": {
       "id": "artisan-ava",
@@ -1592,7 +1682,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+      "lastRefreshed": "2026-09-07T22:07:31.951Z"
     },
     "11x": {
       "id": "11x",
@@ -1611,7 +1701,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+      "lastRefreshed": "2026-09-07T22:07:31.951Z"
     },
     "aisdr": {
       "id": "aisdr",
@@ -1630,7 +1720,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+      "lastRefreshed": "2026-09-07T22:07:31.951Z"
     },
     "salesforge": {
       "id": "salesforge",
@@ -1649,7 +1739,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+      "lastRefreshed": "2026-09-07T22:07:31.951Z"
     },
     "qualified-piper": {
       "id": "qualified-piper",
@@ -1668,7 +1758,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+      "lastRefreshed": "2026-09-07T22:07:31.951Z"
     },
     "nooks": {
       "id": "nooks",
@@ -1687,7 +1777,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+      "lastRefreshed": "2026-09-07T22:07:31.951Z"
     },
     "bland-ai": {
       "id": "bland-ai",
@@ -1706,7 +1796,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+      "lastRefreshed": "2026-09-07T22:07:31.951Z"
     },
     "regal": {
       "id": "regal",
@@ -1725,7 +1815,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+      "lastRefreshed": "2026-09-07T22:07:31.951Z"
     },
     "granola": {
       "id": "granola",
@@ -1744,7 +1834,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+      "lastRefreshed": "2026-09-07T22:07:31.951Z"
     },
     "avoma": {
       "id": "avoma",
@@ -1763,7 +1853,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+      "lastRefreshed": "2026-09-07T22:07:31.951Z"
     },
     "fathom": {
       "id": "fathom",
@@ -1782,7 +1872,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+      "lastRefreshed": "2026-09-07T22:07:31.951Z"
     },
     "fireflies": {
       "id": "fireflies",
@@ -1801,7 +1891,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+      "lastRefreshed": "2026-09-07T22:07:31.951Z"
     },
     "qwilr": {
       "id": "qwilr",
@@ -1820,7 +1910,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+      "lastRefreshed": "2026-09-07T22:07:31.951Z"
     },
     "pandadoc": {
       "id": "pandadoc",
@@ -1839,7 +1929,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+      "lastRefreshed": "2026-09-07T22:07:31.951Z"
     },
     "docusign": {
       "id": "docusign",
@@ -1858,7 +1948,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+      "lastRefreshed": "2026-09-07T22:07:31.951Z"
     },
     "dealhub": {
       "id": "dealhub",
@@ -1877,7 +1967,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+      "lastRefreshed": "2026-09-07T22:07:31.951Z"
     },
     "dock": {
       "id": "dock",
@@ -1896,7 +1986,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+      "lastRefreshed": "2026-09-07T22:07:31.951Z"
     },
     "calendly": {
       "id": "calendly",
@@ -1915,7 +2005,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+      "lastRefreshed": "2026-09-07T22:07:31.951Z"
     },
     "sendspark": {
       "id": "sendspark",
@@ -1934,7 +2024,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+      "lastRefreshed": "2026-09-07T22:07:31.951Z"
     },
     "hockeystack": {
       "id": "hockeystack",
@@ -1953,7 +2043,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+      "lastRefreshed": "2026-09-07T22:07:31.951Z"
     },
     "dreamdata": {
       "id": "dreamdata",
@@ -1972,14 +2062,14 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+      "lastRefreshed": "2026-09-07T22:07:31.951Z"
     }
   },
   "summary": {
     "total": 103,
     "live": 0,
-    "provisional": 0,
-    "collecting": 103,
+    "provisional": 10,
+    "collecting": 93,
     "sourceFailures": 0
   },
   "failures": []
