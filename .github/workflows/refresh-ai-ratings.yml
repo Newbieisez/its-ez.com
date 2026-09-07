@@ -66,8 +66,27 @@ jobs:
             echo 'No rating changes.'
             exit 0
           fi
+
           git config user.name 'EZ Ratings Bot'
           git config user.email 'actions@users.noreply.github.com'
           git add data/ai-systems-ratings.json data/ai-systems-rating-history.json
           git commit -m 'chore: refresh AI Systems EZ Scores'
-          git push
+
+          # The public site has independent workflows that may update main while
+          # ratings are being calculated. Rebase the generated snapshot commit
+          # onto the newest main and retry rather than losing a valid refresh.
+          for attempt in 1 2 3; do
+            echo "Publish attempt ${attempt}/3"
+            git fetch origin main
+            if git rebase origin/main; then
+              if git push origin HEAD:main; then
+                exit 0
+              fi
+            else
+              git rebase --abort || true
+            fi
+            sleep $((attempt * 2))
+          done
+
+          echo 'Unable to publish refreshed EZ Scores after 3 attempts.' >&2
+          exit 1
