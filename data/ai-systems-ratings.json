@@ -1,8 +1,1980 @@
 {
   "schemaVersion": 1,
-  "generatedAt": null,
+  "generatedAt": "2026-09-07T21:54:43.693Z",
   "refreshHours": 6,
-  "items": {},
+  "items": {
+    "chatgpt": {
+      "id": "chatgpt",
+      "name": "ChatGPT",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+    },
+    "claude": {
+      "id": "claude",
+      "name": "Claude",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+    },
+    "gemini": {
+      "id": "gemini",
+      "name": "Gemini",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+    },
+    "copilot": {
+      "id": "copilot",
+      "name": "Microsoft Copilot",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+    },
+    "perplexity": {
+      "id": "perplexity",
+      "name": "Perplexity",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+    },
+    "notebooklm": {
+      "id": "notebooklm",
+      "name": "NotebookLM",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+    },
+    "clay": {
+      "id": "clay",
+      "name": "Clay",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+    },
+    "salesforce": {
+      "id": "salesforce",
+      "name": "Salesforce",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+    },
+    "hubspot": {
+      "id": "hubspot",
+      "name": "HubSpot",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+    },
+    "dynamics": {
+      "id": "dynamics",
+      "name": "Microsoft Dynamics 365",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+    },
+    "zoho": {
+      "id": "zoho",
+      "name": "Zoho CRM",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+    },
+    "gong": {
+      "id": "gong",
+      "name": "Gong",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+    },
+    "chorus": {
+      "id": "chorus",
+      "name": "ZoomInfo Chorus",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+    },
+    "clari": {
+      "id": "clari",
+      "name": "Clari",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+    },
+    "outreach": {
+      "id": "outreach",
+      "name": "Outreach",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+    },
+    "salesloft": {
+      "id": "salesloft",
+      "name": "Salesloft",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+    },
+    "rattle": {
+      "id": "rattle",
+      "name": "Rattle",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+    },
+    "seismic": {
+      "id": "seismic",
+      "name": "Seismic",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+    },
+    "highspot": {
+      "id": "highspot",
+      "name": "Highspot by Seismic",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+    },
+    "allego": {
+      "id": "allego",
+      "name": "Allego",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+    },
+    "letter-ai": {
+      "id": "letter-ai",
+      "name": "Letter AI",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+    },
+    "mindtickle": {
+      "id": "mindtickle",
+      "name": "Mindtickle",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+    },
+    "showpad": {
+      "id": "showpad",
+      "name": "Showpad",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+    },
+    "spekit": {
+      "id": "spekit",
+      "name": "Spekit",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+    },
+    "workramp": {
+      "id": "workramp",
+      "name": "WorkRamp",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+    },
+    "saleshood": {
+      "id": "saleshood",
+      "name": "SalesHood",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+    },
+    "second-nature": {
+      "id": "second-nature",
+      "name": "Second Nature",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+    },
+    "docebo": {
+      "id": "docebo",
+      "name": "Docebo",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+    },
+    "360learning": {
+      "id": "360learning",
+      "name": "360Learning",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+    },
+    "cornerstone": {
+      "id": "cornerstone",
+      "name": "Cornerstone",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+    },
+    "degreed": {
+      "id": "degreed",
+      "name": "Degreed",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+    },
+    "thought-industries": {
+      "id": "thought-industries",
+      "name": "Thought Industries",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+    },
+    "skilljar": {
+      "id": "skilljar",
+      "name": "Skilljar",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+    },
+    "learnupon": {
+      "id": "learnupon",
+      "name": "LearnUpon",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+    },
+    "absorb": {
+      "id": "absorb",
+      "name": "Absorb LMS",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+    },
+    "sana": {
+      "id": "sana",
+      "name": "Sana",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+    },
+    "glean": {
+      "id": "glean",
+      "name": "Glean",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+    },
+    "notion": {
+      "id": "notion",
+      "name": "Notion",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+    },
+    "guru": {
+      "id": "guru",
+      "name": "Guru",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+    },
+    "confluence": {
+      "id": "confluence",
+      "name": "Confluence",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+    },
+    "articulate": {
+      "id": "articulate",
+      "name": "Articulate 360 + Rise",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+    },
+    "canva": {
+      "id": "canva",
+      "name": "Canva",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+    },
+    "synthesia": {
+      "id": "synthesia",
+      "name": "Synthesia",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+    },
+    "heygen": {
+      "id": "heygen",
+      "name": "HeyGen",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+    },
+    "elevenlabs": {
+      "id": "elevenlabs",
+      "name": "ElevenLabs",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+    },
+    "gamma": {
+      "id": "gamma",
+      "name": "Gamma",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+    },
+    "vyond": {
+      "id": "vyond",
+      "name": "Vyond",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+    },
+    "descript": {
+      "id": "descript",
+      "name": "Descript",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+    },
+    "loom": {
+      "id": "loom",
+      "name": "Loom",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+    },
+    "scribe": {
+      "id": "scribe",
+      "name": "Scribe",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+    },
+    "guidde": {
+      "id": "guidde",
+      "name": "Guidde",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+    },
+    "asana": {
+      "id": "asana",
+      "name": "Asana",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+    },
+    "monday": {
+      "id": "monday",
+      "name": "monday.com",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+    },
+    "jira": {
+      "id": "jira",
+      "name": "Jira",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+    },
+    "clickup": {
+      "id": "clickup",
+      "name": "ClickUp",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+    },
+    "smartsheet": {
+      "id": "smartsheet",
+      "name": "Smartsheet",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+    },
+    "zapier": {
+      "id": "zapier",
+      "name": "Zapier",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+    },
+    "make": {
+      "id": "make",
+      "name": "Make",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:43.694Z"
+    },
+    "n8n": {
+      "id": "n8n",
+      "name": "n8n",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 1,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": 10
+      },
+      "trend": null,
+      "sources": [
+        {
+          "label": "Official GitHub repository",
+          "url": "https://github.com/n8n-io/n8n",
+          "component": "marketMomentum",
+          "score": 10,
+          "reviewCount": 0,
+          "observedAt": "2026-09-07T21:54:44.098Z",
+          "metadata": {
+            "stars": 203664,
+            "forks": 60601,
+            "pushedAt": "2026-09-07T21:09:28Z"
+          }
+        }
+      ],
+      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+    },
+    "workato": {
+      "id": "workato",
+      "name": "Workato",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+    },
+    "impartner": {
+      "id": "impartner",
+      "name": "Impartner",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+    },
+    "allbound": {
+      "id": "allbound",
+      "name": "Allbound",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+    },
+    "channeltivity": {
+      "id": "channeltivity",
+      "name": "Channeltivity",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+    },
+    "crossbeam": {
+      "id": "crossbeam",
+      "name": "Crossbeam",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+    },
+    "partnerstack": {
+      "id": "partnerstack",
+      "name": "PartnerStack",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+    },
+    "apollo": {
+      "id": "apollo",
+      "name": "Apollo",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+    },
+    "zoominfo": {
+      "id": "zoominfo",
+      "name": "ZoomInfo",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+    },
+    "6sense": {
+      "id": "6sense",
+      "name": "6sense",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+    },
+    "common-room": {
+      "id": "common-room",
+      "name": "Common Room",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+    },
+    "usergems": {
+      "id": "usergems",
+      "name": "UserGems",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+    },
+    "bardeen": {
+      "id": "bardeen",
+      "name": "Bardeen",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+    },
+    "rows": {
+      "id": "rows",
+      "name": "Rows",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+    },
+    "attio": {
+      "id": "attio",
+      "name": "Attio",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+    },
+    "close-crm": {
+      "id": "close-crm",
+      "name": "Close",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+    },
+    "folk-crm": {
+      "id": "folk-crm",
+      "name": "folk",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+    },
+    "reply": {
+      "id": "reply",
+      "name": "Reply.io",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+    },
+    "unify": {
+      "id": "unify",
+      "name": "Unify",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+    },
+    "regie-ai": {
+      "id": "regie-ai",
+      "name": "Regie.ai",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+    },
+    "instantly": {
+      "id": "instantly",
+      "name": "Instantly",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+    },
+    "smartlead": {
+      "id": "smartlead",
+      "name": "Smartlead",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+    },
+    "lavender": {
+      "id": "lavender",
+      "name": "Lavender",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+    },
+    "jason-ai": {
+      "id": "jason-ai",
+      "name": "Jason AI by Reply",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+    },
+    "artisan-ava": {
+      "id": "artisan-ava",
+      "name": "Artisan Ava",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+    },
+    "11x": {
+      "id": "11x",
+      "name": "11x",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+    },
+    "aisdr": {
+      "id": "aisdr",
+      "name": "AiSDR",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+    },
+    "salesforge": {
+      "id": "salesforge",
+      "name": "Salesforge",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+    },
+    "qualified-piper": {
+      "id": "qualified-piper",
+      "name": "Qualified Piper",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+    },
+    "nooks": {
+      "id": "nooks",
+      "name": "Nooks",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+    },
+    "bland-ai": {
+      "id": "bland-ai",
+      "name": "Bland AI",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+    },
+    "regal": {
+      "id": "regal",
+      "name": "Regal",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+    },
+    "granola": {
+      "id": "granola",
+      "name": "Granola",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+    },
+    "avoma": {
+      "id": "avoma",
+      "name": "Avoma",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+    },
+    "fathom": {
+      "id": "fathom",
+      "name": "Fathom",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+    },
+    "fireflies": {
+      "id": "fireflies",
+      "name": "Fireflies.ai",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+    },
+    "qwilr": {
+      "id": "qwilr",
+      "name": "Qwilr",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+    },
+    "pandadoc": {
+      "id": "pandadoc",
+      "name": "PandaDoc",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+    },
+    "docusign": {
+      "id": "docusign",
+      "name": "DocuSign",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+    },
+    "dealhub": {
+      "id": "dealhub",
+      "name": "DealHub",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+    },
+    "dock": {
+      "id": "dock",
+      "name": "Dock",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+    },
+    "calendly": {
+      "id": "calendly",
+      "name": "Calendly",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+    },
+    "sendspark": {
+      "id": "sendspark",
+      "name": "Sendspark",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+    },
+    "hockeystack": {
+      "id": "hockeystack",
+      "name": "HockeyStack",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+    },
+    "dreamdata": {
+      "id": "dreamdata",
+      "name": "Dreamdata",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-07T21:54:44.099Z"
+    }
+  },
   "summary": {
     "total": 103,
     "live": 0,
