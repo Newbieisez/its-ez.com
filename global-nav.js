@@ -1,5 +1,5 @@
 (() => {
-  const VERSION = '20260908-global-nav-2';
+  const VERSION = '20260908-global-nav-3';
   const ROOT = 'https://its-ez.com/';
   const css = `
   :root{--ez-nav-red:#ef1717;--ez-nav-black:#08090b;--ez-nav-line:rgba(255,255,255,.12)}
@@ -17,9 +17,10 @@
   .ez-global-cta{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:0 16px;border:1px solid var(--ez-nav-red);border-radius:999px;color:#fff!important;text-decoration:none!important;font-size:10px!important;font-weight:900!important;letter-spacing:.08em!important;text-transform:uppercase!important;white-space:nowrap}
   .ez-global-cta:hover{background:var(--ez-nav-red)}
   .ez-global-menu{display:none;width:44px;height:44px;margin-left:auto;border:1px solid rgba(255,255,255,.2);border-radius:10px;background:transparent;color:#fff;font-size:22px;cursor:pointer}
+  .ez-global-header + .nav{top:72px!important}
   @media(max-width:1180px){.ez-global-brand-copy{display:none}.ez-global-shell{gap:12px}.ez-global-links a{padding:0 7px;font-size:10px!important}.ez-global-cta{padding:0 12px}}
   @media(max-width:930px){
-    body{padding-top:64px!important}.ez-global-header{height:64px!important}.ez-global-shell{height:64px;width:min(100% - 24px,1440px)}.ez-global-mark{width:40px;height:40px;font-size:21px}.ez-global-brand-copy{display:grid}.ez-global-menu{display:block}.ez-global-cta{display:none}
+    body{padding-top:64px!important}.ez-global-header{height:64px!important}.ez-global-shell{height:64px;width:min(100% - 24px,1440px)}.ez-global-mark{width:40px;height:40px;font-size:21px}.ez-global-brand-copy{display:grid}.ez-global-menu{display:block}.ez-global-cta{display:none}.ez-global-header + .nav{top:64px!important}
     .ez-global-links{display:none;position:absolute;left:12px;right:12px;top:64px;margin:0;padding:10px;background:#0b0c0f;border:1px solid rgba(255,255,255,.13);border-radius:0 0 16px 16px;box-shadow:0 20px 45px rgba(0,0,0,.42);grid-template-columns:repeat(2,minmax(0,1fr));gap:4px}
     .ez-global-header.is-open .ez-global-links{display:grid}.ez-global-links a{min-height:44px;padding:0 12px;font-size:12px!important}.ez-global-links a[aria-current="page"]:after{left:12px;right:12px}
   }
@@ -67,7 +68,7 @@
     header.innerHTML=`<div class="ez-global-shell">
       <a class="ez-global-brand" href="${ROOT}" aria-label="EZ Enablement home"><span class="ez-global-mark">E<b>Z</b></span><span class="ez-global-brand-copy"><strong>EZ ENABLEMENT</strong><span>Enablement made possible</span></span></a>
       <nav class="ez-global-links" id="ez-global-links" aria-label="Primary navigation">
-        ${items.map(([label,href])=>`<a href="${href}"${href.startsWith('https://') && !href.startsWith(ROOT)?' target="_blank" rel="noopener noreferrer"':''}${currentFor(label,href)?' aria-current="page"':''}>${label}</a>`).join('')}
+        ${items.map(([label,href])=>`<a href="${href}"${currentFor(label,href)?' aria-current="page"':''}>${label}</a>`).join('')}
       </nav>
       <a class="ez-global-cta" href="${ROOT}#contact">Let's connect</a>
       <button class="ez-global-menu" type="button" aria-expanded="false" aria-controls="ez-global-links" aria-label="Open navigation">☰</button>
