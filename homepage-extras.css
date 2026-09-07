@@ -1,8 +1,8 @@
-/* Homepage-only interaction helpers. Keep these out of the shared component/theme files. */
+/* Homepage-only interaction helpers. Keep these out of shared theme files. */
 html{scroll-padding-top:94px}
 section[id]{scroll-margin-top:94px}
 
-/* The approved hero replaces the legacy portrait markup at runtime. */
+/* Guard against any legacy portrait pseudo-labels in cached base CSS. */
 .portrait-stage:after{display:none!important;content:none!important}
 
 /* Live-build previews stay visible without trapping page scroll. */
@@ -12,13 +12,7 @@ section[id]{scroll-margin-top:94px}
 .site-preview-open{pointer-events:auto!important;display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:10px 14px;border:1px solid #fff;border-radius:999px;background:#fff;color:#111!important;font-size:10px;font-weight:900;letter-spacing:.05em;text-transform:uppercase;box-shadow:0 8px 24px rgba(0,0,0,.22)}
 .site-preview-open:hover{background:#ef233c!important;border-color:#ef233c!important;color:#fff!important;transform:translateY(-2px)}
 
-/* AI Revenue System feature block. */
-.ai-revenue-proof{margin-top:42px}
-.ai-revenue-proof .media-proof-copy h3{font-size:clamp(30px,4vw,52px)!important}
-.ai-revenue-proof .proof-preview-kicker{display:inline-flex;align-items:center;gap:7px;margin-bottom:10px;color:#ef233c;font-size:9px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
-.ai-revenue-proof .proof-preview-kicker:before{content:"";width:20px;height:2px;background:#ef233c}
-.ai-revenue-proof .stack-group:first-child{background:#0b0b0c!important;color:#fff!important}
-.ai-revenue-proof .stack-group:first-child p{color:#d7d7d7!important}
+/* Shared homepage separators and navigation state. */
 .proof-divider{height:1px;background:var(--line);margin:72px 0}
 .nav-links a[data-ai-revenue-link]{color:#ef233c!important;font-weight:900!important}
 .nav-links a.is-current{border-color:var(--hot)!important}
