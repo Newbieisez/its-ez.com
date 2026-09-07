@@ -197,3 +197,16 @@ a:hover strong,a:hover span,a:hover small,button:hover strong,button:hover span,
   .solve-card b{margin-bottom:24px!important}
   .project-detail-inner{padding:26px 22px!important}
 }
+
+/* Keep the hero portrait focused above the hands so the wedding ring is never visible. */
+.portrait img{
+  object-position:center top!important;
+  transform:scale(1.18);
+  transform-origin:center top;
+}
+@media (max-width:820px){
+  .portrait img{transform:scale(1.20)}
+}
+@media (max-width:560px){
+  .portrait img{transform:scale(1.22)}
+}
