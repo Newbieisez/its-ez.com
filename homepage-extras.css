@@ -1,0 +1,34 @@
+/* Homepage-only interaction helpers. Keep these out of the shared component/theme files. */
+html{scroll-padding-top:94px}
+section[id]{scroll-margin-top:94px}
+
+/* The approved hero replaces the legacy portrait markup at runtime. */
+.portrait-stage:after{display:none!important;content:none!important}
+
+/* Live-build previews stay visible without trapping page scroll. */
+.site-preview-shell{position:relative;overflow:hidden;background:#111;border-radius:20px 20px 0 0}
+.site-preview-shell iframe{display:block;width:100%!important;height:470px!important;border:0!important;background:#111!important;pointer-events:none!important;user-select:none!important}
+.site-preview-overlay{position:absolute;inset:0;display:flex;align-items:flex-end;justify-content:flex-end;padding:14px;pointer-events:none;background:linear-gradient(to bottom,transparent 68%,rgba(0,0,0,.58))}
+.site-preview-open{pointer-events:auto!important;display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:10px 14px;border:1px solid #fff;border-radius:999px;background:#fff;color:#111!important;font-size:10px;font-weight:900;letter-spacing:.05em;text-transform:uppercase;box-shadow:0 8px 24px rgba(0,0,0,.22)}
+.site-preview-open:hover{background:#ef233c!important;border-color:#ef233c!important;color:#fff!important;transform:translateY(-2px)}
+
+/* AI Revenue System feature block. */
+.ai-revenue-proof{margin-top:42px}
+.ai-revenue-proof .media-proof-copy h3{font-size:clamp(30px,4vw,52px)!important}
+.ai-revenue-proof .proof-preview-kicker{display:inline-flex;align-items:center;gap:7px;margin-bottom:10px;color:#ef233c;font-size:9px;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
+.ai-revenue-proof .proof-preview-kicker:before{content:"";width:20px;height:2px;background:#ef233c}
+.ai-revenue-proof .stack-group:first-child{background:#0b0b0c!important;color:#fff!important}
+.ai-revenue-proof .stack-group:first-child p{color:#d7d7d7!important}
+.proof-divider{height:1px;background:var(--line);margin:72px 0}
+.nav-links a[data-ai-revenue-link]{color:#ef233c!important;font-weight:900!important}
+.nav-links a.is-current{border-color:var(--hot)!important}
+
+@media(max-width:760px){
+  html{scroll-padding-top:78px}
+  section[id]{scroll-margin-top:78px}
+  .site-preview-shell iframe{height:340px!important}
+  .site-preview-open{font-size:9px}
+  .proof-divider{margin:50px 0}
+}
+
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}}
