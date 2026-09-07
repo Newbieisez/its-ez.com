@@ -6,6 +6,52 @@
     twilio:'https://logospng.org/wp-content/uploads/twilio-768x432.png'
   };
 
+  function enhanceHero(){
+    var hero=document.querySelector('.hero-2026');
+    if(!hero)return;
+
+    var kicker=hero.querySelector('.ez-hero-kicker');
+    var title=hero.querySelector('.ez-hero-title');
+    var lede=hero.querySelector('.ez-hero-lede');
+    var copy=hero.querySelector('.ez-hero-copy');
+    var impacts=hero.querySelector('.ez-impact-grid');
+    var portraitWrap=hero.querySelector('.ez-hero-portrait-wrap');
+
+    if(kicker)kicker.textContent="ENABLE WHAT’S NEXT";
+    if(title)title.innerHTML='<span>BUILDING</span><span>REVENUE SYSTEMS</span><em>THAT SCALE</em>';
+    if(lede)lede.textContent='I help companies turn knowledge into measurable performance through enablement, AI, and GTM systems that actually work.';
+
+    if(copy&&!copy.querySelector('.ez-hero-domains')){
+      var domains=document.createElement('div');
+      domains.className='ez-hero-domains';
+      domains.setAttribute('aria-label','Areas of expertise');
+      domains.innerHTML='<span>Sales</span><span>Revenue</span><span>GTM</span><span>Partner Enablement</span><span>AI</span>';
+      if(lede)copy.insertBefore(domains,lede);
+    }
+
+    if(impacts){
+      impacts.classList.add('ez-value-grid');
+      impacts.setAttribute('aria-label','Business outcomes');
+      impacts.innerHTML=''
+        +'<div class="ez-impact"><strong aria-hidden="true">▥</strong><b>Faster Ramp</b><span>Get people productive sooner.</span></div>'
+        +'<div class="ez-impact"><strong aria-hidden="true">◎</strong><b>Better Execution</b><span>Turn methodology into field behavior.</span></div>'
+        +'<div class="ez-impact"><strong aria-hidden="true">AI</strong><b>AI-Powered Workflows</b><span>Remove friction with useful automation.</span></div>'
+        +'<div class="ez-impact"><strong aria-hidden="true">↗</strong><b>Measurable Growth</b><span>Connect readiness to business outcomes.</span></div>';
+    }
+
+    if(portraitWrap&&!portraitWrap.querySelector('.ez-vegas-mark')){
+      var vegas=document.createElement('div');
+      vegas.className='ez-vegas-mark';
+      vegas.innerHTML='<strong>Las Vegas</strong><span>PEOPLE.<br>SYSTEMS.<br>REVENUE.<br>ALWAYS.</span>';
+      portraitWrap.appendChild(vegas);
+    }
+
+    var brand=document.querySelector('.site-header .brand');
+    if(brand&&!brand.querySelector('.ez-brand-lockup')){
+      brand.innerHTML='<span class="ez-brand-lockup"><b>EZ</b><small>ENABLEMENT</small></span>';
+    }
+  }
+
   function enhanceWork(){
     var work=document.getElementById('work');
     if(!work)return;
@@ -86,6 +132,7 @@
   }
 
   function init(){
+    enhanceHero();
     enhanceWork();
     enhancePreviews();
     setupNavHighlight();
