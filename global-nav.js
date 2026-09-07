@@ -1,5 +1,5 @@
 (() => {
-  const VERSION = '20260908-global-nav-7';
+  const VERSION = '20260908-global-nav-8';
   const ROOT = 'https://its-ez.com/';
   const css = `
   :root{--ez-nav-red:#ef1717;--ez-nav-black:#08090b;--ez-nav-line:rgba(255,255,255,.12)}
@@ -92,32 +92,82 @@
     document.addEventListener('keydown',e=>{if(e.key==='Escape'&&header.classList.contains('is-open')){header.classList.remove('is-open');button.setAttribute('aria-expanded','false');button.setAttribute('aria-label','Open navigation');button.textContent='☰';button.focus();}});
   }
 
+  function fixMusicSoundCloud(){
+    const path=location.pathname.toLowerCase();
+    const isMusic=path.endsWith('/music.html') || path.endsWith('/music');
+    if(!isMusic) return;
+
+    const frame=document.querySelector('.soundcloud iframe');
+    if(!frame) return;
+    const container=frame.closest('.soundcloud') || frame.parentElement;
+    const trackUrl='https://soundcloud.com/haimonix/full-speed-ahead-yacht-rock/s-XCooCM1Kq6V';
+
+    const musicStyle=document.createElement('style');
+    musicStyle.textContent=`
+      .ez-sc-state{min-height:300px;border-radius:17px;display:flex;align-items:center;justify-content:center;padding:34px;text-align:center;background:radial-gradient(circle at 50% 18%,rgba(255,92,0,.14),transparent 34%),linear-gradient(145deg,#111116,#08080b);color:#fff}
+      .ez-sc-state-inner{max-width:520px}.ez-sc-pulse{width:56px;height:56px;margin:0 auto 18px;border-radius:50%;border:1px solid rgba(255,255,255,.14);display:grid;place-items:center;font-size:22px;background:#ff5500;box-shadow:0 0 32px rgba(255,85,0,.2)}
+      .ez-sc-state strong{display:block;font-size:1.15rem}.ez-sc-state p{margin:9px 0 18px;color:#999ba4;font-size:.78rem;line-height:1.6}.ez-sc-state a{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:0 16px;border-radius:999px;background:#ff5500;color:#fff!important;font-size:.7rem;font-weight:900;letter-spacing:.06em;text-transform:uppercase;text-decoration:none!important}.ez-sc-state a:hover{background:#ff6a1a}
+      .soundcloud iframe{background:#111!important}
+    `;
+    document.head.appendChild(musicStyle);
+
+    frame.removeAttribute('src');
+    frame.style.display='none';
+    const loading=document.createElement('div');
+    loading.className='ez-sc-state';
+    loading.innerHTML='<div class="ez-sc-state-inner"><div class="ez-sc-pulse">♪</div><strong>Loading Full Speed Ahead…</strong><p>Resolving the private SoundCloud master.</p></div>';
+    container.appendChild(loading);
+
+    const endpoint='https://soundcloud.com/oembed?format=json&maxheight=320&color=ef1717&auto_play=false&show_comments=false&url='+encodeURIComponent(trackUrl);
+    fetch(endpoint,{mode:'cors'})
+      .then(response=>{if(!response.ok) throw new Error('SoundCloud oEmbed '+response.status);return response.json();})
+      .then(data=>{
+        if(!data || !data.html) throw new Error('SoundCloud returned no player');
+        container.innerHTML=data.html;
+        const resolved=container.querySelector('iframe');
+        if(resolved){
+          resolved.title='Full Speed Ahead by Avi Haimonix on SoundCloud';
+          resolved.setAttribute('allow','autoplay');
+          resolved.setAttribute('loading','lazy');
+          resolved.style.width='100%';
+          resolved.style.height='300px';
+          resolved.style.border='0';
+          resolved.style.borderRadius='17px';
+          resolved.style.display='block';
+        }
+      })
+      .catch(()=>{
+        container.innerHTML=`<div class="ez-sc-state"><div class="ez-sc-state-inner"><div class="ez-sc-pulse">▶</div><strong>Full Speed Ahead</strong><p>The private SoundCloud master cannot be embedded directly, so the broken white error player has been removed.</p><a href="${trackUrl}" target="_blank" rel="noopener">Open private master ↗</a></div></div>`;
+      });
+  }
+
   function loadPageExtensions(){
     const path=location.pathname.toLowerCase();
     const isAiSystems=path.endsWith('/ai-systems.html') || path.endsWith('/ai-systems');
-    if(!isAiSystems) return;
+    if(isAiSystems){
+      if(!document.querySelector('script[data-ez-ai-systems-extension]')){
+        const script=document.createElement('script');
+        script.src='/ai-systems-extended.js?v=20260907-1';
+        script.dataset.ezAiSystemsExtension='true';
+        document.head.appendChild(script);
+      }
 
-    if(!document.querySelector('script[data-ez-ai-systems-extension]')){
-      const script=document.createElement('script');
-      script.src='/ai-systems-extended.js?v=20260907-1';
-      script.dataset.ezAiSystemsExtension='true';
-      document.head.appendChild(script);
-    }
+      if(!document.querySelector('link[data-ez-ai-systems-ratings-style]')){
+        const link=document.createElement('link');
+        link.rel='stylesheet';
+        link.href='/ai-systems-ratings.css?v=20260908-1';
+        link.dataset.ezAiSystemsRatingsStyle='true';
+        document.head.appendChild(link);
+      }
 
-    if(!document.querySelector('link[data-ez-ai-systems-ratings-style]')){
-      const link=document.createElement('link');
-      link.rel='stylesheet';
-      link.href='/ai-systems-ratings.css?v=20260908-1';
-      link.dataset.ezAiSystemsRatingsStyle='true';
-      document.head.appendChild(link);
+      if(!document.querySelector('script[data-ez-ai-systems-ratings]')){
+        const ratings=document.createElement('script');
+        ratings.src='/ai-systems-ratings.js?v=20260908-1';
+        ratings.dataset.ezAiSystemsRatings='true';
+        document.body.appendChild(ratings);
+      }
     }
-
-    if(!document.querySelector('script[data-ez-ai-systems-ratings]')){
-      const ratings=document.createElement('script');
-      ratings.src='/ai-systems-ratings.js?v=20260908-1';
-      ratings.dataset.ezAiSystemsRatings='true';
-      document.body.appendChild(ratings);
-    }
+    fixMusicSoundCloud();
   }
 
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',()=>{render();loadPageExtensions();},{once:true}); else {render();loadPageExtensions();}
