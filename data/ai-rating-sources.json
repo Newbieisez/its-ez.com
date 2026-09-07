@@ -31,34 +31,34 @@
   },
   "sources": {
     "salesforce": [
-      { "type":"apple-app-store", "appId":"404249815", "country":"us", "label":"Apple App Store — Salesforce mobile", "scope":"mobile_app" }
+      { "type":"licensed-json", "url":"https://itunes.apple.com/lookup?id=404249815&country=us", "ratingPath":"results.0.averageUserRating", "countPath":"results.0.userRatingCount", "maxRating":5, "label":"Apple App Store — Salesforce mobile", "scope":"mobile_app" }
     ],
     "hubspot": [
-      { "type":"apple-app-store", "appId":"1107711722", "country":"us", "label":"Apple App Store — HubSpot mobile", "scope":"mobile_app" }
+      { "type":"licensed-json", "url":"https://itunes.apple.com/lookup?id=1107711722&country=us", "ratingPath":"results.0.averageUserRating", "countPath":"results.0.userRatingCount", "maxRating":5, "label":"Apple App Store — HubSpot mobile", "scope":"mobile_app" }
     ],
     "dynamics": [
-      { "type":"apple-app-store", "appId":"1485578688", "country":"us", "label":"Apple App Store — Dynamics 365 Sales mobile", "scope":"mobile_app" }
+      { "type":"licensed-json", "url":"https://itunes.apple.com/lookup?id=1485578688&country=us", "ratingPath":"results.0.averageUserRating", "countPath":"results.0.userRatingCount", "maxRating":5, "label":"Apple App Store — Dynamics 365 Sales mobile", "scope":"mobile_app" }
     ],
     "zoho": [
-      { "type":"apple-app-store", "appId":"444908810", "country":"us", "label":"Apple App Store — Zoho CRM mobile", "scope":"mobile_app" }
+      { "type":"licensed-json", "url":"https://itunes.apple.com/lookup?id=444908810&country=us", "ratingPath":"results.0.averageUserRating", "countPath":"results.0.userRatingCount", "maxRating":5, "label":"Apple App Store — Zoho CRM mobile", "scope":"mobile_app" }
     ],
     "attio": [
-      { "type":"apple-app-store", "appId":"1511545395", "country":"us", "label":"Apple App Store — Attio mobile", "scope":"mobile_app" }
+      { "type":"licensed-json", "url":"https://itunes.apple.com/lookup?id=1511545395&country=us", "ratingPath":"results.0.averageUserRating", "countPath":"results.0.userRatingCount", "maxRating":5, "label":"Apple App Store — Attio mobile", "scope":"mobile_app" }
     ],
     "close-crm": [
-      { "type":"apple-app-store", "appId":"1668836284", "country":"us", "label":"Apple App Store — Close CRM mobile", "scope":"mobile_app" }
+      { "type":"licensed-json", "url":"https://itunes.apple.com/lookup?id=1668836284&country=us", "ratingPath":"results.0.averageUserRating", "countPath":"results.0.userRatingCount", "maxRating":5, "label":"Apple App Store — Close CRM mobile", "scope":"mobile_app" }
     ],
     "folk-crm": [
-      { "type":"apple-app-store", "appId":"6761423430", "country":"us", "label":"Apple App Store — folk CRM mobile", "scope":"mobile_app" }
+      { "type":"licensed-json", "url":"https://itunes.apple.com/lookup?id=6761423430&country=us", "ratingPath":"results.0.averageUserRating", "countPath":"results.0.userRatingCount", "maxRating":5, "label":"Apple App Store — folk CRM mobile", "scope":"mobile_app" }
     ],
     "gong": [
-      { "type":"apple-app-store", "appId":"1289289459", "country":"us", "label":"Apple App Store — Gong mobile", "scope":"mobile_app" }
+      { "type":"licensed-json", "url":"https://itunes.apple.com/lookup?id=1289289459&country=us", "ratingPath":"results.0.averageUserRating", "countPath":"results.0.userRatingCount", "maxRating":5, "label":"Apple App Store — Gong mobile", "scope":"mobile_app" }
     ],
     "chorus": [
-      { "type":"apple-app-store", "appId":"1591442342", "country":"us", "label":"Apple App Store — Chorus by ZoomInfo mobile", "scope":"mobile_app" }
+      { "type":"licensed-json", "url":"https://itunes.apple.com/lookup?id=1591442342&country=us", "ratingPath":"results.0.averageUserRating", "countPath":"results.0.userRatingCount", "maxRating":5, "label":"Apple App Store — Chorus by ZoomInfo mobile", "scope":"mobile_app" }
     ],
     "clari": [
-      { "type":"apple-app-store", "appId":"977304452", "country":"us", "label":"Apple App Store — Clari mobile", "scope":"mobile_app" }
+      { "type":"licensed-json", "url":"https://itunes.apple.com/lookup?id=977304452&country=us", "ratingPath":"results.0.averageUserRating", "countPath":"results.0.userRatingCount", "maxRating":5, "label":"Apple App Store — Clari mobile", "scope":"mobile_app" }
     ],
     "n8n": [
       {
@@ -72,7 +72,7 @@
   "notes": [
     "Restricted review sites are intentionally blocked from automated collection.",
     "Apple App Store ratings are collected through Apple's official Search/Lookup API and are labeled as mobile-app sentiment, not whole-platform sentiment.",
-    "A mobile-app rating can produce a Provisional EZ Score, but a Live EZ Score requires at least two independent evidence sources and the configured minimum component count.",
+    "A mobile-app rating can produce a Provisional EZ Score, but a Live EZ Score requires additional independent evidence and the configured minimum component count.",
     "TrustRadius API support is available in the refresh script when TRUSTRADIUS_API_KEY and per-product slugs are configured.",
     "JSON-LD aggregateRating scraping is permitted only for explicitly configured allowlisted pages after robots.txt permits access.",
     "Missing evidence produces Collecting data / Insufficient data, never an invented rating."
