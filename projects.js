@@ -157,6 +157,93 @@
     sections.forEach(function(section){observer.observe(section);});
   }
 
+  function installPageMap(){
+    if(document.querySelector('.ez-page-map')||!document.querySelector('main'))return;
+    var main=document.querySelector('main');
+    var sections=[].slice.call(main.querySelectorAll(':scope > section')).filter(function(section){
+      return !section.classList.contains('ez-motion-break')&&!section.hidden;
+    });
+    if(sections.length<4)return;
+
+    var known={top:'Overview',about:'About',work:'Selected Work',operating:'How I Build',proof:'Proof',recommendations:'People',contact:'Contact'};
+    var used={};
+    var items=[];
+    sections.forEach(function(section,index){
+      var heading=section.querySelector('h1,h2');
+      var raw=(section.getAttribute('data-page-map-label')||known[section.id]||(heading&&heading.textContent)||section.getAttribute('aria-label')||'').replace(/\s+/g,' ').trim();
+      if(!raw)return;
+      var id=section.id;
+      if(!id){
+        id='section-'+(index+1);
+        while(document.getElementById(id))id+='x';
+        section.id=id;
+      }
+      if(used[id])return;
+      used[id]=true;
+      var label=known[id]||raw;
+      if(label.length>26)label=label.slice(0,25).replace(/[\s,.;:!?-]+$/,'')+'…';
+      items.push({id:id,label:label,section:section});
+    });
+    if(items.length<4)return;
+
+    addStyle('ez-page-map-style',
+      '.ez-page-map{position:fixed;left:18px;top:50%;z-index:46;width:178px;transform:translateY(-50%);padding:14px 12px 12px;border:1px solid rgba(255,255,255,.16);border-radius:16px;background:rgba(10,12,14,.94);color:#fff;box-shadow:0 16px 40px rgba(0,0,0,.24);backdrop-filter:blur(14px)}'+
+      '.ez-page-map-head{display:flex;align-items:center;justify-content:space-between;gap:8px;margin:0 2px 10px;color:#969da5;font-size:9px;font-weight:900;letter-spacing:.13em;text-transform:uppercase}.ez-page-map-head b{color:#ef233c;font-size:12px}'+
+      '.ez-page-map nav{position:relative;display:grid;gap:1px;padding-left:10px}.ez-page-map nav:before{content:"";position:absolute;left:7px;top:14px;bottom:14px;width:1px;background:rgba(255,255,255,.17)}'+
+      '.ez-page-map a{position:relative;display:grid;grid-template-columns:13px 1fr;gap:8px;align-items:center;min-height:32px;padding:5px 6px 5px 0;border-radius:8px;color:#b8bec5!important;font-size:10px;font-weight:850;line-height:1.15;text-decoration:none!important;transition:background .18s ease,color .18s ease,transform .18s ease}'+
+      '.ez-page-map a:before{content:"";position:relative;z-index:1;width:8px;height:8px;margin-left:-7px;border:2px solid #6d737a;border-radius:50%;background:#0a0c0e;transition:.18s ease}.ez-page-map a:hover{color:#fff!important;transform:translateX(2px)}'+
+      '.ez-page-map a.is-active{color:#fff!important;background:rgba(255,255,255,.07)}.ez-page-map a.is-active:before{border-color:#ef233c;background:#ef233c;box-shadow:0 0 0 4px rgba(239,35,60,.17)}'+
+      '.ez-page-map-progress{height:2px;margin:10px 2px 0;border-radius:99px;background:rgba(255,255,255,.12);overflow:hidden}.ez-page-map-progress span{display:block;width:0;height:100%;background:#ef233c}'+
+      '.ez-page-map-toggle{display:none;position:fixed;left:12px;bottom:14px;z-index:48;min-height:44px;padding:0 14px;border:1px solid rgba(255,255,255,.18);border-radius:999px;background:#0a0c0e;color:#fff;box-shadow:0 10px 28px rgba(0,0,0,.28);font:900 10px/1 Arial,Helvetica,sans-serif;letter-spacing:.08em;text-transform:uppercase;cursor:pointer}'+
+      'main>section[id]{scroll-margin-top:92px}'+
+      '@media(max-width:1579px){.ez-page-map{display:none;top:auto;left:12px;bottom:66px;width:min(220px,calc(100vw - 24px));transform:none}.ez-page-map.is-open{display:block}.ez-page-map-toggle{display:block}}'+
+      '@media(min-width:1580px){.ez-page-map{display:block!important}.ez-page-map-toggle{display:none!important}}'+
+      '@media(max-width:620px){.ez-page-map{bottom:64px}.ez-page-map a{min-height:36px;font-size:11px}.ez-page-map-toggle{bottom:12px}}'
+    );
+
+    var map=document.createElement('aside');
+    map.className='ez-page-map';
+    map.setAttribute('aria-label','Page sections');
+    map.innerHTML='<div class="ez-page-map-head"><span>On this page</span><b>•</b></div><nav></nav><div class="ez-page-map-progress" aria-hidden="true"><span></span></div>';
+    var nav=map.querySelector('nav');
+    items.forEach(function(item){
+      var a=document.createElement('a');
+      a.href='#'+item.id;
+      a.textContent=item.label;
+      a.addEventListener('click',function(){map.classList.remove('is-open');var t=document.querySelector('.ez-page-map-toggle');if(t)t.setAttribute('aria-expanded','false');});
+      nav.appendChild(a);
+    });
+    document.body.appendChild(map);
+
+    var toggle=document.createElement('button');
+    toggle.type='button';
+    toggle.className='ez-page-map-toggle';
+    toggle.setAttribute('aria-expanded','false');
+    toggle.textContent='☷ Page map';
+    toggle.addEventListener('click',function(){var open=map.classList.toggle('is-open');toggle.setAttribute('aria-expanded',String(open));});
+    document.body.appendChild(toggle);
+
+    var links=[].slice.call(nav.querySelectorAll('a'));
+    function activate(id){links.forEach(function(link){link.classList.toggle('is-active',link.getAttribute('href')==='#'+id);});}
+    if('IntersectionObserver' in window){
+      var observer=new IntersectionObserver(function(entries){
+        var visible=entries.filter(function(entry){return entry.isIntersecting;}).sort(function(a,b){return b.intersectionRatio-a.intersectionRatio;});
+        if(visible[0])activate(visible[0].target.id);
+      },{rootMargin:'-24% 0px -64% 0px',threshold:[0,.05,.2,.5]});
+      items.forEach(function(item){observer.observe(item.section);});
+    }else activate(items[0].id);
+
+    var progress=map.querySelector('.ez-page-map-progress span');
+    function updateProgress(){
+      var doc=document.documentElement;
+      var max=Math.max(1,doc.scrollHeight-window.innerHeight);
+      var pct=Math.max(0,Math.min(100,(window.scrollY/max)*100));
+      progress.style.width=pct+'%';
+    }
+    window.addEventListener('scroll',updateProgress,{passive:true});
+    updateProgress();
+  }
+
   function init(){
     lockUniversalReadability();
     lockCaseStudyReadability();
@@ -165,6 +252,7 @@
     enhanceWork();
     enhancePreviews();
     setupNavHighlight();
+    installPageMap();
   }
 
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});
