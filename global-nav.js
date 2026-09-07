@@ -1,5 +1,5 @@
 (() => {
-  const VERSION = '20260908-global-nav-4';
+  const VERSION = '20260908-global-nav-5';
   const ROOT = 'https://its-ez.com/';
   const css = `
   :root{--ez-nav-red:#ef1717;--ez-nav-black:#08090b;--ez-nav-line:rgba(255,255,255,.12)}
@@ -92,5 +92,15 @@
     document.addEventListener('keydown',e=>{if(e.key==='Escape'&&header.classList.contains('is-open')){header.classList.remove('is-open');button.setAttribute('aria-expanded','false');button.setAttribute('aria-label','Open navigation');button.textContent='☰';button.focus();}});
   }
 
-  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',render,{once:true}); else render();
+  function loadPageExtensions(){
+    const path=location.pathname.toLowerCase();
+    const isAiSystems=path.endsWith('/ai-systems.html') || path.endsWith('/ai-systems');
+    if(!isAiSystems || document.querySelector('script[data-ez-ai-systems-extension]')) return;
+    const script=document.createElement('script');
+    script.src='/ai-systems-extended.js?v=20260907-1';
+    script.dataset.ezAiSystemsExtension='true';
+    document.head.appendChild(script);
+  }
+
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',()=>{render();loadPageExtensions();},{once:true}); else {render();loadPageExtensions();}
 })();
