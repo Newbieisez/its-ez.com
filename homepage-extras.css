@@ -2,6 +2,10 @@
 html{scroll-padding-top:94px}
 section[id]{scroll-margin-top:94px}
 
+/* The motion reel was rendering as a large empty panel when the video failed.
+   Keep the homepage focused on the real content instead of reserving dead space. */
+.ez-motion-break{display:none!important}
+
 /* Live-build previews stay visible without trapping page scroll. */
 .site-preview-shell{position:relative;overflow:hidden;background:#111;border-radius:20px 20px 0 0}
 .site-preview-shell iframe{display:block;width:100%!important;height:470px!important;border:0!important;background:#111!important;pointer-events:none!important;user-select:none!important}
