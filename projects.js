@@ -1,8 +1,12 @@
 (function(){
   var css=document.createElement('link');
   css.rel='stylesheet';
-  css.href='hero-2026.css?v=20260906-approved-v2';
+  css.href='hero-2026.css?v=20260906-approved-v3';
   document.head.appendChild(css);
+
+  var hotfix=document.createElement('style');
+  hotfix.textContent='.portrait-stage:after{display:none!important;content:none!important}.hero:not(.hero-2026) .portrait-stage{overflow:visible!important}';
+  document.head.appendChild(hotfix);
 
   function buildApprovedHero(){
     var hero=document.querySelector('.hero');
@@ -24,24 +28,24 @@
             </div>\
           </div>\
           <div class="ez-hero-portrait-wrap" aria-label="Erez Haimowicz portrait">\
-            <img class="ez-hero-portrait" src="assets/ez-hero-black-shirt-v2.jpg?v=2" alt="Erez Haimowicz smiling in a black shirt">\
+            <img class="ez-hero-portrait" src="assets/ez-hero-black-shirt-v2.jpg?v=3" alt="Erez Haimowicz smiling in a black shirt">\
             <div class="ez-hero-portrait-shade" aria-hidden="true"></div>\
           </div>\
         </div>\
         <div class="ez-client-strip" aria-label="Companies where Erez has led sales, revenue, or enablement work">\
-          <div class="ez-client"><img src="sentinelone-logo.svg" alt="SentinelOne"></div>\
-          <div class="ez-client twilio">twilio</div>\
-          <div class="ez-client tessian">TESSIAN</div>\
-          <div class="ez-client cofense">COFENSE</div>\
-          <div class="ez-client">mimecast</div>\
-          <div class="ez-client proofpoint">proofpoint.</div>\
+          <div class="ez-client"><img src="sentinelone-logo.svg?v=2" alt="SentinelOne"></div>\
+          <div class="ez-client"><img src="assets/twilio-logo.svg" alt="Twilio"></div>\
+          <div class="ez-client"><img src="assets/tessian-logo.svg" alt="Tessian"></div>\
+          <div class="ez-client"><img src="assets/cofense-logo.svg" alt="Cofense"></div>\
+          <div class="ez-client"><img src="assets/mimecast-logo.svg" alt="Mimecast"></div>\
+          <div class="ez-client"><img src="assets/proofpoint-logo.svg" alt="Proofpoint"></div>\
         </div>\
         <div class="ez-hero-mantra"><strong>Know it. Practice it. Prove it. Perform.</strong><span>PEOPLE · SYSTEMS · REAL IMPACT</span></div>\
       </div>';
   }
 
   var original=document.createElement('script');
-  original.src='projects-original.js?v=20260906-approved';
+  original.src='projects-original.js?v=20260906-approved-v2';
   original.async=false;
   document.head.appendChild(original);
 
@@ -56,8 +60,8 @@
   },50);
 
   if(document.readyState==='loading'){
-    document.addEventListener('DOMContentLoaded',function(){setTimeout(buildApprovedHero,650)},{once:true});
+    document.addEventListener('DOMContentLoaded',function(){setTimeout(buildApprovedHero,350)},{once:true});
   }else{
-    setTimeout(buildApprovedHero,650);
+    setTimeout(buildApprovedHero,350);
   }
 }());
