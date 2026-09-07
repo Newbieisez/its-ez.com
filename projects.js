@@ -79,7 +79,7 @@
     var section=document.createElement('section');
     section.className='ez-motion-break';
     section.setAttribute('aria-label','EZ Enablement motion reel');
-    section.innerHTML='<div class="ez-motion-break-inner"><div class="ez-motion-break-frame"><video autoplay muted loop playsinline controls preload="metadata" poster="assets/las-vegas-hero-bg.jpg?v=20260907-video-poster"><source src="/motion_like_espn.mp4?v=20260907-motion-2" type="video/mp4">Your browser does not support HTML5 video.</video><div class="ez-motion-break-label">EZ Enablement · In Motion</div><div class="ez-motion-fallback"><strong>EZ Enablement · In Motion</strong><span>The reel could not start automatically.</span><a href="/motion_like_espn.mp4?v=20260907-motion-2" target="_blank" rel="noopener">Play the video ↗</a></div></div></div>';
+    section.innerHTML='<div class="ez-motion-break-inner"><div class="ez-motion-break-frame"><video autoplay muted playsinline controls preload="metadata" poster="assets/las-vegas-hero-bg.jpg?v=20260907-video-poster"><source src="/motion_like_espn.mp4?v=20260907-motion-2" type="video/mp4">Your browser does not support HTML5 video.</video><div class="ez-motion-break-label">EZ Enablement · In Motion</div><div class="ez-motion-fallback"><strong>EZ Enablement · In Motion</strong><span>The reel could not start automatically.</span><a href="/motion_like_espn.mp4?v=20260907-motion-2" target="_blank" rel="noopener">Play the video ↗</a></div></div></div>';
     hero.parentNode.insertBefore(section,hero.nextSibling);
 
     var video=section.querySelector('video');
@@ -87,6 +87,8 @@
     video.muted=true;
     video.defaultMuted=true;
     video.playsInline=true;
+    video.loop=false;
+    video.removeAttribute('loop');
     video.addEventListener('loadeddata',function(){section.classList.remove('is-error');},{once:true});
     video.addEventListener('error',function(){section.classList.add('is-error');},{once:true});
     video.load();
