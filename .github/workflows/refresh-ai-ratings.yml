@@ -4,6 +4,16 @@ on:
   workflow_dispatch:
   schedule:
     - cron: '17 */6 * * *'
+  push:
+    branches: [main]
+    paths:
+      - 'ai-systems.js'
+      - 'ai-systems-extended.js'
+      - 'ai-systems-ratings.js'
+      - 'ai-systems-ratings.css'
+      - 'scripts/refresh-ai-ratings.mjs'
+      - 'data/ai-rating-sources.json'
+      - '.github/workflows/refresh-ai-ratings.yml'
   pull_request:
     paths:
       - 'ai-systems.js'
