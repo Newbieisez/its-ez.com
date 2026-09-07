@@ -1,5 +1,5 @@
 (() => {
-  const VERSION = '20260907-nav-cleanup-1';
+  const VERSION = '20260907-nav-cleanup-2';
   const ROOT = 'https://its-ez.com/';
 
   const css = `
@@ -145,6 +145,17 @@
 
   function loadPageExtensions(){
     const path=location.pathname.toLowerCase();
+    if(path.endsWith('/recommendations.html') || path.endsWith('/recommendations')){
+      if(!document.querySelector('link[data-ez-recommendations-style]')){
+        const l=document.createElement('link');
+        l.rel='stylesheet';
+        l.href='/recommendations-2026.css?v=20260907-1';
+        l.dataset.ezRecommendationsStyle='true';
+        document.head.appendChild(l);
+      }
+      const theme=document.querySelector('meta[name="theme-color"]');
+      if(theme) theme.setAttribute('content','#08090b');
+    }
     if(path.endsWith('/ai-systems.html') || path.endsWith('/ai-systems')){
       if(!document.querySelector('script[data-ez-ai-systems-extension]')){const s=document.createElement('script');s.src='/ai-systems-extended.js?v=20260907-1';s.dataset.ezAiSystemsExtension='true';document.head.appendChild(s);}
       if(!document.querySelector('link[data-ez-ai-systems-ratings-style]')){const l=document.createElement('link');l.rel='stylesheet';l.href='/ai-systems-ratings.css?v=20260908-1';l.dataset.ezAiSystemsRatingsStyle='true';document.head.appendChild(l);}
