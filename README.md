@@ -1,33 +1,9 @@
-# Erez Haimowicz Portfolio
+# its-ez.com
 
-Live site: https://its-ez.com/
+Personal portfolio and consulting site for Erez Haimowicz.
 
-Static portfolio site for Erez Haimowicz, hosted through GitHub Pages with the custom domain `its-ez.com` and HTTPS enabled.
+Live site: https://its-ez.com
 
-## Canva gallery slots
+## Current homepage direction
 
-The responsive portfolio gallery uses three 1200 × 760 image slots. Export the final Canva designs as SVG and replace the matching file without changing `index.html`:
-
-- `assets/canva-4-stage-framework-placeholder.svg`
-- `assets/canva-8-week-accelerator-placeholder.svg`
-- `assets/canva-kpi-metrics-placeholder.svg`
-
-The KPI values are live HTML layered over the third image so recruiters and search engines can read them. Update the values directly in the `kpi-overlay` block in `index.html`.
-
-## Executive resume gate
-
-The resume CTAs collect a valid email through FormSubmit before downloading `Erez-Haimowicz-Executive-Resume.pdf`. FormSubmit sends a one-time activation message to `ErezHaimowicz@gmail.com`; submit the form once after deployment and approve that message to activate delivery.
-
-## Search discovery
-
-- `robots.txt` allows crawling and points search engines to the sitemap.
-- `sitemap.xml` identifies `https://its-ez.com/` as the canonical public page to crawl.
-- `CNAME` keeps GitHub Pages mapped to `its-ez.com`.
-
-## Local preview
-
-```bash
-python3 -m http.server 4173
-```
-
-Then open `http://localhost:4173`.
+The homepage uses a dark personal-brand hero focused on People, Performance, Possibilities, clear consulting offers, and measurable GTM / enablement impact.
