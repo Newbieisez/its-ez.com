@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-07T22:07:30.231Z",
+  "updatedAt": "2026-09-07T22:15:46.996Z",
   "items": {
     "chatgpt": [],
     "claude": [],
@@ -15,11 +15,23 @@
         "score": 9.3,
         "status": "provisional",
         "confidence": 8.4
+      },
+      {
+        "at": "2026-09-07T22:15:46.996Z",
+        "score": 9.3,
+        "status": "provisional",
+        "confidence": 8.4
       }
     ],
     "hubspot": [
       {
         "at": "2026-09-07T22:07:30.231Z",
+        "score": 9.3,
+        "status": "provisional",
+        "confidence": 8.4
+      },
+      {
+        "at": "2026-09-07T22:15:46.996Z",
         "score": 9.3,
         "status": "provisional",
         "confidence": 8.4
@@ -31,11 +43,23 @@
         "score": 8.4,
         "status": "provisional",
         "confidence": 7
+      },
+      {
+        "at": "2026-09-07T22:15:46.996Z",
+        "score": 8.4,
+        "status": "provisional",
+        "confidence": 7
       }
     ],
     "zoho": [
       {
         "at": "2026-09-07T22:07:30.231Z",
+        "score": 8.6,
+        "status": "provisional",
+        "confidence": 7.7
+      },
+      {
+        "at": "2026-09-07T22:15:46.996Z",
         "score": 8.6,
         "status": "provisional",
         "confidence": 7.7
@@ -47,11 +71,23 @@
         "score": 7.5,
         "status": "provisional",
         "confidence": 5.9
+      },
+      {
+        "at": "2026-09-07T22:15:46.996Z",
+        "score": 7.5,
+        "status": "provisional",
+        "confidence": 5.9
       }
     ],
     "chorus": [
       {
         "at": "2026-09-07T22:07:30.231Z",
+        "score": 6.3,
+        "status": "provisional",
+        "confidence": 5.3
+      },
+      {
+        "at": "2026-09-07T22:15:46.996Z",
         "score": 6.3,
         "status": "provisional",
         "confidence": 5.3
@@ -63,30 +99,134 @@
         "score": 8.9,
         "status": "provisional",
         "confidence": 7.2
+      },
+      {
+        "at": "2026-09-07T22:15:46.996Z",
+        "score": 8.9,
+        "status": "provisional",
+        "confidence": 7.2
       }
     ],
     "outreach": [],
     "salesloft": [],
     "rattle": [],
-    "seismic": [],
-    "highspot": [],
-    "allego": [],
+    "seismic": [
+      {
+        "at": "2026-09-07T22:15:46.996Z",
+        "score": 7.4,
+        "status": "provisional",
+        "confidence": 5.6
+      }
+    ],
+    "highspot": [
+      {
+        "at": "2026-09-07T22:15:46.996Z",
+        "score": 8.6,
+        "status": "provisional",
+        "confidence": 6
+      }
+    ],
+    "allego": [
+      {
+        "at": "2026-09-07T22:15:46.996Z",
+        "score": 8.4,
+        "status": "provisional",
+        "confidence": 6.4
+      }
+    ],
     "letter-ai": [],
-    "mindtickle": [],
-    "showpad": [],
+    "mindtickle": [
+      {
+        "at": "2026-09-07T22:15:46.996Z",
+        "score": 7.6,
+        "status": "provisional",
+        "confidence": 6.3
+      }
+    ],
+    "showpad": [
+      {
+        "at": "2026-09-07T22:15:46.996Z",
+        "score": 7.3,
+        "status": "provisional",
+        "confidence": 5.2
+      }
+    ],
     "spekit": [],
-    "workramp": [],
-    "saleshood": [],
+    "workramp": [
+      {
+        "at": "2026-09-07T22:15:46.996Z",
+        "score": 6.6,
+        "status": "provisional",
+        "confidence": 4.8
+      }
+    ],
+    "saleshood": [
+      {
+        "at": "2026-09-07T22:15:46.996Z",
+        "score": 7.8,
+        "status": "provisional",
+        "confidence": 5.7
+      }
+    ],
     "second-nature": [],
-    "docebo": [],
-    "360learning": [],
-    "cornerstone": [],
-    "degreed": [],
+    "docebo": [
+      {
+        "at": "2026-09-07T22:15:46.996Z",
+        "score": 5,
+        "status": "provisional",
+        "confidence": 6.7
+      }
+    ],
+    "360learning": [
+      {
+        "at": "2026-09-07T22:15:46.996Z",
+        "score": 9.4,
+        "status": "provisional",
+        "confidence": 8.2
+      }
+    ],
+    "cornerstone": [
+      {
+        "at": "2026-09-07T22:15:46.996Z",
+        "score": 5.8,
+        "status": "provisional",
+        "confidence": 5.8
+      }
+    ],
+    "degreed": [
+      {
+        "at": "2026-09-07T22:15:46.996Z",
+        "score": 6.9,
+        "status": "provisional",
+        "confidence": 4.5
+      }
+    ],
     "thought-industries": [],
     "skilljar": [],
-    "learnupon": [],
-    "absorb": [],
-    "sana": [],
+    "learnupon": [
+      {
+        "at": "2026-09-07T22:15:46.996Z",
+        "score": 6.8,
+        "status": "provisional",
+        "confidence": 4
+      }
+    ],
+    "absorb": [
+      {
+        "at": "2026-09-07T22:15:46.996Z",
+        "score": 7.5,
+        "status": "provisional",
+        "confidence": 4.8
+      }
+    ],
+    "sana": [
+      {
+        "at": "2026-09-07T22:15:46.996Z",
+        "score": 7.3,
+        "status": "provisional",
+        "confidence": 4.7
+      }
+    ],
     "glean": [],
     "notion": [],
     "guru": [],
@@ -129,6 +269,12 @@
         "score": 6.9,
         "status": "provisional",
         "confidence": 5.2
+      },
+      {
+        "at": "2026-09-07T22:15:46.996Z",
+        "score": 6.9,
+        "status": "provisional",
+        "confidence": 5.2
       }
     ],
     "close-crm": [
@@ -137,11 +283,23 @@
         "score": 6.9,
         "status": "provisional",
         "confidence": 5.5
+      },
+      {
+        "at": "2026-09-07T22:15:46.996Z",
+        "score": 6.9,
+        "status": "provisional",
+        "confidence": 5.5
       }
     ],
     "folk-crm": [
       {
         "at": "2026-09-07T22:07:30.231Z",
+        "score": 7,
+        "status": "provisional",
+        "confidence": 4
+      },
+      {
+        "at": "2026-09-07T22:15:46.996Z",
         "score": 7,
         "status": "provisional",
         "confidence": 4
