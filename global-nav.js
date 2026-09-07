@@ -1,5 +1,5 @@
 (() => {
-  const VERSION = '20260907-nav-cleanup-2';
+  const VERSION = '20260907-nav-cleanup-3';
   const ROOT = 'https://its-ez.com/';
 
   const css = `
@@ -114,15 +114,22 @@
       `;
       source.insertAdjacentElement('afterend',style);
       const map=document.querySelector('.ez-page-map');
-      if(map){
-        map.querySelectorAll('a').forEach(a=>{if(a.textContent.trim()==='People')a.textContent='Recommendations';});
-      }
+      if(map){map.querySelectorAll('a').forEach(a=>{if(a.textContent.trim()==='People')a.textContent='Recommendations';});}
       return true;
     };
     if(apply()) return;
     const observer=new MutationObserver(()=>{if(apply())observer.disconnect();});
     observer.observe(document.documentElement,{childList:true,subtree:true});
     setTimeout(()=>observer.disconnect(),8000);
+  }
+
+  function installHeroPortrait(){
+    const path=location.pathname.toLowerCase();
+    if(!(path==='/' || path==='/index.html')) return;
+    const image=document.querySelector('.ez-hero-portrait');
+    if(!image) return;
+    image.src='/assets/ez-hero-portrait-2026.svg?v=20260907-1';
+    image.alt='Erez Haimowicz in the EZ Enablement studio';
   }
 
   function fixMusicSoundCloud(){
@@ -146,15 +153,8 @@
   function loadPageExtensions(){
     const path=location.pathname.toLowerCase();
     if(path.endsWith('/recommendations.html') || path.endsWith('/recommendations')){
-      if(!document.querySelector('link[data-ez-recommendations-style]')){
-        const l=document.createElement('link');
-        l.rel='stylesheet';
-        l.href='/recommendations-2026.css?v=20260907-1';
-        l.dataset.ezRecommendationsStyle='true';
-        document.head.appendChild(l);
-      }
-      const theme=document.querySelector('meta[name="theme-color"]');
-      if(theme) theme.setAttribute('content','#08090b');
+      if(!document.querySelector('link[data-ez-recommendations-style]')){const l=document.createElement('link');l.rel='stylesheet';l.href='/recommendations-2026.css?v=20260907-1';l.dataset.ezRecommendationsStyle='true';document.head.appendChild(l);}
+      const theme=document.querySelector('meta[name="theme-color"]');if(theme) theme.setAttribute('content','#08090b');
     }
     if(path.endsWith('/ai-systems.html') || path.endsWith('/ai-systems')){
       if(!document.querySelector('script[data-ez-ai-systems-extension]')){const s=document.createElement('script');s.src='/ai-systems-extended.js?v=20260907-1';s.dataset.ezAiSystemsExtension='true';document.head.appendChild(s);}
@@ -164,6 +164,6 @@
     fixMusicSoundCloud();
   }
 
-  function init(){render();installPageMapOverride();loadPageExtensions();}
+  function init(){render();installPageMapOverride();installHeroPortrait();loadPageExtensions();}
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init,{once:true}); else init();
 })();
