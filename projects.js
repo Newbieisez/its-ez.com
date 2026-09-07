@@ -1,7 +1,7 @@
 (function(){
   var css=document.createElement('link');
   css.rel='stylesheet';
-  css.href='hero-2026.css?v=20260906-approved';
+  css.href='hero-2026.css?v=20260906-approved-v2';
   document.head.appendChild(css);
 
   function buildApprovedHero(){
@@ -24,7 +24,7 @@
             </div>\
           </div>\
           <div class="ez-hero-portrait-wrap" aria-label="Erez Haimowicz portrait">\
-            <img class="ez-hero-portrait" src="assets/ez-hero-black-shirt.jpg" alt="Erez Haimowicz smiling in a black shirt">\
+            <img class="ez-hero-portrait" src="assets/ez-hero-black-shirt-v2.jpg?v=2" alt="Erez Haimowicz smiling in a black shirt">\
             <div class="ez-hero-portrait-shade" aria-hidden="true"></div>\
           </div>\
         </div>\
