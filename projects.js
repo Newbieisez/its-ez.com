@@ -11,15 +11,15 @@
     var style=document.createElement('style');
     style.id='ez-hero-polish';
     style.textContent='\
-/* Hero polish: calmer portrait treatment + separate EZ and Las Vegas neon marks */\
-.hero.hero-2026 .ez-hero-portrait{transform:scale(.97) translateY(4px)!important;transform-origin:center bottom!important;filter:saturate(.82) contrast(1.045) brightness(1.025)!important}\
-.hero.hero-2026 .ez-hero-portrait-wrap:before{background:radial-gradient(circle at 54% 24%,rgba(255,255,255,.085),transparent 27%),linear-gradient(90deg,rgba(2,3,4,.48),transparent 19%),linear-gradient(180deg,transparent 52%,rgba(2,3,4,.74) 100%)!important}\
-.hero.hero-2026 .ez-vegas-mark{right:2px!important;top:112px!important;z-index:8!important;transform:none!important}\
-.hero.hero-2026 .ez-vegas-mark strong{font-size:clamp(38px,2.75vw,55px)!important;line-height:.86!important;transform:rotate(-5deg)!important}\
-.hero.hero-2026 .ez-vegas-mark span{margin-top:16px!important;margin-left:74px!important;font-size:10px!important;background:rgba(2,3,4,.36)!important}\
-.hero.hero-2026 .ez-vegas-mark:before{content:"EZ"!important;position:absolute!important;right:215px!important;top:-66px!important;display:block!important;color:#fff!important;font-family:Arial,Helvetica,sans-serif!important;font-size:clamp(48px,3.7vw,70px)!important;font-weight:950!important;font-style:italic!important;letter-spacing:-.10em!important;line-height:.8!important;text-shadow:0 0 5px rgba(255,255,255,.95),0 0 11px rgba(239,35,60,.95),0 0 26px rgba(239,35,60,.72),18px 0 0 rgba(239,35,60,.92)!important;transform:skewX(-8deg)!important;white-space:nowrap!important}\
-@media(max-width:1180px){.hero.hero-2026 .ez-vegas-mark{top:94px!important}.hero.hero-2026 .ez-vegas-mark:before{right:175px!important;top:-58px!important}.hero.hero-2026 .ez-vegas-mark span{display:none!important}}\
-@media(max-width:900px){.hero.hero-2026 .ez-hero-portrait{transform:none!important;filter:saturate(.84) contrast(1.04) brightness(1.02)!important}.hero.hero-2026 .ez-vegas-mark{display:none!important}}';
+/* Hero polish: calmer portrait + one clean EZ / Las Vegas lockup */\
+.hero.hero-2026 .ez-hero-portrait{transform:scale(.87) translate(-3%,3%)!important;transform-origin:left bottom!important;object-position:left bottom!important;filter:saturate(.82) contrast(1.035) brightness(1.035)!important}\
+.hero.hero-2026 .ez-hero-portrait-wrap:before{background:radial-gradient(circle at 37% 22%,rgba(255,255,255,.095),transparent 25%),linear-gradient(90deg,rgba(2,3,4,.34),transparent 20%),linear-gradient(180deg,transparent 50%,rgba(2,3,4,.76) 100%)!important}\
+.hero.hero-2026 .ez-vegas-mark{right:10px!important;top:42px!important;z-index:8!important;width:250px!important;min-height:245px!important;padding:94px 8px 12px 22px!important;box-sizing:border-box!important;transform:none!important;background:linear-gradient(110deg,rgba(2,3,4,.90) 0%,rgba(2,3,4,.72) 46%,rgba(2,3,4,.18) 100%)!important;border-radius:20px!important}\
+.hero.hero-2026 .ez-vegas-mark strong{font-size:clamp(38px,2.65vw,54px)!important;line-height:.88!important;transform:rotate(-5deg)!important;white-space:nowrap!important}\
+.hero.hero-2026 .ez-vegas-mark span{margin-top:18px!important;margin-left:50px!important;font-size:10px!important;background:rgba(2,3,4,.30)!important}\
+.hero.hero-2026 .ez-vegas-mark:before{content:"EZ"!important;position:absolute!important;left:24px!important;top:22px!important;display:block!important;color:#fff!important;font-family:Arial,Helvetica,sans-serif!important;font-size:clamp(48px,3.8vw,70px)!important;font-weight:950!important;font-style:italic!important;letter-spacing:-.10em!important;line-height:.8!important;text-shadow:0 0 5px rgba(255,255,255,.92),0 0 12px rgba(239,35,60,.92),0 0 28px rgba(239,35,60,.68),18px 0 0 rgba(239,35,60,.90)!important;transform:skewX(-8deg)!important;white-space:nowrap!important}\
+@media(max-width:1180px){.hero.hero-2026 .ez-hero-portrait{transform:scale(.91) translate(-2%,2%)!important}.hero.hero-2026 .ez-vegas-mark{right:0!important;top:34px!important;width:220px!important;padding-top:84px!important}.hero.hero-2026 .ez-vegas-mark span{display:none!important}}\
+@media(max-width:900px){.hero.hero-2026 .ez-hero-portrait{transform:none!important;object-position:center 18%!important;filter:saturate(.84) contrast(1.04) brightness(1.02)!important}.hero.hero-2026 .ez-vegas-mark{display:none!important}}';
     document.head.appendChild(style);
   }
 
@@ -54,6 +54,24 @@
 #work.cinematic-work .project-block p,#work.cinematic-work .project-block ul{font-size:14px!important;line-height:1.68!important}\
 @media(max-width:1100px){#work.cinematic-work .project-toggle{grid-template-columns:40px minmax(0,1fr)!important}#work.cinematic-work .project-metrics,#work.cinematic-work .project-action{grid-column:2!important}#work.cinematic-work .project-action{justify-self:start!important}}\
 @media(max-width:700px){#work.cinematic-work .project-toggle{grid-template-columns:1fr!important;gap:14px!important;padding:22px!important}#work.cinematic-work .project-index,#work.cinematic-work .project-heading,#work.cinematic-work .project-metrics,#work.cinematic-work .project-action{grid-column:1!important}#work.cinematic-work .project-heading h3{font-size:28px!important}#work.cinematic-work .project-scan{font-size:14px!important}#work.cinematic-work .project-metric{font-size:10px!important}}';
+    document.head.appendChild(style);
+  }
+
+  function lockRecommendationReadability(){
+    if(document.getElementById('ez-recommendation-readability'))return;
+    var style=document.createElement('style');
+    style.id='ez-recommendation-readability';
+    style.textContent='\
+#recommendations .recommendation-card,#recommendations .recommendation-card:hover{background:#0f1215!important;color:#fff!important;border:1px solid rgba(255,255,255,.18)!important;opacity:1!important;visibility:visible!important}\
+#recommendations .recommendation-card{transition:transform .2s ease,border-color .2s ease,background .2s ease!important}\
+#recommendations .recommendation-card:hover{transform:translateY(-3px)!important;background:#15191d!important;border-color:rgba(239,35,60,.58)!important}\
+#recommendations .recommendation-card blockquote,#recommendations .recommendation-card:hover blockquote{color:#fff!important;opacity:1!important;visibility:visible!important}\
+#recommendations .recommendation-card .recommendation-name,#recommendations .recommendation-card:hover .recommendation-name{color:#ef233c!important;opacity:1!important;visibility:visible!important}\
+#recommendations .recommendation-card .recommendation-role,#recommendations .recommendation-card:hover .recommendation-role{color:#bfc5cc!important;opacity:1!important;visibility:visible!important}\
+#recommendations .recommendation-card .recommendation-link,#recommendations .recommendation-card:hover .recommendation-link{color:#ef233c!important;opacity:1!important;visibility:visible!important}\
+#recommendations .recommendation-card:hover *{opacity:1!important;visibility:visible!important}\
+#recommendations .recommendation-card a:hover{color:#ff5364!important}\
+';
     document.head.appendChild(style);
   }
 
@@ -115,7 +133,7 @@
     sections.forEach(function(section){observer.observe(section);});
   }
 
-  function init(){lockHeroPolish();lockCaseStudyReadability();enhanceWork();enhancePreviews();setupNavHighlight();}
+  function init(){lockHeroPolish();lockCaseStudyReadability();lockRecommendationReadability();enhanceWork();enhancePreviews();setupNavHighlight();}
   if(document.readyState==='loading')document.addEventListener('DOMContentLoaded',init,{once:true});
   else init();
 }());
