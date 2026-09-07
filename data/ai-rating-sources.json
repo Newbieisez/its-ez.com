@@ -96,7 +96,7 @@
     "learnupon": [
       { "type":"licensed-json", "url":"https://itunes.apple.com/lookup?id=947445473&country=us", "ratingPath":"results.0.averageUserRating", "countPath":"results.0.userRatingCount", "maxRating":5, "label":"Apple App Store — LearnUpon mobile", "scope":"mobile_app" }
     ],
-    "absorb-lms": [
+    "absorb": [
       { "type":"licensed-json", "url":"https://itunes.apple.com/lookup?id=1450653475&country=us", "ratingPath":"results.0.averageUserRating", "countPath":"results.0.userRatingCount", "maxRating":5, "label":"Apple App Store — Absorb Learn", "scope":"mobile_app" }
     ],
     "sana": [
