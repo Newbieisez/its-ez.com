@@ -1,5 +1,5 @@
 (() => {
-  const VERSION = '20260908-nav-cleanup-1';
+  const VERSION = '20260908-user-headshot-1';
   const ROOT = 'https://its-ez.com/';
 
   const css = `
@@ -33,7 +33,7 @@
     if(!document.querySelector('link[data-ez-responsive]')){
       const link=document.createElement('link');
       link.rel='stylesheet';
-      link.href=ROOT+'responsive-2026.css?v=20260908-nav-cleanup-1';
+      link.href=ROOT+'responsive-2026.css?v=20260908-user-headshot-1';
       link.dataset.ezResponsive='true';
       document.head.appendChild(link);
     }
@@ -140,8 +140,8 @@
     if(!(path==='/' || path==='/index.html')) return;
     const image=document.querySelector('.ez-hero-portrait');
     if(!image) return;
-    image.src='/assets/ez-hero-portrait-2026-hires.svg?v=20260908-nav-cleanup-1';
-    image.alt='Erez Haimowicz smiling in the EZ Enablement studio';
+    image.src='/assets/ez-hero-portrait-2026-hires.svg?v=20260908-user-headshot-1';
+    image.alt='Erez Haimowicz in a black blazer and black shirt';
   }
 
   function fixMusicSoundCloud(){
