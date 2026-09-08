@@ -231,13 +231,13 @@
     map.id='ez-page-map';
     document.body.appendChild(toggle);
 
-    function isMobileSheet(){return window.matchMedia('(max-width:620px)').matches;}
     function setOpen(open){
       map.classList.toggle('is-open',open);
-      backdrop.classList.toggle('is-open',open&&isMobileSheet());
+      backdrop.classList.remove('is-open');
       toggle.setAttribute('aria-expanded',String(open));
-      map.setAttribute('aria-hidden',String(!open&&window.innerWidth<1580));
-      document.body.classList.toggle('ez-page-map-lock',open&&isMobileSheet());
+      map.setAttribute('aria-hidden',String(!open));
+      document.body.classList.remove('ez-page-map-lock');
+      if(open)document.dispatchEvent(new Event('ez:page-map-open'));
     }
 
     nav.addEventListener('click',function(event){
@@ -248,11 +248,15 @@
     toggle.addEventListener('click',function(){setOpen(!map.classList.contains('is-open'));});
     map.querySelector('.ez-page-map-close').addEventListener('click',function(){setOpen(false);toggle.focus();});
     backdrop.addEventListener('click',function(){setOpen(false);});
+    document.addEventListener('ez:close-page-map',function(){setOpen(false);});
+    document.addEventListener('click',function(event){
+      if(map.classList.contains('is-open')&&!map.contains(event.target)&&!toggle.contains(event.target))setOpen(false);
+    });
+    document.addEventListener('focusin',function(event){
+      if(map.classList.contains('is-open')&&!map.contains(event.target)&&!toggle.contains(event.target))setOpen(false);
+    });
     document.addEventListener('keydown',function(event){if(event.key==='Escape'&&map.classList.contains('is-open')){setOpen(false);toggle.focus();}});
-    window.addEventListener('resize',function(){
-      if(window.innerWidth>=1580){setOpen(false);map.setAttribute('aria-hidden','false');}
-      else if(!map.classList.contains('is-open'))map.setAttribute('aria-hidden','true');
-    },{passive:true});
+    setOpen(false);
 
     var links=[].slice.call(nav.querySelectorAll('a'));
     function activate(id){links.forEach(function(link){link.classList.toggle('is-active',link.getAttribute('href')==='#'+id);});}

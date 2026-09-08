@@ -278,9 +278,9 @@ body.ez-homepage .hero.hero-2026 .ez-hero-portrait{
   inset:auto 0 0 auto!important;
   width:100%!important;
   height:100%!important;
-  object-fit:cover!important;
-  object-position:center 34%!important;
-  transform:scale(.94)!important;
+  object-fit:contain!important;
+  object-position:center center!important;
+  transform:none!important;
   transform-origin:center center!important;
   filter:none!important;
   border:0!important;
@@ -687,4 +687,10 @@ body.ez-homepage .home-offer:active span{color:#555c64!important}
 body.ez-homepage .home-offer:hover::before,
 body.ez-homepage .home-offer:focus-visible::before,
 body.ez-homepage .home-offer:active::before{background:#ef233c!important;opacity:1!important}
+
+/* Keep nested emphasis on the same dark surface as its parent card. */
+body.ez-homepage .stack-group strong,
+body.ez-homepage .stack-group:hover strong,
+body.ez-homepage .stack-group:focus-within strong{color:#fff!important}
+body.ez-homepage .recommendation-link{color:#ff6978!important}
 /* EZ HOME OFFER HOVER GUARD END */
