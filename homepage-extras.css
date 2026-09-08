@@ -502,3 +502,160 @@ body.ez-homepage .ez-motion-break video{
   margin:0!important;
 }
 /* EZ HERO COMPANY STRIP POLISH END */
+
+
+/* EZ HOME OFFERS REPAIR START */
+body.ez-homepage .home-offers{
+  position:relative!important;
+  display:block!important;
+  padding:88px 0 96px!important;
+  margin:0!important;
+  background:#f3f0ea!important;
+  color:#0a0b0d!important;
+  border:0!important;
+  overflow:hidden!important;
+}
+body.ez-homepage .home-offers>.wrap{
+  width:min(1500px,calc(100% - 72px))!important;
+  max-width:none!important;
+  margin-inline:auto!important;
+}
+body.ez-homepage .home-offers-head{
+  display:grid!important;
+  grid-template-columns:minmax(0,1.05fr) minmax(360px,.95fr)!important;
+  gap:72px!important;
+  align-items:end!important;
+  margin:0 0 42px!important;
+}
+body.ez-homepage .home-offers .eyebrow{
+  display:block!important;
+  margin:0 0 16px!important;
+  color:#ef233c!important;
+  font:900 11px/1 Arial,Helvetica,sans-serif!important;
+  letter-spacing:.22em!important;
+  text-transform:uppercase!important;
+}
+body.ez-homepage .home-offers .section-title{
+  width:auto!important;
+  max-width:760px!important;
+  margin:0!important;
+  color:#0a0b0d!important;
+  font-family:Arial Black,Arial,Helvetica,sans-serif!important;
+  font-size:clamp(46px,5.1vw,76px)!important;
+  font-weight:950!important;
+  line-height:.94!important;
+  letter-spacing:-.055em!important;
+  text-transform:none!important;
+}
+body.ez-homepage .home-offers-head .body-copy{
+  max-width:680px!important;
+  margin:0!important;
+  color:#454b53!important;
+  font:500 19px/1.62 Arial,Helvetica,sans-serif!important;
+  letter-spacing:-.012em!important;
+}
+body.ez-homepage .home-offer-grid{
+  display:grid!important;
+  grid-template-columns:repeat(3,minmax(0,1fr))!important;
+  gap:16px!important;
+  width:100%!important;
+  margin:0!important;
+  padding:0!important;
+}
+body.ez-homepage .home-offer{
+  position:relative!important;
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:flex-start!important;
+  justify-content:flex-start!important;
+  min-width:0!important;
+  min-height:220px!important;
+  padding:28px 28px 30px!important;
+  margin:0!important;
+  color:#0a0b0d!important;
+  background:#fff!important;
+  border:1px solid rgba(10,11,13,.14)!important;
+  border-radius:16px!important;
+  box-shadow:0 12px 34px rgba(10,11,13,.05)!important;
+  text-decoration:none!important;
+  overflow:hidden!important;
+  transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease!important;
+}
+body.ez-homepage .home-offer::before{
+  content:''!important;
+  position:absolute!important;
+  left:0!important;
+  top:0!important;
+  width:100%!important;
+  height:4px!important;
+  background:#ef233c!important;
+}
+body.ez-homepage .home-offer:hover,
+body.ez-homepage .home-offer:focus-visible{
+  transform:translateY(-4px)!important;
+  border-color:rgba(10,11,13,.34)!important;
+  box-shadow:0 18px 42px rgba(10,11,13,.10)!important;
+  outline:none!important;
+}
+body.ez-homepage .home-offer small{
+  display:block!important;
+  width:100%!important;
+  margin:0 0 18px!important;
+  color:#ef233c!important;
+  font:900 10px/1.15 Arial,Helvetica,sans-serif!important;
+  letter-spacing:.12em!important;
+  text-transform:uppercase!important;
+}
+body.ez-homepage .home-offer strong{
+  display:block!important;
+  width:100%!important;
+  margin:0 0 12px!important;
+  color:#0a0b0d!important;
+  font-family:Arial Black,Arial,Helvetica,sans-serif!important;
+  font-size:clamp(22px,2vw,29px)!important;
+  font-weight:950!important;
+  line-height:1.04!important;
+  letter-spacing:-.04em!important;
+}
+body.ez-homepage .home-offer span{
+  display:block!important;
+  width:100%!important;
+  margin:0!important;
+  color:#555c64!important;
+  font:500 15px/1.58 Arial,Helvetica,sans-serif!important;
+  letter-spacing:-.005em!important;
+}
+body.ez-homepage .home-offers-action{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:flex-start!important;
+  margin:30px 0 0!important;
+}
+body.ez-homepage .home-offers-action .button{
+  display:inline-flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  min-height:52px!important;
+  padding:0 24px!important;
+  border-radius:999px!important;
+  background:#0a0b0d!important;
+  border:1px solid #0a0b0d!important;
+  color:#fff!important;
+  font:900 13px/1 Arial,Helvetica,sans-serif!important;
+  text-decoration:none!important;
+}
+@media(max-width:1100px){
+  body.ez-homepage .home-offers-head{grid-template-columns:1fr!important;gap:22px!important;align-items:start!important}
+  body.ez-homepage .home-offers-head .body-copy{max-width:860px!important}
+  body.ez-homepage .home-offer-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
+@media(max-width:720px){
+  body.ez-homepage .home-offers{padding:62px 0 70px!important}
+  body.ez-homepage .home-offers>.wrap{width:calc(100% - 28px)!important}
+  body.ez-homepage .home-offers .section-title{font-size:clamp(40px,13vw,58px)!important;line-height:.96!important}
+  body.ez-homepage .home-offers-head .body-copy{font-size:16px!important;line-height:1.55!important}
+  body.ez-homepage .home-offer-grid{grid-template-columns:1fr!important;gap:12px!important}
+  body.ez-homepage .home-offer{min-height:0!important;padding:24px!important}
+  body.ez-homepage .home-offer strong{font-size:24px!important}
+}
+/* EZ HOME OFFERS REPAIR END */

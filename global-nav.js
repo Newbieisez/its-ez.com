@@ -1,5 +1,5 @@
 (() => {
-  const VERSION = '20260908-hero-polish-2';
+  const VERSION = '20260908-offers-repair-1';
   const ROOT = 'https://its-ez.com/';
 
   const css = `
