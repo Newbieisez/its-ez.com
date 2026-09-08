@@ -1,5 +1,5 @@
 (() => {
-  const VERSION = '20260908-headshot-rescue-1';
+  const VERSION = '20260908-asset-cleanup-1';
   const ROOT = 'https://its-ez.com/';
 
   const css = `
@@ -33,7 +33,7 @@
     if(!document.querySelector('link[data-ez-responsive]')){
       const link=document.createElement('link');
       link.rel='stylesheet';
-      link.href=ROOT+'responsive-2026.css?v=20260908-headshot-rescue-1';
+      link.href=ROOT+'responsive-2026.css?v=20260908-asset-cleanup-1';
       link.dataset.ezResponsive='true';
       document.head.appendChild(link);
     }
