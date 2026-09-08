@@ -1,4 +1,4 @@
-name: Use uploaded 2026 headshot for homepage hero
+name: Use fixed 2026 headshot for homepage hero
 
 on:
   push:
@@ -17,27 +17,27 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Point hero to uploaded PNG
+      - name: Point hero to fixed SVG
         shell: bash
         run: |
           python3 - <<'PY'
           from pathlib import Path
           import re
 
-          TAG = '20260908-headshot-2026-live-1'
-          SOURCE_FS = Path('assets/headshot 2026.png')
-          SOURCE_WEB = 'assets/headshot%202026.png'
+          TAG = '20260908-headshot-fixed-svg-1'
+          SOURCE_FS = Path('assets/headshot2026fixed.svg')
+          SOURCE_WEB = 'assets/headshot2026fixed.svg'
 
           if not SOURCE_FS.exists():
-              raise SystemExit('Uploaded headshot 2026.png is missing from assets')
+              raise SystemExit('Fixed headshot SVG is missing from assets')
           if SOURCE_FS.stat().st_size < 500_000:
-              raise SystemExit(f'Uploaded headshot is unexpectedly small: {SOURCE_FS.stat().st_size} bytes')
+              raise SystemExit(f'Fixed headshot SVG is unexpectedly small: {SOURCE_FS.stat().st_size} bytes')
 
           index = Path('index.html')
           html = index.read_text(encoding='utf-8')
           html, count = re.subn(
               r'<img\s+class="ez-hero-portrait"[^>]*>',
-              f'<img class="ez-hero-portrait" src="{SOURCE_WEB}?v={TAG}" alt="Erez Haimowicz" width="1536" height="1536" loading="eager" fetchpriority="high" decoding="async">',
+              f'<img class="ez-hero-portrait" src="{SOURCE_WEB}?v={TAG}" alt="Erez Haimowicz" width="600" height="600" loading="eager" fetchpriority="high" decoding="async">',
               html,
               count=1,
               flags=re.S,
@@ -45,48 +45,32 @@ jobs:
           if count != 1:
               raise SystemExit(f'Expected one hero portrait element, changed {count}')
 
-          # Force browsers to reload the two files that control the hero.
-          html = re.sub(r'homepage-extras\.css\?v=[^"\']+', f'homepage-extras.css?v={TAG}', html, count=1)
-          html = re.sub(r'global-nav\.js\?v=[^"\']+', f'global-nav.js?v={TAG}', html, count=1)
           index.write_text(html, encoding='utf-8')
 
-          css_path = Path('homepage-extras.css')
-          css = css_path.read_text(encoding='utf-8')
+          css = Path('homepage-extras.css').read_text(encoding='utf-8')
           portrait_rule = re.search(r'body\.ez-homepage \.hero\.hero-2026 \.ez-hero-portrait\s*\{(.*?)\}', css, re.S)
           if not portrait_rule:
               raise SystemExit('Hero portrait CSS rule missing')
           if 'content:' in portrait_rule.group(1).lower():
-              raise SystemExit('Hero CSS is still overriding the image source')
-
-          nav_path = Path('global-nav.js')
-          js = nav_path.read_text(encoding='utf-8')
-          js = re.sub(r"const VERSION = '[^']+';", f"const VERSION = '{TAG}';", js, count=1)
-          js = re.sub(r'responsive-2026\.css\?v=[^"\']+', f'responsive-2026.css?v={TAG}', js)
-          nav_path.write_text(js, encoding='utf-8')
+              raise SystemExit('Hero CSS is overriding the image source')
 
           final_html = index.read_text(encoding='utf-8')
           assert f'src="{SOURCE_WEB}?v={TAG}"' in final_html
-          assert f'homepage-extras.css?v={TAG}' in final_html
-          assert f'global-nav.js?v={TAG}' in final_html
-          print(f'Using uploaded hero: {SOURCE_FS} ({SOURCE_FS.stat().st_size} bytes)')
+          print(f'Using fixed hero: {SOURCE_FS} ({SOURCE_FS.stat().st_size} bytes)')
           PY
 
-          file "assets/headshot 2026.png"
-          file "assets/headshot 2026.png" | grep -q 'PNG image data'
-          grep -q 'src="assets/headshot%202026.png?v=20260908-headshot-2026-live-1"' index.html
-          ! grep -q -E 'content[[:space:]]*:[[:space:]]*url\(' homepage-extras.css || {
-            echo 'Note: homepage-extras.css contains content:url elsewhere; checking portrait rule was already done in Python.'
-          }
+          test -s "assets/headshot2026fixed.svg"
+          grep -q 'src="assets/headshot2026fixed.svg?v=20260908-headshot-fixed-svg-1"' index.html
 
       - name: Commit homepage headshot switch
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add index.html global-nav.js
+          git add index.html
           if git diff --cached --quiet; then
             echo "No changes required."
             exit 0
           fi
-          git commit -m "Use uploaded headshot 2026 PNG in homepage hero"
+          git commit -m "Use fixed 2026 SVG headshot in homepage hero"
           git push origin HEAD:main
