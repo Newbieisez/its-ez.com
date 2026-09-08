@@ -1,4 +1,4 @@
-/* EZ Enablement shared responsive guard layer — 2026-09-07 */
+/* EZ Enablement shared responsive guard layer — 2026-09-08 */
 :root{--ez-safe-gutter:clamp(14px,3vw,32px)}
 html{max-width:100%;overflow-x:clip;-webkit-text-size-adjust:100%;text-size-adjust:100%}
 body,main,header,footer,section,article,aside,nav{min-width:0;max-width:100%}
@@ -14,10 +14,6 @@ table{max-width:100%}
 
 /* Sticky-header anchor safety */
 [id]{scroll-margin-top:96px}
-
-/* Homepage — the Page Map must never cover the hero or primary content. */
-body.ez-homepage .ez-page-map-toggle,
-body.ez-homepage .ez-page-map{display:none!important}
 
 /* Homepage */
 @media(max-width:1180px){
