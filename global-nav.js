@@ -1,5 +1,5 @@
 (() => {
-  const VERSION = '20260908-offers-repair-1';
+  const VERSION = '20260908-offers-hover-fix-1';
   const ROOT = 'https://its-ez.com/';
 
   const css = `
