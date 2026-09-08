@@ -17,27 +17,26 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Unify hero assets and remove runtime portrait swap
+      - name: Unify current homepage hero build
         shell: bash
         run: |
           python3 - <<'PY'
           from pathlib import Path
           import re
 
-          TAG = "20260908-unified-hero-2"
+          TAG = "20260908-unified-hero-4"
+          PORTRAIT = "assets/ez-hero-portrait-2026-hires.svg"
 
-          # 1) Initial HTML: one cache tag + exact supplied headshot at first paint.
+          # ------------------------------------------------------------------
+          # index.html: one cache tag everywhere + portrait in initial HTML.
+          # ------------------------------------------------------------------
           index = Path("index.html")
           html = index.read_text(encoding="utf-8")
-          html = html.replace("20260907-approved-1", TAG)
 
-          for asset in ["projects.css", "wow.css", "contrast.css", "homepage-extras.css", "hero-final.css"]:
-              html = re.sub(
-                  rf'({re.escape(asset)})\?v=[^"\']+',
-                  rf'\1?v={TAG}',
-                  html,
-              )
+          # Eliminate every stale homepage cache tag, not just selected assets.
+          html = re.sub(r'\?v=[^"\'\s>]+', f'?v={TAG}', html)
 
+          # Make sure global-nav itself is cache-busted with the same tag.
           html = re.sub(
               r'<script\s+src="global-nav\.js(?:\?v=[^"]*)?"\s+defer></script>',
               f'<script src="global-nav.js?v={TAG}" defer></script>',
@@ -45,63 +44,87 @@ jobs:
               count=1,
           )
 
+          # Exact user-supplied portrait is present in the static HTML on first paint.
           hero_img = (
               f'<img class="ez-hero-portrait" '
-              f'src="assets/ez-hero-portrait-2026-hires.svg?v={TAG}" '
+              f'src="{PORTRAIT}?v={TAG}" '
               f'alt="Erez Haimowicz in a black blazer and black shirt" '
-              f'width="1254" height="1254" loading="eager" fetchpriority="high" decoding="sync">'
+              f'width="1254" height="1254" loading="eager" '
+              f'fetchpriority="high" decoding="async">'
           )
-          html, count = re.subn(
+          html, hero_count = re.subn(
               r'<img\s+class="ez-hero-portrait"[^>]*>',
               hero_img,
               html,
               count=1,
               flags=re.S,
           )
-          if count != 1:
-              raise SystemExit(f"Expected exactly one hero portrait image, found {count}")
+          if hero_count != 1:
+              raise SystemExit(f"Expected one hero portrait, found {hero_count}")
 
           index.write_text(html, encoding="utf-8")
 
-          # 2) Client script: use the same release tag and remove image src mutation.
+          # ------------------------------------------------------------------
+          # homepage-extras.css is the CURRENT authoritative homepage hero CSS.
+          # Keep the exact portrait and Vegas background on the same release tag.
+          # ------------------------------------------------------------------
+          home_css_file = Path("homepage-extras.css")
+          home_css = home_css_file.read_text(encoding="utf-8")
+          home_css = re.sub(r'\?v=[^\'\")\s]+', f'?v={TAG}', home_css)
+          home_css_file.write_text(home_css, encoding="utf-8")
+
+          # ------------------------------------------------------------------
+          # global-nav.js: same release tag and NO runtime portrait src mutation.
+          # ------------------------------------------------------------------
           nav = Path("global-nav.js")
           js = nav.read_text(encoding="utf-8")
           js = re.sub(r"const VERSION = '[^']+';", f"const VERSION = '{TAG}';", js, count=1)
-          js = re.sub(r"responsive-2026\.css\?v=[^'\"]+", f"responsive-2026.css?v={TAG}", js)
-          js = js.replace("20260908-user-headshot-1", TAG)
-          js = js.replace("20260908-hero-hotfix-2", TAG)
-          js = js.replace("20260908-hero-hotfix-1", TAG)
+          js = re.sub(
+              r"responsive-2026\.css\?v=[^'\"]+",
+              f"responsive-2026.css?v={TAG}",
+              js,
+          )
 
-          # Remove the function body that changed .ez-hero-portrait.src at runtime.
-          js, swapped = re.subn(
+          # Remove the function that changed the hero image after initial paint.
+          js, removed = re.subn(
               r'\n\s*function installHeroPortrait\(\)\{.*?\n\s*\}\n',
-              '\n  function installHeroPortrait(){}\n',
+              '\n',
               js,
               count=1,
               flags=re.S,
           )
-          if swapped != 1:
+          if removed != 1:
               raise SystemExit("Could not locate installHeroPortrait runtime swap")
-
-          # Remove any invocation too, so no hero portrait DOM mutation path remains.
           js = re.sub(r'\n\s*installHeroPortrait\(\);', '', js)
           nav.write_text(js, encoding="utf-8")
 
-          # 3) Hero CSS: same release tag for nested hero assets; keep tokens in :root.
-          css_file = Path("hero-final.css")
-          css = css_file.read_text(encoding="utf-8")
-          css = re.sub(r'\?v=2026090[78][^\'\")\s]+', f'?v={TAG}', css)
-          css_file.write_text(css, encoding="utf-8")
-
-          # 4) Assertions to prevent another split-state deployment.
+          # ------------------------------------------------------------------
+          # Verification: no split state is allowed to ship.
+          # ------------------------------------------------------------------
           final_html = index.read_text(encoding="utf-8")
+          final_css = home_css_file.read_text(encoding="utf-8")
           final_js = nav.read_text(encoding="utf-8")
-          assert "20260907-approved-1" not in final_html
-          assert f'hero-final.css?v={TAG}' in final_html
+
+          html_tags = set(re.findall(r'\?v=([^"\'\s>]+)', final_html))
+          if html_tags != {TAG}:
+              raise SystemExit(f"HTML cache tags are not unified: {sorted(html_tags)}")
+
+          assert f'homepage-extras.css?v={TAG}' in final_html
           assert f'global-nav.js?v={TAG}' in final_html
-          assert f'ez-hero-portrait-2026-hires.svg?v={TAG}' in final_html
-          assert "ez-hero-portrait" not in final_js
-          print("Hero unified successfully with", TAG)
+          assert f'{PORTRAIT}?v={TAG}' in final_html
+          assert 'loading="eager"' in final_html
+          assert 'fetchpriority="high"' in final_html
+          assert f"const VERSION = '{TAG}';" in final_js
+          assert f"responsive-2026.css?v={TAG}" in final_js
+          assert "installHeroPortrait" not in final_js
+          assert ".ez-hero-portrait" not in final_js
+          assert f"ez-hero-portrait-2026-hires.svg?v={TAG}" in final_css
+          assert f"las-vegas-hero-bg.jpg?v={TAG}" in final_css
+          assert "20260907-approved-1" not in final_html
+          assert "20260908-hero-rebuild-3" not in final_html
+          assert "20260908-exact-user-headshot-2" not in final_html
+
+          print("Current homepage hero unified successfully with", TAG)
           PY
 
       - name: Commit hero fix
@@ -113,6 +136,6 @@ jobs:
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add index.html global-nav.js hero-final.css
-          git commit -m "Unify homepage hero assets and remove runtime portrait swap"
+          git add index.html homepage-extras.css global-nav.js
+          git commit -m "Unify current homepage hero and remove runtime image swap"
           git push origin HEAD:main
