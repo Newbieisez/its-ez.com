@@ -1,4 +1,4 @@
-name: One-time rescue homepage hero
+name: One-time real JPEG homepage hero
 
 on:
   push:
@@ -17,33 +17,50 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Replace corrupted hero asset
+      - name: Build real JPEG and remove SVG image override
         shell: bash
         run: |
           python3 - <<'PY'
           from pathlib import Path
+          import base64
           import re
 
-          TAG = "20260908-headshot-rescue-1"
-          OLD = "assets/ez-hero-portrait-2026-hires.svg"
-          NEW = "assets/ez-headshot-500-fixed.svg"
+          TAG = "20260908-real-jpeg-1"
+          SOURCE_SVG = Path("assets/ez-headshot-500-fixed.svg")
+          JPEG_PATH = Path("assets/erez-hero-headshot.jpg")
 
+          # Extract the already-approved headshot bytes from the SVG wrapper and
+          # write them back as a real JPEG file. No image generation or editing.
+          svg = SOURCE_SVG.read_text(encoding="utf-8")
+          match = re.search(r'data:image/jpeg;base64,([^"\']+)', svg)
+          if not match:
+              raise SystemExit("Could not find embedded JPEG in approved headshot SVG")
+          jpeg = base64.b64decode(match.group(1), validate=True)
+          if not jpeg.startswith(b'\xff\xd8\xff') or not jpeg.endswith(b'\xff\xd9'):
+              raise SystemExit("Decoded headshot is not a valid JPEG stream")
+          if len(jpeg) < 15000:
+              raise SystemExit(f"Decoded JPEG unexpectedly small: {len(jpeg)} bytes")
+          JPEG_PATH.write_bytes(jpeg)
+
+          # Initial HTML must point directly to the real JPEG.
           index = Path("index.html")
           html = index.read_text(encoding="utf-8")
           html = re.sub(r'\?v=[^"\'\s>]+', f'?v={TAG}', html)
-          html = html.replace(OLD, NEW)
           html = re.sub(
               r'<img\s+class="ez-hero-portrait"[^>]*>',
-              f'<img class="ez-hero-portrait" src="{NEW}?v={TAG}" alt="Erez Haimowicz in a black blazer and black shirt" width="500" height="500" loading="eager" fetchpriority="high" decoding="async">',
+              f'<img class="ez-hero-portrait" src="assets/erez-hero-headshot.jpg?v={TAG}" alt="Erez Haimowicz in a black blazer and black shirt" width="500" height="500" loading="eager" fetchpriority="high" decoding="async">',
               html,
               count=1,
               flags=re.S,
           )
           index.write_text(html, encoding="utf-8")
 
+          # Stop CSS from replacing the img src. The img element owns its source.
           css_file = Path("homepage-extras.css")
           css = css_file.read_text(encoding="utf-8")
-          css = css.replace("ez-hero-portrait-2026-hires.svg", "ez-headshot-500-fixed.svg")
+          css = re.sub(r'\n\s*content:url\([^;]+\)!important;', '', css)
+          css = css.replace("ez-headshot-500-fixed.svg", "erez-hero-headshot.jpg")
+          css = css.replace("ez-hero-portrait-2026-hires.svg", "erez-hero-headshot.jpg")
           css = re.sub(r'\?v=[^\'\")\s]+', f'?v={TAG}', css)
           css_file.write_text(css, encoding="utf-8")
 
@@ -53,30 +70,35 @@ jobs:
           js = re.sub(r"responsive-2026\.css\?v=[^'\"]+", f"responsive-2026.css?v={TAG}", js)
           nav.write_text(js, encoding="utf-8")
 
+          # Hard verification before commit.
           final_html = index.read_text(encoding="utf-8")
           final_css = css_file.read_text(encoding="utf-8")
           final_js = nav.read_text(encoding="utf-8")
-
-          assert OLD not in final_html
-          assert OLD not in final_css
-          assert f'{NEW}?v={TAG}' in final_html
-          assert f'ez-headshot-500-fixed.svg?v={TAG}' in final_css
+          assert f'assets/erez-hero-headshot.jpg?v={TAG}' in final_html
+          assert 'content:url(' not in final_css or 'ez-hero-portrait' not in final_css.split('content:url(')[0][-300:]
+          assert 'ez-headshot-500-fixed.svg' not in final_html
+          assert 'ez-hero-portrait-2026-hires.svg' not in final_html
           assert f'homepage-extras.css?v={TAG}' in final_html
           assert f'global-nav.js?v={TAG}' in final_html
           assert f"const VERSION = '{TAG}';" in final_js
-          assert f"responsive-2026.css?v={TAG}" in final_js
-          print("Verified headshot rescue applied:", TAG)
+          assert JPEG_PATH.stat().st_size == len(jpeg)
+          print(f"Real JPEG hero ready: {JPEG_PATH} ({len(jpeg)} bytes), tag={TAG}")
           PY
 
-      - name: Commit hero rescue
+          file assets/erez-hero-headshot.jpg
+          file assets/erez-hero-headshot.jpg | grep -q "JPEG image data"
+          grep -q 'src="assets/erez-hero-headshot.jpg?v=20260908-real-jpeg-1"' index.html
+          ! grep -q 'content:url.*ez-headshot\|content:url.*ez-hero-portrait' homepage-extras.css
+
+      - name: Commit real JPEG hero fix
         shell: bash
         run: |
-          if git diff --quiet; then
+          if git diff --quiet -- index.html homepage-extras.css global-nav.js assets/erez-hero-headshot.jpg; then
             echo "No changes required."
             exit 0
           fi
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add index.html homepage-extras.css global-nav.js
-          git commit -m "Replace corrupted hero portrait with verified headshot asset"
+          git add index.html homepage-extras.css global-nav.js assets/erez-hero-headshot.jpg
+          git commit -m "Use real JPEG for homepage hero portrait"
           git push origin HEAD:main
