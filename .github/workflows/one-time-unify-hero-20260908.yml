@@ -95,7 +95,7 @@ jobs:
           )
           if removed != 1:
               raise SystemExit("Could not locate installHeroPortrait runtime swap")
-          js = re.sub(r'\n\s*installHeroPortrait\(\);', '', js)
+          js = js.replace('installHeroPortrait();', '')
           nav.write_text(js, encoding="utf-8")
 
           # ------------------------------------------------------------------
