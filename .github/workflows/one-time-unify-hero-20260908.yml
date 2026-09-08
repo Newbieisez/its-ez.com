@@ -1,4 +1,4 @@
-name: Clean broken homepage hero assets
+name: Use uploaded 2026 headshot for homepage hero
 
 on:
   push:
@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 jobs:
-  clean-hero-assets:
+  install-headshot:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
@@ -17,96 +17,76 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Remove broken hero files and normalize references
+      - name: Point hero to uploaded PNG
         shell: bash
         run: |
           python3 - <<'PY'
           from pathlib import Path
           import re
 
-          TAG = '20260908-asset-cleanup-1'
-          FALLBACK = 'assets/ez-hero-black-shirt-v2.jpg'
-          BROKEN_NAMES = [
-              'ez-headshot-500-fixed.svg',
-              'ez-headshot-20260908-fixed.svg',
-              'ez-hero-portrait-2026-hires.svg',
-          ]
+          TAG = '20260908-headshot-2026-live-1'
+          SOURCE_FS = Path('assets/headshot 2026.png')
+          SOURCE_WEB = 'assets/headshot%202026.png'
+
+          if not SOURCE_FS.exists():
+              raise SystemExit('Uploaded headshot 2026.png is missing from assets')
+          if SOURCE_FS.stat().st_size < 500_000:
+              raise SystemExit(f'Uploaded headshot is unexpectedly small: {SOURCE_FS.stat().st_size} bytes')
 
           index = Path('index.html')
           html = index.read_text(encoding='utf-8')
-          html = re.sub(
+          html, count = re.subn(
               r'<img\s+class="ez-hero-portrait"[^>]*>',
-              f'<img class="ez-hero-portrait" src="{FALLBACK}?v={TAG}" alt="Erez Haimowicz" width="500" height="500" loading="eager" fetchpriority="high" decoding="async">',
+              f'<img class="ez-hero-portrait" src="{SOURCE_WEB}?v={TAG}" alt="Erez Haimowicz" width="1536" height="1536" loading="eager" fetchpriority="high" decoding="async">',
               html,
               count=1,
               flags=re.S,
           )
-          html = html.replace('homepage-extras.css?v=20260908-headshot-rescue-1', f'homepage-extras.css?v={TAG}')
-          html = html.replace('global-nav.js?v=20260908-headshot-rescue-1', f'global-nav.js?v={TAG}')
+          if count != 1:
+              raise SystemExit(f'Expected one hero portrait element, changed {count}')
+
+          # Force browsers to reload the two files that control the hero.
+          html = re.sub(r'homepage-extras\.css\?v=[^"\']+', f'homepage-extras.css?v={TAG}', html, count=1)
+          html = re.sub(r'global-nav\.js\?v=[^"\']+', f'global-nav.js?v={TAG}', html, count=1)
           index.write_text(html, encoding='utf-8')
 
           css_path = Path('homepage-extras.css')
           css = css_path.read_text(encoding='utf-8')
-          # The img element owns its source. CSS must never swap image bytes.
-          css = re.sub(r'\n\s*content\s*:\s*url\([^;]+\)\s*!important\s*;', '', css, flags=re.I)
-          for name in BROKEN_NAMES:
-              css = css.replace(name, 'ez-hero-black-shirt-v2.jpg')
-          css = css.replace('20260908-headshot-rescue-1', TAG)
-          css_path.write_text(css, encoding='utf-8')
+          portrait_rule = re.search(r'body\.ez-homepage \.hero\.hero-2026 \.ez-hero-portrait\s*\{(.*?)\}', css, re.S)
+          if not portrait_rule:
+              raise SystemExit('Hero portrait CSS rule missing')
+          if 'content:' in portrait_rule.group(1).lower():
+              raise SystemExit('Hero CSS is still overriding the image source')
 
           nav_path = Path('global-nav.js')
           js = nav_path.read_text(encoding='utf-8')
           js = re.sub(r"const VERSION = '[^']+';", f"const VERSION = '{TAG}';", js, count=1)
-          js = js.replace('20260908-headshot-rescue-1', TAG)
-          for name in BROKEN_NAMES:
-              js = js.replace(name, 'ez-hero-black-shirt-v2.jpg')
+          js = re.sub(r'responsive-2026\.css\?v=[^"\']+', f'responsive-2026.css?v={TAG}', js)
           nav_path.write_text(js, encoding='utf-8')
 
-          # Remove the malformed / duplicate portrait files from the repo.
-          for rel in [
-              'assets/ez-headshot-500-fixed.svg',
-              'assets/ez-headshot-20260908-fixed.svg',
-              'assets/ez-hero-portrait-2026-hires.svg',
-          ]:
-              p = Path(rel)
-              if p.exists():
-                  p.unlink()
-
-          # Remove the accidental staging payload from the previous rescue attempt.
-          staging = Path('.github/hero-headshot/part0.b64')
-          if staging.exists():
-              staging.unlink()
-              try:
-                  staging.parent.rmdir()
-              except OSError:
-                  pass
-
-          # Hard verification: no live code may reference the removed files.
-          check_files = [Path('index.html'), Path('homepage-extras.css'), Path('global-nav.js')]
-          joined = '\n'.join(p.read_text(encoding='utf-8') for p in check_files)
-          for name in BROKEN_NAMES:
-              assert name not in joined, f'Broken asset still referenced: {name}'
-          assert f'src="{FALLBACK}?v={TAG}"' in index.read_text(encoding='utf-8')
-          portrait_rule = re.search(r'body\.ez-homepage \.hero\.hero-2026 \.ez-hero-portrait\s*\{(.*?)\}', css_path.read_text(encoding='utf-8'), re.S)
-          assert portrait_rule, 'Hero portrait CSS rule missing'
-          assert 'content:' not in portrait_rule.group(1).lower(), 'CSS still overrides portrait source'
-          assert Path(FALLBACK).exists(), 'Fallback JPG missing'
-          assert Path(FALLBACK).stat().st_size > 1000, 'Fallback JPG is unexpectedly tiny'
-          print('Hero asset cleanup verified.')
+          final_html = index.read_text(encoding='utf-8')
+          assert f'src="{SOURCE_WEB}?v={TAG}"' in final_html
+          assert f'homepage-extras.css?v={TAG}' in final_html
+          assert f'global-nav.js?v={TAG}' in final_html
+          print(f'Using uploaded hero: {SOURCE_FS} ({SOURCE_FS.stat().st_size} bytes)')
           PY
 
-          git grep -n -E 'ez-headshot-500-fixed|ez-headshot-20260908-fixed|ez-hero-portrait-2026-hires' -- ':!*.yml' && exit 1 || true
-          test -s assets/ez-hero-black-shirt-v2.jpg
+          file "assets/headshot 2026.png"
+          file "assets/headshot 2026.png" | grep -q 'PNG image data'
+          grep -q 'src="assets/headshot%202026.png?v=20260908-headshot-2026-live-1"' index.html
+          ! grep -q -E 'content[[:space:]]*:[[:space:]]*url\(' homepage-extras.css || {
+            echo 'Note: homepage-extras.css contains content:url elsewhere; checking portrait rule was already done in Python.'
+          }
 
-      - name: Commit cleanup
+      - name: Commit homepage headshot switch
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add -A index.html homepage-extras.css global-nav.js assets .github/hero-headshot || true
+          git add index.html global-nav.js
           if git diff --cached --quiet; then
             echo "No changes required."
             exit 0
           fi
-          git commit -m "Clean broken hero assets and restore valid portrait fallback"
+          git commit -m "Use uploaded headshot 2026 PNG in homepage hero"
           git push origin HEAD:main
