@@ -29,6 +29,7 @@ jobs:
           # 1) Initial HTML: one cache tag + exact supplied headshot at first paint.
           index = Path("index.html")
           html = index.read_text(encoding="utf-8")
+          html = html.replace("20260907-approved-1", TAG)
 
           for asset in ["projects.css", "wow.css", "contrast.css", "homepage-extras.css", "hero-final.css"]:
               html = re.sub(
