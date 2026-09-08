@@ -1,4 +1,4 @@
-name: Use fixed 2026 headshot for homepage hero
+name: Tighten homepage hero and company strip
 
 on:
   push:
@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 jobs:
-  install-headshot:
+  polish-homepage:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
@@ -17,60 +17,81 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Point hero to fixed SVG
+      - name: Polish portrait, company row, and video break
         shell: bash
         run: |
           python3 - <<'PY'
           from pathlib import Path
           import re
 
-          TAG = '20260908-headshot-fixed-svg-1'
-          SOURCE_FS = Path('assets/headshot2026fixed.svg')
-          SOURCE_WEB = 'assets/headshot2026fixed.svg'
+          TAG = '20260908-hero-polish-2'
+          headshot = Path('assets/headshot2026fixed.svg')
+          video = Path('motion_like_espn.mp4')
+          if not headshot.exists():
+              raise SystemExit('Fixed headshot SVG is missing')
+          if not video.exists():
+              raise SystemExit('Homepage motion video is missing')
 
-          if not SOURCE_FS.exists():
-              raise SystemExit('Fixed headshot SVG is missing from assets')
-          if SOURCE_FS.stat().st_size < 500_000:
-              raise SystemExit(f'Fixed headshot SVG is unexpectedly small: {SOURCE_FS.stat().st_size} bytes')
+          css_path = Path('homepage-extras.css')
+          css = css_path.read_text(encoding='utf-8')
 
-          index = Path('index.html')
-          html = index.read_text(encoding='utf-8')
-          html, count = re.subn(
-              r'<img\s+class="ez-hero-portrait"[^>]*>',
-              f'<img class="ez-hero-portrait" src="{SOURCE_WEB}?v={TAG}" alt="Erez Haimowicz" width="600" height="600" loading="eager" fetchpriority="high" decoding="async">',
-              html,
-              count=1,
-              flags=re.S,
-          )
+          # Make the portrait subtly smaller without changing the supplied image.
+          portrait_pattern = r'(body\.ez-homepage \.hero\.hero-2026 \.ez-hero-portrait\s*\{.*?transform:)scale\([^)]*\)(!important;.*?\})'
+          css, count = re.subn(portrait_pattern, r'\g<1>scale(.94)\g<2>', css, count=1, flags=re.S)
           if count != 1:
-              raise SystemExit(f'Expected one hero portrait element, changed {count}')
+              raise SystemExit(f'Expected one portrait transform rule, changed {count}')
 
-          index.write_text(html, encoding='utf-8')
+          marker_start = '/* EZ HERO COMPANY STRIP POLISH START */'
+          marker_end = '/* EZ HERO COMPANY STRIP POLISH END */'
+          css = re.sub(re.escape(marker_start) + r'.*?' + re.escape(marker_end), '', css, flags=re.S)
+          css += f'''\n\n{marker_start}\nbody.ez-homepage .hero.hero-2026 .ez-client-strip{{\n  display:grid!important;\n  grid-template-columns:repeat(7,minmax(0,1fr))!important;\n  align-items:center!important;\n  gap:0!important;\n  width:100%!important;\n  min-height:76px!important;\n  margin:16px 0 0!important;\n  padding:0 10px!important;\n  overflow:hidden!important;\n  background:rgba(5,7,9,.86)!important;\n  border-top:1px solid rgba(255,255,255,.12)!important;\n  border-bottom:1px solid rgba(255,255,255,.12)!important;\n}}\nbody.ez-homepage .hero.hero-2026 .ez-client{{\n  display:flex!important;\n  align-items:center!important;\n  justify-content:center!important;\n  min-width:0!important;\n  min-height:76px!important;\n  padding:10px 14px!important;\n  margin:0!important;\n  background:transparent!important;\n  border:0!important;\n  border-right:1px solid rgba(255,255,255,.12)!important;\n  border-radius:0!important;\n  box-shadow:none!important;\n  overflow:hidden!important;\n  font-size:0!important;\n  line-height:0!important;\n}}\nbody.ez-homepage .hero.hero-2026 .ez-client:last-child{{border-right:0!important}}\nbody.ez-homepage .hero.hero-2026 .ez-client::before,\nbody.ez-homepage .hero.hero-2026 .ez-client::after{{display:none!important;content:none!important}}\nbody.ez-homepage .hero.hero-2026 .ez-client img{{\n  display:block!important;\n  width:auto!important;\n  height:auto!important;\n  max-width:132px!important;\n  max-height:30px!important;\n  object-fit:contain!important;\n  margin:0 auto!important;\n  transform:none!important;\n}}\nbody.ez-homepage .hero.hero-2026 .reup-client{{\n  font:900 20px/1 Arial,Helvetica,sans-serif!important;\n  letter-spacing:-.04em!important;\n  color:#fff!important;\n  text-transform:lowercase!important;\n}}\nbody.ez-homepage .hero.hero-2026 .ez-hero-mantra{{display:none!important}}\nbody.ez-homepage .ez-motion-break{{\n  display:block!important;\n  position:relative!important;\n  width:100%!important;\n  margin:0!important;\n  padding:0!important;\n  background:#050607!important;\n  border-top:1px solid rgba(255,255,255,.08)!important;\n  border-bottom:1px solid rgba(255,255,255,.08)!important;\n  overflow:hidden!important;\n}}\nbody.ez-homepage .ez-motion-break video{{\n  display:block!important;\n  width:100%!important;\n  height:clamp(280px,38vw,620px)!important;\n  max-width:none!important;\n  object-fit:cover!important;\n  object-position:center!important;\n  margin:0!important;\n}}\n{marker_end}\n'''
+          css_path.write_text(css, encoding='utf-8')
 
-          css = Path('homepage-extras.css').read_text(encoding='utf-8')
-          portrait_rule = re.search(r'body\.ez-homepage \.hero\.hero-2026 \.ez-hero-portrait\s*\{(.*?)\}', css, re.S)
-          if not portrait_rule:
-              raise SystemExit('Hero portrait CSS rule missing')
-          if 'content:' in portrait_rule.group(1).lower():
-              raise SystemExit('Hero CSS is overriding the image source')
+          # Keep the company strip to one row on smaller screens too; allow horizontal scroll instead of wrapping.
+          responsive_path = Path('responsive-2026.css')
+          responsive = responsive_path.read_text(encoding='utf-8')
+          r_start = '/* EZ COMPANY STRIP SINGLE ROW START */'
+          r_end = '/* EZ COMPANY STRIP SINGLE ROW END */'
+          responsive = re.sub(re.escape(r_start) + r'.*?' + re.escape(r_end), '', responsive, flags=re.S)
+          responsive += f'''\n\n{r_start}\n@media(max-width:980px){{\n  body.ez-homepage .hero.hero-2026 .ez-client-strip{{display:flex!important;grid-template-columns:none!important;flex-wrap:nowrap!important;overflow-x:auto!important;overflow-y:hidden!important;padding:0!important;scroll-snap-type:x proximity!important;-webkit-overflow-scrolling:touch!important}}\n  body.ez-homepage .hero.hero-2026 .ez-client{{flex:0 0 140px!important;min-height:68px!important;border-top:0!important;border-right:1px solid rgba(255,255,255,.12)!important;scroll-snap-align:start!important}}\n  body.ez-homepage .hero.hero-2026 .ez-client img{{max-width:108px!important;max-height:26px!important}}\n}}\n{r_end}\n'''
+          responsive_path.write_text(responsive, encoding='utf-8')
 
-          final_html = index.read_text(encoding='utf-8')
-          assert f'src="{SOURCE_WEB}?v={TAG}"' in final_html
-          print(f'Using fixed hero: {SOURCE_FS} ({SOURCE_FS.stat().st_size} bytes)')
+          index_path = Path('index.html')
+          html = index_path.read_text(encoding='utf-8')
+          html = re.sub(r'homepage-extras\.css\?v=[^"\']+', f'homepage-extras.css?v={TAG}', html, count=1)
+
+          motion_markup = f'''<section class="ez-motion-break" aria-label="EZ Enablement brand reel">\n  <video autoplay muted loop playsinline preload="metadata" aria-label="EZ Enablement motion reel">\n    <source src="motion_like_espn.mp4?v={TAG}" type="video/mp4">\n  </video>\n</section>'''
+          if 'class="ez-motion-break"' not in html:
+              needle = '</section>\n<section class="home-offers"'
+              if needle not in html:
+                  raise SystemExit('Could not locate hero-to-offers boundary')
+              html = html.replace(needle, '</section>\n' + motion_markup + '\n<section class="home-offers"', 1)
+          index_path.write_text(html, encoding='utf-8')
+
+          nav_path = Path('global-nav.js')
+          nav = nav_path.read_text(encoding='utf-8')
+          nav = re.sub(r"const VERSION = '[^']+';", f"const VERSION = '{TAG}';", nav, count=1)
+          nav = re.sub(r'responsive-2026\.css\?v=[^"\']+', f'responsive-2026.css?v={TAG}', nav)
+          nav_path.write_text(nav, encoding='utf-8')
+
+          final_css = css_path.read_text(encoding='utf-8')
+          final_html = index_path.read_text(encoding='utf-8')
+          assert 'transform:scale(.94)!important' in final_css
+          assert 'grid-template-columns:repeat(7,minmax(0,1fr))!important' in final_css
+          assert 'class="ez-motion-break"' in final_html
+          assert f'motion_like_espn.mp4?v={TAG}' in final_html
+          print('Homepage hero polish applied successfully')
           PY
 
-          test -s "assets/headshot2026fixed.svg"
-          grep -q 'src="assets/headshot2026fixed.svg?v=20260908-headshot-fixed-svg-1"' index.html
-
-      - name: Commit homepage headshot switch
+      - name: Commit homepage polish
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add index.html
+          git add homepage-extras.css responsive-2026.css index.html global-nav.js
           if git diff --cached --quiet; then
             echo "No changes required."
             exit 0
           fi
-          git commit -m "Use fixed 2026 SVG headshot in homepage hero"
+          git commit -m "Polish hero portrait, company row, and video break"
           git push origin HEAD:main
