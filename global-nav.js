@@ -1,5 +1,5 @@
 (() => {
-  const VERSION = '20260908-hero-hotfix-1';
+  const VERSION = '20260908-hero-hotfix-2';
   const ROOT = 'https://its-ez.com/';
 
   const css = `
@@ -31,7 +31,7 @@
     if(document.querySelector('link[data-ez-responsive]')) return;
     const link=document.createElement('link');
     link.rel='stylesheet';
-    link.href=ROOT+'responsive-2026.css?v=20260908-hero-hotfix-1';
+    link.href=ROOT+'responsive-2026.css?v=20260908-hero-hotfix-2';
     link.dataset.ezResponsive='true';
     document.head.appendChild(link);
   }
@@ -221,7 +221,7 @@
     if(!(path==='/' || path==='/index.html')) return;
     const image=document.querySelector('.ez-hero-portrait');
     if(!image) return;
-    image.src='/assets/ez-hero-portrait-2026.svg?v=20260908-hero-hotfix-1';
+    image.src='/assets/ez-hero-portrait-2026-hires.svg?v=20260908-hero-hotfix-2';
     image.alt='Erez Haimowicz in the EZ Enablement studio';
   }
 
