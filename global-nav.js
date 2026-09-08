@@ -1,5 +1,5 @@
 (() => {
-  const VERSION = '20260908-offers-hover-fix-1';
+  const VERSION = '20260908-site-review-fixes-1';
   const ROOT = 'https://its-ez.com/';
 
   const css = `
@@ -17,11 +17,38 @@
   .ez-global-links>a[aria-current="page"]:after{content:"";position:absolute;left:8px;right:8px;bottom:2px;height:2px;background:var(--ez-nav-red)}
   .ez-global-cta{display:inline-flex;align-items:center;justify-content:center;min-height:40px;padding:0 14px;border:1px solid var(--ez-nav-red);border-radius:999px;color:#fff!important;text-decoration:none!important;font-size:10px!important;font-weight:900!important;letter-spacing:.07em!important;text-transform:uppercase!important;white-space:nowrap;flex:0 0 auto}.ez-global-cta:hover{background:var(--ez-nav-red)}
   .ez-global-menu{display:none;width:44px;height:44px;margin-left:auto;border:1px solid rgba(255,255,255,.2);border-radius:10px;background:transparent;color:#fff;font-size:22px;cursor:pointer;flex:0 0 auto}
-  body.ez-homepage .section{padding-top:78px!important;padding-bottom:78px!important}
-  body.ez-homepage .section-title{font-size:clamp(2rem,3.5vw,4rem)!important;line-height:1.02!important}
+
+  body.ez-homepage .section{padding-top:70px!important;padding-bottom:70px!important}
+  body.ez-homepage .section-title{font-size:clamp(1.95rem,3.1vw,3.45rem)!important;line-height:1.04!important;letter-spacing:-.045em!important}
+
+  body.ez-work-with-me .wm-hero{padding:92px 0 72px!important;min-height:0!important}
+  body.ez-work-with-me .wm-grid{gap:48px!important;align-items:center!important}
+  body.ez-work-with-me .wm-hero h1{font-size:clamp(3.25rem,6.7vw,6.4rem)!important;line-height:.9!important;letter-spacing:-.055em!important;margin-bottom:24px!important;max-width:820px!important}
+  body.ez-work-with-me .wm-lede{font-size:clamp(1.08rem,1.55vw,1.45rem)!important;line-height:1.45!important}
+  body.ez-work-with-me .wm-sub{font-size:.96rem!important;line-height:1.62!important}
+  body.ez-work-with-me .section{padding-top:72px!important;padding-bottom:72px!important}
+  body.ez-work-with-me .section-title{font-size:clamp(2rem,3.7vw,3.8rem)!important;line-height:1!important}
+  body.ez-work-with-me .problem-band{padding:68px 0!important}
+  body.ez-work-with-me .service-card{min-height:285px!important;padding:25px!important}
+
+  body.ez-music .hero{min-height:auto!important;padding:70px 0 62px!important}
+  body.ez-music h1{font-size:clamp(3.7rem,7vw,7.1rem)!important;line-height:.8!important}
+  body.ez-music .hero-grid{gap:48px!important}
+  body.ez-music .section{padding:68px 0!important}
+  body.ez-music .section h2{font-size:clamp(2.5rem,4.8vw,4.9rem)!important;line-height:.9!important}
+  body.ez-music .section-head{margin-bottom:26px!important;gap:34px!important}
+  body.ez-music .release-grid{gap:10px!important}
+  body.ez-music .release{min-height:220px!important;padding:18px!important;border-radius:17px!important}
+  body.ez-music .release strong{font-size:1.25rem!important;line-height:1!important;padding-right:32px!important}
+  body.ez-music .release span{font-weight:800!important;color:#b9bac1!important}
+  body.ez-music .release .arrow{width:34px!important;height:34px!important;right:14px!important;bottom:14px!important;background:var(--red)!important;border-color:var(--red)!important}
+  body.ez-music .original{padding:23px!important}
+  body.ez-music .original h3{font-size:clamp(2rem,3.2vw,3.4rem)!important}
+
   @media(max-width:1320px){.ez-global-brand-copy{display:none}.ez-global-shell{gap:8px}.ez-global-links>a{padding:0 6px;font-size:9.6px!important}.ez-global-cta{padding:0 11px;font-size:9px!important}}
-  @media(max-width:1040px){body{padding-top:64px!important}.ez-global-header{height:64px!important}.ez-global-shell{height:64px;width:min(100% - 24px,1520px)}.ez-global-mark{width:40px;height:40px;font-size:18px}.ez-global-brand-copy{display:grid}.ez-global-menu{display:block}.ez-global-cta{display:none}.ez-global-links{display:none;position:absolute;left:12px;right:12px;top:64px;z-index:10001;margin:0;padding:10px;background:#0b0c0f;border:1px solid rgba(255,255,255,.13);border-radius:0 0 16px 16px;box-shadow:0 20px 45px rgba(0,0,0,.5);grid-template-columns:repeat(2,minmax(0,1fr));gap:4px;max-height:calc(100dvh - 76px);overflow:auto}.ez-global-header.is-open .ez-global-links{display:grid}.ez-global-links>a{width:100%;min-height:44px;padding:0 12px;font-size:12px!important}.ez-global-links>a[aria-current="page"]:after{left:12px;right:12px}}
-  @media(max-width:520px){.ez-global-links{grid-template-columns:1fr}.ez-global-brand-copy strong{font-size:10px}.ez-global-brand-copy span{font-size:7px}body.ez-homepage .section{padding-top:58px!important;padding-bottom:58px!important}}
+  @media(max-width:1040px){body{padding-top:64px!important}.ez-global-header{height:64px!important}.ez-global-shell{height:64px;width:min(100% - 24px,1520px)}.ez-global-mark{width:40px;height:40px;font-size:18px}.ez-global-brand-copy{display:grid}.ez-global-menu{display:block}.ez-global-cta{display:none}.ez-global-links{display:none;position:absolute;left:12px;right:12px;top:64px;z-index:10001;margin:0;padding:10px;background:#0b0c0f;border:1px solid rgba(255,255,255,.13);border-radius:0 0 16px 16px;box-shadow:0 20px 45px rgba(0,0,0,.5);grid-template-columns:repeat(2,minmax(0,1fr));gap:4px;max-height:calc(100dvh - 76px);overflow:auto}.ez-global-header.is-open .ez-global-links{display:grid}.ez-global-links>a{width:100%;min-height:44px;padding:0 12px;font-size:12px!important}.ez-global-links>a[aria-current="page"]:after{left:12px;right:12px}body.ez-work-with-me .wm-grid{grid-template-columns:1fr!important}body.ez-work-with-me .wm-side{max-width:660px!important}body.ez-music .hero-grid{grid-template-columns:1fr!important}}
+  @media(max-width:720px){body.ez-music .release-grid{grid-template-columns:1fr 1fr!important}body.ez-music .release{min-height:190px!important}body.ez-work-with-me .wm-hero{padding:66px 0 56px!important}body.ez-work-with-me .wm-hero h1{font-size:clamp(3rem,14vw,4.9rem)!important}}
+  @media(max-width:520px){.ez-global-links{grid-template-columns:1fr}.ez-global-brand-copy strong{font-size:10px}.ez-global-brand-copy span{font-size:7px}body.ez-homepage .section{padding-top:54px!important;padding-bottom:54px!important}body.ez-music .section{padding:54px 0!important}body.ez-music .release-grid{grid-template-columns:1fr!important}body.ez-music .release{min-height:170px!important}}
   @media(max-width:360px){.ez-global-brand-copy{display:none}.ez-global-shell{width:calc(100% - 18px)}}
   `;
 
@@ -33,7 +60,7 @@
     if(!document.querySelector('link[data-ez-responsive]')){
       const link=document.createElement('link');
       link.rel='stylesheet';
-      link.href=ROOT+'responsive-2026.css?v=20260908-hero-polish-2';
+      link.href=ROOT+'responsive-2026.css?v=20260908-site-review-fixes-1';
       link.dataset.ezResponsive='true';
       document.head.appendChild(link);
     }
@@ -96,18 +123,26 @@
       if(!map || !toggle) return false;
       map.removeAttribute('aria-hidden');
       toggle.removeAttribute('aria-hidden');
+      toggle.textContent='☷ Page map';
       if(!document.getElementById('ez-page-map-cleanup')){
         const style=document.createElement('style');
         style.id='ez-page-map-cleanup';
         style.textContent=`
-          .ez-page-map-toggle{z-index:9991!important}
-          .ez-page-map{z-index:9990!important}
-          @media(min-width:621px){.ez-page-map{display:none!important;left:44px!important;top:50%!important;bottom:auto!important;width:224px!important;transform:translateY(-50%)!important;max-height:min(72vh,620px)!important;overflow:auto!important}.ez-page-map.is-open{display:block!important}.ez-page-map-toggle{display:flex!important;align-items:center!important;justify-content:center!important;left:0!important;top:50%!important;bottom:auto!important;width:34px!important;min-width:34px!important;min-height:116px!important;padding:10px 6px!important;border-radius:0 12px 12px 0!important;transform:translateY(-50%)!important;writing-mode:vertical-rl!important;text-orientation:mixed!important;font-size:9px!important;letter-spacing:.11em!important}}
-          @media(max-width:620px){.ez-page-map{display:none!important;left:12px!important;right:auto!important;top:auto!important;bottom:68px!important;width:min(240px,calc(100vw - 24px))!important;transform:none!important;max-height:65vh!important;overflow:auto!important}.ez-page-map.is-open{display:block!important}.ez-page-map-toggle{display:flex!important;left:12px!important;top:auto!important;bottom:12px!important;width:auto!important;min-height:46px!important;padding:0 16px!important;border-radius:999px!important;transform:none!important;writing-mode:horizontal-tb!important}}
+          .ez-page-map-toggle{display:flex!important;align-items:center!important;justify-content:center!important;position:fixed!important;left:18px!important;top:auto!important;bottom:18px!important;z-index:9991!important;width:auto!important;min-width:0!important;min-height:42px!important;padding:0 14px!important;border-radius:999px!important;transform:none!important;writing-mode:horizontal-tb!important;text-orientation:mixed!important;font-size:9px!important;letter-spacing:.09em!important;box-shadow:0 10px 28px rgba(0,0,0,.25)!important}
+          .ez-page-map{display:none!important;position:fixed!important;left:18px!important;right:auto!important;top:auto!important;bottom:70px!important;z-index:9990!important;width:min(260px,calc(100vw - 36px))!important;max-height:min(64vh,560px)!important;transform:none!important;overflow:auto!important;border-radius:16px!important;box-shadow:0 18px 48px rgba(0,0,0,.34)!important}
+          .ez-page-map.is-open{display:block!important}
+          @media(max-width:620px){.ez-page-map-toggle{left:12px!important;bottom:12px!important;min-height:44px!important;padding:0 15px!important}.ez-page-map{left:12px!important;bottom:64px!important;width:min(250px,calc(100vw - 24px))!important;max-height:62vh!important}}
         `;
         document.head.appendChild(style);
       }
       map.querySelectorAll('a').forEach(a=>{if(a.textContent.trim()==='People')a.textContent='Recommendations';});
+      const close=()=>{map.classList.remove('is-open');toggle.setAttribute('aria-expanded','false');};
+      if(!map.dataset.ezCloseBound){
+        map.dataset.ezCloseBound='true';
+        map.addEventListener('click',e=>{if(e.target.closest('a'))close();});
+        document.addEventListener('click',e=>{if(map.classList.contains('is-open')&&!map.contains(e.target)&&!toggle.contains(e.target))close();});
+        document.addEventListener('keydown',e=>{if(e.key==='Escape'&&map.classList.contains('is-open')){close();toggle.focus();}});
+      }
       return true;
     };
     if(apply()) return;
@@ -125,7 +160,7 @@
     if(!document.getElementById('ez-ai-system-map-cleanup')){
       const style=document.createElement('style');
       style.id='ez-ai-system-map-cleanup';
-      style.textContent=`.page-map-toggle{z-index:9991!important}.page-map{z-index:9990!important}@media(min-width:721px){.page-map{display:none!important;left:44px!important;top:50%!important;bottom:auto!important;width:224px!important;max-height:min(72vh,620px)!important;overflow:auto!important;transform:translateY(-50%)!important}.page-map.is-open{display:block!important}.page-map-toggle{display:flex!important;left:0!important;top:50%!important;bottom:auto!important;width:34px!important;min-height:124px!important;padding:10px 6px!important;border-radius:0 12px 12px 0!important;transform:translateY(-50%)!important;writing-mode:vertical-rl!important}}@media(max-width:720px){.page-map{display:none!important;left:12px!important;top:auto!important;bottom:68px!important;width:min(230px,calc(100vw - 24px))!important;transform:none!important}.page-map.is-open{display:block!important}.page-map-toggle{display:flex!important;left:12px!important;top:auto!important;bottom:12px!important;min-height:46px!important;padding:0 16px!important;border-radius:999px!important;transform:none!important;writing-mode:horizontal-tb!important}}`;
+      style.textContent=`.page-map-toggle{display:flex!important;align-items:center!important;justify-content:center!important;position:fixed!important;left:18px!important;top:auto!important;bottom:18px!important;z-index:9991!important;width:auto!important;min-height:42px!important;padding:0 14px!important;border-radius:999px!important;transform:none!important;writing-mode:horizontal-tb!important}.page-map{display:none!important;position:fixed!important;left:18px!important;top:auto!important;bottom:70px!important;z-index:9990!important;width:min(260px,calc(100vw - 36px))!important;max-height:min(64vh,560px)!important;overflow:auto!important;transform:none!important}.page-map.is-open{display:block!important}@media(max-width:720px){.page-map-toggle{left:12px!important;bottom:12px!important}.page-map{left:12px!important;bottom:64px!important;width:min(250px,calc(100vw - 24px))!important}}`;
       document.head.appendChild(style);
     }
     toggle.textContent='☷ System map';
@@ -133,6 +168,18 @@
     map.querySelectorAll('a[data-section]').forEach(link=>link.addEventListener('click',close));
     document.addEventListener('click',event=>{if(map.classList.contains('is-open')&&!map.contains(event.target)&&event.target!==toggle&&!toggle.contains(event.target))close();});
     document.addEventListener('keydown',event=>{if(event.key==='Escape'&&map.classList.contains('is-open')){close();toggle.focus();}});
+  }
+
+  function improveMusicReleaseCues(){
+    const path=location.pathname.toLowerCase();
+    if(!(path.endsWith('/music.html') || path.endsWith('/music'))) return;
+    document.querySelectorAll('.release').forEach(card=>{
+      const label=card.querySelector('span');
+      const arrow=card.querySelector('.arrow');
+      if(label) label.textContent='Play on Spotify';
+      if(arrow) arrow.textContent='▶';
+      card.setAttribute('aria-label',`${card.querySelector('strong')?.textContent?.replace(/\s+/g,' ').trim() || 'Release'} — play on Spotify`);
+    });
   }
 
   function fixMusicSoundCloud(){
@@ -160,6 +207,7 @@
       if(!document.querySelector('link[data-ez-ai-systems-ratings-style]')){const l=document.createElement('link');l.rel='stylesheet';l.href='/ai-systems-ratings.css?v=20260908-1';l.dataset.ezAiSystemsRatingsStyle='true';document.head.appendChild(l);}
       if(!document.querySelector('script[data-ez-ai-systems-ratings]')){const r=document.createElement('script');r.src='/ai-systems-ratings.js?v=20260908-1';r.dataset.ezAiSystemsRatings='true';document.body.appendChild(r);}
     }
+    improveMusicReleaseCues();
     fixMusicSoundCloud();
   }
 
