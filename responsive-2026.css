@@ -163,3 +163,11 @@ table{max-width:100%}
   html{scroll-behavior:auto!important}
   *,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;animation-iteration-count:1!important;transition-duration:.01ms!important}
 }
+
+/* EZ COMPANY STRIP SINGLE ROW START */
+@media(max-width:980px){
+  body.ez-homepage .hero.hero-2026 .ez-client-strip{display:flex!important;grid-template-columns:none!important;flex-wrap:nowrap!important;overflow-x:auto!important;overflow-y:hidden!important;padding:0!important;scroll-snap-type:x proximity!important;-webkit-overflow-scrolling:touch!important}
+  body.ez-homepage .hero.hero-2026 .ez-client{flex:0 0 140px!important;min-height:68px!important;border-top:0!important;border-right:1px solid rgba(255,255,255,.12)!important;scroll-snap-align:start!important}
+  body.ez-homepage .hero.hero-2026 .ez-client img{max-width:108px!important;max-height:26px!important}
+}
+/* EZ COMPANY STRIP SINGLE ROW END */

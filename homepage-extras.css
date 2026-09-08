@@ -280,7 +280,7 @@ body.ez-homepage .hero.hero-2026 .ez-hero-portrait{
   height:100%!important;
   object-fit:cover!important;
   object-position:center 34%!important;
-  transform:scale(1.035)!important;
+  transform:scale(.94)!important;
   transform-origin:center center!important;
   filter:none!important;
   border:0!important;
@@ -427,3 +427,78 @@ body.ez-homepage .hero.hero-2026 .ez-hero-mantra{margin-top:10px!important}
 }
 
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto!important}}
+
+
+/* EZ HERO COMPANY STRIP POLISH START */
+body.ez-homepage .hero.hero-2026 .ez-client-strip{
+  display:grid!important;
+  grid-template-columns:repeat(7,minmax(0,1fr))!important;
+  align-items:center!important;
+  gap:0!important;
+  width:100%!important;
+  min-height:76px!important;
+  margin:16px 0 0!important;
+  padding:0 10px!important;
+  overflow:hidden!important;
+  background:rgba(5,7,9,.86)!important;
+  border-top:1px solid rgba(255,255,255,.12)!important;
+  border-bottom:1px solid rgba(255,255,255,.12)!important;
+}
+body.ez-homepage .hero.hero-2026 .ez-client{
+  display:flex!important;
+  align-items:center!important;
+  justify-content:center!important;
+  min-width:0!important;
+  min-height:76px!important;
+  padding:10px 14px!important;
+  margin:0!important;
+  background:transparent!important;
+  border:0!important;
+  border-right:1px solid rgba(255,255,255,.12)!important;
+  border-radius:0!important;
+  box-shadow:none!important;
+  overflow:hidden!important;
+  font-size:0!important;
+  line-height:0!important;
+}
+body.ez-homepage .hero.hero-2026 .ez-client:last-child{border-right:0!important}
+body.ez-homepage .hero.hero-2026 .ez-client::before,
+body.ez-homepage .hero.hero-2026 .ez-client::after{display:none!important;content:none!important}
+body.ez-homepage .hero.hero-2026 .ez-client img{
+  display:block!important;
+  width:auto!important;
+  height:auto!important;
+  max-width:132px!important;
+  max-height:30px!important;
+  object-fit:contain!important;
+  margin:0 auto!important;
+  transform:none!important;
+}
+body.ez-homepage .hero.hero-2026 .reup-client{
+  font:900 20px/1 Arial,Helvetica,sans-serif!important;
+  letter-spacing:-.04em!important;
+  color:#fff!important;
+  text-transform:lowercase!important;
+}
+body.ez-homepage .hero.hero-2026 .ez-hero-mantra{display:none!important}
+body.ez-homepage .ez-motion-break{
+  display:block!important;
+  position:relative!important;
+  width:100%!important;
+  margin:0!important;
+  padding:0!important;
+  background:#050607!important;
+  border-top:1px solid rgba(255,255,255,.08)!important;
+  border-bottom:1px solid rgba(255,255,255,.08)!important;
+  overflow:hidden!important;
+}
+body.ez-homepage .ez-motion-break video{
+  display:block!important;
+  width:100%!important;
+  height:clamp(280px,38vw,620px)!important;
+  max-width:none!important;
+  object-fit:cover!important;
+  object-position:center!important;
+  margin:0!important;
+}
+/* EZ HERO COMPANY STRIP POLISH END */
