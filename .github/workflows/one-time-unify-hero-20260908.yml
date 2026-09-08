@@ -1,4 +1,4 @@
-name: Tighten homepage hero and company strip
+name: Repair homepage services section
 
 on:
   push:
@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 jobs:
-  polish-homepage:
+  repair-services:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
@@ -17,81 +17,49 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Polish portrait, company row, and video break
+      - name: Rebuild homepage services section styling
         shell: bash
         run: |
           python3 - <<'PY'
           from pathlib import Path
           import re
 
-          TAG = '20260908-hero-polish-2'
-          headshot = Path('assets/headshot2026fixed.svg')
-          video = Path('motion_like_espn.mp4')
-          if not headshot.exists():
-              raise SystemExit('Fixed headshot SVG is missing')
-          if not video.exists():
-              raise SystemExit('Homepage motion video is missing')
-
+          TAG = '20260908-offers-repair-1'
           css_path = Path('homepage-extras.css')
+          index_path = Path('index.html')
+          nav_path = Path('global-nav.js')
+
           css = css_path.read_text(encoding='utf-8')
-
-          # Make the portrait subtly smaller without changing the supplied image.
-          portrait_pattern = r'(body\.ez-homepage \.hero\.hero-2026 \.ez-hero-portrait\s*\{.*?transform:)scale\([^)]*\)(!important;.*?\})'
-          css, count = re.subn(portrait_pattern, r'\g<1>scale(.94)\g<2>', css, count=1, flags=re.S)
-          if count != 1:
-              raise SystemExit(f'Expected one portrait transform rule, changed {count}')
-
-          marker_start = '/* EZ HERO COMPANY STRIP POLISH START */'
-          marker_end = '/* EZ HERO COMPANY STRIP POLISH END */'
-          css = re.sub(re.escape(marker_start) + r'.*?' + re.escape(marker_end), '', css, flags=re.S)
-          css += f'''\n\n{marker_start}\nbody.ez-homepage .hero.hero-2026 .ez-client-strip{{\n  display:grid!important;\n  grid-template-columns:repeat(7,minmax(0,1fr))!important;\n  align-items:center!important;\n  gap:0!important;\n  width:100%!important;\n  min-height:76px!important;\n  margin:16px 0 0!important;\n  padding:0 10px!important;\n  overflow:hidden!important;\n  background:rgba(5,7,9,.86)!important;\n  border-top:1px solid rgba(255,255,255,.12)!important;\n  border-bottom:1px solid rgba(255,255,255,.12)!important;\n}}\nbody.ez-homepage .hero.hero-2026 .ez-client{{\n  display:flex!important;\n  align-items:center!important;\n  justify-content:center!important;\n  min-width:0!important;\n  min-height:76px!important;\n  padding:10px 14px!important;\n  margin:0!important;\n  background:transparent!important;\n  border:0!important;\n  border-right:1px solid rgba(255,255,255,.12)!important;\n  border-radius:0!important;\n  box-shadow:none!important;\n  overflow:hidden!important;\n  font-size:0!important;\n  line-height:0!important;\n}}\nbody.ez-homepage .hero.hero-2026 .ez-client:last-child{{border-right:0!important}}\nbody.ez-homepage .hero.hero-2026 .ez-client::before,\nbody.ez-homepage .hero.hero-2026 .ez-client::after{{display:none!important;content:none!important}}\nbody.ez-homepage .hero.hero-2026 .ez-client img{{\n  display:block!important;\n  width:auto!important;\n  height:auto!important;\n  max-width:132px!important;\n  max-height:30px!important;\n  object-fit:contain!important;\n  margin:0 auto!important;\n  transform:none!important;\n}}\nbody.ez-homepage .hero.hero-2026 .reup-client{{\n  font:900 20px/1 Arial,Helvetica,sans-serif!important;\n  letter-spacing:-.04em!important;\n  color:#fff!important;\n  text-transform:lowercase!important;\n}}\nbody.ez-homepage .hero.hero-2026 .ez-hero-mantra{{display:none!important}}\nbody.ez-homepage .ez-motion-break{{\n  display:block!important;\n  position:relative!important;\n  width:100%!important;\n  margin:0!important;\n  padding:0!important;\n  background:#050607!important;\n  border-top:1px solid rgba(255,255,255,.08)!important;\n  border-bottom:1px solid rgba(255,255,255,.08)!important;\n  overflow:hidden!important;\n}}\nbody.ez-homepage .ez-motion-break video{{\n  display:block!important;\n  width:100%!important;\n  height:clamp(280px,38vw,620px)!important;\n  max-width:none!important;\n  object-fit:cover!important;\n  object-position:center!important;\n  margin:0!important;\n}}\n{marker_end}\n'''
+          start = '/* EZ HOME OFFERS REPAIR START */'
+          end = '/* EZ HOME OFFERS REPAIR END */'
+          css = re.sub(re.escape(start) + r'.*?' + re.escape(end), '', css, flags=re.S)
+          css += f'''\n\n{start}\nbody.ez-homepage .home-offers{{\n  position:relative!important;\n  display:block!important;\n  padding:88px 0 96px!important;\n  margin:0!important;\n  background:#f3f0ea!important;\n  color:#0a0b0d!important;\n  border:0!important;\n  overflow:hidden!important;\n}}\nbody.ez-homepage .home-offers>.wrap{{\n  width:min(1500px,calc(100% - 72px))!important;\n  max-width:none!important;\n  margin-inline:auto!important;\n}}\nbody.ez-homepage .home-offers-head{{\n  display:grid!important;\n  grid-template-columns:minmax(0,1.05fr) minmax(360px,.95fr)!important;\n  gap:72px!important;\n  align-items:end!important;\n  margin:0 0 42px!important;\n}}\nbody.ez-homepage .home-offers .eyebrow{{\n  display:block!important;\n  margin:0 0 16px!important;\n  color:#ef233c!important;\n  font:900 11px/1 Arial,Helvetica,sans-serif!important;\n  letter-spacing:.22em!important;\n  text-transform:uppercase!important;\n}}\nbody.ez-homepage .home-offers .section-title{{\n  width:auto!important;\n  max-width:760px!important;\n  margin:0!important;\n  color:#0a0b0d!important;\n  font-family:Arial Black,Arial,Helvetica,sans-serif!important;\n  font-size:clamp(46px,5.1vw,76px)!important;\n  font-weight:950!important;\n  line-height:.94!important;\n  letter-spacing:-.055em!important;\n  text-transform:none!important;\n}}\nbody.ez-homepage .home-offers-head .body-copy{{\n  max-width:680px!important;\n  margin:0!important;\n  color:#454b53!important;\n  font:500 19px/1.62 Arial,Helvetica,sans-serif!important;\n  letter-spacing:-.012em!important;\n}}\nbody.ez-homepage .home-offer-grid{{\n  display:grid!important;\n  grid-template-columns:repeat(3,minmax(0,1fr))!important;\n  gap:16px!important;\n  width:100%!important;\n  margin:0!important;\n  padding:0!important;\n}}\nbody.ez-homepage .home-offer{{\n  position:relative!important;\n  display:flex!important;\n  flex-direction:column!important;\n  align-items:flex-start!important;\n  justify-content:flex-start!important;\n  min-width:0!important;\n  min-height:220px!important;\n  padding:28px 28px 30px!important;\n  margin:0!important;\n  color:#0a0b0d!important;\n  background:#fff!important;\n  border:1px solid rgba(10,11,13,.14)!important;\n  border-radius:16px!important;\n  box-shadow:0 12px 34px rgba(10,11,13,.05)!important;\n  text-decoration:none!important;\n  overflow:hidden!important;\n  transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease!important;\n}}\nbody.ez-homepage .home-offer::before{{\n  content:''!important;\n  position:absolute!important;\n  left:0!important;\n  top:0!important;\n  width:100%!important;\n  height:4px!important;\n  background:#ef233c!important;\n}}\nbody.ez-homepage .home-offer:hover,\nbody.ez-homepage .home-offer:focus-visible{{\n  transform:translateY(-4px)!important;\n  border-color:rgba(10,11,13,.34)!important;\n  box-shadow:0 18px 42px rgba(10,11,13,.10)!important;\n  outline:none!important;\n}}\nbody.ez-homepage .home-offer small{{\n  display:block!important;\n  width:100%!important;\n  margin:0 0 18px!important;\n  color:#ef233c!important;\n  font:900 10px/1.15 Arial,Helvetica,sans-serif!important;\n  letter-spacing:.12em!important;\n  text-transform:uppercase!important;\n}}\nbody.ez-homepage .home-offer strong{{\n  display:block!important;\n  width:100%!important;\n  margin:0 0 12px!important;\n  color:#0a0b0d!important;\n  font-family:Arial Black,Arial,Helvetica,sans-serif!important;\n  font-size:clamp(22px,2vw,29px)!important;\n  font-weight:950!important;\n  line-height:1.04!important;\n  letter-spacing:-.04em!important;\n}}\nbody.ez-homepage .home-offer span{{\n  display:block!important;\n  width:100%!important;\n  margin:0!important;\n  color:#555c64!important;\n  font:500 15px/1.58 Arial,Helvetica,sans-serif!important;\n  letter-spacing:-.005em!important;\n}}\nbody.ez-homepage .home-offers-action{{\n  display:flex!important;\n  align-items:center!important;\n  justify-content:flex-start!important;\n  margin:30px 0 0!important;\n}}\nbody.ez-homepage .home-offers-action .button{{\n  display:inline-flex!important;\n  align-items:center!important;\n  justify-content:center!important;\n  min-height:52px!important;\n  padding:0 24px!important;\n  border-radius:999px!important;\n  background:#0a0b0d!important;\n  border:1px solid #0a0b0d!important;\n  color:#fff!important;\n  font:900 13px/1 Arial,Helvetica,sans-serif!important;\n  text-decoration:none!important;\n}}\n@media(max-width:1100px){{\n  body.ez-homepage .home-offers-head{{grid-template-columns:1fr!important;gap:22px!important;align-items:start!important}}\n  body.ez-homepage .home-offers-head .body-copy{{max-width:860px!important}}\n  body.ez-homepage .home-offer-grid{{grid-template-columns:repeat(2,minmax(0,1fr))!important}}\n}}\n@media(max-width:720px){{\n  body.ez-homepage .home-offers{{padding:62px 0 70px!important}}\n  body.ez-homepage .home-offers>.wrap{{width:calc(100% - 28px)!important}}\n  body.ez-homepage .home-offers .section-title{{font-size:clamp(40px,13vw,58px)!important;line-height:.96!important}}\n  body.ez-homepage .home-offers-head .body-copy{{font-size:16px!important;line-height:1.55!important}}\n  body.ez-homepage .home-offer-grid{{grid-template-columns:1fr!important;gap:12px!important}}\n  body.ez-homepage .home-offer{{min-height:0!important;padding:24px!important}}\n  body.ez-homepage .home-offer strong{{font-size:24px!important}}\n}}\n{end}\n'''
           css_path.write_text(css, encoding='utf-8')
 
-          # Keep the company strip to one row on smaller screens too; allow horizontal scroll instead of wrapping.
-          responsive_path = Path('responsive-2026.css')
-          responsive = responsive_path.read_text(encoding='utf-8')
-          r_start = '/* EZ COMPANY STRIP SINGLE ROW START */'
-          r_end = '/* EZ COMPANY STRIP SINGLE ROW END */'
-          responsive = re.sub(re.escape(r_start) + r'.*?' + re.escape(r_end), '', responsive, flags=re.S)
-          responsive += f'''\n\n{r_start}\n@media(max-width:980px){{\n  body.ez-homepage .hero.hero-2026 .ez-client-strip{{display:flex!important;grid-template-columns:none!important;flex-wrap:nowrap!important;overflow-x:auto!important;overflow-y:hidden!important;padding:0!important;scroll-snap-type:x proximity!important;-webkit-overflow-scrolling:touch!important}}\n  body.ez-homepage .hero.hero-2026 .ez-client{{flex:0 0 140px!important;min-height:68px!important;border-top:0!important;border-right:1px solid rgba(255,255,255,.12)!important;scroll-snap-align:start!important}}\n  body.ez-homepage .hero.hero-2026 .ez-client img{{max-width:108px!important;max-height:26px!important}}\n}}\n{r_end}\n'''
-          responsive_path.write_text(responsive, encoding='utf-8')
-
-          index_path = Path('index.html')
           html = index_path.read_text(encoding='utf-8')
           html = re.sub(r'homepage-extras\.css\?v=[^"\']+', f'homepage-extras.css?v={TAG}', html, count=1)
-
-          motion_markup = f'''<section class="ez-motion-break" aria-label="EZ Enablement brand reel">\n  <video autoplay muted loop playsinline preload="metadata" aria-label="EZ Enablement motion reel">\n    <source src="motion_like_espn.mp4?v={TAG}" type="video/mp4">\n  </video>\n</section>'''
-          if 'class="ez-motion-break"' not in html:
-              needle = '</section>\n<section class="home-offers"'
-              if needle not in html:
-                  raise SystemExit('Could not locate hero-to-offers boundary')
-              html = html.replace(needle, '</section>\n' + motion_markup + '\n<section class="home-offers"', 1)
           index_path.write_text(html, encoding='utf-8')
 
-          nav_path = Path('global-nav.js')
           nav = nav_path.read_text(encoding='utf-8')
           nav = re.sub(r"const VERSION = '[^']+';", f"const VERSION = '{TAG}';", nav, count=1)
-          nav = re.sub(r'responsive-2026\.css\?v=[^"\']+', f'responsive-2026.css?v={TAG}', nav)
           nav_path.write_text(nav, encoding='utf-8')
 
           final_css = css_path.read_text(encoding='utf-8')
-          final_html = index_path.read_text(encoding='utf-8')
-          assert 'transform:scale(.94)!important' in final_css
-          assert 'grid-template-columns:repeat(7,minmax(0,1fr))!important' in final_css
-          assert 'class="ez-motion-break"' in final_html
-          assert f'motion_like_espn.mp4?v={TAG}' in final_html
-          print('Homepage hero polish applied successfully')
+          assert 'grid-template-columns:repeat(3,minmax(0,1fr))!important' in final_css
+          assert 'min-height:220px!important' in final_css
+          assert f'homepage-extras.css?v={TAG}' in index_path.read_text(encoding='utf-8')
+          print('Homepage services section repaired')
           PY
 
-      - name: Commit homepage polish
+      - name: Commit services section repair
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add homepage-extras.css responsive-2026.css index.html global-nav.js
+          git add homepage-extras.css index.html global-nav.js
           if git diff --cached --quiet; then
             echo "No changes required."
             exit 0
           fi
-          git commit -m "Polish hero portrait, company row, and video break"
+          git commit -m "Repair homepage services section layout"
           git push origin HEAD:main
