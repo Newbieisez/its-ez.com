@@ -1,0 +1,51 @@
+name: Force Site Review Asset Refresh
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/force-site-review-assets.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  refresh-html-assets:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Version global navigation asset references
+        shell: python
+        run: |
+          from pathlib import Path
+          import re
+
+          version = "20260908-site-review-fixes-2"
+          changed = []
+          for path in Path('.').glob('*.html'):
+              text = path.read_text(encoding='utf-8')
+              updated = re.sub(
+                  r'global-nav\.js(?:\?v=[^\"\']+)?',
+                  f'global-nav.js?v={version}',
+                  text,
+              )
+              if updated != text:
+                  path.write_text(updated, encoding='utf-8')
+                  changed.append(str(path))
+          print('Updated:', ', '.join(changed) if changed else 'none')
+
+      - name: Commit refreshed asset URLs
+        run: |
+          if git diff --quiet; then
+            echo "No HTML references needed updating."
+            exit 0
+          fi
+          git config user.name "EZ Site Automation"
+          git config user.email "actions@users.noreply.github.com"
+          git add '*.html'
+          git commit -m "Force browsers to load site review fixes"
+          git push
