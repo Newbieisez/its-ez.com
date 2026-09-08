@@ -1,4 +1,4 @@
-name: One-time real JPEG homepage hero
+name: Clean broken homepage hero assets
 
 on:
   push:
@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 jobs:
-  fix-hero:
+  clean-hero-assets:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
@@ -17,91 +17,96 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Build real JPEG and remove SVG image override
+      - name: Remove broken hero files and normalize references
         shell: bash
         run: |
           python3 - <<'PY'
           from pathlib import Path
-          import base64
           import re
 
-          TAG = "20260908-real-jpeg-2"
-          SOURCE_SVG = Path("assets/ez-headshot-500-fixed.svg")
-          JPEG_PATH = Path("assets/erez-hero-headshot.jpg")
+          TAG = '20260908-asset-cleanup-1'
+          FALLBACK = 'assets/ez-hero-black-shirt-v2.jpg'
+          BROKEN_NAMES = [
+              'ez-headshot-500-fixed.svg',
+              'ez-headshot-20260908-fixed.svg',
+              'ez-hero-portrait-2026-hires.svg',
+          ]
 
-          # Decode the exact approved headshot into a normal binary JPEG.
-          # The old SVG omitted base64 padding, which browsers handled inconsistently.
-          svg = SOURCE_SVG.read_text(encoding="utf-8")
-          match = re.search(r'data:image/jpeg;base64,([^"\']+)', svg)
-          if not match:
-              raise SystemExit("Could not find embedded JPEG in approved headshot SVG")
-          raw = re.sub(r'\s+', '', match.group(1))
-          raw += '=' * (-len(raw) % 4)
-          jpeg = base64.b64decode(raw)
-          if not jpeg.startswith(b'\xff\xd8\xff') or not jpeg.endswith(b'\xff\xd9'):
-              raise SystemExit("Decoded headshot is not a valid JPEG stream")
-          if len(jpeg) < 15000:
-              raise SystemExit(f"Decoded JPEG unexpectedly small: {len(jpeg)} bytes")
-          JPEG_PATH.write_bytes(jpeg)
-
-          # Initial HTML points directly to the actual JPEG.
-          index = Path("index.html")
-          html = index.read_text(encoding="utf-8")
-          html = re.sub(r'\?v=[^"\'\s>]+', f'?v={TAG}', html)
+          index = Path('index.html')
+          html = index.read_text(encoding='utf-8')
           html = re.sub(
               r'<img\s+class="ez-hero-portrait"[^>]*>',
-              f'<img class="ez-hero-portrait" src="assets/erez-hero-headshot.jpg?v={TAG}" alt="Erez Haimowicz in a black blazer and black shirt" width="500" height="500" loading="eager" fetchpriority="high" decoding="async">',
+              f'<img class="ez-hero-portrait" src="{FALLBACK}?v={TAG}" alt="Erez Haimowicz" width="500" height="500" loading="eager" fetchpriority="high" decoding="async">',
               html,
               count=1,
               flags=re.S,
           )
-          index.write_text(html, encoding="utf-8")
+          html = html.replace('homepage-extras.css?v=20260908-headshot-rescue-1', f'homepage-extras.css?v={TAG}')
+          html = html.replace('global-nav.js?v=20260908-headshot-rescue-1', f'global-nav.js?v={TAG}')
+          index.write_text(html, encoding='utf-8')
 
-          # CSS controls layout only. It must never replace the image source.
-          css_file = Path("homepage-extras.css")
-          css = css_file.read_text(encoding="utf-8")
+          css_path = Path('homepage-extras.css')
+          css = css_path.read_text(encoding='utf-8')
+          # The img element owns its source. CSS must never swap image bytes.
           css = re.sub(r'\n\s*content\s*:\s*url\([^;]+\)\s*!important\s*;', '', css, flags=re.I)
-          css = css.replace("ez-headshot-500-fixed.svg", "erez-hero-headshot.jpg")
-          css = css.replace("ez-hero-portrait-2026-hires.svg", "erez-hero-headshot.jpg")
-          css = re.sub(r'\?v=[^\'\")\s]+', f'?v={TAG}', css)
-          css_file.write_text(css, encoding="utf-8")
+          for name in BROKEN_NAMES:
+              css = css.replace(name, 'ez-hero-black-shirt-v2.jpg')
+          css = css.replace('20260908-headshot-rescue-1', TAG)
+          css_path.write_text(css, encoding='utf-8')
 
-          nav = Path("global-nav.js")
-          js = nav.read_text(encoding="utf-8")
+          nav_path = Path('global-nav.js')
+          js = nav_path.read_text(encoding='utf-8')
           js = re.sub(r"const VERSION = '[^']+';", f"const VERSION = '{TAG}';", js, count=1)
-          js = re.sub(r"responsive-2026\.css\?v=[^'\"]+", f"responsive-2026.css?v={TAG}", js)
-          nav.write_text(js, encoding="utf-8")
+          js = js.replace('20260908-headshot-rescue-1', TAG)
+          for name in BROKEN_NAMES:
+              js = js.replace(name, 'ez-hero-black-shirt-v2.jpg')
+          nav_path.write_text(js, encoding='utf-8')
 
-          # Refuse to ship the old broken delivery paths.
-          final_html = index.read_text(encoding="utf-8")
-          final_css = css_file.read_text(encoding="utf-8")
-          final_js = nav.read_text(encoding="utf-8")
-          assert f'assets/erez-hero-headshot.jpg?v={TAG}' in final_html
-          assert 'ez-headshot-500-fixed.svg' not in final_html
-          assert 'ez-hero-portrait-2026-hires.svg' not in final_html
-          portrait_rule = re.search(r'body\.ez-homepage \.hero\.hero-2026 \.ez-hero-portrait\s*\{(.*?)\}', final_css, re.S)
-          assert portrait_rule and 'content:' not in portrait_rule.group(1).lower()
-          assert f'homepage-extras.css?v={TAG}' in final_html
-          assert f'global-nav.js?v={TAG}' in final_html
-          assert f"const VERSION = '{TAG}';" in final_js
-          assert JPEG_PATH.stat().st_size == len(jpeg)
-          print(f"Real JPEG hero ready: {JPEG_PATH} ({len(jpeg)} bytes), tag={TAG}")
+          # Remove the malformed / duplicate portrait files from the repo.
+          for rel in [
+              'assets/ez-headshot-500-fixed.svg',
+              'assets/ez-headshot-20260908-fixed.svg',
+              'assets/ez-hero-portrait-2026-hires.svg',
+          ]:
+              p = Path(rel)
+              if p.exists():
+                  p.unlink()
+
+          # Remove the accidental staging payload from the previous rescue attempt.
+          staging = Path('.github/hero-headshot/part0.b64')
+          if staging.exists():
+              staging.unlink()
+              try:
+                  staging.parent.rmdir()
+              except OSError:
+                  pass
+
+          # Hard verification: no live code may reference the removed files.
+          check_files = [Path('index.html'), Path('homepage-extras.css'), Path('global-nav.js')]
+          joined = '\n'.join(p.read_text(encoding='utf-8') for p in check_files)
+          for name in BROKEN_NAMES:
+              assert name not in joined, f'Broken asset still referenced: {name}'
+          assert f'src="{FALLBACK}?v={TAG}"' in index.read_text(encoding='utf-8')
+          portrait_rule = re.search(r'body\.ez-homepage \.hero\.hero-2026 \.ez-hero-portrait\s*\{(.*?)\}', css_path.read_text(encoding='utf-8'), re.S)
+          assert portrait_rule, 'Hero portrait CSS rule missing'
+          assert 'content:' not in portrait_rule.group(1).lower(), 'CSS still overrides portrait source'
+          assert Path(FALLBACK).exists(), 'Fallback JPG missing'
+          assert Path(FALLBACK).stat().st_size > 1000, 'Fallback JPG is unexpectedly tiny'
+          print('Hero asset cleanup verified.')
           PY
 
-          file assets/erez-hero-headshot.jpg
-          file assets/erez-hero-headshot.jpg | grep -q "JPEG image data"
-          grep -q 'src="assets/erez-hero-headshot.jpg?v=20260908-real-jpeg-2"' index.html
-          ! grep -q 'content:url.*ez-headshot\|content:url.*ez-hero-portrait' homepage-extras.css
+          git grep -n -E 'ez-headshot-500-fixed|ez-headshot-20260908-fixed|ez-hero-portrait-2026-hires' -- ':!*.yml' && exit 1 || true
+          test -s assets/ez-hero-black-shirt-v2.jpg
 
-      - name: Commit real JPEG hero fix
+      - name: Commit cleanup
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add index.html homepage-extras.css global-nav.js assets/erez-hero-headshot.jpg
+          git add -A index.html homepage-extras.css global-nav.js assets .github/hero-headshot || true
           if git diff --cached --quiet; then
             echo "No changes required."
             exit 0
           fi
-          git commit -m "Use real JPEG for homepage hero portrait"
+          git commit -m "Clean broken hero assets and restore valid portrait fallback"
           git push origin HEAD:main
