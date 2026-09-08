@@ -1,5 +1,5 @@
 (() => {
-  const VERSION = '20260907-responsive-5';
+  const VERSION = '20260908-hero-hotfix-1';
   const ROOT = 'https://its-ez.com/';
 
   const css = `
@@ -20,6 +20,7 @@
   .ez-global-header + .nav{top:72px!important}
   body.ez-homepage .section{padding-top:78px!important;padding-bottom:78px!important}
   body.ez-homepage .section-title{font-size:clamp(2rem,3.5vw,4rem)!important;line-height:1.02!important}
+  body.ez-homepage .ez-page-map,body.ez-homepage .ez-page-map-toggle{display:none!important}
   @media(max-width:1320px){.ez-global-brand-copy{display:none}.ez-global-shell{gap:8px}.ez-global-links>a{padding:0 6px;font-size:9.6px!important}.ez-global-cta{padding:0 11px;font-size:9px!important}}
   @media(max-width:1040px){body{padding-top:64px!important}.ez-global-header{height:64px!important}.ez-global-shell{height:64px;width:min(100% - 24px,1520px)}.ez-global-mark{width:40px;height:40px;font-size:18px}.ez-global-brand-copy{display:grid}.ez-global-menu{display:block}.ez-global-cta{display:none}.ez-global-header + .nav{top:64px!important}.ez-global-links{display:none;position:absolute;left:12px;right:12px;top:64px;z-index:10001;margin:0;padding:10px;background:#0b0c0f;border:1px solid rgba(255,255,255,.13);border-radius:0 0 16px 16px;box-shadow:0 20px 45px rgba(0,0,0,.5);grid-template-columns:repeat(2,minmax(0,1fr));gap:4px;max-height:calc(100dvh - 76px);overflow:auto;overscroll-behavior:contain}.ez-global-header.is-open .ez-global-links{display:grid}.ez-global-links>a{width:100%;min-height:44px;padding:0 12px;font-size:12px!important;text-align:left}.ez-global-links>a[aria-current="page"]:after{left:12px;right:12px}}
   @media(max-width:520px){.ez-global-links{grid-template-columns:1fr}.ez-global-brand-copy strong{font-size:10px}.ez-global-brand-copy span{font-size:7px}body.ez-homepage .section{padding-top:58px!important;padding-bottom:58px!important}}
@@ -30,7 +31,7 @@
     if(document.querySelector('link[data-ez-responsive]')) return;
     const link=document.createElement('link');
     link.rel='stylesheet';
-    link.href=ROOT+'responsive-2026.css?v=20260907-1';
+    link.href=ROOT+'responsive-2026.css?v=20260908-hero-hotfix-1';
     link.dataset.ezResponsive='true';
     document.head.appendChild(link);
   }
@@ -135,6 +136,17 @@
   }
 
   function installPageMapOverride(){
+    const path=location.pathname.toLowerCase();
+    if(path==='/' || path==='/index.html'){
+      const hideHomepageMap=()=>{
+        document.querySelectorAll('.ez-page-map,.ez-page-map-toggle').forEach(el=>{el.style.setProperty('display','none','important');el.setAttribute('aria-hidden','true');});
+      };
+      hideHomepageMap();
+      const observer=new MutationObserver(hideHomepageMap);
+      observer.observe(document.documentElement,{childList:true,subtree:true});
+      setTimeout(()=>observer.disconnect(),12000);
+      return;
+    }
     const apply=()=>{
       const source=document.getElementById('ez-page-map-style');
       if(!source || document.getElementById('ez-page-map-cleanup')) return false;
@@ -209,7 +221,7 @@
     if(!(path==='/' || path==='/index.html')) return;
     const image=document.querySelector('.ez-hero-portrait');
     if(!image) return;
-    image.src='/assets/ez-hero-portrait-2026.svg?v=20260907-1';
+    image.src='/assets/ez-hero-portrait-2026.svg?v=20260908-hero-hotfix-1';
     image.alt='Erez Haimowicz in the EZ Enablement studio';
   }
 
