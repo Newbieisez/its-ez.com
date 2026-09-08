@@ -1,5 +1,5 @@
 (() => {
-  const VERSION = '20260908-user-headshot-1';
+  const VERSION = '20260908-unified-hero-4';
   const ROOT = 'https://its-ez.com/';
 
   const css = `
@@ -33,7 +33,7 @@
     if(!document.querySelector('link[data-ez-responsive]')){
       const link=document.createElement('link');
       link.rel='stylesheet';
-      link.href=ROOT+'responsive-2026.css?v=20260908-user-headshot-1';
+      link.href=ROOT+'responsive-2026.css?v=20260908-unified-hero-4';
       link.dataset.ezResponsive='true';
       document.head.appendChild(link);
     }
@@ -135,15 +135,6 @@
     document.addEventListener('keydown',event=>{if(event.key==='Escape'&&map.classList.contains('is-open')){close();toggle.focus();}});
   }
 
-  function installHeroPortrait(){
-    const path=location.pathname.toLowerCase();
-    if(!(path==='/' || path==='/index.html')) return;
-    const image=document.querySelector('.ez-hero-portrait');
-    if(!image) return;
-    image.src='/assets/ez-hero-portrait-2026-hires.svg?v=20260908-user-headshot-1';
-    image.alt='Erez Haimowicz in a black blazer and black shirt';
-  }
-
   function fixMusicSoundCloud(){
     const path=location.pathname.toLowerCase();
     if(!(path.endsWith('/music.html') || path.endsWith('/music'))) return;
@@ -172,6 +163,6 @@
     fixMusicSoundCloud();
   }
 
-  function init(){addStyles();markPage();renderHeader();installPageMap();installAiSystemMap();installHeroPortrait();loadPageExtensions();}
+  function init(){addStyles();markPage();renderHeader();installPageMap();installAiSystemMap();loadPageExtensions();}
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init,{once:true}); else init();
 })();

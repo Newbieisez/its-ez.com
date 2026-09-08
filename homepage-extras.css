@@ -91,7 +91,7 @@ body.ez-homepage .hero.hero-2026::before{
   background-image:
     linear-gradient(90deg,rgba(5,7,9,.98) 0%,rgba(5,7,9,.92) 32%,rgba(5,7,9,.58) 55%,rgba(5,7,9,.28) 73%,rgba(5,7,9,.62) 100%),
     linear-gradient(180deg,rgba(0,0,0,.08) 0%,rgba(0,0,0,.12) 60%,rgba(0,0,0,.92) 100%),
-    url('assets/las-vegas-hero-bg.jpg?v=20260908-clean-hero')!important;
+    url('assets/las-vegas-hero-bg.jpg?v=20260908-unified-hero-4')!important;
   background-size:cover!important;
   background-position:center 54%!important;
   background-repeat:no-repeat!important;
@@ -273,7 +273,7 @@ body.ez-homepage .hero.hero-2026 .ez-hero-portrait-wrap::after{
   text-align:right!important;
 }
 body.ez-homepage .hero.hero-2026 .ez-hero-portrait{
-  content:url('/assets/ez-hero-portrait-2026-hires.svg?v=20260908-exact-user-headshot-2')!important;
+  content:url('/assets/ez-hero-portrait-2026-hires.svg?v=20260908-unified-hero-4')!important;
   display:block!important;
   position:absolute!important;
   inset:auto 0 0 auto!important;
