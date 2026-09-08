@@ -1,4 +1,4 @@
-name: Repair homepage services section
+name: Lock homepage offer card hover
 
 on:
   push:
@@ -9,7 +9,7 @@ permissions:
   contents: write
 
 jobs:
-  repair-services:
+  fix-offer-hover:
     runs-on: ubuntu-latest
     steps:
       - name: Check out repository
@@ -17,23 +17,23 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Rebuild homepage services section styling
+      - name: Lock offer cards to light hover treatment
         shell: bash
         run: |
           python3 - <<'PY'
           from pathlib import Path
           import re
 
-          TAG = '20260908-offers-repair-1'
+          TAG = '20260908-offers-hover-fix-1'
           css_path = Path('homepage-extras.css')
           index_path = Path('index.html')
           nav_path = Path('global-nav.js')
 
           css = css_path.read_text(encoding='utf-8')
-          start = '/* EZ HOME OFFERS REPAIR START */'
-          end = '/* EZ HOME OFFERS REPAIR END */'
+          start = '/* EZ HOME OFFER HOVER GUARD START */'
+          end = '/* EZ HOME OFFER HOVER GUARD END */'
           css = re.sub(re.escape(start) + r'.*?' + re.escape(end), '', css, flags=re.S)
-          css += f'''\n\n{start}\nbody.ez-homepage .home-offers{{\n  position:relative!important;\n  display:block!important;\n  padding:88px 0 96px!important;\n  margin:0!important;\n  background:#f3f0ea!important;\n  color:#0a0b0d!important;\n  border:0!important;\n  overflow:hidden!important;\n}}\nbody.ez-homepage .home-offers>.wrap{{\n  width:min(1500px,calc(100% - 72px))!important;\n  max-width:none!important;\n  margin-inline:auto!important;\n}}\nbody.ez-homepage .home-offers-head{{\n  display:grid!important;\n  grid-template-columns:minmax(0,1.05fr) minmax(360px,.95fr)!important;\n  gap:72px!important;\n  align-items:end!important;\n  margin:0 0 42px!important;\n}}\nbody.ez-homepage .home-offers .eyebrow{{\n  display:block!important;\n  margin:0 0 16px!important;\n  color:#ef233c!important;\n  font:900 11px/1 Arial,Helvetica,sans-serif!important;\n  letter-spacing:.22em!important;\n  text-transform:uppercase!important;\n}}\nbody.ez-homepage .home-offers .section-title{{\n  width:auto!important;\n  max-width:760px!important;\n  margin:0!important;\n  color:#0a0b0d!important;\n  font-family:Arial Black,Arial,Helvetica,sans-serif!important;\n  font-size:clamp(46px,5.1vw,76px)!important;\n  font-weight:950!important;\n  line-height:.94!important;\n  letter-spacing:-.055em!important;\n  text-transform:none!important;\n}}\nbody.ez-homepage .home-offers-head .body-copy{{\n  max-width:680px!important;\n  margin:0!important;\n  color:#454b53!important;\n  font:500 19px/1.62 Arial,Helvetica,sans-serif!important;\n  letter-spacing:-.012em!important;\n}}\nbody.ez-homepage .home-offer-grid{{\n  display:grid!important;\n  grid-template-columns:repeat(3,minmax(0,1fr))!important;\n  gap:16px!important;\n  width:100%!important;\n  margin:0!important;\n  padding:0!important;\n}}\nbody.ez-homepage .home-offer{{\n  position:relative!important;\n  display:flex!important;\n  flex-direction:column!important;\n  align-items:flex-start!important;\n  justify-content:flex-start!important;\n  min-width:0!important;\n  min-height:220px!important;\n  padding:28px 28px 30px!important;\n  margin:0!important;\n  color:#0a0b0d!important;\n  background:#fff!important;\n  border:1px solid rgba(10,11,13,.14)!important;\n  border-radius:16px!important;\n  box-shadow:0 12px 34px rgba(10,11,13,.05)!important;\n  text-decoration:none!important;\n  overflow:hidden!important;\n  transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease!important;\n}}\nbody.ez-homepage .home-offer::before{{\n  content:''!important;\n  position:absolute!important;\n  left:0!important;\n  top:0!important;\n  width:100%!important;\n  height:4px!important;\n  background:#ef233c!important;\n}}\nbody.ez-homepage .home-offer:hover,\nbody.ez-homepage .home-offer:focus-visible{{\n  transform:translateY(-4px)!important;\n  border-color:rgba(10,11,13,.34)!important;\n  box-shadow:0 18px 42px rgba(10,11,13,.10)!important;\n  outline:none!important;\n}}\nbody.ez-homepage .home-offer small{{\n  display:block!important;\n  width:100%!important;\n  margin:0 0 18px!important;\n  color:#ef233c!important;\n  font:900 10px/1.15 Arial,Helvetica,sans-serif!important;\n  letter-spacing:.12em!important;\n  text-transform:uppercase!important;\n}}\nbody.ez-homepage .home-offer strong{{\n  display:block!important;\n  width:100%!important;\n  margin:0 0 12px!important;\n  color:#0a0b0d!important;\n  font-family:Arial Black,Arial,Helvetica,sans-serif!important;\n  font-size:clamp(22px,2vw,29px)!important;\n  font-weight:950!important;\n  line-height:1.04!important;\n  letter-spacing:-.04em!important;\n}}\nbody.ez-homepage .home-offer span{{\n  display:block!important;\n  width:100%!important;\n  margin:0!important;\n  color:#555c64!important;\n  font:500 15px/1.58 Arial,Helvetica,sans-serif!important;\n  letter-spacing:-.005em!important;\n}}\nbody.ez-homepage .home-offers-action{{\n  display:flex!important;\n  align-items:center!important;\n  justify-content:flex-start!important;\n  margin:30px 0 0!important;\n}}\nbody.ez-homepage .home-offers-action .button{{\n  display:inline-flex!important;\n  align-items:center!important;\n  justify-content:center!important;\n  min-height:52px!important;\n  padding:0 24px!important;\n  border-radius:999px!important;\n  background:#0a0b0d!important;\n  border:1px solid #0a0b0d!important;\n  color:#fff!important;\n  font:900 13px/1 Arial,Helvetica,sans-serif!important;\n  text-decoration:none!important;\n}}\n@media(max-width:1100px){{\n  body.ez-homepage .home-offers-head{{grid-template-columns:1fr!important;gap:22px!important;align-items:start!important}}\n  body.ez-homepage .home-offers-head .body-copy{{max-width:860px!important}}\n  body.ez-homepage .home-offer-grid{{grid-template-columns:repeat(2,minmax(0,1fr))!important}}\n}}\n@media(max-width:720px){{\n  body.ez-homepage .home-offers{{padding:62px 0 70px!important}}\n  body.ez-homepage .home-offers>.wrap{{width:calc(100% - 28px)!important}}\n  body.ez-homepage .home-offers .section-title{{font-size:clamp(40px,13vw,58px)!important;line-height:.96!important}}\n  body.ez-homepage .home-offers-head .body-copy{{font-size:16px!important;line-height:1.55!important}}\n  body.ez-homepage .home-offer-grid{{grid-template-columns:1fr!important;gap:12px!important}}\n  body.ez-homepage .home-offer{{min-height:0!important;padding:24px!important}}\n  body.ez-homepage .home-offer strong{{font-size:24px!important}}\n}}\n{end}\n'''
+          css += f'''\n\n{start}\nbody.ez-homepage .home-offer:hover,\nbody.ez-homepage .home-offer:focus,\nbody.ez-homepage .home-offer:focus-visible,\nbody.ez-homepage .home-offer:active{{\n  background:#fff!important;\n  background-color:#fff!important;\n  color:#0a0b0d!important;\n  border-color:rgba(239,35,60,.38)!important;\n  box-shadow:0 18px 42px rgba(10,11,13,.10)!important;\n  transform:translateY(-4px)!important;\n  opacity:1!important;\n  filter:none!important;\n}}\nbody.ez-homepage .home-offer:hover small,\nbody.ez-homepage .home-offer:focus-visible small,\nbody.ez-homepage .home-offer:active small{{color:#ef233c!important}}\nbody.ez-homepage .home-offer:hover strong,\nbody.ez-homepage .home-offer:focus-visible strong,\nbody.ez-homepage .home-offer:active strong{{color:#0a0b0d!important}}\nbody.ez-homepage .home-offer:hover span,\nbody.ez-homepage .home-offer:focus-visible span,\nbody.ez-homepage .home-offer:active span{{color:#555c64!important}}\nbody.ez-homepage .home-offer:hover::before,\nbody.ez-homepage .home-offer:focus-visible::before,\nbody.ez-homepage .home-offer:active::before{{background:#ef233c!important;opacity:1!important}}\n{end}\n'''
           css_path.write_text(css, encoding='utf-8')
 
           html = index_path.read_text(encoding='utf-8')
@@ -45,13 +45,12 @@ jobs:
           nav_path.write_text(nav, encoding='utf-8')
 
           final_css = css_path.read_text(encoding='utf-8')
-          assert 'grid-template-columns:repeat(3,minmax(0,1fr))!important' in final_css
-          assert 'min-height:220px!important' in final_css
-          assert f'homepage-extras.css?v={TAG}' in index_path.read_text(encoding='utf-8')
-          print('Homepage services section repaired')
+          assert 'background-color:#fff!important' in final_css
+          assert 'body.ez-homepage .home-offer:hover strong' in final_css
+          print('Offer hover guard applied')
           PY
 
-      - name: Commit services section repair
+      - name: Commit hover fix
         shell: bash
         run: |
           git config user.name "github-actions[bot]"
@@ -61,5 +60,5 @@ jobs:
             echo "No changes required."
             exit 0
           fi
-          git commit -m "Repair homepage services section layout"
+          git commit -m "Keep homepage offer cards light on hover"
           git push origin HEAD:main
