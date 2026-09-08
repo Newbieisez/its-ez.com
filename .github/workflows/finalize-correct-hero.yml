@@ -1,0 +1,70 @@
+name: Finalize correct homepage hero headshot
+
+on:
+  push:
+    paths:
+      - .github/workflows/finalize-correct-hero.yml
+
+permissions:
+  contents: write
+
+jobs:
+  finalize-hero:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Point homepage to verified Erez headshot
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+
+          TAG = '20260908-correct-headshot-final-1'
+          ASSET = 'assets/headshot-2026-correct.webp'
+          asset = Path(ASSET)
+          assert asset.exists(), f'Missing {ASSET}'
+          raw = asset.read_bytes()
+          assert len(raw) > 9000, f'Headshot unexpectedly small: {len(raw)} bytes'
+          assert raw[:4] == b'RIFF' and raw[8:12] == b'WEBP', 'Headshot is not a valid WebP container'
+
+          index = Path('index.html')
+          html = index.read_text(encoding='utf-8')
+          html, count = re.subn(
+              r'<img\s+class="ez-hero-portrait"[^>]*>',
+              f'<img class="ez-hero-portrait" src="{ASSET}?v={TAG}" alt="Erez Haimowicz" width="600" height="600" loading="eager" fetchpriority="high" decoding="async">',
+              html,
+              count=1,
+              flags=re.S,
+          )
+          assert count == 1, 'Could not find hero portrait image element'
+          assert 'headshot%202026.png' not in html, 'Wrong-person PNG is still referenced in index.html'
+          assert ASSET in html, 'Correct headshot was not written to index.html'
+          index.write_text(html, encoding='utf-8')
+
+          wrong = Path('assets/headshot 2026.png')
+          if wrong.exists():
+              wrong.unlink()
+
+          print(f'Hero now uses {ASSET} ({len(raw)} bytes)')
+          PY
+
+          git grep -n 'headshot%202026.png' -- ':!*.yml' && exit 1 || true
+          test -s assets/headshot-2026-correct.webp
+
+      - name: Commit final hero fix
+        shell: bash
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add -A index.html assets
+          if git diff --cached --quiet; then
+            echo "No changes required."
+            exit 0
+          fi
+          git commit -m "Use verified Erez headshot in homepage hero"
+          git push origin HEAD:main
