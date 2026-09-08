@@ -15,6 +15,10 @@ table{max-width:100%}
 /* Sticky-header anchor safety */
 [id]{scroll-margin-top:96px}
 
+/* Homepage — the Page Map must never cover the hero or primary content. */
+body.ez-homepage .ez-page-map-toggle,
+body.ez-homepage .ez-page-map{display:none!important}
+
 /* Homepage */
 @media(max-width:1180px){
   body.ez-homepage .hero.hero-2026>.wrap{width:min(100% - 40px,1540px)!important}
