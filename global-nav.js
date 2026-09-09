@@ -1,5 +1,5 @@
 (() => {
-  const VERSION = '20260908-responsive-audit-1';
+  const VERSION = '20260909-revenue-hub-1';
   const ROOT = 'https://its-ez.com/';
 
   const css = `
@@ -53,7 +53,7 @@
   `;
 
   const navItems = [
-    ['Home',ROOT],['Work',ROOT+'#work'],['Services',ROOT+'work-with-me.html'],['AI Systems',ROOT+'ai-systems.html'],['MEDDPICC','https://meddpicc-is-ez.erezhaimowicz.workers.dev/'],['Cybersecurity','https://ez-human-threat-academy.erezhaimowicz.workers.dev/'],['Music',ROOT+'music.html'],['Recommendations',ROOT+'recommendations.html']
+    ['Home',ROOT],['Work',ROOT+'#work'],['Services',ROOT+'work-with-me.html'],['Revenue Hub',ROOT+'revenue-performance.html'],['AI Systems',ROOT+'ai-systems.html'],['MEDDPICC','https://meddpicc-is-ez.erezhaimowicz.workers.dev/'],['Cybersecurity','https://ez-human-threat-academy.erezhaimowicz.workers.dev/'],['Music',ROOT+'music.html'],['Recommendations',ROOT+'recommendations.html']
   ];
 
   function addStyles(){
@@ -89,6 +89,7 @@
     const path=location.pathname.toLowerCase();
     if((host==='its-ez.com'||host==='www.its-ez.com')&&(path==='/'||path==='/index.html')) document.body.classList.add('ez-homepage');
     if(path.endsWith('/ai-systems.html') || path.endsWith('/ai-systems')) document.body.classList.add('ez-ai-systems');
+    if(path.endsWith('/revenue-performance.html') || path.endsWith('/revenue-performance')) document.body.classList.add('ez-revenue-hub');
     if(path.endsWith('/music.html') || path.endsWith('/music')) document.body.classList.add('ez-music');
     if(path.endsWith('/recommendations.html') || path.endsWith('/recommendations')) document.body.classList.add('ez-recommendations');
     if(path.endsWith('/work-with-me.html') || path.endsWith('/work-with-me')) document.body.classList.add('ez-work-with-me');
