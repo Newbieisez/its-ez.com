@@ -110,6 +110,15 @@ function fixHeroLabel(){
   roleline.textContent='Revenue Professional?';
 }
 
+function loadInteractionRepair(){
+  if(document.querySelector('script[data-rp4-repair]')) return;
+  const script=document.createElement('script');
+  script.src='revenue-performance-v4.js?v=20260909-1';
+  script.defer=true;
+  script.dataset.rp4Repair='true';
+  document.head.appendChild(script);
+}
+
 function init(){
   if(!document.body.classList.contains('ez-revenue-hub')) return;
   fixHeroLabel();
@@ -117,6 +126,7 @@ function init(){
   suppressLegacyNavigation();
   installPageGuide();
   keepLegacyMapsSuppressed();
+  loadInteractionRepair();
 }
 ready(init);
 })();
