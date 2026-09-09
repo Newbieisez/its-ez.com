@@ -1,0 +1,34 @@
+name: Revenue Hub Smoke Check
+
+on:
+  push:
+    paths:
+      - 'revenue-performance.html'
+      - 'revenue-performance.js'
+      - 'revenue-performance-v2.js'
+      - 'revenue-performance.css'
+      - 'revenue-performance-v2.css'
+      - '.github/workflows/revenue-hub-smoke.yml'
+  workflow_dispatch:
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: JavaScript syntax
+        run: |
+          node --check revenue-performance.js
+          node --check revenue-performance-v2.js
+      - name: Required page assets
+        run: |
+          test -f revenue-performance.html
+          test -f revenue-performance.css
+          test -f revenue-performance-v2.css
+          grep -q 'revenue-performance-v2.css' revenue-performance.html
+          grep -q 'revenue-performance-v2.js' revenue-performance.html
+          grep -q 'Revenue Professional' revenue-performance-v2.js
+          grep -q 'ChatGPT' revenue-performance-v2.js
+          grep -q 'Claude' revenue-performance-v2.js
+          grep -q 'Gemini' revenue-performance-v2.js
+          grep -q 'Copilot' revenue-performance-v2.js
