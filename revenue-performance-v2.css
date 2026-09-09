@@ -1,0 +1,79 @@
+/* Revenue Performance Hub v2 — usability, accessibility, theme + compact learning */
+:root{--rp2-bg:#ffffff;--rp2-surface:#f4f3f0;--rp2-card:#ffffff;--rp2-ink:#111217;--rp2-muted:#666970;--rp2-line:rgba(17,18,23,.14);--rp2-input:#ffffff;--rp2-red:#ef1717;--rp2-shadow:0 18px 48px rgba(0,0,0,.10)}
+body.ez-revenue-hub{background:var(--rp2-bg)!important;color:var(--rp2-ink)!important;transition:background .2s ease,color .2s ease}
+body.ez-revenue-hub[data-rp-theme="dark"]{--rp2-bg:#090a0c;--rp2-surface:#111318;--rp2-card:#17191e;--rp2-ink:#f6f6f7;--rp2-muted:#a7a9b0;--rp2-line:rgba(255,255,255,.13);--rp2-input:#111318;--rp2-shadow:0 18px 52px rgba(0,0,0,.35)}
+body.ez-revenue-hub .rp-section:not(.rp-section-dark):not(.rp-rules){background:var(--rp2-bg)!important;color:var(--rp2-ink)!important}
+body.ez-revenue-hub .rp-section-soft,body.ez-revenue-hub .rp-diagnose{background:var(--rp2-surface)!important;color:var(--rp2-ink)!important}
+body.ez-revenue-hub .rp-section-head>p,body.ez-revenue-hub .rp-learning-top p,body.ez-revenue-hub .rp-module p,body.ez-revenue-hub .rp-kpi-card p,body.ez-revenue-hub .rp-program-signals,body.ez-revenue-hub .rp-program-meta span,body.ez-revenue-hub .rp-result-note,body.ez-revenue-hub .rp-context-warning span,body.ez-revenue-hub .rp-cadence-grid p,body.ez-revenue-hub .rp-resource-card span{color:var(--rp2-muted)!important}
+body.ez-revenue-hub .rp-role-card,body.ez-revenue-hub .rp-learning-panel,body.ez-revenue-hub .rp-module,body.ez-revenue-hub .rp-kpi-card,body.ez-revenue-hub .rp-diagnostic-card,body.ez-revenue-hub .rp-program-card,body.ez-revenue-hub .rp-cadence-grid article,body.ez-revenue-hub .rp-resource-card,body.ez-revenue-hub .rp-context-warning{background:var(--rp2-card)!important;color:var(--rp2-ink)!important;border-color:var(--rp2-line)!important}
+body.ez-revenue-hub .rp-role-card.is-active{background:#111217!important;color:#fff!important}
+body.ez-revenue-hub[data-rp-theme="dark"] .rp-role-card.is-active{background:#f3f3f4!important;color:#0c0d10!important}
+body.ez-revenue-hub[data-rp-theme="dark"] .rp-role-card.is-active span{color:#595b62!important}
+body.ez-revenue-hub .rp-search input,body.ez-revenue-hub .rp-diagnostic-search input,body.ez-revenue-hub .rp-tool-row select,body.ez-revenue-hub .rp-filter-pills button,body.ez-revenue-hub .rp-diagnostic-shortcuts button,body.ez-revenue-hub .rp2-filter{background:var(--rp2-input)!important;color:var(--rp2-ink)!important;border-color:var(--rp2-line)!important}
+body.ez-revenue-hub[data-rp-theme="dark"] .rp-filter-pills button.is-active,body.ez-revenue-hub[data-rp-theme="dark"] .rp-diagnostic-shortcuts button:hover{background:#f4f4f5!important;color:#0b0c0e!important}
+
+/* hero: prevent Revenue Professional? from wrapping/cropping */
+body.ez-revenue-hub .rp-hero{padding-top:clamp(58px,7vw,86px)!important;padding-bottom:clamp(54px,6vw,74px)!important}
+body.ez-revenue-hub .rp-hero h1{overflow:visible!important;max-width:none!important}
+body.ez-revenue-hub .rp-hero h1 em.rp-hero-roleline{display:block!important;width:max-content;max-width:100%;white-space:nowrap!important;overflow:visible!important;font-size:clamp(1.72rem,7.1vw,6.2rem)!important;line-height:.98!important;letter-spacing:-.055em!important;padding:0 .04em .08em 0}
+@media(min-width:900px){body.ez-revenue-hub .rp-hero h1 em.rp-hero-roleline{font-size:clamp(3.5rem,5.9vw,6.2rem)!important}}
+@media(max-width:520px){body.ez-revenue-hub .rp-hero h1{font-size:clamp(2.85rem,14vw,4.25rem)!important;line-height:.9!important}.rp-hero-grid{gap:28px!important}}
+
+/* persistent theme control */
+.rp2-theme-toggle{position:fixed;top:82px;right:16px;z-index:9992;display:inline-flex;align-items:center;gap:8px;min-height:42px;padding:0 14px;border:1px solid var(--rp2-line);border-radius:999px;background:var(--rp2-card);color:var(--rp2-ink);box-shadow:var(--rp2-shadow);font:900 11px/1 Arial,sans-serif;letter-spacing:.07em;text-transform:uppercase;cursor:pointer}
+.rp2-theme-toggle span{font-size:15px}.rp2-theme-toggle:hover{transform:translateY(-1px)}
+@media(max-width:1180px){.rp2-theme-toggle{top:72px;right:12px}}
+
+/* make the page shorter: each major lesson becomes an expandable module */
+.rp-section-head{position:relative}
+.rp2-collapse-toggle{grid-column:1/-1;justify-self:start;display:inline-flex;align-items:center;gap:8px;min-height:38px;margin-top:-12px;padding:0 12px;border:1px solid var(--rp2-line);border-radius:999px;background:transparent;color:inherit;font:900 10px/1 Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;cursor:pointer}
+.rp2-collapse-toggle:before{content:'−';font-size:16px;color:var(--rp2-red)}
+.rp2-collapsed .rp2-collapse-toggle:before{content:'+'}
+.rp-wrap.rp2-collapsed>:not(.rp-section-head){display:none!important}
+.rp-section{padding-top:clamp(54px,6vw,76px)!important;padding-bottom:clamp(54px,6vw,76px)!important}
+.rp-wrap.rp2-collapsed{padding-bottom:0}
+
+/* useful filtering / result states */
+.rp2-filter-row{display:flex;flex-wrap:wrap;align-items:end;gap:8px;margin:-6px 0 18px}
+.rp2-filter{min-height:42px;padding:0 12px;border:1px solid var(--rp2-line);border-radius:10px;font-weight:800}
+.rp2-search-note{display:none;margin:0 0 14px;padding:12px 14px;border-left:3px solid var(--rp2-red);background:var(--rp2-card);color:var(--rp2-muted);font-size:.82rem}
+.rp2-search-note.is-visible{display:block}
+.rp2-search-note b{color:var(--rp2-ink)}
+.rp2-hidden{display:none!important}
+.rp2-more-row{display:flex;justify-content:center;margin-top:18px}
+.rp2-show-more{min-height:42px;padding:0 16px;border:1px solid var(--rp2-line);border-radius:999px;background:var(--rp2-card);color:var(--rp2-ink);font-weight:900;cursor:pointer}
+
+/* AI teaching controls on every metric, program, cadence */
+.rp2-ai-actions{display:flex;gap:7px;flex-wrap:wrap;margin-top:14px;padding-top:12px;border-top:1px solid var(--rp2-line)}
+.rp2-ai-button{display:inline-flex;align-items:center;justify-content:center;min-height:36px;padding:0 11px;border:1px solid var(--rp2-red);border-radius:999px;background:transparent;color:var(--rp2-red);font:900 10px/1 Arial,sans-serif;letter-spacing:.06em;text-transform:uppercase;cursor:pointer}
+.rp2-ai-button:hover{background:var(--rp2-red);color:#fff}
+.rp2-learn-more{display:inline-flex;align-items:center;justify-content:center;min-height:36px;padding:0 11px;border:1px solid var(--rp2-line);border-radius:999px;background:transparent;color:var(--rp2-ink);font:900 10px/1 Arial,sans-serif;cursor:pointer}
+.rp2-extra{display:none;margin-top:13px;padding:13px;border-radius:12px;background:var(--rp2-surface);color:var(--rp2-muted);font-size:.8rem;line-height:1.55}
+.rp2-extra.is-open{display:block}
+.rp2-extra b{color:var(--rp2-ink)}
+
+/* role-specific AI learning block */
+.rp2-ai-role{margin-top:22px;padding:20px;border:1px solid var(--rp2-line);border-radius:16px;background:var(--rp2-card)}
+.rp2-ai-role-head{display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center}
+.rp2-ai-role h4{margin:0 0 5px;font-size:1.2rem}.rp2-ai-role p{margin:0;color:var(--rp2-muted);font-size:.86rem}
+.rp2-ai-steps{display:grid;grid-template-columns:repeat(5,1fr);gap:7px;margin-top:15px}
+.rp2-ai-steps span{padding:10px;border-radius:10px;background:var(--rp2-surface);font-size:.73rem;font-weight:800}.rp2-ai-steps b{display:block;color:var(--rp2-red);font-size:.61rem;letter-spacing:.08em;margin-bottom:4px}
+@media(max-width:900px){.rp2-ai-role-head{grid-template-columns:1fr}.rp2-ai-steps{grid-template-columns:1fr 1fr}}
+@media(max-width:520px){.rp2-ai-steps{grid-template-columns:1fr}}
+
+/* prompt studio modal */
+.rp2-prompt-dialog{width:min(920px,calc(100% - 24px));max-height:min(90vh,900px);padding:0;border:0;border-radius:22px;background:var(--rp2-card);color:var(--rp2-ink);box-shadow:0 35px 100px rgba(0,0,0,.5);overflow:hidden}
+.rp2-prompt-dialog::backdrop{background:rgba(0,0,0,.72);backdrop-filter:blur(8px)}
+.rp2-prompt-shell{display:grid;grid-template-rows:auto auto 1fr auto;max-height:90vh}
+.rp2-prompt-head{display:flex;align-items:flex-start;justify-content:space-between;gap:18px;padding:22px 24px 16px;border-bottom:1px solid var(--rp2-line)}
+.rp2-prompt-head small{display:block;color:var(--rp2-red);font-weight:900;letter-spacing:.1em;text-transform:uppercase}.rp2-prompt-head h3{margin:5px 0 0;font-size:1.65rem;line-height:1.05}
+.rp2-prompt-close{width:40px;height:40px;border:1px solid var(--rp2-line);border-radius:50%;background:var(--rp2-card);color:var(--rp2-ink);font-size:22px;cursor:pointer}
+.rp2-model-tabs{display:flex;gap:5px;overflow:auto;padding:12px 18px;border-bottom:1px solid var(--rp2-line)}
+.rp2-model-tabs button{flex:0 0 auto;min-height:38px;padding:0 13px;border:1px solid var(--rp2-line);border-radius:999px;background:transparent;color:var(--rp2-ink);font-weight:900;cursor:pointer}.rp2-model-tabs button.is-active{background:#111217;color:#fff;border-color:#111217}.ez-revenue-hub[data-rp-theme="dark"] .rp2-model-tabs button.is-active{background:#f4f4f5;color:#0a0b0d;border-color:#f4f4f5}
+.rp2-prompt-body{overflow:auto;padding:18px 24px}.rp2-platform-tip{margin-bottom:12px;padding:12px 14px;border-left:3px solid var(--rp2-red);background:var(--rp2-surface);color:var(--rp2-muted);font-size:.8rem}.rp2-prompt-body pre{margin:0;white-space:pre-wrap;word-break:break-word;padding:16px;border-radius:14px;background:#0f1013;color:#e9e9ec;font:500 .82rem/1.58 ui-monospace,SFMono-Regular,Consolas,monospace}.rp2-prompt-foot{display:flex;gap:8px;justify-content:flex-end;padding:14px 18px;border-top:1px solid var(--rp2-line)}
+.rp2-copy{min-height:42px;padding:0 16px;border:0;border-radius:999px;background:var(--rp2-red);color:#fff;font-weight:900;cursor:pointer}.rp2-secondary{min-height:42px;padding:0 16px;border:1px solid var(--rp2-line);border-radius:999px;background:transparent;color:var(--rp2-ink);font-weight:900;cursor:pointer}
+
+/* compact grids */
+.rp-kpi-grid{grid-template-columns:repeat(3,1fr)!important}.rp-program-grid{grid-template-columns:repeat(2,1fr)!important}.rp-resource-grid{grid-template-columns:repeat(3,1fr)!important}.rp-cadence-grid{grid-template-columns:repeat(3,1fr)!important}
+@media(max-width:950px){.rp-kpi-grid,.rp-resource-grid,.rp-cadence-grid{grid-template-columns:repeat(2,1fr)!important}.rp-program-grid{grid-template-columns:1fr!important}}
+@media(max-width:620px){.rp-kpi-grid,.rp-resource-grid,.rp-cadence-grid{grid-template-columns:1fr!important}.rp2-theme-toggle{top:auto;right:12px;bottom:12px}.rp2-prompt-head{padding:18px}.rp2-prompt-body{padding:15px}.rp2-prompt-foot{justify-content:stretch}.rp2-prompt-foot button{flex:1}}
