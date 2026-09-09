@@ -1,0 +1,253 @@
+/* Revenue Performance Hub v3 — visual QA fixes from live screenshots */
+:root{
+  --rp3-red:#ef1717;
+  --rp3-bg:#ffffff;
+  --rp3-surface:#f3f4f6;
+  --rp3-card:#ffffff;
+  --rp3-card-hover:#f8f8fa;
+  --rp3-text:#111318;
+  --rp3-muted:#50545d;
+  --rp3-soft:#6c7079;
+  --rp3-border:#d9dce2;
+  --rp3-nav:#0d0f13;
+  --rp3-nav-text:#f7f7f8;
+}
+body.ez-revenue-hub[data-rp-theme="dark"]{
+  --rp3-bg:#090a0c;
+  --rp3-surface:#111318;
+  --rp3-card:#181a20;
+  --rp3-card-hover:#20232a;
+  --rp3-text:#f7f7f8;
+  --rp3-muted:#c1c4cb;
+  --rp3-soft:#a8acb5;
+  --rp3-border:#363a43;
+  --rp3-nav:#0b0c0f;
+  --rp3-nav-text:#f7f7f8;
+}
+
+/* ---------- reading width + spacing ---------- */
+body.ez-revenue-hub{overflow-x:hidden!important;background:var(--rp3-bg)!important;color:var(--rp3-text)!important}
+body.ez-revenue-hub .rp-wrap{width:min(1360px,calc(100% - 64px))!important;margin-inline:auto!important;min-width:0!important}
+body.ez-revenue-hub .rp-hero .rp-wrap{width:min(1500px,calc(100% - 64px))!important}
+body.ez-revenue-hub .rp-section{padding-block:clamp(54px,5vw,72px)!important}
+body.ez-revenue-hub .rp-section-head{gap:clamp(26px,3vw,44px)!important;margin-bottom:28px!important;align-items:start!important}
+body.ez-revenue-hub .rp-section-head h2{font-size:clamp(2.25rem,4vw,4.55rem)!important;line-height:.98!important;letter-spacing:-.05em!important}
+body.ez-revenue-hub .rp-learning-panel{padding:clamp(22px,3vw,34px)!important}
+body.ez-revenue-hub .rp-learning-top{gap:clamp(24px,3vw,42px)!important}
+body.ez-revenue-hub .rp-module-grid{gap:12px!important}
+body.ez-revenue-hub .rp-kpi-grid,
+body.ez-revenue-hub .rp-diagnostic-grid,
+body.ez-revenue-hub .rp-program-grid,
+body.ez-revenue-hub .rp-cadence-grid,
+body.ez-revenue-hub .rp-resource-grid{gap:14px!important}
+body.ez-revenue-hub .rp-kpi-card,
+body.ez-revenue-hub .rp-diagnostic-card,
+body.ez-revenue-hub .rp-program-card,
+body.ez-revenue-hub .rp-cadence-grid article,
+body.ez-revenue-hub .rp-resource-card{padding:22px!important}
+
+/* ---------- hero: fit the actual column, never overlap ---------- */
+body.ez-revenue-hub .rp-hero{overflow:hidden!important;padding:clamp(58px,6vw,82px) 0 clamp(54px,5vw,72px)!important}
+body.ez-revenue-hub .rp-hero-grid{
+  display:grid!important;
+  grid-template-columns:minmax(0,1.08fr) minmax(360px,.72fr)!important;
+  gap:clamp(34px,4vw,68px)!important;
+  align-items:center!important;
+}
+body.ez-revenue-hub .rp-hero-copy{min-width:0!important;max-width:100%!important}
+body.ez-revenue-hub .rp-hero h1{
+  width:100%!important;
+  max-width:100%!important;
+  margin:0!important;
+  overflow:visible!important;
+  font-size:clamp(3.35rem,6vw,6.85rem)!important;
+  line-height:.9!important;
+  letter-spacing:-.06em!important;
+  white-space:normal!important;
+  overflow-wrap:normal!important;
+  word-break:normal!important;
+}
+body.ez-revenue-hub .rp-hero h1 em.rp-hero-roleline{
+  display:block!important;
+  width:100%!important;
+  max-width:100%!important;
+  margin-top:.08em!important;
+  padding:0 0 .06em!important;
+  white-space:nowrap!important;
+  overflow:visible!important;
+  font-size:clamp(2.7rem,4vw,4.8rem)!important;
+  line-height:1!important;
+  letter-spacing:-.048em!important;
+}
+body.ez-revenue-hub .rp-hero-system{width:100%!important;max-width:520px!important;justify-self:end!important;min-width:0!important}
+body.ez-revenue-hub .rp-lede{max-width:720px!important;font-size:clamp(1.05rem,1.45vw,1.38rem)!important;line-height:1.5!important}
+@media(max-width:1120px){
+  body.ez-revenue-hub .rp-hero-grid{grid-template-columns:1fr!important;gap:32px!important}
+  body.ez-revenue-hub .rp-hero-copy{max-width:920px!important}
+  body.ez-revenue-hub .rp-hero-system{justify-self:start!important;max-width:720px!important}
+  body.ez-revenue-hub .rp-hero h1 em.rp-hero-roleline{font-size:clamp(2.6rem,7.2vw,4.9rem)!important}
+}
+@media(max-width:700px){
+  body.ez-revenue-hub .rp-wrap,
+  body.ez-revenue-hub .rp-hero .rp-wrap{width:min(100% - 30px,1360px)!important}
+  body.ez-revenue-hub .rp-hero h1{font-size:clamp(2.75rem,13vw,4.5rem)!important}
+  body.ez-revenue-hub .rp-hero h1 em.rp-hero-roleline{font-size:clamp(2.15rem,10.2vw,3.7rem)!important;white-space:normal!important}
+}
+
+/* ---------- contrast system: text stays readable before AND during hover ---------- */
+body.ez-revenue-hub .rp-section:not(.rp-section-dark),
+body.ez-revenue-hub .rp-section-soft,
+body.ez-revenue-hub .rp-diagnose{color:var(--rp3-text)!important}
+body.ez-revenue-hub .rp-role-card,
+body.ez-revenue-hub .rp-learning-panel,
+body.ez-revenue-hub .rp-module,
+body.ez-revenue-hub .rp-kpi-card,
+body.ez-revenue-hub .rp-diagnostic-card,
+body.ez-revenue-hub .rp-program-card,
+body.ez-revenue-hub .rp-cadence-grid article,
+body.ez-revenue-hub .rp-resource-card,
+body.ez-revenue-hub .rp-context-warning,
+body.ez-revenue-hub .rp2-ai-role{
+  background:var(--rp3-card)!important;
+  color:var(--rp3-text)!important;
+  border-color:var(--rp3-border)!important;
+}
+body.ez-revenue-hub .rp-role-card:not(.is-active):hover,
+body.ez-revenue-hub .rp-module:hover,
+body.ez-revenue-hub .rp-kpi-card:hover,
+body.ez-revenue-hub .rp-diagnostic-card:hover,
+body.ez-revenue-hub .rp-program-card:hover,
+body.ez-revenue-hub .rp-cadence-grid article:hover,
+body.ez-revenue-hub .rp-resource-card:hover{
+  background:var(--rp3-card-hover)!important;
+  color:var(--rp3-text)!important;
+  border-color:#6b707a!important;
+  transform:translateY(-2px)!important;
+}
+body.ez-revenue-hub .rp-role-card.is-active,
+body.ez-revenue-hub[data-rp-theme="dark"] .rp-role-card.is-active{
+  background:var(--rp3-red)!important;
+  color:#fff!important;
+  border-color:var(--rp3-red)!important;
+}
+body.ez-revenue-hub .rp-role-card.is-active small,
+body.ez-revenue-hub .rp-role-card.is-active strong,
+body.ez-revenue-hub .rp-role-card.is-active span,
+body.ez-revenue-hub .rp-role-card.is-active b{color:#fff!important}
+
+body.ez-revenue-hub .rp-section-head>p,
+body.ez-revenue-hub .rp-learning-top p,
+body.ez-revenue-hub .rp-module p,
+body.ez-revenue-hub .rp-kpi-card p,
+body.ez-revenue-hub .rp-diagnostic-card p,
+body.ez-revenue-hub .rp-program-signals,
+body.ez-revenue-hub .rp-program-meta span,
+body.ez-revenue-hub .rp-cadence-grid p,
+body.ez-revenue-hub .rp-cadence-grid article>span,
+body.ez-revenue-hub .rp-resource-card p,
+body.ez-revenue-hub .rp-resource-card span,
+body.ez-revenue-hub .rp-context-warning span,
+body.ez-revenue-hub .rp-result-note,
+body.ez-revenue-hub .rp2-ai-role p,
+body.ez-revenue-hub .rp2-extra{
+  color:var(--rp3-muted)!important;
+}
+body.ez-revenue-hub .rp-diagnostic-card h3,
+body.ez-revenue-hub .rp-diagnostic-card p b,
+body.ez-revenue-hub .rp-diagnostic-card .rp-next,
+body.ez-revenue-hub .rp-program-meta b,
+body.ez-revenue-hub .rp-kpi-card h3,
+body.ez-revenue-hub .rp-program-card h3,
+body.ez-revenue-hub .rp-cadence-grid h3,
+body.ez-revenue-hub .rp-resource-card strong,
+body.ez-revenue-hub .rp-learning-priority b,
+body.ez-revenue-hub .rp-learning-priority span,
+body.ez-revenue-hub .rp2-extra b{
+  color:var(--rp3-text)!important;
+}
+body.ez-revenue-hub .rp-diagnostic-card:hover p,
+body.ez-revenue-hub .rp-diagnostic-card:hover p b,
+body.ez-revenue-hub .rp-diagnostic-card:hover .rp-next,
+body.ez-revenue-hub .rp-program-card:hover .rp-program-meta span,
+body.ez-revenue-hub .rp-program-card:hover .rp-program-meta b,
+body.ez-revenue-hub .rp-program-card:hover .rp-program-signals,
+body.ez-revenue-hub .rp-kpi-card:hover p,
+body.ez-revenue-hub .rp-resource-card:hover span,
+body.ez-revenue-hub .rp-cadence-grid article:hover p,
+body.ez-revenue-hub .rp-cadence-grid article:hover>span{
+  color:var(--rp3-muted)!important;
+}
+body.ez-revenue-hub .rp-diagnostic-card:hover h3,
+body.ez-revenue-hub .rp-kpi-card:hover h3,
+body.ez-revenue-hub .rp-program-card:hover h3,
+body.ez-revenue-hub .rp-cadence-grid article:hover h3,
+body.ez-revenue-hub .rp-resource-card:hover strong{color:var(--rp3-text)!important}
+
+/* inputs + filters */
+body.ez-revenue-hub .rp-search input,
+body.ez-revenue-hub .rp-diagnostic-search input,
+body.ez-revenue-hub .rp-tool-row select,
+body.ez-revenue-hub .rp2-filter,
+body.ez-revenue-hub .rp-filter-pills button,
+body.ez-revenue-hub .rp-diagnostic-shortcuts button{
+  background:var(--rp3-card)!important;
+  color:var(--rp3-text)!important;
+  border-color:var(--rp3-border)!important;
+}
+body.ez-revenue-hub .rp-filter-pills button:hover,
+body.ez-revenue-hub .rp-diagnostic-shortcuts button:hover,
+body.ez-revenue-hub .rp-filter-pills button.is-active,
+body.ez-revenue-hub .rp-diagnostic-shortcuts button.is-active{
+  background:var(--rp3-red)!important;
+  color:#fff!important;
+  border-color:var(--rp3-red)!important;
+}
+body.ez-revenue-hub input::placeholder{color:var(--rp3-soft)!important;opacity:1!important}
+
+/* permanent-dark learning sections keep their own readable palette */
+body.ez-revenue-hub .rp-section-dark{background:#0c0d10!important;color:#f7f7f8!important}
+body.ez-revenue-hub .rp-section-dark h2,
+body.ez-revenue-hub .rp-section-dark h3,
+body.ez-revenue-hub .rp-section-dark strong,
+body.ez-revenue-hub .rp-section-dark b{color:#f7f7f8!important}
+body.ez-revenue-hub .rp-section-dark .rp-section-head>p,
+body.ez-revenue-hub .rp-section-dark p,
+body.ez-revenue-hub .rp-section-dark span{color:#b9bdc6!important}
+body.ez-revenue-hub .rp-section-dark .rp-scorecard-grid b{color:var(--rp3-red)!important}
+
+/* theme toggle no longer competes with header/sidebar */
+body.ez-revenue-hub .rp2-theme-toggle{top:auto!important;right:18px!important;bottom:18px!important;z-index:9985!important;background:var(--rp3-card)!important;color:var(--rp3-text)!important;border-color:var(--rp3-border)!important}
+
+/* ---------- replace the always-open page map with a real collapsible page guide ---------- */
+body.ez-revenue-hub .rp3-legacy-nav-hidden{display:none!important;visibility:hidden!important;pointer-events:none!important}
+.rp3-page-nav{position:fixed;right:18px;top:50%;z-index:9984;transform:translateY(-50%);font-family:Arial,Helvetica,sans-serif;color:var(--rp3-nav-text)}
+.rp3-page-nav-toggle{display:flex;align-items:center;gap:9px;min-height:44px;padding:0 14px;border:1px solid #343841;border-radius:999px;background:var(--rp3-nav);color:var(--rp3-nav-text);box-shadow:0 14px 36px rgba(0,0,0,.28);font:900 11px/1 Arial,sans-serif;letter-spacing:.07em;text-transform:uppercase;cursor:pointer}
+.rp3-page-nav-toggle .rp3-nav-icon{font-size:17px;color:var(--rp3-red)}
+.rp3-page-nav-panel{display:none;position:absolute;right:0;top:54px;width:230px;padding:10px;border:1px solid #30343c;border-radius:16px;background:#0b0c0f;box-shadow:0 24px 60px rgba(0,0,0,.45)}
+.rp3-page-nav.is-open .rp3-page-nav-panel{display:grid;gap:3px}
+.rp3-page-nav-panel a{display:flex;align-items:center;min-height:40px;padding:0 12px;border-radius:9px;color:#b9bdc5!important;text-decoration:none!important;font-size:11px;font-weight:900;letter-spacing:.06em;text-transform:uppercase}
+.rp3-page-nav-panel a:hover,.rp3-page-nav-panel a.is-active{background:#1d2026;color:#fff!important}
+.rp3-page-nav-panel a.is-active{box-shadow:inset 3px 0 0 var(--rp3-red)}
+.rp3-page-nav-close{display:flex;align-items:center;justify-content:space-between;min-height:38px;margin-bottom:4px;padding:0 10px;border:0;border-bottom:1px solid #292d34;background:transparent;color:#f7f7f8;font:900 10px/1 Arial,sans-serif;letter-spacing:.08em;text-transform:uppercase;cursor:pointer}
+.rp3-page-nav-close span{color:var(--rp3-red);font-size:17px}
+@media(max-width:1180px){
+  .rp3-page-nav{right:auto;left:14px;top:auto;bottom:14px;transform:none}
+  .rp3-page-nav-panel{left:0;right:auto;top:auto;bottom:54px;width:min(250px,calc(100vw - 28px));max-height:65vh;overflow:auto}
+  body.ez-revenue-hub .rp2-theme-toggle{right:14px!important;bottom:14px!important}
+}
+
+/* ---------- responsive learning layout ---------- */
+@media(max-width:1040px){
+  body.ez-revenue-hub .rp-section-head,
+  body.ez-revenue-hub .rp-learning-top{grid-template-columns:1fr!important}
+  body.ez-revenue-hub .rp-role-picker{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+  body.ez-revenue-hub .rp-module-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}
+}
+@media(max-width:700px){
+  body.ez-revenue-hub .rp-role-picker,
+  body.ez-revenue-hub .rp-module-grid{grid-template-columns:1fr!important}
+  body.ez-revenue-hub .rp-role-card{min-height:190px!important}
+  body.ez-revenue-hub .rp-learning-panel{padding:20px!important}
+  body.ez-revenue-hub .rp-diagnostic-card{grid-template-columns:46px minmax(0,1fr)!important;padding:18px!important}
+  body.ez-revenue-hub .rp-diagnostic-card>strong{width:42px!important;height:42px!important}
+}
