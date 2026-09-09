@@ -19,23 +19,39 @@ function ready(fn){
   else setTimeout(fn,120);
 }
 
+function installHeroGuard(){
+  if($('#rp3-hero-guard')) return;
+  const style=document.createElement('style');
+  style.id='rp3-hero-guard';
+  style.textContent=`
+    body.ez-revenue-hub .rp-hero h1 em.rp-hero-roleline{font-size:clamp(2.7rem,3.6vw,4rem)!important}
+    @media(max-width:1120px){body.ez-revenue-hub .rp-hero h1 em.rp-hero-roleline{font-size:clamp(2.6rem,6.2vw,4.4rem)!important}}
+    @media(max-width:700px){body.ez-revenue-hub .rp-hero h1 em.rp-hero-roleline{font-size:clamp(2.15rem,10.2vw,3.7rem)!important;white-space:normal!important}}
+  `;
+  document.head.appendChild(style);
+}
+
 function looksLikeLegacyPageMap(el){
-  if(!el || el.classList?.contains('rp3-page-nav')) return false;
+  if(!el || el.nodeType!==1 || el.classList?.contains('rp3-page-nav')) return false;
   const text=(el.textContent||'').toUpperCase().replace(/\s+/g,' ');
   const needles=['PICK YOUR ROLE','MEASUREMENT','KPIS','DIAGNOSE','AI SIGNAL','PROGRAMS','CADENCE','RESOURCES','RULES'];
   const hits=needles.filter(n=>text.includes(n)).length;
   if(hits<6) return false;
   const style=getComputedStyle(el);
   const rect=el.getBoundingClientRect();
-  return ['fixed','sticky','absolute'].includes(style.position) && rect.width>80 && rect.width<420 && rect.height>120;
+  return ['fixed','sticky','absolute'].includes(style.position) && rect.width>80 && rect.width<440 && rect.height>120;
 }
 
-function suppressLegacyNavigation(){
+function suppressLegacyNavigation(root=document){
   const known=['.ez-page-map','.ez-page-map-toggle','.page-map','.page-map-toggle','.rp-page-map','.rp-page-map-toggle'];
-  known.forEach(sel=>$$(sel).forEach(el=>el.classList.add('rp3-legacy-nav-hidden')));
-  $$('body nav,body aside,body>div').forEach(el=>{
-    if(looksLikeLegacyPageMap(el)) el.classList.add('rp3-legacy-nav-hidden');
+  known.forEach(sel=>{
+    if(root.matches?.(sel)) root.classList.add('rp3-legacy-nav-hidden');
+    $$(sel,root).forEach(el=>el.classList.add('rp3-legacy-nav-hidden'));
   });
+  const candidates=[];
+  if(root.matches?.('nav,aside,div')) candidates.push(root);
+  candidates.push(...$$('nav,aside,div',root));
+  candidates.forEach(el=>{if(looksLikeLegacyPageMap(el))el.classList.add('rp3-legacy-nav-hidden')});
 }
 
 function installPageGuide(){
@@ -80,9 +96,11 @@ function installPageGuide(){
 }
 
 function keepLegacyMapsSuppressed(){
-  const observer=new MutationObserver(()=>suppressLegacyNavigation());
+  const observer=new MutationObserver(mutations=>{
+    mutations.forEach(m=>m.addedNodes.forEach(node=>{if(node.nodeType===1)suppressLegacyNavigation(node)}));
+  });
   observer.observe(document.body,{childList:true,subtree:true});
-  setTimeout(()=>observer.disconnect(),10000);
+  setTimeout(()=>observer.disconnect(),12000);
 }
 
 function fixHeroLabel(){
@@ -95,6 +113,7 @@ function fixHeroLabel(){
 function init(){
   if(!document.body.classList.contains('ez-revenue-hub')) return;
   fixHeroLabel();
+  installHeroGuard();
   suppressLegacyNavigation();
   installPageGuide();
   keepLegacyMapsSuppressed();
