@@ -1,6 +1,7 @@
 {
-  "schemaVersion": 1,
-  "generatedAt": "2026-09-10T21:57:26.518Z",
+  "schemaVersion": 2,
+  "methodologyVersion": "2.0",
+  "generatedAt": "2026-09-10T23:38:50.313Z",
   "refreshHours": 6,
   "items": {
     "chatgpt": {
@@ -12,16 +13,21 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:26.518Z"
+      "lastRefreshed": "2026-09-10T23:38:50.314Z"
     },
     "claude": {
       "id": "claude",
@@ -32,16 +38,21 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:26.518Z"
+      "lastRefreshed": "2026-09-10T23:38:50.314Z"
     },
     "gemini": {
       "id": "gemini",
@@ -52,16 +63,21 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:26.518Z"
+      "lastRefreshed": "2026-09-10T23:38:50.314Z"
     },
     "copilot": {
       "id": "copilot",
@@ -72,16 +88,21 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:26.519Z"
+      "lastRefreshed": "2026-09-10T23:38:50.314Z"
     },
     "perplexity": {
       "id": "perplexity",
@@ -92,16 +113,21 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:26.519Z"
+      "lastRefreshed": "2026-09-10T23:38:50.314Z"
     },
     "notebooklm": {
       "id": "notebooklm",
@@ -112,16 +138,21 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:26.519Z"
+      "lastRefreshed": "2026-09-10T23:38:50.314Z"
     },
     "clay": {
       "id": "clay",
@@ -132,89 +163,135 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:26.519Z"
+      "lastRefreshed": "2026-09-10T23:38:50.314Z"
     },
     "salesforce": {
       "id": "salesforce",
       "name": "Salesforce",
       "status": "provisional",
-      "score": 9.3,
-      "confidence": 8.4,
-      "reviewCount": 352089,
+      "score": 7.5,
+      "confidence": 0,
+      "reviewCount": 352070,
       "sourceCount": 1,
       "independentSourceCount": 1,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": 9.5,
-        "reviewConfidence": 8.4,
+        "reviewConfidence": 0,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
-      "trend": 0,
+      "trend": -1.8,
       "sources": [
         {
-          "label": "Apple App Store — Salesforce mobile",
+          "label": "Apple App Store mobile rating",
           "url": "https://itunes.apple.com/lookup?id=404249815&country=us",
-          "sourceFamily": "itunes.apple.com",
+          "sourceFamily": "apple-app-store",
+          "scope": "mobile_app",
           "component": "userSentiment",
           "score": 9.5,
-          "reviewCount": 352089,
-          "observedAt": "2026-09-10T21:57:26.709Z"
+          "reviewCount": 352070,
+          "reliability": 0.9,
+          "observedAt": "2026-09-10T23:38:50.583Z"
         }
       ],
-      "lastRefreshed": "2026-09-10T21:57:26.709Z"
+      "lastRefreshed": "2026-09-10T23:38:50.584Z"
     },
     "hubspot": {
       "id": "hubspot",
       "name": "HubSpot",
-      "status": "provisional",
-      "score": 9.3,
-      "confidence": 8.4,
-      "reviewCount": 15537,
-      "sourceCount": 1,
-      "independentSourceCount": 1,
+      "status": "live",
+      "score": 9.2,
+      "confidence": 9.1,
+      "reviewCount": 29863,
+      "sourceCount": 3,
+      "independentSourceCount": 3,
+      "fullPlatformSourceCount": 2,
+      "fullPlatformReviewCount": 14325,
+      "secondLargestFullPlatformReviewCount": 583,
       "components": {
-        "userSentiment": 9.5,
-        "reviewConfidence": 8.4,
+        "userSentiment": 8.9,
+        "reviewConfidence": 9.1,
+        "sourceAgreement": 10,
+        "evidenceFreshness": 10,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
-      "trend": 0,
+      "trend": -0.1,
       "sources": [
         {
-          "label": "Apple App Store — HubSpot mobile",
+          "label": "G2",
+          "url": "https://www.g2.com/products/hubspot-sales-hub/reviews",
+          "sourceFamily": "g2",
+          "scope": "full_platform",
+          "component": "userSentiment",
+          "score": 8.8,
+          "reviewCount": 13742,
+          "reliability": 0.95,
+          "observedAt": "2026-09-10T20:00:00Z"
+        },
+        {
+          "label": "TrustRadius",
+          "url": "https://www.trustradius.com/products/hubspot-sales-hub/reviews",
+          "sourceFamily": "trustradius",
+          "scope": "full_platform",
+          "component": "userSentiment",
+          "score": 8.8,
+          "reviewCount": 583,
+          "reliability": 0.95,
+          "observedAt": "2026-09-10T20:00:00Z"
+        },
+        {
+          "label": "Apple App Store mobile rating",
           "url": "https://itunes.apple.com/lookup?id=1107711722&country=us",
-          "sourceFamily": "itunes.apple.com",
+          "sourceFamily": "apple-app-store",
+          "scope": "mobile_app",
           "component": "userSentiment",
           "score": 9.5,
-          "reviewCount": 15537,
-          "observedAt": "2026-09-10T21:57:26.745Z"
+          "reviewCount": 15538,
+          "reliability": 0.9,
+          "observedAt": "2026-09-10T23:38:50.610Z"
         }
       ],
-      "lastRefreshed": "2026-09-10T21:57:26.745Z"
+      "lastRefreshed": "2026-09-10T23:38:50.610Z"
     },
     "dynamics": {
       "id": "dynamics",
       "name": "Microsoft Dynamics 365",
-      "status": "provisional",
+      "status": "live",
       "score": 8.4,
-      "confidence": 7,
-      "reviewCount": 828,
-      "sourceCount": 1,
-      "independentSourceCount": 1,
+      "confidence": 8.6,
+      "reviewCount": 3468,
+      "sourceCount": 3,
+      "independentSourceCount": 3,
+      "fullPlatformSourceCount": 2,
+      "fullPlatformReviewCount": 2640,
+      "secondLargestFullPlatformReviewCount": 1024,
       "components": {
-        "userSentiment": 8.7,
-        "reviewConfidence": 7,
+        "userSentiment": 7.9,
+        "reviewConfidence": 8.6,
+        "sourceAgreement": 9.2,
+        "evidenceFreshness": 10,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
@@ -222,119 +299,213 @@
       "trend": 0,
       "sources": [
         {
-          "label": "Apple App Store — Dynamics 365 Sales mobile",
+          "label": "G2",
+          "url": "https://www.g2.com/products/dynamics-365-sales/reviews",
+          "sourceFamily": "g2",
+          "scope": "full_platform",
+          "component": "userSentiment",
+          "score": 7.6,
+          "reviewCount": 1616,
+          "reliability": 0.9,
+          "observedAt": "2026-09-10T20:00:00Z"
+        },
+        {
+          "label": "TrustRadius",
+          "url": "https://www.trustradius.com/products/microsoft-dynamics-365/reviews",
+          "sourceFamily": "trustradius",
+          "scope": "full_platform",
+          "component": "userSentiment",
+          "score": 8,
+          "reviewCount": 1024,
+          "reliability": 0.8,
+          "observedAt": "2026-09-10T20:00:00Z"
+        },
+        {
+          "label": "Apple App Store mobile rating",
           "url": "https://itunes.apple.com/lookup?id=1485578688&country=us",
-          "sourceFamily": "itunes.apple.com",
+          "sourceFamily": "apple-app-store",
+          "scope": "mobile_app",
           "component": "userSentiment",
           "score": 8.7,
           "reviewCount": 828,
-          "observedAt": "2026-09-10T21:57:26.794Z"
+          "reliability": 0.9,
+          "observedAt": "2026-09-10T23:38:50.630Z"
         }
       ],
-      "lastRefreshed": "2026-09-10T21:57:26.794Z"
+      "lastRefreshed": "2026-09-10T23:38:50.630Z"
     },
     "zoho": {
       "id": "zoho",
       "name": "Zoho CRM",
-      "status": "provisional",
-      "score": 8.6,
-      "confidence": 7.7,
-      "reviewCount": 2688,
-      "sourceCount": 1,
-      "independentSourceCount": 1,
+      "status": "live",
+      "score": 8.7,
+      "confidence": 8.7,
+      "reviewCount": 6647,
+      "sourceCount": 3,
+      "independentSourceCount": 3,
+      "fullPlatformSourceCount": 2,
+      "fullPlatformReviewCount": 3959,
+      "secondLargestFullPlatformReviewCount": 1038,
       "components": {
-        "userSentiment": 8.8,
-        "reviewConfidence": 7.7,
+        "userSentiment": 8.4,
+        "reviewConfidence": 8.7,
+        "sourceAgreement": 9.6,
+        "evidenceFreshness": 10,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
-      "trend": 0,
+      "trend": 0.1,
       "sources": [
         {
-          "label": "Apple App Store — Zoho CRM mobile",
+          "label": "G2",
+          "url": "https://www.g2.com/products/zoho-crm/reviews",
+          "sourceFamily": "g2",
+          "scope": "full_platform",
+          "component": "userSentiment",
+          "score": 8.2,
+          "reviewCount": 2921,
+          "reliability": 1,
+          "observedAt": "2026-09-10T20:00:00Z"
+        },
+        {
+          "label": "TrustRadius",
+          "url": "https://www.trustradius.com/products/zoho-crm/reviews",
+          "sourceFamily": "trustradius",
+          "scope": "full_platform",
+          "component": "userSentiment",
+          "score": 8.4,
+          "reviewCount": 1038,
+          "reliability": 1,
+          "observedAt": "2026-09-10T20:00:00Z"
+        },
+        {
+          "label": "Apple App Store mobile rating",
           "url": "https://itunes.apple.com/lookup?id=444908810&country=us",
-          "sourceFamily": "itunes.apple.com",
+          "sourceFamily": "apple-app-store",
+          "scope": "mobile_app",
           "component": "userSentiment",
           "score": 8.8,
           "reviewCount": 2688,
-          "observedAt": "2026-09-10T21:57:26.818Z"
+          "reliability": 0.9,
+          "observedAt": "2026-09-10T23:38:50.646Z"
         }
       ],
-      "lastRefreshed": "2026-09-10T21:57:26.818Z"
+      "lastRefreshed": "2026-09-10T23:38:50.646Z"
     },
     "gong": {
       "id": "gong",
       "name": "Gong",
-      "status": "provisional",
-      "score": 7.5,
-      "confidence": 5.9,
-      "reviewCount": 109,
-      "sourceCount": 1,
-      "independentSourceCount": 1,
+      "status": "live",
+      "score": 9.2,
+      "confidence": 9,
+      "reviewCount": 7885,
+      "sourceCount": 3,
+      "independentSourceCount": 3,
+      "fullPlatformSourceCount": 2,
+      "fullPlatformReviewCount": 7776,
+      "secondLargestFullPlatformReviewCount": 1183,
       "components": {
-        "userSentiment": 7.9,
-        "reviewConfidence": 5.9,
+        "userSentiment": 9.2,
+        "reviewConfidence": 9,
+        "sourceAgreement": 9.4,
+        "evidenceFreshness": 10,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
-      "trend": 0,
+      "trend": 1.7,
       "sources": [
         {
-          "label": "Apple App Store — Gong mobile",
+          "label": "G2",
+          "url": "https://www.g2.com/products/gong/reviews",
+          "sourceFamily": "g2",
+          "scope": "full_platform",
+          "component": "userSentiment",
+          "score": 9.4,
+          "reviewCount": 6593,
+          "reliability": 1,
+          "observedAt": "2026-09-10T20:00:00Z"
+        },
+        {
+          "label": "TrustRadius",
+          "url": "https://www.trustradius.com/products/gong-io/reviews",
+          "sourceFamily": "trustradius",
+          "scope": "full_platform",
+          "component": "userSentiment",
+          "score": 9.1,
+          "reviewCount": 1183,
+          "reliability": 1,
+          "observedAt": "2026-09-10T20:00:00Z"
+        },
+        {
+          "label": "Apple App Store mobile rating",
           "url": "https://itunes.apple.com/lookup?id=1289289459&country=us",
-          "sourceFamily": "itunes.apple.com",
+          "sourceFamily": "apple-app-store",
+          "scope": "mobile_app",
           "component": "userSentiment",
           "score": 8,
           "reviewCount": 109,
-          "observedAt": "2026-09-10T21:57:26.848Z"
+          "reliability": 0.9,
+          "observedAt": "2026-09-10T23:38:50.664Z"
         }
       ],
-      "lastRefreshed": "2026-09-10T21:57:26.848Z"
+      "lastRefreshed": "2026-09-10T23:38:50.664Z"
     },
     "chorus": {
       "id": "chorus",
       "name": "ZoomInfo Chorus",
       "status": "provisional",
-      "score": 6.3,
-      "confidence": 5.3,
+      "score": 5.4,
+      "confidence": 0,
       "reviewCount": 37,
       "sourceCount": 1,
       "independentSourceCount": 1,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
-        "userSentiment": 6.5,
-        "reviewConfidence": 5.3,
+        "userSentiment": 6.8,
+        "reviewConfidence": 0,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
-      "trend": 0,
+      "trend": -0.9,
       "sources": [
         {
-          "label": "Apple App Store — Chorus by ZoomInfo mobile",
+          "label": "Apple App Store mobile rating",
           "url": "https://itunes.apple.com/lookup?id=1591442342&country=us",
-          "sourceFamily": "itunes.apple.com",
+          "sourceFamily": "apple-app-store",
+          "scope": "mobile_app",
           "component": "userSentiment",
           "score": 5.7,
           "reviewCount": 37,
-          "observedAt": "2026-09-10T21:57:26.897Z"
+          "reliability": 0.9,
+          "observedAt": "2026-09-10T23:38:50.679Z"
         }
       ],
-      "lastRefreshed": "2026-09-10T21:57:26.897Z"
+      "lastRefreshed": "2026-09-10T23:38:50.680Z"
     },
     "clari": {
       "id": "clari",
       "name": "Clari",
-      "status": "provisional",
+      "status": "live",
       "score": 8.9,
-      "confidence": 7.2,
-      "reviewCount": 1129,
-      "sourceCount": 1,
-      "independentSourceCount": 1,
+      "confidence": 8.6,
+      "reviewCount": 6845,
+      "sourceCount": 3,
+      "independentSourceCount": 3,
+      "fullPlatformSourceCount": 2,
+      "fullPlatformReviewCount": 5716,
+      "secondLargestFullPlatformReviewCount": 119,
       "components": {
-        "userSentiment": 9.3,
-        "reviewConfidence": 7.2,
+        "userSentiment": 9,
+        "reviewConfidence": 8.6,
+        "sourceAgreement": 8,
+        "evidenceFreshness": 10,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
@@ -342,76 +513,158 @@
       "trend": 0,
       "sources": [
         {
-          "label": "Apple App Store — Clari mobile",
+          "label": "G2",
+          "url": "https://www.g2.com/products/clari/reviews",
+          "sourceFamily": "g2",
+          "scope": "full_platform",
+          "component": "userSentiment",
+          "score": 9.2,
+          "reviewCount": 5597,
+          "reliability": 1,
+          "observedAt": "2026-09-10T20:00:00Z"
+        },
+        {
+          "label": "TrustRadius legacy product coverage",
+          "url": "https://www.trustradius.com/products/clari/reviews",
+          "sourceFamily": "trustradius",
+          "scope": "full_platform",
+          "component": "userSentiment",
+          "score": 8.2,
+          "reviewCount": 119,
+          "reliability": 0.75,
+          "observedAt": "2026-09-10T20:00:00Z"
+        },
+        {
+          "label": "Apple App Store mobile rating",
           "url": "https://itunes.apple.com/lookup?id=977304452&country=us",
-          "sourceFamily": "itunes.apple.com",
+          "sourceFamily": "apple-app-store",
+          "scope": "mobile_app",
           "component": "userSentiment",
           "score": 9.3,
           "reviewCount": 1129,
-          "observedAt": "2026-09-10T21:57:26.935Z"
+          "reliability": 0.9,
+          "observedAt": "2026-09-10T23:38:50.694Z"
         }
       ],
-      "lastRefreshed": "2026-09-10T21:57:26.935Z"
+      "lastRefreshed": "2026-09-10T23:38:50.694Z"
     },
     "outreach": {
       "id": "outreach",
       "name": "Outreach",
-      "status": "provisional",
-      "score": 6.9,
-      "confidence": 5.2,
-      "reviewCount": 26,
-      "sourceCount": 1,
-      "independentSourceCount": 1,
+      "status": "live",
+      "score": 8.7,
+      "confidence": 8.8,
+      "reviewCount": 4638,
+      "sourceCount": 3,
+      "independentSourceCount": 3,
+      "fullPlatformSourceCount": 2,
+      "fullPlatformReviewCount": 4612,
+      "secondLargestFullPlatformReviewCount": 1047,
       "components": {
-        "userSentiment": 7.2,
-        "reviewConfidence": 5.2,
+        "userSentiment": 8.4,
+        "reviewConfidence": 8.8,
+        "sourceAgreement": 9.4,
+        "evidenceFreshness": 10,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
-      "trend": 0,
+      "trend": 1.8,
       "sources": [
         {
-          "label": "Apple App Store — Outreach.io mobile",
+          "label": "G2",
+          "url": "https://www.g2.com/products/outreach/reviews",
+          "sourceFamily": "g2",
+          "scope": "full_platform",
+          "component": "userSentiment",
+          "score": 8.6,
+          "reviewCount": 3565,
+          "reliability": 1,
+          "observedAt": "2026-09-10T20:00:00Z"
+        },
+        {
+          "label": "TrustRadius",
+          "url": "https://www.trustradius.com/products/outreach/reviews",
+          "sourceFamily": "trustradius",
+          "scope": "full_platform",
+          "component": "userSentiment",
+          "score": 8.3,
+          "reviewCount": 1047,
+          "reliability": 1,
+          "observedAt": "2026-09-10T20:00:00Z"
+        },
+        {
+          "label": "Apple App Store mobile rating",
           "url": "https://itunes.apple.com/lookup?id=6505089914&country=us",
-          "sourceFamily": "itunes.apple.com",
+          "sourceFamily": "apple-app-store",
+          "scope": "mobile_app",
           "component": "userSentiment",
           "score": 6.9,
           "reviewCount": 26,
-          "observedAt": "2026-09-10T21:57:26.967Z"
+          "reliability": 0.9,
+          "observedAt": "2026-09-10T23:38:50.708Z"
         }
       ],
-      "lastRefreshed": "2026-09-10T21:57:26.967Z"
+      "lastRefreshed": "2026-09-10T23:38:50.709Z"
     },
     "salesloft": {
       "id": "salesloft",
       "name": "Salesloft",
-      "status": "provisional",
-      "score": 7.4,
-      "confidence": 6,
-      "reviewCount": 130,
-      "sourceCount": 1,
-      "independentSourceCount": 1,
+      "status": "live",
+      "score": 8.4,
+      "confidence": 8.9,
+      "reviewCount": 5390,
+      "sourceCount": 3,
+      "independentSourceCount": 3,
+      "fullPlatformSourceCount": 2,
+      "fullPlatformReviewCount": 5260,
+      "secondLargestFullPlatformReviewCount": 973,
       "components": {
-        "userSentiment": 7.7,
-        "reviewConfidence": 6,
+        "userSentiment": 8.3,
+        "reviewConfidence": 8.9,
+        "sourceAgreement": 7,
+        "evidenceFreshness": 10,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
-      "trend": 0,
+      "trend": 1,
       "sources": [
         {
-          "label": "Apple App Store — Salesloft mobile",
+          "label": "G2",
+          "url": "https://www.g2.com/products/salesloft/reviews",
+          "sourceFamily": "g2",
+          "scope": "full_platform",
+          "component": "userSentiment",
+          "score": 9,
+          "reviewCount": 4287,
+          "reliability": 1,
+          "observedAt": "2026-09-10T20:00:00Z"
+        },
+        {
+          "label": "TrustRadius",
+          "url": "https://www.trustradius.com/products/salesloft/reviews",
+          "sourceFamily": "trustradius",
+          "scope": "full_platform",
+          "component": "userSentiment",
+          "score": 7.5,
+          "reviewCount": 973,
+          "reliability": 1,
+          "observedAt": "2026-09-10T20:00:00Z"
+        },
+        {
+          "label": "Apple App Store mobile rating",
           "url": "https://itunes.apple.com/lookup?id=1455032473&country=us",
-          "sourceFamily": "itunes.apple.com",
+          "sourceFamily": "apple-app-store",
+          "scope": "mobile_app",
           "component": "userSentiment",
           "score": 7.8,
           "reviewCount": 130,
-          "observedAt": "2026-09-10T21:57:27.030Z"
+          "reliability": 0.9,
+          "observedAt": "2026-09-10T23:38:50.727Z"
         }
       ],
-      "lastRefreshed": "2026-09-10T21:57:27.030Z"
+      "lastRefreshed": "2026-09-10T23:38:50.727Z"
     },
     "rattle": {
       "id": "rattle",
@@ -422,106 +675,176 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:27.030Z"
+      "lastRefreshed": "2026-09-10T23:38:50.727Z"
     },
     "seismic": {
       "id": "seismic",
       "name": "Seismic",
       "status": "provisional",
-      "score": 7.4,
-      "confidence": 5.6,
+      "score": 6,
+      "confidence": 0,
       "reviewCount": 60,
       "sourceCount": 1,
       "independentSourceCount": 1,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
-        "userSentiment": 7.8,
-        "reviewConfidence": 5.6,
+        "userSentiment": 7.7,
+        "reviewConfidence": 0,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
-      "trend": 0,
+      "trend": -1.4,
       "sources": [
         {
-          "label": "Apple App Store — Seismic mobile",
+          "label": "Apple App Store mobile rating",
           "url": "https://itunes.apple.com/lookup?id=639973703&country=us",
-          "sourceFamily": "itunes.apple.com",
+          "sourceFamily": "apple-app-store",
+          "scope": "mobile_app",
           "component": "userSentiment",
           "score": 7.9,
           "reviewCount": 60,
-          "observedAt": "2026-09-10T21:57:27.070Z"
+          "reliability": 0.9,
+          "observedAt": "2026-09-10T23:38:50.750Z"
         }
       ],
-      "lastRefreshed": "2026-09-10T21:57:27.070Z"
+      "lastRefreshed": "2026-09-10T23:38:50.750Z"
     },
     "highspot": {
       "id": "highspot",
       "name": "Highspot by Seismic",
-      "status": "provisional",
-      "score": 8.6,
-      "confidence": 6,
-      "reviewCount": 115,
-      "sourceCount": 1,
-      "independentSourceCount": 1,
+      "status": "live",
+      "score": 8.9,
+      "confidence": 8.1,
+      "reviewCount": 1476,
+      "sourceCount": 3,
+      "independentSourceCount": 3,
+      "fullPlatformSourceCount": 2,
+      "fullPlatformReviewCount": 1361,
+      "secondLargestFullPlatformReviewCount": 155,
       "components": {
-        "userSentiment": 9.2,
-        "reviewConfidence": 6,
+        "userSentiment": 9.1,
+        "reviewConfidence": 8.1,
+        "sourceAgreement": 8.2,
+        "evidenceFreshness": 10,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
-      "trend": 0,
+      "trend": 0.3,
       "sources": [
         {
-          "label": "Apple App Store — Highspot mobile",
+          "label": "G2",
+          "url": "https://www.g2.com/sellers/highspot",
+          "sourceFamily": "g2",
+          "scope": "full_platform",
+          "component": "userSentiment",
+          "score": 9.4,
+          "reviewCount": 1206,
+          "reliability": 0.95,
+          "observedAt": "2026-09-10T20:00:00Z"
+        },
+        {
+          "label": "TrustRadius",
+          "url": "https://www.trustradius.com/products/highspot/reviews",
+          "sourceFamily": "trustradius",
+          "scope": "full_platform",
+          "component": "userSentiment",
+          "score": 8.5,
+          "reviewCount": 155,
+          "reliability": 1,
+          "observedAt": "2026-09-10T20:00:00Z"
+        },
+        {
+          "label": "Apple App Store mobile rating",
           "url": "https://itunes.apple.com/lookup?id=1173751523&country=us",
-          "sourceFamily": "itunes.apple.com",
+          "sourceFamily": "apple-app-store",
+          "scope": "mobile_app",
           "component": "userSentiment",
           "score": 9.7,
           "reviewCount": 115,
-          "observedAt": "2026-09-10T21:57:27.132Z"
+          "reliability": 0.9,
+          "observedAt": "2026-09-10T23:38:50.767Z"
         }
       ],
-      "lastRefreshed": "2026-09-10T21:57:27.132Z"
+      "lastRefreshed": "2026-09-10T23:38:50.767Z"
     },
     "allego": {
       "id": "allego",
       "name": "Allego",
-      "status": "provisional",
-      "score": 8.4,
-      "confidence": 6.4,
-      "reviewCount": 279,
-      "sourceCount": 1,
-      "independentSourceCount": 1,
+      "status": "live",
+      "score": 8.7,
+      "confidence": 7.5,
+      "reviewCount": 1022,
+      "sourceCount": 3,
+      "independentSourceCount": 3,
+      "fullPlatformSourceCount": 2,
+      "fullPlatformReviewCount": 743,
+      "secondLargestFullPlatformReviewCount": 53,
       "components": {
         "userSentiment": 8.9,
-        "reviewConfidence": 6.4,
+        "reviewConfidence": 7.5,
+        "sourceAgreement": 8.4,
+        "evidenceFreshness": 10,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
-      "trend": 0,
+      "trend": 0.3,
       "sources": [
         {
-          "label": "Apple App Store — Allego mobile",
+          "label": "G2",
+          "url": "https://www.g2.com/products/allego/reviews",
+          "sourceFamily": "g2",
+          "scope": "full_platform",
+          "component": "userSentiment",
+          "score": 9.2,
+          "reviewCount": 690,
+          "reliability": 1,
+          "observedAt": "2026-09-10T20:00:00Z"
+        },
+        {
+          "label": "TrustRadius",
+          "url": "https://www.trustradius.com/products/allego-sales-enablement-platform/reviews",
+          "sourceFamily": "trustradius",
+          "scope": "full_platform",
+          "component": "userSentiment",
+          "score": 8.4,
+          "reviewCount": 53,
+          "reliability": 1,
+          "observedAt": "2026-09-10T20:00:00Z"
+        },
+        {
+          "label": "Apple App Store mobile rating",
           "url": "https://itunes.apple.com/lookup?id=640352522&country=us",
-          "sourceFamily": "itunes.apple.com",
+          "sourceFamily": "apple-app-store",
+          "scope": "mobile_app",
           "component": "userSentiment",
           "score": 9,
           "reviewCount": 279,
-          "observedAt": "2026-09-10T21:57:27.177Z"
+          "reliability": 0.9,
+          "observedAt": "2026-09-10T23:38:50.782Z"
         }
       ],
-      "lastRefreshed": "2026-09-10T21:57:27.177Z"
+      "lastRefreshed": "2026-09-10T23:38:50.782Z"
     },
     "letter-ai": {
       "id": "letter-ai",
@@ -532,156 +855,283 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:27.177Z"
+      "lastRefreshed": "2026-09-10T23:38:50.782Z"
     },
     "mindtickle": {
       "id": "mindtickle",
       "name": "Mindtickle",
-      "status": "provisional",
-      "score": 7.6,
-      "confidence": 6.3,
-      "reviewCount": 232,
-      "sourceCount": 1,
-      "independentSourceCount": 1,
+      "status": "live",
+      "score": 8.6,
+      "confidence": 7.9,
+      "reviewCount": 2507,
+      "sourceCount": 3,
+      "independentSourceCount": 3,
+      "fullPlatformSourceCount": 2,
+      "fullPlatformReviewCount": 2275,
+      "secondLargestFullPlatformReviewCount": 52,
       "components": {
-        "userSentiment": 7.8,
-        "reviewConfidence": 6.3,
+        "userSentiment": 8.8,
+        "reviewConfidence": 7.9,
+        "sourceAgreement": 7.2,
+        "evidenceFreshness": 10,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
-      "trend": 0,
+      "trend": 1,
       "sources": [
         {
-          "label": "Apple App Store — Mindtickle mobile",
+          "label": "G2",
+          "url": "https://www.g2.com/products/mindtickle/reviews",
+          "sourceFamily": "g2",
+          "scope": "full_platform",
+          "component": "userSentiment",
+          "score": 9.4,
+          "reviewCount": 2223,
+          "reliability": 1,
+          "observedAt": "2026-09-10T20:00:00Z"
+        },
+        {
+          "label": "TrustRadius",
+          "url": "https://www.trustradius.com/products/mindtickle/reviews",
+          "sourceFamily": "trustradius",
+          "scope": "full_platform",
+          "component": "userSentiment",
+          "score": 8,
+          "reviewCount": 52,
+          "reliability": 1,
+          "observedAt": "2026-09-10T20:00:00Z"
+        },
+        {
+          "label": "Apple App Store mobile rating",
           "url": "https://itunes.apple.com/lookup?id=965785490&country=us",
-          "sourceFamily": "itunes.apple.com",
+          "sourceFamily": "apple-app-store",
+          "scope": "mobile_app",
           "component": "userSentiment",
           "score": 7.9,
           "reviewCount": 232,
-          "observedAt": "2026-09-10T21:57:27.269Z"
+          "reliability": 0.9,
+          "observedAt": "2026-09-10T23:38:50.796Z"
         }
       ],
-      "lastRefreshed": "2026-09-10T21:57:27.269Z"
+      "lastRefreshed": "2026-09-10T23:38:50.796Z"
     },
     "showpad": {
       "id": "showpad",
       "name": "Showpad",
       "status": "provisional",
-      "score": 7.3,
-      "confidence": 5.2,
+      "score": 6,
+      "confidence": 0,
       "reviewCount": 29,
       "sourceCount": 1,
       "independentSourceCount": 1,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
-        "userSentiment": 7.8,
-        "reviewConfidence": 5.2,
+        "userSentiment": 7.7,
+        "reviewConfidence": 0,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
-      "trend": 0,
+      "trend": -1.3,
       "sources": [
         {
-          "label": "Apple App Store — Showpad mobile",
+          "label": "Apple App Store mobile rating",
           "url": "https://itunes.apple.com/lookup?id=432293783&country=us",
-          "sourceFamily": "itunes.apple.com",
+          "sourceFamily": "apple-app-store",
+          "scope": "mobile_app",
           "component": "userSentiment",
           "score": 8.1,
           "reviewCount": 29,
-          "observedAt": "2026-09-10T21:57:27.308Z"
+          "reliability": 0.9,
+          "observedAt": "2026-09-10T23:38:50.810Z"
         }
       ],
-      "lastRefreshed": "2026-09-10T21:57:27.308Z"
+      "lastRefreshed": "2026-09-10T23:38:50.810Z"
     },
     "spekit": {
       "id": "spekit",
       "name": "Spekit",
-      "status": "collecting",
-      "score": null,
-      "confidence": null,
-      "reviewCount": 0,
-      "sourceCount": 0,
-      "independentSourceCount": 0,
+      "status": "live",
+      "score": 9,
+      "confidence": 6.9,
+      "reviewCount": 309,
+      "sourceCount": 2,
+      "independentSourceCount": 2,
+      "fullPlatformSourceCount": 2,
+      "fullPlatformReviewCount": 309,
+      "secondLargestFullPlatformReviewCount": 27,
       "components": {
-        "userSentiment": null,
-        "reviewConfidence": null,
+        "userSentiment": 9.2,
+        "reviewConfidence": 6.9,
+        "sourceAgreement": 9.6,
+        "evidenceFreshness": 10,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
-      "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:27.308Z"
+      "sources": [
+        {
+          "label": "G2",
+          "url": "https://www.g2.com/products/spekit/reviews",
+          "sourceFamily": "g2",
+          "scope": "full_platform",
+          "component": "userSentiment",
+          "score": 9.4,
+          "reviewCount": 282,
+          "reliability": 1,
+          "observedAt": "2026-09-10T20:00:00Z"
+        },
+        {
+          "label": "TrustRadius",
+          "url": "https://www.trustradius.com/products/spekit/reviews",
+          "sourceFamily": "trustradius",
+          "scope": "full_platform",
+          "component": "userSentiment",
+          "score": 9.2,
+          "reviewCount": 27,
+          "reliability": 1,
+          "observedAt": "2026-09-10T20:00:00Z"
+        }
+      ],
+      "lastRefreshed": "2026-09-10T23:38:50.811Z"
     },
     "workramp": {
       "id": "workramp",
       "name": "WorkRamp",
       "status": "provisional",
-      "score": 6.6,
-      "confidence": 4.8,
-      "reviewCount": 14,
-      "sourceCount": 1,
-      "independentSourceCount": 1,
+      "score": 7.7,
+      "confidence": 7.1,
+      "reviewCount": 658,
+      "sourceCount": 3,
+      "independentSourceCount": 3,
+      "fullPlatformSourceCount": 2,
+      "fullPlatformReviewCount": 644,
+      "secondLargestFullPlatformReviewCount": 22,
       "components": {
-        "userSentiment": 7,
-        "reviewConfidence": 4.8,
+        "userSentiment": 7.8,
+        "reviewConfidence": 7.1,
+        "sourceAgreement": 5.6,
+        "evidenceFreshness": 10,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
-      "trend": 0,
+      "trend": 1.1,
       "sources": [
         {
-          "label": "Apple App Store — WorkRamp mobile",
+          "label": "G2",
+          "url": "https://www.g2.com/products/workramp/reviews",
+          "sourceFamily": "g2",
+          "scope": "full_platform",
+          "component": "userSentiment",
+          "score": 8.8,
+          "reviewCount": 622,
+          "reliability": 1,
+          "observedAt": "2026-09-10T20:00:00Z"
+        },
+        {
+          "label": "TrustRadius",
+          "url": "https://www.trustradius.com/products/workramp/reviews",
+          "sourceFamily": "trustradius",
+          "scope": "full_platform",
+          "component": "userSentiment",
+          "score": 6.6,
+          "reviewCount": 22,
+          "reliability": 1,
+          "observedAt": "2026-09-10T20:00:00Z"
+        },
+        {
+          "label": "Apple App Store mobile rating",
           "url": "https://itunes.apple.com/lookup?id=1367739556&country=us",
-          "sourceFamily": "itunes.apple.com",
+          "sourceFamily": "apple-app-store",
+          "scope": "mobile_app",
           "component": "userSentiment",
           "score": 6,
           "reviewCount": 14,
-          "observedAt": "2026-09-10T21:57:27.342Z"
+          "reliability": 0.9,
+          "observedAt": "2026-09-10T23:38:50.837Z"
         }
       ],
-      "lastRefreshed": "2026-09-10T21:57:27.342Z"
+      "lastRefreshed": "2026-09-10T23:38:50.837Z"
     },
     "saleshood": {
       "id": "saleshood",
       "name": "SalesHood",
-      "status": "provisional",
-      "score": 7.8,
-      "confidence": 5.7,
-      "reviewCount": 77,
-      "sourceCount": 1,
-      "independentSourceCount": 1,
+      "status": "live",
+      "score": 8.5,
+      "confidence": 7.3,
+      "reviewCount": 929,
+      "sourceCount": 3,
+      "independentSourceCount": 3,
+      "fullPlatformSourceCount": 2,
+      "fullPlatformReviewCount": 852,
+      "secondLargestFullPlatformReviewCount": 27,
       "components": {
-        "userSentiment": 8.3,
-        "reviewConfidence": 5.7,
+        "userSentiment": 8.7,
+        "reviewConfidence": 7.3,
+        "sourceAgreement": 7.6,
+        "evidenceFreshness": 10,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
-      "trend": 0,
+      "trend": 0.7,
       "sources": [
         {
-          "label": "Apple App Store — SalesHood mobile",
+          "label": "G2",
+          "url": "https://www.g2.com/products/saleshood/reviews",
+          "sourceFamily": "g2",
+          "scope": "full_platform",
+          "component": "userSentiment",
+          "score": 9.2,
+          "reviewCount": 825,
+          "reliability": 1,
+          "observedAt": "2026-09-10T20:00:00Z"
+        },
+        {
+          "label": "TrustRadius",
+          "url": "https://www.trustradius.com/products/saleshood/reviews",
+          "sourceFamily": "trustradius",
+          "scope": "full_platform",
+          "component": "userSentiment",
+          "score": 8,
+          "reviewCount": 27,
+          "reliability": 1,
+          "observedAt": "2026-09-10T20:00:00Z"
+        },
+        {
+          "label": "Apple App Store mobile rating",
           "url": "https://itunes.apple.com/lookup?id=894859274&country=us",
-          "sourceFamily": "itunes.apple.com",
+          "sourceFamily": "apple-app-store",
+          "scope": "mobile_app",
           "component": "userSentiment",
           "score": 8.6,
           "reviewCount": 77,
-          "observedAt": "2026-09-10T21:57:27.370Z"
+          "reliability": 0.9,
+          "observedAt": "2026-09-10T23:38:50.852Z"
         }
       ],
-      "lastRefreshed": "2026-09-10T21:57:27.370Z"
+      "lastRefreshed": "2026-09-10T23:38:50.852Z"
     },
     "second-nature": {
       "id": "second-nature",
@@ -692,136 +1142,235 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:27.370Z"
+      "lastRefreshed": "2026-09-10T23:38:50.852Z"
     },
     "docebo": {
       "id": "docebo",
       "name": "Docebo",
-      "status": "provisional",
-      "score": 5,
-      "confidence": 6.7,
-      "reviewCount": 461,
-      "sourceCount": 1,
-      "independentSourceCount": 1,
+      "status": "live",
+      "score": 8.1,
+      "confidence": 7.5,
+      "reviewCount": 1253,
+      "sourceCount": 3,
+      "independentSourceCount": 3,
+      "fullPlatformSourceCount": 2,
+      "fullPlatformReviewCount": 792,
+      "secondLargestFullPlatformReviewCount": 53,
       "components": {
-        "userSentiment": 4.6,
-        "reviewConfidence": 6.7,
+        "userSentiment": 7.8,
+        "reviewConfidence": 7.5,
+        "sourceAgreement": 9,
+        "evidenceFreshness": 10,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
-      "trend": 0,
+      "trend": 3.1,
       "sources": [
         {
-          "label": "Apple App Store — Docebo Go.Learn",
+          "label": "G2",
+          "url": "https://www.g2.com/products/docebo/reviews",
+          "sourceFamily": "g2",
+          "scope": "full_platform",
+          "component": "userSentiment",
+          "score": 8.6,
+          "reviewCount": 739,
+          "reliability": 1,
+          "observedAt": "2026-09-10T20:00:00Z"
+        },
+        {
+          "label": "TrustRadius",
+          "url": "https://www.trustradius.com/products/docebo-learning-platform/reviews",
+          "sourceFamily": "trustradius",
+          "scope": "full_platform",
+          "component": "userSentiment",
+          "score": 8.1,
+          "reviewCount": 53,
+          "reliability": 1,
+          "observedAt": "2026-09-10T20:00:00Z"
+        },
+        {
+          "label": "Apple App Store mobile rating",
           "url": "https://itunes.apple.com/lookup?id=1362542319&country=us",
-          "sourceFamily": "itunes.apple.com",
+          "sourceFamily": "apple-app-store",
+          "scope": "mobile_app",
           "component": "userSentiment",
           "score": 4.4,
           "reviewCount": 461,
-          "observedAt": "2026-09-10T21:57:27.567Z"
+          "reliability": 0.9,
+          "observedAt": "2026-09-10T23:38:50.864Z"
         }
       ],
-      "lastRefreshed": "2026-09-10T21:57:27.567Z"
+      "lastRefreshed": "2026-09-10T23:38:50.864Z"
     },
     "360learning": {
       "id": "360learning",
       "name": "360Learning",
-      "status": "provisional",
-      "score": 9.4,
-      "confidence": 8.2,
-      "reviewCount": 6868,
-      "sourceCount": 1,
-      "independentSourceCount": 1,
+      "status": "live",
+      "score": 8.6,
+      "confidence": 7.4,
+      "reviewCount": 7515,
+      "sourceCount": 3,
+      "independentSourceCount": 3,
+      "fullPlatformSourceCount": 2,
+      "fullPlatformReviewCount": 647,
+      "secondLargestFullPlatformReviewCount": 48,
       "components": {
-        "userSentiment": 9.7,
-        "reviewConfidence": 8.2,
+        "userSentiment": 8.9,
+        "reviewConfidence": 7.4,
+        "sourceAgreement": 7.4,
+        "evidenceFreshness": 10,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
-      "trend": 0,
+      "trend": -0.8,
       "sources": [
         {
-          "label": "Apple App Store — 360Learning mobile",
+          "label": "G2",
+          "url": "https://www.g2.com/products/360learning/reviews",
+          "sourceFamily": "g2",
+          "scope": "full_platform",
+          "component": "userSentiment",
+          "score": 9.2,
+          "reviewCount": 599,
+          "reliability": 1,
+          "observedAt": "2026-09-10T20:00:00Z"
+        },
+        {
+          "label": "TrustRadius",
+          "url": "https://www.trustradius.com/products/360learning/reviews",
+          "sourceFamily": "trustradius",
+          "scope": "full_platform",
+          "component": "userSentiment",
+          "score": 7.9,
+          "reviewCount": 48,
+          "reliability": 1,
+          "observedAt": "2026-09-10T20:00:00Z"
+        },
+        {
+          "label": "Apple App Store mobile rating",
           "url": "https://itunes.apple.com/lookup?id=1080374585&country=us",
-          "sourceFamily": "itunes.apple.com",
+          "sourceFamily": "apple-app-store",
+          "scope": "mobile_app",
           "component": "userSentiment",
           "score": 9.7,
           "reviewCount": 6868,
-          "observedAt": "2026-09-10T21:57:27.591Z"
+          "reliability": 0.9,
+          "observedAt": "2026-09-10T23:38:50.880Z"
         }
       ],
-      "lastRefreshed": "2026-09-10T21:57:27.591Z"
+      "lastRefreshed": "2026-09-10T23:38:50.880Z"
     },
     "cornerstone": {
       "id": "cornerstone",
       "name": "Cornerstone",
       "status": "provisional",
-      "score": 5.8,
-      "confidence": 5.8,
+      "score": 4.8,
+      "confidence": 0,
       "reviewCount": 94,
       "sourceCount": 1,
       "independentSourceCount": 1,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
-        "userSentiment": 5.8,
-        "reviewConfidence": 5.8,
+        "userSentiment": 6.2,
+        "reviewConfidence": 0,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
-      "trend": 0,
+      "trend": -1,
       "sources": [
         {
-          "label": "Apple App Store — Cornerstone LearningExperience",
+          "label": "Apple App Store mobile rating",
           "url": "https://itunes.apple.com/lookup?id=974833832&country=us",
-          "sourceFamily": "itunes.apple.com",
+          "sourceFamily": "apple-app-store",
+          "scope": "mobile_app",
           "component": "userSentiment",
           "score": 5.3,
           "reviewCount": 94,
-          "observedAt": "2026-09-10T21:57:27.616Z"
+          "reliability": 0.9,
+          "observedAt": "2026-09-10T23:38:50.895Z"
         }
       ],
-      "lastRefreshed": "2026-09-10T21:57:27.616Z"
+      "lastRefreshed": "2026-09-10T23:38:50.895Z"
     },
     "degreed": {
       "id": "degreed",
       "name": "Degreed",
       "status": "provisional",
-      "score": 6.9,
-      "confidence": 4.5,
-      "reviewCount": 7,
-      "sourceCount": 1,
-      "independentSourceCount": 1,
+      "score": 7.2,
+      "confidence": 6.3,
+      "reviewCount": 72,
+      "sourceCount": 3,
+      "independentSourceCount": 3,
+      "fullPlatformSourceCount": 2,
+      "fullPlatformReviewCount": 65,
+      "secondLargestFullPlatformReviewCount": 23,
       "components": {
         "userSentiment": 7.4,
-        "reviewConfidence": 4.5,
+        "reviewConfidence": 6.3,
+        "sourceAgreement": 4.8,
+        "evidenceFreshness": 10,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
-      "trend": 0,
+      "trend": 0.3,
       "sources": [
         {
-          "label": "Apple App Store — Degreed mobile",
+          "label": "G2",
+          "url": "https://www.g2.com/products/degreed/reviews",
+          "sourceFamily": "g2",
+          "scope": "full_platform",
+          "component": "userSentiment",
+          "score": 8.6,
+          "reviewCount": 42,
+          "reliability": 1,
+          "observedAt": "2026-09-10T20:00:00Z"
+        },
+        {
+          "label": "TrustRadius",
+          "url": "https://www.trustradius.com/products/degreed/reviews",
+          "sourceFamily": "trustradius",
+          "scope": "full_platform",
+          "component": "userSentiment",
+          "score": 6,
+          "reviewCount": 23,
+          "reliability": 1,
+          "observedAt": "2026-09-10T20:00:00Z"
+        },
+        {
+          "label": "Apple App Store mobile rating",
           "url": "https://itunes.apple.com/lookup?id=1086998254&country=us",
-          "sourceFamily": "itunes.apple.com",
+          "sourceFamily": "apple-app-store",
+          "scope": "mobile_app",
           "component": "userSentiment",
           "score": 7.1,
           "reviewCount": 7,
-          "observedAt": "2026-09-10T21:57:27.643Z"
+          "reliability": 0.9,
+          "observedAt": "2026-09-10T23:38:50.909Z"
         }
       ],
-      "lastRefreshed": "2026-09-10T21:57:27.643Z"
+      "lastRefreshed": "2026-09-10T23:38:50.909Z"
     },
     "thought-industries": {
       "id": "thought-industries",
@@ -832,16 +1381,21 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:27.643Z"
+      "lastRefreshed": "2026-09-10T23:38:50.909Z"
     },
     "skilljar": {
       "id": "skilljar",
@@ -852,106 +1406,132 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:27.643Z"
+      "lastRefreshed": "2026-09-10T23:38:50.909Z"
     },
     "learnupon": {
       "id": "learnupon",
       "name": "LearnUpon",
       "status": "provisional",
-      "score": 6.8,
-      "confidence": 4,
+      "score": 5.8,
+      "confidence": 0,
       "reviewCount": 2,
       "sourceCount": 1,
       "independentSourceCount": 1,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": 7.4,
-        "reviewConfidence": 4,
+        "reviewConfidence": 0,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
-      "trend": 0,
+      "trend": -1,
       "sources": [
         {
-          "label": "Apple App Store — LearnUpon mobile",
+          "label": "Apple App Store mobile rating",
           "url": "https://itunes.apple.com/lookup?id=947445473&country=us",
-          "sourceFamily": "itunes.apple.com",
+          "sourceFamily": "apple-app-store",
+          "scope": "mobile_app",
           "component": "userSentiment",
           "score": 6,
           "reviewCount": 2,
-          "observedAt": "2026-09-10T21:57:27.669Z"
+          "reliability": 0.9,
+          "observedAt": "2026-09-10T23:38:50.924Z"
         }
       ],
-      "lastRefreshed": "2026-09-10T21:57:27.669Z"
+      "lastRefreshed": "2026-09-10T23:38:50.924Z"
     },
     "absorb": {
       "id": "absorb",
       "name": "Absorb LMS",
       "status": "provisional",
-      "score": 7.5,
-      "confidence": 4.8,
+      "score": 6.1,
+      "confidence": 0,
       "reviewCount": 14,
       "sourceCount": 1,
       "independentSourceCount": 1,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
-        "userSentiment": 8.1,
-        "reviewConfidence": 4.8,
+        "userSentiment": 7.8,
+        "reviewConfidence": 0,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
-      "trend": 0,
+      "trend": -1.4,
       "sources": [
         {
-          "label": "Apple App Store — Absorb Learn",
+          "label": "Apple App Store mobile rating",
           "url": "https://itunes.apple.com/lookup?id=1450653475&country=us",
-          "sourceFamily": "itunes.apple.com",
+          "sourceFamily": "apple-app-store",
+          "scope": "mobile_app",
           "component": "userSentiment",
           "score": 9.4,
           "reviewCount": 14,
-          "observedAt": "2026-09-10T21:57:27.708Z"
+          "reliability": 0.9,
+          "observedAt": "2026-09-10T23:38:50.939Z"
         }
       ],
-      "lastRefreshed": "2026-09-10T21:57:27.708Z"
+      "lastRefreshed": "2026-09-10T23:38:50.939Z"
     },
     "sana": {
       "id": "sana",
       "name": "Sana",
       "status": "provisional",
-      "score": 7.3,
-      "confidence": 4.7,
+      "score": 6.1,
+      "confidence": 0,
       "reviewCount": 10,
       "sourceCount": 1,
       "independentSourceCount": 1,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
-        "userSentiment": 7.9,
-        "reviewConfidence": 4.7,
+        "userSentiment": 7.7,
+        "reviewConfidence": 0,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
-      "trend": 0,
+      "trend": -1.2,
       "sources": [
         {
-          "label": "Apple App Store — Sana Labs mobile",
+          "label": "Apple App Store mobile rating",
           "url": "https://itunes.apple.com/lookup?id=1211652260&country=us",
-          "sourceFamily": "itunes.apple.com",
+          "sourceFamily": "apple-app-store",
+          "scope": "mobile_app",
           "component": "userSentiment",
           "score": 9.2,
           "reviewCount": 10,
-          "observedAt": "2026-09-10T21:57:27.921Z"
+          "reliability": 0.9,
+          "observedAt": "2026-09-10T23:38:50.996Z"
         }
       ],
-      "lastRefreshed": "2026-09-10T21:57:27.921Z"
+      "lastRefreshed": "2026-09-10T23:38:50.996Z"
     },
     "glean": {
       "id": "glean",
@@ -962,36 +1542,69 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:27.921Z"
+      "lastRefreshed": "2026-09-10T23:38:50.996Z"
     },
     "notion": {
       "id": "notion",
       "name": "Notion",
-      "status": "collecting",
-      "score": null,
-      "confidence": null,
-      "reviewCount": 0,
-      "sourceCount": 0,
-      "independentSourceCount": 0,
+      "status": "live",
+      "score": 9.1,
+      "confidence": 9.1,
+      "reviewCount": 12757,
+      "sourceCount": 2,
+      "independentSourceCount": 2,
+      "fullPlatformSourceCount": 2,
+      "fullPlatformReviewCount": 12757,
+      "secondLargestFullPlatformReviewCount": 1192,
       "components": {
-        "userSentiment": null,
-        "reviewConfidence": null,
+        "userSentiment": 9,
+        "reviewConfidence": 9.1,
+        "sourceAgreement": 9,
+        "evidenceFreshness": 10,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
-      "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:27.921Z"
+      "sources": [
+        {
+          "label": "G2",
+          "url": "https://www.g2.com/products/notion/reviews",
+          "sourceFamily": "g2",
+          "scope": "full_platform",
+          "component": "userSentiment",
+          "score": 9.2,
+          "reviewCount": 11565,
+          "reliability": 1,
+          "observedAt": "2026-09-10T20:00:00Z"
+        },
+        {
+          "label": "TrustRadius",
+          "url": "https://www.trustradius.com/products/notion/reviews",
+          "sourceFamily": "trustradius",
+          "scope": "full_platform",
+          "component": "userSentiment",
+          "score": 8.7,
+          "reviewCount": 1192,
+          "reliability": 1,
+          "observedAt": "2026-09-10T20:00:00Z"
+        }
+      ],
+      "lastRefreshed": "2026-09-10T23:38:50.996Z"
     },
     "guru": {
       "id": "guru",
@@ -1002,16 +1615,21 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:27.921Z"
+      "lastRefreshed": "2026-09-10T23:38:50.996Z"
     },
     "confluence": {
       "id": "confluence",
@@ -1022,16 +1640,21 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:27.921Z"
+      "lastRefreshed": "2026-09-10T23:38:50.996Z"
     },
     "articulate": {
       "id": "articulate",
@@ -1042,16 +1665,21 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:27.921Z"
+      "lastRefreshed": "2026-09-10T23:38:50.996Z"
     },
     "canva": {
       "id": "canva",
@@ -1062,16 +1690,21 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:27.921Z"
+      "lastRefreshed": "2026-09-10T23:38:50.996Z"
     },
     "synthesia": {
       "id": "synthesia",
@@ -1082,16 +1715,21 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:27.921Z"
+      "lastRefreshed": "2026-09-10T23:38:50.996Z"
     },
     "heygen": {
       "id": "heygen",
@@ -1102,16 +1740,21 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:27.921Z"
+      "lastRefreshed": "2026-09-10T23:38:50.996Z"
     },
     "elevenlabs": {
       "id": "elevenlabs",
@@ -1122,16 +1765,21 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:27.921Z"
+      "lastRefreshed": "2026-09-10T23:38:50.996Z"
     },
     "gamma": {
       "id": "gamma",
@@ -1142,16 +1790,21 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:27.921Z"
+      "lastRefreshed": "2026-09-10T23:38:50.996Z"
     },
     "vyond": {
       "id": "vyond",
@@ -1162,16 +1815,21 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:27.921Z"
+      "lastRefreshed": "2026-09-10T23:38:50.996Z"
     },
     "descript": {
       "id": "descript",
@@ -1182,16 +1840,21 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:27.921Z"
+      "lastRefreshed": "2026-09-10T23:38:50.996Z"
     },
     "loom": {
       "id": "loom",
@@ -1202,16 +1865,21 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:27.921Z"
+      "lastRefreshed": "2026-09-10T23:38:50.996Z"
     },
     "scribe": {
       "id": "scribe",
@@ -1222,16 +1890,21 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:27.921Z"
+      "lastRefreshed": "2026-09-10T23:38:50.996Z"
     },
     "guidde": {
       "id": "guidde",
@@ -1242,56 +1915,117 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:27.921Z"
+      "lastRefreshed": "2026-09-10T23:38:50.996Z"
     },
     "asana": {
       "id": "asana",
       "name": "Asana",
-      "status": "collecting",
-      "score": null,
-      "confidence": null,
-      "reviewCount": 0,
-      "sourceCount": 0,
-      "independentSourceCount": 0,
+      "status": "live",
+      "score": 9,
+      "confidence": 9.1,
+      "reviewCount": 16630,
+      "sourceCount": 2,
+      "independentSourceCount": 2,
+      "fullPlatformSourceCount": 2,
+      "fullPlatformReviewCount": 16630,
+      "secondLargestFullPlatformReviewCount": 3064,
       "components": {
-        "userSentiment": null,
-        "reviewConfidence": null,
+        "userSentiment": 8.7,
+        "reviewConfidence": 9.1,
+        "sourceAgreement": 9.4,
+        "evidenceFreshness": 10,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
-      "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:27.921Z"
+      "sources": [
+        {
+          "label": "G2",
+          "url": "https://www.g2.com/products/asana/reviews",
+          "sourceFamily": "g2",
+          "scope": "full_platform",
+          "component": "userSentiment",
+          "score": 8.8,
+          "reviewCount": 13566,
+          "reliability": 1,
+          "observedAt": "2026-09-10T20:00:00Z"
+        },
+        {
+          "label": "TrustRadius",
+          "url": "https://www.trustradius.com/products/asana/reviews",
+          "sourceFamily": "trustradius",
+          "scope": "full_platform",
+          "component": "userSentiment",
+          "score": 8.5,
+          "reviewCount": 3064,
+          "reliability": 1,
+          "observedAt": "2026-09-10T20:00:00Z"
+        }
+      ],
+      "lastRefreshed": "2026-09-10T23:38:50.996Z"
     },
     "monday": {
       "id": "monday",
       "name": "monday.com",
-      "status": "collecting",
-      "score": null,
-      "confidence": null,
-      "reviewCount": 0,
-      "sourceCount": 0,
-      "independentSourceCount": 0,
+      "status": "live",
+      "score": 8.9,
+      "confidence": 9.1,
+      "reviewCount": 20355,
+      "sourceCount": 2,
+      "independentSourceCount": 2,
+      "fullPlatformSourceCount": 2,
+      "fullPlatformReviewCount": 20355,
+      "secondLargestFullPlatformReviewCount": 5063,
       "components": {
-        "userSentiment": null,
-        "reviewConfidence": null,
+        "userSentiment": 8.9,
+        "reviewConfidence": 9.1,
+        "sourceAgreement": 7.8,
+        "evidenceFreshness": 10,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
-      "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:27.921Z"
+      "sources": [
+        {
+          "label": "G2",
+          "url": "https://www.g2.com/products/monday-com/reviews",
+          "sourceFamily": "g2",
+          "scope": "full_platform",
+          "component": "userSentiment",
+          "score": 9.4,
+          "reviewCount": 15292,
+          "reliability": 1,
+          "observedAt": "2026-09-10T20:00:00Z"
+        },
+        {
+          "label": "TrustRadius",
+          "url": "https://www.trustradius.com/products/monday/reviews",
+          "sourceFamily": "trustradius",
+          "scope": "full_platform",
+          "component": "userSentiment",
+          "score": 8.3,
+          "reviewCount": 5063,
+          "reliability": 1,
+          "observedAt": "2026-09-10T20:00:00Z"
+        }
+      ],
+      "lastRefreshed": "2026-09-10T23:38:50.996Z"
     },
     "jira": {
       "id": "jira",
@@ -1302,16 +2036,21 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:27.921Z"
+      "lastRefreshed": "2026-09-10T23:38:50.996Z"
     },
     "clickup": {
       "id": "clickup",
@@ -1322,16 +2061,21 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:27.921Z"
+      "lastRefreshed": "2026-09-10T23:38:50.996Z"
     },
     "smartsheet": {
       "id": "smartsheet",
@@ -1342,36 +2086,69 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:27.921Z"
+      "lastRefreshed": "2026-09-10T23:38:50.996Z"
     },
     "zapier": {
       "id": "zapier",
       "name": "Zapier",
-      "status": "collecting",
-      "score": null,
-      "confidence": null,
-      "reviewCount": 0,
-      "sourceCount": 0,
-      "independentSourceCount": 0,
+      "status": "live",
+      "score": 9.1,
+      "confidence": 8.6,
+      "reviewCount": 2927,
+      "sourceCount": 2,
+      "independentSourceCount": 2,
+      "fullPlatformSourceCount": 2,
+      "fullPlatformReviewCount": 2927,
+      "secondLargestFullPlatformReviewCount": 887,
       "components": {
-        "userSentiment": null,
-        "reviewConfidence": null,
+        "userSentiment": 8.9,
+        "reviewConfidence": 8.6,
+        "sourceAgreement": 9.8,
+        "evidenceFreshness": 10,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
-      "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:27.921Z"
+      "sources": [
+        {
+          "label": "G2",
+          "url": "https://www.g2.com/products/zapier/reviews",
+          "sourceFamily": "g2",
+          "scope": "full_platform",
+          "component": "userSentiment",
+          "score": 9,
+          "reviewCount": 2040,
+          "reliability": 1,
+          "observedAt": "2026-09-10T20:00:00Z"
+        },
+        {
+          "label": "TrustRadius",
+          "url": "https://www.trustradius.com/products/zapier/reviews",
+          "sourceFamily": "trustradius",
+          "scope": "full_platform",
+          "component": "userSentiment",
+          "score": 8.9,
+          "reviewCount": 887,
+          "reliability": 1,
+          "observedAt": "2026-09-10T20:00:00Z"
+        }
+      ],
+      "lastRefreshed": "2026-09-10T23:38:50.996Z"
     },
     "make": {
       "id": "make",
@@ -1382,16 +2159,21 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:27.921Z"
+      "lastRefreshed": "2026-09-10T23:38:50.996Z"
     },
     "n8n": {
       "id": "n8n",
@@ -1401,10 +2183,15 @@
       "confidence": null,
       "reviewCount": 0,
       "sourceCount": 1,
-      "independentSourceCount": 1,
+      "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": 10
@@ -1414,19 +2201,21 @@
         {
           "label": "Official GitHub repository",
           "url": "https://github.com/n8n-io/n8n",
-          "sourceFamily": "github.com",
+          "sourceFamily": "github",
+          "scope": "reference",
           "component": "marketMomentum",
           "score": 10,
           "reviewCount": 0,
-          "observedAt": "2026-09-10T21:57:28.190Z",
+          "reliability": 1,
+          "observedAt": "2026-09-10T23:38:51.365Z",
           "metadata": {
-            "stars": 203948,
-            "forks": 60629,
-            "pushedAt": "2026-09-10T21:53:45Z"
+            "stars": 203952,
+            "forks": 60630,
+            "pushedAt": "2026-09-10T23:29:39Z"
           }
         }
       ],
-      "lastRefreshed": "2026-09-10T21:57:28.190Z"
+      "lastRefreshed": "2026-09-10T23:38:51.365Z"
     },
     "workato": {
       "id": "workato",
@@ -1437,16 +2226,21 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:28.190Z"
+      "lastRefreshed": "2026-09-10T23:38:51.365Z"
     },
     "impartner": {
       "id": "impartner",
@@ -1457,16 +2251,21 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:28.190Z"
+      "lastRefreshed": "2026-09-10T23:38:51.365Z"
     },
     "allbound": {
       "id": "allbound",
@@ -1477,16 +2276,21 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:28.190Z"
+      "lastRefreshed": "2026-09-10T23:38:51.365Z"
     },
     "channeltivity": {
       "id": "channeltivity",
@@ -1497,16 +2301,21 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:28.190Z"
+      "lastRefreshed": "2026-09-10T23:38:51.365Z"
     },
     "crossbeam": {
       "id": "crossbeam",
@@ -1517,16 +2326,21 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:28.190Z"
+      "lastRefreshed": "2026-09-10T23:38:51.365Z"
     },
     "partnerstack": {
       "id": "partnerstack",
@@ -1537,86 +2351,176 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:28.190Z"
+      "lastRefreshed": "2026-09-10T23:38:51.365Z"
     },
     "apollo": {
       "id": "apollo",
       "name": "Apollo",
-      "status": "collecting",
-      "score": null,
-      "confidence": null,
-      "reviewCount": 0,
-      "sourceCount": 0,
-      "independentSourceCount": 0,
+      "status": "live",
+      "score": 9.1,
+      "confidence": 9.1,
+      "reviewCount": 10281,
+      "sourceCount": 2,
+      "independentSourceCount": 2,
+      "fullPlatformSourceCount": 2,
+      "fullPlatformReviewCount": 10281,
+      "secondLargestFullPlatformReviewCount": 662,
       "components": {
-        "userSentiment": null,
-        "reviewConfidence": null,
+        "userSentiment": 9,
+        "reviewConfidence": 9.1,
+        "sourceAgreement": 8.2,
+        "evidenceFreshness": 10,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
-      "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:28.190Z"
+      "sources": [
+        {
+          "label": "G2",
+          "url": "https://www.g2.com/products/apollo-io/reviews",
+          "sourceFamily": "g2",
+          "scope": "full_platform",
+          "component": "userSentiment",
+          "score": 9.4,
+          "reviewCount": 9619,
+          "reliability": 1,
+          "observedAt": "2026-09-10T20:00:00Z"
+        },
+        {
+          "label": "TrustRadius",
+          "url": "https://www.trustradius.com/products/apollo/reviews",
+          "sourceFamily": "trustradius",
+          "scope": "full_platform",
+          "component": "userSentiment",
+          "score": 8.5,
+          "reviewCount": 662,
+          "reliability": 1,
+          "observedAt": "2026-09-10T20:00:00Z"
+        }
+      ],
+      "lastRefreshed": "2026-09-10T23:38:51.365Z"
     },
     "zoominfo": {
       "id": "zoominfo",
       "name": "ZoomInfo",
-      "status": "provisional",
-      "score": 8.8,
-      "confidence": 7.1,
-      "reviewCount": 1024,
-      "sourceCount": 1,
-      "independentSourceCount": 1,
+      "status": "live",
+      "score": 8.9,
+      "confidence": 9.1,
+      "reviewCount": 11937,
+      "sourceCount": 3,
+      "independentSourceCount": 3,
+      "fullPlatformSourceCount": 2,
+      "fullPlatformReviewCount": 10913,
+      "secondLargestFullPlatformReviewCount": 1881,
       "components": {
-        "userSentiment": 9.2,
-        "reviewConfidence": 7.1,
+        "userSentiment": 8.7,
+        "reviewConfidence": 9.1,
+        "sourceAgreement": 8.4,
+        "evidenceFreshness": 10,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
-      "trend": 0,
+      "trend": 0.1,
       "sources": [
         {
-          "label": "Apple App Store — ZoomInfo mobile",
+          "label": "G2 ZoomInfo Sales",
+          "url": "https://www.g2.com/products/zoominfo-sales/reviews",
+          "sourceFamily": "g2",
+          "scope": "full_platform",
+          "component": "userSentiment",
+          "score": 9,
+          "reviewCount": 9032,
+          "reliability": 0.9,
+          "observedAt": "2026-09-10T20:00:00Z"
+        },
+        {
+          "label": "TrustRadius ZoomInfo GTM Workspace",
+          "url": "https://www.trustradius.com/products/zoominfo-sales/reviews",
+          "sourceFamily": "trustradius",
+          "scope": "full_platform",
+          "component": "userSentiment",
+          "score": 8.2,
+          "reviewCount": 1881,
+          "reliability": 0.85,
+          "observedAt": "2026-09-10T20:00:00Z"
+        },
+        {
+          "label": "Apple App Store mobile rating",
           "url": "https://itunes.apple.com/lookup?id=1493170277&country=us",
-          "sourceFamily": "itunes.apple.com",
+          "sourceFamily": "apple-app-store",
+          "scope": "mobile_app",
           "component": "userSentiment",
           "score": 9.3,
           "reviewCount": 1024,
-          "observedAt": "2026-09-10T21:57:28.249Z"
+          "reliability": 0.9,
+          "observedAt": "2026-09-10T23:38:51.381Z"
         }
       ],
-      "lastRefreshed": "2026-09-10T21:57:28.249Z"
+      "lastRefreshed": "2026-09-10T23:38:51.381Z"
     },
     "6sense": {
       "id": "6sense",
       "name": "6sense",
-      "status": "collecting",
-      "score": null,
-      "confidence": null,
-      "reviewCount": 0,
-      "sourceCount": 0,
-      "independentSourceCount": 0,
+      "status": "live",
+      "score": 8.8,
+      "confidence": 8.5,
+      "reviewCount": 1974,
+      "sourceCount": 2,
+      "independentSourceCount": 2,
+      "fullPlatformSourceCount": 2,
+      "fullPlatformReviewCount": 1974,
+      "secondLargestFullPlatformReviewCount": 551,
       "components": {
-        "userSentiment": null,
-        "reviewConfidence": null,
+        "userSentiment": 8.5,
+        "reviewConfidence": 8.5,
+        "sourceAgreement": 9.6,
+        "evidenceFreshness": 10,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
-      "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:28.249Z"
+      "sources": [
+        {
+          "label": "G2 6sense Revenue Marketing",
+          "url": "https://www.g2.com/products/6sense-revenue-marketing/reviews",
+          "sourceFamily": "g2",
+          "scope": "full_platform",
+          "component": "userSentiment",
+          "score": 8.6,
+          "reviewCount": 1423,
+          "reliability": 0.9,
+          "observedAt": "2026-09-10T20:00:00Z"
+        },
+        {
+          "label": "TrustRadius",
+          "url": "https://www.trustradius.com/products/6sense/reviews",
+          "sourceFamily": "trustradius",
+          "scope": "full_platform",
+          "component": "userSentiment",
+          "score": 8.4,
+          "reviewCount": 551,
+          "reliability": 0.9,
+          "observedAt": "2026-09-10T20:00:00Z"
+        }
+      ],
+      "lastRefreshed": "2026-09-10T23:38:51.381Z"
     },
     "common-room": {
       "id": "common-room",
@@ -1627,16 +2531,21 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:28.249Z"
+      "lastRefreshed": "2026-09-10T23:38:51.381Z"
     },
     "usergems": {
       "id": "usergems",
@@ -1647,16 +2556,21 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:28.249Z"
+      "lastRefreshed": "2026-09-10T23:38:51.381Z"
     },
     "bardeen": {
       "id": "bardeen",
@@ -1667,16 +2581,21 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:28.249Z"
+      "lastRefreshed": "2026-09-10T23:38:51.381Z"
     },
     "rows": {
       "id": "rows",
@@ -1687,106 +2606,132 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:28.249Z"
+      "lastRefreshed": "2026-09-10T23:38:51.381Z"
     },
     "attio": {
       "id": "attio",
       "name": "Attio",
       "status": "provisional",
-      "score": 6.9,
-      "confidence": 5.2,
+      "score": 5.8,
+      "confidence": 0,
       "reviewCount": 28,
       "sourceCount": 1,
       "independentSourceCount": 1,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
-        "userSentiment": 7.3,
-        "reviewConfidence": 5.2,
+        "userSentiment": 7.4,
+        "reviewConfidence": 0,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
-      "trend": 0,
+      "trend": -1.1,
       "sources": [
         {
-          "label": "Apple App Store — Attio mobile",
+          "label": "Apple App Store mobile rating",
           "url": "https://itunes.apple.com/lookup?id=1511545395&country=us",
-          "sourceFamily": "itunes.apple.com",
+          "sourceFamily": "apple-app-store",
+          "scope": "mobile_app",
           "component": "userSentiment",
           "score": 7.1,
           "reviewCount": 28,
-          "observedAt": "2026-09-10T21:57:28.335Z"
+          "reliability": 0.9,
+          "observedAt": "2026-09-10T23:38:51.395Z"
         }
       ],
-      "lastRefreshed": "2026-09-10T21:57:28.335Z"
+      "lastRefreshed": "2026-09-10T23:38:51.395Z"
     },
     "close-crm": {
       "id": "close-crm",
       "name": "Close",
       "status": "provisional",
-      "score": 6.9,
-      "confidence": 5.5,
+      "score": 5.7,
+      "confidence": 0,
       "reviewCount": 50,
       "sourceCount": 1,
       "independentSourceCount": 1,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
-        "userSentiment": 7.2,
-        "reviewConfidence": 5.5,
+        "userSentiment": 7.3,
+        "reviewConfidence": 0,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
-      "trend": 0,
+      "trend": -1.2,
       "sources": [
         {
-          "label": "Apple App Store — Close CRM mobile",
+          "label": "Apple App Store mobile rating",
           "url": "https://itunes.apple.com/lookup?id=1668836284&country=us",
-          "sourceFamily": "itunes.apple.com",
+          "sourceFamily": "apple-app-store",
+          "scope": "mobile_app",
           "component": "userSentiment",
           "score": 7,
           "reviewCount": 50,
-          "observedAt": "2026-09-10T21:57:28.363Z"
+          "reliability": 0.9,
+          "observedAt": "2026-09-10T23:38:51.410Z"
         }
       ],
-      "lastRefreshed": "2026-09-10T21:57:28.363Z"
+      "lastRefreshed": "2026-09-10T23:38:51.410Z"
     },
     "folk-crm": {
       "id": "folk-crm",
       "name": "folk",
       "status": "provisional",
-      "score": 7,
-      "confidence": 4,
+      "score": 6,
+      "confidence": 0,
       "reviewCount": 2,
       "sourceCount": 1,
       "independentSourceCount": 1,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
-        "userSentiment": 7.7,
-        "reviewConfidence": 4,
+        "userSentiment": 7.6,
+        "reviewConfidence": 0,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
-      "trend": 0,
+      "trend": -1,
       "sources": [
         {
-          "label": "Apple App Store — folk CRM mobile",
+          "label": "Apple App Store mobile rating",
           "url": "https://itunes.apple.com/lookup?id=6761423430&country=us",
-          "sourceFamily": "itunes.apple.com",
+          "sourceFamily": "apple-app-store",
+          "scope": "mobile_app",
           "component": "userSentiment",
           "score": 10,
           "reviewCount": 2,
-          "observedAt": "2026-09-10T21:57:28.438Z"
+          "reliability": 0.9,
+          "observedAt": "2026-09-10T23:38:51.425Z"
         }
       ],
-      "lastRefreshed": "2026-09-10T21:57:28.438Z"
+      "lastRefreshed": "2026-09-10T23:38:51.425Z"
     },
     "reply": {
       "id": "reply",
@@ -1797,16 +2742,21 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:28.438Z"
+      "lastRefreshed": "2026-09-10T23:38:51.425Z"
     },
     "unify": {
       "id": "unify",
@@ -1817,16 +2767,21 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:28.438Z"
+      "lastRefreshed": "2026-09-10T23:38:51.425Z"
     },
     "regie-ai": {
       "id": "regie-ai",
@@ -1837,46 +2792,58 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:28.438Z"
+      "lastRefreshed": "2026-09-10T23:38:51.425Z"
     },
     "instantly": {
       "id": "instantly",
       "name": "Instantly",
       "status": "provisional",
-      "score": 6.4,
-      "confidence": 5.3,
+      "score": 5.5,
+      "confidence": 0,
       "reviewCount": 35,
       "sourceCount": 1,
       "independentSourceCount": 1,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
-        "userSentiment": 6.7,
-        "reviewConfidence": 5.3,
+        "userSentiment": 7,
+        "reviewConfidence": 0,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
-      "trend": 0,
+      "trend": -0.9,
       "sources": [
         {
-          "label": "Apple App Store — Instantly AI mobile",
+          "label": "Apple App Store mobile rating",
           "url": "https://itunes.apple.com/lookup?id=6474658497&country=us",
-          "sourceFamily": "itunes.apple.com",
+          "sourceFamily": "apple-app-store",
+          "scope": "mobile_app",
           "component": "userSentiment",
           "score": 6,
           "reviewCount": 35,
-          "observedAt": "2026-09-10T21:57:28.472Z"
+          "reliability": 0.9,
+          "observedAt": "2026-09-10T23:38:51.445Z"
         }
       ],
-      "lastRefreshed": "2026-09-10T21:57:28.472Z"
+      "lastRefreshed": "2026-09-10T23:38:51.445Z"
     },
     "smartlead": {
       "id": "smartlead",
@@ -1887,16 +2854,21 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:28.472Z"
+      "lastRefreshed": "2026-09-10T23:38:51.445Z"
     },
     "lavender": {
       "id": "lavender",
@@ -1907,16 +2879,21 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:28.472Z"
+      "lastRefreshed": "2026-09-10T23:38:51.445Z"
     },
     "jason-ai": {
       "id": "jason-ai",
@@ -1927,16 +2904,21 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:28.472Z"
+      "lastRefreshed": "2026-09-10T23:38:51.445Z"
     },
     "artisan-ava": {
       "id": "artisan-ava",
@@ -1947,16 +2929,21 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:28.472Z"
+      "lastRefreshed": "2026-09-10T23:38:51.445Z"
     },
     "11x": {
       "id": "11x",
@@ -1967,16 +2954,21 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:28.472Z"
+      "lastRefreshed": "2026-09-10T23:38:51.445Z"
     },
     "aisdr": {
       "id": "aisdr",
@@ -1987,16 +2979,21 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:28.472Z"
+      "lastRefreshed": "2026-09-10T23:38:51.445Z"
     },
     "salesforge": {
       "id": "salesforge",
@@ -2007,16 +3004,21 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:28.472Z"
+      "lastRefreshed": "2026-09-10T23:38:51.445Z"
     },
     "qualified-piper": {
       "id": "qualified-piper",
@@ -2027,16 +3029,21 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:28.472Z"
+      "lastRefreshed": "2026-09-10T23:38:51.445Z"
     },
     "nooks": {
       "id": "nooks",
@@ -2047,16 +3054,21 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:28.472Z"
+      "lastRefreshed": "2026-09-10T23:38:51.445Z"
     },
     "bland-ai": {
       "id": "bland-ai",
@@ -2067,16 +3079,21 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:28.472Z"
+      "lastRefreshed": "2026-09-10T23:38:51.445Z"
     },
     "regal": {
       "id": "regal",
@@ -2087,16 +3104,21 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:28.472Z"
+      "lastRefreshed": "2026-09-10T23:38:51.445Z"
     },
     "granola": {
       "id": "granola",
@@ -2107,16 +3129,21 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:28.472Z"
+      "lastRefreshed": "2026-09-10T23:38:51.445Z"
     },
     "avoma": {
       "id": "avoma",
@@ -2127,16 +3154,21 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:28.472Z"
+      "lastRefreshed": "2026-09-10T23:38:51.445Z"
     },
     "fathom": {
       "id": "fathom",
@@ -2147,16 +3179,21 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:28.472Z"
+      "lastRefreshed": "2026-09-10T23:38:51.445Z"
     },
     "fireflies": {
       "id": "fireflies",
@@ -2167,16 +3204,21 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:28.472Z"
+      "lastRefreshed": "2026-09-10T23:38:51.445Z"
     },
     "qwilr": {
       "id": "qwilr",
@@ -2187,16 +3229,21 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:28.472Z"
+      "lastRefreshed": "2026-09-10T23:38:51.445Z"
     },
     "pandadoc": {
       "id": "pandadoc",
@@ -2207,16 +3254,21 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:28.472Z"
+      "lastRefreshed": "2026-09-10T23:38:51.445Z"
     },
     "docusign": {
       "id": "docusign",
@@ -2227,16 +3279,21 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:28.472Z"
+      "lastRefreshed": "2026-09-10T23:38:51.445Z"
     },
     "dealhub": {
       "id": "dealhub",
@@ -2247,16 +3304,21 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:28.472Z"
+      "lastRefreshed": "2026-09-10T23:38:51.445Z"
     },
     "dock": {
       "id": "dock",
@@ -2267,16 +3329,21 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:28.472Z"
+      "lastRefreshed": "2026-09-10T23:38:51.445Z"
     },
     "calendly": {
       "id": "calendly",
@@ -2287,16 +3354,21 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:28.472Z"
+      "lastRefreshed": "2026-09-10T23:38:51.445Z"
     },
     "sendspark": {
       "id": "sendspark",
@@ -2307,16 +3379,21 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:28.472Z"
+      "lastRefreshed": "2026-09-10T23:38:51.445Z"
     },
     "hockeystack": {
       "id": "hockeystack",
@@ -2327,16 +3404,21 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:28.472Z"
+      "lastRefreshed": "2026-09-10T23:38:51.445Z"
     },
     "dreamdata": {
       "id": "dreamdata",
@@ -2347,16 +3429,21 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:28.472Z"
+      "lastRefreshed": "2026-09-10T23:38:51.445Z"
     },
     "strama-ai": {
       "id": "strama-ai",
@@ -2367,24 +3454,755 @@
       "reviewCount": 0,
       "sourceCount": 0,
       "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": null,
         "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-10T21:57:28.472Z"
+      "lastRefreshed": "2026-09-10T23:38:51.445Z"
+    },
+    "hyperbound": {
+      "id": "hyperbound",
+      "name": "Hyperbound",
+      "status": "provisional",
+      "score": 8.2,
+      "confidence": 4,
+      "reviewCount": 39,
+      "sourceCount": 1,
+      "independentSourceCount": 1,
+      "fullPlatformSourceCount": 1,
+      "fullPlatformReviewCount": 39,
+      "secondLargestFullPlatformReviewCount": 0,
+      "components": {
+        "userSentiment": 9,
+        "reviewConfidence": 4,
+        "sourceAgreement": null,
+        "evidenceFreshness": 10,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [
+        {
+          "label": "G2",
+          "url": "https://www.g2.com/products/hyperbound/reviews",
+          "sourceFamily": "g2",
+          "scope": "full_platform",
+          "component": "userSentiment",
+          "score": 9.8,
+          "reviewCount": 39,
+          "reliability": 1,
+          "observedAt": "2026-09-10T20:00:00Z"
+        }
+      ],
+      "lastRefreshed": "2026-09-10T23:38:51.445Z"
+    },
+    "attention": {
+      "id": "attention",
+      "name": "Attention",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-10T23:38:51.445Z"
+    },
+    "revenue-io": {
+      "id": "revenue-io",
+      "name": "Revenue.io",
+      "status": "live",
+      "score": 8.5,
+      "confidence": 7.4,
+      "reviewCount": 618,
+      "sourceCount": 2,
+      "independentSourceCount": 2,
+      "fullPlatformSourceCount": 2,
+      "fullPlatformReviewCount": 618,
+      "secondLargestFullPlatformReviewCount": 44,
+      "components": {
+        "userSentiment": 8.8,
+        "reviewConfidence": 7.4,
+        "sourceAgreement": 7.2,
+        "evidenceFreshness": 10,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [
+        {
+          "label": "G2",
+          "url": "https://www.g2.com/products/revenue-io/reviews",
+          "sourceFamily": "g2",
+          "scope": "full_platform",
+          "component": "userSentiment",
+          "score": 9.4,
+          "reviewCount": 574,
+          "reliability": 1,
+          "observedAt": "2026-09-10T20:00:00Z"
+        },
+        {
+          "label": "TrustRadius",
+          "url": "https://www.trustradius.com/products/revenue-io/reviews",
+          "sourceFamily": "trustradius",
+          "scope": "full_platform",
+          "component": "userSentiment",
+          "score": 8,
+          "reviewCount": 44,
+          "reliability": 1,
+          "observedAt": "2026-09-10T20:00:00Z"
+        }
+      ],
+      "lastRefreshed": "2026-09-10T23:38:51.445Z"
+    },
+    "balto": {
+      "id": "balto",
+      "name": "Balto",
+      "status": "provisional",
+      "score": 9.1,
+      "confidence": 6.6,
+      "reviewCount": 599,
+      "sourceCount": 2,
+      "independentSourceCount": 2,
+      "fullPlatformSourceCount": 2,
+      "fullPlatformReviewCount": 599,
+      "secondLargestFullPlatformReviewCount": 4,
+      "components": {
+        "userSentiment": 9.6,
+        "reviewConfidence": 6.6,
+        "sourceAgreement": 9.2,
+        "evidenceFreshness": 10,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [
+        {
+          "label": "G2",
+          "url": "https://www.g2.com/sellers/balto",
+          "sourceFamily": "g2",
+          "scope": "full_platform",
+          "component": "userSentiment",
+          "score": 9.6,
+          "reviewCount": 595,
+          "reliability": 0.95,
+          "observedAt": "2026-09-10T20:00:00Z"
+        },
+        {
+          "label": "TrustRadius",
+          "url": "https://www.trustradius.com/products/balto/reviews",
+          "sourceFamily": "trustradius",
+          "scope": "full_platform",
+          "component": "userSentiment",
+          "score": 10,
+          "reviewCount": 4,
+          "reliability": 0.95,
+          "observedAt": "2026-09-10T20:00:00Z"
+        }
+      ],
+      "lastRefreshed": "2026-09-10T23:38:51.445Z"
+    },
+    "amplemarket": {
+      "id": "amplemarket",
+      "name": "Amplemarket",
+      "status": "live",
+      "score": 8.6,
+      "confidence": 7.1,
+      "reviewCount": 641,
+      "sourceCount": 2,
+      "independentSourceCount": 2,
+      "fullPlatformSourceCount": 2,
+      "fullPlatformReviewCount": 641,
+      "secondLargestFullPlatformReviewCount": 21,
+      "components": {
+        "userSentiment": 8.9,
+        "reviewConfidence": 7.1,
+        "sourceAgreement": 8.2,
+        "evidenceFreshness": 10,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [
+        {
+          "label": "G2",
+          "url": "https://www.g2.com/products/amplemarket/reviews",
+          "sourceFamily": "g2",
+          "scope": "full_platform",
+          "component": "userSentiment",
+          "score": 9.2,
+          "reviewCount": 620,
+          "reliability": 1,
+          "observedAt": "2026-09-10T20:00:00Z"
+        },
+        {
+          "label": "TrustRadius",
+          "url": "https://www.trustradius.com/products/amplemarket",
+          "sourceFamily": "trustradius",
+          "scope": "full_platform",
+          "component": "userSentiment",
+          "score": 8.3,
+          "reviewCount": 21,
+          "reliability": 0.95,
+          "observedAt": "2026-09-10T20:00:00Z"
+        }
+      ],
+      "lastRefreshed": "2026-09-10T23:38:51.446Z"
+    },
+    "landbase": {
+      "id": "landbase",
+      "name": "Landbase",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-10T23:38:51.446Z"
+    },
+    "sybill": {
+      "id": "sybill",
+      "name": "Sybill",
+      "status": "provisional",
+      "score": 8.5,
+      "confidence": 4.4,
+      "reviewCount": 146,
+      "sourceCount": 1,
+      "independentSourceCount": 1,
+      "fullPlatformSourceCount": 1,
+      "fullPlatformReviewCount": 146,
+      "secondLargestFullPlatformReviewCount": 0,
+      "components": {
+        "userSentiment": 9.3,
+        "reviewConfidence": 4.4,
+        "sourceAgreement": null,
+        "evidenceFreshness": 10,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [
+        {
+          "label": "G2",
+          "url": "https://www.g2.com/products/sybill-ai/reviews",
+          "sourceFamily": "g2",
+          "scope": "full_platform",
+          "component": "userSentiment",
+          "score": 9.6,
+          "reviewCount": 146,
+          "reliability": 1,
+          "observedAt": "2026-09-10T20:00:00Z"
+        }
+      ],
+      "lastRefreshed": "2026-09-10T23:38:51.446Z"
+    },
+    "persana-ai": {
+      "id": "persana-ai",
+      "name": "Persana AI",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-10T23:38:51.446Z"
+    },
+    "warmly": {
+      "id": "warmly",
+      "name": "Warmly",
+      "status": "provisional",
+      "score": 8.4,
+      "confidence": 4.6,
+      "reviewCount": 249,
+      "sourceCount": 1,
+      "independentSourceCount": 1,
+      "fullPlatformSourceCount": 1,
+      "fullPlatformReviewCount": 249,
+      "secondLargestFullPlatformReviewCount": 0,
+      "components": {
+        "userSentiment": 9.1,
+        "reviewConfidence": 4.6,
+        "sourceAgreement": null,
+        "evidenceFreshness": 10,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [
+        {
+          "label": "G2",
+          "url": "https://www.g2.com/products/warmly-warmly/reviews",
+          "sourceFamily": "g2",
+          "scope": "full_platform",
+          "component": "userSentiment",
+          "score": 9.2,
+          "reviewCount": 249,
+          "reliability": 1,
+          "observedAt": "2026-09-10T20:00:00Z"
+        }
+      ],
+      "lastRefreshed": "2026-09-10T23:38:51.446Z"
+    },
+    "cognism": {
+      "id": "cognism",
+      "name": "Cognism",
+      "status": "live",
+      "score": 8.7,
+      "confidence": 7.7,
+      "reviewCount": 1369,
+      "sourceCount": 2,
+      "independentSourceCount": 2,
+      "fullPlatformSourceCount": 2,
+      "fullPlatformReviewCount": 1369,
+      "secondLargestFullPlatformReviewCount": 47,
+      "components": {
+        "userSentiment": 8.8,
+        "reviewConfidence": 7.7,
+        "sourceAgreement": 8.8,
+        "evidenceFreshness": 10,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [
+        {
+          "label": "G2",
+          "url": "https://www.g2.com/products/cognism/reviews",
+          "sourceFamily": "g2",
+          "scope": "full_platform",
+          "component": "userSentiment",
+          "score": 9,
+          "reviewCount": 1322,
+          "reliability": 1,
+          "observedAt": "2026-09-10T20:00:00Z"
+        },
+        {
+          "label": "TrustRadius",
+          "url": "https://www.trustradius.com/products/cognism",
+          "sourceFamily": "trustradius",
+          "scope": "full_platform",
+          "component": "userSentiment",
+          "score": 8.4,
+          "reviewCount": 47,
+          "reliability": 0.95,
+          "observedAt": "2026-09-10T20:00:00Z"
+        }
+      ],
+      "lastRefreshed": "2026-09-10T23:38:51.446Z"
+    },
+    "lusha": {
+      "id": "lusha",
+      "name": "Lusha",
+      "status": "live",
+      "score": 8.8,
+      "confidence": 8.5,
+      "reviewCount": 2005,
+      "sourceCount": 2,
+      "independentSourceCount": 2,
+      "fullPlatformSourceCount": 2,
+      "fullPlatformReviewCount": 2005,
+      "secondLargestFullPlatformReviewCount": 361,
+      "components": {
+        "userSentiment": 8.5,
+        "reviewConfidence": 8.5,
+        "sourceAgreement": 9.6,
+        "evidenceFreshness": 10,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [
+        {
+          "label": "G2",
+          "url": "https://www.g2.com/products/lusha/reviews",
+          "sourceFamily": "g2",
+          "scope": "full_platform",
+          "component": "userSentiment",
+          "score": 8.6,
+          "reviewCount": 1644,
+          "reliability": 1,
+          "observedAt": "2026-09-10T20:00:00Z"
+        },
+        {
+          "label": "TrustRadius",
+          "url": "https://www.trustradius.com/products/lusha/reviews",
+          "sourceFamily": "trustradius",
+          "scope": "full_platform",
+          "component": "userSentiment",
+          "score": 8.4,
+          "reviewCount": 361,
+          "reliability": 1,
+          "observedAt": "2026-09-10T20:00:00Z"
+        }
+      ],
+      "lastRefreshed": "2026-09-10T23:38:51.446Z"
+    },
+    "lemlist": {
+      "id": "lemlist",
+      "name": "lemlist",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-10T23:38:51.446Z"
+    },
+    "seamless-ai": {
+      "id": "seamless-ai",
+      "name": "Seamless.AI",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-10T23:38:51.446Z"
+    },
+    "heyreach": {
+      "id": "heyreach",
+      "name": "HeyReach",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-10T23:38:51.446Z"
+    },
+    "la-growth-machine": {
+      "id": "la-growth-machine",
+      "name": "La Growth Machine",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-10T23:38:51.446Z"
+    },
+    "orum": {
+      "id": "orum",
+      "name": "Orum",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-10T23:38:51.446Z"
+    },
+    "zime": {
+      "id": "zime",
+      "name": "Zime",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-10T23:38:51.446Z"
+    },
+    "smartwinnr": {
+      "id": "smartwinnr",
+      "name": "SmartWinnr",
+      "status": "provisional",
+      "score": 8.7,
+      "confidence": 4.6,
+      "reviewCount": 243,
+      "sourceCount": 1,
+      "independentSourceCount": 1,
+      "fullPlatformSourceCount": 1,
+      "fullPlatformReviewCount": 243,
+      "secondLargestFullPlatformReviewCount": 0,
+      "components": {
+        "userSentiment": 9.6,
+        "reviewConfidence": 4.6,
+        "sourceAgreement": null,
+        "evidenceFreshness": 10,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [
+        {
+          "label": "G2",
+          "url": "https://www.g2.com/products/smartwinnr/reviews",
+          "sourceFamily": "g2",
+          "scope": "full_platform",
+          "component": "userSentiment",
+          "score": 9.8,
+          "reviewCount": 243,
+          "reliability": 1,
+          "observedAt": "2026-09-10T20:00:00Z"
+        }
+      ],
+      "lastRefreshed": "2026-09-10T23:38:51.446Z"
+    },
+    "exec": {
+      "id": "exec",
+      "name": "Exec",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-10T23:38:51.446Z"
+    },
+    "substrata": {
+      "id": "substrata",
+      "name": "Substrata",
+      "status": "provisional",
+      "score": 8.9,
+      "confidence": 5.2,
+      "reviewCount": 1103,
+      "sourceCount": 1,
+      "independentSourceCount": 1,
+      "fullPlatformSourceCount": 1,
+      "fullPlatformReviewCount": 1103,
+      "secondLargestFullPlatformReviewCount": 0,
+      "components": {
+        "userSentiment": 9.8,
+        "reviewConfidence": 5.2,
+        "sourceAgreement": null,
+        "evidenceFreshness": 10,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [
+        {
+          "label": "G2",
+          "url": "https://www.g2.com/products/substrata-substrata/reviews",
+          "sourceFamily": "g2",
+          "scope": "full_platform",
+          "component": "userSentiment",
+          "score": 9.8,
+          "reviewCount": 1103,
+          "reliability": 1,
+          "observedAt": "2026-09-10T20:00:00Z"
+        }
+      ],
+      "lastRefreshed": "2026-09-10T23:38:51.446Z"
+    },
+    "vibe-prospecting": {
+      "id": "vibe-prospecting",
+      "name": "VibeProspecting",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-10T23:38:51.446Z"
+    },
+    "heylee": {
+      "id": "heylee",
+      "name": "Heylee",
+      "status": "collecting",
+      "score": null,
+      "confidence": null,
+      "reviewCount": 0,
+      "sourceCount": 0,
+      "independentSourceCount": 0,
+      "fullPlatformSourceCount": 0,
+      "fullPlatformReviewCount": 0,
+      "secondLargestFullPlatformReviewCount": 0,
+      "components": {
+        "userSentiment": null,
+        "reviewConfidence": null,
+        "sourceAgreement": null,
+        "evidenceFreshness": null,
+        "integrationReadiness": null,
+        "gtmFit": null,
+        "marketMomentum": null
+      },
+      "trend": null,
+      "sources": [],
+      "lastRefreshed": "2026-09-10T23:38:51.447Z"
     }
   },
   "summary": {
-    "total": 104,
-    "live": 0,
-    "provisional": 28,
-    "collecting": 76,
-    "sourceFailures": 0
+    "total": 126,
+    "live": 25,
+    "provisional": 20,
+    "collecting": 81,
+    "sourceFailures": 0,
+    "fullPlatformReviewRecords": 134825
   },
   "failures": []
 }
