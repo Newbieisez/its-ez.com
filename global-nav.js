@@ -1,9 +1,9 @@
 (() => {
   'use strict';
 
-  const VERSION = '20260910-site-ui-2';
+  const VERSION = '20260910-site-ui-3';
   const ROOT = 'https://its-ez.com/';
-  const ASSET_VERSION = '20260910-site-ui-2';
+  const ASSET_VERSION = '20260910-site-ui-3';
   const THEME_KEY = 'ez-site-theme';
   const scriptSrc = document.currentScript?.src || `${ROOT}global-nav.js`;
   const ASSET_ROOT = new URL('./', scriptSrc).href;
@@ -11,18 +11,35 @@
   const SITE_ROOT = previewHost ? ASSET_ROOT : ROOT;
   const assetUrl = path => new URL(path, ASSET_ROOT).href;
 
-  const navItems = [
-    ['Home', SITE_ROOT],
-    ['Work', SITE_ROOT + '#work'],
-    ['Services', SITE_ROOT + 'work-with-me.html'],
-    ['Revenue Hub', SITE_ROOT + 'revenue-performance.html'],
-    ['AI Systems', SITE_ROOT + 'ai-systems.html'],
-    ['MEDDPICC', 'https://meddpicc-is-ez.erezhaimowicz.workers.dev/'],
-    ['Cybersecurity', 'https://ez-human-threat-academy.erezhaimowicz.workers.dev/'],
-    ['Music', SITE_ROOT + 'music.html'],
-    ['Recommendations', SITE_ROOT + 'recommendations.html'],
-    ['Contact', SITE_ROOT + '#contact']
+  const navGroups = [
+    {
+      label: 'Start here',
+      items: [
+        ['Home', SITE_ROOT, 'Overview and positioning'],
+        ['Work', SITE_ROOT + '#work', 'Case studies and outcomes'],
+        ['Services', SITE_ROOT + 'work-with-me.html', 'Ways to work together'],
+        ['Contact', SITE_ROOT + '#contact', 'Start a conversation']
+      ]
+    },
+    {
+      label: 'Tools & resources',
+      items: [
+        ['Revenue Hub', SITE_ROOT + 'revenue-performance.html', 'Metrics, diagnostics and coaching'],
+        ['AI Systems', SITE_ROOT + 'ai-systems.html', 'Practical AI workflow library'],
+        ['MEDDPICC', 'https://meddpicc-is-ez.erezhaimowicz.workers.dev/', 'Qualification and deal execution'],
+        ['Cybersecurity', 'https://ez-human-threat-academy.erezhaimowicz.workers.dev/', 'Human threat knowledge base']
+      ]
+    },
+    {
+      label: 'More',
+      items: [
+        ['Recommendations', SITE_ROOT + 'recommendations.html', 'What people I worked with say'],
+        ['Music', SITE_ROOT + 'music.html', 'Avi Haimonix releases and originals']
+      ]
+    }
   ];
+
+  const allItems = navGroups.flatMap(group => group.items);
 
   function defaultTheme() {
     try {
@@ -48,6 +65,7 @@
   function addStyles() {
     ensureStylesheet('ez-responsive', assetUrl('responsive-2026.css?v=20260908-responsive-audit-1'));
     ensureStylesheet('ez-site-ui', assetUrl(`site-ui-2026.css?v=${ASSET_VERSION}`));
+    ensureStylesheet('ez-nav-compact', assetUrl(`site-nav-compact.css?v=${ASSET_VERSION}`));
   }
 
   function markPage() {
@@ -73,32 +91,6 @@
     }
   }
 
-  function paintThemeButton(button) {
-    if (!button) return;
-    const dark = theme === 'dark';
-    button.textContent = dark ? '☀' : '☾';
-    button.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
-    button.setAttribute('title', dark ? 'Light mode' : 'Dark mode');
-    button.setAttribute('aria-pressed', String(dark));
-  }
-
-  function applyTheme(next, persist = true) {
-    theme = next === 'dark' ? 'dark' : 'light';
-    document.documentElement.dataset.ezTheme = theme;
-    document.documentElement.style.colorScheme = theme;
-    syncPageTheme(theme);
-
-    const meta = document.querySelector('meta[name="theme-color"]');
-    if (meta) meta.setAttribute('content', theme === 'dark' ? '#08090b' : '#ffffff');
-
-    if (persist) {
-      try { localStorage.setItem(THEME_KEY, theme); } catch (_) {}
-    }
-
-    paintThemeButton(document.querySelector('.ez-theme-toggle'));
-    document.dispatchEvent(new CustomEvent('ez:themechange', { detail: { theme } }));
-  }
-
   function currentFor(label, href) {
     const host = location.hostname.toLowerCase();
     const path = location.pathname.toLowerCase();
@@ -116,82 +108,129 @@
     return previewHost ? path.endsWith(targetPath.split('/').pop()) : targetPath === path;
   }
 
+  function currentLabel() {
+    const active = allItems.find(([label, href]) => currentFor(label, href));
+    return active?.[0] || 'Explore';
+  }
+
+  function paintThemeControls() {
+    const toggle = document.querySelector('.ez-theme-toggle');
+    if (toggle) {
+      const dark = theme === 'dark';
+      toggle.textContent = dark ? '☀' : '☾';
+      toggle.setAttribute('aria-label', dark ? 'Switch to light mode' : 'Switch to dark mode');
+      toggle.setAttribute('title', dark ? 'Light mode' : 'Dark mode');
+      toggle.setAttribute('aria-pressed', String(dark));
+    }
+    document.querySelectorAll('[data-ez-theme-choice]').forEach(button => {
+      const selected = button.dataset.ezThemeChoice === theme;
+      button.setAttribute('aria-pressed', String(selected));
+      button.classList.toggle('is-active', selected);
+    });
+  }
+
+  function applyTheme(next, persist = true) {
+    theme = next === 'dark' ? 'dark' : 'light';
+    document.documentElement.dataset.ezTheme = theme;
+    document.documentElement.style.colorScheme = theme;
+    syncPageTheme(theme);
+
+    const meta = document.querySelector('meta[name="theme-color"]');
+    if (meta) meta.setAttribute('content', theme === 'dark' ? '#08090b' : '#ffffff');
+
+    if (persist) {
+      try { localStorage.setItem(THEME_KEY, theme); } catch (_) {}
+    }
+
+    paintThemeControls();
+    document.dispatchEvent(new CustomEvent('ez:themechange', { detail: { theme } }));
+  }
+
+  function groupMarkup(group) {
+    return `<section class="ez-drawer-group" aria-label="${group.label}">
+      <div class="ez-drawer-group-title">${group.label}</div>
+      ${group.items.map(([label, href, description]) => `
+        <a class="ez-drawer-link" href="${href}" data-ez-label="${label}">
+          <span>${label}</span><small>${description}</small>
+        </a>`).join('')}
+    </section>`;
+  }
+
   function renderHeader() {
     const old = document.querySelector('header.site-header, .site-header');
     const header = document.createElement('header');
-    header.className = 'ez-global-header';
+    header.className = 'ez-global-header ez-compact-nav';
     header.dataset.version = VERSION;
     header.innerHTML = `
       <div class="ez-global-shell">
         <a class="ez-global-brand" href="${SITE_ROOT}" aria-label="EZ Enablement home">
           <span class="ez-global-mark">E<b>Z</b></span>
-          <span class="ez-global-brand-copy"><strong>EZ ENABLEMENT</strong><span>Enablement made possible</span></span>
+          <span class="ez-global-brand-copy"><strong>EZ ENABLEMENT</strong></span>
         </a>
-        <nav class="ez-global-links" id="ez-global-links" aria-label="Primary navigation">
-          ${navItems.map(([label, href]) => `<a href="${href}" data-ez-label="${label}">${label}</a>`).join('')}
-        </nav>
-        <button class="ez-theme-toggle" type="button" aria-label="Switch color mode"></button>
-        <a class="ez-global-cta" href="${SITE_ROOT}#contact">Let's connect</a>
-        <button class="ez-global-menu" type="button" aria-expanded="false" aria-controls="ez-global-links" aria-label="Open navigation">☰</button>
-      </div>`;
+        <span class="ez-current-page" aria-live="polite">${currentLabel()}</span>
+        <div class="ez-global-actions">
+          <button class="ez-theme-toggle" type="button" aria-label="Switch color mode"></button>
+          <button class="ez-global-menu" type="button" aria-expanded="false" aria-controls="ez-nav-drawer" aria-label="Open menu"><span>Menu</span><b aria-hidden="true">☰</b></button>
+        </div>
+      </div>
+      <button class="ez-nav-scrim" type="button" aria-label="Close menu" tabindex="-1"></button>
+      <aside class="ez-nav-drawer" id="ez-nav-drawer" aria-label="Site navigation" aria-hidden="true">
+        <div class="ez-drawer-head"><div><small>EZ ENABLEMENT</small><strong>Where do you want to go?</strong></div><button class="ez-drawer-close" type="button" aria-label="Close menu">×</button></div>
+        <nav class="ez-drawer-nav" aria-label="All site destinations">${navGroups.map(groupMarkup).join('')}</nav>
+        <div class="ez-drawer-appearance"><span>Appearance</span><div role="group" aria-label="Choose appearance"><button type="button" data-ez-theme-choice="light">Light</button><button type="button" data-ez-theme-choice="dark">Dark</button></div></div>
+        <a class="ez-drawer-contact" href="${SITE_ROOT}#contact">Start a conversation <span aria-hidden="true">↗</span></a>
+      </aside>`;
 
     if (old) old.replaceWith(header);
     else document.body.prepend(header);
 
-    const links = header.querySelector('.ez-global-links');
     const menu = header.querySelector('.ez-global-menu');
-    const themeButton = header.querySelector('.ez-theme-toggle');
+    const drawer = header.querySelector('.ez-nav-drawer');
+    const closeButton = header.querySelector('.ez-drawer-close');
+    const scrim = header.querySelector('.ez-nav-scrim');
+    const current = header.querySelector('.ez-current-page');
 
     const updateActive = () => {
-      header.querySelectorAll('.ez-global-links a').forEach(a => {
-        if (currentFor(a.dataset.ezLabel, a.href)) a.setAttribute('aria-current', 'page');
-        else a.removeAttribute('aria-current');
+      header.querySelectorAll('.ez-drawer-link').forEach(link => {
+        if (currentFor(link.dataset.ezLabel, link.href)) link.setAttribute('aria-current', 'page');
+        else link.removeAttribute('aria-current');
       });
+      current.textContent = currentLabel();
     };
 
-    const closeMenu = (restoreFocus = false) => {
-      header.classList.remove('is-open');
-      document.body.classList.remove('ez-nav-open');
-      menu.setAttribute('aria-expanded', 'false');
-      menu.setAttribute('aria-label', 'Open navigation');
-      menu.textContent = '☰';
-      if (restoreFocus) menu.focus();
-    };
-
-    paintThemeButton(themeButton);
-    updateActive();
-
-    themeButton.addEventListener('click', () => applyTheme(theme === 'dark' ? 'light' : 'dark'));
-    menu.addEventListener('click', () => {
-      const open = header.classList.toggle('is-open');
+    const setOpen = (open, restoreFocus = false) => {
+      header.classList.toggle('is-open', open);
       document.body.classList.toggle('ez-nav-open', open);
-      if (open) document.dispatchEvent(new Event('ez:close-page-map'));
       menu.setAttribute('aria-expanded', String(open));
-      menu.setAttribute('aria-label', open ? 'Close navigation' : 'Open navigation');
-      menu.textContent = open ? '×' : '☰';
-    });
+      menu.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
+      drawer.setAttribute('aria-hidden', String(!open));
+      if (open) {
+        document.dispatchEvent(new Event('ez:close-page-map'));
+        setTimeout(() => closeButton.focus(), 0);
+      } else if (restoreFocus) menu.focus();
+    };
 
-    links.addEventListener('click', event => {
+    updateActive();
+    paintThemeControls();
+
+    menu.addEventListener('click', () => setOpen(!header.classList.contains('is-open')));
+    closeButton.addEventListener('click', () => setOpen(false, true));
+    scrim.addEventListener('click', () => setOpen(false, true));
+    header.querySelector('.ez-theme-toggle').addEventListener('click', () => applyTheme(theme === 'dark' ? 'light' : 'dark'));
+    header.querySelectorAll('[data-ez-theme-choice]').forEach(button => button.addEventListener('click', () => applyTheme(button.dataset.ezThemeChoice)));
+    header.querySelector('.ez-drawer-nav').addEventListener('click', event => {
       if (event.target.closest('a')) {
-        closeMenu();
+        setOpen(false);
         setTimeout(updateActive, 0);
       }
     });
+    header.querySelector('.ez-drawer-contact').addEventListener('click', () => setOpen(false));
 
-    document.addEventListener('click', event => {
-      if (header.classList.contains('is-open') && !header.contains(event.target)) closeMenu();
-    });
-    document.addEventListener('focusin', event => {
-      if (header.classList.contains('is-open') && !header.contains(event.target)) closeMenu();
-    });
-    document.addEventListener('ez:page-map-open', () => closeMenu());
+    document.addEventListener('ez:page-map-open', () => setOpen(false));
     window.addEventListener('hashchange', updateActive);
     window.addEventListener('popstate', updateActive);
-    window.addEventListener('resize', () => {
-      if (window.innerWidth > 1240) closeMenu();
-    }, { passive: true });
     document.addEventListener('keydown', event => {
-      if (event.key === 'Escape' && header.classList.contains('is-open')) closeMenu(true);
+      if (event.key === 'Escape' && header.classList.contains('is-open')) setOpen(false, true);
     });
   }
 
@@ -206,7 +245,6 @@
       });
       return true;
     };
-
     if (apply()) return;
     const observer = new MutationObserver(() => {
       if (apply()) observer.disconnect();
@@ -222,7 +260,7 @@
     const toggle = document.getElementById('page-map-toggle');
     if (!map || !toggle) return;
 
-    toggle.textContent = '☷ System map';
+    toggle.textContent = '☷ Page';
     const close = () => {
       map.classList.remove('is-open');
       toggle.setAttribute('aria-expanded', 'false');
@@ -266,7 +304,6 @@
     if (!frame) return;
 
     ensureStylesheet('ez-music-fallback', assetUrl('music-fallback-2026.css?v=20260910-1'));
-
     const container = frame.closest('.soundcloud') || frame.parentElement;
     const trackUrl = 'https://soundcloud.com/haimonix/full-speed-ahead-yacht-rock/s-XCooCM1Kq6V';
     frame.removeAttribute('src');
@@ -300,11 +337,9 @@
 
   function loadPageExtensions() {
     const path = location.pathname.toLowerCase();
-
     if (path.endsWith('/recommendations.html') || path.endsWith('/recommendations')) {
       ensureStylesheet('ez-recommendations-style', assetUrl('recommendations-2026.css?v=20260907-1'));
     }
-
     if (path.endsWith('/ai-systems.html') || path.endsWith('/ai-systems')) {
       if (!document.querySelector('script[data-ez-ai-systems-extension]')) {
         const script = document.createElement('script');
@@ -320,7 +355,6 @@
         document.body.appendChild(script);
       }
     }
-
     improveMusicReleaseCues();
     fixMusicSoundCloud();
   }
