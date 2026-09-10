@@ -1,10 +1,15 @@
 {
-  "schemaVersion": 2,
+  "schemaVersion": 3,
+  "methodologyVersion": "2.0",
   "policy": {
     "refreshHours": 6,
-    "minimumScoreComponents": 3,
-    "minimumUserSentimentSources": 1,
-    "minimumLiveIndependentSources": 2,
+    "expectedCatalogSize": 126,
+    "minimumLiveFullPlatformSources": 2,
+    "minimumLiveFullPlatformReviews": 100,
+    "minimumSecondSourceReviews": 20,
+    "minimumLiveConfidence": 6,
+    "minimumLiveAgreement": 6,
+    "minimumLiveFreshness": 5,
     "blockedDomains": [
       "g2.com",
       "www.g2.com",
@@ -15,120 +20,199 @@
       "getapp.com",
       "www.getapp.com",
       "gartner.com",
-      "www.gartner.com"
+      "www.gartner.com",
+      "peerspot.com",
+      "www.peerspot.com"
     ]
   },
   "defaults": {
     "priorUserScore": 7.5,
-    "priorReviewWeight": 30,
+    "priorReviewWeight": 20,
     "weights": {
-      "userSentiment": 0.45,
-      "reviewConfidence": 0.10,
-      "integrationReadiness": 0.20,
-      "gtmFit": 0.15,
-      "marketMomentum": 0.10
+      "userSentiment": 0.55,
+      "reviewConfidence": 0.15,
+      "sourceAgreement": 0.1,
+      "evidenceFreshness": 0.1,
+      "integrationReadiness": 0.04,
+      "gtmFit": 0.03,
+      "marketMomentum": 0.03
     }
   },
+  "sourceRegistry": [
+    {"name":"G2","family":"g2","kind":"independent_review","scope":"full_platform","collection":"verified_snapshot_or_licensed_api","weightClass":"primary"},
+    {"name":"TrustRadius","family":"trustradius","kind":"independent_review","scope":"full_platform","collection":"verified_snapshot_or_licensed_api","weightClass":"primary"},
+    {"name":"Gartner Peer Insights","family":"gartner-peer-insights","kind":"independent_review","scope":"full_platform","collection":"verified_snapshot_or_licensed_api","weightClass":"primary"},
+    {"name":"PeerSpot","family":"peerspot","kind":"independent_review","scope":"full_platform","collection":"verified_snapshot_or_permitted_access","weightClass":"primary"},
+    {"name":"SoftwareReviews / Info-Tech","family":"softwarereviews","kind":"independent_review","scope":"full_platform","collection":"verified_snapshot_or_licensed_access","weightClass":"primary"},
+    {"name":"Capterra / GetApp / Software Advice","family":"gartner-digital-markets","kind":"independent_review","scope":"full_platform","collection":"verified_snapshot_or_licensed_access","weightClass":"primary","note":"Deduplicated as one review family."},
+    {"name":"SourceForge / Slashdot","family":"sourceforge","kind":"independent_review","scope":"full_platform","collection":"verified_snapshot_or_permitted_access","weightClass":"secondary","note":"Deduplicated as one review family."},
+    {"name":"Trustpilot","family":"trustpilot","kind":"independent_review","scope":"full_platform","collection":"verified_snapshot_or_permitted_access","weightClass":"secondary"},
+    {"name":"Salesforce AppExchange","family":"salesforce-appexchange","kind":"marketplace_review","scope":"marketplace","collection":"licensed_or_permitted_access","weightClass":"secondary"},
+    {"name":"Microsoft AppSource","family":"microsoft-appsource","kind":"marketplace_review","scope":"marketplace","collection":"licensed_or_permitted_access","weightClass":"secondary"},
+    {"name":"Atlassian Marketplace","family":"atlassian-marketplace","kind":"marketplace_review","scope":"marketplace","collection":"licensed_or_permitted_access","weightClass":"secondary"},
+    {"name":"HubSpot Marketplace","family":"hubspot-marketplace","kind":"marketplace_review","scope":"marketplace","collection":"licensed_or_permitted_access","weightClass":"secondary"},
+    {"name":"Google Workspace Marketplace","family":"google-workspace-marketplace","kind":"marketplace_review","scope":"marketplace","collection":"licensed_or_permitted_access","weightClass":"secondary"},
+    {"name":"Chrome Web Store","family":"chrome-web-store","kind":"marketplace_review","scope":"browser_extension","collection":"licensed_or_permitted_access","weightClass":"limited"},
+    {"name":"Apple App Store","family":"apple-app-store","kind":"mobile_review","scope":"mobile_app","collection":"official_lookup_api","weightClass":"limited"},
+    {"name":"Google Play","family":"google-play","kind":"mobile_review","scope":"mobile_app","collection":"licensed_or_permitted_access","weightClass":"limited"},
+    {"name":"GitHub","family":"github","kind":"product_momentum","scope":"reference","collection":"official_api","weightClass":"non_sentiment"},
+    {"name":"Official vendor product site","family":"vendor","kind":"vendor_evidence","scope":"vendor_evidence","collection":"official_documentation","weightClass":"non_sentiment","note":"Used for capabilities, integrations and product evidence, never independent user sentiment."}
+  ],
   "sources": {
-    "salesforce": [
-      { "type":"licensed-json", "url":"https://itunes.apple.com/lookup?id=404249815&country=us", "ratingPath":"results.0.averageUserRating", "countPath":"results.0.userRatingCount", "maxRating":5, "label":"Apple App Store — Salesforce mobile", "scope":"mobile_app" }
-    ],
-    "hubspot": [
-      { "type":"licensed-json", "url":"https://itunes.apple.com/lookup?id=1107711722&country=us", "ratingPath":"results.0.averageUserRating", "countPath":"results.0.userRatingCount", "maxRating":5, "label":"Apple App Store — HubSpot mobile", "scope":"mobile_app" }
-    ],
-    "dynamics": [
-      { "type":"licensed-json", "url":"https://itunes.apple.com/lookup?id=1485578688&country=us", "ratingPath":"results.0.averageUserRating", "countPath":"results.0.userRatingCount", "maxRating":5, "label":"Apple App Store — Dynamics 365 Sales mobile", "scope":"mobile_app" }
-    ],
-    "zoho": [
-      { "type":"licensed-json", "url":"https://itunes.apple.com/lookup?id=444908810&country=us", "ratingPath":"results.0.averageUserRating", "countPath":"results.0.userRatingCount", "maxRating":5, "label":"Apple App Store — Zoho CRM mobile", "scope":"mobile_app" }
-    ],
-    "attio": [
-      { "type":"licensed-json", "url":"https://itunes.apple.com/lookup?id=1511545395&country=us", "ratingPath":"results.0.averageUserRating", "countPath":"results.0.userRatingCount", "maxRating":5, "label":"Apple App Store — Attio mobile", "scope":"mobile_app" }
-    ],
-    "close-crm": [
-      { "type":"licensed-json", "url":"https://itunes.apple.com/lookup?id=1668836284&country=us", "ratingPath":"results.0.averageUserRating", "countPath":"results.0.userRatingCount", "maxRating":5, "label":"Apple App Store — Close CRM mobile", "scope":"mobile_app" }
-    ],
-    "folk-crm": [
-      { "type":"licensed-json", "url":"https://itunes.apple.com/lookup?id=6761423430&country=us", "ratingPath":"results.0.averageUserRating", "countPath":"results.0.userRatingCount", "maxRating":5, "label":"Apple App Store — folk CRM mobile", "scope":"mobile_app" }
-    ],
-    "zoominfo": [
-      { "type":"licensed-json", "url":"https://itunes.apple.com/lookup?id=1493170277&country=us", "ratingPath":"results.0.averageUserRating", "countPath":"results.0.userRatingCount", "maxRating":5, "label":"Apple App Store — ZoomInfo mobile", "scope":"mobile_app" }
-    ],
-    "outreach": [
-      { "type":"licensed-json", "url":"https://itunes.apple.com/lookup?id=6505089914&country=us", "ratingPath":"results.0.averageUserRating", "countPath":"results.0.userRatingCount", "maxRating":5, "label":"Apple App Store — Outreach.io mobile", "scope":"mobile_app" }
-    ],
-    "salesloft": [
-      { "type":"licensed-json", "url":"https://itunes.apple.com/lookup?id=1455032473&country=us", "ratingPath":"results.0.averageUserRating", "countPath":"results.0.userRatingCount", "maxRating":5, "label":"Apple App Store — Salesloft mobile", "scope":"mobile_app" }
-    ],
-    "instantly": [
-      { "type":"licensed-json", "url":"https://itunes.apple.com/lookup?id=6474658497&country=us", "ratingPath":"results.0.averageUserRating", "countPath":"results.0.userRatingCount", "maxRating":5, "label":"Apple App Store — Instantly AI mobile", "scope":"mobile_app" }
-    ],
     "gong": [
-      { "type":"licensed-json", "url":"https://itunes.apple.com/lookup?id=1289289459&country=us", "ratingPath":"results.0.averageUserRating", "countPath":"results.0.userRatingCount", "maxRating":5, "label":"Apple App Store — Gong mobile", "scope":"mobile_app" }
-    ],
-    "chorus": [
-      { "type":"licensed-json", "url":"https://itunes.apple.com/lookup?id=1591442342&country=us", "ratingPath":"results.0.averageUserRating", "countPath":"results.0.userRatingCount", "maxRating":5, "label":"Apple App Store — Chorus by ZoomInfo mobile", "scope":"mobile_app" }
-    ],
-    "clari": [
-      { "type":"licensed-json", "url":"https://itunes.apple.com/lookup?id=977304452&country=us", "ratingPath":"results.0.averageUserRating", "countPath":"results.0.userRatingCount", "maxRating":5, "label":"Apple App Store — Clari mobile", "scope":"mobile_app" }
-    ],
-    "seismic": [
-      { "type":"licensed-json", "url":"https://itunes.apple.com/lookup?id=639973703&country=us", "ratingPath":"results.0.averageUserRating", "countPath":"results.0.userRatingCount", "maxRating":5, "label":"Apple App Store — Seismic mobile", "scope":"mobile_app" }
+      {"type":"snapshot-review","label":"G2","url":"https://www.g2.com/products/gong/reviews","rating":4.7,"maxRating":5,"reviewCount":6593,"sourceFamily":"g2","scope":"full_platform","reliability":1,"observedAt":"2026-09-10T20:00:00Z"},
+      {"type":"snapshot-review","label":"TrustRadius","url":"https://www.trustradius.com/products/gong-io/reviews","rating":9.1,"maxRating":10,"reviewCount":1183,"sourceFamily":"trustradius","scope":"full_platform","reliability":1,"observedAt":"2026-09-10T20:00:00Z"},
+      {"type":"licensed-json","url":"https://itunes.apple.com/lookup?id=1289289459&country=us","ratingPath":"results.0.averageUserRating","countPath":"results.0.userRatingCount","maxRating":5,"label":"Apple App Store mobile rating","scope":"mobile_app","sourceFamily":"apple-app-store","reliability":0.9}
     ],
     "highspot": [
-      { "type":"licensed-json", "url":"https://itunes.apple.com/lookup?id=1173751523&country=us", "ratingPath":"results.0.averageUserRating", "countPath":"results.0.userRatingCount", "maxRating":5, "label":"Apple App Store — Highspot mobile", "scope":"mobile_app" }
-    ],
-    "allego": [
-      { "type":"licensed-json", "url":"https://itunes.apple.com/lookup?id=640352522&country=us", "ratingPath":"results.0.averageUserRating", "countPath":"results.0.userRatingCount", "maxRating":5, "label":"Apple App Store — Allego mobile", "scope":"mobile_app" }
+      {"type":"snapshot-review","label":"G2","url":"https://www.g2.com/sellers/highspot","rating":4.7,"maxRating":5,"reviewCount":1206,"sourceFamily":"g2","scope":"full_platform","reliability":0.95,"observedAt":"2026-09-10T20:00:00Z"},
+      {"type":"snapshot-review","label":"TrustRadius","url":"https://www.trustradius.com/products/highspot/reviews","rating":8.5,"maxRating":10,"reviewCount":155,"sourceFamily":"trustradius","scope":"full_platform","reliability":1,"observedAt":"2026-09-10T20:00:00Z"},
+      {"type":"licensed-json","url":"https://itunes.apple.com/lookup?id=1173751523&country=us","ratingPath":"results.0.averageUserRating","countPath":"results.0.userRatingCount","maxRating":5,"label":"Apple App Store mobile rating","scope":"mobile_app","sourceFamily":"apple-app-store","reliability":0.9}
     ],
     "mindtickle": [
-      { "type":"licensed-json", "url":"https://itunes.apple.com/lookup?id=965785490&country=us", "ratingPath":"results.0.averageUserRating", "countPath":"results.0.userRatingCount", "maxRating":5, "label":"Apple App Store — Mindtickle mobile", "scope":"mobile_app" }
+      {"type":"snapshot-review","label":"G2","url":"https://www.g2.com/products/mindtickle/reviews","rating":4.7,"maxRating":5,"reviewCount":2223,"sourceFamily":"g2","scope":"full_platform","reliability":1,"observedAt":"2026-09-10T20:00:00Z"},
+      {"type":"snapshot-review","label":"TrustRadius","url":"https://www.trustradius.com/products/mindtickle/reviews","rating":8,"maxRating":10,"reviewCount":52,"sourceFamily":"trustradius","scope":"full_platform","reliability":1,"observedAt":"2026-09-10T20:00:00Z"},
+      {"type":"licensed-json","url":"https://itunes.apple.com/lookup?id=965785490&country=us","ratingPath":"results.0.averageUserRating","countPath":"results.0.userRatingCount","maxRating":5,"label":"Apple App Store mobile rating","scope":"mobile_app","sourceFamily":"apple-app-store","reliability":0.9}
     ],
-    "showpad": [
-      { "type":"licensed-json", "url":"https://itunes.apple.com/lookup?id=432293783&country=us", "ratingPath":"results.0.averageUserRating", "countPath":"results.0.userRatingCount", "maxRating":5, "label":"Apple App Store — Showpad mobile", "scope":"mobile_app" }
-    ],
-    "workramp": [
-      { "type":"licensed-json", "url":"https://itunes.apple.com/lookup?id=1367739556&country=us", "ratingPath":"results.0.averageUserRating", "countPath":"results.0.userRatingCount", "maxRating":5, "label":"Apple App Store — WorkRamp mobile", "scope":"mobile_app" }
+    "allego": [
+      {"type":"snapshot-review","label":"G2","url":"https://www.g2.com/products/allego/reviews","rating":4.6,"maxRating":5,"reviewCount":690,"sourceFamily":"g2","scope":"full_platform","reliability":1,"observedAt":"2026-09-10T20:00:00Z"},
+      {"type":"snapshot-review","label":"TrustRadius","url":"https://www.trustradius.com/products/allego-sales-enablement-platform/reviews","rating":8.4,"maxRating":10,"reviewCount":53,"sourceFamily":"trustradius","scope":"full_platform","reliability":1,"observedAt":"2026-09-10T20:00:00Z"},
+      {"type":"licensed-json","url":"https://itunes.apple.com/lookup?id=640352522&country=us","ratingPath":"results.0.averageUserRating","countPath":"results.0.userRatingCount","maxRating":5,"label":"Apple App Store mobile rating","scope":"mobile_app","sourceFamily":"apple-app-store","reliability":0.9}
     ],
     "saleshood": [
-      { "type":"licensed-json", "url":"https://itunes.apple.com/lookup?id=894859274&country=us", "ratingPath":"results.0.averageUserRating", "countPath":"results.0.userRatingCount", "maxRating":5, "label":"Apple App Store — SalesHood mobile", "scope":"mobile_app" }
+      {"type":"snapshot-review","label":"G2","url":"https://www.g2.com/products/saleshood/reviews","rating":4.6,"maxRating":5,"reviewCount":825,"sourceFamily":"g2","scope":"full_platform","reliability":1,"observedAt":"2026-09-10T20:00:00Z"},
+      {"type":"snapshot-review","label":"TrustRadius","url":"https://www.trustradius.com/products/saleshood/reviews","rating":8,"maxRating":10,"reviewCount":27,"sourceFamily":"trustradius","scope":"full_platform","reliability":1,"observedAt":"2026-09-10T20:00:00Z"},
+      {"type":"licensed-json","url":"https://itunes.apple.com/lookup?id=894859274&country=us","ratingPath":"results.0.averageUserRating","countPath":"results.0.userRatingCount","maxRating":5,"label":"Apple App Store mobile rating","scope":"mobile_app","sourceFamily":"apple-app-store","reliability":0.9}
+    ],
+    "hubspot": [
+      {"type":"snapshot-review","label":"G2","url":"https://www.g2.com/products/hubspot-sales-hub/reviews","rating":4.4,"maxRating":5,"reviewCount":13742,"sourceFamily":"g2","scope":"full_platform","reliability":0.95,"observedAt":"2026-09-10T20:00:00Z"},
+      {"type":"snapshot-review","label":"TrustRadius","url":"https://www.trustradius.com/products/hubspot-sales-hub/reviews","rating":8.8,"maxRating":10,"reviewCount":583,"sourceFamily":"trustradius","scope":"full_platform","reliability":0.95,"observedAt":"2026-09-10T20:00:00Z"},
+      {"type":"licensed-json","url":"https://itunes.apple.com/lookup?id=1107711722&country=us","ratingPath":"results.0.averageUserRating","countPath":"results.0.userRatingCount","maxRating":5,"label":"Apple App Store mobile rating","scope":"mobile_app","sourceFamily":"apple-app-store","reliability":0.9}
+    ],
+    "dynamics": [
+      {"type":"snapshot-review","label":"G2","url":"https://www.g2.com/products/dynamics-365-sales/reviews","rating":3.8,"maxRating":5,"reviewCount":1616,"sourceFamily":"g2","scope":"full_platform","reliability":0.9,"observedAt":"2026-09-10T20:00:00Z"},
+      {"type":"snapshot-review","label":"TrustRadius","url":"https://www.trustradius.com/products/microsoft-dynamics-365/reviews","rating":8,"maxRating":10,"reviewCount":1024,"sourceFamily":"trustradius","scope":"full_platform","reliability":0.8,"observedAt":"2026-09-10T20:00:00Z"},
+      {"type":"licensed-json","url":"https://itunes.apple.com/lookup?id=1485578688&country=us","ratingPath":"results.0.averageUserRating","countPath":"results.0.userRatingCount","maxRating":5,"label":"Apple App Store mobile rating","scope":"mobile_app","sourceFamily":"apple-app-store","reliability":0.9}
+    ],
+    "zoho": [
+      {"type":"snapshot-review","label":"G2","url":"https://www.g2.com/products/zoho-crm/reviews","rating":4.1,"maxRating":5,"reviewCount":2921,"sourceFamily":"g2","scope":"full_platform","reliability":1,"observedAt":"2026-09-10T20:00:00Z"},
+      {"type":"snapshot-review","label":"TrustRadius","url":"https://www.trustradius.com/products/zoho-crm/reviews","rating":8.4,"maxRating":10,"reviewCount":1038,"sourceFamily":"trustradius","scope":"full_platform","reliability":1,"observedAt":"2026-09-10T20:00:00Z"},
+      {"type":"licensed-json","url":"https://itunes.apple.com/lookup?id=444908810&country=us","ratingPath":"results.0.averageUserRating","countPath":"results.0.userRatingCount","maxRating":5,"label":"Apple App Store mobile rating","scope":"mobile_app","sourceFamily":"apple-app-store","reliability":0.9}
+    ],
+    "outreach": [
+      {"type":"snapshot-review","label":"G2","url":"https://www.g2.com/products/outreach/reviews","rating":4.3,"maxRating":5,"reviewCount":3565,"sourceFamily":"g2","scope":"full_platform","reliability":1,"observedAt":"2026-09-10T20:00:00Z"},
+      {"type":"snapshot-review","label":"TrustRadius","url":"https://www.trustradius.com/products/outreach/reviews","rating":8.3,"maxRating":10,"reviewCount":1047,"sourceFamily":"trustradius","scope":"full_platform","reliability":1,"observedAt":"2026-09-10T20:00:00Z"},
+      {"type":"licensed-json","url":"https://itunes.apple.com/lookup?id=6505089914&country=us","ratingPath":"results.0.averageUserRating","countPath":"results.0.userRatingCount","maxRating":5,"label":"Apple App Store mobile rating","scope":"mobile_app","sourceFamily":"apple-app-store","reliability":0.9}
+    ],
+    "salesloft": [
+      {"type":"snapshot-review","label":"G2","url":"https://www.g2.com/products/salesloft/reviews","rating":4.5,"maxRating":5,"reviewCount":4287,"sourceFamily":"g2","scope":"full_platform","reliability":1,"observedAt":"2026-09-10T20:00:00Z"},
+      {"type":"snapshot-review","label":"TrustRadius","url":"https://www.trustradius.com/products/salesloft/reviews","rating":7.5,"maxRating":10,"reviewCount":973,"sourceFamily":"trustradius","scope":"full_platform","reliability":1,"observedAt":"2026-09-10T20:00:00Z"},
+      {"type":"licensed-json","url":"https://itunes.apple.com/lookup?id=1455032473&country=us","ratingPath":"results.0.averageUserRating","countPath":"results.0.userRatingCount","maxRating":5,"label":"Apple App Store mobile rating","scope":"mobile_app","sourceFamily":"apple-app-store","reliability":0.9}
+    ],
+    "clari": [
+      {"type":"snapshot-review","label":"G2","url":"https://www.g2.com/products/clari/reviews","rating":4.6,"maxRating":5,"reviewCount":5597,"sourceFamily":"g2","scope":"full_platform","reliability":1,"observedAt":"2026-09-10T20:00:00Z"},
+      {"type":"snapshot-review","label":"TrustRadius legacy product coverage","url":"https://www.trustradius.com/products/clari/reviews","rating":8.2,"maxRating":10,"reviewCount":119,"sourceFamily":"trustradius","scope":"full_platform","reliability":0.75,"observedAt":"2026-09-10T20:00:00Z"},
+      {"type":"licensed-json","url":"https://itunes.apple.com/lookup?id=977304452&country=us","ratingPath":"results.0.averageUserRating","countPath":"results.0.userRatingCount","maxRating":5,"label":"Apple App Store mobile rating","scope":"mobile_app","sourceFamily":"apple-app-store","reliability":0.9}
     ],
     "docebo": [
-      { "type":"licensed-json", "url":"https://itunes.apple.com/lookup?id=1362542319&country=us", "ratingPath":"results.0.averageUserRating", "countPath":"results.0.userRatingCount", "maxRating":5, "label":"Apple App Store — Docebo Go.Learn", "scope":"mobile_app" }
+      {"type":"snapshot-review","label":"G2","url":"https://www.g2.com/products/docebo/reviews","rating":4.3,"maxRating":5,"reviewCount":739,"sourceFamily":"g2","scope":"full_platform","reliability":1,"observedAt":"2026-09-10T20:00:00Z"},
+      {"type":"snapshot-review","label":"TrustRadius","url":"https://www.trustradius.com/products/docebo-learning-platform/reviews","rating":8.1,"maxRating":10,"reviewCount":53,"sourceFamily":"trustradius","scope":"full_platform","reliability":1,"observedAt":"2026-09-10T20:00:00Z"},
+      {"type":"licensed-json","url":"https://itunes.apple.com/lookup?id=1362542319&country=us","ratingPath":"results.0.averageUserRating","countPath":"results.0.userRatingCount","maxRating":5,"label":"Apple App Store mobile rating","scope":"mobile_app","sourceFamily":"apple-app-store","reliability":0.9}
     ],
     "360learning": [
-      { "type":"licensed-json", "url":"https://itunes.apple.com/lookup?id=1080374585&country=us", "ratingPath":"results.0.averageUserRating", "countPath":"results.0.userRatingCount", "maxRating":5, "label":"Apple App Store — 360Learning mobile", "scope":"mobile_app" }
-    ],
-    "cornerstone": [
-      { "type":"licensed-json", "url":"https://itunes.apple.com/lookup?id=974833832&country=us", "ratingPath":"results.0.averageUserRating", "countPath":"results.0.userRatingCount", "maxRating":5, "label":"Apple App Store — Cornerstone LearningExperience", "scope":"mobile_app" }
+      {"type":"snapshot-review","label":"G2","url":"https://www.g2.com/products/360learning/reviews","rating":4.6,"maxRating":5,"reviewCount":599,"sourceFamily":"g2","scope":"full_platform","reliability":1,"observedAt":"2026-09-10T20:00:00Z"},
+      {"type":"snapshot-review","label":"TrustRadius","url":"https://www.trustradius.com/products/360learning/reviews","rating":7.9,"maxRating":10,"reviewCount":48,"sourceFamily":"trustradius","scope":"full_platform","reliability":1,"observedAt":"2026-09-10T20:00:00Z"},
+      {"type":"licensed-json","url":"https://itunes.apple.com/lookup?id=1080374585&country=us","ratingPath":"results.0.averageUserRating","countPath":"results.0.userRatingCount","maxRating":5,"label":"Apple App Store mobile rating","scope":"mobile_app","sourceFamily":"apple-app-store","reliability":0.9}
     ],
     "degreed": [
-      { "type":"licensed-json", "url":"https://itunes.apple.com/lookup?id=1086998254&country=us", "ratingPath":"results.0.averageUserRating", "countPath":"results.0.userRatingCount", "maxRating":5, "label":"Apple App Store — Degreed mobile", "scope":"mobile_app" }
+      {"type":"snapshot-review","label":"G2","url":"https://www.g2.com/products/degreed/reviews","rating":4.3,"maxRating":5,"reviewCount":42,"sourceFamily":"g2","scope":"full_platform","reliability":1,"observedAt":"2026-09-10T20:00:00Z"},
+      {"type":"snapshot-review","label":"TrustRadius","url":"https://www.trustradius.com/products/degreed/reviews","rating":6,"maxRating":10,"reviewCount":23,"sourceFamily":"trustradius","scope":"full_platform","reliability":1,"observedAt":"2026-09-10T20:00:00Z"},
+      {"type":"licensed-json","url":"https://itunes.apple.com/lookup?id=1086998254&country=us","ratingPath":"results.0.averageUserRating","countPath":"results.0.userRatingCount","maxRating":5,"label":"Apple App Store mobile rating","scope":"mobile_app","sourceFamily":"apple-app-store","reliability":0.9}
     ],
-    "learnupon": [
-      { "type":"licensed-json", "url":"https://itunes.apple.com/lookup?id=947445473&country=us", "ratingPath":"results.0.averageUserRating", "countPath":"results.0.userRatingCount", "maxRating":5, "label":"Apple App Store — LearnUpon mobile", "scope":"mobile_app" }
+    "notion": [
+      {"type":"snapshot-review","label":"G2","url":"https://www.g2.com/products/notion/reviews","rating":4.6,"maxRating":5,"reviewCount":11565,"sourceFamily":"g2","scope":"full_platform","reliability":1,"observedAt":"2026-09-10T20:00:00Z"},
+      {"type":"snapshot-review","label":"TrustRadius","url":"https://www.trustradius.com/products/notion/reviews","rating":8.7,"maxRating":10,"reviewCount":1192,"sourceFamily":"trustradius","scope":"full_platform","reliability":1,"observedAt":"2026-09-10T20:00:00Z"}
     ],
-    "absorb": [
-      { "type":"licensed-json", "url":"https://itunes.apple.com/lookup?id=1450653475&country=us", "ratingPath":"results.0.averageUserRating", "countPath":"results.0.userRatingCount", "maxRating":5, "label":"Apple App Store — Absorb Learn", "scope":"mobile_app" }
+    "asana": [
+      {"type":"snapshot-review","label":"G2","url":"https://www.g2.com/products/asana/reviews","rating":4.4,"maxRating":5,"reviewCount":13566,"sourceFamily":"g2","scope":"full_platform","reliability":1,"observedAt":"2026-09-10T20:00:00Z"},
+      {"type":"snapshot-review","label":"TrustRadius","url":"https://www.trustradius.com/products/asana/reviews","rating":8.5,"maxRating":10,"reviewCount":3064,"sourceFamily":"trustradius","scope":"full_platform","reliability":1,"observedAt":"2026-09-10T20:00:00Z"}
     ],
-    "sana": [
-      { "type":"licensed-json", "url":"https://itunes.apple.com/lookup?id=1211652260&country=us", "ratingPath":"results.0.averageUserRating", "countPath":"results.0.userRatingCount", "maxRating":5, "label":"Apple App Store — Sana Labs mobile", "scope":"mobile_app" }
+    "monday": [
+      {"type":"snapshot-review","label":"G2","url":"https://www.g2.com/products/monday-com/reviews","rating":4.7,"maxRating":5,"reviewCount":15292,"sourceFamily":"g2","scope":"full_platform","reliability":1,"observedAt":"2026-09-10T20:00:00Z"},
+      {"type":"snapshot-review","label":"TrustRadius","url":"https://www.trustradius.com/products/monday/reviews","rating":8.3,"maxRating":10,"reviewCount":5063,"sourceFamily":"trustradius","scope":"full_platform","reliability":1,"observedAt":"2026-09-10T20:00:00Z"}
     ],
-    "n8n": [
-      {
-        "type": "github",
-        "repo": "n8n-io/n8n",
-        "component": "marketMomentum",
-        "label": "Official GitHub repository"
-      }
-    ]
+    "zapier": [
+      {"type":"snapshot-review","label":"G2","url":"https://www.g2.com/products/zapier/reviews","rating":4.5,"maxRating":5,"reviewCount":2040,"sourceFamily":"g2","scope":"full_platform","reliability":1,"observedAt":"2026-09-10T20:00:00Z"},
+      {"type":"snapshot-review","label":"TrustRadius","url":"https://www.trustradius.com/products/zapier/reviews","rating":8.9,"maxRating":10,"reviewCount":887,"sourceFamily":"trustradius","scope":"full_platform","reliability":1,"observedAt":"2026-09-10T20:00:00Z"}
+    ],
+    "apollo": [
+      {"type":"snapshot-review","label":"G2","url":"https://www.g2.com/products/apollo-io/reviews","rating":4.7,"maxRating":5,"reviewCount":9619,"sourceFamily":"g2","scope":"full_platform","reliability":1,"observedAt":"2026-09-10T20:00:00Z"},
+      {"type":"snapshot-review","label":"TrustRadius","url":"https://www.trustradius.com/products/apollo/reviews","rating":8.5,"maxRating":10,"reviewCount":662,"sourceFamily":"trustradius","scope":"full_platform","reliability":1,"observedAt":"2026-09-10T20:00:00Z"}
+    ],
+    "zoominfo": [
+      {"type":"snapshot-review","label":"G2 ZoomInfo Sales","url":"https://www.g2.com/products/zoominfo-sales/reviews","rating":4.5,"maxRating":5,"reviewCount":9032,"sourceFamily":"g2","scope":"full_platform","reliability":0.9,"observedAt":"2026-09-10T20:00:00Z"},
+      {"type":"snapshot-review","label":"TrustRadius ZoomInfo GTM Workspace","url":"https://www.trustradius.com/products/zoominfo-sales/reviews","rating":8.2,"maxRating":10,"reviewCount":1881,"sourceFamily":"trustradius","scope":"full_platform","reliability":0.85,"observedAt":"2026-09-10T20:00:00Z"},
+      {"type":"licensed-json","url":"https://itunes.apple.com/lookup?id=1493170277&country=us","ratingPath":"results.0.averageUserRating","countPath":"results.0.userRatingCount","maxRating":5,"label":"Apple App Store mobile rating","scope":"mobile_app","sourceFamily":"apple-app-store","reliability":0.9}
+    ],
+    "6sense": [
+      {"type":"snapshot-review","label":"G2 6sense Revenue Marketing","url":"https://www.g2.com/products/6sense-revenue-marketing/reviews","rating":4.3,"maxRating":5,"reviewCount":1423,"sourceFamily":"g2","scope":"full_platform","reliability":0.9,"observedAt":"2026-09-10T20:00:00Z"},
+      {"type":"snapshot-review","label":"TrustRadius","url":"https://www.trustradius.com/products/6sense/reviews","rating":8.4,"maxRating":10,"reviewCount":551,"sourceFamily":"trustradius","scope":"full_platform","reliability":0.9,"observedAt":"2026-09-10T20:00:00Z"}
+    ],
+    "spekit": [
+      {"type":"snapshot-review","label":"G2","url":"https://www.g2.com/products/spekit/reviews","rating":4.7,"maxRating":5,"reviewCount":282,"sourceFamily":"g2","scope":"full_platform","reliability":1,"observedAt":"2026-09-10T20:00:00Z"},
+      {"type":"snapshot-review","label":"TrustRadius","url":"https://www.trustradius.com/products/spekit/reviews","rating":9.2,"maxRating":10,"reviewCount":27,"sourceFamily":"trustradius","scope":"full_platform","reliability":1,"observedAt":"2026-09-10T20:00:00Z"}
+    ],
+    "workramp": [
+      {"type":"snapshot-review","label":"G2","url":"https://www.g2.com/products/workramp/reviews","rating":4.4,"maxRating":5,"reviewCount":622,"sourceFamily":"g2","scope":"full_platform","reliability":1,"observedAt":"2026-09-10T20:00:00Z"},
+      {"type":"snapshot-review","label":"TrustRadius","url":"https://www.trustradius.com/products/workramp/reviews","rating":6.6,"maxRating":10,"reviewCount":22,"sourceFamily":"trustradius","scope":"full_platform","reliability":1,"observedAt":"2026-09-10T20:00:00Z"},
+      {"type":"licensed-json","url":"https://itunes.apple.com/lookup?id=1367739556&country=us","ratingPath":"results.0.averageUserRating","countPath":"results.0.userRatingCount","maxRating":5,"label":"Apple App Store mobile rating","scope":"mobile_app","sourceFamily":"apple-app-store","reliability":0.9}
+    ],
+    "amplemarket": [
+      {"type":"snapshot-review","label":"G2","url":"https://www.g2.com/products/amplemarket/reviews","rating":4.6,"maxRating":5,"reviewCount":620,"sourceFamily":"g2","scope":"full_platform","reliability":1,"observedAt":"2026-09-10T20:00:00Z"},
+      {"type":"snapshot-review","label":"TrustRadius","url":"https://www.trustradius.com/products/amplemarket","rating":8.3,"maxRating":10,"reviewCount":21,"sourceFamily":"trustradius","scope":"full_platform","reliability":0.95,"observedAt":"2026-09-10T20:00:00Z"}
+    ],
+    "cognism": [
+      {"type":"snapshot-review","label":"G2","url":"https://www.g2.com/products/cognism/reviews","rating":4.5,"maxRating":5,"reviewCount":1322,"sourceFamily":"g2","scope":"full_platform","reliability":1,"observedAt":"2026-09-10T20:00:00Z"},
+      {"type":"snapshot-review","label":"TrustRadius","url":"https://www.trustradius.com/products/cognism","rating":8.4,"maxRating":10,"reviewCount":47,"sourceFamily":"trustradius","scope":"full_platform","reliability":0.95,"observedAt":"2026-09-10T20:00:00Z"}
+    ],
+    "lusha": [
+      {"type":"snapshot-review","label":"G2","url":"https://www.g2.com/products/lusha/reviews","rating":4.3,"maxRating":5,"reviewCount":1644,"sourceFamily":"g2","scope":"full_platform","reliability":1,"observedAt":"2026-09-10T20:00:00Z"},
+      {"type":"snapshot-review","label":"TrustRadius","url":"https://www.trustradius.com/products/lusha/reviews","rating":8.4,"maxRating":10,"reviewCount":361,"sourceFamily":"trustradius","scope":"full_platform","reliability":1,"observedAt":"2026-09-10T20:00:00Z"}
+    ],
+    "revenue-io": [
+      {"type":"snapshot-review","label":"G2","url":"https://www.g2.com/products/revenue-io/reviews","rating":4.7,"maxRating":5,"reviewCount":574,"sourceFamily":"g2","scope":"full_platform","reliability":1,"observedAt":"2026-09-10T20:00:00Z"},
+      {"type":"snapshot-review","label":"TrustRadius","url":"https://www.trustradius.com/products/revenue-io/reviews","rating":8,"maxRating":10,"reviewCount":44,"sourceFamily":"trustradius","scope":"full_platform","reliability":1,"observedAt":"2026-09-10T20:00:00Z"}
+    ],
+    "hyperbound": [{"type":"snapshot-review","label":"G2","url":"https://www.g2.com/products/hyperbound/reviews","rating":4.9,"maxRating":5,"reviewCount":39,"sourceFamily":"g2","scope":"full_platform","reliability":1,"observedAt":"2026-09-10T20:00:00Z"}],
+    "sybill": [{"type":"snapshot-review","label":"G2","url":"https://www.g2.com/products/sybill-ai/reviews","rating":4.8,"maxRating":5,"reviewCount":146,"sourceFamily":"g2","scope":"full_platform","reliability":1,"observedAt":"2026-09-10T20:00:00Z"}],
+    "balto": [
+      {"type":"snapshot-review","label":"G2","url":"https://www.g2.com/sellers/balto","rating":4.8,"maxRating":5,"reviewCount":595,"sourceFamily":"g2","scope":"full_platform","reliability":0.95,"observedAt":"2026-09-10T20:00:00Z"},
+      {"type":"snapshot-review","label":"TrustRadius","url":"https://www.trustradius.com/products/balto/reviews","rating":10,"maxRating":10,"reviewCount":4,"sourceFamily":"trustradius","scope":"full_platform","reliability":0.95,"observedAt":"2026-09-10T20:00:00Z"}
+    ],
+    "smartwinnr": [{"type":"snapshot-review","label":"G2","url":"https://www.g2.com/products/smartwinnr/reviews","rating":4.9,"maxRating":5,"reviewCount":243,"sourceFamily":"g2","scope":"full_platform","reliability":1,"observedAt":"2026-09-10T20:00:00Z"}],
+    "substrata": [{"type":"snapshot-review","label":"G2","url":"https://www.g2.com/products/substrata-substrata/reviews","rating":4.9,"maxRating":5,"reviewCount":1103,"sourceFamily":"g2","scope":"full_platform","reliability":1,"observedAt":"2026-09-10T20:00:00Z"}],
+    "warmly": [{"type":"snapshot-review","label":"G2","url":"https://www.g2.com/products/warmly-warmly/reviews","rating":4.6,"maxRating":5,"reviewCount":249,"sourceFamily":"g2","scope":"full_platform","reliability":1,"observedAt":"2026-09-10T20:00:00Z"}],
+    "salesforce": [{"type":"licensed-json","url":"https://itunes.apple.com/lookup?id=404249815&country=us","ratingPath":"results.0.averageUserRating","countPath":"results.0.userRatingCount","maxRating":5,"label":"Apple App Store mobile rating","scope":"mobile_app","sourceFamily":"apple-app-store","reliability":0.9}],
+    "attio": [{"type":"licensed-json","url":"https://itunes.apple.com/lookup?id=1511545395&country=us","ratingPath":"results.0.averageUserRating","countPath":"results.0.userRatingCount","maxRating":5,"label":"Apple App Store mobile rating","scope":"mobile_app","sourceFamily":"apple-app-store","reliability":0.9}],
+    "close-crm": [{"type":"licensed-json","url":"https://itunes.apple.com/lookup?id=1668836284&country=us","ratingPath":"results.0.averageUserRating","countPath":"results.0.userRatingCount","maxRating":5,"label":"Apple App Store mobile rating","scope":"mobile_app","sourceFamily":"apple-app-store","reliability":0.9}],
+    "folk-crm": [{"type":"licensed-json","url":"https://itunes.apple.com/lookup?id=6761423430&country=us","ratingPath":"results.0.averageUserRating","countPath":"results.0.userRatingCount","maxRating":5,"label":"Apple App Store mobile rating","scope":"mobile_app","sourceFamily":"apple-app-store","reliability":0.9}],
+    "instantly": [{"type":"licensed-json","url":"https://itunes.apple.com/lookup?id=6474658497&country=us","ratingPath":"results.0.averageUserRating","countPath":"results.0.userRatingCount","maxRating":5,"label":"Apple App Store mobile rating","scope":"mobile_app","sourceFamily":"apple-app-store","reliability":0.9}],
+    "chorus": [{"type":"licensed-json","url":"https://itunes.apple.com/lookup?id=1591442342&country=us","ratingPath":"results.0.averageUserRating","countPath":"results.0.userRatingCount","maxRating":5,"label":"Apple App Store mobile rating","scope":"mobile_app","sourceFamily":"apple-app-store","reliability":0.9}],
+    "seismic": [{"type":"licensed-json","url":"https://itunes.apple.com/lookup?id=639973703&country=us","ratingPath":"results.0.averageUserRating","countPath":"results.0.userRatingCount","maxRating":5,"label":"Apple App Store mobile rating","scope":"mobile_app","sourceFamily":"apple-app-store","reliability":0.9}],
+    "showpad": [{"type":"licensed-json","url":"https://itunes.apple.com/lookup?id=432293783&country=us","ratingPath":"results.0.averageUserRating","countPath":"results.0.userRatingCount","maxRating":5,"label":"Apple App Store mobile rating","scope":"mobile_app","sourceFamily":"apple-app-store","reliability":0.9}],
+    "cornerstone": [{"type":"licensed-json","url":"https://itunes.apple.com/lookup?id=974833832&country=us","ratingPath":"results.0.averageUserRating","countPath":"results.0.userRatingCount","maxRating":5,"label":"Apple App Store mobile rating","scope":"mobile_app","sourceFamily":"apple-app-store","reliability":0.9}],
+    "learnupon": [{"type":"licensed-json","url":"https://itunes.apple.com/lookup?id=947445473&country=us","ratingPath":"results.0.averageUserRating","countPath":"results.0.userRatingCount","maxRating":5,"label":"Apple App Store mobile rating","scope":"mobile_app","sourceFamily":"apple-app-store","reliability":0.9}],
+    "absorb": [{"type":"licensed-json","url":"https://itunes.apple.com/lookup?id=1450653475&country=us","ratingPath":"results.0.averageUserRating","countPath":"results.0.userRatingCount","maxRating":5,"label":"Apple App Store mobile rating","scope":"mobile_app","sourceFamily":"apple-app-store","reliability":0.9}],
+    "sana": [{"type":"licensed-json","url":"https://itunes.apple.com/lookup?id=1211652260&country=us","ratingPath":"results.0.averageUserRating","countPath":"results.0.userRatingCount","maxRating":5,"label":"Apple App Store mobile rating","scope":"mobile_app","sourceFamily":"apple-app-store","reliability":0.9}],
+    "n8n": [{"type":"github","repo":"n8n-io/n8n","component":"marketMomentum","label":"Official GitHub repository","scope":"reference"}]
   },
   "notes": [
-    "Restricted review sites are intentionally blocked from automated collection.",
-    "Apple App Store ratings are collected through Apple's official Search/Lookup API and are labeled as mobile-app sentiment, not whole-platform sentiment.",
-    "A mobile-app rating can produce a Provisional EZ Score, but a Live EZ Score requires additional independent evidence and the configured minimum component count.",
-    "TrustRadius API support is available in the refresh script when TRUSTRADIUS_API_KEY and per-product slugs are configured.",
-    "JSON-LD aggregateRating scraping is permitted only for explicitly configured allowlisted pages after robots.txt permits access.",
-    "Missing evidence produces Collecting data / Insufficient data, never an invented rating."
+    "Live EZ Scores require at least two independent full-platform review families, meaningful review volume, a sufficiently large second source, fresh evidence and cross-source agreement.",
+    "G2, TrustRadius and other restricted review sites are not scraped by the scheduled job. Verified snapshots are recorded with source URLs and observation dates, or licensed APIs are used when available.",
+    "Capterra, GetApp and Software Advice are deduplicated into one Gartner Digital Markets source family.",
+    "SourceForge and Slashdot are deduplicated into one source family.",
+    "Mobile and marketplace ratings are scoped and downweighted. They cannot by themselves qualify a product for a Live EZ Score.",
+    "Official vendor sources may validate capabilities, integrations, security and product maturity, but vendor evidence never counts as independent user sentiment.",
+    "Missing evidence produces Collecting or Provisional status. No filler score is generated."
   ]
 }
