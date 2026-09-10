@@ -2,12 +2,14 @@
   const RATINGS_URL='data/ai-systems-ratings.json';
   const COMPONENT_LABELS={
     userSentiment:'User rating',
-    reviewConfidence:'Review confidence',
+    reviewConfidence:'Evidence confidence',
+    sourceAgreement:'Source agreement',
+    evidenceFreshness:'Evidence freshness',
     integrationReadiness:'Integration',
     gtmFit:'AI / GTM fit',
     marketMomentum:'Momentum'
   };
-  let snapshot={items:{},summary:{total:103,live:0,provisional:0,collecting:103},generatedAt:null};
+  let snapshot={items:{},summary:{total:126,live:0,provisional:0,collecting:126},generatedAt:null};
   let sortMode='default';
 
   const safe=value=>String(value??'').replace(/[&<>'"]/g,ch=>({'&':'&amp;','<':'&lt;','>':'&gt;',"'":'&#39;','"':'&quot;'}[ch]));
@@ -23,12 +25,12 @@
     const cls=v>0?'trend-up':'trend-down';const arrow=v>0?'↑':'↓';
     return `<span class="${cls}">${arrow}${Math.abs(v).toFixed(1)}</span>`;
   };
+  const scopeLabel=scope=>({full_platform:'Full platform',suite:'Suite-level',marketplace:'Marketplace',mobile_app:'Mobile app',browser_extension:'Browser extension',reference:'Reference',vendor_evidence:'Vendor evidence'}[scope]||String(scope||'Evidence'));
 
   function statusLabel(item){
     if(!item||item.status==='collecting') return 'Collecting';
     return item.status==='live'?'Live':'Provisional';
   }
-
   function chipMarkup(item){
     if(!item||item.status==='collecting'||num(item.score)===null){
       return `<span class="ez-score-chip is-collecting"><strong>—</strong><span>EZ SCORE · COLLECTING</span></span>`;
@@ -44,21 +46,34 @@
       let row=card.querySelector('.platform-score-row');
       if(!row){row=document.createElement('div');row.className='platform-score-row';card.querySelector('.platform-copy')?.appendChild(row);}
       const confidence=num(item?.confidence);
-      row.innerHTML=`${chipMarkup(item)}${confidence===null?'':`<span class="ez-score-confidence">${confidence.toFixed(1)}/10 confidence · ${Number(item.reviewCount||0).toLocaleString()} reviews</span>`}`;
+      const reviewRecords=Number(item?.fullPlatformReviewCount||0);
+      const sourceCount=Number(item?.fullPlatformSourceCount||0);
+      row.innerHTML=`${chipMarkup(item)}${confidence===null?'':`<span class="ez-score-confidence">${confidence.toFixed(1)}/10 evidence · ${reviewRecords.toLocaleString()} full-platform reviews · ${sourceCount} independent sources</span>`}`;
     });
   }
 
   function componentMarkup(item){
     return Object.entries(COMPONENT_LABELS).map(([key,label])=>{
       const value=num(item?.components?.[key]);
+      if(value===null && ['integrationReadiness','gtmFit','marketMomentum'].includes(key)) return '';
       return `<div class="ez-score-component"><label>${safe(label)}</label><div class="ez-score-bar"><span style="width:${value===null?0:Math.max(0,Math.min(100,value*10))}%"></span></div><b>${value===null?'—':value.toFixed(1)}</b></div>`;
     }).join('');
   }
 
   function sourceMarkup(item){
-    const sources=Array.isArray(item?.sources)?item.sources:[];
-    if(!sources.length) return '<span>No approved external source has produced a rating signal yet.</span>';
-    return sources.map(source=>source.url?`<a href="${safe(source.url)}" target="_blank" rel="noopener noreferrer">${safe(source.label)}</a>`:`<span>${safe(source.label)}</span>`).join('');
+    const sources=Array.isArray(item?.sources)?item.sources.filter(source=>source.component==='userSentiment'):[];
+    if(!sources.length) return '<span>No attributable review source has produced a rating signal yet.</span>';
+    return sources.map(source=>{
+      const meta=[scopeLabel(source.scope),`${Number(source.reviewCount||0).toLocaleString()} reviews`].filter(Boolean).join(' · ');
+      const content=`${safe(source.label)}<small>${safe(meta)}</small>`;
+      return source.url?`<a href="${safe(source.url)}" target="_blank" rel="noopener noreferrer">${content}</a>`:`<span>${content}</span>`;
+    }).join('');
+  }
+
+  function qualificationMarkup(item){
+    if(item?.status==='live') return '<strong>Live score</strong><span>Validated by multiple independent full-platform review families with sufficient volume, freshness and source agreement.</span>';
+    if(item?.status==='provisional') return '<strong>Provisional score</strong><span>Valid review evidence exists, but it has not yet cleared every Live threshold for independent-source depth, volume, freshness or agreement.</span>';
+    return '<strong>Collecting evidence</strong><span>There is not enough valid independent review evidence to publish a score yet.</span>';
   }
 
   function renderDialogScore(id){
@@ -68,12 +83,12 @@
     const item=scoreFor(id);
     if(!item||item.status==='collecting'||num(item.score)===null){
       const empty=document.createElement('div');empty.className='ez-score-empty';
-      empty.innerHTML='<strong>Live EZ Score is collecting evidence.</strong><br>The rating engine will publish a 0–10 score only after enough permitted, attributable signals are available. No filler score is generated.';
+      empty.innerHTML='<strong>EZ Score is collecting evidence.</strong><br>The engine will not publish a number until attributable review data is available. Missing evidence is never replaced with a filler score.';
       anchor.insertAdjacentElement('afterend',empty);return;
     }
     const panel=document.createElement('section');panel.className='ez-score-dialog';
     const confidence=num(item.confidence);
-    panel.innerHTML=`<div class="ez-score-dialog-head"><div class="ez-score-dialog-number"><strong>${Number(item.score).toFixed(1)}</strong><span>EZ SCORE / 10</span></div><div class="ez-score-dialog-summary"><strong>${Number(item.reviewCount||0).toLocaleString()} reviews · ${Number(item.sourceCount||0)} sources</strong><span>Composite score combines permitted user sentiment, evidence confidence, integration readiness, AI/GTM fit and market momentum. Missing components are not invented.</span></div><span class="ez-score-dialog-status is-${safe(item.status)}">${safe(statusLabel(item))}${confidence===null?'':` · ${confidence.toFixed(1)} confidence`}</span></div><div class="ez-score-components">${componentMarkup(item)}</div><div class="ez-score-sources"><strong>Source provenance</strong><div class="ez-score-source-list">${sourceMarkup(item)}</div><div class="ez-score-freshness">${safe(prettyDate(item.lastRefreshed||snapshot.generatedAt))}${num(item.trend)===null?'':` · Trend ${item.trend>0?'+':''}${Number(item.trend).toFixed(1)}`}</div></div>`;
+    panel.innerHTML=`<div class="ez-score-dialog-head"><div class="ez-score-dialog-number"><strong>${Number(item.score).toFixed(1)}</strong><span>EZ SCORE / 10</span></div><div class="ez-score-dialog-summary"><strong>${Number(item.fullPlatformReviewCount||0).toLocaleString()} full-platform review records · ${Number(item.fullPlatformSourceCount||0)} independent full-platform sources</strong><span>Review sentiment is deduplicated by source family, adjusted for evidence scope and reliability, then checked for volume, freshness and cross-source agreement. Mobile and marketplace signals are downweighted.</span></div><span class="ez-score-dialog-status is-${safe(item.status)}">${safe(statusLabel(item))}${confidence===null?'':` · ${confidence.toFixed(1)} evidence`}</span></div><div class="ez-score-qualification">${qualificationMarkup(item)}</div><div class="ez-score-components">${componentMarkup(item)}</div><div class="ez-score-sources"><strong>Review source provenance</strong><div class="ez-score-source-list">${sourceMarkup(item)}</div><div class="ez-score-freshness">${safe(prettyDate(item.lastRefreshed||snapshot.generatedAt))}${num(item.trend)===null?'':` · Trend ${item.trend>0?'+':''}${Number(item.trend).toFixed(1)}`}</div></div>`;
     anchor.insertAdjacentElement('afterend',panel);
   }
 
@@ -104,7 +119,7 @@
   function installSort(){
     const controls=document.querySelector('.library-controls');if(!controls||controls.querySelector('.ez-score-sort'))return;
     const wrap=document.createElement('div');wrap.className='ez-score-sort';
-    wrap.innerHTML='<label for="ez-score-sort">Sort</label><select id="ez-score-sort"><option value="default">Library order</option><option value="score">Highest EZ Score</option><option value="trending">Fastest rising</option><option value="confidence">Highest confidence</option></select>';
+    wrap.innerHTML='<label for="ez-score-sort">Sort</label><select id="ez-score-sort"><option value="default">Library order</option><option value="score">Highest EZ Score</option><option value="trending">Fastest rising</option><option value="confidence">Strongest evidence</option></select>';
     controls.appendChild(wrap);
     wrap.querySelector('select').addEventListener('change',event=>{sortMode=event.target.value;sortPlatforms();if(typeof renderPlatforms==='function')renderPlatforms();decorateCards();});
   }
@@ -113,14 +128,15 @@
     const status=document.querySelector('.library-status');if(!status||document.querySelector('.ez-score-explainer'))return;
     const summary=snapshot.summary||{};
     const box=document.createElement('div');box.className='ez-score-explainer';
-    box.innerHTML=`<div class="ez-score-explainer-badge"><strong>0–10</strong><span>EZ SCORE</span></div><div class="ez-score-explainer-copy"><strong>Live technology intelligence, not a paid-placement ranking.</strong><span>Scores use permitted sources, evidence confidence, connector readiness and category-aware GTM fit. Restricted review sites are never scraped.</span></div><div class="ez-score-explainer-meta" id="ez-score-meta">${Number(summary.live||0)} live · ${Number(summary.provisional||0)} provisional · ${Number(summary.collecting||103)} collecting<br>${safe(prettyDate(snapshot.generatedAt))}</div>`;
+    box.innerHTML=`<div class="ez-score-explainer-badge"><strong>0–10</strong><span>EZ SCORE</span></div><div class="ez-score-explainer-copy"><strong>Evidence-based technology intelligence, not paid placement.</strong><span>Live scores require multiple independent full-platform review families, meaningful volume, fresh evidence and cross-source agreement. Related review networks are deduplicated. Mobile and marketplace ratings are downweighted.</span></div><div class="ez-score-explainer-meta" id="ez-score-meta">${Number(summary.live||0)} live · ${Number(summary.provisional||0)} provisional · ${Number(summary.collecting||126)} collecting<br>${safe(prettyDate(snapshot.generatedAt))}</div>`;
     status.insertAdjacentElement('afterend',box);
   }
 
   function refreshMeta(){
     const meta=document.querySelector('#ez-score-meta');if(!meta)return;
     const summary=snapshot.summary||{};
-    meta.innerHTML=`${Number(summary.live||0)} live · ${Number(summary.provisional||0)} provisional · ${Number(summary.collecting||103)} collecting<br>${safe(prettyDate(snapshot.generatedAt))}`;
+    const records=Number(summary.fullPlatformReviewRecords||0);
+    meta.innerHTML=`${Number(summary.live||0)} live · ${Number(summary.provisional||0)} provisional · ${Number(summary.collecting||126)} collecting${records?`<br>${records.toLocaleString()} full-platform review records`:''}<br>${safe(prettyDate(snapshot.generatedAt))}`;
   }
 
   function hookDialog(){
