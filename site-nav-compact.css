@@ -43,10 +43,10 @@ body.ez-nav-open{overflow:hidden!important}
   position:fixed;z-index:10001;right:10px;top:10px;bottom:10px;width:min(360px,calc(100vw - 20px));display:flex;flex-direction:column;overflow:hidden;border:1px solid rgba(255,255,255,.14);border-radius:18px;background:#0c0d10;color:#fff;box-shadow:0 28px 90px rgba(0,0,0,.42);transform:translateX(calc(100% + 24px));opacity:0;visibility:hidden;transition:transform .22s ease,opacity .18s ease,visibility .22s ease
 }
 .ez-compact-nav.is-open .ez-nav-scrim{opacity:1;visibility:visible;pointer-events:auto}
-.ez-compact-nav.is-open .ez-nav-drawer{transform:none;opacity:1;visibility:visible}
-.ez-drawer-head{display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:20px 18px 15px;border-bottom:1px solid rgba(255,255,255,.1)}
+.ez-compact-nav.is-open .ez-nav-drawer{transform:none;opacity:1;visibility:visible;pointer-events:auto}
+.ez-drawer-head{position:relative;z-index:2;display:flex;align-items:flex-start;justify-content:space-between;gap:16px;padding:20px 18px 15px;border-bottom:1px solid rgba(255,255,255,.1)}
 .ez-drawer-head>div{display:grid;gap:5px}.ez-drawer-head small{color:#ef6169;font-size:9px;font-weight:900;letter-spacing:.14em}.ez-drawer-head strong{font-size:18px;line-height:1.15}
-.ez-drawer-close{display:grid;place-items:center;flex:0 0 36px;width:36px;height:36px;border:1px solid rgba(255,255,255,.16);border-radius:10px;background:#15171b;color:#fff;font-size:23px;cursor:pointer}
+.ez-drawer-close{position:relative;z-index:5;display:grid;place-items:center;flex:0 0 36px;width:36px;height:36px;border:1px solid rgba(255,255,255,.16);border-radius:10px;background:#15171b;color:#fff;font-size:23px;cursor:pointer;pointer-events:auto!important;touch-action:manipulation;user-select:none;-webkit-user-select:none}
 .ez-drawer-close:hover{background:#24272d}
 .ez-drawer-nav{flex:1;overflow:auto;padding:10px 10px 4px;overscroll-behavior:contain}
 .ez-drawer-group{display:grid;gap:3px;padding:9px 0 12px;border-bottom:1px solid rgba(255,255,255,.08)}
