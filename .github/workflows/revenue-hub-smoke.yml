@@ -7,6 +7,7 @@ on:
       - 'revenue-performance.js'
       - 'revenue-performance-v2.js'
       - 'revenue-performance-v3.js'
+      - 'revenue-performance-v4.js'
       - 'revenue-performance.css'
       - 'revenue-performance-v2.css'
       - 'revenue-performance-v3.css'
@@ -23,6 +24,7 @@ jobs:
           node --check revenue-performance.js
           node --check revenue-performance-v2.js
           node --check revenue-performance-v3.js
+          node --check revenue-performance-v4.js
       - name: Required page assets
         run: |
           test -f revenue-performance.html
@@ -30,10 +32,12 @@ jobs:
           test -f revenue-performance-v2.css
           test -f revenue-performance-v3.css
           test -f revenue-performance-v3.js
+          test -f revenue-performance-v4.js
           grep -q 'revenue-performance-v3.css' revenue-performance.html
           grep -q 'revenue-performance-v3.js' revenue-performance.html
           grep -q 'Revenue Professional' revenue-performance-v3.js
           grep -q 'Page guide' revenue-performance-v3.js
+          grep -q 'revenue-performance-v4.js' revenue-performance-v3.js
           grep -q 'ChatGPT' revenue-performance-v2.js
           grep -q 'Claude' revenue-performance-v2.js
           grep -q 'Gemini' revenue-performance-v2.js
