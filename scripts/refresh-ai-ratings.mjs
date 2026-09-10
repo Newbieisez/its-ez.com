@@ -2,7 +2,7 @@ import fs from 'node:fs/promises';
 import path from 'node:path';
 
 const ROOT=process.cwd();
-const SOURCE_FILES=['ai-systems.js','ai-systems-extended.js'];
+const SOURCE_FILES=['ai-systems.js','ai-systems-extended.js','ai-systems-categories.js'];
 const CONFIG_PATH=path.join(ROOT,'data','ai-rating-sources.json');
 const OUTPUT_PATH=path.join(ROOT,'data','ai-systems-ratings.json');
 const HISTORY_PATH=path.join(ROOT,'data','ai-systems-rating-history.json');
@@ -252,7 +252,7 @@ function scoreItem(product,signals,config,history){
 
 async function main(){
   const [products,config,history]=await Promise.all([catalog(),readJson(CONFIG_PATH,{}),readJson(HISTORY_PATH,{schemaVersion:1,items:{}})]);
-  if(products.length!==103) throw new Error(`Expected 103 AI Systems Library platforms; found ${products.length}.`);
+  if(products.length!==104) throw new Error(`Expected 104 AI Systems Library platforms; found ${products.length}.`);
   const output={schemaVersion:1,generatedAt:nowIso(),refreshHours:Number(config.policy?.refreshHours||6),items:{}};
   const failures=[];
   for(const product of products){
