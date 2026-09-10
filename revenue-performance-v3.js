@@ -19,18 +19,6 @@ function ready(fn){
   else setTimeout(fn,120);
 }
 
-function installHeroGuard(){
-  if($('#rp3-hero-guard')) return;
-  const style=document.createElement('style');
-  style.id='rp3-hero-guard';
-  style.textContent=`
-    body.ez-revenue-hub .rp-hero h1 em.rp-hero-roleline{font-size:clamp(2.7rem,3.6vw,4rem)!important}
-    @media(max-width:1120px){body.ez-revenue-hub .rp-hero h1 em.rp-hero-roleline{font-size:clamp(2.6rem,6.2vw,4.4rem)!important}}
-    @media(max-width:700px){body.ez-revenue-hub .rp-hero h1 em.rp-hero-roleline{font-size:clamp(2.15rem,10.2vw,3.7rem)!important;white-space:normal!important}}
-  `;
-  document.head.appendChild(style);
-}
-
 function looksLikeLegacyPageMap(el){
   if(!el || el.nodeType!==1 || el.classList?.contains('rp3-page-nav')) return false;
   const text=(el.textContent||'').toUpperCase().replace(/\s+/g,' ');
@@ -83,7 +71,12 @@ function installPageGuide(){
   document.addEventListener('keydown',e=>{if(e.key==='Escape'&&nav.classList.contains('is-open')){setOpen(false);toggle.focus()}});
 
   const links=new Map($$('.rp3-page-nav-panel a',nav).map(a=>[a.dataset.rp3Target,a]));
-  const activate=id=>links.forEach((a,key)=>a.classList.toggle('is-active',key===id));
+  const activate=id=>links.forEach((a,key)=>{
+    const active=key===id;
+    a.classList.toggle('is-active',active);
+    if(active)a.setAttribute('aria-current','location');
+    else a.removeAttribute('aria-current');
+  });
   if('IntersectionObserver' in window){
     const observer=new IntersectionObserver(entries=>{
       const visible=entries.filter(e=>e.isIntersecting).sort((a,b)=>b.intersectionRatio-a.intersectionRatio)[0];
@@ -122,7 +115,6 @@ function loadInteractionRepair(){
 function init(){
   if(!document.body.classList.contains('ez-revenue-hub')) return;
   fixHeroLabel();
-  installHeroGuard();
   suppressLegacyNavigation();
   installPageGuide();
   keepLegacyMapsSuppressed();
