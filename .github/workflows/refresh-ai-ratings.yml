@@ -10,6 +10,7 @@ on:
       - 'ai-systems.js'
       - 'ai-systems-extended.js'
       - 'ai-systems-categories.js'
+      - 'ai-systems-platform-links.js'
       - 'ai-systems-ratings.js'
       - 'ai-systems-ratings.css'
       - 'scripts/refresh-ai-ratings.mjs'
@@ -20,6 +21,7 @@ on:
       - 'ai-systems.js'
       - 'ai-systems-extended.js'
       - 'ai-systems-categories.js'
+      - 'ai-systems-platform-links.js'
       - 'ai-systems-ratings.js'
       - 'ai-systems-ratings.css'
       - 'scripts/refresh-ai-ratings.mjs'
@@ -48,8 +50,12 @@ jobs:
         with:
           node-version: '22'
 
-      - name: Syntax check browser ratings code
-        run: node --check ai-systems-ratings.js
+      - name: Syntax check AI Systems browser code
+        run: |
+          node --check ai-systems-ratings.js
+          node --check ai-systems-categories.js
+          node --check ai-systems-platform-links.js
+          node --check scripts/refresh-ai-ratings.mjs
 
       - name: Refresh scores
         env:
@@ -59,7 +65,7 @@ jobs:
 
       - name: Validate output
         run: |
-          node -e "const x=require('./data/ai-systems-ratings.json'); if(x.summary.total!==104) throw new Error('ratings inventory must contain 104 platforms'); if(Object.keys(x.items).length!==104) throw new Error('ratings output must contain 104 item records'); console.log(x.summary)"
+          node -e "const x=require('./data/ai-systems-ratings.json'); if(x.summary.total!==126) throw new Error('ratings inventory must contain 126 platforms'); if(Object.keys(x.items).length!==126) throw new Error('ratings output must contain 126 item records'); if(x.methodologyVersion!=='2.0') throw new Error('EZ Score methodology must be v2.0'); console.log(x.summary)"
 
       - name: Commit changed snapshots
         if: github.event_name != 'pull_request'
@@ -74,9 +80,6 @@ jobs:
           git add data/ai-systems-ratings.json data/ai-systems-rating-history.json
           git commit -m 'chore: refresh AI Systems EZ Scores'
 
-          # The public site has independent workflows that may update main while
-          # ratings are being calculated. Rebase the generated snapshot commit
-          # onto the newest main and retry rather than losing a valid refresh.
           for attempt in 1 2 3; do
             echo "Publish attempt ${attempt}/3"
             git fetch origin main
