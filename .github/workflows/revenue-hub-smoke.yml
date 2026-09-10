@@ -42,3 +42,21 @@ jobs:
           grep -q 'Claude' revenue-performance-v2.js
           grep -q 'Gemini' revenue-performance-v2.js
           grep -q 'Copilot' revenue-performance-v2.js
+      - name: Consolidated v2 architecture
+        run: |
+          grep -q 'function buildPromptContext' revenue-performance-v2.js
+          grep -q "ctx.kind==='role'" revenue-performance-v2.js
+          grep -q 'function formatPrompt' revenue-performance-v2.js
+          grep -q 'function buildMetricGuidance' revenue-performance-v2.js
+          grep -q 'function wireKpiInteractions' revenue-performance-v2.js
+          grep -q "grid.addEventListener('click'" revenue-performance-v2.js
+          grep -q 'data-rp2-action="analyze"' revenue-performance-v2.js
+          grep -q 'data-rp2-action="guidance"' revenue-performance-v2.js
+          grep -q '.rp2-metric-guidance' revenue-performance-v2.css
+          grep -q '.rp2-guidance-grid' revenue-performance-v2.css
+          ! grep -q "function task(" revenue-performance-v2.js
+          ! grep -q "createElement('style')" revenue-performance-v2.js
+          ! grep -q 'MutationObserver' revenue-performance-v2.js
+          ! grep -q 'stopImmediatePropagation' revenue-performance-v2.js
+          ! grep -q "document.addEventListener('click'" revenue-performance-v2.js
+          ! grep -q "document.addEventListener('keydown'" revenue-performance-v2.js
