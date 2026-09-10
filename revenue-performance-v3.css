@@ -75,7 +75,7 @@ body.ez-revenue-hub .rp-hero h1 em.rp-hero-roleline{
   padding:0 0 .06em!important;
   white-space:nowrap!important;
   overflow:visible!important;
-  font-size:clamp(2.7rem,4vw,4.8rem)!important;
+  font-size:clamp(2.7rem,3.6vw,4rem)!important;
   line-height:1!important;
   letter-spacing:-.048em!important;
 }
@@ -85,7 +85,7 @@ body.ez-revenue-hub .rp-lede{max-width:720px!important;font-size:clamp(1.05rem,1
   body.ez-revenue-hub .rp-hero-grid{grid-template-columns:1fr!important;gap:32px!important}
   body.ez-revenue-hub .rp-hero-copy{max-width:920px!important}
   body.ez-revenue-hub .rp-hero-system{justify-self:start!important;max-width:720px!important}
-  body.ez-revenue-hub .rp-hero h1 em.rp-hero-roleline{font-size:clamp(2.6rem,7.2vw,4.9rem)!important}
+  body.ez-revenue-hub .rp-hero h1 em.rp-hero-roleline{font-size:clamp(2.6rem,6.2vw,4.4rem)!important}
 }
 @media(max-width:700px){
   body.ez-revenue-hub .rp-wrap,
@@ -165,6 +165,13 @@ body.ez-revenue-hub .rp-learning-priority span,
 body.ez-revenue-hub .rp2-extra b{
   color:var(--rp3-text)!important;
 }
+body.ez-revenue-hub[data-rp-theme="dark"] .rp-role-card:not(.is-active) small,
+body.ez-revenue-hub[data-rp-theme="dark"] .rp-kpi-card small,
+body.ez-revenue-hub[data-rp-theme="dark"] .rp-program-card small,
+body.ez-revenue-hub[data-rp-theme="dark"] .rp-resource-card small,
+body.ez-revenue-hub[data-rp-theme="dark"] .rp-cadence-grid article small{
+  color:var(--rp3-muted)!important;
+}
 body.ez-revenue-hub .rp-diagnostic-card:hover p,
 body.ez-revenue-hub .rp-diagnostic-card:hover p b,
 body.ez-revenue-hub .rp-diagnostic-card:hover .rp-next,
@@ -204,6 +211,29 @@ body.ez-revenue-hub .rp-diagnostic-shortcuts button.is-active{
 }
 body.ez-revenue-hub input::placeholder{color:var(--rp3-soft)!important;opacity:1!important}
 
+/* secondary interactions stay visible in every theme */
+body.ez-revenue-hub .rp2-learn-more:hover,
+body.ez-revenue-hub .rp2-show-more:hover,
+body.ez-revenue-hub .rp2-collapse-toggle:hover,
+body.ez-revenue-hub .rp2-secondary:hover{
+  background:var(--rp3-red)!important;
+  color:#fff!important;
+  border-color:var(--rp3-red)!important;
+}
+body.ez-revenue-hub .rp-role-card:focus-visible,
+body.ez-revenue-hub .rp-button:focus-visible,
+body.ez-revenue-hub .rp2-ai-button:focus-visible,
+body.ez-revenue-hub .rp2-learn-more:focus-visible,
+body.ez-revenue-hub .rp2-show-more:focus-visible,
+body.ez-revenue-hub .rp2-collapse-toggle:focus-visible,
+body.ez-revenue-hub .rp2-theme-toggle:focus-visible,
+body.ez-revenue-hub .rp3-page-nav-toggle:focus-visible,
+body.ez-revenue-hub .rp3-page-nav-close:focus-visible,
+body.ez-revenue-hub .rp3-page-nav-panel a:focus-visible{
+  outline:3px solid var(--rp3-red)!important;
+  outline-offset:3px!important;
+}
+
 /* permanent-dark learning sections keep their own readable palette */
 body.ez-revenue-hub .rp-section-dark{background:#0c0d10!important;color:#f7f7f8!important}
 body.ez-revenue-hub .rp-section-dark h2,
@@ -223,7 +253,7 @@ body.ez-revenue-hub .rp3-legacy-nav-hidden{display:none!important;visibility:hid
 .rp3-page-nav{position:fixed;right:18px;top:50%;z-index:9984;transform:translateY(-50%);font-family:Arial,Helvetica,sans-serif;color:var(--rp3-nav-text)}
 .rp3-page-nav-toggle{display:flex;align-items:center;gap:9px;min-height:44px;padding:0 14px;border:1px solid #343841;border-radius:999px;background:var(--rp3-nav);color:var(--rp3-nav-text);box-shadow:0 14px 36px rgba(0,0,0,.28);font:900 11px/1 Arial,sans-serif;letter-spacing:.07em;text-transform:uppercase;cursor:pointer}
 .rp3-page-nav-toggle .rp3-nav-icon{font-size:17px;color:var(--rp3-red)}
-.rp3-page-nav-panel{display:none;position:absolute;right:0;top:54px;width:230px;padding:10px;border:1px solid #30343c;border-radius:16px;background:#0b0c0f;box-shadow:0 24px 60px rgba(0,0,0,.45)}
+.rp3-page-nav-panel{display:none;position:absolute;right:56px;top:50%;transform:translateY(-50%);width:230px;max-height:min(70vh,520px);overflow:auto;padding:10px;border:1px solid #30343c;border-radius:16px;background:#0b0c0f;box-shadow:0 24px 60px rgba(0,0,0,.45)}
 .rp3-page-nav.is-open .rp3-page-nav-panel{display:grid;gap:3px}
 .rp3-page-nav-panel a{display:flex;align-items:center;min-height:40px;padding:0 12px;border-radius:9px;color:#b9bdc5!important;text-decoration:none!important;font-size:11px;font-weight:900;letter-spacing:.06em;text-transform:uppercase}
 .rp3-page-nav-panel a:hover,.rp3-page-nav-panel a.is-active{background:#1d2026;color:#fff!important}
@@ -232,7 +262,7 @@ body.ez-revenue-hub .rp3-legacy-nav-hidden{display:none!important;visibility:hid
 .rp3-page-nav-close span{color:var(--rp3-red);font-size:17px}
 @media(max-width:1180px){
   .rp3-page-nav{right:auto;left:14px;top:auto;bottom:14px;transform:none}
-  .rp3-page-nav-panel{left:0;right:auto;top:auto;bottom:54px;width:min(250px,calc(100vw - 28px));max-height:65vh;overflow:auto}
+  .rp3-page-nav-panel{left:0;right:auto;top:auto;bottom:54px;transform:none;width:min(250px,calc(100vw - 28px));max-height:65vh;overflow:auto}
   body.ez-revenue-hub .rp2-theme-toggle{right:14px!important;bottom:14px!important}
 }
 
