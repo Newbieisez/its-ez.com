@@ -1,0 +1,48 @@
+name: Site UI Smoke Check
+
+on:
+  push:
+    branches:
+      - site-ui-navigation-theme-pass
+    paths:
+      - 'global-nav.js'
+      - 'site-ui-2026.css'
+      - 'responsive-2026.css'
+      - 'index.html'
+      - 'work-with-me.html'
+      - 'ai-systems.html'
+      - 'revenue-performance.html'
+      - 'music.html'
+      - 'recommendations.html'
+      - '404.html'
+      - '.github/workflows/site-ui-smoke.yml'
+  workflow_dispatch:
+
+jobs:
+  smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: JavaScript syntax
+        run: node --check global-nav.js
+      - name: Shared UI assets
+        run: |
+          test -f site-ui-2026.css
+          test -f responsive-2026.css
+          grep -q 'site-ui-2026.css' global-nav.js
+          grep -q 'ez-site-theme' global-nav.js
+          grep -q 'ez-theme-toggle' global-nav.js
+          grep -q 'data-ez-theme' site-ui-2026.css
+          grep -q 'ez-global-menu' site-ui-2026.css
+          grep -q 'ez-page-map' site-ui-2026.css
+      - name: Public page coverage
+        run: |
+          for f in index.html work-with-me.html ai-systems.html revenue-performance.html music.html recommendations.html 404.html; do
+            test -f "$f"
+            grep -q 'global-nav.js' "$f"
+          done
+      - name: Publishing guardrails
+        run: |
+          test "$(tr -d '\r\n' < CNAME)" = 'its-ez.com'
+          test -f .nojekyll
+          test -f index.html
