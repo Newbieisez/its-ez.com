@@ -1,6 +1,13 @@
 (() => {
   if (typeof platforms === 'undefined' || typeof renderPlatforms !== 'function') return;
 
+  // Strama.AI — added to the AI Systems Library as a revenue/outbound orchestration platform.
+  // Keep the public description grounded in Strama's current product: discover, qualify,
+  // multichannel engage and follow-up, with signal monitoring and AI-assisted outreach.
+  if (typeof makePlatform === 'function' && !platforms.some(p => p.id === 'strama-ai' || String(p.name).toLowerCase() === 'strama.ai')) {
+    platforms.push(makePlatform('strama-ai','STR','Strama.AI','AI Sales Outreach + SDR Orchestration System','AI sales outreach platform spanning lead sourcing, qualification, signal monitoring, multichannel engagement and follow-up in a team’s own voice.',['revenue','research','automation','revops'],['Discover','Qualify','Engage','Follow up','Measure'],'revops'));
+  }
+
   const library = document.querySelector('#library');
   const platformGridEl = document.querySelector('#platform-grid');
   const libraryHead = document.querySelector('.library-head');
