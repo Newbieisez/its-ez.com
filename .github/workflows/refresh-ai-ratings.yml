@@ -9,6 +9,7 @@ on:
     paths:
       - 'ai-systems.js'
       - 'ai-systems-extended.js'
+      - 'ai-systems-categories.js'
       - 'ai-systems-ratings.js'
       - 'ai-systems-ratings.css'
       - 'scripts/refresh-ai-ratings.mjs'
@@ -18,6 +19,7 @@ on:
     paths:
       - 'ai-systems.js'
       - 'ai-systems-extended.js'
+      - 'ai-systems-categories.js'
       - 'ai-systems-ratings.js'
       - 'ai-systems-ratings.css'
       - 'scripts/refresh-ai-ratings.mjs'
@@ -57,7 +59,7 @@ jobs:
 
       - name: Validate output
         run: |
-          node -e "const x=require('./data/ai-systems-ratings.json'); if(x.summary.total!==103) throw new Error('ratings inventory must contain 103 platforms'); if(Object.keys(x.items).length!==103) throw new Error('ratings output must contain 103 item records'); console.log(x.summary)"
+          node -e "const x=require('./data/ai-systems-ratings.json'); if(x.summary.total!==104) throw new Error('ratings inventory must contain 104 platforms'); if(Object.keys(x.items).length!==104) throw new Error('ratings output must contain 104 item records'); console.log(x.summary)"
 
       - name: Commit changed snapshots
         if: github.event_name != 'pull_request'
