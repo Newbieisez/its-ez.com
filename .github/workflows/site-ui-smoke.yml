@@ -7,6 +7,7 @@ on:
     paths:
       - 'global-nav.js'
       - 'site-ui-2026.css'
+      - 'music-fallback-2026.css'
       - 'responsive-2026.css'
       - 'index.html'
       - 'work-with-me.html'
@@ -28,13 +29,16 @@ jobs:
       - name: Shared UI assets
         run: |
           test -f site-ui-2026.css
+          test -f music-fallback-2026.css
           test -f responsive-2026.css
           grep -q 'site-ui-2026.css' global-nav.js
+          grep -q 'music-fallback-2026.css' global-nav.js
           grep -q 'ez-site-theme' global-nav.js
           grep -q 'ez-theme-toggle' global-nav.js
           grep -q 'data-ez-theme' site-ui-2026.css
           grep -q 'ez-global-menu' site-ui-2026.css
           grep -q 'ez-page-map' site-ui-2026.css
+          grep -q 'raw\\.githack\\.com' global-nav.js
       - name: Public page coverage
         run: |
           for f in index.html work-with-me.html ai-systems.html revenue-performance.html music.html recommendations.html 404.html; do
