@@ -1,22 +1,27 @@
 (() => {
   'use strict';
 
-  const VERSION = '20260910-site-ui-1';
+  const VERSION = '20260910-site-ui-2';
   const ROOT = 'https://its-ez.com/';
-  const ASSET_VERSION = '20260910-site-ui-1';
+  const ASSET_VERSION = '20260910-site-ui-2';
   const THEME_KEY = 'ez-site-theme';
+  const scriptSrc = document.currentScript?.src || `${ROOT}global-nav.js`;
+  const ASSET_ROOT = new URL('./', scriptSrc).href;
+  const previewHost = /(^|\.)raw\.githack\.com$/i.test(location.hostname);
+  const SITE_ROOT = previewHost ? ASSET_ROOT : ROOT;
+  const assetUrl = path => new URL(path, ASSET_ROOT).href;
 
   const navItems = [
-    ['Home', ROOT],
-    ['Work', ROOT + '#work'],
-    ['Services', ROOT + 'work-with-me.html'],
-    ['Revenue Hub', ROOT + 'revenue-performance.html'],
-    ['AI Systems', ROOT + 'ai-systems.html'],
+    ['Home', SITE_ROOT],
+    ['Work', SITE_ROOT + '#work'],
+    ['Services', SITE_ROOT + 'work-with-me.html'],
+    ['Revenue Hub', SITE_ROOT + 'revenue-performance.html'],
+    ['AI Systems', SITE_ROOT + 'ai-systems.html'],
     ['MEDDPICC', 'https://meddpicc-is-ez.erezhaimowicz.workers.dev/'],
     ['Cybersecurity', 'https://ez-human-threat-academy.erezhaimowicz.workers.dev/'],
-    ['Music', ROOT + 'music.html'],
-    ['Recommendations', ROOT + 'recommendations.html'],
-    ['Contact', ROOT + '#contact']
+    ['Music', SITE_ROOT + 'music.html'],
+    ['Recommendations', SITE_ROOT + 'recommendations.html'],
+    ['Contact', SITE_ROOT + '#contact']
   ];
 
   function defaultTheme() {
@@ -31,10 +36,27 @@
   document.documentElement.dataset.ezTheme = theme;
   document.documentElement.style.colorScheme = theme;
 
+  function ensureStylesheet(key, href) {
+    if (document.querySelector(`link[data-${key}]`)) return;
+    const link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.href = href;
+    link.setAttribute(`data-${key}`, 'true');
+    document.head.appendChild(link);
+  }
+
+  function addStyles() {
+    ensureStylesheet('ez-responsive', assetUrl('responsive-2026.css?v=20260908-responsive-audit-1'));
+    ensureStylesheet('ez-site-ui', assetUrl(`site-ui-2026.css?v=${ASSET_VERSION}`));
+  }
+
   function markPage() {
     const host = location.hostname.toLowerCase();
     const path = location.pathname.toLowerCase();
-    if ((host === 'its-ez.com' || host === 'www.its-ez.com') && (path === '/' || path === '/index.html')) document.body.classList.add('ez-homepage');
+    const ezHost = host === 'its-ez.com' || host === 'www.its-ez.com';
+    const previewHome = previewHost && path.endsWith('/index.html');
+
+    if ((ezHost && (path === '/' || path === '/index.html')) || previewHome) document.body.classList.add('ez-homepage');
     if (path.endsWith('/ai-systems.html') || path.endsWith('/ai-systems')) document.body.classList.add('ez-ai-systems');
     if (path.endsWith('/revenue-performance.html') || path.endsWith('/revenue-performance')) document.body.classList.add('ez-revenue-hub');
     if (path.endsWith('/music.html') || path.endsWith('/music')) document.body.classList.add('ez-music');
@@ -42,23 +64,6 @@
     if (path.endsWith('/work-with-me.html') || path.endsWith('/work-with-me')) document.body.classList.add('ez-work-with-me');
     if (host.includes('meddpicc-is-ez') || host === 'meddpicc.its-ez.com') document.body.classList.add('ez-meddpicc');
     if (host.includes('ez-human-threat-academy')) document.body.classList.add('ez-cybersecurity');
-  }
-
-  function addStyles() {
-    if (!document.querySelector('link[data-ez-responsive]')) {
-      const link = document.createElement('link');
-      link.rel = 'stylesheet';
-      link.href = ROOT + 'responsive-2026.css?v=20260908-responsive-audit-1';
-      link.dataset.ezResponsive = 'true';
-      document.head.appendChild(link);
-    }
-    if (!document.querySelector('link[data-ez-site-ui]')) {
-      const link = document.createElement('link');
-      link.rel = 'stylesheet';
-      link.href = ROOT + `site-ui-2026.css?v=${ASSET_VERSION}`;
-      link.dataset.ezSiteUi = 'true';
-      document.head.appendChild(link);
-    }
   }
 
   function syncPageTheme(next) {
@@ -97,14 +102,18 @@
   function currentFor(label, href) {
     const host = location.hostname.toLowerCase();
     const path = location.pathname.toLowerCase();
+    const localSite = host === 'its-ez.com' || host === 'www.its-ez.com' || previewHost;
+
     if (label === 'MEDDPICC') return host.includes('meddpicc-is-ez') || host === 'meddpicc.its-ez.com';
     if (label === 'Cybersecurity') return host.includes('ez-human-threat-academy');
-    if (host !== 'its-ez.com' && host !== 'www.its-ez.com') return false;
+    if (!localSite) return false;
+
     const targetPath = new URL(href).pathname.toLowerCase();
-    if (label === 'Home') return (path === '/' || path === '/index.html') && !location.hash;
-    if (label === 'Work') return (path === '/' || path === '/index.html') && location.hash === '#work';
-    if (label === 'Contact') return (path === '/' || path === '/index.html') && location.hash === '#contact';
-    return targetPath === path;
+    const homePath = previewHost ? path.endsWith('/index.html') : (path === '/' || path === '/index.html');
+    if (label === 'Home') return homePath && !location.hash;
+    if (label === 'Work') return homePath && location.hash === '#work';
+    if (label === 'Contact') return homePath && location.hash === '#contact';
+    return previewHost ? path.endsWith(targetPath.split('/').pop()) : targetPath === path;
   }
 
   function renderHeader() {
@@ -114,7 +123,7 @@
     header.dataset.version = VERSION;
     header.innerHTML = `
       <div class="ez-global-shell">
-        <a class="ez-global-brand" href="${ROOT}" aria-label="EZ Enablement home">
+        <a class="ez-global-brand" href="${SITE_ROOT}" aria-label="EZ Enablement home">
           <span class="ez-global-mark">E<b>Z</b></span>
           <span class="ez-global-brand-copy"><strong>EZ ENABLEMENT</strong><span>Enablement made possible</span></span>
         </a>
@@ -122,7 +131,7 @@
           ${navItems.map(([label, href]) => `<a href="${href}" data-ez-label="${label}">${label}</a>`).join('')}
         </nav>
         <button class="ez-theme-toggle" type="button" aria-label="Switch color mode"></button>
-        <a class="ez-global-cta" href="${ROOT}#contact">Let's connect</a>
+        <a class="ez-global-cta" href="${SITE_ROOT}#contact">Let's connect</a>
         <button class="ez-global-menu" type="button" aria-expanded="false" aria-controls="ez-global-links" aria-label="Open navigation">☰</button>
       </div>`;
 
@@ -153,7 +162,6 @@
     updateActive();
 
     themeButton.addEventListener('click', () => applyTheme(theme === 'dark' ? 'light' : 'dark'));
-
     menu.addEventListener('click', () => {
       const open = header.classList.toggle('is-open');
       document.body.classList.toggle('ez-nav-open', open);
@@ -198,6 +206,7 @@
       });
       return true;
     };
+
     if (apply()) return;
     const observer = new MutationObserver(() => {
       if (apply()) observer.disconnect();
@@ -214,7 +223,6 @@
     if (!map || !toggle) return;
 
     toggle.textContent = '☷ System map';
-
     const close = () => {
       map.classList.remove('is-open');
       toggle.setAttribute('aria-expanded', 'false');
@@ -257,9 +265,10 @@
     const frame = document.querySelector('.soundcloud iframe');
     if (!frame) return;
 
+    ensureStylesheet('ez-music-fallback', assetUrl('music-fallback-2026.css?v=20260910-1'));
+
     const container = frame.closest('.soundcloud') || frame.parentElement;
     const trackUrl = 'https://soundcloud.com/haimonix/full-speed-ahead-yacht-rock/s-XCooCM1Kq6V';
-
     frame.removeAttribute('src');
     frame.style.display = 'none';
 
@@ -291,36 +300,27 @@
 
   function loadPageExtensions() {
     const path = location.pathname.toLowerCase();
+
     if (path.endsWith('/recommendations.html') || path.endsWith('/recommendations')) {
-      if (!document.querySelector('link[data-ez-recommendations-style]')) {
-        const link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.href = '/recommendations-2026.css?v=20260907-1';
-        link.dataset.ezRecommendationsStyle = 'true';
-        document.head.appendChild(link);
-      }
+      ensureStylesheet('ez-recommendations-style', assetUrl('recommendations-2026.css?v=20260907-1'));
     }
+
     if (path.endsWith('/ai-systems.html') || path.endsWith('/ai-systems')) {
       if (!document.querySelector('script[data-ez-ai-systems-extension]')) {
         const script = document.createElement('script');
-        script.src = '/ai-systems-extended.js?v=20260907-1';
+        script.src = assetUrl('ai-systems-extended.js?v=20260907-1');
         script.dataset.ezAiSystemsExtension = 'true';
         document.head.appendChild(script);
       }
-      if (!document.querySelector('link[data-ez-ai-systems-ratings-style]')) {
-        const link = document.createElement('link');
-        link.rel = 'stylesheet';
-        link.href = '/ai-systems-ratings.css?v=20260908-1';
-        link.dataset.ezAiSystemsRatingsStyle = 'true';
-        document.head.appendChild(link);
-      }
+      ensureStylesheet('ez-ai-systems-ratings-style', assetUrl('ai-systems-ratings.css?v=20260908-1'));
       if (!document.querySelector('script[data-ez-ai-systems-ratings]')) {
         const script = document.createElement('script');
-        script.src = '/ai-systems-ratings.js?v=20260908-1';
+        script.src = assetUrl('ai-systems-ratings.js?v=20260908-1');
         script.dataset.ezAiSystemsRatings = 'true';
         document.body.appendChild(script);
       }
     }
+
     improveMusicReleaseCues();
     fixMusicSoundCloud();
   }
@@ -336,9 +336,6 @@
     applyTheme(theme, false);
   }
 
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', init, { once: true });
-  } else {
-    init();
-  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init, { once: true });
+  else init();
 })();
