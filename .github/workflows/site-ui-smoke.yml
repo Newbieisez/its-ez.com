@@ -40,12 +40,15 @@ jobs:
           grep -q 'ez-theme-toggle' global-nav.js
           grep -q 'ez-nav-drawer' global-nav.js
           grep -q 'ez-nav-scrim' global-nav.js
+          grep -q 'data-ez-close-nav' global-nav.js
+          grep -q 'pointerup' global-nav.js
           grep -q 'data-ez-theme-choice' global-nav.js
           grep -q 'data-ez-theme' site-ui-2026.css
           grep -q 'ez-page-map' site-ui-2026.css
           grep -q -- '--ez-header-height:54px' site-nav-compact.css
           grep -q '.ez-nav-drawer' site-nav-compact.css
           grep -q '.ez-drawer-group' site-nav-compact.css
+          grep -q 'pointer-events:auto!important' site-nav-compact.css
           grep -q 'raw\\.githack\\.com' global-nav.js
       - name: Public page coverage
         run: |
