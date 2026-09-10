@@ -37,6 +37,7 @@ jobs:
           grep -q 'revenue-performance-v3.js' revenue-performance.html
           grep -q 'Revenue Professional' revenue-performance-v3.js
           grep -q 'Page guide' revenue-performance-v3.js
+          grep -q 'aria-current' revenue-performance-v3.js
           grep -q 'revenue-performance-v4.js' revenue-performance-v3.js
           grep -q 'ChatGPT' revenue-performance-v2.js
           grep -q 'Claude' revenue-performance-v2.js
@@ -60,3 +61,8 @@ jobs:
           ! grep -q 'stopImmediatePropagation' revenue-performance-v2.js
           ! grep -q "document.addEventListener('click'" revenue-performance-v2.js
           ! grep -q "document.addEventListener('keydown'" revenue-performance-v2.js
+      - name: Visual QA layer guardrails
+        run: |
+          ! grep -q "createElement('style')" revenue-performance-v3.js
+          grep -q 'focus-visible' revenue-performance-v3.css
+          grep -q 'rp-role-card.is-active span' revenue-performance-v3.css
