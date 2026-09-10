@@ -8,7 +8,6 @@ body.ez-revenue-hub .rp-section-head>p,body.ez-revenue-hub .rp-learning-top p,bo
 body.ez-revenue-hub .rp-role-card,body.ez-revenue-hub .rp-learning-panel,body.ez-revenue-hub .rp-module,body.ez-revenue-hub .rp-kpi-card,body.ez-revenue-hub .rp-diagnostic-card,body.ez-revenue-hub .rp-program-card,body.ez-revenue-hub .rp-cadence-grid article,body.ez-revenue-hub .rp-resource-card,body.ez-revenue-hub .rp-context-warning{background:var(--rp2-card)!important;color:var(--rp2-ink)!important;border-color:var(--rp2-line)!important}
 body.ez-revenue-hub .rp-role-card.is-active{background:#111217!important;color:#fff!important}
 body.ez-revenue-hub[data-rp-theme="dark"] .rp-role-card.is-active{background:#f3f3f4!important;color:#0c0d10!important}
-body.ez-revenue-hub[data-rp-theme="dark"] .rp-role-card.is-active span{color:#595b62!important}
 body.ez-revenue-hub .rp-search input,body.ez-revenue-hub .rp-diagnostic-search input,body.ez-revenue-hub .rp-tool-row select,body.ez-revenue-hub .rp-filter-pills button,body.ez-revenue-hub .rp-diagnostic-shortcuts button,body.ez-revenue-hub .rp2-filter{background:var(--rp2-input)!important;color:var(--rp2-ink)!important;border-color:var(--rp2-line)!important}
 body.ez-revenue-hub[data-rp-theme="dark"] .rp-filter-pills button.is-active,body.ez-revenue-hub[data-rp-theme="dark"] .rp-diagnostic-shortcuts button:hover{background:#f4f4f5!important;color:#0b0c0e!important}
 
