@@ -1,9 +1,9 @@
 (() => {
   'use strict';
 
-  const VERSION = '20260910-site-ui-3';
+  const VERSION = '20260910-site-ui-4';
   const ROOT = 'https://its-ez.com/';
-  const ASSET_VERSION = '20260910-site-ui-3';
+  const ASSET_VERSION = '20260910-site-ui-4';
   const THEME_KEY = 'ez-site-theme';
   const scriptSrc = document.currentScript?.src || `${ROOT}global-nav.js`;
   const ASSET_ROOT = new URL('./', scriptSrc).href;
@@ -173,9 +173,12 @@
           <button class="ez-global-menu" type="button" aria-expanded="false" aria-controls="ez-nav-drawer" aria-label="Open menu"><span>Menu</span><b aria-hidden="true">☰</b></button>
         </div>
       </div>
-      <button class="ez-nav-scrim" type="button" aria-label="Close menu" tabindex="-1"></button>
+      <button class="ez-nav-scrim" type="button" aria-label="Close menu" tabindex="-1" data-ez-close-nav></button>
       <aside class="ez-nav-drawer" id="ez-nav-drawer" aria-label="Site navigation" aria-hidden="true">
-        <div class="ez-drawer-head"><div><small>EZ ENABLEMENT</small><strong>Where do you want to go?</strong></div><button class="ez-drawer-close" type="button" aria-label="Close menu">×</button></div>
+        <div class="ez-drawer-head">
+          <div><small>EZ ENABLEMENT</small><strong>Where do you want to go?</strong></div>
+          <button class="ez-drawer-close" type="button" aria-label="Close menu" data-ez-close-nav>×</button>
+        </div>
         <nav class="ez-drawer-nav" aria-label="All site destinations">${navGroups.map(groupMarkup).join('')}</nav>
         <div class="ez-drawer-appearance"><span>Appearance</span><div role="group" aria-label="Choose appearance"><button type="button" data-ez-theme-choice="light">Light</button><button type="button" data-ez-theme-choice="dark">Dark</button></div></div>
         <a class="ez-drawer-contact" href="${SITE_ROOT}#contact">Start a conversation <span aria-hidden="true">↗</span></a>
@@ -187,7 +190,6 @@
     const menu = header.querySelector('.ez-global-menu');
     const drawer = header.querySelector('.ez-nav-drawer');
     const closeButton = header.querySelector('.ez-drawer-close');
-    const scrim = header.querySelector('.ez-nav-scrim');
     const current = header.querySelector('.ez-current-page');
 
     const updateActive = () => {
@@ -199,23 +201,44 @@
     };
 
     const setOpen = (open, restoreFocus = false) => {
-      header.classList.toggle('is-open', open);
-      document.body.classList.toggle('ez-nav-open', open);
-      menu.setAttribute('aria-expanded', String(open));
-      menu.setAttribute('aria-label', open ? 'Close menu' : 'Open menu');
-      drawer.setAttribute('aria-hidden', String(!open));
-      if (open) {
+      const shouldOpen = Boolean(open);
+      header.classList.toggle('is-open', shouldOpen);
+      document.body.classList.toggle('ez-nav-open', shouldOpen);
+      menu.setAttribute('aria-expanded', String(shouldOpen));
+      menu.setAttribute('aria-label', shouldOpen ? 'Close menu' : 'Open menu');
+      drawer.setAttribute('aria-hidden', String(!shouldOpen));
+
+      if (shouldOpen) {
+        drawer.removeAttribute('inert');
         document.dispatchEvent(new Event('ez:close-page-map'));
-        setTimeout(() => closeButton.focus(), 0);
-      } else if (restoreFocus) menu.focus();
+        requestAnimationFrame(() => closeButton.focus({ preventScroll: true }));
+      } else {
+        drawer.setAttribute('inert', '');
+        if (restoreFocus) requestAnimationFrame(() => menu.focus({ preventScroll: true }));
+      }
     };
 
     updateActive();
     paintThemeControls();
+    drawer.setAttribute('inert', '');
 
-    menu.addEventListener('click', () => setOpen(!header.classList.contains('is-open')));
-    closeButton.addEventListener('click', () => setOpen(false, true));
-    scrim.addEventListener('click', () => setOpen(false, true));
+    menu.addEventListener('click', event => {
+      event.preventDefault();
+      setOpen(!header.classList.contains('is-open'));
+    });
+
+    const closeFromControl = event => {
+      event.preventDefault();
+      event.stopPropagation();
+      setOpen(false, true);
+    };
+
+    /* Capture-phase delegation makes the X and scrim reliable even if a page has its own click handlers. */
+    header.addEventListener('click', event => {
+      if (event.target.closest('[data-ez-close-nav]')) closeFromControl(event);
+    }, true);
+    closeButton.addEventListener('pointerup', closeFromControl);
+
     header.querySelector('.ez-theme-toggle').addEventListener('click', () => applyTheme(theme === 'dark' ? 'light' : 'dark'));
     header.querySelectorAll('[data-ez-theme-choice]').forEach(button => button.addEventListener('click', () => applyTheme(button.dataset.ezThemeChoice)));
     header.querySelector('.ez-drawer-nav').addEventListener('click', event => {
@@ -230,7 +253,10 @@
     window.addEventListener('hashchange', updateActive);
     window.addEventListener('popstate', updateActive);
     document.addEventListener('keydown', event => {
-      if (event.key === 'Escape' && header.classList.contains('is-open')) setOpen(false, true);
+      if (event.key === 'Escape' && header.classList.contains('is-open')) {
+        event.preventDefault();
+        setOpen(false, true);
+      }
     });
   }
 
