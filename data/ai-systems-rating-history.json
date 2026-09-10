@@ -1,6 +1,6 @@
 {
   "schemaVersion": 1,
-  "updatedAt": "2026-09-10T11:18:47.858Z",
+  "updatedAt": "2026-09-10T16:24:06.322Z",
   "items": {
     "chatgpt": [],
     "claude": [],
@@ -87,6 +87,12 @@
         "score": 9.3,
         "status": "provisional",
         "confidence": 8.4
+      },
+      {
+        "at": "2026-09-10T16:24:06.322Z",
+        "score": 9.3,
+        "status": "provisional",
+        "confidence": 8.4
       }
     ],
     "hubspot": [
@@ -164,6 +170,12 @@
       },
       {
         "at": "2026-09-10T11:18:47.858Z",
+        "score": 9.3,
+        "status": "provisional",
+        "confidence": 8.4
+      },
+      {
+        "at": "2026-09-10T16:24:06.322Z",
         "score": 9.3,
         "status": "provisional",
         "confidence": 8.4
@@ -247,6 +259,12 @@
         "score": 8.4,
         "status": "provisional",
         "confidence": 7
+      },
+      {
+        "at": "2026-09-10T16:24:06.322Z",
+        "score": 8.4,
+        "status": "provisional",
+        "confidence": 7
       }
     ],
     "zoho": [
@@ -324,6 +342,12 @@
       },
       {
         "at": "2026-09-10T11:18:47.858Z",
+        "score": 8.6,
+        "status": "provisional",
+        "confidence": 7.7
+      },
+      {
+        "at": "2026-09-10T16:24:06.322Z",
         "score": 8.6,
         "status": "provisional",
         "confidence": 7.7
@@ -407,6 +431,12 @@
         "score": 7.5,
         "status": "provisional",
         "confidence": 5.9
+      },
+      {
+        "at": "2026-09-10T16:24:06.322Z",
+        "score": 7.5,
+        "status": "provisional",
+        "confidence": 5.9
       }
     ],
     "chorus": [
@@ -484,6 +514,12 @@
       },
       {
         "at": "2026-09-10T11:18:47.858Z",
+        "score": 6.3,
+        "status": "provisional",
+        "confidence": 5.3
+      },
+      {
+        "at": "2026-09-10T16:24:06.322Z",
         "score": 6.3,
         "status": "provisional",
         "confidence": 5.3
@@ -567,6 +603,12 @@
         "score": 8.9,
         "status": "provisional",
         "confidence": 7.2
+      },
+      {
+        "at": "2026-09-10T16:24:06.322Z",
+        "score": 8.9,
+        "status": "provisional",
+        "confidence": 7.2
       }
     ],
     "outreach": [
@@ -635,6 +677,12 @@
         "score": 6.9,
         "status": "provisional",
         "confidence": 5.2
+      },
+      {
+        "at": "2026-09-10T16:24:06.322Z",
+        "score": 6.9,
+        "status": "provisional",
+        "confidence": 5.2
       }
     ],
     "salesloft": [
@@ -700,6 +748,12 @@
       },
       {
         "at": "2026-09-10T11:18:47.858Z",
+        "score": 7.4,
+        "status": "provisional",
+        "confidence": 6
+      },
+      {
+        "at": "2026-09-10T16:24:06.322Z",
         "score": 7.4,
         "status": "provisional",
         "confidence": 6
@@ -778,6 +832,12 @@
         "score": 7.4,
         "status": "provisional",
         "confidence": 5.6
+      },
+      {
+        "at": "2026-09-10T16:24:06.322Z",
+        "score": 7.4,
+        "status": "provisional",
+        "confidence": 5.6
       }
     ],
     "highspot": [
@@ -852,6 +912,12 @@
         "score": 8.6,
         "status": "provisional",
         "confidence": 6
+      },
+      {
+        "at": "2026-09-10T16:24:06.322Z",
+        "score": 8.6,
+        "status": "provisional",
+        "confidence": 6
       }
     ],
     "allego": [
@@ -923,6 +989,12 @@
       },
       {
         "at": "2026-09-10T11:18:47.858Z",
+        "score": 8.4,
+        "status": "provisional",
+        "confidence": 6.4
+      },
+      {
+        "at": "2026-09-10T16:24:06.322Z",
         "score": 8.4,
         "status": "provisional",
         "confidence": 6.4
@@ -1001,6 +1073,12 @@
         "score": 7.6,
         "status": "provisional",
         "confidence": 6.3
+      },
+      {
+        "at": "2026-09-10T16:24:06.322Z",
+        "score": 7.6,
+        "status": "provisional",
+        "confidence": 6.3
       }
     ],
     "showpad": [
@@ -1072,6 +1150,12 @@
       },
       {
         "at": "2026-09-10T11:18:47.858Z",
+        "score": 7.3,
+        "status": "provisional",
+        "confidence": 5.2
+      },
+      {
+        "at": "2026-09-10T16:24:06.322Z",
         "score": 7.3,
         "status": "provisional",
         "confidence": 5.2
@@ -1150,6 +1234,12 @@
         "score": 6.6,
         "status": "provisional",
         "confidence": 4.8
+      },
+      {
+        "at": "2026-09-10T16:24:06.322Z",
+        "score": 6.6,
+        "status": "provisional",
+        "confidence": 4.8
       }
     ],
     "saleshood": [
@@ -1221,6 +1311,12 @@
       },
       {
         "at": "2026-09-10T11:18:47.858Z",
+        "score": 7.8,
+        "status": "provisional",
+        "confidence": 5.7
+      },
+      {
+        "at": "2026-09-10T16:24:06.322Z",
         "score": 7.8,
         "status": "provisional",
         "confidence": 5.7
@@ -1299,6 +1395,12 @@
         "score": 5,
         "status": "provisional",
         "confidence": 6.7
+      },
+      {
+        "at": "2026-09-10T16:24:06.322Z",
+        "score": 5,
+        "status": "provisional",
+        "confidence": 6.7
       }
     ],
     "360learning": [
@@ -1370,6 +1472,12 @@
       },
       {
         "at": "2026-09-10T11:18:47.858Z",
+        "score": 9.4,
+        "status": "provisional",
+        "confidence": 8.2
+      },
+      {
+        "at": "2026-09-10T16:24:06.322Z",
         "score": 9.4,
         "status": "provisional",
         "confidence": 8.2
@@ -1447,6 +1555,12 @@
         "score": 5.8,
         "status": "provisional",
         "confidence": 5.8
+      },
+      {
+        "at": "2026-09-10T16:24:06.322Z",
+        "score": 5.8,
+        "status": "provisional",
+        "confidence": 5.8
       }
     ],
     "degreed": [
@@ -1518,6 +1632,12 @@
       },
       {
         "at": "2026-09-10T11:18:47.858Z",
+        "score": 6.9,
+        "status": "provisional",
+        "confidence": 4.5
+      },
+      {
+        "at": "2026-09-10T16:24:06.322Z",
         "score": 6.9,
         "status": "provisional",
         "confidence": 4.5
@@ -1597,6 +1717,12 @@
         "score": 6.8,
         "status": "provisional",
         "confidence": 4
+      },
+      {
+        "at": "2026-09-10T16:24:06.322Z",
+        "score": 6.8,
+        "status": "provisional",
+        "confidence": 4
       }
     ],
     "absorb": [
@@ -1671,6 +1797,12 @@
         "score": 7.5,
         "status": "provisional",
         "confidence": 4.8
+      },
+      {
+        "at": "2026-09-10T16:24:06.322Z",
+        "score": 7.5,
+        "status": "provisional",
+        "confidence": 4.8
       }
     ],
     "sana": [
@@ -1742,6 +1874,12 @@
       },
       {
         "at": "2026-09-10T11:18:47.858Z",
+        "score": 7.3,
+        "status": "provisional",
+        "confidence": 4.7
+      },
+      {
+        "at": "2026-09-10T16:24:06.322Z",
         "score": 7.3,
         "status": "provisional",
         "confidence": 4.7
@@ -1843,6 +1981,12 @@
         "score": 8.8,
         "status": "provisional",
         "confidence": 7.1
+      },
+      {
+        "at": "2026-09-10T16:24:06.322Z",
+        "score": 8.8,
+        "status": "provisional",
+        "confidence": 7.1
       }
     ],
     "6sense": [],
@@ -1928,6 +2072,12 @@
         "score": 6.9,
         "status": "provisional",
         "confidence": 5.2
+      },
+      {
+        "at": "2026-09-10T16:24:06.322Z",
+        "score": 6.9,
+        "status": "provisional",
+        "confidence": 5.2
       }
     ],
     "close-crm": [
@@ -2005,6 +2155,12 @@
       },
       {
         "at": "2026-09-10T11:18:47.858Z",
+        "score": 6.9,
+        "status": "provisional",
+        "confidence": 5.5
+      },
+      {
+        "at": "2026-09-10T16:24:06.322Z",
         "score": 6.9,
         "status": "provisional",
         "confidence": 5.5
@@ -2088,6 +2244,12 @@
         "score": 7,
         "status": "provisional",
         "confidence": 4
+      },
+      {
+        "at": "2026-09-10T16:24:06.322Z",
+        "score": 7,
+        "status": "provisional",
+        "confidence": 4
       }
     ],
     "reply": [],
@@ -2156,6 +2318,12 @@
       },
       {
         "at": "2026-09-10T11:18:47.858Z",
+        "score": 6.4,
+        "status": "provisional",
+        "confidence": 5.3
+      },
+      {
+        "at": "2026-09-10T16:24:06.322Z",
         "score": 6.4,
         "status": "provisional",
         "confidence": 5.3
