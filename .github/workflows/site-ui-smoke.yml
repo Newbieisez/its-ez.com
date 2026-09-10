@@ -7,6 +7,7 @@ on:
     paths:
       - 'global-nav.js'
       - 'site-ui-2026.css'
+      - 'site-nav-compact.css'
       - 'music-fallback-2026.css'
       - 'responsive-2026.css'
       - 'index.html'
@@ -29,15 +30,22 @@ jobs:
       - name: Shared UI assets
         run: |
           test -f site-ui-2026.css
+          test -f site-nav-compact.css
           test -f music-fallback-2026.css
           test -f responsive-2026.css
           grep -q 'site-ui-2026.css' global-nav.js
+          grep -q 'site-nav-compact.css' global-nav.js
           grep -q 'music-fallback-2026.css' global-nav.js
           grep -q 'ez-site-theme' global-nav.js
           grep -q 'ez-theme-toggle' global-nav.js
+          grep -q 'ez-nav-drawer' global-nav.js
+          grep -q 'ez-nav-scrim' global-nav.js
+          grep -q 'data-ez-theme-choice' global-nav.js
           grep -q 'data-ez-theme' site-ui-2026.css
-          grep -q 'ez-global-menu' site-ui-2026.css
           grep -q 'ez-page-map' site-ui-2026.css
+          grep -q -- '--ez-header-height:54px' site-nav-compact.css
+          grep -q '.ez-nav-drawer' site-nav-compact.css
+          grep -q '.ez-drawer-group' site-nav-compact.css
           grep -q 'raw\\.githack\\.com' global-nav.js
       - name: Public page coverage
         run: |
