@@ -1,0 +1,49 @@
+name: Apply company positioning preview
+
+on:
+  push:
+    branches:
+      - preview/ez-brand-full-story-2026-09-11
+    paths:
+      - company-positioning-patch.py
+      - .github/workflows/apply-company-positioning-preview.yml
+
+permissions:
+  contents: write
+
+jobs:
+  apply-company-positioning:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: preview/ez-brand-full-story-2026-09-11
+          fetch-depth: 0
+      - name: Apply company-first positioning
+        run: python company-positioning-patch.py
+      - name: Validate JavaScript
+        run: node --check global-nav.js
+      - name: Validate key company language
+        shell: bash
+        run: |
+          grep -q 'EZ Enablement | Training & Enablement Systems That Perform' index.html
+          grep -q 'TRAINING + ENABLEMENT SYSTEMS' index.html
+          grep -q 'Founder track record + selected builds' index.html
+          grep -q 'Training & Enablement Services | EZ Enablement' work-with-me.html
+          grep -q 'Work with EZ Enablement' work-with-me.html
+          grep -q 'EZ COMPANY NAV PREVIEW' global-nav.js
+          grep -q 'Revenue Performance Hub' global-nav.js
+          grep -q 'MEDDPICC Lab' global-nav.js
+          grep -q 'Music by Avi Haimonix' global-nav.js
+      - name: Commit preview changes
+        shell: bash
+        run: |
+          git config user.name "EZ Preview Builder"
+          git config user.email "actions@users.noreply.github.com"
+          git add index.html work-with-me.html global-nav.js
+          if git diff --cached --quiet; then
+            echo "No preview changes to commit."
+            exit 0
+          fi
+          git commit -m "Position EZ Enablement as training and enablement company"
+          git push origin HEAD:preview/ez-brand-full-story-2026-09-11
