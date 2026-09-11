@@ -24,7 +24,7 @@ jobs:
           from pathlib import Path
           import re
 
-          version = "20260908-site-review-fixes-2"
+          version = "20260911-impact-nav-1"
           changed = []
           for path in Path('.').glob('*.html'):
               text = path.read_text(encoding='utf-8')
@@ -47,5 +47,5 @@ jobs:
           git config user.name "EZ Site Automation"
           git config user.email "actions@users.noreply.github.com"
           git add '*.html'
-          git commit -m "Force browsers to load site review fixes"
+          git commit -m "Force browsers to load impact navigation"
           git push
