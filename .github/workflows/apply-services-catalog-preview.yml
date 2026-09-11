@@ -1,0 +1,69 @@
+name: Apply services catalogue preview
+
+on:
+  push:
+    branches:
+      - preview/ez-proof-review-2026-09-11
+    paths:
+      - '.github/workflows/apply-services-catalog-preview.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  apply-catalog:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: preview/ez-proof-review-2026-09-11
+          fetch-depth: 0
+      - name: Add catalogue script to services page
+        shell: python
+        run: |
+          from pathlib import Path
+          p = Path('work-with-me.html')
+          s = p.read_text(encoding='utf-8')
+          tag = '<script src="services-catalog.js?v=20260911-catalog-1" defer></script>'
+          if tag not in s:
+              if '</body>' not in s:
+                  raise SystemExit('Missing </body> in work-with-me.html')
+              s = s.replace('</body>', tag + '\n</body>', 1)
+          p.write_text(s, encoding='utf-8')
+      - name: Validate JavaScript and pricing guardrail
+        shell: bash
+        run: |
+          set -euo pipefail
+          node --check services-catalog.js
+          node --check proof-preview.js
+          grep -F 'services-catalog.js?v=20260911-catalog-1' work-with-me.html
+          grep -F 'Build my plan' services-catalog.js
+          grep -F 'Corporate Training Series' services-catalog.js
+          grep -F 'AI at Work Accelerator' services-catalog.js
+          grep -F 'Partner Academy & Accreditation' services-catalog.js
+          python - <<'PY'
+          import re
+          from pathlib import Path
+          s = Path('services-catalog.js').read_text(encoding='utf-8')
+          patterns = [r'\$\s*\d', r'\bUSD\s*\d', r'\bstarting at\s+\$']
+          for pat in patterns:
+              if re.search(pat, s, flags=re.I):
+                  raise SystemExit(f'Public pricing pattern found: {pat}')
+          print('No public pricing values found in services catalogue.')
+          PY
+      - name: Commit preview changes and remove temporary workflow
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name 'EZ Preview Builder'
+          git config user.email 'actions@users.noreply.github.com'
+          git add work-with-me.html services-catalog.js proof-preview.js
+          if ! git diff --cached --quiet; then
+            git commit -m 'Build service catalogue and fix proof gallery'
+          fi
+          rm -f .github/workflows/apply-services-catalog-preview.yml
+          git add -A
+          if ! git diff --cached --quiet; then
+            git commit -m 'Remove temporary services catalogue workflow'
+          fi
+          git push origin HEAD:preview/ez-proof-review-2026-09-11
