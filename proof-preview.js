@@ -19,7 +19,7 @@
     .ez-proof-card:hover{transform:none!important;box-shadow:0 12px 34px rgba(0,0,0,.06)!important}
     .ez-proof-card.wide{grid-column:span 6}
     .ez-proof-media{display:block;width:100%;aspect-ratio:16/10;background:#0c0d10;overflow:hidden;transform:none!important;perspective:none!important;border:0!important;border-radius:0!important;box-shadow:none!important}
-    .ez-proof-card.portrait .ez-proof-media{aspect-ratio:4/5}
+    .ez-proof-card.ez-proof-portrait .ez-proof-media{aspect-ratio:4/5}
     .ez-proof-media img{display:block;width:100%!important;height:100%!important;max-width:none!important;object-fit:contain!important;background:#fff!important;border:0!important;border-radius:0!important;box-shadow:none!important;transform:none!important;filter:none!important;position:static!important}
     .ez-proof-card-copy{padding:18px 18px 20px;transform:none!important}
     .ez-proof-card-copy small{display:block;margin-bottom:8px;color:#ef1717;font:900 9px/1.2 Arial,Helvetica,sans-serif;letter-spacing:.13em;text-transform:uppercase}
@@ -27,7 +27,7 @@
     .ez-proof-card-copy p{margin:9px 0 0;color:#5b5753;font-size:.87rem;line-height:1.58}
     .ez-proof-source-note{margin:18px 0 0;color:#77716b;font-size:.72rem;line-height:1.5}
     @media(max-width:980px){.ez-proof-card,.ez-proof-card.wide{grid-column:span 6}.ez-proof-head{grid-template-columns:1fr;gap:18px}}
-    @media(max-width:620px){.ez-proof-receipts{padding:56px 0}.ez-proof-card,.ez-proof-card.wide{grid-column:1/-1}.ez-proof-card.portrait .ez-proof-media{aspect-ratio:4/4.4}.ez-proof-head h2{font-size:clamp(2.5rem,13vw,4rem)}}
+    @media(max-width:620px){.ez-proof-receipts{padding:56px 0}.ez-proof-card,.ez-proof-card.wide{grid-column:1/-1}.ez-proof-card.ez-proof-portrait .ez-proof-media{aspect-ratio:4/4.4}.ez-proof-head h2{font-size:clamp(2.5rem,13vw,4rem)}}
   `;
 
   if (!document.getElementById('ez-proof-receipts-style')) {
@@ -59,11 +59,11 @@
           <div class="ez-proof-media"><img src="${ROOT}assets/proof/sentinelone-culture-champion.webp" alt="SentinelOne FY25 Global Partner Ecosystem Award recognizing EZ Haimowicz as a OneSentinel Culture Champion" loading="lazy"></div>
           <div class="ez-proof-card-copy"><small>Recognition / SentinelOne</small><h3>Partner enablement work recognized for culture and contribution.</h3><p>FY25 Global Partner Ecosystem recognition naming EZ Haimowicz a OneSentinel Culture Champion.</p></div>
         </article>
-        <article class="ez-proof-card portrait">
+        <article class="ez-proof-card ez-proof-portrait">
           <div class="ez-proof-media"><img src="${ROOT}assets/proof/twilio-trainer-mentor.webp" alt="Twilio recognition thanking EZ Haimowicz for mentoring another trainer" loading="lazy"></div>
           <div class="ez-proof-card-copy"><small>Trainer development / Twilio</small><h3>Mentoring the people who train the field.</h3><p>Peer recognition for helping another trainer build confidence, move the plan forward, and grow from a trainer standpoint.</p></div>
         </article>
-        <article class="ez-proof-card portrait">
+        <article class="ez-proof-card ez-proof-portrait">
           <div class="ez-proof-media"><img src="${ROOT}assets/proof/twilio-sko-recognition.webp" alt="Twilio recognition thanking EZ Haimowicz for helping make SKO successful" loading="lazy"></div>
           <div class="ez-proof-card-copy"><small>SKO delivery / Twilio</small><h3>Helping make the live experience actually work.</h3><p>Recognition for contributing across breakouts, rehearsals, logistics, long schedules, and the details that helped make SKO successful.</p></div>
         </article>
