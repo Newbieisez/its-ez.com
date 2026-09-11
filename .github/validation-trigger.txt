@@ -1,0 +1,1 @@
+Temporary validation trigger for PR #12. Safe to remove after CI.
