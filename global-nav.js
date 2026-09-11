@@ -356,10 +356,10 @@
     section.setAttribute('aria-labelledby','ez-career-impact-title');
     section.innerHTML=`<div class="wrap">
       <div class="ez-impact-head">
-        <div><p class="ez-impact-kicker">Career impact / company by company</p><h2 id="ez-career-impact-title">Proof without the inflated math.</h2></div>
-        <p>I have worked across different companies, motions, teams, and stages of growth. The results belong with the work that produced them. I do not add pipeline, ARR, savings, ramp, and conversion together just to manufacture one giant career number.</p>
+        <div><p class="ez-impact-kicker">Founder track record / company by company</p><h2 id="ez-career-impact-title">The experience behind EZ Enablement.</h2></div>
+        <p>Before launching EZ Enablement, I built and led training, enablement, partner, AI, and GTM systems inside the organizations shown below. These results are founder track record, not a claim that the companies were EZ Enablement clients. The numbers stay with the work that produced them.</p>
       </div>
-      <p class="ez-impact-note"><strong>How I report results:</strong> each metric stays attached to the organization and context where it was measured. Influenced, supported, reduced, and generated mean different things here on purpose.</p>
+      <p class="ez-impact-note"><strong>How we report results:</strong> each metric stays attached to the organization and context where it was measured. Influenced, supported, reduced, and generated mean different things here on purpose.</p>
       <div class="ez-org-grid" aria-label="Measured outcomes by organization">
         <article class="ez-org-card"><small>Partner ecosystem</small><h3>SentinelOne</h3><div class="ez-org-metric"><strong>$13M</strong><span>Partner pipeline influenced</span></div><div class="ez-org-metric"><strong>40–50%</strong><span>Reduction in partner ramp time</span></div><div class="ez-org-metric"><strong>4,000+</strong><span>Partners reached through structured enablement</span></div></article>
         <article class="ez-org-card"><small>Revenue readiness</small><h3>Twilio</h3><div class="ez-org-metric"><strong>$8M</strong><span>Pipeline growth supported</span></div><div class="ez-org-metric"><strong>82%</strong><span>MEDDPICC adoption</span></div><div class="ez-org-metric"><strong>+40%</strong><span>Deal conversion lift</span></div></article>
@@ -439,4 +439,75 @@
 
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',()=>setTimeout(init,0),{once:true});
   else setTimeout(init,0);
+})();
+
+
+/* EZ COMPANY NAV PREVIEW */
+(() => {
+  const ROOT = 'https://its-ez.com/';
+  const navCss = `
+    .ez-global-brand-copy span{color:#c4c7cd!important}
+    .ez-global-links>.ez-nav-group{position:relative;display:flex;align-items:center}
+    .ez-nav-resources{display:flex;align-items:center;min-height:44px;padding:0 9px;border:0;border-radius:8px;background:transparent;color:#d5d5d8;font:800 14px/1.2 Arial,Helvetica,sans-serif;cursor:pointer;white-space:nowrap}
+    .ez-nav-resources:hover,.ez-nav-resources[aria-expanded="true"]{background:rgba(255,255,255,.07);color:#fff}
+    .ez-nav-resources:after{content:"⌄";margin-left:6px;font-size:12px}
+    .ez-nav-dropdown{display:none;position:absolute;right:0;top:48px;width:min(330px,calc(100vw - 30px));padding:8px;border:1px solid rgba(255,255,255,.14);border-radius:14px;background:#0b0c0f;box-shadow:0 22px 60px rgba(0,0,0,.5);z-index:10010}
+    .ez-nav-group.is-open .ez-nav-dropdown,.ez-nav-group:focus-within .ez-nav-dropdown{display:grid}
+    .ez-nav-dropdown a{display:grid;gap:3px;padding:12px 13px;border-radius:9px;color:#fff!important;text-decoration:none!important}
+    .ez-nav-dropdown a:hover,.ez-nav-dropdown a:focus-visible{background:rgba(255,255,255,.08);outline:none}
+    .ez-nav-dropdown strong{font-size:12px;line-height:1.2}
+    .ez-nav-dropdown span{color:#969aa3;font-size:10px;line-height:1.35}
+    @media(max-width:1180px){
+      .ez-global-links>.ez-nav-group{display:block;width:100%}
+      .ez-nav-resources{width:100%;justify-content:space-between;min-height:44px;padding:0 12px;font-size:14px}
+      .ez-nav-dropdown{position:static;width:100%;margin-top:4px;padding:4px;border-radius:10px;box-shadow:none;background:rgba(255,255,255,.035)}
+      .ez-nav-group:focus-within .ez-nav-dropdown{display:none}
+      .ez-nav-group.is-open .ez-nav-dropdown{display:grid}
+      .ez-nav-dropdown a{padding:11px 12px}
+    }
+  `;
+
+  function installCompanyNav(){
+    const header=document.querySelector('.ez-global-header');
+    const links=header?.querySelector('.ez-global-links');
+    if(!header||!links||links.dataset.companyNav==='true') return false;
+    links.dataset.companyNav='true';
+    const brandSub=header.querySelector('.ez-global-brand-copy span');
+    if(brandSub) brandSub.textContent='Training + Enablement Systems';
+    const cta=header.querySelector('.ez-global-cta');
+    if(cta){cta.textContent='Work With Us';cta.href=ROOT+'work-with-me.html';}
+    links.innerHTML=`
+      <a href="${ROOT}" data-ez-label="Home">Home</a>
+      <a href="${ROOT}work-with-me.html#offers" data-ez-label="Services">Services</a>
+      <a href="${ROOT}#work" data-ez-label="Work">Work</a>
+      <a href="${ROOT}#results" data-ez-label="Results">Results</a>
+      <a href="${ROOT}#operating" data-ez-label="How We Build">How We Build</a>
+      <a href="${ROOT}#about" data-ez-label="About">About</a>
+      <div class="ez-nav-group">
+        <button class="ez-nav-resources" type="button" aria-expanded="false" aria-haspopup="true">Resources</button>
+        <div class="ez-nav-dropdown" aria-label="EZ Enablement resources">
+          <a href="${ROOT}ai-systems.html"><strong>AI Systems</strong><span>AI tools, workflows, and enablement use cases</span></a>
+          <a href="${ROOT}revenue-performance.html"><strong>Revenue Performance Hub</strong><span>Role-based metrics, coaching, and performance resources</span></a>
+          <a href="https://meddpicc-is-ez.erezhaimowicz.workers.dev/"><strong>MEDDPICC Lab</strong><span>Practical deal execution and methodology application</span></a>
+          <a href="https://ez-human-threat-academy.erezhaimowicz.workers.dev/"><strong>Cybersecurity Library</strong><span>Human threat and cybersecurity learning resources</span></a>
+          <a href="${ROOT}recommendations.html"><strong>Founder Recommendations</strong><span>What managers, peers, sellers, and partners say about EZ</span></a>
+          <a href="${ROOT}music.html"><strong>Music by Avi Haimonix</strong><span>The creative side of EZ</span></a>
+        </div>
+      </div>`;
+
+    const group=links.querySelector('.ez-nav-group');
+    const button=group?.querySelector('.ez-nav-resources');
+    const close=()=>{if(!group||!button)return;group.classList.remove('is-open');button.setAttribute('aria-expanded','false');};
+    button?.addEventListener('click',e=>{e.stopPropagation();const open=group.classList.toggle('is-open');button.setAttribute('aria-expanded',String(open));});
+    group?.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));
+    document.addEventListener('click',e=>{if(group?.classList.contains('is-open')&&!group.contains(e.target))close();});
+    document.addEventListener('keydown',e=>{if(e.key==='Escape'&&group?.classList.contains('is-open')){close();button?.focus();}});
+    return true;
+  }
+
+  if(!document.getElementById('ez-company-nav-preview-style')){
+    const style=document.createElement('style');style.id='ez-company-nav-preview-style';style.textContent=navCss;document.head.appendChild(style);
+  }
+  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',()=>{if(!installCompanyNav()){setTimeout(installCompanyNav,0);}},{once:true});
+  else if(!installCompanyNav()) setTimeout(installCompanyNav,0);
 })();
