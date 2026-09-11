@@ -1,6 +1,6 @@
 (() => {
   const VERSION = '20260911-impact-nav-1';
-  const ROOT = 'https://its-ez.com/';
+  const ROOT = (location.hostname.includes('githack.com') || location.hostname.includes('github.io')) ? location.href.replace(/[^/]*(?:[?#].*)?$/, '') : 'https://its-ez.com/';
 
   const css = `
   :root{--ez-header-height:72px;--ez-nav-red:#ef1717;--ez-nav-black:#08090b;--ez-nav-line:rgba(255,255,255,.12)}
@@ -282,7 +282,7 @@
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init,{once:true}); else init();
 })();/* EZ BRAND FULL STORY PREVIEW */
 (() => {
-  const ROOT = 'https://its-ez.com/';
+  const ROOT = (location.hostname.includes('githack.com') || location.hostname.includes('github.io')) ? location.href.replace(/[^/]*(?:[?#].*)?$/, '') : 'https://its-ez.com/';
 
   const styles = `
     .ez-results-board{display:none!important}
@@ -444,7 +444,7 @@
 
 /* EZ COMPANY NAV PREVIEW */
 (() => {
-  const ROOT = 'https://its-ez.com/';
+  const ROOT = (location.hostname.includes('githack.com') || location.hostname.includes('github.io')) ? location.href.replace(/[^/]*(?:[?#].*)?$/, '') : 'https://its-ez.com/';
   const navCss = `
     .ez-global-brand-copy span{color:#c4c7cd!important}
     .ez-global-links>.ez-nav-group{position:relative;display:flex;align-items:center}
@@ -458,7 +458,7 @@
     .ez-nav-dropdown strong{font-size:12px;line-height:1.2}
     .ez-nav-dropdown span{color:#969aa3;font-size:10px;line-height:1.35}
     @media(max-width:1180px){
-      .ez-global-links>.ez-nav-group{display:block;width:100%}
+      .ez-global-links>.ez-nav-group{display:block;width:100%;grid-column:1/-1}
       .ez-nav-resources{width:100%;justify-content:space-between;min-height:44px;padding:0 12px;font-size:14px}
       .ez-nav-dropdown{position:static;width:100%;margin-top:4px;padding:4px;border-radius:10px;box-shadow:none;background:rgba(255,255,255,.035)}
       .ez-nav-group:focus-within .ez-nav-dropdown{display:none}
