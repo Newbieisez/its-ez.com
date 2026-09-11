@@ -1,0 +1,91 @@
+name: Site Shell Smoke
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'global-nav.js'
+      - 'index.html'
+      - 'work-with-me.html'
+      - 'revenue-performance.html'
+      - 'ai-systems.html'
+      - 'music.html'
+      - 'recommendations.html'
+      - 'homepage-extras.css'
+      - '.github/workflows/site-shell-smoke.yml'
+  pull_request:
+    paths:
+      - 'global-nav.js'
+      - 'index.html'
+      - 'work-with-me.html'
+      - 'revenue-performance.html'
+      - 'ai-systems.html'
+      - 'music.html'
+      - 'recommendations.html'
+      - 'homepage-extras.css'
+      - '.github/workflows/site-shell-smoke.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  validate-site-shell:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: JavaScript syntax
+        run: node --check global-nav.js
+
+      - name: Primary navigation assertions
+        shell: bash
+        run: |
+          set -euo pipefail
+          grep -F "['Results',ROOT+'#results']" global-nav.js
+          grep -F "['How I Build',ROOT+'#operating']" global-nav.js
+          grep -F "['AI Systems',ROOT+'ai-systems.html']" global-nav.js
+          grep -F "['Recommendations',ROOT+'recommendations.html']" global-nav.js
+          grep -F "['Work With Me',ROOT+'work-with-me.html']" global-nav.js
+          NAV_BLOCK="$(sed -n '/const navItems = \[/,/^  \];/p' global-nav.js)"
+          if printf '%s\n' "$NAV_BLOCK" | grep -F "['Music'"; then
+            echo 'Music must not be in primary navigation' >&2
+            exit 1
+          fi
+          if printf '%s\n' "$NAV_BLOCK" | grep -F "['MEDDPICC'"; then
+            echo 'MEDDPICC must not be in primary navigation' >&2
+            exit 1
+          fi
+          if printf '%s\n' "$NAV_BLOCK" | grep -F "['Cybersecurity'"; then
+            echo 'Cybersecurity must not be in primary navigation' >&2
+            exit 1
+          fi
+
+      - name: Results board assertions
+        shell: bash
+        run: |
+          set -euo pipefail
+          grep -F "section.id='results'" global-nav.js
+          grep -F 'RESULTS / PERFORMANCE BOARD' global-nav.js
+          grep -F '$13M' global-nav.js
+          grep -F '40–50%' global-nav.js
+          grep -F '$8M' global-nav.js
+          grep -F '+40%' global-nav.js
+          grep -F '$700K' global-nav.js
+          grep -F '82%' global-nav.js
+
+      - name: Secondary links remain available
+        shell: bash
+        run: |
+          set -euo pipefail
+          grep -F 'Revenue Performance Hub' global-nav.js
+          grep -F 'MEDDPICC Lab' global-nav.js
+          grep -F 'Cybersecurity Lab' global-nav.js
+          grep -F '>Music</a>' global-nav.js
+
+      - name: Cache-busted shared navigation on key pages
+        shell: bash
+        run: |
+          set -euo pipefail
+          for f in index.html work-with-me.html ai-systems.html music.html recommendations.html revenue-performance.html; do
+            grep -F 'global-nav.js?v=20260911-impact-nav-1' "$f"
+          done
