@@ -1,0 +1,52 @@
+name: Impact Navigation Validation
+
+on:
+  push:
+    branches:
+      - 'validation/impact-nav-2026-09-11'
+
+permissions:
+  contents: read
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: JavaScript syntax
+        run: node --check global-nav.js
+      - name: Navigation assertions
+        shell: bash
+        run: |
+          set -euo pipefail
+          grep -F "['Results',ROOT+'#results']" global-nav.js
+          grep -F "['How I Build',ROOT+'#operating']" global-nav.js
+          grep -F "['Work With Me',ROOT+'work-with-me.html']" global-nav.js
+          if grep -A12 'const navItems' global-nav.js | grep -F "['Music'"; then
+            echo 'Music is still in primary navigation' >&2
+            exit 1
+          fi
+      - name: Results board assertions
+        shell: bash
+        run: |
+          set -euo pipefail
+          grep -F 'id=\x27results\x27' global-nav.js || grep -F "section.id='results'" global-nav.js
+          grep -F '$13M' global-nav.js
+          grep -F '40–50%' global-nav.js
+          grep -F '$700K' global-nav.js
+          grep -F '82%' global-nav.js
+      - name: Secondary asset assertions
+        shell: bash
+        run: |
+          set -euo pipefail
+          grep -F 'Revenue Performance Hub' global-nav.js
+          grep -F 'MEDDPICC Lab' global-nav.js
+          grep -F 'Cybersecurity Lab' global-nav.js
+          grep -F '>Music</a>' global-nav.js
+      - name: Cache version assertions
+        shell: bash
+        run: |
+          set -euo pipefail
+          for f in index.html work-with-me.html ai-systems.html music.html recommendations.html revenue-performance.html; do
+            grep -F 'global-nav.js?v=20260911-impact-nav-1' "$f"
+          done
