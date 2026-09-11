@@ -1,5 +1,5 @@
 (() => {
-  const VERSION = '20260909-revenue-hub-1';
+  const VERSION = '20260911-impact-nav-1';
   const ROOT = 'https://its-ez.com/';
 
   const css = `
@@ -20,6 +20,26 @@
 
   body.ez-homepage .section{padding-top:70px!important;padding-bottom:70px!important}
   body.ez-homepage .section-title{font-size:clamp(1.95rem,3.1vw,3.45rem)!important;line-height:1.04!important;letter-spacing:-.045em!important}
+
+  .ez-results-board{position:relative;overflow:hidden;padding:58px 0 62px;background:#08090b;color:#fff;border-top:1px solid rgba(255,255,255,.08);border-bottom:1px solid rgba(255,255,255,.1)}
+  .ez-results-board:before{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(239,23,23,.08),transparent 28%),repeating-linear-gradient(90deg,transparent 0,transparent calc(16.666% - 1px),rgba(255,255,255,.035) calc(16.666% - 1px),rgba(255,255,255,.035) 16.666%);pointer-events:none}
+  .ez-results-board .wrap{position:relative;z-index:1}
+  .ez-results-head{display:grid;grid-template-columns:minmax(0,1.2fr) minmax(280px,.8fr);gap:42px;align-items:end;margin-bottom:30px}
+  .ez-results-kicker{margin:0 0 10px;color:#ef1717;font:900 11px/1 Arial,Helvetica,sans-serif;letter-spacing:.18em;text-transform:uppercase}
+  .ez-results-head h2{margin:0;color:#fff;font-size:clamp(2.4rem,4.8vw,5rem);line-height:.92;letter-spacing:-.055em;text-transform:uppercase}
+  .ez-results-head p{margin:0;color:#b9bcc2;font-size:1rem;line-height:1.65;max-width:620px}
+  .ez-results-grid{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));border:1px solid rgba(255,255,255,.12);border-radius:18px;overflow:hidden;background:rgba(255,255,255,.025)}
+  .ez-result-stat{min-height:190px;padding:22px 20px;border-right:1px solid rgba(255,255,255,.1);display:flex;flex-direction:column;justify-content:space-between;gap:18px;background:linear-gradient(180deg,rgba(255,255,255,.025),rgba(255,255,255,.008))}
+  .ez-result-stat:last-child{border-right:0}
+  .ez-result-stat small{color:#888d96;font:900 9px/1.2 Arial,Helvetica,sans-serif;letter-spacing:.14em;text-transform:uppercase}
+  .ez-result-stat strong{display:block;color:#fff;font:950 clamp(2rem,3.2vw,3.8rem)/.9 Arial Black,Arial,Helvetica,sans-serif;letter-spacing:-.065em}
+  .ez-result-stat span{color:#d6d8dc;font-size:.82rem;font-weight:800;line-height:1.35}
+  .ez-results-foot{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:24px;padding-top:20px;border-top:1px solid rgba(255,255,255,.09)}
+  .ez-results-foot b{color:#fff;font-size:.78rem;letter-spacing:.12em;text-transform:uppercase}
+  .ez-results-actions{display:flex;flex-wrap:wrap;gap:10px}.ez-results-actions a{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:0 15px;border:1px solid rgba(255,255,255,.22);border-radius:999px;color:#fff!important;text-decoration:none!important;font-size:.72rem;font-weight:900;letter-spacing:.06em;text-transform:uppercase}.ez-results-actions a:first-child{border-color:#ef1717;background:#ef1717}.ez-results-actions a:hover{background:#fff;color:#08090b!important;border-color:#fff}
+
+  .ez-footer-utility{display:flex;flex-wrap:wrap;justify-content:center;gap:10px 16px;width:min(1520px,calc(100% - 40px));margin:18px auto 0;padding:16px 0 4px;border-top:1px solid rgba(127,127,127,.2);font:800 10px/1.3 Arial,Helvetica,sans-serif;letter-spacing:.08em;text-transform:uppercase}
+  .ez-footer-utility span{opacity:.62}.ez-footer-utility a{color:inherit!important;text-decoration:none!important;opacity:.74}.ez-footer-utility a:hover{opacity:1;text-decoration:underline!important;text-underline-offset:4px}
 
   body.ez-work-with-me .wm-hero{padding:92px 0 72px!important;min-height:0!important}
   body.ez-work-with-me .wm-grid{gap:48px!important;align-items:center!important}
@@ -45,15 +65,22 @@
   body.ez-music .original{padding:23px!important}
   body.ez-music .original h3{font-size:clamp(2rem,3.2vw,3.4rem)!important}
 
-  @media(max-width:1320px){.ez-global-brand-copy{display:none}.ez-global-shell{gap:8px}.ez-global-links>a{padding:0 6px;font-size:14px!important}.ez-global-cta{padding:0 11px;font-size:12px!important}}
+  @media(max-width:1320px){.ez-global-brand-copy{display:none}.ez-global-shell{gap:8px}.ez-global-links>a{padding:0 6px;font-size:14px!important}.ez-global-cta{padding:0 11px;font-size:12px!important}.ez-results-grid{grid-template-columns:repeat(3,minmax(0,1fr))}.ez-result-stat{border-bottom:1px solid rgba(255,255,255,.1)}.ez-result-stat:nth-child(3n){border-right:0}.ez-result-stat:nth-last-child(-n+3){border-bottom:0}}
   @media(max-width:1180px){:root{--ez-header-height:64px}body{padding-top:64px!important}.ez-global-header{height:64px!important}.ez-global-shell{height:64px;width:min(100% - 24px,1520px)}.ez-global-mark{width:40px;height:40px;font-size:18px}.ez-global-brand-copy{display:grid}.ez-global-menu{display:block}.ez-global-cta{display:none}.ez-global-links{display:none;position:absolute;left:12px;right:12px;top:64px;z-index:10001;margin:0;padding:10px;background:#0b0c0f;border:1px solid rgba(255,255,255,.13);border-radius:0 0 16px 16px;box-shadow:0 20px 45px rgba(0,0,0,.5);grid-template-columns:repeat(2,minmax(0,1fr));gap:4px;max-height:calc(100dvh - 76px);overflow:auto}.ez-global-header.is-open .ez-global-links{display:grid}.ez-global-links>a{width:100%;min-height:44px;padding:0 12px;font-size:14px!important}.ez-global-links>a[aria-current="page"]:after{left:12px;right:12px}body.ez-work-with-me .wm-grid{grid-template-columns:1fr!important}body.ez-work-with-me .wm-side{max-width:660px!important}body.ez-music .hero-grid{grid-template-columns:1fr!important}}
-  @media(max-width:720px){body.ez-music .release-grid{grid-template-columns:1fr 1fr!important}body.ez-music .release{min-height:190px!important}body.ez-work-with-me .wm-hero{padding:66px 0 56px!important}body.ez-work-with-me .wm-hero h1{font-size:clamp(3rem,14vw,4.9rem)!important}}
-  @media(max-width:520px){.ez-global-links{grid-template-columns:1fr}.ez-global-brand-copy strong{font-size:10px}.ez-global-brand-copy span{font-size:7px}body.ez-homepage .section{padding-top:54px!important;padding-bottom:54px!important}body.ez-music .section{padding:54px 0!important}body.ez-music .release-grid{grid-template-columns:1fr!important}body.ez-music .release{min-height:170px!important}}
+  @media(max-width:820px){.ez-results-head{grid-template-columns:1fr;gap:18px}.ez-results-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.ez-result-stat:nth-child(3n){border-right:1px solid rgba(255,255,255,.1)}.ez-result-stat:nth-child(2n){border-right:0}.ez-result-stat:nth-last-child(-n+3){border-bottom:1px solid rgba(255,255,255,.1)}.ez-result-stat:nth-last-child(-n+2){border-bottom:0}.ez-results-foot{align-items:flex-start;flex-direction:column}}
+  @media(max-width:720px){body.ez-music .release-grid{grid-template-columns:1fr 1fr!important}body.ez-music .release{min-height:190px!important}body.ez-work-with-me .wm-hero{padding:66px 0 56px!important}body.ez-work-with-me .wm-hero h1{font-size:clamp(3rem,14vw,4.9rem)!important}.ez-results-board{padding:46px 0 50px}.ez-results-head h2{font-size:clamp(2.5rem,12vw,4.4rem)}}
+  @media(max-width:520px){.ez-global-links{grid-template-columns:1fr}.ez-global-brand-copy strong{font-size:10px}.ez-global-brand-copy span{font-size:7px}body.ez-homepage .section{padding-top:54px!important;padding-bottom:54px!important}body.ez-music .section{padding:54px 0!important}body.ez-music .release-grid{grid-template-columns:1fr!important}body.ez-music .release{min-height:170px!important}.ez-results-grid{grid-template-columns:1fr}.ez-result-stat{min-height:150px;border-right:0!important;border-bottom:1px solid rgba(255,255,255,.1)!important}.ez-result-stat:last-child{border-bottom:0!important}.ez-footer-utility{width:calc(100% - 28px);justify-content:flex-start}}
   @media(max-width:360px){.ez-global-brand-copy{display:none}.ez-global-shell{width:calc(100% - 18px)}}
   `;
 
   const navItems = [
-    ['Home',ROOT],['Work',ROOT+'#work'],['Services',ROOT+'work-with-me.html'],['Revenue Hub',ROOT+'revenue-performance.html'],['AI Systems',ROOT+'ai-systems.html'],['MEDDPICC','https://meddpicc-is-ez.erezhaimowicz.workers.dev/'],['Cybersecurity','https://ez-human-threat-academy.erezhaimowicz.workers.dev/'],['Music',ROOT+'music.html'],['Recommendations',ROOT+'recommendations.html']
+    ['Home',ROOT],
+    ['Work',ROOT+'#work'],
+    ['Results',ROOT+'#results'],
+    ['How I Build',ROOT+'#operating'],
+    ['AI Systems',ROOT+'ai-systems.html'],
+    ['Recommendations',ROOT+'recommendations.html'],
+    ['Work With Me',ROOT+'work-with-me.html']
   ];
 
   function addStyles(){
@@ -75,12 +102,13 @@
   function currentFor(label,href){
     const host=location.hostname.toLowerCase();
     const path=location.pathname.toLowerCase();
-    if(label==='MEDDPICC') return host.includes('meddpicc-is-ez') || host==='meddpicc.its-ez.com';
-    if(label==='Cybersecurity') return host.includes('ez-human-threat-academy');
     if(host!=='its-ez.com' && host!=='www.its-ez.com') return false;
     const targetPath=new URL(href).pathname.toLowerCase();
-    if(label==='Home') return (path==='/' || path==='/index.html') && !location.hash;
-    if(label==='Work') return (path==='/' || path==='/index.html') && location.hash==='#work';
+    const onHome=path==='/' || path==='/index.html';
+    if(label==='Home') return onHome && !location.hash;
+    if(label==='Work') return onHome && location.hash==='#work';
+    if(label==='Results') return onHome && location.hash==='#results';
+    if(label==='How I Build') return onHome && location.hash==='#operating';
     return targetPath===path;
   }
 
@@ -118,6 +146,38 @@
     window.addEventListener('popstate',updateActive);
     window.addEventListener('resize',()=>{if(window.innerWidth>1180)closeMenu();},{passive:true});
     document.addEventListener('keydown',e=>{if(e.key==='Escape'&&header.classList.contains('is-open')){closeMenu();button.focus();}});
+  }
+
+  function installHomepageImpact(){
+    if(!document.body.classList.contains('ez-homepage')) return;
+    if(!document.getElementById('results')){
+      const section=document.createElement('section');
+      section.className='ez-results-board';
+      section.id='results';
+      section.dataset.pageMapLabel='Results';
+      section.setAttribute('aria-labelledby','ez-results-title');
+      section.innerHTML=`<div class="wrap"><div class="ez-results-head"><div><p class="ez-results-kicker">RESULTS / PERFORMANCE BOARD</p><h2 id="ez-results-title">The work should move the number.</h2></div><p>Selected outcomes from the systems and programs below. Open the case studies to inspect the problem, architecture, execution, tools, and evidence behind each result.</p></div><div class="ez-results-grid" aria-label="Selected measured outcomes"><article class="ez-result-stat"><small>SentinelOne / Partners</small><strong>$13M</strong><span>Partner pipeline influenced</span></article><article class="ez-result-stat"><small>SentinelOne / Readiness</small><strong>40–50%</strong><span>Faster partner ramp</span></article><article class="ez-result-stat"><small>Twilio / Revenue</small><strong>$8M</strong><span>Pipeline growth supported</span></article><article class="ez-result-stat"><small>Twilio / Conversion</small><strong>+40%</strong><span>Deal conversion lift</span></article><article class="ez-result-stat"><small>Twilio / Efficiency</small><strong>$700K</strong><span>Annual GTM technology savings</span></article><article class="ez-result-stat"><small>Twilio / Execution</small><strong>82%</strong><span>MEDDPICC adoption</span></article></div><div class="ez-results-foot"><b>Proof is better than promises.</b><div class="ez-results-actions"><a href="#work">Inspect the work →</a><a href="${ROOT}recommendations.html">Read recommendations →</a></div></div></div>`;
+      const motion=document.querySelector('.ez-motion-break');
+      const hero=document.querySelector('.hero-2026');
+      if(motion) motion.insertAdjacentElement('afterend',section);
+      else if(hero) hero.insertAdjacentElement('afterend',section);
+      else document.querySelector('main')?.prepend(section);
+    }
+    const heroActions=document.querySelector('.ez-hero-actions');
+    if(heroActions){
+      const actions=heroActions.querySelectorAll('a');
+      if(actions[1]){actions[1].href='#results';actions[1].textContent='See Results →';}
+    }
+  }
+
+  function installSecondaryFooterLinks(){
+    const footer=document.querySelector('footer');
+    if(!footer || footer.querySelector('.ez-footer-utility')) return;
+    const nav=document.createElement('nav');
+    nav.className='ez-footer-utility';
+    nav.setAttribute('aria-label','More from EZ');
+    nav.innerHTML=`<span>More from EZ</span><a href="${ROOT}revenue-performance.html">Revenue Performance Hub</a><a href="https://meddpicc-is-ez.erezhaimowicz.workers.dev/">MEDDPICC Lab</a><a href="https://ez-human-threat-academy.erezhaimowicz.workers.dev/">Cybersecurity Lab</a><a href="${ROOT}music.html">Music</a>`;
+    footer.appendChild(nav);
   }
 
   function installPageMap(){
@@ -209,6 +269,15 @@
     fixMusicSoundCloud();
   }
 
-  function init(){addStyles();markPage();renderHeader();installPageMap();installAiSystemMap();loadPageExtensions();}
+  function init(){
+    addStyles();
+    markPage();
+    renderHeader();
+    installHomepageImpact();
+    installSecondaryFooterLinks();
+    installPageMap();
+    installAiSystemMap();
+    loadPageExtensions();
+  }
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',init,{once:true}); else init();
 })();
