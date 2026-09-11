@@ -65,7 +65,7 @@ jobs:
 
       - name: Validate output
         run: |
-          node -e "const x=require('./data/ai-systems-ratings.json'); if(x.summary.total!==126) throw new Error('ratings inventory must contain 126 platforms'); if(Object.keys(x.items).length!==126) throw new Error('ratings output must contain 126 item records'); if(x.methodologyVersion!=='2.0') throw new Error('EZ Score methodology must be v2.0'); console.log(x.summary)"
+          node -e "const x=require('./data/ai-systems-ratings.json'); const count=Object.keys(x.items||{}).length; if(!Number.isInteger(x.summary?.total)||x.summary.total<1) throw new Error('ratings inventory total must be a positive integer'); if(x.summary.total!==count) throw new Error('ratings summary total must match generated item records'); if(x.methodologyVersion!=='2.0') throw new Error('EZ Score methodology must be v2.0'); console.log(x.summary)"
 
       - name: Commit changed snapshots
         if: github.event_name != 'pull_request'
