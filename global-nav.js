@@ -1,5 +1,5 @@
 (() => {
-  const VERSION = '20260911-impact-nav-1';
+  const VERSION = '20260912-company-launch-2';
   const ROOT = (location.hostname.includes('githack.com') || location.hostname.includes('github.io')) ? location.href.replace(/[^/]*(?:[?#].*)?$/, '') : 'https://its-ez.com/';
 
   const css = `
@@ -100,16 +100,12 @@
   }
 
   function currentFor(label,href){
-    const host=location.hostname.toLowerCase();
-    const path=location.pathname.toLowerCase();
-    if(host!=='its-ez.com' && host!=='www.its-ez.com') return false;
-    const targetPath=new URL(href).pathname.toLowerCase();
-    const onHome=path==='/' || path==='/index.html';
-    if(label==='Home') return onHome && !location.hash;
-    if(label==='Work') return onHome && location.hash==='#work';
-    if(label==='Results') return onHome && location.hash==='#results';
-    if(label==='How I Build') return onHome && location.hash==='#operating';
-    return targetPath===path;
+    const target=new URL(href,location.href);
+    const normalize=path=>path.toLowerCase().replace(/index\.html$/, '');
+    const path=normalize(location.pathname);
+    if(target.origin!==location.origin || normalize(target.pathname)!==path) return false;
+    if(path.endsWith('/')) return target.hash===location.hash;
+    return true;
   }
 
   function markPage(){
@@ -144,6 +140,7 @@
     document.addEventListener('ez:page-map-open',closeMenu);
     window.addEventListener('hashchange',updateActive);
     window.addEventListener('popstate',updateActive);
+    document.addEventListener('ez:navigation-updated',updateActive);
     window.addEventListener('resize',()=>{if(window.innerWidth>1180)closeMenu();},{passive:true});
     document.addEventListener('keydown',e=>{if(e.key==='Escape'&&header.classList.contains('is-open')){closeMenu();button.focus();}});
   }
@@ -375,7 +372,7 @@
     else if(about) about.insertAdjacentElement('beforebegin',section);
     else document.querySelector('main')?.prepend(section);
     const heroActions=document.querySelector('.ez-hero-actions');
-    if(heroActions){const links=heroActions.querySelectorAll('a');if(links[1]){links[1].href='#work';links[1].textContent='See My Work →';}}
+    if(heroActions){const links=heroActions.querySelectorAll('a');if(links[1]){links[1].href='#work';links[1].textContent='See the Work →';}}
   }
 
   function addHumanLeadership(){
@@ -502,6 +499,7 @@
     group?.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));
     document.addEventListener('click',e=>{if(group?.classList.contains('is-open')&&!group.contains(e.target))close();});
     document.addEventListener('keydown',e=>{if(e.key==='Escape'&&group?.classList.contains('is-open')){close();button?.focus();}});
+    document.dispatchEvent(new Event('ez:navigation-updated'));
     return true;
   }
 
