@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'global-nav.js'
+      - 'services-catalog.js'
       - 'index.html'
       - 'work-with-me.html'
       - 'revenue-performance.html'
@@ -16,6 +17,7 @@ on:
   pull_request:
     paths:
       - 'global-nav.js'
+      - 'services-catalog.js'
       - 'index.html'
       - 'work-with-me.html'
       - 'revenue-performance.html'
@@ -35,7 +37,9 @@ jobs:
       - uses: actions/checkout@v4
 
       - name: JavaScript syntax
-        run: node --check global-nav.js
+        run: |
+          node --check global-nav.js
+          node --check services-catalog.js
 
       - name: Primary navigation assertions
         shell: bash
@@ -69,8 +73,10 @@ jobs:
           grep -F '$13M' global-nav.js
           grep -F '40–50%' global-nav.js
           grep -F '$8M' global-nav.js
-          grep -F '+40%' global-nav.js
-          grep -F '$700K' global-nav.js
+          if grep -E '\+40%|\$700K' global-nav.js; then
+            echo 'Unresolved conversion and tooling-savings claims must stay off the homepage' >&2
+            exit 1
+          fi
           grep -F '82%' global-nav.js
 
       - name: Secondary links remain available
@@ -87,5 +93,5 @@ jobs:
         run: |
           set -euo pipefail
           for f in index.html work-with-me.html ai-systems.html music.html recommendations.html revenue-performance.html; do
-            grep -F 'global-nav.js?v=20260911-impact-nav-1' "$f"
+            grep -F 'global-nav.js?v=20260912-company-launch-1' "$f"
           done
