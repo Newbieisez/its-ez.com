@@ -8,9 +8,15 @@ body.ez-revenue-hub .rp-section-head>p,body.ez-revenue-hub .rp-learning-top p,bo
 body.ez-revenue-hub .rp-role-card,body.ez-revenue-hub .rp-learning-panel,body.ez-revenue-hub .rp-module,body.ez-revenue-hub .rp-kpi-card,body.ez-revenue-hub .rp-diagnostic-card,body.ez-revenue-hub .rp-program-card,body.ez-revenue-hub .rp-cadence-grid article,body.ez-revenue-hub .rp-resource-card,body.ez-revenue-hub .rp-context-warning{background:var(--rp2-card)!important;color:var(--rp2-ink)!important;border-color:var(--rp2-line)!important}
 body.ez-revenue-hub .rp-role-card.is-active{background:#111217!important;color:#fff!important}
 body.ez-revenue-hub[data-rp-theme="dark"] .rp-role-card.is-active{background:#f3f3f4!important;color:#0c0d10!important}
-body.ez-revenue-hub[data-rp-theme="dark"] .rp-role-card.is-active span{color:#595b62!important}
 body.ez-revenue-hub .rp-search input,body.ez-revenue-hub .rp-diagnostic-search input,body.ez-revenue-hub .rp-tool-row select,body.ez-revenue-hub .rp-filter-pills button,body.ez-revenue-hub .rp-diagnostic-shortcuts button,body.ez-revenue-hub .rp2-filter{background:var(--rp2-input)!important;color:var(--rp2-ink)!important;border-color:var(--rp2-line)!important}
 body.ez-revenue-hub[data-rp-theme="dark"] .rp-filter-pills button.is-active,body.ez-revenue-hub[data-rp-theme="dark"] .rp-diagnostic-shortcuts button:hover{background:#f4f4f5!important;color:#0b0c0e!important}
+
+/* formerly runtime-injected v2 fixes */
+.rp2-match-hidden,.rp2-page-hidden{display:none!important}
+body.ez-revenue-hub[data-rp-theme="dark"] .rp-kpi-card h3,body.ez-revenue-hub[data-rp-theme="dark"] .rp-diagnostic-card h3,body.ez-revenue-hub[data-rp-theme="dark"] .rp-program-card h3,body.ez-revenue-hub[data-rp-theme="dark"] .rp-cadence-grid h3,body.ez-revenue-hub[data-rp-theme="dark"] .rp-program-meta b,body.ez-revenue-hub[data-rp-theme="dark"] .rp-diagnostic-card p b,body.ez-revenue-hub[data-rp-theme="dark"] .rp-context-warning b{color:#f6f6f7!important}
+body.ez-revenue-hub[data-rp-theme="dark"] .rp-kpi-card .rp-tag{background:#272a31!important;color:#d7d8dd!important}
+.rp-diagnostic-shortcuts button.is-active{background:#111!important;color:#fff!important;border-color:#111!important}
+body.ez-revenue-hub[data-rp-theme="dark"] .rp-diagnostic-shortcuts button.is-active{background:#f4f4f5!important;color:#0b0c0d!important}
 
 /* hero: prevent Revenue Professional? from wrapping/cropping */
 body.ez-revenue-hub .rp-hero{padding-top:clamp(58px,7vw,86px)!important;padding-bottom:clamp(54px,6vw,74px)!important}
@@ -51,6 +57,15 @@ body.ez-revenue-hub .rp-hero h1 em.rp-hero-roleline{display:block!important;widt
 .rp2-extra{display:none;margin-top:13px;padding:13px;border-radius:12px;background:var(--rp2-surface);color:var(--rp2-muted);font-size:.8rem;line-height:1.55}
 .rp2-extra.is-open{display:block}
 .rp2-extra b{color:var(--rp2-ink)}
+
+/* consolidated KPI metric guidance (formerly v4 runtime styles) */
+.rp2-metric-guidance{display:none;margin-top:16px;padding:18px;border:1px solid var(--rp2-line);border-radius:14px;background:var(--rp2-surface);color:var(--rp2-ink)}
+.rp2-metric-guidance.is-open{display:block}
+.rp2-guidance-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.rp2-guidance-grid>div{padding:14px;border:1px solid var(--rp2-line);border-radius:10px;background:var(--rp2-card)}
+.rp2-guidance-grid b{display:block;margin-bottom:7px;color:var(--rp2-ink)}
+.rp2-guidance-grid p{margin:0;line-height:1.55;color:var(--rp2-muted)!important}
+@media(max-width:700px){.rp2-guidance-grid{grid-template-columns:1fr}}
 
 /* role-specific AI learning block */
 .rp2-ai-role{margin-top:22px;padding:20px;border:1px solid var(--rp2-line);border-radius:16px;background:var(--rp2-card)}
