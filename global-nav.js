@@ -449,7 +449,7 @@
     .ez-nav-resources:hover,.ez-nav-resources[aria-expanded="true"]{background:rgba(255,255,255,.07);color:#fff}
     .ez-nav-resources:after{content:"⌄";margin-left:6px;font-size:12px}
     .ez-nav-dropdown{display:none;position:absolute;right:0;top:48px;width:min(330px,calc(100vw - 30px));padding:8px;border:1px solid rgba(255,255,255,.14);border-radius:14px;background:#0b0c0f;box-shadow:0 22px 60px rgba(0,0,0,.5);z-index:10010}
-    .ez-nav-group.is-open .ez-nav-dropdown,.ez-nav-group:focus-within .ez-nav-dropdown{display:grid}
+    .ez-nav-group.is-open .ez-nav-dropdown{display:grid}
     .ez-nav-dropdown a{display:grid;gap:3px;padding:12px 13px;border-radius:9px;color:#fff!important;text-decoration:none!important}
     .ez-nav-dropdown a:hover,.ez-nav-dropdown a:focus-visible{background:rgba(255,255,255,.08);outline:none}
     .ez-nav-dropdown strong{font-size:12px;line-height:1.2}
