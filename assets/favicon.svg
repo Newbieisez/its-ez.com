@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="EZ Enablement">
+  <rect width="64" height="64" rx="12" fill="#0b0b0c"/>
+  <rect x="3.25" y="3.25" width="57.5" height="57.5" rx="9.5" fill="none" stroke="#ffffff" stroke-width="2.5"/>
+  <text x="32.5" y="45" text-anchor="middle" font-family="Arial Black, Arial Narrow, Arial, sans-serif" font-weight="900" font-size="35" letter-spacing="-2.5"><tspan fill="#ffffff">E</tspan><tspan fill="#ef1717">Z</tspan></text>
+</svg>

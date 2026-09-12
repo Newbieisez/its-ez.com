@@ -495,11 +495,14 @@ body.ez-homepage .ez-motion-break{
 body.ez-homepage .ez-motion-break video{
   display:block!important;
   width:100%!important;
-  height:clamp(280px,38vw,620px)!important;
-  max-width:none!important;
-  object-fit:cover!important;
+  max-width:1100px!important;
+  height:auto!important;
+  aspect-ratio:16/9!important;
+  max-height:620px!important;
+  object-fit:contain!important;
   object-position:center!important;
-  margin:0!important;
+  margin:0 auto!important;
+  background:#050607!important;
 }
 /* EZ HERO COMPANY STRIP POLISH END */
 
