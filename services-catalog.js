@@ -3,7 +3,7 @@
   if (!path.endsWith('/work-with-me.html') && !path.endsWith('work-with-me.html')) return;
 
   const existingOffers = document.getElementById('offers');
-  if (existingOffers) existingOffers.style.display = 'none';
+  if (existingOffers) { existingOffers.style.display = 'none'; existingOffers.id = 'legacy-offers'; }
 
   const heroExplore = document.querySelector('.wm-hero .hero-actions a[href="#offers"]');
   if (heroExplore) {
@@ -43,6 +43,7 @@
     .ez-package ul{list-style:none;padding:0;margin:auto 0 0}
     .ez-package li{padding:8px 0;border-top:1px solid rgba(0,0,0,.12);font-size:.79rem;font-weight:750;line-height:1.35}
     .ez-package.featured li{border-color:rgba(255,255,255,.15)}
+    .ez-package .ez-package-measure{margin:18px 0 0;font-size:.82rem;line-height:1.5}.ez-package-measure strong{display:block;color:inherit;margin-bottom:5px}.ez-package-select{margin-top:16px;min-height:44px;padding:10px 12px;border:1px solid currentColor;border-radius:10px;background:transparent;color:inherit;text-align:left;font:700 .82rem/1.35 Arial,sans-serif;cursor:pointer}.ez-package-select:focus-visible{outline:3px solid #ef1717;outline-offset:3px}
     .ez-package-foot{margin-top:18px;padding-top:13px;border-top:1px solid rgba(0,0,0,.12);font-size:.69rem;line-height:1.45;color:#77716b}
     .ez-package.featured .ez-package-foot{border-color:rgba(255,255,255,.15);color:#9699a1}
 
@@ -89,44 +90,44 @@
   document.head.appendChild(style);
 
   const packages = [
-    {tag:'01 / TRAIN THE TEAM',name:'Corporate Training Series',badge:'Core',desc:'Custom live or blended training built around the work your people actually need to perform.',items:['Discovery and stakeholder diagnosis','Custom workshop or multi-session series','Practice, scenarios, and participant tools','Reinforcement plan and manager follow-up'],foot:'Best for company-wide capability building, team upskilling, and focused behavior change.',featured:true},
-    {tag:'02 / ENABLE REVENUE',name:'Sales Readiness Accelerator',badge:'Core',desc:'Turn sales methodology, messaging, discovery, and deal execution into consistent field behavior.',items:['Onboarding and role readiness','MEDDPICC, discovery, value, and objections','Practice and certification','Manager coaching and deal inspection'],foot:'Best for sales teams that know what good should look like but execute it inconsistently.'},
-    {tag:'03 / GROW MANAGERS',name:'Manager Coaching & Growth Program',badge:'Core',desc:'Give frontline managers a practical operating rhythm for coaching people and inspecting performance.',items:['Manager workshops and facilitation','Coaching cadence and 1:1 tools','Call and deal review rubrics','Reinforcement and calibration'],foot:'Best for new managers, inconsistent coaching cultures, and teams scaling through frontline leadership.'},
-    {tag:'04 / MAKE AI USEFUL',name:'AI at Work Accelerator',badge:'AI',desc:'Role-based AI training that moves from generic prompting to safe, repeatable workflows people actually use.',items:['AI literacy and safe-use foundations','Role-specific workflow mapping','Prompt and assistant design','Adoption practice and governance'],foot:'Best for organizations that bought AI access but still need real adoption and useful workflows.'},
-    {tag:'05 / SCALE PARTNERS',name:'Partner Academy & Accreditation',badge:'Partner',desc:'Build a clear learning and readiness journey for resellers, distributors, MSPs, SIs, and technical partners.',items:['Partner role and journey architecture','Learning paths and accreditation','Sales and technical readiness','Portal, LMS, PRM, and measurement design'],foot:'Best for partner programs that are growing faster than the enablement experience.'},
-    {tag:'06 / RAMP FASTER',name:'Onboarding & Certification Engine',badge:'Learning',desc:'Replace passive onboarding with role milestones, practice, proof, and manager checkpoints.',items:['30/60/90 role journeys','Practice and scenario design','Certification and remediation','Manager checkpoints and readiness evidence'],foot:'Best for new-hire ramp, role transitions, product launches, and readiness standardization.'},
-    {tag:'07 / LEAD THE ROOM',name:'SKO, Offsite & Facilitation Experience',badge:'Live',desc:'Design and facilitate live experiences that are useful before, during, and after the event.',items:['Agenda and learning architecture','Breakouts, workshops, and facilitation','Speaker support and rehearsal','Post-event activation and reinforcement'],foot:'Best for SKOs, leadership offsites, kickoffs, team summits, and major change moments.'},
-    {tag:'08 / BUILD THE SYSTEM',name:'Enablement Tech & Automation Build',badge:'Tech',desc:'Connect the tools, knowledge, workflows, and AI layer behind the learning experience.',items:['LMS, CRM, CMS, PRM, and knowledge architecture','AI assistants and governed retrieval','Workflow automation and resource hubs','Analytics, dashboards, and measurement design'],foot:'Best when the problem is not just training. It is the system around the training.'},
-    {tag:'09 / TRANSFORM THE FUNCTION',name:'Full Enablement Engine',badge:'Transformation',desc:'A broader diagnose, design, build, launch, and measure engagement for organizations building or rebuilding enablement.',items:['Performance and maturity diagnosis','Operating model and roadmap','Priority program builds','Manager system, technology, and measurement'],foot:'Best for 0→1 functions, rebuilds, or organizations that need the pieces to work as one system.',featured:true}
+    {tag:'01 / TRAIN THE TEAM',name:'Corporate Training Series',badge:'Core',desc:'Custom live or blended training built around the work your people actually need to perform.',items:['Agree the team’s goals and current skill gaps','Custom workshop or multi-session series','Practice, scenarios, and participant tools','Reinforcement plan and manager follow-up'],goal:'training',measure:'Skill-check results and the quality of work after training.',foot:'Best for company-wide capability building, team upskilling, and focused behavior change.',featured:true},
+    {tag:'02 / ENABLE REVENUE',name:'Sales Readiness Accelerator',badge:'Core',desc:'Turn sales methodology, messaging, discovery, and deal execution into consistent field behavior.',items:['Onboarding and role readiness','Customer discovery, deal qualification, value, and objections','Practice and certification','Manager coaching and deal inspection'],goal:'sales',measure:'Time to a first qualified deal, deal quality, and win rate.',foot:'Best for sales teams that know what good should look like but execute it inconsistently.'},
+    {tag:'03 / GROW MANAGERS',name:'Manager Coaching & Growth Program',badge:'Core',desc:'Give frontline managers a practical operating rhythm for coaching people and inspecting performance.',items:['Manager workshops and facilitation','Regular coaching and one-to-one meeting tools','Practical scorecards for reviewing calls and deals','Follow-up coaching and shared scoring standards'],goal:'managers',measure:'Coaching follow-through, manager consistency, and team performance.',foot:'Best for new managers, inconsistent coaching cultures, and teams scaling through frontline leadership.'},
+    {tag:'04 / MAKE AI USEFUL',name:'AI at Work Accelerator',badge:'AI',desc:'Role-based AI training that moves from generic prompting to safe, repeatable workflows people actually use.',items:['AI literacy and safe-use foundations','Role-specific workflow mapping','Prompt and assistant design','Adoption practice and governance'],goal:'ai',measure:'Time per task, answer quality, and continued use of the agreed workflows.',foot:'Best for organizations that bought AI access but still need real adoption and useful workflows.'},
+    {tag:'05 / SCALE PARTNERS',name:'Partner Academy & Accreditation',badge:'Partner',desc:'Build a clear learning and readiness journey for resellers, distributors, service providers, and technical partners.',items:['Learning steps for each partner role','Learning paths and accreditation','Sales and technical readiness','Partner portals, learning tools, and progress measurement'],goal:'partners',measure:'Time to partner readiness, first sale, and use of partner resources.',foot:'Best for partner programs that are growing faster than the enablement experience.'},
+    {tag:'06 / RAMP FASTER',name:'Onboarding & Certification Engine',badge:'Learning',desc:'Replace passive onboarding with role milestones, practice, proof, and manager checkpoints.',items:['30/60/90 role journeys','Practice and scenario design','Readiness checks and targeted follow-up coaching','Manager checkpoints and readiness evidence'],goal:'onboarding',measure:'Time to independent work and readiness-check pass rates.',foot:'Best for new-hire ramp, role transitions, product launches, and readiness standardization.'},
+    {tag:'07 / LEAD THE ROOM',name:'Sales Kickoff, Offsite & Facilitation',badge:'Live',desc:'Design and facilitate live experiences that are useful before, during, and after the event.',items:['A clear agenda and useful learning activities','Breakouts, workshops, and facilitation','Speaker support and rehearsal','Post-event activation and reinforcement'],goal:'event',measure:'Participation, retained knowledge, and completion of agreed follow-up actions.',foot:'Best for sales kickoffs, leadership offsites, kickoffs, team summits, and major change moments.'},
+    {tag:'08 / BUILD THE SYSTEM',name:'Enablement Tech & Automation Build',badge:'Tech',desc:'Connect the tools, knowledge, workflows, and AI layer behind the learning experience.',items:['Learning, sales, content, and partner tools that work together','AI assistants using approved company information','Workflow automation and resource hubs','Analytics, dashboards, and measurement design'],goal:'systems',measure:'Time spent searching, duplicate work, and use of the connected tools.',foot:'Best for teams losing time to disconnected tools or hard-to-find information.'},
+    {tag:'09 / TRANSFORM THE FUNCTION',name:'Full Enablement Engine',badge:'Transformation',desc:'A broader diagnose, design, build, launch, and measure engagement for organizations building or rebuilding enablement.',items:['Identify performance gaps and what already works','Clear responsibilities and a practical delivery plan','Priority program builds','Manager system, technology, and measurement'],goal:'full',measure:'Time to readiness, program use, and the business outcomes agreed at the start.',foot:'Best for 0→1 functions, rebuilds, or organizations that need the pieces to work as one system.',featured:true}
   ];
 
   const library = [
     ['training','Corporate workshops','Interactive team training built around real work and real scenarios.'],
     ['training','Multi-session learning programs','Cohort or series-based training with practice and reinforcement.'],
-    ['training','Train-the-trainer','Facilitator preparation, delivery guides, practice, and calibration.'],
+    ['training','Train-the-trainer','Facilitator preparation, delivery guides, practice, and shared delivery standards.'],
     ['training','Public speaking and guest sessions','Keynotes, panels, practitioner sessions, and collaborative learning events.'],
     ['training','Learning design and curriculum','Adult-learning architecture, modules, activities, and assessments.'],
     ['sales','Sales onboarding','Role-based ramp, milestones, first-meeting readiness, and manager checkpoints.'],
-    ['sales','Sales methodology activation','MEDDPICC, discovery, value, qualification, stage behavior, and CRM reinforcement.'],
+    ['sales','Sales methodology activation','Customer discovery, value, deal qualification, and clear sales-process habits.'],
     ['sales','Competitive enablement','Battlecards, objection practice, competitive narratives, and field activation.'],
     ['sales','Playbooks and field tools','Discovery guides, mutual plans, talk tracks, checklists, and live-deal assets.'],
     ['managers','Manager development','Coaching skills, leadership facilitation, feedback, and performance conversations.'],
-    ['managers','Manager coaching systems','1:1 cadence, call reviews, deal inspection, rubrics, and calibration.'],
+    ['managers','Manager coaching systems','Regular one-to-one meetings, call reviews, deal reviews, scorecards, and shared standards.'],
     ['managers','Leadership workshops','Working sessions for alignment, change, accountability, and execution.'],
     ['partners','Partner onboarding','Role-based partner ramp, product fluency, and commercial readiness.'],
     ['partners','Partner academies','Structured learning journeys, accreditation, and ongoing partner learning.'],
     ['partners','Partner sales and technical training','Co-sell, discovery, demo, deployment, and technical readiness.'],
-    ['partners','PRM and LMS experience design','Portal journeys, content architecture, access, and readiness telemetry.'],
+    ['partners','Partner portals and learning-system design','Clear portal navigation, useful content, account access, and progress tracking.'],
     ['ai','AI literacy for teams','Practical foundations, safe-use habits, and role-relevant use cases.'],
     ['ai','Role-based AI workflows','Repeatable workflows for sales, enablement, managers, operations, and leaders.'],
     ['ai','Prompt systems and libraries','Reusable prompt frameworks, quality standards, and human-review guardrails.'],
-    ['ai','Knowledge assistants and RAG','Permission-aware search, governed answers, and in-flow knowledge support.'],
-    ['systems','Enablement technology audit','Review LMS, CRM, CMS, CI, PRM, content, search, and workflow friction.'],
+    ['ai','Company knowledge assistants','Help people find trusted answers from the company information they are allowed to use.'],
+    ['systems','Enablement technology audit','Review learning, sales, content, and partner tools to find wasted time and duplicate work.'],
     ['systems','Workflow automation','Automation for onboarding, reminders, reporting, approvals, and knowledge flow.'],
     ['systems','Portals and resource hubs','Searchable learning hubs, academies, onboarding centers, and self-service resources.'],
     ['systems','Measurement and dashboards','Capability, behavior, adoption, readiness, and business-impact measurement.'],
     ['strategy','Enablement maturity assessment','Diagnose what exists, where it breaks, and what should be built next.'],
-    ['strategy','Operating model and governance','Charter, intake, prioritization, RACI, cadence, and measurement model.'],
+    ['strategy','Operating model and governance','Clear goals, work requests, priorities, ownership, review meetings, and progress measures.'],
     ['strategy','Program architecture','Roadmaps for onboarding, manager enablement, partner readiness, AI adoption, or academies.'],
     ['strategy','Fractional enablement leadership','Senior direction, stakeholder alignment, prioritization, and hands-on build support.']
   ];
@@ -136,30 +137,30 @@
       <div class="ez-package-tag"><small>${p.tag}</small><span>${p.badge}</span></div>
       <h4>${p.name}</h4><p>${p.desc}</p>
       <ul>${p.items.map((item) => `<li>${item}</li>`).join('')}</ul>
-      <div class="ez-package-foot">${p.foot}</div>
+      <p class="ez-package-measure"><strong>How we measure progress</strong>${p.measure}</p><div class="ez-package-foot">${p.foot}</div><button type="button" class="ez-package-select" data-package-goal="${p.goal}">Choose this starting point ↓</button>
     </article>`).join('');
 
   const libraryHtml = library.map(([category,name,desc]) => `
-    <article class="ez-library-card" data-category="${category}"><small>${category.replace('ai','AI + Tech').replace('sales','Sales + Revenue').replace('managers','Managers').replace('partners','Partners').replace('systems','Systems').replace('strategy','Strategy').replace('training','Training')}</small><strong>${name}</strong><span>${desc}</span></article>`).join('');
+    <article class="ez-library-card" data-category="${category}"><small>${({training:'Training',sales:'Sales + Revenue',managers:'Managers',partners:'Partners',ai:'AI + Tech',systems:'Systems',strategy:'Strategy'})[category]}</small><strong>${name}</strong><span>${desc}</span></article>`).join('');
 
   const catalog = document.createElement('section');
   catalog.className = 'ez-catalog';
   catalog.id = 'services-catalog';
   catalog.dataset.pageMapLabel = 'Service catalogue';
   catalog.innerHTML = `
-    <div class="wrap">
+    <span id="offers" aria-hidden="true"></span><div class="wrap">
       <div class="ez-catalog-head">
         <div><p class="ez-catalog-kicker">Training + enablement catalogue</p><h2>Start with what people need to do better.</h2></div>
-        <p>EZ Enablement is a training and enablement company with strong technology and AI capability. Training comes first. Systems, automation, and AI get added when they make the learning easier to use, easier to scale, or easier to measure.</p>
+        <p>EZ Enablement is a training and enablement company with practical technology and artificial intelligence (AI) support. Training comes first. Systems, automation, and AI get added when they make the learning easier to use, easier to scale, or easier to measure.</p>
       </div>
-      <div class="ez-catalog-principle"><strong>Not every problem needs a transformation.</strong><span>Some teams need one great workshop. Some need a manager program. Some need an academy, an SKO, an AI adoption plan, or a complete enablement operating system. We scope around the outcome instead of forcing every client into the same package.</span></div>
+      <div class="ez-catalog-principle"><strong>Not every problem needs a transformation.</strong><span>Some teams need one great workshop. Some need a manager program. Some need an academy, a sales kickoff, an AI adoption plan, or a complete enablement operating system. We scope around the outcome instead of forcing every client into the same package.</span></div>
       <div class="ez-priority-strip" aria-label="EZ Enablement priorities">
         <div class="ez-priority"><small>01 / Training</small><strong>Build capability people can use.</strong></div>
         <div class="ez-priority"><small>02 / Enablement</small><strong>Turn learning into field behavior.</strong></div>
         <div class="ez-priority"><small>03 / AI</small><strong>Make new tools useful at work.</strong></div>
         <div class="ez-priority"><small>04 / Technology</small><strong>Build the system around the learning.</strong></div>
       </div>
-      <div class="ez-packages-head"><h3>Core packages</h3><p>These are starting architectures, not rigid boxes. We can use one, combine several, or design something custom after discovery.</p></div>
+      <div class="ez-packages-head"><h3>Core packages</h3><p>Choose a starting point. We can combine services or adapt the scope to your team’s goals.</p></div>
       <div class="ez-package-grid">${packageHtml}</div>
     </div>`;
 
@@ -173,16 +174,16 @@
   builder.dataset.pageMapLabel = 'Build my plan';
   builder.innerHTML = `
     <div class="wrap">
-      <div class="ez-builder-head"><div><p class="ez-builder-kicker">Build my plan</p><h2>Tell us the situation. We will point you to the right starting point.</h2></div><p>This borrows the useful part of a calculator without turning professional services into a public price list. Choose what is happening and the page will recommend a package architecture to discuss.</p></div>
+      <div class="ez-builder-head"><div><p class="ez-builder-kicker">Build my plan</p><h2>Tell us the situation. We will point you to the right starting point.</h2></div><p>Choose your goal, audience, and preferred format. Get a practical starting point to discuss with EZ Enablement.</p></div>
       <div class="ez-builder-grid">
         <form class="ez-builder-form" id="ez-plan-form">
-          <div class="ez-builder-field"><label for="ez-goal">What are you trying to improve?</label><select id="ez-goal" required><option value="training">General team capability or corporate training</option><option value="sales">Sales execution or revenue performance</option><option value="managers">Manager coaching or leadership growth</option><option value="ai">AI adoption and practical AI skills</option><option value="partners">Partner or channel readiness</option><option value="onboarding">Onboarding, ramp, or certification</option><option value="event">SKO, offsite, kickoff, or live event</option><option value="systems">Enablement tools, workflow, or automation</option><option value="full">Build or rebuild the enablement function</option></select></div>
-          <div class="ez-builder-field"><label for="ez-audience">Who needs it?</label><select id="ez-audience"><option value="mixed">Cross-functional or mixed audience</option><option value="sellers">Sales and revenue teams</option><option value="managers">Managers and leaders</option><option value="partners">Partners and channel teams</option><option value="enablement">Enablement, L&D, or RevOps</option><option value="company">Broad employee population</option></select></div>
+          <div class="ez-builder-field"><label for="ez-goal">What are you trying to improve?</label><select id="ez-goal" required><option value="training">General team capability or corporate training</option><option value="sales">Sales execution or revenue performance</option><option value="managers">Manager coaching or leadership growth</option><option value="ai">AI adoption and practical AI skills</option><option value="partners">Partner or channel readiness</option><option value="onboarding">Onboarding, ramp, or certification</option><option value="event">Sales kickoff, offsite, or live event</option><option value="systems">Enablement tools, workflow, or automation</option><option value="full">Build or rebuild the enablement function</option></select></div>
+          <div class="ez-builder-field"><label for="ez-audience">Who needs it?</label><select id="ez-audience"><option value="mixed">Cross-functional or mixed audience</option><option value="sellers">Sales and revenue teams</option><option value="managers">Managers and leaders</option><option value="partners">Partners and channel teams</option><option value="enablement">Training, learning, or sales operations teams</option><option value="company">Broad employee population</option></select></div>
           <div class="ez-builder-field"><label for="ez-delivery">What kind of experience sounds right?</label><select id="ez-delivery"><option value="live">Live workshop or facilitated session</option><option value="series">Multi-session program</option><option value="blended">Blended live + self-guided learning</option><option value="academy">Academy, portal, or certification experience</option><option value="build">System or technology build</option><option value="unsure">Not sure yet</option></select></div>
           <div class="ez-builder-field"><label for="ez-tech">Should AI or technology be part of the solution?</label><select id="ez-tech"><option value="maybe">Not sure. Recommend what makes sense.</option><option value="yes">Yes</option><option value="no">No. Keep it focused on people and learning.</option></select></div>
           <button class="ez-builder-button" type="submit">Recommend a starting point</button>
         </form>
-        <div class="ez-builder-result" id="ez-plan-result" aria-live="polite"><small>Recommended starting point</small><h3>Choose the situation on the left.</h3><p>You will get a suggested package and a few likely components. No pricing is displayed here. Final scope depends on the real problem, audience, customization, delivery, and technology needs.</p></div>
+        <div class="ez-builder-result" id="ez-plan-result" aria-live="polite"><small>Recommended starting point</small><h3>Choose your situation, then request a recommendation.</h3><p>You will get a suggested package and a few likely components. We will agree the scope around your goals, audience, delivery format, and support needs.</p></div>
       </div>
     </div>`;
   if (problemBand) problemBand.insertAdjacentElement('afterend', builder);
@@ -213,13 +214,13 @@
   const recommendations = {
     training:{name:'Corporate Training Series',desc:'A custom workshop or multi-session learning program is the cleanest starting point.',items:['Stakeholder discovery and audience diagnosis','Tailored live or blended training','Practice, participant tools, and reinforcement']},
     sales:{name:'Sales Readiness Accelerator',desc:'Start with the selling behaviors that matter most, then build practice, proof, and manager reinforcement around them.',items:['Methodology, discovery, messaging, or deal execution focus','Scenario practice and readiness checks','Manager coaching and workflow reinforcement']},
-    managers:{name:'Manager Coaching & Growth Program',desc:'Build the manager capability and operating rhythm that keeps training alive after the session.',items:['Manager development workshop series','1:1 coaching and inspection tools','Calibration, reinforcement, and practical leadership habits']},
+    managers:{name:'Manager Coaching & Growth Program',desc:'Build the manager capability and operating rhythm that keeps training alive after the session.',items:['Manager development workshop series','One-to-one coaching and review tools','Shared standards, follow-up coaching, and practical leadership habits']},
     ai:{name:'AI at Work Accelerator',desc:'Move from generic AI awareness to role-specific workflows and safe adoption.',items:['AI literacy and responsible-use foundations','Role-based workflow design and prompt systems','Practice, governance, and adoption reinforcement']},
-    partners:{name:'Partner Academy & Accreditation',desc:'Create a clearer path from partner onboarding to demonstrated commercial or technical readiness.',items:['Partner role and journey architecture','Learning paths, accreditation, and field assets','Portal, LMS, PRM, and readiness design where needed']},
-    onboarding:{name:'Onboarding & Certification Engine',desc:'Turn ramp into a sequence of milestones, practice, evidence, and manager checkpoints.',items:['30/60/90 role journey','Practice, certification, and remediation','Manager checkpoints and readiness evidence']},
-    event:{name:'SKO, Offsite & Facilitation Experience',desc:'Design the event around what should change after people leave the room.',items:['Agenda and learning architecture','Facilitation, breakouts, and rehearsal support','Post-event reinforcement and activation']},
+    partners:{name:'Partner Academy & Accreditation',desc:'Create a clearer path from partner onboarding to demonstrated commercial or technical readiness.',items:['Learning steps for each partner role','Learning paths, accreditation, and field assets','Partner portals, learning tools, and readiness checks where needed']},
+    onboarding:{name:'Onboarding & Certification Engine',desc:'Turn ramp into a sequence of milestones, practice, evidence, and manager checkpoints.',items:['30/60/90 role journey','Practice, readiness checks, and targeted follow-up coaching','Manager checkpoints and readiness evidence']},
+    event:{name:'Sales Kickoff, Offsite & Facilitation',desc:'Design the event around what should change after people leave the room.',items:['A clear agenda and useful learning activities','Facilitation, breakouts, and rehearsal support','Post-event reinforcement and activation']},
     systems:{name:'Enablement Tech & Automation Build',desc:'The core issue sounds like the system around the learning, not just the learning itself.',items:['Technology and workflow audit','Knowledge, automation, portal, or assistant design','Measurement and adoption plan']},
-    full:{name:'Full Enablement Engine',desc:'Start with diagnosis, then build the operating model and highest-priority programs as one connected system.',items:['Performance and maturity diagnosis','Operating model and priority roadmap','Training, manager, technology, and measurement build']}
+    full:{name:'Full Enablement Engine',desc:'Start with diagnosis, then build the operating model and highest-priority programs as one connected system.',items:['Identify performance gaps and what already works','Clear responsibilities and a prioritized delivery plan','Training, manager, technology, and measurement build']}
   };
 
   const form = document.getElementById('ez-plan-form');
@@ -236,7 +237,17 @@
     if (delivery === 'academy' && !['partners','onboarding'].includes(goal)) extras.push('Consider an academy or self-service learning layer for scale and reinforcement.');
     if (tech === 'yes' && !['ai','systems'].includes(goal)) extras.push('Add an AI or technology layer only where it removes friction or improves adoption.');
     if (tech === 'no') extras.push('Keep the first version people-centered. Technology is optional, not mandatory.');
-    result.innerHTML = `<small>Recommended starting point</small><h3>${rec.name}</h3><p>${rec.desc}</p><ul>${rec.items.map(item=>`<li>${item}</li>`).join('')}${extras.map(item=>`<li>${item}</li>`).join('')}</ul><a class="ez-builder-cta" href="index.html#contact">Request a scoped plan ↗</a><div class="ez-scope-note">Scope is shaped by audience size, number of roles, customization, delivery format, travel, technology or integration needs, and the amount of reinforcement required. We do not publish a one-size-fits-all rate card.</div>`;
+    result.innerHTML = `<small>Recommended starting point</small><h3>${rec.name}</h3><p>${rec.desc}</p><ul>${rec.items.map(item=>`<li>${item}</li>`).join('')}${extras.map(item=>`<li>${item}</li>`).join('')}</ul><a class="ez-builder-cta" href="index.html#contact">Request a scoped plan ↗</a><div class="ez-scope-note">Scope is shaped by audience size, number of roles, customization, delivery format, travel, technology or integration needs, and the amount of reinforcement required. Your proposal will define the work and how we measure progress.</div>`;
+  });
+
+  document.querySelectorAll('[data-package-goal]').forEach((button) => {
+    button.addEventListener('click', () => {
+      document.getElementById('ez-goal').value = button.dataset.packageGoal;
+      form.requestSubmit();
+      result.setAttribute('tabindex', '-1');
+      result.focus();
+      builder.scrollIntoView({block:'start'});
+    });
   });
 
   document.querySelectorAll('.ez-library-filter').forEach((button) => {
