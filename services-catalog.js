@@ -57,7 +57,7 @@
     .ez-builder-field select{width:100%;min-height:48px;padding:0 13px;border:1px solid rgba(255,255,255,.18);border-radius:10px;background:#0d0e12;color:#fff;font:700 .9rem/1.2 Arial,Helvetica,sans-serif}
     .ez-builder-button{min-height:48px;border:1px solid #ef1717;border-radius:999px;background:#ef1717;color:#fff;font-size:.75rem;font-weight:950;letter-spacing:.08em;text-transform:uppercase;cursor:pointer}
     .ez-builder-button:hover{background:#fff;border-color:#fff;color:#111}
-    .ez-builder-result{min-height:100%;display:flex;flex-direction:column;justify-content:center}
+    .ez-builder-result{min-height:100%;display:flex;flex-direction:column;justify-content:center;scroll-margin-top:calc(var(--ez-header-height,64px) + 16px)}
     .ez-builder-result small{color:#ef1717;font-size:.62rem;font-weight:950;letter-spacing:.14em;text-transform:uppercase}
     .ez-builder-result h3{margin:9px 0 11px;font-size:clamp(1.8rem,3vw,3rem);line-height:.95;letter-spacing:-.045em}
     .ez-builder-result p{margin:0;color:#b9bbc1;line-height:1.65}
@@ -85,7 +85,7 @@
     .ez-library-end a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 15px;border-radius:999px;background:#111;color:#fff!important;text-decoration:none!important;font-size:.7rem;font-weight:900;text-transform:uppercase;letter-spacing:.05em;white-space:nowrap}
     @media(max-width:1050px){.ez-package-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.ez-priority-strip{grid-template-columns:repeat(2,minmax(0,1fr))}.ez-library-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
     @media(max-width:820px){.ez-catalog-head,.ez-builder-head,.ez-builder-grid,.ez-library-head{grid-template-columns:1fr;gap:20px}.ez-packages-head{align-items:flex-start;flex-direction:column}.ez-packages-head p{text-align:left}.ez-catalog,.ez-builder,.ez-library{padding:58px 0}.ez-library-end{grid-template-columns:1fr}}
-    @media(max-width:620px){.ez-package-grid,.ez-priority-strip,.ez-library-grid{grid-template-columns:1fr}.ez-package{min-height:0}.ez-catalog-head h2,.ez-builder-head h2,.ez-library-head h2{font-size:clamp(2.5rem,13vw,4.15rem)}.ez-library-end a{width:100%}}
+    @media(max-width:620px){.ez-package-grid,.ez-priority-strip,.ez-library-grid{grid-template-columns:1fr}.ez-catalog-principle{flex-direction:column}.ez-package{min-height:0}.ez-catalog-head h2,.ez-builder-head h2,.ez-library-head h2{font-size:clamp(2.5rem,13vw,4.15rem)}.ez-library-end a{width:100%}}
   `;
   document.head.appendChild(style);
 
@@ -238,15 +238,15 @@
     if (tech === 'yes' && !['ai','systems'].includes(goal)) extras.push('Add an AI or technology layer only where it removes friction or improves adoption.');
     if (tech === 'no') extras.push('Keep the first version people-centered. Technology is optional, not mandatory.');
     result.innerHTML = `<small>Recommended starting point</small><h3>${rec.name}</h3><p>${rec.desc}</p><ul>${rec.items.map(item=>`<li>${item}</li>`).join('')}${extras.map(item=>`<li>${item}</li>`).join('')}</ul><a class="ez-builder-cta" href="index.html#contact">Request a scoped plan ↗</a><div class="ez-scope-note">Scope is shaped by audience size, number of roles, customization, delivery format, travel, technology or integration needs, and the amount of reinforcement required. Your proposal will define the work and how we measure progress.</div>`;
+    result.setAttribute('tabindex', '-1');
+    result.focus({preventScroll:true});
+    result.scrollIntoView({block:'start'});
   });
 
   document.querySelectorAll('[data-package-goal]').forEach((button) => {
     button.addEventListener('click', () => {
       document.getElementById('ez-goal').value = button.dataset.packageGoal;
       form.requestSubmit();
-      result.setAttribute('tabindex', '-1');
-      result.focus();
-      builder.scrollIntoView({block:'start'});
     });
   });
 
