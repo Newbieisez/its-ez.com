@@ -409,7 +409,7 @@ body.ez-homepage .hero.hero-2026 .ez-hero-mantra{margin-top:10px!important}
 
 @media(max-width:520px){
   body.ez-homepage .hero.hero-2026>.wrap{width:calc(100% - 22px)!important}
-  body.ez-homepage .hero.hero-2026 .ez-hero-title{font-size:clamp(42px,14vw,58px)!important}
+  body.ez-homepage .hero.hero-2026 h1.ez-hero-title{font-size:clamp(30px,11vw,56px)!important}
   body.ez-homepage .hero.hero-2026 .ez-hero-portrait-wrap{min-height:365px!important}
   body.ez-homepage .hero.hero-2026 .ez-value-grid{grid-template-columns:1fr!important}
   body.ez-homepage .hero.hero-2026 .ez-value-grid .ez-impact+.ez-impact{border-left:0!important;border-top:1px solid rgba(255,255,255,.15)!important}

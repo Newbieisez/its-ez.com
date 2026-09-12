@@ -1,12 +1,12 @@
 # its-ez.com
 
-Personal portfolio and consulting site for Erez Haimowicz.
+EZ Enablement company website: training, enablement, and practical support for the tools teams use at work. Founder experience and case studies remain clearly attributed to Erez Haimowicz’s prior roles.
 
 Live site: https://its-ez.com
 
 ## Homepage direction
 
-The homepage uses a dark personal-brand experience built around **People. Performance. Possibilities.** It combines measurable GTM / enablement impact, real company proof, clear consulting offers, live builds, case studies, recommendations, and contact paths.
+The homepage introduces EZ Enablement as a training and enablement partner. It combines plain-language services, founder track record, live builds, case studies, recommendations, and contact paths. Prior employer results are not presented as EZ Enablement client results.
 
 ## Active homepage architecture
 
@@ -19,6 +19,8 @@ The homepage is intentionally simple now:
 5. `homepage-extras.css` owns homepage-only interaction helpers such as live-preview overlays and section scroll offsets.
 6. `cinematic.css`, `cinematic-v2.css`, and `site-final.css` provide the dark portfolio presentation layer.
 7. `projects.css`, `wow.css`, and `contrast.css` remain shared base / component / compatibility styles used by the homepage and `work-with-me.html`.
+
+`services-catalog.js` provides the service selector and filterable catalogue on the services page. Each package explains the work, who it helps, and how progress will be measured. The artifact gallery remains deferred.
 
 ## Main pages
 
