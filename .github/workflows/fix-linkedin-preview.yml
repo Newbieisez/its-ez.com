@@ -1,0 +1,118 @@
+name: Fix LinkedIn Preview
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/fix-linkedin-preview.yml'
+
+permissions:
+  contents: write
+
+jobs:
+  repair-preview:
+    if: contains(github.event.head_commit.message, '[fix-linkedin-preview]')
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Install Pillow
+        run: python -m pip install --disable-pip-version-check pillow
+
+      - name: Generate fresh 1200x630 social image and update metadata
+        shell: bash
+        run: |
+          python <<'PY'
+          from PIL import Image, ImageDraw, ImageFont
+          from pathlib import Path
+          import os
+
+          W, H = 1200, 630
+          img = Image.new('RGB', (W, H), (11, 11, 12))
+          d = ImageDraw.Draw(img)
+
+          # Left brand rail
+          d.rectangle([0, 0, 18, H], fill=(230, 32, 24))
+          d.rectangle([18, 0, 24, H], fill=(255, 110, 28))
+
+          # Right-side racing-inspired geometry
+          polys = [
+              ([(850,-40),(1200,-40),(1200,170),(980,170)], (76,9,12)),
+              ([(920,110),(1200,110),(1200,360),(1020,360)], (136,14,18)),
+              ([(980,300),(1200,300),(1200,630),(1070,630)], (226,32,24)),
+              ([(760,470),(1200,470),(1200,630),(860,630)], (255,100,24)),
+          ]
+          for p, c in polys:
+              d.polygon(p, fill=c)
+          for x in [825, 910, 995]:
+              d.polygon([(x,0),(x+78,0),(x-60,H),(x-138,H)], fill=(18,18,20))
+          for off in [0,18,36]:
+              x = 825 + off
+              d.line([(x,70),(x-95,520)], fill=(245,72,34), width=3)
+
+          bold_path = '/usr/share/fonts/truetype/dejavu/DejaVuSans-Bold.ttf'
+          regular_path = '/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf'
+          if not os.path.exists(bold_path):
+              bold_path = regular_path
+
+          ez_font = ImageFont.truetype(bold_path, 46)
+          enable_font = ImageFont.truetype(bold_path, 17)
+          kicker_font = ImageFont.truetype(bold_path, 22)
+          head_font = ImageFont.truetype(bold_path, 58)
+          body_font = ImageFont.truetype(regular_path, 23)
+          small_font = ImageFont.truetype(bold_path, 20)
+          url_font = ImageFont.truetype(regular_path, 18)
+
+          d.text((62,48), 'EZ', font=ez_font, fill=(245,245,245))
+          d.text((130,59), 'ENABLEMENT', font=enable_font, fill=(185,185,188))
+          d.rectangle([62,102,212,106], fill=(230,32,24))
+
+          d.text((62,150), 'TRAINING + ENABLEMENT SYSTEMS', font=kicker_font, fill=(255,104,32))
+
+          lines = ['BUILD CAPABILITY.', 'CHANGE BEHAVIOR.', 'MOVE PERFORMANCE.']
+          y = 200
+          for i, line in enumerate(lines):
+              fill = (246,246,246) if i < 2 else (255,104,32)
+              d.text((62,y), line, font=head_font, fill=fill)
+              y += 72
+
+          d.text((62,446), 'Sales Enablement  •  Partner Enablement  •  AI Adoption  •  Learning Systems', font=body_font, fill=(205,205,209))
+          d.text((62,544), 'KNOW IT.  PRACTICE IT.  PROVE IT.  PERFORM.', font=small_font, fill=(246,246,246))
+          d.text((62,580), 'its-ez.com', font=url_font, fill=(160,160,165))
+
+          out = Path('assets/ez-social-preview-v2.jpg')
+          out.parent.mkdir(parents=True, exist_ok=True)
+          img.save(out, 'JPEG', quality=95, optimize=True, progressive=True)
+
+          path = Path('index.html')
+          html = path.read_text(encoding='utf-8')
+          html = html.replace('https://its-ez.com/assets/ez-social-preview.jpg', 'https://its-ez.com/assets/ez-social-preview-v2.jpg')
+          html = html.replace('EZ Enablement — Enablement Made Possible', 'EZ Enablement | Build Capability. Change Behavior. Move Performance.')
+          path.write_text(html, encoding='utf-8')
+          PY
+
+      - name: Verify generated image
+        run: |
+          python <<'PY'
+          from PIL import Image
+          img = Image.open('assets/ez-social-preview-v2.jpg')
+          assert img.size == (1200, 630), img.size
+          assert img.format == 'JPEG', img.format
+          print('verified', img.size, img.format)
+          PY
+          grep -q 'ez-social-preview-v2.jpg' index.html
+
+      - name: Commit preview repair
+        run: |
+          git config user.name 'EZ Preview Repair'
+          git config user.email 'actions@users.noreply.github.com'
+          git add assets/ez-social-preview-v2.jpg index.html
+          git diff --cached --stat
+          git commit -m 'fix: replace LinkedIn social preview image'
+          git push origin main
