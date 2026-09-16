@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>EZ Card | Erez Haimowicz · EZ Enablement</title>
+<meta name="description" content="The quick contact and portfolio card for Erez 'EZ' Haimowicz, founder of EZ Enablement LLC. Resume, LinkedIn, work, recommendations, music, and contact details in one mobile-friendly page.">
+<meta name="theme-color" content="#08090b">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="canonical" href="https://its-ez.com/ez.html">
+<meta property="og:title" content="EZ Card | Erez Haimowicz · EZ Enablement">
+<meta property="og:description" content="Contact EZ, see the work, open the resume, visit LinkedIn, and explore EZ Enablement from one mobile-friendly page.">
+<meta property="og:image" content="https://its-ez.com/assets/ez-social-preview-v2.jpg">
+<link rel="stylesheet" href="projects.css">
+<link rel="stylesheet" href="wow.css">
+<link rel="stylesheet" href="contrast.css">
+<style>
+:root{--card-red:#ef1717;--card-ink:#08090b;--card-paper:#f5f0e8;--card-muted:#676b73}
+*{box-sizing:border-box}
+body{margin:0;background:var(--card-ink);color:#fff;font-family:Arial,Helvetica,sans-serif}
+.card-shell{width:min(760px,calc(100% - 28px));margin:0 auto;padding:42px 0 72px}
+.card-top{display:grid;grid-template-columns:118px 1fr;gap:24px;align-items:center;padding:26px;border:1px solid rgba(255,255,255,.16);border-radius:24px;background:linear-gradient(145deg,#131519,#0b0c0f);box-shadow:0 24px 70px rgba(0,0,0,.35)}
+.card-photo{width:118px;height:118px;border-radius:20px;object-fit:cover;object-position:center top;background:#202329;border:1px solid rgba(255,255,255,.14)}
+.card-kicker{margin:0 0 8px;color:var(--card-red);font-size:.72rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+h1{margin:0;font-size:clamp(2.25rem,8vw,4.6rem);line-height:.9;letter-spacing:-.055em}
+.card-role{margin:14px 0 0;color:#c8cbd0;font-size:1rem;line-height:1.5}
+.card-role strong{color:#fff}
+.card-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:18px 0 0}
+.card-button{display:flex;align-items:center;justify-content:center;min-height:50px;padding:12px 15px;border-radius:999px;border:1px solid rgba(255,255,255,.18);background:#121419;color:#fff!important;text-decoration:none!important;font-size:.78rem;font-weight:900;letter-spacing:.04em;text-transform:uppercase;text-align:center}
+.card-button.primary{background:var(--card-red);border-color:var(--card-red)}
+.card-button:hover{background:#fff;color:#08090b!important;border-color:#fff}
+.card-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}
+.card-panel{padding:22px;border:1px solid rgba(255,255,255,.14);border-radius:20px;background:#0f1115}
+.card-panel h2{margin:0 0 14px;font-size:1.12rem;letter-spacing:-.02em}
+.card-links{display:grid;gap:8px}
+.card-link{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 0;border-top:1px solid rgba(255,255,255,.1);color:#fff!important;text-decoration:none!important;font-weight:800}
+.card-link:first-child{border-top:0;padding-top:0}
+.card-link span{color:#9398a2;font-size:.76rem;font-weight:700;text-align:right}
+.card-link:hover strong{color:var(--card-red)}
+.qr-panel{display:grid;grid-template-columns:1fr auto;gap:22px;align-items:center;margin-top:16px;padding:22px;border:1px solid rgba(255,255,255,.14);border-radius:20px;background:#f4efe7;color:#111}
+.qr-panel h2{margin:0 0 8px;font-size:1.45rem}
+.qr-panel p{margin:0;color:#575b63;line-height:1.55}
+#ez-qr{width:156px;height:156px;padding:10px;background:#fff;border-radius:14px;display:grid;place-items:center}
+#ez-qr img,#ez-qr canvas{max-width:100%!important;height:auto!important}
+.card-foot{margin-top:20px;text-align:center;color:#7d8189;font-size:.78rem;line-height:1.6}
+.card-foot a{color:#c9ccd2}
+@media(max-width:620px){.card-shell{padding-top:24px}.card-top{grid-template-columns:86px 1fr;gap:16px;padding:20px}.card-photo{width:86px;height:86px;border-radius:16px}.card-role{font-size:.9rem}.card-actions{grid-template-columns:1fr}.card-grid{grid-template-columns:1fr}.qr-panel{grid-template-columns:1fr;justify-items:start}#ez-qr{width:140px;height:140px}.card-panel{padding:20px}}
+@media(max-width:400px){.card-top{grid-template-columns:1fr}.card-photo{width:96px;height:96px}.card-shell{width:min(100% - 20px,760px)}}
+</style>
+<script src="global-nav.js?v=20260912-company-launch-2" defer></script>
+</head>
+<body>
+<main class="card-shell" id="top">
+  <section class="card-top" aria-labelledby="ez-card-name">
+    <img class="card-photo" src="assets/headshot2026fixed.svg?v=20260908-headshot-fixed-svg-1" alt="Erez Haimowicz" width="118" height="118">
+    <div>
+      <p class="card-kicker">EZ ENABLEMENT LLC · LAS VEGAS</p>
+      <h1 id="ez-card-name">Erez “EZ” Haimowicz</h1>
+      <p class="card-role"><strong>Founder · GTM & Enablement Builder</strong><br>Sales · Partners · AI Adoption · Learning · GTM Systems</p>
+    </div>
+  </section>
+
+  <div class="card-actions" aria-label="Primary contact actions">
+    <a class="card-button primary" href="mailto:ErezHaimowicz@gmail.com">Email EZ</a>
+    <a class="card-button" href="erez-haimowicz.vcf" download>Save Contact ↓</a>
+    <a class="card-button" href="https://www.linkedin.com/in/erezhaimowicz" target="_blank" rel="noopener">LinkedIn ↗</a>
+    <a class="card-button" href="Erez-Haimowicz-Executive-Resume.pdf" download>Resume ↓</a>
+  </div>
+
+  <section class="card-grid" aria-label="EZ links">
+    <article class="card-panel">
+      <h2>Work with EZ</h2>
+      <div class="card-links">
+        <a class="card-link" href="work-with-me.html"><strong>Ways to work together</strong><span>Build it · Fix it · Run it with me</span></a>
+        <a class="card-link" href="index.html#results"><strong>Measured results</strong><span>Proof before promises</span></a>
+        <a class="card-link" href="index.html#work"><strong>Selected work</strong><span>Case studies + systems</span></a>
+        <a class="card-link" href="ai-systems.html"><strong>AI Systems</strong><span>Adoption + workflows</span></a>
+      </div>
+    </article>
+    <article class="card-panel">
+      <h2>About EZ</h2>
+      <div class="card-links">
+        <a class="card-link" href="recommendations.html"><strong>Recommendations</strong><span>Managers · peers · partners</span></a>
+        <a class="card-link" href="revenue-performance.html"><strong>Revenue Performance</strong><span>Operating proof</span></a>
+        <a class="card-link" href="music.html"><strong>Avi Haimonix</strong><span>Music outside the work</span></a>
+        <a class="card-link" href="index.html#contact"><strong>Start a conversation</strong><span>Bring the messy problem</span></a>
+      </div>
+    </article>
+  </section>
+
+  <section class="qr-panel" aria-label="QR code for EZ Card">
+    <div>
+      <h2>Share this card.</h2>
+      <p>Scan to open <strong>its-ez.com/ez.html</strong>. Built for conferences, introductions, recruiter conversations, and quick follow-up.</p>
+    </div>
+    <div id="ez-qr" aria-label="QR code linking to EZ Card"></div>
+  </section>
+
+  <p class="card-foot">EZ Enablement LLC · <a href="https://its-ez.com/">its-ez.com</a> · <a href="mailto:ErezHaimowicz@gmail.com">ErezHaimowicz@gmail.com</a></p>
+</main>
+<footer></footer>
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+<script>
+(function(){
+  var target=document.getElementById('ez-qr');
+  if(target&&window.QRCode){new QRCode(target,{text:'https://its-ez.com/ez.html',width:136,height:136,colorDark:'#08090b',colorLight:'#ffffff',correctLevel:QRCode.CorrectLevel.M});}
+})();
+</script>
+</body>
+</html>
