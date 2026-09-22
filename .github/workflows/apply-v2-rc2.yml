@@ -24,9 +24,8 @@ jobs:
         shell: bash
         run: |
           set -euo pipefail
-          curl -fL --retry 3 --retry-delay 2 \
-            "https://drive.usercontent.google.com/download?id=14HO3i_ZH8jvmE-9IUe7n9ZYcVdauMtMR&export=download&confirm=t" \
-            -o /tmp/ez-rc2.zip
+          python -m pip install --quiet gdown
+          gdown --id 14HO3i_ZH8jvmE-9IUe7n9ZYcVdauMtMR --output /tmp/ez-rc2.zip
           unzip -t /tmp/ez-rc2.zip >/dev/null
 
       - name: Validate and apply snapshot
