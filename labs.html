@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Deal Labs & Deal Lens Selector — EZ Enablement</title>
+  <meta name="description" content="Active sales methodology scenario simulations and the intelligent Deal Lens Selector for enterprise sales teams.">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  
+  <header class="site-header">
+    <div class="header-container">
+      <a href="index.html" class="brand-logo">
+        <span>EZ ENABLEMENT</span>
+        <span class="brand-badge">V2 Commercial</span>
+      </a>
+
+      <nav class="main-nav">
+        <a href="index.html" class="">Home</a>
+<a href="store.html" class="">Storefront</a>
+<a href="labs.html" class="active">Deal Labs</a>
+<a href="how-i-help.html" class="">Sprints & Advisory</a>
+<a href="ai.html" class="">GTM AI Systems</a>
+<a href="work.html" class="">Work Portfolio</a>
+<a href="about.html" class="">About EZ</a>
+
+      </nav>
+
+      <div class="nav-actions">
+        <a href="store.html" class="btn btn-primary btn-sm">Explore Storefront</a>
+      </div>
+    </div>
+  </header>
+
+
+  <section class="hero-section" style="padding: 60px 24px 50px;">
+    <div class="hero-pill"><span>●</span> ACTIVE SCENARIO SIMULATION • DEAL LABS RC3</div>
+    <h1 class="hero-title" style="font-size: 40px;">EZ Deal Labs & Methodology Suite</h1>
+    <p class="hero-subtitle">
+      Stop training reps to memorize methodology acronyms. Put them in realistic deal defense simulations with 5-point observable rubrics across MEDDPICC, SPIN, SPICED, Gap, Sandler, and Challenger.
+    </p>
+  </section>
+
+  <main class="main-container">
+    
+    <div style="background: var(--slate-50); border: 1px solid var(--slate-200); border-radius: var(--radius-md); padding: 14px 18px; margin-bottom: 24px; font-size: 13px; color: var(--slate-700);">
+      <strong>Representative Simulation Notice:</strong> The diagnostic below is a representative decision sample. Full interactive methodology labs, answer keys, facilitator playbooks, and SCORM/xAPI packages are provided upon commercial licensing.
+    </div>
+
+    <section class="selector-box">
+      <div style="text-align: center; max-width: 750px; margin: 0 auto 32px;">
+        <span class="product-badge badge-methodology">Interactive Diagnostic Engine</span>
+        <h3 style="font-size: 28px; font-weight: 800; color: var(--slate-900); margin: 8px 0;">The EZ Deal Lens Selector</h3>
+        <p style="color: var(--slate-600); font-size: 15px;">Answer 5 quick questions about your sales motion to calculate the exact methodology lab that fixes your pipeline stall.</p>
+      </div>
+
+      <div class="selector-steps">
+        <div>
+          <label class="selector-question-label">1. Deal Size / Average Contract Value (ACV)</label>
+          <select id="lensAcv" class="selector-select">
+            <option value="low">Under $25K (High Velocity / Transactional)</option>
+            <option value="mid" selected>$25K to $100K (Mid-Market Consultative)</option>
+            <option value="high">$100K to $500K+ (Complex Enterprise)</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="selector-question-label">2. Buying Committee Stakeholders</label>
+          <select id="lensStakeholders" class="selector-select">
+            <option value="low">1 to 2 Stakeholders (Single Decision Maker)</option>
+            <option value="mid" selected>3 to 5 Stakeholders (Departmental Committee)</option>
+            <option value="high">6 to 12+ Stakeholders (Cross-Functional / Exec)</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="selector-question-label">3. Buyer Awareness & Pain State</label>
+          <select id="lensPain" class="selector-select">
+            <option value="unaware">Complacent / Unaware of Hidden Costs</option>
+            <option value="latent" selected>Latent Pain / Frustrated with Current Workarounds</option>
+            <option value="active">Active RFP / Formally Budgeted Initiative</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="selector-question-label">4. Typical Sales Cycle Length</label>
+          <select id="lensCycle" class="selector-select">
+            <option value="short">Under 30 Days</option>
+            <option value="mid" selected>30 to 90 Days</option>
+            <option value="long">90 to 180+ Days</option>
+          </select>
+        </div>
+
+        <div>
+          <label class="selector-question-label">5. Primary Deal Sticking Point / Funnel Leak</label>
+          <select id="lensLeak" class="selector-select">
+            <option value="unaware">Buyers don't see why they need to change now</option>
+            <option value="gate">Deals stall in qualification or endless exploration</option>
+            <option value="gap">Reps fail to quantify business impact & ROI</option>
+            <option value="eb" selected>Cannot access Economic Buyer; surprise legal delays</option>
+          </select>
+        </div>
+      </div>
+
+      <div style="text-align: center;">
+        <button id="calcDealLensBtn" class="btn btn-primary btn-lg">Calculate Optimal Methodology Lab</button>
+      </div>
+
+      <div id="selectorResultCard" class="selector-result-card"></div>
+    </section>
+
+    <div class="section-header" style="margin-top: 48px;">
+      <h2>Methodology Labs Catalog</h2>
+      <p>Purchase individual methodology labs ($297) or license the complete Master Suite ($997) with all facilitator guides and runner scripts.</p>
+    </div>
+
+    <div class="products-grid">
+      <div class="product-card featured">
+        <div class="card-top">
+          <span class="product-badge badge-methodology">Master Collection (RC3)</span>
+          <h3 class="product-title">Full Deal Labs Master Suite</h3>
+          <p class="product-subtitle">All 6 methodology labs + Deal Lens Selector + Facilitator Guides + Learner Field Manuals.</p>
+          <div class="product-meta-item"><strong>Deliverables</strong><span>Runnable HTML Apps, JSON Rule Engine, Field Manuals, Manager Keys</span></div>
+        </div>
+        <div class="card-bottom">
+          <div class="product-pricing-bar">
+            <div class="price-container"><span class="price-main">$997</span><span class="price-sub">One-Time Team License</span></div>
+            <div class="card-actions">
+              <button class="btn btn-outline btn-sm" onclick="openProductDetail('deal-labs-suite')">Store Standard</button>
+              <button class="btn btn-primary btn-sm" onclick="openCheckout('deal-labs-suite')">Instant Buy</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="card-top">
+          <span class="product-badge badge-methodology">Single Lab</span>
+          <h3 class="product-title">MEDDPICC Deal Execution Lab</h3>
+          <p class="product-subtitle">Active qualification gates forcing sellers to test Economic Buyer access and verify decision criteria.</p>
+          <div class="product-meta-item"><strong>Focus</strong><span>Metrics, Economic Buyer Access, Decision Process, Paper Process</span></div>
+        </div>
+        <div class="card-bottom">
+          <div class="product-pricing-bar">
+            <div class="price-container"><span class="price-main">$297</span><span class="price-sub">Single Lab License</span></div>
+            <div class="card-actions">
+              <button class="btn btn-outline btn-sm" onclick="openProductDetail('meddpicc-deal-lab')">Store Standard</button>
+              <button class="btn btn-primary btn-sm" onclick="openCheckout('meddpicc-deal-lab')">Instant Buy</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="product-card">
+        <div class="card-top">
+          <span class="product-badge badge-methodology">Single Lab</span>
+          <h3 class="product-title">SPIN Selling Deal Execution Lab</h3>
+          <p class="product-subtitle">Sequence Implication and Need-Payoff questions to amplify problem cost before presenting solutions.</p>
+          <div class="product-meta-item"><strong>Focus</strong><span>Situation -> Problem -> Implication -> Need-Payoff Discovery</span></div>
+        </div>
+        <div class="card-bottom">
+          <div class="product-pricing-bar">
+            <div class="price-container"><span class="price-main">$297</span><span class="price-sub">Single Lab License</span></div>
+            <div class="card-actions">
+              <button class="btn btn-outline btn-sm" onclick="openProductDetail('spin-deal-lab')">Store Standard</button>
+              <button class="btn btn-primary btn-sm" onclick="openCheckout('spin-deal-lab')">Instant Buy</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  
+  <footer class="site-footer">
+    <div class="footer-container">
+      <div class="footer-brand">
+        <h4>EZ ENABLEMENT LLC</h4>
+        <p style="font-size: 13px; line-height: 1.6; margin-bottom: 16px;">
+          Commercial go-to-market enablement systems, observable rubrics, interactive deal labs, and AI fluency architectures.
+        </p>
+        <span style="font-size: 12px; color: var(--slate-500);">Las Vegas, Nevada • Commercial Entity</span>
+      </div>
+
+      <div class="footer-col">
+        <h5>Digital Products</h5>
+        <ul>
+          <li><a href="store.html#card-rampready-os">RampReady 30/60/90 OS</a></li>
+          <li><a href="store.html#card-deal-labs-suite">Deal Labs Master Suite</a></li>
+          <li><a href="store.html#card-ez-ai-roleplay-library">AI Roleplay Library (100)</a></li>
+          <li><a href="store.html#card-ai-judgment-lab">AI Judgment Lab</a></li>
+          <li><a href="store.html#card-ai-fluency-lms-suite">AI Fluency LMS Package</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Consulting Sprints</h5>
+        <ul>
+          <li><a href="how-i-help.html#offer-a">Offer A: AI Adoption ($15K)</a></li>
+          <li><a href="how-i-help.html#offer-b">Offer B: GTM Diagnostic ($25K)</a></li>
+          <li><a href="how-i-help.html#offer-c">Offer C: Partner Launch ($20K)</a></li>
+          <li><a href="how-i-help.html#advisory">Advisory Session ($500)</a></li>
+          <li><a href="how-i-help.html#fractional">Fractional Enablement</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h5>Case Studies & Proof</h5>
+        <ul>
+          <li><a href="case-study-sentinelone.html">SentinelOne ($700K Saved)</a></li>
+          <li><a href="case-study-twilio.html">Twilio (SOAR Framework)</a></li>
+          <li><a href="recommendations.html">Recommendations</a></li>
+          <li><a href="about.html">Practitioner Pedigree</a></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <div>&copy; 2026 EZ Enablement LLC. All rights reserved. Commercial Use & IP Protected.</div>
+      <div>ENABLAYER is a separate software business and not affiliated with EZ Enablement commercial products.</div>
+    </div>
+  </footer>
+
+  <!-- Store Standard Product Detail Modal -->
+  <div class="modal-overlay" id="productDetailModal">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <h3 id="modalProductTitle">Product Title</h3>
+          <p id="modalProductSubtitle">Category • Pricing Tier</p>
+        </div>
+        <button class="close-modal-btn" onclick="closeModal('productDetailModal')">&times;</button>
+      </div>
+      <div class="modal-body" id="productDetailBody"></div>
+    </div>
+  </div>
+
+  <!-- End-to-End Checkout & Booking Modal -->
+  <div class="modal-overlay" id="checkoutModal">
+    <div class="modal-container">
+      <div class="modal-header">
+        <div class="modal-title-group">
+          <h3>EZ Enablement Secure Checkout & Delivery</h3>
+          <p>Instant Digital Asset Access • 256-bit Encrypted Transaction</p>
+        </div>
+        <button class="close-modal-btn" onclick="closeModal('checkoutModal')">&times;</button>
+      </div>
+      <div class="modal-body" id="checkoutContainer"></div>
+    </div>
+  </div>
+
+  <script src="products-data.js"></script>
+  <script src="app.js"></script>
+
+</body>
+</html>
