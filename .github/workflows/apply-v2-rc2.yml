@@ -25,7 +25,7 @@ jobs:
         run: |
           set -euo pipefail
           python -m pip install --quiet gdown
-          gdown --id 14HO3i_ZH8jvmE-9IUe7n9ZYcVdauMtMR --output /tmp/ez-rc2.zip
+          gdown 14HO3i_ZH8jvmE-9IUe7n9ZYcVdauMtMR -O /tmp/ez-rc2.zip
           unzip -t /tmp/ez-rc2.zip >/dev/null
 
       - name: Validate and apply snapshot
