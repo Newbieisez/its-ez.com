@@ -1,0 +1,88 @@
+name: Apply EZ Enablement V2 RC2
+
+on:
+  push:
+    branches:
+      - v2-storefront-launch
+    paths:
+      - .github/workflows/apply-v2-rc2.yml
+
+permissions:
+  contents: write
+
+jobs:
+  apply-rc2:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout review branch
+        uses: actions/checkout@v4
+        with:
+          ref: v2-storefront-launch
+          fetch-depth: 0
+
+      - name: Download verified RC2 snapshot
+        shell: bash
+        run: |
+          set -euo pipefail
+          curl -fL --retry 3 --retry-delay 2 \
+            "https://drive.usercontent.google.com/download?id=14HO3i_ZH8jvmE-9IUe7n9ZYcVdauMtMR&export=download&confirm=t" \
+            -o /tmp/ez-rc2.zip
+          unzip -t /tmp/ez-rc2.zip >/dev/null
+
+      - name: Validate and apply snapshot
+        shell: bash
+        run: |
+          set -euo pipefail
+          rm -rf /tmp/ez-rc2
+          mkdir -p /tmp/ez-rc2
+          unzip -q /tmp/ez-rc2.zip -d /tmp/ez-rc2
+
+          count="$(find /tmp/ez-rc2 -type f | wc -l | tr -d ' ')"
+          test "$count" = "23"
+
+          if grep -RInE --binary-files=without-match \
+            '(sk_live_[A-Za-z0-9]+|sk_test_[A-Za-z0-9]+|pk_live_[A-Za-z0-9]+|whsec_[A-Za-z0-9]+|AIza[0-9A-Za-z_-]{20,}|-----BEGIN (RSA |EC |OPENSSH |)PRIVATE KEY-----)' \
+            /tmp/ez-rc2; then
+            echo "Sensitive credential pattern found; refusing to apply snapshot."
+            exit 1
+          fi
+
+          cp -a /tmp/ez-rc2/. .
+
+          # RC2 consistency corrections discovered during ChatGPT validation.
+          sed -i 's/RC3/RC2/g' index.html labs.html products-data.js
+          sed -i 's/consultative consultative sales motions/consultative sales motions/g' launch_tracker.md
+
+          python - <<'PY'
+          from pathlib import Path
+          p = Path('HANDOFF-MANIFEST.md')
+          t = p.read_text()
+          if '## ARCHIVE' not in t:
+              t = t.replace('## DATE\n`2026-09-22`\n', '## DATE\n`2026-09-22`\n\n## ARCHIVE\n`EZ-Enablement-V2-2026-09-22-production-v2-RC2.zip`\n')
+          p.write_text(t)
+          PY
+
+          node --check app.js
+          node --check products-data.js
+
+      - name: Commit RC2 to review branch
+        shell: bash
+        run: |
+          set -euo pipefail
+          git config user.name "ChatGPT RC2 Handoff"
+          git config user.email "actions@users.noreply.github.com"
+          git add \
+            HANDOFF-MANIFEST.md _headers about.html ai.html app.js \
+            case-study-sentinelone.html case-study-twilio.html \
+            docs/BUILD-BRIEF.md docs/QA-CHECKLIST.md docs/SITE-MAP.md \
+            favicon.svg how-i-help.html index.html labs.html launch_tracker.md \
+            music.html products-data.js recommendations.html robots.txt sitemap.xml \
+            store.html styles.css work.html
+
+          if git diff --cached --quiet; then
+            echo "RC2 already applied; nothing to commit."
+            exit 0
+          fi
+
+          git commit -m "chore(release): EZ Enablement V2 rc2 - commercial claim corrections, preview redaction & launch tracker alignment (v2.0.0-rc2) [rc2-applied]"
+          git push origin HEAD:v2-storefront-launch
