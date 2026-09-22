@@ -2,7 +2,7 @@ name: Import EZ Enablement V2 RC2 snapshot
 
 on:
   pull_request:
-    types: [opened, reopened]
+    types: [opened, reopened, synchronize]
     branches: [main]
   workflow_dispatch:
 
@@ -20,14 +20,15 @@ jobs:
           ref: release/ez-enablement-v2-rc2
           fetch-depth: 0
 
-      - name: Download exact RC2 archive from Google Drive
+      - name: Download exact RC2 archive from authenticated handoff stream
         shell: bash
         run: |
           set -euo pipefail
           curl -L --fail --retry 3 \
-            'https://drive.usercontent.google.com/download?id=14HO3i_ZH8jvmE-9IUe7n9ZYcVdauMtMR&export=download&confirm=t' \
+            'https://sdmntprsoutheastus3.oaiusercontent.com/files/00000000-018c-820c-9ab4-1f9e84011a31/raw?se=2026-09-22T20%3A12%3A45Z&sp=r&sv=2026-02-06&sr=b&scid=3adb8ba6-2039-5759-b420-521af4caf624&skoid=b9a47e8b-72a2-4ed3-8028-a2a98c1a6142&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-22T18%3A46%3A33Z&ske=2026-09-23T18%3A46%3A33Z&sks=b&skv=2026-02-06&sig=9nlhSSiH/26Bajswbdg/qTV0xJGuXBG5AJwGo0R8kC0%3D' \
             -o /tmp/ez-rc2.zip
           test -s /tmp/ez-rc2.zip
+          test "$(stat -c%s /tmp/ez-rc2.zip)" -eq 67572
           unzip -t /tmp/ez-rc2.zip
 
       - name: Extract and validate release allowlist
