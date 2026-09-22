@@ -2,7 +2,9 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Recommendations & Endorsements — EZ Enablement</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Commercial Storefront & Digital Products — EZ Enablement V2</title>
+  <meta name="description" content="Commercial go-to-market digital products, methodology deal labs, observable rubrics, and AI workflows. Immediate download and transparent pricing.">
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -16,11 +18,11 @@
 
       <nav class="main-nav">
         <a href="index.html" class="">Home</a>
-<a href="store.html" class="">Storefront</a>
+<a href="store.html" class="active">Storefront</a>
 <a href="labs.html" class="">Deal Labs</a>
 <a href="how-i-help.html" class="">Sprints & Advisory</a>
 <a href="ai.html" class="">GTM AI Systems</a>
-<a href="work.html" class="active">Work Portfolio</a>
+<a href="work.html" class="">Work Portfolio</a>
 <a href="about.html" class="">About EZ</a>
 
       </nav>
@@ -31,16 +33,85 @@
     </div>
   </header>
 
+
+  <section class="hero-section" style="padding: 60px 24px 50px;">
+    <div class="hero-pill"><span>●</span> COMMERCIAL STOREFRONT • V2 RELEASE</div>
+    <h1 class="hero-title" style="font-size: 40px;">EZ Enablement Storefront</h1>
+    <p class="hero-subtitle">
+      Every product satisfies the <strong>Store Standard</strong>: clearly defined buyer, observable outcome, tangible deliverables, instant automated fulfillment, and verified pricing.
+    </p>
+  </section>
+
   <main class="main-container">
-    <div class="section-header">
-      <h2>References & Recognition</h2>
-      <p>Public case studies on this site reflect documented practitioner work. Additional professional references and recognition can be shared during a qualified business conversation.</p>
+
+    <div style="background: var(--amber-light); border: 1px solid var(--amber); border-radius: var(--radius-md); padding: 14px 18px; margin-bottom: 24px; font-size: 13px; color: var(--slate-800);">
+      <strong>Commercial Launch Readiness Notice:</strong> Production merchant processing is currently operating in sandbox test mode pending business-license approval. In the Launch Tracker below, Checkout, Fulfillment, and Public Launch statuses are marked <strong>YELLOW</strong> until live credit card capture is enabled. All product content and design systems are verified <strong>GREEN</strong>.
     </div>
-    <div style="background: white; border: 1px solid var(--slate-200); padding: 28px; border-radius: var(--radius-md); max-width: 820px; margin: 0 auto;">
-      <h3 style="font-size: 18px; font-weight: 800; color: var(--slate-900); margin-bottom: 10px;">Evidence over anonymous testimonials</h3>
-      <p style="font-size: 14px; color: var(--slate-700); line-height: 1.7;">EZ Enablement does not publish unattributed customer quotes as proof. Where a metric or outcome is shown, it should be tied to documented historical practitioner experience or a named case study. References are available upon request when appropriate.</p>
+
+    <div class="filter-bar">
+      <div class="category-tabs">
+        <button class="tab-btn active" data-category="all">All Solutions (14)</button>
+        <button class="tab-btn" data-category="flagship">Flagship Systems</button>
+        <button class="tab-btn" data-category="methodology">Methodology Labs</button>
+        <button class="tab-btn" data-category="ai-systems">AI Systems & Roleplays</button>
+        <button class="tab-btn" data-category="lms-packages">Enterprise LMS</button>
+        <button class="tab-btn" data-category="sprints">Consulting Sprints</button>
+        <button class="tab-btn" data-category="advisory">Advisory & Audits</button>
+      </div>
+
+      <div class="search-controls">
+        <input type="text" id="storeSearchInput" class="search-input" placeholder="Search products, outcomes, pain...">
+        <select id="roleSelect" class="role-select">
+          <option value="all">Filter by Target Buyer (All)</option>
+          <option value="VP">VPs of Sales & CROs</option>
+          <option value="Enablement">Enablement Directors & Leads</option>
+          <option value="Manager">Frontline Sales Managers</option>
+          <option value="L&D">Corporate L&D</option>
+        </select>
+      </div>
     </div>
+
+    <div class="products-grid" id="productsGrid"></div>
+
+    <!-- Master Launch Control Tracker Section -->
+    <section id="tracker" style="margin-top: 60px;">
+      <div class="section-header">
+        <h2>Executive Launch Control Tracker</h2>
+        <p>Single source of truth tracking commercial, technical, design, and fulfillment readiness across all 14 offerings. Strictly governed by evidence-backed RED / YELLOW / GREEN statuses.</p>
+      </div>
+
+      <div class="table-wrapper">
+        <table class="data-table">
+          <thead>
+            <tr>
+              <th>Product Offering</th>
+              <th>Status</th>
+              <th>Store URL</th>
+              <th>Target Buyer</th>
+              <th>Problem Solved</th>
+              <th>Observable Outcome</th>
+              <th>Price</th>
+              <th>Content</th>
+              <th>Design</th>
+              <th>Preview</th>
+              <th>Storefront</th>
+              <th>Checkout</th>
+              <th>Fulfillment</th>
+              <th>Mobile</th>
+              <th>Technical</th>
+              <th>Commercial</th>
+              <th>SEO</th>
+              <th>Launch</th>
+              <th>Unresolved Issues</th>
+              <th>Recommended Next Action</th>
+            </tr>
+          </thead>
+          <tbody id="trackerTableBody"></tbody>
+        </table>
+      </div>
+    </section>
   </main>
+
   
   <footer class="site-footer">
     <div class="footer-container">

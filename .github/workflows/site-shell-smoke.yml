@@ -4,27 +4,43 @@ on:
   push:
     branches: [main]
     paths:
-      - 'global-nav.js'
-      - 'services-catalog.js'
       - 'index.html'
-      - 'work-with-me.html'
-      - 'revenue-performance.html'
-      - 'ai-systems.html'
-      - 'music.html'
+      - 'store.html'
+      - 'labs.html'
+      - 'how-i-help.html'
+      - 'ai.html'
+      - 'work.html'
+      - 'about.html'
       - 'recommendations.html'
-      - 'homepage-extras.css'
+      - 'music.html'
+      - 'case-study-sentinelone.html'
+      - 'case-study-twilio.html'
+      - 'styles.css'
+      - 'app.js'
+      - 'products-data.js'
+      - 'robots.txt'
+      - 'sitemap.xml'
+      - 'launch_tracker.md'
       - '.github/workflows/site-shell-smoke.yml'
   pull_request:
     paths:
-      - 'global-nav.js'
-      - 'services-catalog.js'
       - 'index.html'
-      - 'work-with-me.html'
-      - 'revenue-performance.html'
-      - 'ai-systems.html'
-      - 'music.html'
+      - 'store.html'
+      - 'labs.html'
+      - 'how-i-help.html'
+      - 'ai.html'
+      - 'work.html'
+      - 'about.html'
       - 'recommendations.html'
-      - 'homepage-extras.css'
+      - 'music.html'
+      - 'case-study-sentinelone.html'
+      - 'case-study-twilio.html'
+      - 'styles.css'
+      - 'app.js'
+      - 'products-data.js'
+      - 'robots.txt'
+      - 'sitemap.xml'
+      - 'launch_tracker.md'
       - '.github/workflows/site-shell-smoke.yml'
 
 permissions:
@@ -38,60 +54,69 @@ jobs:
 
       - name: JavaScript syntax
         run: |
-          node --check global-nav.js
-          node --check services-catalog.js
+          node --check app.js
+          node --check products-data.js
+
+      - name: Required V2 routes and shared stylesheet
+        shell: bash
+        run: |
+          set -euo pipefail
+          for f in index.html store.html labs.html how-i-help.html ai.html work.html about.html recommendations.html music.html case-study-sentinelone.html case-study-twilio.html; do
+            test -f "$f"
+            grep -F 'href="styles.css"' "$f"
+          done
 
       - name: Primary navigation assertions
         shell: bash
         run: |
           set -euo pipefail
-          grep -F "['Results',ROOT+'#results']" global-nav.js
-          grep -F "['How I Build',ROOT+'#operating']" global-nav.js
-          grep -F "['AI Systems',ROOT+'ai-systems.html']" global-nav.js
-          grep -F "['Recommendations',ROOT+'recommendations.html']" global-nav.js
-          grep -F "['Work With Me',ROOT+'work-with-me.html']" global-nav.js
-          NAV_BLOCK="$(sed -n '/const navItems = \[/,/^  \];/p' global-nav.js)"
-          if printf '%s\n' "$NAV_BLOCK" | grep -F "['Music'"; then
-            echo 'Music must not be in primary navigation' >&2
-            exit 1
-          fi
-          if printf '%s\n' "$NAV_BLOCK" | grep -F "['MEDDPICC'"; then
-            echo 'MEDDPICC must not be in primary navigation' >&2
-            exit 1
-          fi
-          if printf '%s\n' "$NAV_BLOCK" | grep -F "['Cybersecurity'"; then
-            echo 'Cybersecurity must not be in primary navigation' >&2
-            exit 1
-          fi
-
-      - name: Results board assertions
-        shell: bash
-        run: |
-          set -euo pipefail
-          grep -F "section.id='results'" global-nav.js
-          grep -F 'RESULTS / PERFORMANCE BOARD' global-nav.js
-          grep -F '$13M' global-nav.js
-          grep -F '40–50%' global-nav.js
-          grep -F '$8M' global-nav.js
-          if grep -E '\+40%|\$700K' global-nav.js; then
-            echo 'Unresolved conversion and tooling-savings claims must stay off the homepage' >&2
-            exit 1
-          fi
-          grep -F '82%' global-nav.js
-
-      - name: Secondary links remain available
-        shell: bash
-        run: |
-          set -euo pipefail
-          grep -F 'Revenue Performance Hub' global-nav.js
-          grep -F 'MEDDPICC Lab' global-nav.js
-          grep -F 'Cybersecurity Lab' global-nav.js
-          grep -F '>Music</a>' global-nav.js
-
-      - name: Cache-busted shared navigation on key pages
-        shell: bash
-        run: |
-          set -euo pipefail
-          for f in index.html work-with-me.html ai-systems.html music.html recommendations.html revenue-performance.html; do
-            grep -F 'global-nav.js?v=20260912-company-launch-2' "$f"
+          for label in 'Home' 'Storefront' 'Deal Labs' 'Sprints & Advisory' 'GTM AI Systems' 'Work Portfolio' 'About EZ'; do
+            grep -F ">$label</a>" index.html
           done
+
+      - name: Commercial catalog assertions
+        shell: bash
+        run: |
+          set -euo pipefail
+          grep -q '14 commercial offerings' launch_tracker.md
+          test "$(grep -c '^| \*\*' launch_tracker.md)" -eq 14
+          grep -q 'Production activation pending business-license approval and live merchant configuration' launch_tracker.md
+          grep -q '100 Scenarios' products-data.js
+
+      - name: SEO domain and sitemap assertions
+        shell: bash
+        run: |
+          set -euo pipefail
+          grep -F 'Sitemap: https://its-ez.com/sitemap.xml' robots.txt
+          grep -F '<loc>https://its-ez.com/</loc>' sitemap.xml
+          for route in store.html labs.html how-i-help.html ai.html work.html case-study-sentinelone.html case-study-twilio.html about.html recommendations.html music.html; do
+            grep -F "<loc>https://its-ez.com/$route</loc>" sitemap.xml
+          done
+          if grep -Rni 'https://ez-enablement.com' robots.txt sitemap.xml; then
+            echo 'Old canonical domain must not appear in crawl files' >&2
+            exit 1
+          fi
+
+      - name: Claim-integrity assertions
+        shell: bash
+        run: |
+          set -euo pipefail
+          if grep -RniE '96% Certification Pass|100% Behavioral Certification|18% (higher )?win rate|lifting win rates by 18%|cut our new AE onboarding ramp time in half|rare enablement leaders|Methodology Master Suite \(RC3\)' -- *.html; then
+            echo 'Unsupported or stale public claim/version label detected' >&2
+            exit 1
+          fi
+          grep -F 'Evidence over anonymous testimonials' recommendations.html
+          grep -F 'Sandbox Checkout • No live charges until production activation' index.html
+
+      - name: Credential and paid-asset leakage assertions
+        shell: bash
+        run: |
+          set -euo pipefail
+          if grep -RniE --binary-files=without-match 'sk_live_[A-Za-z0-9]+|rk_live_[A-Za-z0-9]+|whsec_[A-Za-z0-9]+|GOCSPX-[A-Za-z0-9_-]+|AKIA[0-9A-Z]{16}|-----BEGIN (RSA |EC |OPENSSH )?PRIVATE KEY-----' -- index.html store.html labs.html how-i-help.html ai.html work.html about.html recommendations.html music.html case-study-sentinelone.html case-study-twilio.html app.js products-data.js; then
+            echo 'Sensitive credential pattern detected' >&2
+            exit 1
+          fi
+          if find . -maxdepth 2 -type f -iname '*.zip' | grep -q .; then
+            echo 'Paid ZIP/archive must not be committed to public site tree' >&2
+            exit 1
+          fi
