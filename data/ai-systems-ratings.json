@@ -1,7 +1,7 @@
 {
   "schemaVersion": 2,
   "methodologyVersion": "2.0",
-  "generatedAt": "2026-09-23T16:57:20.473Z",
+  "generatedAt": "2026-09-23T21:29:26.070Z",
   "refreshHours": 6,
   "items": {
     "chatgpt": {
@@ -27,7 +27,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:20.473Z"
+      "lastRefreshed": "2026-09-23T21:29:26.071Z"
     },
     "claude": {
       "id": "claude",
@@ -52,7 +52,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:20.473Z"
+      "lastRefreshed": "2026-09-23T21:29:26.071Z"
     },
     "gemini": {
       "id": "gemini",
@@ -77,7 +77,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:20.473Z"
+      "lastRefreshed": "2026-09-23T21:29:26.071Z"
     },
     "copilot": {
       "id": "copilot",
@@ -102,7 +102,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:20.473Z"
+      "lastRefreshed": "2026-09-23T21:29:26.071Z"
     },
     "perplexity": {
       "id": "perplexity",
@@ -127,7 +127,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:20.473Z"
+      "lastRefreshed": "2026-09-23T21:29:26.071Z"
     },
     "notebooklm": {
       "id": "notebooklm",
@@ -152,7 +152,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:20.473Z"
+      "lastRefreshed": "2026-09-23T21:29:26.071Z"
     },
     "clay": {
       "id": "clay",
@@ -177,7 +177,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:20.473Z"
+      "lastRefreshed": "2026-09-23T21:29:26.071Z"
     },
     "salesforce": {
       "id": "salesforce",
@@ -185,7 +185,7 @@
       "status": "provisional",
       "score": 7.5,
       "confidence": 0,
-      "reviewCount": 352757,
+      "reviewCount": 352726,
       "sourceCount": 1,
       "independentSourceCount": 1,
       "fullPlatformSourceCount": 0,
@@ -209,12 +209,12 @@
           "scope": "mobile_app",
           "component": "userSentiment",
           "score": 9.5,
-          "reviewCount": 352757,
+          "reviewCount": 352726,
           "reliability": 0.9,
-          "observedAt": "2026-09-23T16:57:21.083Z"
+          "observedAt": "2026-09-23T21:29:26.273Z"
         }
       ],
-      "lastRefreshed": "2026-09-23T16:57:21.083Z"
+      "lastRefreshed": "2026-09-23T21:29:26.274Z"
     },
     "hubspot": {
       "id": "hubspot",
@@ -270,10 +270,10 @@
           "score": 9.5,
           "reviewCount": 15615,
           "reliability": 0.9,
-          "observedAt": "2026-09-23T16:57:21.197Z"
+          "observedAt": "2026-09-23T21:29:26.287Z"
         }
       ],
-      "lastRefreshed": "2026-09-23T16:57:21.197Z"
+      "lastRefreshed": "2026-09-23T21:29:26.287Z"
     },
     "dynamics": {
       "id": "dynamics",
@@ -329,10 +329,10 @@
           "score": 8.7,
           "reviewCount": 839,
           "reliability": 0.9,
-          "observedAt": "2026-09-23T16:57:21.320Z"
+          "observedAt": "2026-09-23T21:29:26.369Z"
         }
       ],
-      "lastRefreshed": "2026-09-23T16:57:21.321Z"
+      "lastRefreshed": "2026-09-23T21:29:26.369Z"
     },
     "zoho": {
       "id": "zoho",
@@ -388,10 +388,10 @@
           "score": 8.8,
           "reviewCount": 2689,
           "reliability": 0.9,
-          "observedAt": "2026-09-23T16:57:21.437Z"
+          "observedAt": "2026-09-23T21:29:26.458Z"
         }
       ],
-      "lastRefreshed": "2026-09-23T16:57:21.438Z"
+      "lastRefreshed": "2026-09-23T21:29:26.458Z"
     },
     "gong": {
       "id": "gong",
@@ -447,10 +447,10 @@
           "score": 7.9,
           "reviewCount": 111,
           "reliability": 0.9,
-          "observedAt": "2026-09-23T16:57:21.540Z"
+          "observedAt": "2026-09-23T21:29:26.522Z"
         }
       ],
-      "lastRefreshed": "2026-09-23T16:57:21.540Z"
+      "lastRefreshed": "2026-09-23T21:29:26.522Z"
     },
     "chorus": {
       "id": "chorus",
@@ -484,10 +484,10 @@
           "score": 5.7,
           "reviewCount": 37,
           "reliability": 0.9,
-          "observedAt": "2026-09-23T16:57:21.650Z"
+          "observedAt": "2026-09-23T21:29:26.642Z"
         }
       ],
-      "lastRefreshed": "2026-09-23T16:57:21.650Z"
+      "lastRefreshed": "2026-09-23T21:29:26.643Z"
     },
     "clari": {
       "id": "clari",
@@ -543,10 +543,10 @@
           "score": 9.3,
           "reviewCount": 1129,
           "reliability": 0.9,
-          "observedAt": "2026-09-23T16:57:21.749Z"
+          "observedAt": "2026-09-23T21:29:26.725Z"
         }
       ],
-      "lastRefreshed": "2026-09-23T16:57:21.749Z"
+      "lastRefreshed": "2026-09-23T21:29:26.725Z"
     },
     "outreach": {
       "id": "outreach",
@@ -602,10 +602,10 @@
           "score": 6.9,
           "reviewCount": 26,
           "reliability": 0.9,
-          "observedAt": "2026-09-23T16:57:21.853Z"
+          "observedAt": "2026-09-23T21:29:26.809Z"
         }
       ],
-      "lastRefreshed": "2026-09-23T16:57:21.854Z"
+      "lastRefreshed": "2026-09-23T21:29:26.810Z"
     },
     "salesloft": {
       "id": "salesloft",
@@ -661,10 +661,10 @@
           "score": 7.8,
           "reviewCount": 130,
           "reliability": 0.9,
-          "observedAt": "2026-09-23T16:57:21.969Z"
+          "observedAt": "2026-09-23T21:29:26.874Z"
         }
       ],
-      "lastRefreshed": "2026-09-23T16:57:21.969Z"
+      "lastRefreshed": "2026-09-23T21:29:26.874Z"
     },
     "rattle": {
       "id": "rattle",
@@ -689,7 +689,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:21.969Z"
+      "lastRefreshed": "2026-09-23T21:29:26.874Z"
     },
     "seismic": {
       "id": "seismic",
@@ -723,10 +723,10 @@
           "score": 7.9,
           "reviewCount": 60,
           "reliability": 0.9,
-          "observedAt": "2026-09-23T16:57:22.075Z"
+          "observedAt": "2026-09-23T21:29:26.956Z"
         }
       ],
-      "lastRefreshed": "2026-09-23T16:57:22.075Z"
+      "lastRefreshed": "2026-09-23T21:29:26.956Z"
     },
     "highspot": {
       "id": "highspot",
@@ -782,10 +782,10 @@
           "score": 9.7,
           "reviewCount": 115,
           "reliability": 0.9,
-          "observedAt": "2026-09-23T16:57:22.181Z"
+          "observedAt": "2026-09-23T21:29:27.029Z"
         }
       ],
-      "lastRefreshed": "2026-09-23T16:57:22.181Z"
+      "lastRefreshed": "2026-09-23T21:29:27.029Z"
     },
     "allego": {
       "id": "allego",
@@ -841,10 +841,10 @@
           "score": 9,
           "reviewCount": 284,
           "reliability": 0.9,
-          "observedAt": "2026-09-23T16:57:22.282Z"
+          "observedAt": "2026-09-23T21:29:27.091Z"
         }
       ],
-      "lastRefreshed": "2026-09-23T16:57:22.282Z"
+      "lastRefreshed": "2026-09-23T21:29:27.091Z"
     },
     "letter-ai": {
       "id": "letter-ai",
@@ -869,7 +869,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:22.282Z"
+      "lastRefreshed": "2026-09-23T21:29:27.091Z"
     },
     "mindtickle": {
       "id": "mindtickle",
@@ -925,10 +925,10 @@
           "score": 7.9,
           "reviewCount": 232,
           "reliability": 0.9,
-          "observedAt": "2026-09-23T16:57:22.377Z"
+          "observedAt": "2026-09-23T21:29:27.174Z"
         }
       ],
-      "lastRefreshed": "2026-09-23T16:57:22.377Z"
+      "lastRefreshed": "2026-09-23T21:29:27.174Z"
     },
     "showpad": {
       "id": "showpad",
@@ -962,10 +962,10 @@
           "score": 8.1,
           "reviewCount": 29,
           "reliability": 0.9,
-          "observedAt": "2026-09-23T16:57:22.482Z"
+          "observedAt": "2026-09-23T21:29:27.255Z"
         }
       ],
-      "lastRefreshed": "2026-09-23T16:57:22.482Z"
+      "lastRefreshed": "2026-09-23T21:29:27.255Z"
     },
     "spekit": {
       "id": "spekit",
@@ -1013,7 +1013,7 @@
           "observedAt": "2026-09-10T20:00:00Z"
         }
       ],
-      "lastRefreshed": "2026-09-23T16:57:22.482Z"
+      "lastRefreshed": "2026-09-23T21:29:27.255Z"
     },
     "workramp": {
       "id": "workramp",
@@ -1069,10 +1069,10 @@
           "score": 6,
           "reviewCount": 14,
           "reliability": 0.9,
-          "observedAt": "2026-09-23T16:57:22.593Z"
+          "observedAt": "2026-09-23T21:29:27.326Z"
         }
       ],
-      "lastRefreshed": "2026-09-23T16:57:22.593Z"
+      "lastRefreshed": "2026-09-23T21:29:27.326Z"
     },
     "saleshood": {
       "id": "saleshood",
@@ -1128,10 +1128,10 @@
           "score": 8.6,
           "reviewCount": 77,
           "reliability": 0.9,
-          "observedAt": "2026-09-23T16:57:22.700Z"
+          "observedAt": "2026-09-23T21:29:27.402Z"
         }
       ],
-      "lastRefreshed": "2026-09-23T16:57:22.700Z"
+      "lastRefreshed": "2026-09-23T21:29:27.402Z"
     },
     "second-nature": {
       "id": "second-nature",
@@ -1156,7 +1156,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:22.700Z"
+      "lastRefreshed": "2026-09-23T21:29:27.402Z"
     },
     "docebo": {
       "id": "docebo",
@@ -1164,7 +1164,7 @@
       "status": "live",
       "score": 8.1,
       "confidence": 7.5,
-      "reviewCount": 1254,
+      "reviewCount": 1253,
       "sourceCount": 3,
       "independentSourceCount": 3,
       "fullPlatformSourceCount": 2,
@@ -1210,12 +1210,12 @@
           "scope": "mobile_app",
           "component": "userSentiment",
           "score": 4.4,
-          "reviewCount": 462,
+          "reviewCount": 461,
           "reliability": 0.9,
-          "observedAt": "2026-09-23T16:57:22.839Z"
+          "observedAt": "2026-09-23T21:29:27.413Z"
         }
       ],
-      "lastRefreshed": "2026-09-23T16:57:22.839Z"
+      "lastRefreshed": "2026-09-23T21:29:27.413Z"
     },
     "360learning": {
       "id": "360learning",
@@ -1223,7 +1223,7 @@
       "status": "live",
       "score": 8.6,
       "confidence": 7.4,
-      "reviewCount": 7570,
+      "reviewCount": 7571,
       "sourceCount": 3,
       "independentSourceCount": 3,
       "fullPlatformSourceCount": 2,
@@ -1269,12 +1269,12 @@
           "scope": "mobile_app",
           "component": "userSentiment",
           "score": 9.7,
-          "reviewCount": 6923,
+          "reviewCount": 6924,
           "reliability": 0.9,
-          "observedAt": "2026-09-23T16:57:22.944Z"
+          "observedAt": "2026-09-23T21:29:27.472Z"
         }
       ],
-      "lastRefreshed": "2026-09-23T16:57:22.944Z"
+      "lastRefreshed": "2026-09-23T21:29:27.472Z"
     },
     "cornerstone": {
       "id": "cornerstone",
@@ -1308,10 +1308,10 @@
           "score": 5.3,
           "reviewCount": 94,
           "reliability": 0.9,
-          "observedAt": "2026-09-23T16:57:23.041Z"
+          "observedAt": "2026-09-23T21:29:27.569Z"
         }
       ],
-      "lastRefreshed": "2026-09-23T16:57:23.041Z"
+      "lastRefreshed": "2026-09-23T21:29:27.569Z"
     },
     "degreed": {
       "id": "degreed",
@@ -1367,10 +1367,10 @@
           "score": 7.1,
           "reviewCount": 7,
           "reliability": 0.9,
-          "observedAt": "2026-09-23T16:57:23.138Z"
+          "observedAt": "2026-09-23T21:29:27.753Z"
         }
       ],
-      "lastRefreshed": "2026-09-23T16:57:23.138Z"
+      "lastRefreshed": "2026-09-23T21:29:27.753Z"
     },
     "thought-industries": {
       "id": "thought-industries",
@@ -1395,7 +1395,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:23.138Z"
+      "lastRefreshed": "2026-09-23T21:29:27.753Z"
     },
     "skilljar": {
       "id": "skilljar",
@@ -1420,7 +1420,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:23.138Z"
+      "lastRefreshed": "2026-09-23T21:29:27.753Z"
     },
     "learnupon": {
       "id": "learnupon",
@@ -1454,10 +1454,10 @@
           "score": 6,
           "reviewCount": 2,
           "reliability": 0.9,
-          "observedAt": "2026-09-23T16:57:23.258Z"
+          "observedAt": "2026-09-23T21:29:27.830Z"
         }
       ],
-      "lastRefreshed": "2026-09-23T16:57:23.258Z"
+      "lastRefreshed": "2026-09-23T21:29:27.830Z"
     },
     "absorb": {
       "id": "absorb",
@@ -1491,10 +1491,10 @@
           "score": 9.4,
           "reviewCount": 14,
           "reliability": 0.9,
-          "observedAt": "2026-09-23T16:57:23.365Z"
+          "observedAt": "2026-09-23T21:29:27.846Z"
         }
       ],
-      "lastRefreshed": "2026-09-23T16:57:23.365Z"
+      "lastRefreshed": "2026-09-23T21:29:27.846Z"
     },
     "sana": {
       "id": "sana",
@@ -1519,7 +1519,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:23.449Z"
+      "lastRefreshed": "2026-09-23T21:29:27.933Z"
     },
     "glean": {
       "id": "glean",
@@ -1544,7 +1544,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:23.449Z"
+      "lastRefreshed": "2026-09-23T21:29:27.933Z"
     },
     "notion": {
       "id": "notion",
@@ -1592,7 +1592,7 @@
           "observedAt": "2026-09-10T20:00:00Z"
         }
       ],
-      "lastRefreshed": "2026-09-23T16:57:23.449Z"
+      "lastRefreshed": "2026-09-23T21:29:27.933Z"
     },
     "guru": {
       "id": "guru",
@@ -1617,7 +1617,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:23.449Z"
+      "lastRefreshed": "2026-09-23T21:29:27.933Z"
     },
     "confluence": {
       "id": "confluence",
@@ -1642,7 +1642,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:23.449Z"
+      "lastRefreshed": "2026-09-23T21:29:27.933Z"
     },
     "articulate": {
       "id": "articulate",
@@ -1667,7 +1667,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:23.449Z"
+      "lastRefreshed": "2026-09-23T21:29:27.933Z"
     },
     "canva": {
       "id": "canva",
@@ -1692,7 +1692,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:23.449Z"
+      "lastRefreshed": "2026-09-23T21:29:27.933Z"
     },
     "synthesia": {
       "id": "synthesia",
@@ -1717,7 +1717,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:23.449Z"
+      "lastRefreshed": "2026-09-23T21:29:27.933Z"
     },
     "heygen": {
       "id": "heygen",
@@ -1742,7 +1742,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:23.449Z"
+      "lastRefreshed": "2026-09-23T21:29:27.933Z"
     },
     "elevenlabs": {
       "id": "elevenlabs",
@@ -1767,7 +1767,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:23.449Z"
+      "lastRefreshed": "2026-09-23T21:29:27.933Z"
     },
     "gamma": {
       "id": "gamma",
@@ -1792,7 +1792,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:23.449Z"
+      "lastRefreshed": "2026-09-23T21:29:27.933Z"
     },
     "vyond": {
       "id": "vyond",
@@ -1817,7 +1817,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:23.449Z"
+      "lastRefreshed": "2026-09-23T21:29:27.933Z"
     },
     "descript": {
       "id": "descript",
@@ -1842,7 +1842,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:23.449Z"
+      "lastRefreshed": "2026-09-23T21:29:27.933Z"
     },
     "loom": {
       "id": "loom",
@@ -1867,7 +1867,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:23.449Z"
+      "lastRefreshed": "2026-09-23T21:29:27.933Z"
     },
     "scribe": {
       "id": "scribe",
@@ -1892,7 +1892,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:23.449Z"
+      "lastRefreshed": "2026-09-23T21:29:27.933Z"
     },
     "guidde": {
       "id": "guidde",
@@ -1917,7 +1917,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:23.449Z"
+      "lastRefreshed": "2026-09-23T21:29:27.933Z"
     },
     "asana": {
       "id": "asana",
@@ -1965,7 +1965,7 @@
           "observedAt": "2026-09-10T20:00:00Z"
         }
       ],
-      "lastRefreshed": "2026-09-23T16:57:23.449Z"
+      "lastRefreshed": "2026-09-23T21:29:27.933Z"
     },
     "monday": {
       "id": "monday",
@@ -2013,7 +2013,7 @@
           "observedAt": "2026-09-10T20:00:00Z"
         }
       ],
-      "lastRefreshed": "2026-09-23T16:57:23.449Z"
+      "lastRefreshed": "2026-09-23T21:29:27.933Z"
     },
     "jira": {
       "id": "jira",
@@ -2038,7 +2038,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:23.450Z"
+      "lastRefreshed": "2026-09-23T21:29:27.933Z"
     },
     "clickup": {
       "id": "clickup",
@@ -2063,7 +2063,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:23.450Z"
+      "lastRefreshed": "2026-09-23T21:29:27.933Z"
     },
     "smartsheet": {
       "id": "smartsheet",
@@ -2088,7 +2088,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:23.450Z"
+      "lastRefreshed": "2026-09-23T21:29:27.933Z"
     },
     "zapier": {
       "id": "zapier",
@@ -2136,7 +2136,7 @@
           "observedAt": "2026-09-10T20:00:00Z"
         }
       ],
-      "lastRefreshed": "2026-09-23T16:57:23.450Z"
+      "lastRefreshed": "2026-09-23T21:29:27.933Z"
     },
     "make": {
       "id": "make",
@@ -2161,7 +2161,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:23.450Z"
+      "lastRefreshed": "2026-09-23T21:29:27.933Z"
     },
     "n8n": {
       "id": "n8n",
@@ -2195,15 +2195,15 @@
           "score": 10,
           "reviewCount": 0,
           "reliability": 1,
-          "observedAt": "2026-09-23T16:57:23.872Z",
+          "observedAt": "2026-09-23T21:29:28.226Z",
           "metadata": {
-            "stars": 205771,
-            "forks": 60864,
-            "pushedAt": "2026-09-23T16:54:55Z"
+            "stars": 205791,
+            "forks": 60860,
+            "pushedAt": "2026-09-23T21:28:37Z"
           }
         }
       ],
-      "lastRefreshed": "2026-09-23T16:57:23.872Z"
+      "lastRefreshed": "2026-09-23T21:29:28.227Z"
     },
     "workato": {
       "id": "workato",
@@ -2228,7 +2228,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:23.872Z"
+      "lastRefreshed": "2026-09-23T21:29:28.227Z"
     },
     "impartner": {
       "id": "impartner",
@@ -2253,7 +2253,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:23.872Z"
+      "lastRefreshed": "2026-09-23T21:29:28.227Z"
     },
     "allbound": {
       "id": "allbound",
@@ -2278,7 +2278,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:23.872Z"
+      "lastRefreshed": "2026-09-23T21:29:28.227Z"
     },
     "channeltivity": {
       "id": "channeltivity",
@@ -2303,7 +2303,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:23.872Z"
+      "lastRefreshed": "2026-09-23T21:29:28.227Z"
     },
     "crossbeam": {
       "id": "crossbeam",
@@ -2328,7 +2328,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:23.872Z"
+      "lastRefreshed": "2026-09-23T21:29:28.227Z"
     },
     "partnerstack": {
       "id": "partnerstack",
@@ -2353,7 +2353,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:23.872Z"
+      "lastRefreshed": "2026-09-23T21:29:28.227Z"
     },
     "apollo": {
       "id": "apollo",
@@ -2401,7 +2401,7 @@
           "observedAt": "2026-09-10T20:00:00Z"
         }
       ],
-      "lastRefreshed": "2026-09-23T16:57:23.872Z"
+      "lastRefreshed": "2026-09-23T21:29:28.227Z"
     },
     "zoominfo": {
       "id": "zoominfo",
@@ -2457,10 +2457,10 @@
           "score": 9.3,
           "reviewCount": 1031,
           "reliability": 0.9,
-          "observedAt": "2026-09-23T16:57:23.979Z"
+          "observedAt": "2026-09-23T21:29:28.294Z"
         }
       ],
-      "lastRefreshed": "2026-09-23T16:57:23.980Z"
+      "lastRefreshed": "2026-09-23T21:29:28.294Z"
     },
     "6sense": {
       "id": "6sense",
@@ -2508,7 +2508,7 @@
           "observedAt": "2026-09-10T20:00:00Z"
         }
       ],
-      "lastRefreshed": "2026-09-23T16:57:23.980Z"
+      "lastRefreshed": "2026-09-23T21:29:28.294Z"
     },
     "common-room": {
       "id": "common-room",
@@ -2533,7 +2533,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:23.980Z"
+      "lastRefreshed": "2026-09-23T21:29:28.294Z"
     },
     "usergems": {
       "id": "usergems",
@@ -2558,7 +2558,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:23.980Z"
+      "lastRefreshed": "2026-09-23T21:29:28.294Z"
     },
     "bardeen": {
       "id": "bardeen",
@@ -2583,7 +2583,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:23.980Z"
+      "lastRefreshed": "2026-09-23T21:29:28.294Z"
     },
     "rows": {
       "id": "rows",
@@ -2608,7 +2608,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:23.980Z"
+      "lastRefreshed": "2026-09-23T21:29:28.294Z"
     },
     "attio": {
       "id": "attio",
@@ -2642,10 +2642,10 @@
           "score": 7.1,
           "reviewCount": 28,
           "reliability": 0.9,
-          "observedAt": "2026-09-23T16:57:24.094Z"
+          "observedAt": "2026-09-23T21:29:28.360Z"
         }
       ],
-      "lastRefreshed": "2026-09-23T16:57:24.094Z"
+      "lastRefreshed": "2026-09-23T21:29:28.360Z"
     },
     "close-crm": {
       "id": "close-crm",
@@ -2679,10 +2679,10 @@
           "score": 7,
           "reviewCount": 50,
           "reliability": 0.9,
-          "observedAt": "2026-09-23T16:57:24.193Z"
+          "observedAt": "2026-09-23T21:29:28.563Z"
         }
       ],
-      "lastRefreshed": "2026-09-23T16:57:24.193Z"
+      "lastRefreshed": "2026-09-23T21:29:28.563Z"
     },
     "folk-crm": {
       "id": "folk-crm",
@@ -2716,10 +2716,10 @@
           "score": 10,
           "reviewCount": 2,
           "reliability": 0.9,
-          "observedAt": "2026-09-23T16:57:24.297Z"
+          "observedAt": "2026-09-23T21:29:28.632Z"
         }
       ],
-      "lastRefreshed": "2026-09-23T16:57:24.297Z"
+      "lastRefreshed": "2026-09-23T21:29:28.632Z"
     },
     "reply": {
       "id": "reply",
@@ -2744,7 +2744,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:24.297Z"
+      "lastRefreshed": "2026-09-23T21:29:28.632Z"
     },
     "unify": {
       "id": "unify",
@@ -2769,7 +2769,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:24.297Z"
+      "lastRefreshed": "2026-09-23T21:29:28.632Z"
     },
     "regie-ai": {
       "id": "regie-ai",
@@ -2794,7 +2794,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:24.297Z"
+      "lastRefreshed": "2026-09-23T21:29:28.632Z"
     },
     "instantly": {
       "id": "instantly",
@@ -2817,7 +2817,7 @@
         "gtmFit": null,
         "marketMomentum": null
       },
-      "trend": -0.1,
+      "trend": 0,
       "sources": [
         {
           "label": "Apple App Store mobile rating",
@@ -2828,10 +2828,10 @@
           "score": 5.9,
           "reviewCount": 36,
           "reliability": 0.9,
-          "observedAt": "2026-09-23T16:57:24.396Z"
+          "observedAt": "2026-09-23T21:29:28.709Z"
         }
       ],
-      "lastRefreshed": "2026-09-23T16:57:24.396Z"
+      "lastRefreshed": "2026-09-23T21:29:28.709Z"
     },
     "smartlead": {
       "id": "smartlead",
@@ -2856,7 +2856,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:24.396Z"
+      "lastRefreshed": "2026-09-23T21:29:28.709Z"
     },
     "lavender": {
       "id": "lavender",
@@ -2881,7 +2881,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:24.396Z"
+      "lastRefreshed": "2026-09-23T21:29:28.709Z"
     },
     "jason-ai": {
       "id": "jason-ai",
@@ -2906,7 +2906,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:24.396Z"
+      "lastRefreshed": "2026-09-23T21:29:28.709Z"
     },
     "artisan-ava": {
       "id": "artisan-ava",
@@ -2931,7 +2931,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:24.396Z"
+      "lastRefreshed": "2026-09-23T21:29:28.709Z"
     },
     "11x": {
       "id": "11x",
@@ -2956,7 +2956,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:24.396Z"
+      "lastRefreshed": "2026-09-23T21:29:28.709Z"
     },
     "aisdr": {
       "id": "aisdr",
@@ -2981,7 +2981,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:24.396Z"
+      "lastRefreshed": "2026-09-23T21:29:28.709Z"
     },
     "salesforge": {
       "id": "salesforge",
@@ -3006,7 +3006,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:24.396Z"
+      "lastRefreshed": "2026-09-23T21:29:28.709Z"
     },
     "qualified-piper": {
       "id": "qualified-piper",
@@ -3031,7 +3031,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:24.396Z"
+      "lastRefreshed": "2026-09-23T21:29:28.709Z"
     },
     "nooks": {
       "id": "nooks",
@@ -3056,7 +3056,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:24.396Z"
+      "lastRefreshed": "2026-09-23T21:29:28.709Z"
     },
     "bland-ai": {
       "id": "bland-ai",
@@ -3081,7 +3081,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:24.396Z"
+      "lastRefreshed": "2026-09-23T21:29:28.709Z"
     },
     "regal": {
       "id": "regal",
@@ -3106,7 +3106,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:24.396Z"
+      "lastRefreshed": "2026-09-23T21:29:28.709Z"
     },
     "granola": {
       "id": "granola",
@@ -3131,7 +3131,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:24.396Z"
+      "lastRefreshed": "2026-09-23T21:29:28.709Z"
     },
     "avoma": {
       "id": "avoma",
@@ -3156,7 +3156,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:24.396Z"
+      "lastRefreshed": "2026-09-23T21:29:28.709Z"
     },
     "fathom": {
       "id": "fathom",
@@ -3181,7 +3181,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:24.396Z"
+      "lastRefreshed": "2026-09-23T21:29:28.709Z"
     },
     "fireflies": {
       "id": "fireflies",
@@ -3206,7 +3206,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:24.396Z"
+      "lastRefreshed": "2026-09-23T21:29:28.709Z"
     },
     "qwilr": {
       "id": "qwilr",
@@ -3231,7 +3231,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:24.396Z"
+      "lastRefreshed": "2026-09-23T21:29:28.709Z"
     },
     "pandadoc": {
       "id": "pandadoc",
@@ -3256,7 +3256,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:24.396Z"
+      "lastRefreshed": "2026-09-23T21:29:28.709Z"
     },
     "docusign": {
       "id": "docusign",
@@ -3281,7 +3281,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:24.396Z"
+      "lastRefreshed": "2026-09-23T21:29:28.709Z"
     },
     "dealhub": {
       "id": "dealhub",
@@ -3306,7 +3306,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:24.396Z"
+      "lastRefreshed": "2026-09-23T21:29:28.709Z"
     },
     "dock": {
       "id": "dock",
@@ -3331,7 +3331,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:24.396Z"
+      "lastRefreshed": "2026-09-23T21:29:28.709Z"
     },
     "calendly": {
       "id": "calendly",
@@ -3356,7 +3356,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:24.396Z"
+      "lastRefreshed": "2026-09-23T21:29:28.709Z"
     },
     "sendspark": {
       "id": "sendspark",
@@ -3381,7 +3381,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:24.396Z"
+      "lastRefreshed": "2026-09-23T21:29:28.710Z"
     },
     "hockeystack": {
       "id": "hockeystack",
@@ -3406,7 +3406,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:24.396Z"
+      "lastRefreshed": "2026-09-23T21:29:28.710Z"
     },
     "dreamdata": {
       "id": "dreamdata",
@@ -3431,7 +3431,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:24.396Z"
+      "lastRefreshed": "2026-09-23T21:29:28.710Z"
     },
     "strama-ai": {
       "id": "strama-ai",
@@ -3456,7 +3456,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:24.396Z"
+      "lastRefreshed": "2026-09-23T21:29:28.710Z"
     },
     "hyperbound": {
       "id": "hyperbound",
@@ -3493,7 +3493,7 @@
           "observedAt": "2026-09-10T20:00:00Z"
         }
       ],
-      "lastRefreshed": "2026-09-23T16:57:24.396Z"
+      "lastRefreshed": "2026-09-23T21:29:28.710Z"
     },
     "attention": {
       "id": "attention",
@@ -3518,7 +3518,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:24.396Z"
+      "lastRefreshed": "2026-09-23T21:29:28.710Z"
     },
     "revenue-io": {
       "id": "revenue-io",
@@ -3566,7 +3566,7 @@
           "observedAt": "2026-09-10T20:00:00Z"
         }
       ],
-      "lastRefreshed": "2026-09-23T16:57:24.396Z"
+      "lastRefreshed": "2026-09-23T21:29:28.710Z"
     },
     "balto": {
       "id": "balto",
@@ -3614,7 +3614,7 @@
           "observedAt": "2026-09-10T20:00:00Z"
         }
       ],
-      "lastRefreshed": "2026-09-23T16:57:24.396Z"
+      "lastRefreshed": "2026-09-23T21:29:28.710Z"
     },
     "amplemarket": {
       "id": "amplemarket",
@@ -3662,7 +3662,7 @@
           "observedAt": "2026-09-10T20:00:00Z"
         }
       ],
-      "lastRefreshed": "2026-09-23T16:57:24.396Z"
+      "lastRefreshed": "2026-09-23T21:29:28.710Z"
     },
     "landbase": {
       "id": "landbase",
@@ -3687,7 +3687,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:24.396Z"
+      "lastRefreshed": "2026-09-23T21:29:28.710Z"
     },
     "sybill": {
       "id": "sybill",
@@ -3724,7 +3724,7 @@
           "observedAt": "2026-09-10T20:00:00Z"
         }
       ],
-      "lastRefreshed": "2026-09-23T16:57:24.397Z"
+      "lastRefreshed": "2026-09-23T21:29:28.710Z"
     },
     "persana-ai": {
       "id": "persana-ai",
@@ -3749,7 +3749,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:24.397Z"
+      "lastRefreshed": "2026-09-23T21:29:28.710Z"
     },
     "warmly": {
       "id": "warmly",
@@ -3786,7 +3786,7 @@
           "observedAt": "2026-09-10T20:00:00Z"
         }
       ],
-      "lastRefreshed": "2026-09-23T16:57:24.397Z"
+      "lastRefreshed": "2026-09-23T21:29:28.710Z"
     },
     "cognism": {
       "id": "cognism",
@@ -3834,7 +3834,7 @@
           "observedAt": "2026-09-10T20:00:00Z"
         }
       ],
-      "lastRefreshed": "2026-09-23T16:57:24.397Z"
+      "lastRefreshed": "2026-09-23T21:29:28.710Z"
     },
     "lusha": {
       "id": "lusha",
@@ -3882,7 +3882,7 @@
           "observedAt": "2026-09-10T20:00:00Z"
         }
       ],
-      "lastRefreshed": "2026-09-23T16:57:24.397Z"
+      "lastRefreshed": "2026-09-23T21:29:28.710Z"
     },
     "lemlist": {
       "id": "lemlist",
@@ -3907,7 +3907,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:24.397Z"
+      "lastRefreshed": "2026-09-23T21:29:28.710Z"
     },
     "seamless-ai": {
       "id": "seamless-ai",
@@ -3932,7 +3932,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:24.397Z"
+      "lastRefreshed": "2026-09-23T21:29:28.710Z"
     },
     "heyreach": {
       "id": "heyreach",
@@ -3957,7 +3957,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:24.397Z"
+      "lastRefreshed": "2026-09-23T21:29:28.710Z"
     },
     "la-growth-machine": {
       "id": "la-growth-machine",
@@ -3982,7 +3982,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:24.397Z"
+      "lastRefreshed": "2026-09-23T21:29:28.710Z"
     },
     "orum": {
       "id": "orum",
@@ -4007,7 +4007,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:24.397Z"
+      "lastRefreshed": "2026-09-23T21:29:28.710Z"
     },
     "zime": {
       "id": "zime",
@@ -4032,7 +4032,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:24.397Z"
+      "lastRefreshed": "2026-09-23T21:29:28.710Z"
     },
     "smartwinnr": {
       "id": "smartwinnr",
@@ -4069,7 +4069,7 @@
           "observedAt": "2026-09-10T20:00:00Z"
         }
       ],
-      "lastRefreshed": "2026-09-23T16:57:24.397Z"
+      "lastRefreshed": "2026-09-23T21:29:28.710Z"
     },
     "exec": {
       "id": "exec",
@@ -4094,7 +4094,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:24.397Z"
+      "lastRefreshed": "2026-09-23T21:29:28.710Z"
     },
     "substrata": {
       "id": "substrata",
@@ -4131,7 +4131,7 @@
           "observedAt": "2026-09-10T20:00:00Z"
         }
       ],
-      "lastRefreshed": "2026-09-23T16:57:24.397Z"
+      "lastRefreshed": "2026-09-23T21:29:28.710Z"
     },
     "vibe-prospecting": {
       "id": "vibe-prospecting",
@@ -4156,7 +4156,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:24.397Z"
+      "lastRefreshed": "2026-09-23T21:29:28.710Z"
     },
     "heylee": {
       "id": "heylee",
@@ -4181,7 +4181,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-09-23T16:57:24.397Z"
+      "lastRefreshed": "2026-09-23T21:29:28.710Z"
     }
   },
   "summary": {
