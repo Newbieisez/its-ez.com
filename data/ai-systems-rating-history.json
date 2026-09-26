@@ -1,6 +1,6 @@
 {
   "schemaVersion": 2,
-  "updatedAt": "2026-09-26T16:22:53.004Z",
+  "updatedAt": "2026-09-26T21:09:30.151Z",
   "items": {
     "chatgpt": [],
     "claude": [],
@@ -495,6 +495,12 @@
         "score": 7.5,
         "status": "provisional",
         "confidence": 0
+      },
+      {
+        "at": "2026-09-26T21:09:30.151Z",
+        "score": 7.5,
+        "status": "provisional",
+        "confidence": 0
       }
     ],
     "hubspot": [
@@ -980,6 +986,12 @@
       },
       {
         "at": "2026-09-26T16:22:53.004Z",
+        "score": 9.2,
+        "status": "live",
+        "confidence": 9.1
+      },
+      {
+        "at": "2026-09-26T21:09:30.151Z",
         "score": 9.2,
         "status": "live",
         "confidence": 9.1
@@ -1471,6 +1483,12 @@
         "score": 8.4,
         "status": "live",
         "confidence": 8.6
+      },
+      {
+        "at": "2026-09-26T21:09:30.151Z",
+        "score": 8.4,
+        "status": "live",
+        "confidence": 8.6
       }
     ],
     "zoho": [
@@ -1956,6 +1974,12 @@
       },
       {
         "at": "2026-09-26T16:22:53.004Z",
+        "score": 8.7,
+        "status": "live",
+        "confidence": 8.7
+      },
+      {
+        "at": "2026-09-26T21:09:30.151Z",
         "score": 8.7,
         "status": "live",
         "confidence": 8.7
@@ -2447,6 +2471,12 @@
         "score": 9.2,
         "status": "live",
         "confidence": 9
+      },
+      {
+        "at": "2026-09-26T21:09:30.151Z",
+        "score": 9.2,
+        "status": "live",
+        "confidence": 9
       }
     ],
     "chorus": [
@@ -2932,6 +2962,12 @@
       },
       {
         "at": "2026-09-26T16:22:53.004Z",
+        "score": 5.4,
+        "status": "provisional",
+        "confidence": 0
+      },
+      {
+        "at": "2026-09-26T21:09:30.151Z",
         "score": 5.4,
         "status": "provisional",
         "confidence": 0
@@ -3423,6 +3459,12 @@
         "score": 8.9,
         "status": "live",
         "confidence": 8.6
+      },
+      {
+        "at": "2026-09-26T21:09:30.151Z",
+        "score": 8.9,
+        "status": "live",
+        "confidence": 8.6
       }
     ],
     "outreach": [
@@ -3899,6 +3941,12 @@
         "score": 8.7,
         "status": "live",
         "confidence": 8.8
+      },
+      {
+        "at": "2026-09-26T21:09:30.151Z",
+        "score": 8.7,
+        "status": "live",
+        "confidence": 8.8
       }
     ],
     "salesloft": [
@@ -4372,6 +4420,12 @@
       },
       {
         "at": "2026-09-26T16:22:53.004Z",
+        "score": 8.4,
+        "status": "live",
+        "confidence": 8.9
+      },
+      {
+        "at": "2026-09-26T21:09:30.151Z",
         "score": 8.4,
         "status": "live",
         "confidence": 8.9
@@ -4858,6 +4912,12 @@
         "score": 6,
         "status": "provisional",
         "confidence": 0
+      },
+      {
+        "at": "2026-09-26T21:09:30.151Z",
+        "score": 6,
+        "status": "provisional",
+        "confidence": 0
       }
     ],
     "highspot": [
@@ -5340,6 +5400,12 @@
         "score": 8.9,
         "status": "live",
         "confidence": 8.1
+      },
+      {
+        "at": "2026-09-26T21:09:30.151Z",
+        "score": 8.9,
+        "status": "live",
+        "confidence": 8.1
       }
     ],
     "allego": [
@@ -5819,6 +5885,12 @@
       },
       {
         "at": "2026-09-26T16:22:53.004Z",
+        "score": 8.7,
+        "status": "live",
+        "confidence": 7.5
+      },
+      {
+        "at": "2026-09-26T21:09:30.151Z",
         "score": 8.7,
         "status": "live",
         "confidence": 7.5
@@ -6305,6 +6377,12 @@
         "score": 8.6,
         "status": "live",
         "confidence": 7.9
+      },
+      {
+        "at": "2026-09-26T21:09:30.151Z",
+        "score": 8.6,
+        "status": "live",
+        "confidence": 7.9
       }
     ],
     "showpad": [
@@ -6787,6 +6865,12 @@
         "score": 6,
         "status": "provisional",
         "confidence": 0
+      },
+      {
+        "at": "2026-09-26T21:09:30.151Z",
+        "score": 6,
+        "status": "provisional",
+        "confidence": 0
       }
     ],
     "spekit": [
@@ -7176,6 +7260,12 @@
       },
       {
         "at": "2026-09-26T16:22:53.004Z",
+        "score": 9,
+        "status": "live",
+        "confidence": 6.9
+      },
+      {
+        "at": "2026-09-26T21:09:30.151Z",
         "score": 9,
         "status": "live",
         "confidence": 6.9
@@ -7661,6 +7751,12 @@
         "score": 7.7,
         "status": "provisional",
         "confidence": 7.1
+      },
+      {
+        "at": "2026-09-26T21:09:30.151Z",
+        "score": 7.7,
+        "status": "provisional",
+        "confidence": 7.1
       }
     ],
     "saleshood": [
@@ -8140,6 +8236,12 @@
       },
       {
         "at": "2026-09-26T16:22:53.004Z",
+        "score": 8.5,
+        "status": "live",
+        "confidence": 7.3
+      },
+      {
+        "at": "2026-09-26T21:09:30.151Z",
         "score": 8.5,
         "status": "live",
         "confidence": 7.3
@@ -8626,6 +8728,12 @@
         "score": 8.1,
         "status": "live",
         "confidence": 7.5
+      },
+      {
+        "at": "2026-09-26T21:09:30.151Z",
+        "score": 8.1,
+        "status": "live",
+        "confidence": 7.5
       }
     ],
     "360learning": [
@@ -9105,6 +9213,12 @@
       },
       {
         "at": "2026-09-26T16:22:53.004Z",
+        "score": 8.6,
+        "status": "live",
+        "confidence": 7.4
+      },
+      {
+        "at": "2026-09-26T21:09:30.151Z",
         "score": 8.6,
         "status": "live",
         "confidence": 7.4
@@ -9590,6 +9704,12 @@
         "score": 4.8,
         "status": "provisional",
         "confidence": 0
+      },
+      {
+        "at": "2026-09-26T21:09:30.151Z",
+        "score": 4.8,
+        "status": "provisional",
+        "confidence": 0
       }
     ],
     "degreed": [
@@ -10069,6 +10189,12 @@
       },
       {
         "at": "2026-09-26T16:22:53.004Z",
+        "score": 7.2,
+        "status": "provisional",
+        "confidence": 6.3
+      },
+      {
+        "at": "2026-09-26T21:09:30.151Z",
         "score": 7.2,
         "status": "provisional",
         "confidence": 6.3
@@ -10556,6 +10682,12 @@
         "score": 5.8,
         "status": "provisional",
         "confidence": 0
+      },
+      {
+        "at": "2026-09-26T21:09:30.151Z",
+        "score": 5.8,
+        "status": "provisional",
+        "confidence": 0
       }
     ],
     "absorb": [
@@ -11038,6 +11170,12 @@
         "score": 6.1,
         "status": "provisional",
         "confidence": 0
+      },
+      {
+        "at": "2026-09-26T21:09:30.151Z",
+        "score": 6.1,
+        "status": "provisional",
+        "confidence": 0
       }
     ],
     "sana": [
@@ -11229,6 +11367,12 @@
       },
       {
         "at": "2026-09-26T16:22:53.004Z",
+        "score": 6.1,
+        "status": "provisional",
+        "confidence": 0
+      },
+      {
+        "at": "2026-09-26T21:09:30.151Z",
         "score": 6.1,
         "status": "provisional",
         "confidence": 0
@@ -11622,6 +11766,12 @@
       },
       {
         "at": "2026-09-26T16:22:53.004Z",
+        "score": 9.1,
+        "status": "live",
+        "confidence": 9.1
+      },
+      {
+        "at": "2026-09-26T21:09:30.151Z",
         "score": 9.1,
         "status": "live",
         "confidence": 9.1
@@ -12030,6 +12180,12 @@
         "score": 9,
         "status": "live",
         "confidence": 9.1
+      },
+      {
+        "at": "2026-09-26T21:09:30.151Z",
+        "score": 9,
+        "status": "live",
+        "confidence": 9.1
       }
     ],
     "monday": [
@@ -12419,6 +12575,12 @@
       },
       {
         "at": "2026-09-26T16:22:53.004Z",
+        "score": 8.9,
+        "status": "live",
+        "confidence": 9.1
+      },
+      {
+        "at": "2026-09-26T21:09:30.151Z",
         "score": 8.9,
         "status": "live",
         "confidence": 9.1
@@ -12814,6 +12976,12 @@
       },
       {
         "at": "2026-09-26T16:22:53.004Z",
+        "score": 9.1,
+        "status": "live",
+        "confidence": 8.6
+      },
+      {
+        "at": "2026-09-26T21:09:30.151Z",
         "score": 9.1,
         "status": "live",
         "confidence": 8.6
@@ -13214,6 +13382,12 @@
       },
       {
         "at": "2026-09-26T16:22:53.004Z",
+        "score": 9.1,
+        "status": "live",
+        "confidence": 9.1
+      },
+      {
+        "at": "2026-09-26T21:09:30.151Z",
         "score": 9.1,
         "status": "live",
         "confidence": 9.1
@@ -13693,6 +13867,12 @@
         "score": 8.9,
         "status": "live",
         "confidence": 9.1
+      },
+      {
+        "at": "2026-09-26T21:09:30.151Z",
+        "score": 8.9,
+        "status": "live",
+        "confidence": 9.1
       }
     ],
     "6sense": [
@@ -14082,6 +14262,12 @@
       },
       {
         "at": "2026-09-26T16:22:53.004Z",
+        "score": 8.8,
+        "status": "live",
+        "confidence": 8.5
+      },
+      {
+        "at": "2026-09-26T21:09:30.151Z",
         "score": 8.8,
         "status": "live",
         "confidence": 8.5
@@ -14577,6 +14763,12 @@
         "score": 5.8,
         "status": "provisional",
         "confidence": 0
+      },
+      {
+        "at": "2026-09-26T21:09:30.151Z",
+        "score": 5.8,
+        "status": "provisional",
+        "confidence": 0
       }
     ],
     "close-crm": [
@@ -15062,6 +15254,12 @@
       },
       {
         "at": "2026-09-26T16:22:53.004Z",
+        "score": 5.7,
+        "status": "provisional",
+        "confidence": 0
+      },
+      {
+        "at": "2026-09-26T21:09:30.151Z",
         "score": 5.7,
         "status": "provisional",
         "confidence": 0
@@ -15553,6 +15751,12 @@
         "score": 6,
         "status": "provisional",
         "confidence": 0
+      },
+      {
+        "at": "2026-09-26T21:09:30.151Z",
+        "score": 6,
+        "status": "provisional",
+        "confidence": 0
       }
     ],
     "reply": [],
@@ -16032,6 +16236,12 @@
         "score": 5.4,
         "status": "provisional",
         "confidence": 0
+      },
+      {
+        "at": "2026-09-26T21:09:30.151Z",
+        "score": 5.4,
+        "status": "provisional",
+        "confidence": 0
       }
     ],
     "smartlead": [],
@@ -16449,6 +16659,12 @@
         "score": 8.2,
         "status": "provisional",
         "confidence": 4
+      },
+      {
+        "at": "2026-09-26T21:09:30.151Z",
+        "score": 8.2,
+        "status": "provisional",
+        "confidence": 4
       }
     ],
     "attention": [],
@@ -16839,6 +17055,12 @@
       },
       {
         "at": "2026-09-26T16:22:53.004Z",
+        "score": 8.5,
+        "status": "live",
+        "confidence": 7.4
+      },
+      {
+        "at": "2026-09-26T21:09:30.151Z",
         "score": 8.5,
         "status": "live",
         "confidence": 7.4
@@ -17234,6 +17456,12 @@
         "score": 9.1,
         "status": "provisional",
         "confidence": 6.6
+      },
+      {
+        "at": "2026-09-26T21:09:30.151Z",
+        "score": 9.1,
+        "status": "provisional",
+        "confidence": 6.6
       }
     ],
     "amplemarket": [
@@ -17623,6 +17851,12 @@
       },
       {
         "at": "2026-09-26T16:22:53.004Z",
+        "score": 8.6,
+        "status": "live",
+        "confidence": 7.1
+      },
+      {
+        "at": "2026-09-26T21:09:30.151Z",
         "score": 8.6,
         "status": "live",
         "confidence": 7.1
@@ -18019,6 +18253,12 @@
         "score": 8.5,
         "status": "provisional",
         "confidence": 4.4
+      },
+      {
+        "at": "2026-09-26T21:09:30.151Z",
+        "score": 8.5,
+        "status": "provisional",
+        "confidence": 4.4
       }
     ],
     "persana-ai": [],
@@ -18409,6 +18649,12 @@
       },
       {
         "at": "2026-09-26T16:22:53.004Z",
+        "score": 8.4,
+        "status": "provisional",
+        "confidence": 4.6
+      },
+      {
+        "at": "2026-09-26T21:09:30.151Z",
         "score": 8.4,
         "status": "provisional",
         "confidence": 4.6
@@ -18804,6 +19050,12 @@
         "score": 8.7,
         "status": "live",
         "confidence": 7.7
+      },
+      {
+        "at": "2026-09-26T21:09:30.151Z",
+        "score": 8.7,
+        "status": "live",
+        "confidence": 7.7
       }
     ],
     "lusha": [
@@ -19193,6 +19445,12 @@
       },
       {
         "at": "2026-09-26T16:22:53.004Z",
+        "score": 8.8,
+        "status": "live",
+        "confidence": 8.5
+      },
+      {
+        "at": "2026-09-26T21:09:30.151Z",
         "score": 8.8,
         "status": "live",
         "confidence": 8.5
@@ -19594,6 +19852,12 @@
         "score": 8.7,
         "status": "provisional",
         "confidence": 4.6
+      },
+      {
+        "at": "2026-09-26T21:09:30.151Z",
+        "score": 8.7,
+        "status": "provisional",
+        "confidence": 4.6
       }
     ],
     "exec": [],
@@ -19984,6 +20248,12 @@
       },
       {
         "at": "2026-09-26T16:22:53.004Z",
+        "score": 8.9,
+        "status": "provisional",
+        "confidence": 5.2
+      },
+      {
+        "at": "2026-09-26T21:09:30.151Z",
         "score": 8.9,
         "status": "provisional",
         "confidence": 5.2
