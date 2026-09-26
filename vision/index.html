@@ -1,490 +1,150 @@
 <!doctype html>
 <html lang="en">
 <head>
-<meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="robots" content="noindex,nofollow">
-<meta name="theme-color" content="#08090b">
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="robots" content="noindex,nofollow"><meta name="theme-color" content="#07090c">
 <title>EZ Enablement V2 Vision</title>
-<meta name="description" content="Private working preview of the next EZ Enablement website and storefront experience.">
+<meta name="description" content="Private working preview of the next EZ Enablement website experience.">
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/vision/vision.css"><script src="/vision/vision.js" defer></script>
 <style>
-:root{
-  --bg:#08090b;--bg2:#0d0f13;--panel:#12151a;--panel2:#171a20;--panel3:#1d2128;
-  --line:#2b3038;--line2:#3a414b;--text:#f7f8fa;--muted:#9da3ad;
-  --red:#ed1c2e;--red2:#ff4252;--softred:rgba(237,28,46,.12);--max:1360px;
-}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{margin:0;background:var(--bg);color:var(--text);font-family:Montserrat,system-ui,sans-serif;line-height:1.5}
-button,select{font:inherit}
-img{max-width:100%;display:block}
-a{color:inherit}
-.shell{width:min(var(--max),calc(100% - 48px));margin:auto}
-.preview-ribbon{border-bottom:1px solid #252a31;background:#0b0d10;color:#adb2ba;font-size:.69rem}
-.preview-ribbon .shell{min-height:38px;display:flex;align-items:center;justify-content:space-between;gap:20px}
-.preview-ribbon strong{color:#fff}
-.preview-ribbon a{text-decoration:none;color:#fff;font-weight:800}
-
-.header{position:sticky;top:0;z-index:100;background:rgba(8,9,11,.94);backdrop-filter:blur(18px);border-bottom:1px solid rgba(255,255,255,.08)}
-.header-row{height:78px;display:flex;align-items:center;gap:28px}
-.logo{display:flex;align-items:center;text-decoration:none;gap:10px}
-.logo-mark{display:grid;place-items:center;width:43px;height:43px;border:2px solid var(--red);border-radius:50%;font-weight:900;font-size:1rem;box-shadow:0 0 26px rgba(237,28,46,.2)}
-.logo-word{display:flex;flex-direction:column;line-height:1}
-.logo-word strong{font-size:.92rem;letter-spacing:.04em}
-.logo-word span{margin-top:5px;font-size:.53rem;color:#a4a9b2;font-weight:800;letter-spacing:.16em}
-.primary{margin-left:auto;display:flex;align-items:center;gap:24px}
-.nav-item{position:relative}
-.nav-trigger{border:0;background:none;color:#c8ccd3;padding:29px 0;cursor:pointer;text-transform:uppercase;font-size:.65rem;font-weight:900;letter-spacing:.075em}
-.nav-trigger:after{content:"";display:inline-block;width:6px;height:6px;border-right:1px solid currentColor;border-bottom:1px solid currentColor;transform:rotate(45deg);margin:0 0 3px 8px}
-.nav-trigger:hover,.nav-trigger:focus{color:#fff}
-.mega{display:none;position:absolute;top:68px;left:50%;transform:translateX(-50%);width:680px;padding:14px;border:1px solid #303640;border-radius:16px;background:#0e1115;box-shadow:0 28px 80px rgba(0,0,0,.54);grid-template-columns:1fr 1fr;gap:8px}
-.nav-item:hover .mega,.nav-item:focus-within .mega{display:grid}
-.mega a{padding:14px;border:1px solid transparent;border-radius:10px;background:#15181e;text-decoration:none}
-.mega a:hover{border-color:#454c56;background:#1a1e24}
-.mega small{display:block;color:var(--red2);font-size:.53rem;font-weight:900;letter-spacing:.11em;text-transform:uppercase}
-.mega b{display:block;margin-top:4px;font-size:.87rem}
-.mega span{display:block;margin-top:4px;color:#8f96a1;font-size:.67rem;line-height:1.5}
-.header-cta{padding:12px 17px;border:1px solid var(--red);border-radius:8px;text-decoration:none;text-transform:uppercase;font-size:.64rem;font-weight:900;letter-spacing:.055em}
-.mobile-jump{display:none;margin-left:auto;border:1px solid #343a43;background:#101319;color:#fff;border-radius:8px;padding:10px 12px}
-
-.hero{position:relative;overflow:hidden;border-bottom:1px solid #272c33;background:
-  radial-gradient(circle at 71% 38%,rgba(237,28,46,.18),transparent 23%),
-  linear-gradient(180deg,#07080a 0%,#0b0d10 100%)}
-.hero:after{content:"";position:absolute;left:0;right:0;bottom:-20px;height:260px;background:url("/assets/vegas-clean.svg") center bottom/cover no-repeat;opacity:.2;filter:grayscale(1) contrast(1.2)}
-.hero-grid{position:relative;z-index:2;display:grid;grid-template-columns:.86fr 1.14fr;gap:56px;align-items:center;min-height:660px}
-.eyebrow{margin:0 0 13px;color:var(--red2);font-size:.62rem;font-weight:900;letter-spacing:.17em;text-transform:uppercase}
-.hero h1{margin:0;font-size:clamp(3.8rem,7vw,7.5rem);line-height:.86;letter-spacing:-.062em;text-transform:uppercase}
-.hero h1 span{color:var(--red)}
-.hero-lede{max-width:680px;margin:25px 0 0;color:#c3c7ce;font-size:1.03rem;line-height:1.68}
-.hero-actions{display:flex;gap:11px;flex-wrap:wrap;margin-top:29px}
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:46px;padding:0 18px;border-radius:8px;text-decoration:none;text-transform:uppercase;font-size:.65rem;font-weight:900;letter-spacing:.05em}
-.btn.primary{background:var(--red);border:1px solid var(--red)}
-.btn.ghost{border:1px solid #414750}
-.stage{position:relative;min-height:475px}
-.core{position:absolute;left:50%;top:50%;transform:translate(-50%,-50%);width:225px;height:225px;border-radius:50%;display:grid;place-items:center;text-align:center;background:radial-gradient(circle,#1a1e24 0%,#0a0c0f 70%);border:1px solid #444b55;box-shadow:0 0 0 18px rgba(237,28,46,.035),0 0 70px rgba(237,28,46,.25)}
-.core:before{content:"";position:absolute;inset:-11px;border:1px solid rgba(237,28,46,.62);border-radius:50%}
-.core span{display:block;color:#9197a1;font-size:.55rem;font-weight:900;letter-spacing:.13em;text-transform:uppercase}
-.core strong{display:block;margin:4px 0;font-size:1.48rem;letter-spacing:-.04em}
-.node{position:absolute;width:180px;padding:16px 17px;background:rgba(14,17,21,.94);border:1px solid #343b44;border-radius:14px;box-shadow:0 20px 50px rgba(0,0,0,.32)}
-.node:before{content:"";position:absolute;top:50%;width:54px;height:1px;background:linear-gradient(90deg,var(--red),transparent)}
-.node b{display:block;font-size:.79rem}
-.node small{display:block;margin-top:5px;color:#949aa4;font-size:.62rem;line-height:1.5}
-.n1{left:0;top:46px}.n1:before{right:-55px}
-.n2{right:0;top:46px}.n2:before{left:-55px;transform:rotate(180deg)}
-.n3{left:0;bottom:46px}.n3:before{right:-55px}
-.n4{right:0;bottom:46px}.n4:before{left:-55px;transform:rotate(180deg)}
-
-.rail{background:#0e1014;border-bottom:1px solid #272c33}
-.rail .shell{display:grid;grid-template-columns:repeat(6,1fr)}
-.rail a{padding:17px 10px;text-align:center;text-decoration:none;border-right:1px solid #272c33;color:#bfc4cc;font-size:.59rem;font-weight:900;letter-spacing:.07em;text-transform:uppercase}
-.rail a:first-child{border-left:1px solid #272c33}.rail a:hover{background:#15181d;color:#fff}
-
-.section{padding:78px 0}
-.section.alt{background:#0c0f12;border-top:1px solid #232830;border-bottom:1px solid #232830}
-.section-head{display:flex;align-items:end;justify-content:space-between;gap:36px;margin-bottom:32px}
-.section-head h2{margin:0;font-size:clamp(2.8rem,5vw,4.9rem);line-height:.94;letter-spacing:-.052em}
-.section-head>p{max-width:560px;margin:0;color:#989fa9;font-size:.85rem;line-height:1.7}
-
-.buy-paths{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
-.buy-card{position:relative;overflow:hidden;padding:24px;border:1px solid #333a43;border-radius:16px;background:linear-gradient(180deg,#15191f,#101318)}
-.buy-card.featured{border-color:rgba(237,28,46,.8);box-shadow:inset 0 0 0 1px rgba(237,28,46,.18),0 16px 42px rgba(0,0,0,.22)}
-.badge{display:inline-block;padding:5px 8px;border-radius:999px;background:#232830;color:#cdd1d7;font-size:.51rem;font-weight:900;letter-spacing:.09em;text-transform:uppercase}
-.featured .badge{background:var(--red);color:#fff}
-.buy-card h3{margin:12px 0 6px;font-size:1.55rem;letter-spacing:-.03em}
-.buy-card>p{min-height:44px;margin:0;color:#9ba2ac;font-size:.76rem}
-.hr{height:1px;background:#30363f;margin:19px 0}
-.label{display:block;margin:0 0 8px;color:#e4e6ea;font-size:.57rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
-.control{width:100%;padding:11px;border:1px solid #3b424c;border-radius:8px;background:#0c0f13;color:#fff;font-size:.7rem}
-.lab-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:7px}
-.lab{padding:11px 8px;border:1px solid #383f49;border-radius:9px;background:#11151a;color:#cbd0d7;cursor:pointer;font-size:.62rem;font-weight:800}
-.lab.selected{border-color:var(--red);background:var(--softred);color:#fff}
-.summary{margin-top:12px;padding:12px;border:1px solid #2f353d;border-radius:10px;background:#0b0d11;color:#939aa4;font-size:.66rem}
-.summary strong{color:#fff}
-.checks{display:grid;gap:9px;margin:16px 0 0;padding:0;list-style:none}
-.checks li{color:#c6cad1;font-size:.69rem}.checks li:before{content:"✓";margin-right:8px;color:var(--red2);font-weight:900}
-.license{display:grid;grid-template-columns:repeat(3,1fr);gap:7px}
-.license button{padding:10px 6px;border:1px solid #3a414b;border-radius:8px;background:#0d1014;color:#c7ccd3;cursor:pointer;font-size:.59rem;font-weight:800}
-.license button.active{border-color:var(--red);box-shadow:inset 0 0 0 1px var(--red);color:#fff}
-.preview-cta{width:100%;min-height:44px;margin-top:18px;border:0;border-radius:8px;background:var(--red);color:#fff;font:inherit;font-size:.62rem;font-weight:900;letter-spacing:.05em;text-transform:uppercase;opacity:.72}
-
-.inside-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px}
-.workshop{position:relative;overflow:hidden;min-height:390px;border:1px solid #303740;border-radius:17px;background:#11151a}
-.workshop img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
-.workshop:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(7,8,10,.1),rgba(7,8,10,.48)),linear-gradient(0deg,rgba(7,8,10,.65),transparent 48%)}
-.workshop figcaption{position:absolute;left:24px;right:24px;bottom:22px;z-index:2}
-.workshop strong{display:block;font-size:1.25rem}.workshop span{display:block;margin-top:6px;color:#c2c7ce;font-size:.7rem}
-.inside-list{display:grid;grid-template-columns:1fr 1fr;gap:10px}
-.inside-list article{padding:20px;border:1px solid #303740;border-radius:13px;background:#13171c}
-.inside-list small{color:var(--red2);font-size:.52rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
-.inside-list h3{margin:8px 0 5px;font-size:.94rem}.inside-list p{margin:0;color:#9299a3;font-size:.68rem;line-height:1.55}
-
-.catalog-tools{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px}
-.filter{padding:9px 12px;border:1px solid #363d46;border-radius:999px;background:#101419;color:#bfc5cd;cursor:pointer;font-size:.58rem;font-weight:900;text-transform:uppercase;letter-spacing:.06em}
-.filter.active{background:var(--red);border-color:var(--red);color:#fff}
-.sku-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:11px}
-.sku{padding:19px;border:1px solid #303740;border-radius:13px;background:#101419}
-.sku small{color:#858c96;font-size:.54rem;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
-.sku h3{margin:8px 0 5px;font-size:1rem}.sku p{margin:0;color:#9299a3;font-size:.68rem;line-height:1.55}
-.sku .status{display:inline-block;margin-top:12px;padding:5px 7px;border-radius:999px;background:#1b2026;color:#c5cad1;font-size:.5rem;font-weight:900;text-transform:uppercase;letter-spacing:.07em}
-.sku.hide{display:none}
-
-.compare{overflow:auto;border:1px solid #303740;border-radius:14px}
-.compare table{width:100%;border-collapse:collapse;min-width:800px}
-.compare th,.compare td{padding:15px 16px;border-bottom:1px solid #2b3139;border-right:1px solid #2b3139;text-align:left;font-size:.68rem}
-.compare th{background:#15191f;color:#fff}.compare td{color:#adb3bc}.compare tr:last-child td{border-bottom:0}
-.compare th:last-child,.compare td:last-child{border-right:0}.yes{color:#fff;font-weight:900}.accent{color:var(--red2);font-weight:900}
-
-.arch-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
-.arch-grid article{padding:20px;border:1px solid #303740;border-radius:13px;background:#11151a}
-.arch-grid small{color:var(--red2);font-size:.52rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
-.arch-grid h3{margin:9px 0 5px;font-size:.95rem}.arch-grid p{margin:0;color:#8f96a1;font-size:.67rem;line-height:1.55}
-
-.footer{position:relative;overflow:hidden;padding:72px 0 42px;border-top:1px solid #252a31;background:#08090b}
-.footer:after{content:"";position:absolute;left:0;right:0;bottom:-25px;height:190px;background:url("/assets/vegas-clean.svg") center bottom/cover no-repeat;opacity:.18;filter:grayscale(1)}
-.footer .shell{position:relative;z-index:2}
-.mantra{display:flex;align-items:center;justify-content:center;gap:17px;flex-wrap:wrap;text-transform:uppercase;font-size:.69rem;font-weight:900;letter-spacing:.15em}
-.mantra b{color:var(--red)}.footer p{margin:24px 0 0;text-align:center;color:#737a84;font-size:.64rem}
-
-@media(max-width:1050px){
-  .primary,.header-cta{display:none}.mobile-jump{display:block}
-  .hero-grid,.inside-grid{grid-template-columns:1fr}
-  .hero-grid{padding:70px 0 52px;min-height:0}
-  .stage{min-height:430px}
-  .buy-paths{grid-template-columns:1fr}
-  .rail .shell{grid-template-columns:repeat(3,1fr)}
-  .arch-grid{grid-template-columns:1fr 1fr}
-  .section-head{display:block}.section-head>p{margin-top:14px}
-}
-@media(max-width:700px){
-  .shell{width:min(var(--max),calc(100% - 28px))}
-  .preview-ribbon .shell{padding:8px 0;align-items:flex-start;flex-direction:column;gap:2px}
-  .header-row{height:68px}.logo-word{display:none}
-  .hero h1{font-size:3.45rem}
-  .stage{min-height:445px}
-  .node{width:142px;padding:11px}
-  .n1,.n3{left:0}.n2,.n4{right:0}
-  .core{width:158px;height:158px}.core strong{font-size:1.12rem}
-  .rail .shell{grid-template-columns:1fr 1fr}
-  .inside-list,.sku-grid,.arch-grid{grid-template-columns:1fr}
-}
+.home-paths{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.home-path{padding:26px;border:1px solid #303842;border-radius:16px;background:linear-gradient(180deg,#151a20,#0f1318);text-decoration:none}
+.home-path small,.resource-card small,.proof-card small,.company-copy small{color:#ff4354;font-size:.52rem;font-weight:900;letter-spacing:.1em;text-transform:uppercase}
+.home-path h3{margin:10px 0 6px;font-size:1.3rem}.home-path p{margin:0;color:#98a1ac;font-size:.74rem;line-height:1.65}.home-path span{display:block;margin-top:18px;font-size:.66rem;font-weight:900}
+.solution-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.solution{position:relative;padding:22px;border:1px solid #303842;border-radius:15px;background:#11161c;overflow:hidden}.solution:before{content:"";position:absolute;left:0;top:0;width:3px;height:100%;background:#ed1c2e;opacity:.78}.solution small{color:#ff4354;font-size:.5rem;font-weight:900;text-transform:uppercase;letter-spacing:.1em}.solution h3{margin:9px 0 5px;font-size:1.05rem}.solution p{margin:0;color:#929ba6;font-size:.68rem;line-height:1.55}
+.proof-layout{display:grid;grid-template-columns:.9fr 1.1fr;gap:16px}.proof-card{padding:28px;border:1px solid #303842;border-radius:17px;background:radial-gradient(circle at 80% 12%,rgba(237,28,46,.13),transparent 26%),#12171d}.proof-card h3{margin:9px 0 8px;font-size:2.1rem;line-height:1;letter-spacing:-.04em}.proof-card p{margin:0;color:#9aa3ae;font-size:.76rem;line-height:1.7}
+.resource-row{display:grid;grid-template-columns:repeat(3,1fr);gap:10px}.resource-card{padding:22px;border:1px solid #303842;border-radius:15px;background:#11161c;text-decoration:none}.resource-card h3{margin:9px 0 5px;font-size:1.05rem}.resource-card p{margin:0;color:#929ba6;font-size:.68rem;line-height:1.55}.resource-card span{display:block;margin-top:15px;font-size:.63rem;font-weight:900}
+.company-grid{display:grid;grid-template-columns:420px 1fr;gap:18px;align-items:stretch}.founder-image{position:relative;overflow:hidden;border:1px solid #303842;border-radius:17px;background:#11161c;min-height:420px}.founder-image img{width:100%;height:100%;object-fit:cover}.founder-image:after{content:"";position:absolute;inset:0;background:linear-gradient(0deg,rgba(5,7,9,.6),transparent 50%)}.company-copy{padding:34px;border:1px solid #303842;border-radius:17px;background:#11161c;display:flex;flex-direction:column;justify-content:center}.company-copy h2{margin:10px 0 10px;font-size:clamp(2.6rem,4.5vw,4.5rem);line-height:.95;letter-spacing:-.05em}.company-copy p{color:#9aa3ae;font-size:.82rem;line-height:1.72}
+@media(max-width:980px){.home-paths,.solution-grid,.proof-layout,.company-grid{grid-template-columns:1fr}.company-grid{grid-template-columns:1fr}.founder-image{min-height:340px}.resource-row{grid-template-columns:1fr}}
 </style>
 </head>
 <body>
-<div class="preview-ribbon">
-  <div class="shell">
-    <span><strong>V2 VISION PREVIEW</strong> · Private working concept · Not indexed · No live checkout</span>
-    <a href="/">Return to current site ↗</a>
-  </div>
+<div class="preview-bar"><div class="shell"><span><b>V2 VISION PREVIEW</b> · Private working concept · Not indexed · No live checkout</span><a href="/">Current site ↗</a></div></div>
+<header class="site-header"><div class="shell header-row">
+<a class="brand" href="/vision/"><span class="brand-mark">EZ</span><span class="brand-copy"><b>EZ ENABLEMENT</b><span>PEOPLE · SYSTEMS · PERFORMANCE</span></span></a>
+<nav class="nav" aria-label="Vision navigation">
+<a class="active" href="/vision/">Home</a>
+<div class="nav-group"><button class="nav-button">Products</button><div class="mega">
+<a href="/vision/store.html"><small>Store</small><b>All Products</b><span>Browse the V2 catalog by job-to-be-done.</span></a>
+<a href="/vision/deal-labs.html"><small>Configure</small><b>Deal Labs</b><span>Single lab, custom bundle, or complete suite.</span></a>
+<a href="/vision/store.html#catalog"><small>AI</small><b>AI Fluency</b><span>Practical AI capability for GTM teams.</span></a>
+<a href="/vision/store.html#catalog"><small>Readiness</small><b>EZ SellerStart</b><span>30/60/90 onboarding and readiness.</span></a>
+</div></div>
+<div class="nav-group"><button class="nav-button">Solutions</button><div class="mega">
+<a href="#solutions"><small>GTM</small><b>Sales & Revenue Enablement</b><span>Execution systems around real field performance.</span></a>
+<a href="#solutions"><small>AI</small><b>AI Enablement & Fluency</b><span>Adopt, apply and govern AI in real workflows.</span></a>
+<a href="#solutions"><small>Readiness</small><b>Onboarding & Coaching</b><span>Ramp, practice, reinforcement and proof.</span></a>
+<a href="#solutions"><small>Scale</small><b>Partner Enablement</b><span>Role-based readiness across complex ecosystems.</span></a>
+</div></div>
+<a href="#proof">Proof</a><a href="#resources">Resources</a><a href="#company">Company</a>
+</nav>
+<a class="header-cta" href="mailto:ez@its-ez.com?subject=EZ%20Enablement%20V2">Talk to EZ</a>
+<button class="mobile-menu" data-mobile-jump="#start" type="button">Explore</button>
+</div></header>
+
+<main id="main">
+<section class="hero">
+<div class="shell hero-grid">
+<div>
+<div class="kicker-row"><span class="pill red">GTM Enablement</span><span class="pill">AI Fluency</span><span class="pill">Performance Systems</span></div>
+<p class="eyebrow" style="margin-top:24px">PEOPLE + SYSTEMS + PERFORMANCE</p>
+<h1>Same people.<br><span>Bigger possibilities.</span></h1>
+<p class="lede">EZ Enablement connects onboarding, practice, AI, tools, coaching and performance support around how GTM teams actually work, so capable people can spend less time fighting the system and more time performing.</p>
+<div class="actions"><a class="button primary" href="/vision/store.html">Explore products</a><a class="button ghost" href="#solutions">Explore solutions</a></div>
 </div>
 
-<header class="header">
-  <div class="shell header-row">
-    <a class="logo" href="#top" aria-label="EZ Enablement V2 Vision">
-      <span class="logo-mark">EZ</span>
-      <span class="logo-word"><strong>EZ ENABLEMENT</strong><span>PEOPLE · SYSTEMS · PERFORMANCE</span></span>
-    </a>
-
-    <nav class="primary" aria-label="Vision preview navigation">
-      <div class="nav-item">
-        <button class="nav-trigger">Products</button>
-        <div class="mega">
-          <a href="#deal-labs"><small>Configurable Storefront</small><b>Deal Labs</b><span>Single lab, custom bundle, or complete suite.</span></a>
-          <a href="#inside"><small>Learning Products</small><b>AI Fluency + SellerStart</b><span>Product experiences built from the real asset library.</span></a>
-          <a href="#catalog"><small>Catalog</small><b>20+ SKU Architecture</b><span>Search and filters instead of an endless card wall.</span></a>
-          <a href="#architecture"><small>Commerce</small><b>All Products</b><span>One buying system with clear packages and entitlements.</span></a>
-        </div>
-      </div>
-
-      <div class="nav-item">
-        <button class="nav-trigger">Solutions</button>
-        <div class="mega">
-          <a href="#architecture"><small>GTM</small><b>Sales & GTM Enablement</b><span>Execution systems built around field performance.</span></a>
-          <a href="#architecture"><small>AI</small><b>AI Enablement & Fluency</b><span>Adoption, application, governance and confidence.</span></a>
-          <a href="#architecture"><small>Readiness</small><b>Onboarding & Coaching</b><span>Ramp, practice, reinforcement and proof.</span></a>
-          <a href="#architecture"><small>Scale</small><b>Partner Enablement</b><span>Role-based readiness across distributed ecosystems.</span></a>
-        </div>
-      </div>
-
-      <div class="nav-item">
-        <button class="nav-trigger">Proof</button>
-        <div class="mega">
-          <a href="#architecture"><small>Career Evidence</small><b>Case Studies</b><span>Former-employer work labeled accurately.</span></a>
-          <a href="#architecture"><small>People</small><b>Testimonials & Recognition</b><span>LinkedIn recommendations and verified recognition.</span></a>
-          <a href="#architecture"><small>Customer Evidence</small><b>Customer Stories</b><span>Reserved only for actual EZ Enablement customers.</span></a>
-          <a href="#architecture"><small>Trust</small><b>Evidence & Sources</b><span>Clear provenance behind outcomes and claims.</span></a>
-        </div>
-      </div>
-
-      <div class="nav-item">
-        <button class="nav-trigger">Company</button>
-        <div class="mega">
-          <a href="#architecture"><small>Business</small><b>About EZ Enablement</b><span>The company, philosophy and operating model.</span></a>
-          <a href="#architecture"><small>Founder</small><b>Meet EZ</b><span>Seller, builder and enablement practitioner.</span></a>
-          <a href="#architecture"><small>Speaking</small><b>Workshops & Speaking</b><span>Practical GTM, enablement and AI sessions.</span></a>
-          <a href="#architecture"><small>Company</small><b>Investor Relations</b><span>Company information and future updates.</span></a>
-        </div>
-      </div>
-    </nav>
-
-    <a class="header-cta" href="mailto:ez@its-ez.com?subject=EZ%20Enablement%20V2%20Vision">Talk to EZ</a>
-    <button class="mobile-jump" type="button" onclick="document.querySelector('#deal-labs').scrollIntoView()">Explore</button>
-  </div>
-</header>
-
-<main id="top">
-<section class="hero">
-  <div class="shell hero-grid">
-    <div>
-      <p class="eyebrow">THE NEXT EZ ENABLEMENT</p>
-      <h1>Same people.<br><span>Bigger possibilities.</span></h1>
-      <p class="hero-lede">A sharper EZ Enablement experience built around clear buying paths, practical GTM systems, real proof, and a visual identity that feels unmistakably ours.</p>
-      <div class="hero-actions">
-        <a class="btn primary" href="#deal-labs">See the store vision</a>
-        <a class="btn ghost" href="#architecture">See the site system</a>
-      </div>
-    </div>
-
-    <div class="stage" aria-label="EZ Enablement capability model">
-      <div class="node n1"><b>Onboarding & Readiness</b><small>Ramp · Practice · Prove</small></div>
-      <div class="node n2"><b>AI Enablement</b><small>Adopt · Apply · Govern</small></div>
-      <div class="core"><div><span>EZ ENABLEMENT</span><strong>Capability</strong><span>in the flow of work</span></div></div>
-      <div class="node n3"><b>Deal Practice</b><small>Learn · Practice · Perform</small></div>
-      <div class="node n4"><b>GTM Systems</b><small>Connect · Build · Scale</small></div>
-    </div>
-  </div>
+<div class="hero-stage" aria-label="Connected capability system">
+<div class="hero-orbit"><div class="orbit-ring r1"></div><div class="orbit-ring r2"></div><div class="orbit-core"><div><span>EZ ENABLEMENT</span><strong>Capability</strong><span>in the flow of work</span></div></div></div>
+<div class="cap-node a"><b>Onboarding & Readiness</b><small>Ramp · Practice · Prove</small></div>
+<div class="cap-node b"><b>AI Enablement</b><small>Adopt · Apply · Govern</small></div>
+<div class="cap-node c"><b>Deal Practice</b><small>Learn · Practice · Perform</small></div>
+<div class="cap-node d"><b>GTM Systems</b><small>Connect · Build · Scale</small></div>
+</div>
+</div>
 </section>
 
-<nav class="rail" aria-label="Vision preview sections">
-  <div class="shell">
-    <a href="#deal-labs">Deal Labs</a>
-    <a href="#inside">What's Inside</a>
-    <a href="#catalog">20+ SKUs</a>
-    <a href="#compare">Compare</a>
-    <a href="#architecture">Architecture</a>
-    <a href="/">Current Site</a>
-  </div>
-</nav>
-
-<section id="deal-labs" class="section">
-  <div class="shell">
-    <div class="section-head">
-      <div><p class="eyebrow">STORE VISION</p><h2>Configure the package.<br>Understand what you get.</h2></div>
-      <p>The store should make a 20+ SKU catalog feel simple. Buyers choose a buying path first, then reveal detail only when they need it.</p>
-    </div>
-
-    <div class="buy-paths">
-      <article class="buy-card">
-        <span class="badge">Focused purchase</span>
-        <h3>Single Lab</h3>
-        <p>Go deep on one methodology or practice system.</p>
-        <div class="hr"></div>
-        <label class="label" for="single-lab">Choose a Deal Lab</label>
-        <select id="single-lab" class="control">
-          <option>MEDDPICC Deal Lab</option>
-          <option>SPIN Deal Lab</option>
-          <option>SPICED Deal Lab</option>
-          <option>Challenger-Inspired Deal Lab</option>
-          <option>Sandler-Inspired Deal Lab</option>
-          <option>Gap-Based Deal Lab</option>
-        </select>
-        <ul class="checks">
-          <li>Focused learning experience</li>
-          <li>Practice scenarios</li>
-          <li>Seller resources</li>
-          <li>Package-specific support materials</li>
-        </ul>
-        <div class="hr"></div>
-        <span class="label">License</span>
-        <div class="license" data-license>
-          <button class="active">Individual</button><button>Team</button><button>Business</button>
-        </div>
-        <button class="preview-cta" disabled>Pricing from launch SSOT</button>
-      </article>
-
-      <article class="buy-card featured">
-        <span class="badge">Build your own</span>
-        <h3>Bundle</h3>
-        <p>Mix multiple labs around the needs of your team.</p>
-        <div class="hr"></div>
-        <span class="label">Select Deal Labs</span>
-        <div class="lab-grid" data-labs>
-          <button class="lab selected">MEDDPICC</button>
-          <button class="lab selected">SPIN</button>
-          <button class="lab">SPICED</button>
-          <button class="lab">Challenger</button>
-          <button class="lab">Sandler</button>
-          <button class="lab">Gap-Based</button>
-        </div>
-        <div class="summary">Selected: <strong data-count>2 labs</strong></div>
-        <ul class="checks">
-          <li>Everything in selected labs</li>
-          <li>Combined practice resources</li>
-          <li>One package view</li>
-          <li>Flexible license options</li>
-        </ul>
-        <div class="hr"></div>
-        <span class="label">License</span>
-        <div class="license" data-license>
-          <button class="active">Individual</button><button>Team</button><button>Business</button>
-        </div>
-        <button class="preview-cta" disabled>Pricing from launch SSOT</button>
-      </article>
-
-      <article class="buy-card">
-        <span class="badge">Complete collection</span>
-        <h3>Master Suite</h3>
-        <p>The broadest Deal Labs path for enablement teams.</p>
-        <div class="hr"></div>
-        <span class="label">Collection</span>
-        <div class="summary"><strong>Full released collection</strong><br>One coherent buying path across the released Deal Labs catalog.</div>
-        <ul class="checks">
-          <li>All released Deal Labs</li>
-          <li>Broader practice library</li>
-          <li>Team-ready resource structure</li>
-          <li>Clear entitlement and licensing</li>
-        </ul>
-        <div class="hr"></div>
-        <span class="label">License</span>
-        <div class="license" data-license>
-          <button>Individual</button><button class="active">Team</button><button>Business</button>
-        </div>
-        <button class="preview-cta" disabled>Pricing from launch SSOT</button>
-      </article>
-    </div>
-  </div>
+<section id="start" class="section">
+<div class="shell">
+<div class="section-head"><div><p class="eyebrow">START WHERE YOU ARE</p><h2>Use it. Buy it.<br>Build it with us.</h2></div><p>Three clear ways into EZ Enablement. No need to understand the entire catalog before you can decide what kind of help you need.</p></div>
+<div class="home-paths">
+<a class="home-path" href="#resources"><small>Free resources</small><h3>Use something now.</h3><p>Explore practical labs, examples and tools that show how EZ thinks about capability and execution.</p><span>Explore resources →</span></a>
+<a class="home-path" href="/vision/store.html"><small>Digital products</small><h3>License a finished system.</h3><p>Buy practical products built for a defined job, clear audience and real application.</p><span>Explore the store →</span></a>
+<a class="home-path" href="#solutions"><small>Solutions + implementation</small><h3>Build around your team.</h3><p>Bring EZ in when the problem needs diagnosis, customization, facilitation, implementation or measurement.</p><span>Explore solutions →</span></a>
+</div>
+</div>
 </section>
 
-<section id="inside" class="section alt">
-  <div class="shell">
-    <div class="section-head">
-      <div><p class="eyebrow">WHAT THE BUYER SEES</p><h2>Show the product.<br>Not just the price.</h2></div>
-      <p>Each package should quickly explain the learning experience, practice assets, manager/support materials, delivery formats and license rights.</p>
-    </div>
-
-    <div class="inside-grid">
-      <figure class="workshop">
-        <img src="/assets/ez-ai-fluency-stage-preview.svg" alt="EZ presenting AI Fluency for Sales Professionals">
-        <figcaption><strong>Real EZ visual assets, not generic filler.</strong><span>The V2 experience starts with what we already own in Canva, Drive and the production asset library.</span></figcaption>
-      </figure>
-
-      <div class="inside-list">
-        <article><small>Learn</small><h3>Structured content</h3><p>Clear guidance around the concept, methodology or workflow being practiced.</p></article>
-        <article><small>Practice</small><h3>Scenarios</h3><p>Application activities that move the product beyond passive consumption.</p></article>
-        <article><small>Perform</small><h3>Seller resources</h3><p>Job aids and support material intended for use closer to the work.</p></article>
-        <article><small>Reinforce</small><h3>Manager support</h3><p>Where included, give leaders a practical way to coach and reinforce behavior.</p></article>
-      </div>
-    </div>
-  </div>
+<section class="section alt">
+<div class="shell">
+<div class="section-head"><div><p class="eyebrow">FEATURED PRODUCTS</p><h2>Products should feel<br>worth buying.</h2></div><p>Real product visuals, clearer package logic and focused detail pages replace the flat catalog-card experience.</p></div>
+<div class="product-strip">
+<a class="product-card featured" href="/vision/deal-labs.html"><img src="https://design.canva.ai/piZLP4saOTxbLxa" alt="EZ Deal Labs Suite artwork"><div class="overlay"><small>Configurable product family</small><h3>EZ Deal Labs</h3><p>Choose one lab, build a bundle, or equip a team with the released collection.</p></div></a>
+<a class="product-card" href="/vision/store.html"><img src="https://design.canva.ai/duFPFTRH1CsmKN0" alt="AI Fluency product artwork"><div class="overlay"><small>AI enablement</small><h3>AI Fluency</h3><p>Practical AI capability for GTM teams.</p></div></a>
+<a class="product-card" href="/vision/store.html"><div style="height:100%;display:grid;place-items:center;background:radial-gradient(circle at 50% 40%,rgba(237,28,46,.22),transparent 25%),#11161c"><div style="text-align:center"><small style="display:block;color:#ff4354;font-size:.62rem;font-weight:900;letter-spacing:.14em">30 / 60 / 90</small><strong style="display:block;margin-top:10px;font-size:1.65rem">EZ SellerStart</strong></div></div><div class="overlay"><small>Onboarding & readiness</small><h3>SellerStart</h3><p>Ramp, practice, coaching and proof.</p></div></a>
+<a class="product-card" href="/vision/store.html"><div style="height:100%;display:grid;place-items:center;background:radial-gradient(circle at 30% 35%,rgba(237,28,46,.2),transparent 28%),#11161c"><div style="text-align:center;padding:20px"><strong style="font-size:1.35rem">EZ Plug & RolePlay™</strong><span style="display:block;margin-top:8px;color:#8f98a3;font-size:.58rem">SCENARIOS + PROMPTS</span></div></div><div class="overlay"><small>AI sales practice</small><h3>Plug & RolePlay</h3><p>Portable scenarios for compatible AI roleplay systems.</p></div></a>
+</div>
+</div>
 </section>
 
-<section id="catalog" class="section">
-  <div class="shell">
-    <div class="section-head">
-      <div><p class="eyebrow">20+ SKU ARCHITECTURE</p><h2>Browse without drowning.</h2></div>
-      <p>Instead of making buyers scroll through every SKU, the catalog will use filters, package families and search-friendly groupings.</p>
-    </div>
-
-    <div class="catalog-tools">
-      <button class="filter active" data-filter="all">All</button>
-      <button class="filter" data-filter="deal">Deal Labs</button>
-      <button class="filter" data-filter="ai">AI + Fluency</button>
-      <button class="filter" data-filter="onboarding">Onboarding</button>
-      <button class="filter" data-filter="practice">Practice</button>
-    </div>
-
-    <div class="sku-grid">
-      <article class="sku" data-cat="deal practice"><small>Deal Lab</small><h3>MEDDPICC</h3><p>Methodology application and deal practice.</p><span class="status">Current family</span></article>
-      <article class="sku" data-cat="deal practice"><small>Deal Lab</small><h3>SPIN</h3><p>Questioning and discovery practice.</p><span class="status">Current family</span></article>
-      <article class="sku" data-cat="deal practice"><small>Deal Lab</small><h3>SPICED</h3><p>Structured opportunity and discovery practice.</p><span class="status">Current family</span></article>
-      <article class="sku" data-cat="deal practice"><small>Deal Lab</small><h3>Challenger-Inspired</h3><p>Commercial teaching and reframing practice.</p><span class="status">Current family</span></article>
-      <article class="sku" data-cat="deal practice"><small>Deal Lab</small><h3>Sandler-Inspired</h3><p>Conversation and qualification practice.</p><span class="status">Current family</span></article>
-      <article class="sku" data-cat="deal practice"><small>Deal Lab</small><h3>Gap-Based</h3><p>Problem, current state and future state practice.</p><span class="status">Current family</span></article>
-      <article class="sku" data-cat="ai"><small>AI Enablement</small><h3>AI Fluency</h3><p>Practical AI capability for GTM teams.</p><span class="status">Product family</span></article>
-      <article class="sku" data-cat="onboarding"><small>Onboarding</small><h3>EZ SellerStart</h3><p>30/60/90 readiness operating system.</p><span class="status">Product family</span></article>
-      <article class="sku" data-cat="practice ai"><small>Practice</small><h3>EZ Plug & RolePlay</h3><p>Scenario and prompt sets for compatible AI roleplay environments.</p><span class="status">Product family</span></article>
-    </div>
-  </div>
+<section id="solutions" class="section">
+<div class="shell">
+<div class="section-head"><div><p class="eyebrow">SOLUTIONS</p><h2>Start with the friction.<br>Build what helps.</h2></div><p>EZ Enablement works across the connected parts of GTM performance rather than treating training, tools and execution as separate problems.</p></div>
+<div class="solution-grid">
+<article class="solution"><small>01</small><h3>Sales & Revenue Enablement</h3><p>Onboarding, methodology, deal execution, coaching, certification and field support.</p></article>
+<article class="solution"><small>02</small><h3>AI Enablement & Fluency</h3><p>Practical adoption, workflow design, prompting, verification and responsible AI use.</p></article>
+<article class="solution"><small>03</small><h3>Onboarding & Readiness</h3><p>Role-based ramp built around what people must demonstrate, not what they completed.</p></article>
+<article class="solution"><small>04</small><h3>Partner Enablement</h3><p>Learning, accreditation, content, journeys and systems for complex partner ecosystems.</p></article>
+<article class="solution"><small>05</small><h3>Manager Coaching</h3><p>Practical inspection points, coaching systems and reinforcement that survive after launch.</p></article>
+<article class="solution"><small>06</small><h3>Custom Systems & Implementation</h3><p>Interactive portals, learning experiences, workflows and tools when off-the-shelf is not enough.</p></article>
+</div>
+</div>
 </section>
 
-<section id="compare" class="section alt">
-  <div class="shell">
-    <div class="section-head">
-      <div><p class="eyebrow">COMPARE</p><h2>Make the buying difference obvious.</h2></div>
-      <p>The top of the page stays simple. Buyers who want detail can compare the package paths without leaving the page.</p>
-    </div>
-
-    <div class="compare">
-      <table>
-        <thead><tr><th>What changes</th><th>Single Lab</th><th>Bundle</th><th>Master Suite</th></tr></thead>
-        <tbody>
-          <tr><td>Number of Deal Labs</td><td class="yes">1 selected</td><td class="yes">Multiple selected</td><td class="accent">Full released collection</td></tr>
-          <tr><td>Practice resources</td><td>Lab-specific</td><td>Across selected labs</td><td>Broadest collection</td></tr>
-          <tr><td>Package configurator</td><td>Choose one</td><td class="accent">Build your own</td><td>Preconfigured suite</td></tr>
-          <tr><td>License options</td><td>Individual / Team / Business</td><td>Individual / Team / Business</td><td>Team / Business emphasis</td></tr>
-          <tr><td>Exact deliverables</td><td>Shown before purchase</td><td>Shown before purchase</td><td>Shown before purchase</td></tr>
-          <tr><td>Pricing</td><td colspan="3">Pulled from the commercial SSOT at launch. No placeholder pricing shown in this preview.</td></tr>
-        </tbody>
-      </table>
-    </div>
-  </div>
+<section id="proof" class="section alt">
+<div class="shell">
+<div class="section-head"><div><p class="eyebrow">PROOF</p><h2>The work behind<br>the numbers.</h2></div><p>V2 separates career evidence from EZ customer evidence so visitors can understand both the outcomes and the relationship behind them.</p></div>
+<div class="metric-row">
+<div class="metric"><strong>$3.1M</strong><span>Partner-driven revenue influenced</span></div>
+<div class="metric"><strong>40%</strong><span>Conversion lift</span></div>
+<div class="metric"><strong>40–50%</strong><span>Faster partner ramp</span></div>
+<div class="metric"><strong>$700K</strong><span>Annual tool consolidation savings</span></div>
+<div class="metric"><strong>82%</strong><span>MEDDPICC adoption</span></div>
+</div>
+<div class="proof-layout" style="margin-top:16px">
+<article class="proof-card"><small>Career case studies</small><h3>Real outcomes. Clear provenance.</h3><p>Results from work at former employers stay labeled as career evidence. They are not presented as EZ Enablement customers or customer logos.</p><div class="actions"><a class="button dark" href="/work.html">See current proof archive</a></div></article>
+<article class="proof-card"><small>Testimonials & recognition</small><h3>What people say after working with EZ.</h3><p>LinkedIn recommendations, internal recognition and future customer testimonials belong in a separate proof layer so buyers can inspect the human evidence as easily as the metrics.</p><div class="actions"><a class="button dark" href="/recommendations.html">See recommendations</a></div></article>
+</div>
+</div>
 </section>
 
-<section id="architecture" class="section">
-  <div class="shell">
-    <div class="section-head">
-      <div><p class="eyebrow">V2 SITE ARCHITECTURE</p><h2>Less homepage.<br>Better navigation.</h2></div>
-      <p>The main page gets visitors to the important decisions quickly. Mega menus and focused subpages carry the depth instead of turning Home into an endless scroll.</p>
-    </div>
+<section class="section">
+<div class="shell media-split">
+<figure class="media-panel"><img src="/assets/ez-ai-fluency-stage-preview.svg" alt="EZ presenting AI Fluency for Sales Professionals"><figcaption class="media-copy"><p class="eyebrow">PRACTICAL BY DESIGN</p><h3>Training is only useful if people can use it.</h3><p>Know it. Practice it. Prove it. Perform.</p></figcaption></figure>
+<div class="copy-panel"><p class="eyebrow">VISUAL SYSTEM</p><h3>Ideas → systems → people → growth.</h3><p>Black and charcoal depth. Crimson illumination. Technical connection lines. Real photography. Real product artwork. Restrained Vegas architecture. The site should feel like EZ Enablement, not a generic AI template.</p><div class="actions"><a class="button primary" href="/vision/store.html">See the V2 store</a><a class="button ghost" href="/vision/deal-labs.html">Configure Deal Labs</a></div></div>
+</div>
+</section>
 
-    <div class="arch-grid">
-      <article><small>01 · Home</small><h3>Fast orientation</h3><p>Hero, problems we solve, products/solutions split, proof, resources, testimonials and a strong CTA.</p></article>
-      <article><small>02 · Navigation</small><h3>Mega menus</h3><p>Products, Solutions, Resources, Proof and Company expose depth without bloating Home.</p></article>
-      <article><small>03 · Store</small><h3>Configurable buying</h3><p>Package-first experiences, filters and comparison tools make 20+ SKUs understandable.</p></article>
-      <article><small>04 · Proof</small><h3>Accurate relationships</h3><p>Career work, recommendations and future EZ customer stories remain clearly separated.</p></article>
-    </div>
-  </div>
+<section id="resources" class="section alt">
+<div class="shell">
+<div class="section-head"><div><p class="eyebrow">FREE RESOURCES</p><h2>Give buyers a reason<br>to come back.</h2></div><p>The Revenue Hub, AI tools library and seller-intelligence examples should act as useful teasers of the systems EZ can build, not disconnected side projects.</p></div>
+<div class="resource-row">
+<a class="resource-card" href="/meddpicc.html"><small>Practice</small><h3>MEDDPICC Lab</h3><p>A practical methodology resource that demonstrates how EZ turns concepts into usable field support.</p><span>Explore →</span></a>
+<a class="resource-card" href="/ai-systems.html"><small>AI systems</small><h3>AI Tools Library</h3><p>A living view of AI tools and systems through an enablement and productivity lens.</p><span>Explore →</span></a>
+<a class="resource-card" href="/cybersecurity.html"><small>Seller intelligence</small><h3>Cybersecurity Seller Intelligence</h3><p>An example of delivering instant, consumable domain information to sellers in the flow of work.</p><span>Explore →</span></a>
+</div>
+</div>
+</section>
+
+<section id="company" class="section">
+<div class="shell company-grid">
+<div class="founder-image"><img src="/assets/headshot2026fixed.svg" alt="Erez EZ Haimowicz"></div>
+<div class="company-copy"><small>FOUNDER-LED · LAS VEGAS</small><h2>Hi. I’m EZ.</h2><p>EZ Enablement is being built around a simple belief: capable people should not have to fight disconnected content, tools and processes just to do good work. The company combines hands-on enablement experience with practical systems thinking, AI fluency and a willingness to build the thing, not just recommend it.</p><div class="actions"><a class="button primary" href="/about.html">About EZ</a><a class="button ghost" href="mailto:ez@its-ez.com">Contact</a></div></div>
+</div>
 </section>
 </main>
 
-<footer class="footer">
-  <div class="shell">
-    <div class="mantra"><span>Ideas</span><b>→</b><span>Systems</span><b>→</b><span>People</span><b>→</b><span>Growth</span></div>
-    <p>EZ Enablement V2 working vision · This page is intentionally excluded from search indexing and contains no live checkout.</p>
-  </div>
-</footer>
-
-<script>
-document.querySelectorAll('[data-license]').forEach(group=>{
-  group.querySelectorAll('button').forEach(btn=>{
-    btn.addEventListener('click',()=>{
-      group.querySelectorAll('button').forEach(b=>b.classList.remove('active'));
-      btn.classList.add('active');
-    });
-  });
-});
-
-const labs=[...document.querySelectorAll('[data-labs] .lab')];
-const count=document.querySelector('[data-count]');
-function refreshCount(){
-  const n=labs.filter(l=>l.classList.contains('selected')).length;
-  count.textContent=n+' '+(n===1?'lab':'labs');
-}
-labs.forEach(l=>l.addEventListener('click',()=>{l.classList.toggle('selected');refreshCount();}));
-
-const filters=[...document.querySelectorAll('[data-filter]')];
-const skus=[...document.querySelectorAll('[data-cat]')];
-filters.forEach(btn=>btn.addEventListener('click',()=>{
-  filters.forEach(b=>b.classList.toggle('active',b===btn));
-  const f=btn.dataset.filter;
-  skus.forEach(card=>{
-    const cats=(card.dataset.cat||'').split(/\s+/);
-    card.classList.toggle('hide',f!=='all'&&!cats.includes(f));
-  });
-}));
-</script>
-</body>
-</html>
+<footer class="footer"><div class="shell"><div class="mantra"><span>Ideas</span><b>→</b><span>Systems</span><b>→</b><span>People</span><b>→</b><span>Growth</span></div><p>EZ Enablement V2 working vision · Noindex · No live checkout · Current site remains separate.</p></div></footer>
+</body></html>
