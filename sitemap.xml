@@ -2,40 +2,68 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://its-ez.com/</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://its-ez.com/store.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://its-ez.com/labs.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://its-ez.com/how-i-help.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://its-ez.com/ai.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://its-ez.com/work.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://its-ez.com/case-study-sentinelone.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://its-ez.com/case-study-twilio.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://its-ez.com/about.html</loc>
-    <lastmod>2026-09-15</lastmod>
-  </url>
-  <url>
-    <loc>https://its-ez.com/sales-enablement.html</loc>
-    <lastmod>2026-09-15</lastmod>
-  </url>
-  <url>
-    <loc>https://its-ez.com/revenue-enablement.html</loc>
-    <lastmod>2026-09-15</lastmod>
-  </url>
-  <url>
-    <loc>https://its-ez.com/partner-enablement.html</loc>
-    <lastmod>2026-09-15</lastmod>
-  </url>
-  <url>
-    <loc>https://its-ez.com/ai-enablement.html</loc>
-    <lastmod>2026-09-15</lastmod>
-  </url>
-  <url>
-    <loc>https://its-ez.com/work-with-me.html</loc>
-  </url>
-  <url>
-    <loc>https://its-ez.com/ai-systems.html</loc>
-  </url>
-  <url>
-    <loc>https://its-ez.com/revenue-performance.html</loc>
-  </url>
-  <url>
-    <loc>https://its-ez.com/music.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
   <url>
     <loc>https://its-ez.com/recommendations.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://its-ez.com/music.html</loc>
+    <lastmod>2026-09-22</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 </urlset>
