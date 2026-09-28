@@ -1,0 +1,13 @@
+# its-ez.com — Site Map
+- `/index.html`: Executive Homepage, verified proof metrics, featured flagship products.
+- `/store.html`: Commercial Storefront, 14 products, category & buyer filters, instant checkout & fulfillment.
+- `/labs.html`: Deal Labs hub with interactive Deal Lens Selector and 6 methodology labs.
+- `/how-i-help.html`: Turnkey consulting sprints (Offer A, B, C), advisory sessions, and fractional leadership.
+- `/ai.html`: GTM AI workflows, Human Judgment Loop, 8-input brief, and AI Roleplay Library.
+- `/work.html`: Portfolio of enterprise enablement architectures and deliverables.
+- `/case-study-sentinelone.html`: SentinelOne Purple Book & $700K tooling consolidation.
+- `/case-study-twilio.html`: Twilio SOAR seller accreditation & Gong telemetry.
+- `/about.html`: Practitioner pedigree, background, and enablement philosophy.
+- `/recommendations.html`: Client recommendations and endorsements.
+- `/music.html`: Creative releases by Avi Haimonix.
+- `/launch_tracker.md`: Single master launch control tracker across 21 evaluation columns.
