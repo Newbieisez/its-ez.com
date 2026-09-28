@@ -44,17 +44,6 @@
         domains.insertAdjacentElement('afterend', audience);
       }
     }
-    if (actions) {
-      const links = actions.querySelectorAll('a');
-      if (links[0]) {
-        links[0].href = 'work-with-me.html';
-        links[0].textContent = 'Work With EZ →';
-      }
-      if (links[1]) {
-        links[1].href = '#results';
-        links[1].textContent = 'See Results →';
-      }
-    }
   }
 
   function simplifyOffers() {

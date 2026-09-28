@@ -162,11 +162,6 @@
       else if(hero) hero.insertAdjacentElement('afterend',section);
       else document.querySelector('main')?.prepend(section);
     }
-    const heroActions=document.querySelector('.ez-hero-actions');
-    if(heroActions){
-      const actions=heroActions.querySelectorAll('a');
-      if(actions[1]){actions[1].href='#results';actions[1].textContent='See Results →';}
-    }
   }
 
   function installSecondaryFooterLinks(){
@@ -374,8 +369,6 @@
     if(offers) offers.insertAdjacentElement('afterend',section);
     else if(about) about.insertAdjacentElement('beforebegin',section);
     else document.querySelector('main')?.prepend(section);
-    const heroActions=document.querySelector('.ez-hero-actions');
-    if(heroActions){const links=heroActions.querySelectorAll('a');if(links[1]){links[1].href='#work';links[1].textContent='See the Work →';}}
   }
 
   function addHumanLeadership(){
