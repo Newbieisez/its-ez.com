@@ -3,302 +3,109 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>EZ Enablement for Gaming | Erez “EZ” Haimowicz</title>
-<meta name="description" content="EZ Enablement helps gaming operators, suppliers and technology companies improve how people learn, work, decide and perform in an AI-enabled world.">
+<title>EZ Card | Erez Haimowicz · EZ Enablement</title>
+<meta name="description" content="The quick contact and portfolio card for Erez 'EZ' Haimowicz, founder of EZ Enablement LLC. AI, workforce, learning, workflow and GTM enablement for gaming and B2B teams.">
 <meta name="theme-color" content="#08090b">
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 <link rel="canonical" href="https://its-ez.com/ez">
-<meta property="og:title" content="EZ Enablement for Gaming | G2E 2026">
-<meta property="og:description" content="People. Knowledge. Performance. Practical AI, workforce, learning, workflow and GTM enablement for gaming.">
+<meta property="og:title" content="EZ Card | Erez Haimowicz · EZ Enablement">
+<meta property="og:description" content="Contact EZ, explore EZ Enablement, and see practical AI, workforce, learning and GTM enablement work.">
 <meta property="og:image" content="https://its-ez.com/assets/ez-social-preview-v2.jpg">
 <link rel="stylesheet" href="projects.css">
 <link rel="stylesheet" href="wow.css">
 <link rel="stylesheet" href="contrast.css">
 <style>
-:root{
-  --ez-red:#ef1717;
-  --ez-ink:#08090b;
-  --ez-panel:#111317;
-  --ez-panel-2:#17191e;
-  --ez-line:rgba(255,255,255,.13);
-  --ez-copy:#d5d7dc;
-  --ez-muted:#969ba4;
-}
+:root{--card-red:#ef1717;--card-ink:#08090b;--card-paper:#f5f0e8;--card-muted:#676b73}
 *{box-sizing:border-box}
-html{scroll-behavior:smooth}
-body{
-  margin:0;
-  background:
-    radial-gradient(circle at 85% 2%,rgba(239,23,23,.16),transparent 26rem),
-    linear-gradient(180deg,#090a0c 0%,#08090b 100%);
-  color:#fff;
-  font-family:Arial,Helvetica,sans-serif;
-}
-a{color:inherit}
-.ez-shell{width:min(840px,calc(100% - 28px));margin:0 auto;padding:28px 0 64px}
-.hero{
-  position:relative;
-  overflow:hidden;
-  padding:28px;
-  border:1px solid var(--ez-line);
-  border-radius:26px;
-  background:linear-gradient(145deg,#14161a,#0b0c0f);
-  box-shadow:0 24px 70px rgba(0,0,0,.34);
-}
-.hero:after{
-  content:"";
-  position:absolute;
-  right:-90px;
-  bottom:-110px;
-  width:290px;
-  height:290px;
-  border-radius:50%;
-  background:radial-gradient(circle,rgba(239,23,23,.22),transparent 68%);
-  pointer-events:none;
-}
-.identity{display:grid;grid-template-columns:96px 1fr;gap:18px;align-items:center;position:relative;z-index:1}
-.photo{
-  width:96px;
-  height:96px;
-  border-radius:18px;
-  object-fit:cover;
-  object-position:center top;
-  background:#202329;
-  border:1px solid rgba(255,255,255,.15);
-}
-.kicker{
-  margin:0 0 8px;
-  color:var(--ez-red);
-  font-size:.72rem;
-  font-weight:900;
-  letter-spacing:.14em;
-  text-transform:uppercase;
-}
-.name{margin:0;font-size:1rem;font-weight:900;letter-spacing:.01em}
-.title{margin:4px 0 0;color:var(--ez-muted);font-size:.88rem}
-.hero h1{
-  position:relative;
-  z-index:1;
-  max-width:760px;
-  margin:28px 0 12px;
-  font-size:clamp(2.7rem,9vw,5.8rem);
-  line-height:.9;
-  letter-spacing:-.055em;
-  text-transform:uppercase;
-}
-.hero-copy{
-  position:relative;
-  z-index:1;
-  max-width:690px;
-  margin:0;
-  color:var(--ez-copy);
-  font-size:clamp(1rem,2vw,1.16rem);
-  line-height:1.6;
-}
-.actions{
-  position:relative;
-  z-index:1;
-  display:grid;
-  grid-template-columns:repeat(4,minmax(0,1fr));
-  gap:10px;
-  margin-top:24px;
-}
-.button{
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  min-height:50px;
-  padding:12px 14px;
-  border:1px solid rgba(255,255,255,.18);
-  border-radius:999px;
-  background:#121419;
-  color:#fff!important;
-  text-decoration:none!important;
-  font-size:.75rem;
-  font-weight:900;
-  letter-spacing:.045em;
-  text-align:center;
-  text-transform:uppercase;
-}
-.button.primary{background:var(--ez-red);border-color:var(--ez-red)}
-.button:hover{background:#fff;color:#08090b!important;border-color:#fff}
-.audience{
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  gap:12px;
-  margin:14px 0 0;
-}
-.audience-card{
-  padding:16px 18px;
-  border:1px solid var(--ez-line);
-  border-radius:16px;
-  background:rgba(255,255,255,.035);
-}
-.audience-card strong{
-  display:block;
-  margin-bottom:4px;
-  color:#fff;
-  font-size:.76rem;
-  letter-spacing:.08em;
-  text-transform:uppercase;
-}
-.audience-card span{color:var(--ez-muted);font-size:.86rem;line-height:1.45}
-.section{margin-top:18px;padding:26px;border:1px solid var(--ez-line);border-radius:24px;background:#0e1013}
-.section-head{display:flex;justify-content:space-between;gap:16px;align-items:end;margin-bottom:16px}
-.eyebrow{
-  margin:0 0 5px;
-  color:var(--ez-red);
-  font-size:.72rem;
-  font-weight:900;
-  letter-spacing:.12em;
-  text-transform:uppercase;
-}
-.section h2{margin:0;font-size:clamp(1.8rem,5vw,3rem);letter-spacing:-.045em;line-height:.98}
-.section-intro{max-width:480px;margin:0;color:var(--ez-muted);font-size:.9rem;line-height:1.55}
-.services{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.service{
-  padding:18px;
-  border:1px solid rgba(255,255,255,.1);
-  border-radius:16px;
-  background:linear-gradient(145deg,var(--ez-panel-2),var(--ez-panel));
-}
-.service-top{display:flex;gap:12px;align-items:flex-start}
-.num{
-  flex:0 0 auto;
-  color:var(--ez-red);
-  font-size:1.25rem;
-  font-weight:900;
-  line-height:1;
-}
-.service h3{margin:0;color:#fff;font-size:.93rem;letter-spacing:.01em;text-transform:uppercase}
-.service p{margin:8px 0 0;color:#b8bcc4;font-size:.88rem;line-height:1.5}
-.problem{
-  margin-top:18px;
-  padding:28px;
-  border:1px solid rgba(239,23,23,.35);
-  border-radius:24px;
-  background:linear-gradient(145deg,rgba(239,23,23,.11),rgba(255,255,255,.025));
-}
-.problem h2{margin:0;font-size:clamp(2rem,6vw,3.4rem);line-height:.96;letter-spacing:-.045em;text-transform:uppercase}
-.problem p{max-width:650px;margin:12px 0 20px;color:var(--ez-copy);line-height:1.6}
-.problem .button{display:inline-flex;min-width:190px}
-.foot{
-  display:grid;
-  grid-template-columns:1fr auto;
-  gap:16px;
-  align-items:end;
-  margin-top:20px;
-  padding:0 4px;
-  color:#7f848d;
-  font-size:.78rem;
-  line-height:1.6;
-}
-.foot strong{color:#c7cad0}
-.foot a{color:#c7cad0}
-.tagline{text-align:right;font-weight:900;letter-spacing:.08em;text-transform:uppercase}
-@media(max-width:720px){
-  .actions{grid-template-columns:1fr 1fr}
-  .section-head{display:block}
-  .section-intro{margin-top:10px}
-}
-@media(max-width:600px){
-  .ez-shell{padding-top:14px}
-  .hero,.section,.problem{padding:20px;border-radius:20px}
-  .identity{grid-template-columns:76px 1fr;gap:14px}
-  .photo{width:76px;height:76px;border-radius:15px}
-  .hero h1{margin-top:22px}
-  .services,.audience{grid-template-columns:1fr}
-  .foot{grid-template-columns:1fr}
-  .tagline{text-align:left}
-}
-@media(max-width:390px){
-  .ez-shell{width:min(100% - 18px,840px)}
-  .actions{grid-template-columns:1fr}
-}
+body{margin:0;background:var(--card-ink);color:#fff;font-family:Arial,Helvetica,sans-serif}
+.card-shell{width:min(760px,calc(100% - 28px));margin:0 auto;padding:42px 0 72px}
+.card-top{display:grid;grid-template-columns:118px 1fr;gap:24px;align-items:center;padding:26px;border:1px solid rgba(255,255,255,.16);border-radius:24px;background:linear-gradient(145deg,#131519,#0b0c0f);box-shadow:0 24px 70px rgba(0,0,0,.35)}
+.card-photo{width:118px;height:118px;border-radius:20px;object-fit:cover;object-position:center top;background:#202329;border:1px solid rgba(255,255,255,.14)}
+.card-kicker{margin:0 0 8px;color:var(--card-red);font-size:.72rem;font-weight:900;letter-spacing:.14em;text-transform:uppercase}
+h1{margin:0;font-size:clamp(2.25rem,8vw,4.6rem);line-height:.9;letter-spacing:-.055em}
+#ez-card-name{color:#fff!important}
+.card-role{margin:14px 0 0;color:#c8cbd0;font-size:1rem;line-height:1.5}
+.card-role strong{color:#fff}
+.card-actions{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px;margin:18px 0 0}
+.card-button{display:flex;align-items:center;justify-content:center;min-height:50px;padding:12px 15px;border-radius:999px;border:1px solid rgba(255,255,255,.18);background:#121419;color:#fff!important;text-decoration:none!important;font-size:.78rem;font-weight:900;letter-spacing:.04em;text-transform:uppercase;text-align:center}
+.card-button.primary{background:var(--card-red);border-color:var(--card-red)}
+.card-button:hover{background:#fff;color:#08090b!important;border-color:#fff}
+.card-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:16px}
+.card-panel{padding:22px;border:1px solid rgba(255,255,255,.14);border-radius:20px;background:#0f1115}
+.card-panel h2{margin:0 0 14px;font-size:1.12rem;letter-spacing:-.02em}
+.card-links{display:grid;gap:8px}
+.card-link{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:13px 0;border-top:1px solid rgba(255,255,255,.1);color:#fff!important;text-decoration:none!important;font-weight:800}
+.card-link:first-child{border-top:0;padding-top:0}
+.card-link span{color:#9398a2;font-size:.76rem;font-weight:700;text-align:right}
+.card-link:hover strong{color:var(--card-red)}
+.qr-panel{display:grid;grid-template-columns:1fr auto;gap:22px;align-items:center;margin-top:16px;padding:22px;border:1px solid rgba(255,255,255,.14);border-radius:20px;background:#f4efe7;color:#111}
+.qr-panel h2{margin:0 0 8px;font-size:1.45rem}
+.qr-panel p{margin:0;color:#575b63;line-height:1.55}
+#ez-qr{width:156px;height:156px;padding:10px;background:#fff;border-radius:14px;display:grid;place-items:center}
+#ez-qr img,#ez-qr canvas{max-width:100%!important;height:auto!important}
+.card-foot{margin-top:20px;text-align:center;color:#7d8189;font-size:.78rem;line-height:1.6}
+.card-foot a{color:#c9ccd2}
+@media(max-width:620px){.card-shell{padding-top:24px}.card-top{grid-template-columns:86px 1fr;gap:16px;padding:20px}.card-photo{width:86px;height:86px;border-radius:16px}.card-role{font-size:.9rem}.card-actions{grid-template-columns:1fr}.card-grid{grid-template-columns:1fr}.qr-panel{grid-template-columns:1fr;justify-items:start}#ez-qr{width:140px;height:140px}.card-panel{padding:20px}}
+@media(max-width:400px){.card-top{grid-template-columns:1fr}.card-photo{width:96px;height:96px}.card-shell{width:min(100% - 20px,760px)}}
 </style>
+<script src="global-nav.js?v=20260912-company-launch-2" defer></script>
 </head>
 <body>
-<main class="ez-shell">
-  <section class="hero" aria-labelledby="g2e-heading">
-    <div class="identity">
-      <img class="photo" src="assets/headshot2026fixed.svg?v=20260908-headshot-fixed-svg-1" alt="Erez Haimowicz" width="96" height="96">
-      <div>
-        <p class="kicker">G2E 2026 · EZ ENABLEMENT FOR GAMING</p>
-        <p class="name">Erez “EZ” Haimowicz</p>
-        <p class="title">Founder, EZ Enablement LLC · Las Vegas</p>
-      </div>
-    </div>
-
-    <h1 id="g2e-heading">Your people + AI should be better than either one alone.</h1>
-    <p class="hero-copy">We help organizations improve how people learn, work, decide and perform in an AI-enabled world.</p>
-
-    <div class="actions" aria-label="Contact and company links">
-      <a class="button primary" href="mailto:ErezHaimowicz@gmail.com?subject=G2E%202026%20-%20Let's%20talk">Email EZ</a>
-      <a class="button" href="erez-haimowicz.vcf" download>Save Contact ↓</a>
-      <a class="button" href="https://www.linkedin.com/in/erezhaimowicz" target="_blank" rel="noopener">LinkedIn ↗</a>
-      <a class="button" href="https://its-ez.com/">Explore EZ Enablement ↗</a>
-    </div>
-
-    <div class="audience" aria-label="Who EZ Enablement works with in gaming">
-      <div class="audience-card">
-        <strong>For operators</strong>
-        <span>Workforce · AI adoption · learning · knowledge · operations · leadership · productivity</span>
-      </div>
-      <div class="audience-card">
-        <strong>For gaming suppliers & technology companies</strong>
-        <span>GTM · sales · partners · customer success · product readiness · AI adoption · workforce performance</span>
-      </div>
+<main class="card-shell" id="top">
+  <section class="card-top" aria-labelledby="ez-card-name">
+    <img class="card-photo" src="assets/headshot2026fixed.svg?v=20260908-headshot-fixed-svg-1" alt="Erez Haimowicz" width="118" height="118">
+    <div>
+      <p class="card-kicker">EZ ENABLEMENT LLC · G2E 2026 · LAS VEGAS</p>
+      <h1 id="ez-card-name">Erez “EZ” Haimowicz</h1>
+      <p class="card-role"><strong>Founder · AI, Workforce & GTM Enablement</strong><br>People · Knowledge · Performance · AI Adoption · Learning · GTM Systems</p>
     </div>
   </section>
 
-  <section class="section" aria-labelledby="where-we-help">
-    <div class="section-head">
-      <div>
-        <p class="eyebrow">Where we help</p>
-        <h2 id="where-we-help">Practical enablement built around the work.</h2>
+  <div class="card-actions" aria-label="Primary contact actions">
+    <a class="card-button primary" href="mailto:ErezHaimowicz@gmail.com">Email EZ</a>
+    <a class="card-button" href="erez-haimowicz.vcf" download>Save Contact ↓</a>
+    <a class="card-button" href="https://www.linkedin.com/in/erezhaimowicz" target="_blank" rel="noopener">LinkedIn ↗</a>
+    <a class="card-button" href="work-with-me.html">Work with EZ ↗</a>
+  </div>
+
+  <section class="card-grid" aria-label="EZ links">
+    <article class="card-panel">
+      <h2>Work with EZ</h2>
+      <div class="card-links">
+        <a class="card-link" href="work-with-me.html"><strong>Ways to work together</strong><span>AI · workforce · GTM enablement</span></a>
+        <a class="card-link" href="index.html#results"><strong>Measured results</strong><span>Proof before promises</span></a>
+        <a class="card-link" href="index.html#work"><strong>Selected work</strong><span>Case studies + systems</span></a>
+        <a class="card-link" href="ai-systems.html"><strong>AI Systems</strong><span>Adoption + workflows</span></a>
       </div>
-      <p class="section-intro">From AI adoption to onboarding, knowledge systems and GTM readiness, the goal is the same: build something people can actually use.</p>
-    </div>
-
-    <div class="services">
-      <article class="service">
-        <div class="service-top"><span class="num">01</span><h3>AI Enablement</h3></div>
-        <p>Role-specific adoption, responsible use, prompting, workflows and practical capability building.</p>
-      </article>
-      <article class="service">
-        <div class="service-top"><span class="num">02</span><h3>Workforce Enablement</h3></div>
-        <p>Onboarding, learning, readiness, coaching and performance support built around how people actually work.</p>
-      </article>
-      <article class="service">
-        <div class="service-top"><span class="num">03</span><h3>Workflow & Productivity</h3></div>
-        <p>Identify repetitive knowledge work and redesign workflows where AI and automation can create meaningful leverage.</p>
-      </article>
-      <article class="service">
-        <div class="service-top"><span class="num">04</span><h3>Knowledge & Learning Systems</h3></div>
-        <p>Turn scattered SOPs, training, product information and institutional knowledge into resources people can actually find and use.</p>
-      </article>
-      <article class="service">
-        <div class="service-top"><span class="num">05</span><h3>Leadership & Manager Enablement</h3></div>
-        <p>Practical systems for coaching, reinforcement, communication, adoption and change.</p>
-      </article>
-      <article class="service">
-        <div class="service-top"><span class="num">06</span><h3>GTM Enablement</h3></div>
-        <p>Sales, partner, customer success and commercial readiness for gaming suppliers, technology companies and B2B teams.</p>
-      </article>
-    </div>
+    </article>
+    <article class="card-panel">
+      <h2>About EZ</h2>
+      <div class="card-links">
+        <a class="card-link" href="recommendations.html"><strong>Recommendations</strong><span>Managers · peers · partners</span></a>
+        <a class="card-link" href="revenue-performance.html"><strong>Revenue Performance</strong><span>Operating proof</span></a>
+        <a class="card-link" href="index.html"><strong>EZ Enablement</strong><span>People · knowledge · performance</span></a>
+        <a class="card-link" href="index.html#contact"><strong>Start a conversation</strong><span>Bring the business problem</span></a>
+      </div>
+    </article>
   </section>
 
-  <section class="problem" aria-labelledby="start-problem">
-    <p class="eyebrow">Diagnose · Design · Enable</p>
-    <h2 id="start-problem">Start with the problem.</h2>
-    <p>Tell us the business problem. We'll help determine where people, process, knowledge and AI can work better together — and what to build, change, teach or enable.</p>
-    <a class="button primary" href="mailto:ErezHaimowicz@gmail.com?subject=G2E%202026%20-%20Business%20Problem">Start a conversation</a>
+  <section class="qr-panel" aria-label="QR code for EZ Card">
+    <div>
+      <h2>Share this card.</h2>
+      <p>Scan to open <strong>its-ez.com/ez</strong>. Built for G2E introductions, quick follow-up, and conversations about where people, process, knowledge and AI can work better together.</p>
+    </div>
+    <div id="ez-qr" aria-label="QR code linking to EZ Card"></div>
   </section>
 
-  <footer class="foot">
-    <div><strong>Erez “EZ” Haimowicz</strong> · Founder, EZ Enablement LLC<br><a href="https://its-ez.com/">its-ez.com</a> · <a href="mailto:ErezHaimowicz@gmail.com">ErezHaimowicz@gmail.com</a></div>
-    <div class="tagline">People. Knowledge. Performance.</div>
-  </footer>
+  <p class="card-foot">EZ Enablement LLC · <a href="https://its-ez.com/">its-ez.com</a> · <a href="mailto:ErezHaimowicz@gmail.com">ErezHaimowicz@gmail.com</a></p>
 </main>
+<footer></footer>
+<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
+<script>
+(function(){
+  var target=document.getElementById('ez-qr');
+  if(target&&window.QRCode){new QRCode(target,{text:'https://its-ez.com/ez',width:136,height:136,colorDark:'#08090b',colorLight:'#ffffff',correctLevel:QRCode.CorrectLevel.M});}
+})();
+</script>
 </body>
 </html>
