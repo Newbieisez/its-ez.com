@@ -51,7 +51,9 @@ jobs:
           grep -F "['Products',ROOT+'store.html']" global-nav.js
           grep -F 'data-ez-label="Shop">Shop</a>' global-nav.js
           grep -F '<strong>Shop Products</strong>' global-nav.js
-          grep -F 'G2E follow-up' global-nav.js
+          test -f meet/index.html
+          grep -F 'calendly.com/erezhaimowicz/g2e-2026-meet-with-ez' meet/index.html
+          grep -F 'Book 20 minutes' global-nav.js
           grep -F "['Recommendations',ROOT+'recommendations.html']" global-nav.js
           grep -F "['Work With Me',ROOT+'work-with-me.html']" global-nav.js
           NAV_BLOCK="$(sed -n '/const navItems = \[/,/^  \];/p' global-nav.js)"
@@ -97,5 +99,5 @@ jobs:
         run: |
           set -euo pipefail
           for f in index.html work-with-me.html ai-systems.html music.html recommendations.html revenue-performance.html; do
-            grep -F 'global-nav.js?v=20260928-g2e-revenue' "$f"
+            grep -F 'global-nav.js?v=20260928-g2e-booking' "$f"
           done
