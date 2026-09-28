@@ -1,5 +1,5 @@
 (() => {
-  const VERSION = '20260912-company-launch-2';
+  const VERSION = '20260928-g2e-store';
   const ROOT = (location.hostname.includes('githack.com') || location.hostname.includes('github.io')) ? location.href.replace(/[^/]*(?:[?#].*)?$/, '') : 'https://its-ez.com/';
 
   const css = `
@@ -79,6 +79,7 @@
     ['Results',ROOT+'#results'],
     ['How I Build',ROOT+'#operating'],
     ['AI Systems',ROOT+'ai-systems.html'],
+    ['Products',ROOT+'store.html'],
     ['Recommendations',ROOT+'recommendations.html'],
     ['Work With Me',ROOT+'work-with-me.html']
   ];
@@ -116,6 +117,7 @@
     if(path.endsWith('/revenue-performance.html') || path.endsWith('/revenue-performance')) document.body.classList.add('ez-revenue-hub');
     if(path.endsWith('/music.html') || path.endsWith('/music')) document.body.classList.add('ez-music');
     if(path.endsWith('/recommendations.html') || path.endsWith('/recommendations')) document.body.classList.add('ez-recommendations');
+    if(path.endsWith('/store.html') || path.endsWith('/store')) document.body.classList.add('ez-store');
     if(path.endsWith('/work-with-me.html') || path.endsWith('/work-with-me')) document.body.classList.add('ez-work-with-me');
     if(host.includes('meddpicc-is-ez')||host==='meddpicc.its-ez.com') document.body.classList.add('ez-meddpicc');
     if(host.includes('ez-human-threat-academy')) document.body.classList.add('ez-cybersecurity');
