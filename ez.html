@@ -38,14 +38,9 @@ h1{margin:0;font-size:clamp(2.25rem,8vw,4.6rem);line-height:.9;letter-spacing:-.
 .card-link:first-child{border-top:0;padding-top:0}
 .card-link span{color:#9398a2;font-size:.76rem;font-weight:700;text-align:right}
 .card-link:hover strong{color:var(--card-red)}
-.qr-panel{display:grid;grid-template-columns:1fr auto;gap:22px;align-items:center;margin-top:16px;padding:22px;border:1px solid rgba(255,255,255,.14);border-radius:20px;background:#f4efe7;color:#111}
-.qr-panel h2{margin:0 0 8px;font-size:1.45rem}
-.qr-panel p{margin:0;color:#575b63;line-height:1.55}
-#ez-qr{width:156px;height:156px;padding:10px;background:#fff;border-radius:14px;display:grid;place-items:center}
-#ez-qr img,#ez-qr canvas{max-width:100%!important;height:auto!important}
 .card-foot{margin-top:20px;text-align:center;color:#7d8189;font-size:.78rem;line-height:1.6}
 .card-foot a{color:#c9ccd2}
-@media(max-width:620px){.card-shell{padding-top:24px}.card-top{grid-template-columns:86px 1fr;gap:16px;padding:20px}.card-photo{width:86px;height:86px;border-radius:16px}.card-role{font-size:.9rem}.card-actions{grid-template-columns:1fr}.card-grid{grid-template-columns:1fr}.qr-panel{grid-template-columns:1fr;justify-items:start}#ez-qr{width:140px;height:140px}.card-panel{padding:20px}}
+@media(max-width:620px){.card-shell{padding-top:24px}.card-top{grid-template-columns:86px 1fr;gap:16px;padding:20px}.card-photo{width:86px;height:86px;border-radius:16px}.card-role{font-size:.9rem}.card-actions{grid-template-columns:1fr}.card-grid{grid-template-columns:1fr}.card-panel{padding:20px}}
 @media(max-width:400px){.card-top{grid-template-columns:1fr}.card-photo{width:96px;height:96px}.card-shell{width:min(100% - 20px,760px)}}
 </style>
 <script src="global-nav.js?v=20260912-company-launch-2" defer></script>
@@ -89,23 +84,9 @@ h1{margin:0;font-size:clamp(2.25rem,8vw,4.6rem);line-height:.9;letter-spacing:-.
     </article>
   </section>
 
-  <section class="qr-panel" aria-label="QR code for EZ Card">
-    <div>
-      <h2>Share this card.</h2>
-      <p>Scan to open <strong>its-ez.com/ez</strong>. Built for G2E introductions, quick follow-up, and conversations about where people, process, knowledge and AI can work better together.</p>
-    </div>
-    <div id="ez-qr" aria-label="QR code linking to EZ Card"></div>
-  </section>
 
   <p class="card-foot">EZ Enablement LLC · <a href="https://its-ez.com/">its-ez.com</a> · <a href="mailto:ErezHaimowicz@gmail.com">ErezHaimowicz@gmail.com</a></p>
 </main>
 <footer></footer>
-<script src="https://cdn.jsdelivr.net/npm/qrcodejs@1.0.0/qrcode.min.js"></script>
-<script>
-(function(){
-  var target=document.getElementById('ez-qr');
-  if(target&&window.QRCode){new QRCode(target,{text:'https://its-ez.com/ez',width:136,height:136,colorDark:'#08090b',colorLight:'#ffffff',correctLevel:QRCode.CorrectLevel.M});}
-})();
-</script>
 </body>
 </html>
