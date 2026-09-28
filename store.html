@@ -8,44 +8,41 @@
 <meta name="theme-color" content="#08090b">
 <link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
 <link rel="canonical" href="https://its-ez.com/store.html">
-<link rel="stylesheet" href="projects.css">
-<link rel="stylesheet" href="wow.css">
-<link rel="stylesheet" href="contrast.css">
 <style>
-:root{--red:#ef1717;--ink:#08090b;--panel:#111318;--paper:#f5f0e8;--muted:#aeb3bc}
-body{margin:0!important;background:#08090b!important;color:#fff!important;font-family:Arial,Helvetica,sans-serif!important}
-body.ez-store main,body.ez-store section,body.ez-store article,body.ez-store div{color:inherit}
-body.ez-store .store-hero,body.ez-store .products,body.ez-store .trust{color:#fff!important}
-body.ez-store .store-hero h1,body.ez-store .store-hero h2,body.ez-store .products h2,body.ez-store .product-card h3,body.ez-store .product-card strong,body.ez-store .product-card li,body.ez-store .trust strong{color:#fff!important}
-body.ez-store .lede,body.ez-store .section-head p,body.ez-store .product-card p,body.ez-store .trust-grid p,body.ez-store .meta{color:#bfc4cc!important}
-body.ez-store .price{color:#fff!important}
-body.ez-store .badge,body.ez-store .kicker{color:#ff5757!important}
-body.ez-store .enterprise,body.ez-store .enterprise *{color:#111!important}
-body.ez-store .enterprise p{color:#56585d!important}
-body.ez-store .enterprise a.primary{color:#fff!important}
-body.ez-store a.buy{color:#fff!important}
-body.ez-store a.buy:hover{color:#08090b!important}
+:root{--red:#ef1717;--ink:#08090b;--panel:#111318;--paper:#f5f0e8;--muted:#c5cad2}
+*{box-sizing:border-box}
+html{background:#08090b}
+body{margin:0!important;background:#08090b!important;color:#fff!important;font-family:Arial,Helvetica,sans-serif!important;line-height:1.5}
+main,.store-hero,.products,.trust,.product-card,.store-foot{color:#fff!important}
+.store-hero h1,.products h2,.product-card h3,.product-card strong,.product-card li,.trust strong,.price{color:#fff!important}
+.lede,.section-head p,.product-card p,.trust-grid p,.meta,.event-note span{color:#c9ced6!important}
+.badge,.kicker{color:#ff5757!important}
+.enterprise,.enterprise *{color:#111!important}
+.enterprise p{color:#4f5156!important}
+.enterprise a.primary{color:#fff!important}
+a.buy{color:#fff!important}
+a.buy:hover{color:#08090b!important}
 .store-shell{width:min(1180px,calc(100% - 36px));margin:auto}
 .store-hero{padding:82px 0 54px;border-bottom:1px solid rgba(255,255,255,.11);background:radial-gradient(circle at 85% 15%,rgba(239,23,23,.17),transparent 31rem)}
 .kicker{margin:0 0 16px;color:var(--red);font-size:11px;font-weight:900;letter-spacing:.17em;text-transform:uppercase}
 .store-hero h1{max-width:980px;margin:0;font-size:clamp(3.2rem,8vw,7rem);line-height:.86;letter-spacing:-.065em;text-transform:uppercase}
 .store-hero h1 span{color:var(--red)}
 .lede{max-width:780px;margin:26px 0 0;color:#c7cbd2;font-size:clamp(1.05rem,1.9vw,1.35rem);line-height:1.55}
-.event-note{display:flex;flex-wrap:wrap;gap:10px 18px;margin-top:28px;padding:16px 18px;border:1px solid rgba(255,255,255,.16);border-left:4px solid var(--red);background:rgba(255,255,255,.035);font-size:.86rem;color:#d9dce1}
+.event-note{display:flex;flex-wrap:wrap;gap:10px 18px;margin-top:28px;padding:16px 18px;border:1px solid rgba(255,255,255,.16);border-left:4px solid var(--red);background:#111318;font-size:.9rem;color:#e4e7eb!important}
 .event-note strong{color:#fff}
 .products{padding:58px 0 78px}
 .section-head{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:end;margin-bottom:28px}
 .section-head h2{margin:0;font-size:clamp(2.2rem,5vw,4.6rem);line-height:.92;letter-spacing:-.055em}
-.section-head p{margin:0;color:var(--muted);line-height:1.65}
+.section-head p{margin:0;color:#cbd0d7!important;font-size:.98rem;line-height:1.65}
 .product-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
 .product-card{display:flex;flex-direction:column;min-height:420px;padding:24px;border:1px solid rgba(255,255,255,.14);border-radius:18px;background:linear-gradient(180deg,#111318,#0c0e11)}
 .product-card.featured{grid-column:span 2;background:linear-gradient(145deg,rgba(239,23,23,.18),#101216 45%)}
 .product-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:25px}
 .badge{color:#ff5a5a;font-size:.68rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
-.price{font-size:1.3rem;font-weight:950}
-.product-card h3{margin:0 0 12px;font-size:1.55rem;letter-spacing:-.035em}
-.product-card p{margin:0;color:#b8bdc6;line-height:1.55}
-.product-card ul{margin:20px 0 26px;padding-left:19px;color:#dde0e5;font-size:.9rem;line-height:1.55}
+.price{color:#fff!important;font-size:1.3rem;font-weight:950}
+.product-card h3{margin:0 0 12px;color:#fff!important;font-size:1.55rem;letter-spacing:-.035em;line-height:1.12}
+.product-card p{margin:0;color:#d5d9df!important;font-size:.95rem;line-height:1.6}
+.product-card ul{margin:20px 0 26px;padding-left:19px;color:#f1f3f5!important;font-size:.9rem;line-height:1.6}
 .product-card li+li{margin-top:6px}
 .buy{margin-top:auto;display:flex;align-items:center;justify-content:center;min-height:50px;padding:0 18px;border-radius:999px;background:var(--red);border:1px solid var(--red);color:#fff!important;text-decoration:none!important;font-size:.77rem;font-weight:950;letter-spacing:.055em;text-transform:uppercase}
 .buy:hover{background:#fff;border-color:#fff;color:#08090b!important}
