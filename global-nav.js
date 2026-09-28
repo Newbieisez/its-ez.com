@@ -1,5 +1,5 @@
 (() => {
-  const VERSION = '20260928-g2e-store-integration';
+  const VERSION = '20260928-g2e-nav-shop';
   const ROOT = (location.hostname.includes('githack.com') || location.hostname.includes('github.io')) ? location.href.replace(/[^/]*(?:[?#].*)?$/, '') : 'https://its-ez.com/';
 
   const css = `
@@ -471,7 +471,15 @@
     if(cta){cta.textContent='Work With Us';cta.href=ROOT+'work-with-me.html';}
     links.innerHTML=`
       <a href="${ROOT}" data-ez-label="Home">Home</a>
-      <a href="${ROOT}work-with-me.html#services-catalog" data-ez-label="Services">Services</a>
+      <div class="ez-nav-group">
+        <button class="ez-nav-resources" type="button" aria-expanded="false" aria-haspopup="true">Services</button>
+        <div class="ez-nav-dropdown" aria-label="EZ Enablement services">
+          <a href="${ROOT}work-with-me.html#services-catalog"><strong>Services Overview</strong><span>Training, enablement, AI adoption, GTM systems, facilitation, and implementation</span></a>
+          <a href="${ROOT}store.html"><strong>Shop Products</strong><span>Release-approved digital labs with secure Stripe checkout</span></a>
+          <a href="${ROOT}work-with-me.html#build-my-plan"><strong>Build My Plan</strong><span>Start with your business problem and find the right engagement path</span></a>
+        </div>
+      </div>
+      <a href="${ROOT}store.html" data-ez-label="Shop">Shop</a>
       <a href="${ROOT}#work" data-ez-label="Work">Work</a>
       <a href="${ROOT}#results" data-ez-label="Results">Results</a>
       <a href="${ROOT}#operating" data-ez-label="How We Build">How We Build</a>
@@ -488,13 +496,20 @@
         </div>
       </div>`;
 
-    const group=links.querySelector('.ez-nav-group');
-    const button=group?.querySelector('.ez-nav-resources');
-    const close=()=>{if(!group||!button)return;group.classList.remove('is-open');button.setAttribute('aria-expanded','false');};
-    button?.addEventListener('click',e=>{e.stopPropagation();const open=group.classList.toggle('is-open');button.setAttribute('aria-expanded',String(open));});
-    group?.querySelectorAll('a').forEach(a=>a.addEventListener('click',close));
-    document.addEventListener('click',e=>{if(group?.classList.contains('is-open')&&!group.contains(e.target))close();});
-    document.addEventListener('keydown',e=>{if(e.key==='Escape'&&group?.classList.contains('is-open')){close();button?.focus();}});
+    const groups=[...links.querySelectorAll('.ez-nav-group')];
+    const closeGroup=(group)=>{const button=group?.querySelector('.ez-nav-resources');if(!group||!button)return;group.classList.remove('is-open');button.setAttribute('aria-expanded','false');};
+    groups.forEach(group=>{
+      const button=group.querySelector('.ez-nav-resources');
+      button?.addEventListener('click',e=>{
+        e.stopPropagation();
+        const willOpen=!group.classList.contains('is-open');
+        groups.forEach(closeGroup);
+        if(willOpen){group.classList.add('is-open');button.setAttribute('aria-expanded','true');}
+      });
+      group.querySelectorAll('a').forEach(a=>a.addEventListener('click',()=>closeGroup(group)));
+    });
+    document.addEventListener('click',e=>groups.forEach(group=>{if(group.classList.contains('is-open')&&!group.contains(e.target))closeGroup(group);}));
+    document.addEventListener('keydown',e=>{if(e.key==='Escape')groups.forEach(group=>{if(group.classList.contains('is-open')){const button=group.querySelector('.ez-nav-resources');closeGroup(group);button?.focus();}});});
     document.dispatchEvent(new Event('ez:navigation-updated'));
     return true;
   }

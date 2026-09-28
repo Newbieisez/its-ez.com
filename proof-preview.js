@@ -142,14 +142,14 @@
     const section = document.querySelector('.pathways');
     if (!section) return;
     const cards = section.querySelectorAll('.pathway-card');
-    if (cards[0]) cards[0].innerHTML = '<small>I\'M HIRING</small><strong>Considering EZ for an enablement leadership role?</strong><span>Resume, career proof, recommendations, and operating experience. ↓</span>';
-    if (cards[1]) cards[1].innerHTML = '<small>I HAVE A BUSINESS PROBLEM</small><strong>Need GTM, AI, learning, partner, or sales enablement help?</strong><span>See the three ways to work with EZ Enablement. ↗</span>';
+    if (cards[0]) cards[0].innerHTML = '<small>SHOP</small><strong>Want something you can use immediately?</strong><span>Browse release-approved EZ Enablement products. ↗</span>';
+    if (cards[1]) cards[1].innerHTML = '<small>I HAVE A BUSINESS PROBLEM</small><strong>Need GTM, AI, learning, partner, or sales enablement help?</strong><span>See the ways to work with EZ Enablement. ↗</span>';
     if (cards[2]) cards[2].innerHTML = '<small>I WANT PROOF</small><strong>Want to inspect the work before we talk?</strong><span>Open the case studies, results, and live systems. ↓</span>';
     if (!section.querySelector('.ez-pathway-extra')) {
       const grid = section.querySelector('.pathway-grid');
       const extra = document.createElement('div');
       extra.className = 'ez-pathway-extra';
-      extra.innerHTML = '<p><strong>Meeting EZ at an event?</strong> Open the mobile quick card for contact details, portfolio, resume, LinkedIn, music, and a downloadable contact card.</p><a class="button button-dark" href="ez.html">Open EZ Card →</a>';
+      extra.innerHTML = '<p><strong>Meeting EZ at an event?</strong> Open the mobile quick card for contact details, the G2E handout, products, LinkedIn, selected work, and a downloadable contact card.</p><a class="button button-dark" href="ez.html">Open EZ Card →</a>';
       grid?.insertAdjacentElement('afterend', extra);
     }
   }
