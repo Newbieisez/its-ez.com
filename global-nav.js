@@ -1,5 +1,5 @@
 (() => {
-  const VERSION = '20260928-g2e-store';
+  const VERSION = '20260928-g2e-store-integration';
   const ROOT = (location.hostname.includes('githack.com') || location.hostname.includes('github.io')) ? location.href.replace(/[^/]*(?:[?#].*)?$/, '') : 'https://its-ez.com/';
 
   const css = `
@@ -128,7 +128,7 @@
     const header=document.createElement('header');
     header.className='ez-global-header';
     header.dataset.version=VERSION;
-    header.innerHTML=`<div class="ez-global-shell"><a class="ez-global-brand" href="${ROOT}" aria-label="EZ Enablement home"><span class="ez-global-mark">E<b>Z</b></span><span class="ez-global-brand-copy"><strong>EZ ENABLEMENT</strong><span>Enablement made possible</span></span></a><nav class="ez-global-links" id="ez-global-links" aria-label="Primary navigation">${navItems.map(([label,href])=>`<a href="${href}" data-ez-label="${label}">${label}</a>`).join('')}</nav><a class="ez-global-cta" href="${ROOT}#contact">Let's connect</a><button class="ez-global-menu" type="button" aria-expanded="false" aria-controls="ez-global-links" aria-label="Open navigation">☰</button></div>`;
+    header.innerHTML=`<div class="ez-global-shell"><a class="ez-global-brand" href="${ROOT}" aria-label="EZ Enablement home"><span class="ez-global-mark">E<b>Z</b></span><span class="ez-global-brand-copy"><strong>EZ ENABLEMENT</strong><span>Enablement made possible</span></span></a><nav class="ez-global-links" id="ez-global-links" aria-label="Primary navigation">${navItems.map(([label,href])=>`<a href="${href}" data-ez-label="${label}">${label}</a>`).join('')}</nav><a class="ez-global-cta" href="${ROOT}store.html">Shop products</a><button class="ez-global-menu" type="button" aria-expanded="false" aria-controls="ez-global-links" aria-label="Open navigation">☰</button></div>`;
     if(old) old.replaceWith(header); else document.body.prepend(header);
 
     const updateActive=()=>header.querySelectorAll('.ez-global-links a').forEach(a=>currentFor(a.dataset.ezLabel,a.href)?a.setAttribute('aria-current','page'):a.removeAttribute('aria-current'));
