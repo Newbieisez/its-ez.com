@@ -1,5 +1,5 @@
 (() => {
-  const VERSION = '20260928-g2e-revenue';
+  const VERSION = '20260928-g2e-booking';
   const ROOT = (location.hostname.includes('githack.com') || location.hostname.includes('github.io')) ? location.href.replace(/[^/]*(?:[?#].*)?$/, '') : 'https://its-ez.com/';
 
   const css = `
@@ -548,7 +548,7 @@
     const bar=document.createElement('aside');
     bar.className='ez-g2e-revenue-bar';
     bar.setAttribute('aria-label','G2E 2026 quick actions');
-    bar.innerHTML=`<strong>G2E 2026 · Las Vegas</strong><span>Continue the conversation.</span><a href="${location.origin}/g2e-2026.html">Handout</a><a href="${location.origin}/store.html">Shop</a><a href="mailto:ez@its-ez.com?subject=G2E%202026%20follow-up&body=Hi%20EZ%2C%0A%0AWe%20met%20at%20G2E%20and%20I%27d%20like%20to%20continue%20the%20conversation%20about%3A%20">G2E follow-up</a>`;
+    bar.innerHTML=`<strong>G2E 2026 · Las Vegas</strong><span>Continue the conversation.</span><a href="${location.origin}/g2e-2026.html">Handout</a><a href="${location.origin}/store.html">Shop</a><a href="${location.origin}/meet/">Book 20 minutes</a>`;
     header.insertAdjacentElement('afterend',bar);
   };
   if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',install,{once:true}); else install();
