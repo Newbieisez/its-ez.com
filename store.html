@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>EZ Enablement Products | Practical GTM & Enablement Labs</title>
+<meta name="description" content="Purchase release-approved EZ Enablement digital labs and practical GTM systems through secure Stripe checkout.">
+<meta name="theme-color" content="#08090b">
+<link rel="icon" type="image/svg+xml" href="/assets/favicon.svg">
+<link rel="canonical" href="https://its-ez.com/store.html">
+<link rel="stylesheet" href="projects.css">
+<link rel="stylesheet" href="wow.css">
+<link rel="stylesheet" href="contrast.css">
+<style>
+:root{--red:#ef1717;--ink:#08090b;--panel:#111318;--paper:#f5f0e8;--muted:#aeb3bc}
+body{margin:0;background:#08090b;color:#fff;font-family:Arial,Helvetica,sans-serif}
+.store-shell{width:min(1180px,calc(100% - 36px));margin:auto}
+.store-hero{padding:82px 0 54px;border-bottom:1px solid rgba(255,255,255,.11);background:radial-gradient(circle at 85% 15%,rgba(239,23,23,.17),transparent 31rem)}
+.kicker{margin:0 0 16px;color:var(--red);font-size:11px;font-weight:900;letter-spacing:.17em;text-transform:uppercase}
+.store-hero h1{max-width:980px;margin:0;font-size:clamp(3.2rem,8vw,7rem);line-height:.86;letter-spacing:-.065em;text-transform:uppercase}
+.store-hero h1 span{color:var(--red)}
+.lede{max-width:780px;margin:26px 0 0;color:#c7cbd2;font-size:clamp(1.05rem,1.9vw,1.35rem);line-height:1.55}
+.event-note{display:flex;flex-wrap:wrap;gap:10px 18px;margin-top:28px;padding:16px 18px;border:1px solid rgba(255,255,255,.16);border-left:4px solid var(--red);background:rgba(255,255,255,.035);font-size:.86rem;color:#d9dce1}
+.event-note strong{color:#fff}
+.products{padding:58px 0 78px}
+.section-head{display:grid;grid-template-columns:1.05fr .95fr;gap:44px;align-items:end;margin-bottom:28px}
+.section-head h2{margin:0;font-size:clamp(2.2rem,5vw,4.6rem);line-height:.92;letter-spacing:-.055em}
+.section-head p{margin:0;color:var(--muted);line-height:1.65}
+.product-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+.product-card{display:flex;flex-direction:column;min-height:420px;padding:24px;border:1px solid rgba(255,255,255,.14);border-radius:18px;background:linear-gradient(180deg,#111318,#0c0e11)}
+.product-card.featured{grid-column:span 2;background:linear-gradient(145deg,rgba(239,23,23,.18),#101216 45%)}
+.product-top{display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:25px}
+.badge{color:#ff5a5a;font-size:.68rem;font-weight:900;letter-spacing:.12em;text-transform:uppercase}
+.price{font-size:1.3rem;font-weight:950}
+.product-card h3{margin:0 0 12px;font-size:1.55rem;letter-spacing:-.035em}
+.product-card p{margin:0;color:#b8bdc6;line-height:1.55}
+.product-card ul{margin:20px 0 26px;padding-left:19px;color:#dde0e5;font-size:.9rem;line-height:1.55}
+.product-card li+li{margin-top:6px}
+.buy{margin-top:auto;display:flex;align-items:center;justify-content:center;min-height:50px;padding:0 18px;border-radius:999px;background:var(--red);border:1px solid var(--red);color:#fff!important;text-decoration:none!important;font-size:.77rem;font-weight:950;letter-spacing:.055em;text-transform:uppercase}
+.buy:hover{background:#fff;border-color:#fff;color:#08090b!important}
+.meta{margin-top:12px;color:#7f858f;font-size:.72rem;line-height:1.45}
+.trust{padding:58px 0;border-top:1px solid rgba(255,255,255,.11);background:#0d0f12}
+.trust-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px}
+.trust-grid article{padding:20px;border:1px solid rgba(255,255,255,.12);border-radius:14px;background:#111318}
+.trust-grid strong{display:block;margin-bottom:7px}.trust-grid p{margin:0;color:#aeb3bc;font-size:.84rem;line-height:1.55}
+.enterprise{padding:70px 0;background:var(--paper);color:#111}
+.enterprise-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:50px;align-items:center}
+.enterprise h2{margin:0;font-size:clamp(2.5rem,5vw,5rem);line-height:.9;letter-spacing:-.06em}
+.enterprise p{color:#605f61;line-height:1.65}.enterprise .cta{display:flex;flex-wrap:wrap;gap:10px;margin-top:24px}
+.enterprise a{display:inline-flex;align-items:center;justify-content:center;min-height:48px;padding:0 17px;border:1px solid #111;border-radius:999px;color:#111;text-decoration:none;font-size:.76rem;font-weight:900;text-transform:uppercase}.enterprise a.primary{background:#111;color:#fff}.enterprise a:hover{background:var(--red);border-color:var(--red);color:#fff}
+.store-foot{padding:28px 0 46px;color:#838893;font-size:.76rem;line-height:1.65}.store-foot a{color:#d6d9de}
+@media(max-width:900px){.section-head,.enterprise-grid{grid-template-columns:1fr}.product-grid{grid-template-columns:1fr 1fr}.product-card.featured{grid-column:span 2}.trust-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:620px){.store-shell{width:min(100% - 24px,1180px)}.store-hero{padding:56px 0 40px}.product-grid{grid-template-columns:1fr}.product-card.featured{grid-column:auto}.product-card{min-height:0}.trust-grid{grid-template-columns:1fr}.products{padding-top:42px}}
+</style>
+<script src="global-nav.js?v=20260928-g2e-store" defer></script>
+</head>
+<body>
+<main>
+<section class="store-hero"><div class="store-shell">
+<p class="kicker">EZ ENABLEMENT / RELEASE-APPROVED DIGITAL PRODUCTS</p>
+<h1>Practical systems.<br><span>Use them now.</span></h1>
+<p class="lede">These products have cleared the current EZ Enablement release gate. Buy securely through Stripe, then receive the licensed customer package privately at the purchaser email.</p>
+<div class="event-note"><strong>G2E 2026:</strong><span>Meeting EZ at the show? Start with the business problem. If a product fits, you can buy it here. If the problem needs diagnosis, customization, facilitation or implementation, talk to EZ first.</span></div>
+</div></section>
+
+<section class="products"><div class="store-shell">
+<div class="section-head"><div><p class="kicker">AVAILABLE NOW</p><h2>EZ Labs v1.2.0</h2></div><p>Six individual methodology labs and the Complex Deal Collection are release-approved. BANT-dependent bundles, AI Fluency, RolePlay, AI Judgment and Presentation Architect stay off checkout until their release gates are closed.</p></div>
+<div class="product-grid">
+<article class="product-card featured"><div class="product-top"><span class="badge">COMPLEX DEAL BUNDLE</span><span class="price">$159</span></div><h3>EZ Labs Complex Deal Collection</h3><p>Three evidence-first labs for complex B2B opportunities where qualification, insight and business impact have to hold together.</p><ul><li>MEDDPICC Lab</li><li>Challenger-Inspired Lab</li><li>Gap-Based Lab</li><li>Single named-user license</li></ul><a class="buy" href="https://buy.stripe.com/3cI7sE3q20sV4bhbz4bsc06" target="_blank" rel="noopener">Buy securely with Stripe ↗</a><div class="meta">One-time purchase. Private licensed delivery after successful payment.</div></article>
+
+<article class="product-card"><div class="product-top"><span class="badge">EZ LAB</span><span class="price">$59</span></div><h3>MEDDPICC Lab</h3><p>Pressure-test a live deal against evidence, expose gaps and leave with concrete next actions.</p><ul><li>Evidence-first inspection</li><li>Champion + economic buyer tests</li><li>Decision and paper-process review</li><li>Single named-user license</li></ul><a class="buy" href="https://buy.stripe.com/dRm7sEgcO4JbdLR5aGbsc00" target="_blank" rel="noopener">Buy with Stripe ↗</a></article>
+
+<article class="product-card"><div class="product-top"><span class="badge">EZ LAB</span><span class="price">$59</span></div><h3>SPIN Lab</h3><p>Build stronger discovery around Situation, Problem, Implication and Need-Payoff without turning the call into an interrogation.</p><ul><li>Research-before-you-ask</li><li>Question map</li><li>Implication tree</li><li>Single named-user license</li></ul><a class="buy" href="https://buy.stripe.com/cNi14g8Km8Zr6jp7iObsc01" target="_blank" rel="noopener">Buy with Stripe ↗</a></article>
+
+<article class="product-card"><div class="product-top"><span class="badge">EZ LAB</span><span class="price">$59</span></div><h3>SPICED Lab</h3><p>Organize discovery and deal evidence around situation, pain, impact, critical event and decision.</p><ul><li>Discovery structure</li><li>Impact mapping</li><li>Critical-event inspection</li><li>Single named-user license</li></ul><a class="buy" href="https://buy.stripe.com/aFaeV6f8K8ZrdLRgTobsc02" target="_blank" rel="noopener">Buy with Stripe ↗</a></article>
+
+<article class="product-card"><div class="product-top"><span class="badge">EZ LAB</span><span class="price">$59</span></div><h3>Challenger-Inspired Lab</h3><p>Build commercial insight, test the status quo and connect a differentiated point of view to the buyer's situation.</p><ul><li>Commercial insight builder</li><li>Reframe preparation</li><li>Evidence + risk inspection</li><li>Single named-user license</li></ul><a class="buy" href="https://buy.stripe.com/dRmeV6e4GdfH37d5aGbsc03" target="_blank" rel="noopener">Buy with Stripe ↗</a></article>
+
+<article class="product-card"><div class="product-top"><span class="badge">EZ LAB</span><span class="price">$59</span></div><h3>Sandler-Inspired Lab</h3><p>Prepare mutual expectations, uncover meaningful pain and inspect investment, decision evidence and next-step clarity.</p><ul><li>Up-front expectations</li><li>Pain + investment map</li><li>Decision review</li><li>Single named-user license</li></ul><a class="buy" href="https://buy.stripe.com/eVqbIU4u67VnePVfPkbsc04" target="_blank" rel="noopener">Buy with Stripe ↗</a></article>
+
+<article class="product-card"><div class="product-top"><span class="badge">EZ LAB</span><span class="price">$59</span></div><h3>Gap-Based Lab</h3><p>Turn the gap between current state and desired future state into clearer discovery, business impact and action.</p><ul><li>Current-state inspection</li><li>Future-state definition</li><li>Impact + consequence mapping</li><li>Single named-user license</li></ul><a class="buy" href="https://buy.stripe.com/28E14g9OqgrT4bheLgbsc05" target="_blank" rel="noopener">Buy with Stripe ↗</a></article>
+</div></div></section>
+
+<section class="trust"><div class="store-shell"><div class="trust-grid">
+<article><strong>Secure checkout</strong><p>Payment is handled on Stripe's hosted checkout. EZ Enablement does not store your card details.</p></article>
+<article><strong>Licensed use</strong><p>Each product is sold under the displayed individual named-user license and digital product terms.</p></article>
+<article><strong>Private fulfillment</strong><p>Customer packages are delivered privately. The internal Gold library is never exposed as a public download folder.</p></article>
+<article><strong>Support</strong><p>Questions about purchase, fit or delivery: <a href="mailto:ez@its-ez.com">ez@its-ez.com</a>.</p></article>
+</div></div></section>
+
+<section class="enterprise"><div class="store-shell enterprise-grid"><div><p class="kicker">TEAM / BUSINESS / ENTERPRISE</p><h2>Need this built around your organization?</h2><p>Organizational licensing, onboarding systems, AI enablement, workshops, diagnostics, custom learning, manager reinforcement and implementation are sold as scoped work or organizational licenses rather than one-click checkout.</p><div class="cta"><a class="primary" href="work-with-me.html">See ways to work with EZ ↗</a><a href="mailto:ez@its-ez.com?subject=EZ%20Enablement%20organizational%20license">Ask about organizational licensing</a></div></div><div><p><strong>Buying rule:</strong> if the product does the job, buy the product. If your problem involves people, process, systems, content, AI adoption or implementation together, start with a conversation.</p></div></div></section>
+</main>
+<footer class="store-foot"><div class="store-shell">EZ Enablement LLC · Las Vegas, Nevada · <a href="licensing.html">Digital Product Licensing</a> · <a href="terms.html">Website Terms</a> · <a href="privacy.html">Privacy</a> · <a href="mailto:ez@its-ez.com">ez@its-ez.com</a></div></footer>
+</body>
+</html>
