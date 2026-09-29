@@ -1,0 +1,37 @@
+name: Assemble G2E handout PDF
+
+on:
+  push:
+    branches:
+      - g2e-updated-handout-pdf
+    paths:
+      - .github/workflows/assemble-g2e-handout.yml
+
+permissions:
+  contents: write
+
+jobs:
+  assemble:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: g2e-updated-handout-pdf
+      - name: Download verified handout
+        env:
+          DOWNLOAD_URL: "https://sdmntprwestus3.oaiusercontent.com/files/00000000-3f0c-81fd-8bab-2294956716e9/raw?se=2026-09-29T00%3A11%3A32Z&sp=r&sv=2026-02-06&sr=b&scid=da012c03-3e72-58ae-b5bb-57fcead2e583&skoid=b9a47e8b-72a2-4ed3-8028-a2a98c1a6142&sktid=a48cca56-e6da-484e-a814-9c849652bcb3&skt=2026-09-28T23%3A49%3A40Z&ske=2026-09-29T23%3A49%3A40Z&sks=b&skv=2026-02-06&sig=KSqjHCZ0DDaw66oTdLpwjk/KF7GvYltdZ%2BIBIKqnj8o%3D"
+        run: |
+          set -euo pipefail
+          curl --fail --location --retry 2 "$DOWNLOAD_URL" --output G2E-2026-EZ-Enablement.pdf
+          test "$(stat -c%s G2E-2026-EZ-Enablement.pdf)" -eq 597983
+          echo "ae92e72957f8bb0a70021780e9e3df5a8278dfb071f30acb98f0c41111195636  G2E-2026-EZ-Enablement.pdf" | sha256sum --check -
+          test "$(head -c 4 G2E-2026-EZ-Enablement.pdf)" = "%PDF"
+      - name: Commit handout and remove temporary workflow
+        run: |
+          set -euo pipefail
+          rm .github/workflows/assemble-g2e-handout.yml
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add G2E-2026-EZ-Enablement.pdf .github/workflows/assemble-g2e-handout.yml
+          git commit -m "feat: add updated G2E handout PDF"
+          git push origin HEAD:g2e-updated-handout-pdf
