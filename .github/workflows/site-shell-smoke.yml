@@ -52,12 +52,21 @@ jobs:
           grep -F 'data-ez-label="Shop">Shop</a>' global-nav.js
           grep -F '<strong>Shop Products</strong>' global-nav.js
           test -f meet/index.html
-          grep -F 'calendly.com/erezhaimowicz/g2e-2026-meet-with-ez' meet/index.html
-          grep -F 'Book 20 minutes' global-nav.js
+          grep -F 'calendly.com/itsez/executive-enablement-advisory-call' meet/index.html
+          if grep -F 'calendly.com/erezhaimowicz/g2e-2026-meet-with-ez' meet/index.html; then
+            echo 'G2E 2026 booking link must stay off the meet page (event is over)' >&2
+            exit 1
+          fi
+          if grep -F 'Book 20 minutes' global-nav.js; then
+            echo 'G2E-era booking language must stay out of the nav' >&2
+            exit 1
+          fi
           test -s G2E-2026-EZ-Enablement.pdf
           test "$(head -c 4 G2E-2026-EZ-Enablement.pdf)" = "%PDF"
-          grep -F 'href="G2E-2026-EZ-Enablement.pdf"' ez.html
-          grep -F 'download="G2E-2026-EZ-Enablement.pdf"' ez.html
+          if grep -F 'G2E-2026-EZ-Enablement.pdf' ez.html; then
+            echo 'G2E handout must stay unlinked from the QR page' >&2
+            exit 1
+          fi
           grep -F "['Recommendations',ROOT+'recommendations.html']" global-nav.js
           grep -F "['Work With Me',ROOT+'work-with-me.html']" global-nav.js
           NAV_BLOCK="$(sed -n '/const navItems = \[/,/^  \];/p' global-nav.js)"
