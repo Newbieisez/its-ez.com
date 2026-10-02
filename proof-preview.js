@@ -149,7 +149,7 @@
       const grid = section.querySelector('.pathway-grid');
       const extra = document.createElement('div');
       extra.className = 'ez-pathway-extra';
-      extra.innerHTML = '<p><strong>Meeting EZ at an event?</strong> Open the mobile quick card for contact details, the G2E handout, products, LinkedIn, selected work, and a downloadable contact card.</p><a class="button button-dark" href="ez.html">Open EZ Card →</a>';
+      extra.innerHTML = '<p><strong>Meeting EZ at an event?</strong> Open the mobile quick card for contact details, products, LinkedIn, selected work, and a downloadable contact card.</p><a class="button button-dark" href="ez.html">Open EZ Card →</a>';
       grid?.insertAdjacentElement('afterend', extra);
     }
   }
