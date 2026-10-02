@@ -41,6 +41,7 @@ table{max-width:100%}
   body.ez-homepage .operating-head,
   body.ez-homepage .proof-grid-main,
   body.ez-homepage .contact-grid{grid-template-columns:1fr!important;gap:28px!important}
+  body.ez-homepage .newsletter-grid{grid-template-columns:1fr!important;gap:28px!important}
 }
 @media(max-width:640px){
   body.ez-homepage .hero.hero-2026>.wrap,
