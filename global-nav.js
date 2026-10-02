@@ -522,34 +522,4 @@
 })();
 
 
-/* Temporary G2E revenue bar — auto-expires after G2E week */
-(() => {
-  const host=location.hostname.toLowerCase();
-  if(host!=='its-ez.com' && host!=='www.its-ez.com') return;
-  const path=location.pathname.toLowerCase();
-  const eligible=path==='/'||path==='/index.html'||path.endsWith('/store.html')||path.endsWith('/work-with-me.html');
-  if(!eligible || Date.now()>Date.parse('2026-10-02T03:00:00-07:00')) return;
 
-  const install=()=>{
-    if(document.querySelector('.ez-g2e-revenue-bar')) return;
-    const header=document.querySelector('.ez-global-header');
-    if(!header) return setTimeout(install,40);
-    const style=document.createElement('style');
-    style.id='ez-g2e-revenue-style';
-    style.textContent=`
-      .ez-g2e-revenue-bar{position:relative;z-index:9998;display:flex;align-items:center;justify-content:center;gap:13px;min-height:42px;padding:8px 18px;background:#f5f0e8;color:#101010;border-bottom:1px solid rgba(0,0,0,.16);font:700 12px/1.3 Arial,Helvetica,sans-serif}
-      .ez-g2e-revenue-bar strong{color:#ef1717;font-size:10px;letter-spacing:.13em;text-transform:uppercase}
-      .ez-g2e-revenue-bar span{font-weight:800}
-      .ez-g2e-revenue-bar a{color:#101010!important;text-decoration:none!important;border-bottom:1px solid rgba(16,16,16,.45);font-weight:900}
-      .ez-g2e-revenue-bar a:hover,.ez-g2e-revenue-bar a:focus-visible{color:#ef1717!important;border-color:#ef1717;outline:none}
-      @media(max-width:720px){.ez-g2e-revenue-bar{justify-content:flex-start;gap:9px;padding:9px 12px;overflow-x:auto;white-space:nowrap;-webkit-overflow-scrolling:touch}.ez-g2e-revenue-bar span{display:none}}
-    `;
-    document.head.appendChild(style);
-    const bar=document.createElement('aside');
-    bar.className='ez-g2e-revenue-bar';
-    bar.setAttribute('aria-label','G2E 2026 quick actions');
-    bar.innerHTML=`<strong>G2E 2026 · Las Vegas</strong><span>Continue the conversation.</span><a href="${location.origin}/g2e-2026.html">Handout</a><a href="${location.origin}/store.html">Shop</a><a href="${location.origin}/meet/">Book 20 minutes</a>`;
-    header.insertAdjacentElement('afterend',bar);
-  };
-  if(document.readyState==='loading') document.addEventListener('DOMContentLoaded',install,{once:true}); else install();
-})();
