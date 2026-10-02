@@ -7,6 +7,7 @@ on:
       - 'revenue-performance.js'
       - 'revenue-performance-v2.js'
       - 'revenue-performance-v3.js'
+      - 'revenue-performance-v4.js'
       - 'revenue-performance.css'
       - 'revenue-performance-v2.css'
       - 'revenue-performance-v3.css'
@@ -23,6 +24,7 @@ jobs:
           node --check revenue-performance.js
           node --check revenue-performance-v2.js
           node --check revenue-performance-v3.js
+          node --check revenue-performance-v4.js
       - name: Required page assets
         run: |
           test -f revenue-performance.html
@@ -30,11 +32,37 @@ jobs:
           test -f revenue-performance-v2.css
           test -f revenue-performance-v3.css
           test -f revenue-performance-v3.js
+          test -f revenue-performance-v4.js
           grep -q 'revenue-performance-v3.css' revenue-performance.html
           grep -q 'revenue-performance-v3.js' revenue-performance.html
           grep -q 'Revenue Professional' revenue-performance-v3.js
           grep -q 'Page guide' revenue-performance-v3.js
+          grep -q 'aria-current' revenue-performance-v3.js
+          grep -q 'revenue-performance-v4.js' revenue-performance-v3.js
           grep -q 'ChatGPT' revenue-performance-v2.js
           grep -q 'Claude' revenue-performance-v2.js
           grep -q 'Gemini' revenue-performance-v2.js
           grep -q 'Copilot' revenue-performance-v2.js
+      - name: Consolidated v2 architecture
+        run: |
+          grep -q 'function buildPromptContext' revenue-performance-v2.js
+          grep -q "ctx.kind==='role'" revenue-performance-v2.js
+          grep -q 'function formatPrompt' revenue-performance-v2.js
+          grep -q 'function buildMetricGuidance' revenue-performance-v2.js
+          grep -q 'function wireKpiInteractions' revenue-performance-v2.js
+          grep -q "grid.addEventListener('click'" revenue-performance-v2.js
+          grep -q 'data-rp2-action="analyze"' revenue-performance-v2.js
+          grep -q 'data-rp2-action="guidance"' revenue-performance-v2.js
+          grep -q '.rp2-metric-guidance' revenue-performance-v2.css
+          grep -q '.rp2-guidance-grid' revenue-performance-v2.css
+          ! grep -q "function task(" revenue-performance-v2.js
+          ! grep -q "createElement('style')" revenue-performance-v2.js
+          ! grep -q 'MutationObserver' revenue-performance-v2.js
+          ! grep -q 'stopImmediatePropagation' revenue-performance-v2.js
+          ! grep -q "document.addEventListener('click'" revenue-performance-v2.js
+          ! grep -q "document.addEventListener('keydown'" revenue-performance-v2.js
+      - name: Visual QA layer guardrails
+        run: |
+          ! grep -q "createElement('style')" revenue-performance-v3.js
+          grep -q 'focus-visible' revenue-performance-v3.css
+          grep -q 'rp-role-card.is-active span' revenue-performance-v3.css
