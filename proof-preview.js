@@ -142,9 +142,9 @@
     const section = document.querySelector('.pathways');
     if (!section) return;
     const cards = section.querySelectorAll('.pathway-card');
-    if (cards[0]) cards[0].innerHTML = '<small>SHOP</small><strong>Want something you can use immediately?</strong><span>Browse release-approved EZ Enablement products. ↗</span>';
-    if (cards[1]) cards[1].innerHTML = '<small>I HAVE A BUSINESS PROBLEM</small><strong>Need GTM, AI, learning, partner, or sales enablement help?</strong><span>See the ways to work with EZ Enablement. ↗</span>';
-    if (cards[2]) cards[2].innerHTML = '<small>I WANT PROOF</small><strong>Want to inspect the work before we talk?</strong><span>Open the case studies, results, and live systems. ↓</span>';
+    if (cards[0]) cards[0].innerHTML = '<small>USE IT</small><strong>Start free. See how EZ thinks.</strong><span>Open labs, workbenches, and practical tools. Useful before you spend a dollar. ↗</span>';
+    if (cards[1]) cards[1].innerHTML = '<small>BUY IT</small><strong>Need something you can use Monday morning?</strong><span>Release-approved digital products for GTM, AI, and enablement. ↗</span>';
+    if (cards[2]) cards[2].innerHTML = '<small>BUILD IT</small><strong>Bring us the messy problem.</strong><span>Start with the business problem. Advisory, implementation, facilitation. ↗</span>';
     if (!section.querySelector('.ez-pathway-extra')) {
       const grid = section.querySelector('.pathway-grid');
       const extra = document.createElement('div');
