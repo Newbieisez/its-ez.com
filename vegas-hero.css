@@ -1,0 +1,116 @@
+/* ============ VEGAS HERO v1 — ported from the approved elevation-preview v3 concept ============
+   Scoped to .vhero / .vlogos so the live site's own CSS is never disturbed.
+   Palette: black / slate / EZ red. No navy. Montserrat, as in the concept. */
+
+/* scoped design tokens (live site uses different --ink/--paper values; do not leak) */
+.vhero,.vlogos{
+  --vh-ink:#0a0a0b;
+  --vh-ink-2:#121214;
+  --vh-paper:#f4f1eb;
+  --vh-slate:#a8a8b3;
+  --vh-slate-dim:#6e6e78;
+  --vh-line:rgba(244,241,235,.10);
+  --vh-line-soft:rgba(244,241,235,.06);
+  --vh-red:#ed1c2e;
+  --vh-red-deep:#a3121f;
+  --vh-max:1240px;
+  --vh-radius:14px;
+  font-family:'Montserrat',system-ui,-apple-system,sans-serif;
+  -webkit-font-smoothing:antialiased;
+}
+.vhero a,.vlogos a{color:inherit;text-decoration:none}
+.vhero ::selection,.vlogos ::selection{background:var(--vh-red);color:#fff}
+
+/* ---------- buttons (concept .btn, scoped) ---------- */
+.vhero .btn{
+  display:inline-flex;align-items:center;gap:10px;font-weight:700;font-size:14px;letter-spacing:.04em;
+  padding:14px 26px;border-radius:999px;transition:transform .25s ease,box-shadow .25s ease,background .25s ease,border-color .25s ease,color .25s ease;
+  border:1px solid transparent;cursor:pointer;font-family:inherit;
+}
+.vhero .btn-red{background:var(--vh-red);color:#fff}
+.vhero .btn-red:hover{transform:translateY(-2px);box-shadow:0 12px 32px rgba(237,28,46,.35)}
+.vhero .btn-ghost{border-color:var(--vh-line);color:var(--vh-paper)}
+.vhero .btn-ghost:hover{border-color:var(--vh-red);color:#fff;transform:translateY(-2px)}
+
+/* ---------- hero : Vegas night backdrop ---------- */
+.vhero{position:relative;overflow:hidden;padding:96px 0 0;background:var(--vh-ink);color:var(--vh-paper)}
+.vhero-bg{position:absolute;inset:0;background:url('assets/vegas-skyline.svg') center 32%/cover no-repeat}
+.vhero-veil{position:absolute;inset:0;background:
+  linear-gradient(180deg, rgba(10,10,11,.86) 0%, rgba(10,10,11,.52) 34%, rgba(10,10,11,.62) 66%, var(--vh-ink) 100%),
+  linear-gradient(90deg, rgba(10,10,11,.9) 0%, rgba(10,10,11,.42) 55%, rgba(10,10,11,.6) 100%)}
+.vhero-grid{position:relative;z-index:1;display:grid;grid-template-columns:1.05fr .95fr;gap:64px;align-items:center}
+.vhero .kicker{display:inline-flex;align-items:center;gap:12px;font-size:13px;font-weight:800;letter-spacing:.28em;color:var(--vh-red);text-transform:uppercase;margin:0 0 28px}
+.vhero .kicker::before{content:"";width:36px;height:2px;background:var(--vh-red);flex:none}
+.vhero h1{
+  margin:0;font-size:clamp(52px,7.2vw,108px);font-weight:900;line-height:.98;letter-spacing:-.015em;text-transform:uppercase;
+}
+.vhero h1 .line{display:block;overflow:hidden}
+.vhero h1 .line>span{display:block}
+/* entrance animation only when JS is present (progressive enhancement) */
+.js .vhero h1 .line>span{transform:translateY(110%);animation:vh-riseUp .9s cubic-bezier(.16,1,.3,1) forwards}
+.js .vhero h1 .line:nth-child(2)>span{animation-delay:.12s}
+.js .vhero h1 .line:nth-child(3)>span{animation-delay:.24s}
+.vhero h1 .revenue{color:transparent;-webkit-text-stroke:2px var(--vh-paper)}
+.vhero h1 .revenue .dot{color:var(--vh-red);-webkit-text-stroke:0;font-style:normal}
+@keyframes vh-riseUp{to{transform:translateY(0)}}
+.vhero .def-line{margin:26px 0 0;max-width:34rem;font-size:16.5px;font-weight:600;color:var(--vh-paper);padding-left:18px;border-left:3px solid var(--vh-red)}
+.vhero .def-line span{color:var(--vh-slate);font-weight:500}
+.vhero-lede{margin:20px 0 0;max-width:34rem;color:var(--vh-slate);font-size:17px;line-height:1.55}
+.vhero-lede strong{color:var(--vh-paper)}
+.vhero-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:36px}
+.vhero-proof{display:flex;gap:36px;margin-top:44px;padding-top:28px;border-top:1px solid var(--vh-line)}
+.vhero-proof div b{display:block;font-size:11px;font-weight:800;letter-spacing:.24em;color:var(--vh-slate-dim);text-transform:uppercase;margin-bottom:6px}
+.vhero-proof div span{font-size:15px;font-weight:600}
+
+/* ---------- hero visual : portrait + neon ---------- */
+.vhero-visual{position:relative;justify-self:end;width:min(400px,100%)}
+.neon-block{position:absolute;top:-78px;right:0;text-align:right;z-index:2}
+.neon{display:block;font-style:italic;font-weight:600;font-size:40px;line-height:1;color:#ff6b78;letter-spacing:.01em;transform:rotate(-4deg);
+  text-shadow:0 0 10px rgba(237,28,46,.95),0 0 28px rgba(237,28,46,.6),0 0 70px rgba(237,28,46,.35)}
+.neon-sub{display:block;margin-top:10px;font-size:11px;font-weight:800;letter-spacing:.22em;line-height:1.6;color:var(--vh-paper);text-transform:uppercase;white-space:nowrap}
+.neon-sub::before{content:"";display:block;width:52px;height:2px;background:var(--vh-red);margin:0 0 10px auto;opacity:.8}
+.portrait-frame{position:relative;aspect-ratio:4/5;border-radius:20px;overflow:hidden;background:transparent}
+.portrait-photo{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:50% 18%}
+
+/* ---------- hero value strip ---------- */
+.value-strip{position:relative;z-index:1;margin-top:72px;border-top:1px solid var(--vh-line);background:rgba(10,10,11,.66);backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.value-flex{display:flex;align-items:center;justify-content:space-between;gap:20px;padding-top:24px;padding-bottom:24px}
+.value-item{display:flex;align-items:center;gap:14px;font-weight:700;font-size:15px;white-space:nowrap;color:var(--vh-paper)}
+.value-item svg{width:30px;height:30px;flex:none;color:var(--vh-red)}
+.value-item + .value-item{border-left:1px solid var(--vh-line);padding-left:28px}
+
+/* ---------- client wordmark row ---------- */
+.vlogos{background:#0a0a0b;border-top:1px solid var(--vh-line-soft);padding:34px 0 10px;color:var(--vh-paper)}
+.vlogos-mantra{display:flex;align-items:center;justify-content:flex-end;gap:14px;margin:0 0 24px;font-size:12px;font-weight:800;letter-spacing:.3em;color:var(--vh-slate);text-transform:uppercase}
+.vlogos-mantra i{font-style:normal;width:44px;height:2px;background:var(--vh-red);display:inline-block;flex:none}
+.vlogo-row{display:flex;align-items:center;justify-content:space-between;gap:26px;flex-wrap:wrap;padding:4px 0 30px}
+.vlogo-row a{display:inline-flex;align-items:center}
+.vlogo-row span{font-size:21px;font-weight:800;color:var(--vh-paper);opacity:.94;white-space:nowrap;transition:opacity .25s}
+.vlogo-row a:hover span{opacity:1;color:#fff}
+.vlogo-row .ldiv{width:1px;height:26px;background:var(--vh-line);flex:none}
+
+/* ---------- responsive ---------- */
+@media(max-width:1000px){
+  .vhero-grid{grid-template-columns:1fr;gap:56px}
+  .vhero-visual{justify-self:start;width:min(400px,100%);margin-top:8px}
+  .neon-block{position:static;text-align:left;margin-bottom:20px}
+  .neon-sub::before{margin:0 0 12px 0}
+  .value-flex{flex-wrap:wrap;gap:22px}
+  .value-item{flex:1 1 42%}
+  .value-item:nth-child(3){border-left:0;padding-left:0}
+}
+@media(max-width:640px){
+  .vhero{padding:64px 0 0}
+  .vhero-proof{flex-wrap:wrap;gap:20px}
+  .neon{font-size:34px}
+  .value-flex .value-item{flex:1 1 100%;border-left:0;padding-left:0}
+  .value-flex{gap:18px}
+  .vlogos-mantra{justify-content:flex-start}
+  .vlogo-row{gap:18px}
+  .vlogo-row .ldiv{display:none}
+  .vlogo-row span{font-size:17px}
+}
+@media(prefers-reduced-motion:reduce){
+  .vhero *,.vhero *::before,.vhero *::after{animation:none!important;transition:none!important}
+  .js .vhero h1 .line>span{transform:none}
+}
