@@ -29,4 +29,49 @@
 
   var style=document.createElement('style');style.textContent='.project-scan{display:block;max-width:720px;margin-top:12px;color:#555;font-size:12px;line-height:1.5;font-weight:500}.project-scan b{color:#b11226;font-size:10px;letter-spacing:.1em}.project-before-after{display:grid;grid-template-columns:1fr 1fr;gap:0;margin:0 0 28px;border:1px solid #191919;background:#fff}.project-before-after>div{padding:22px 24px}.project-before-after>div+div{border-left:1px solid #191919}.project-before-after strong{display:block;margin-bottom:8px;color:#b11226;font-size:10px;letter-spacing:.14em}.project-before-after p{margin:0;color:#191919;font-size:15px;line-height:1.55}@media(max-width:760px){.project-scan{font-size:11px}.project-before-after{grid-template-columns:1fr}.project-before-after>div+div{border-left:0;border-top:1px solid #191919}}';document.head.appendChild(style);
   list.querySelectorAll('[data-project-toggle]').forEach(function(button){button.addEventListener('click',function(){var expanded=button.getAttribute('aria-expanded')==='true';var caseEl=button.closest('.project-case');var detail=document.getElementById(button.getAttribute('aria-controls'));button.setAttribute('aria-expanded',String(!expanded));if(detail)detail.hidden=expanded;if(caseEl)caseEl.classList.toggle('is-open',!expanded);var label=button.querySelector('.project-action > span:first-child');if(label)label.textContent=expanded?'Open case study':'Close case study';});});
+
+/* Deep-linkable case studies: visiting #<project-id> opens that case study and scrolls to it.
+   Opening a case study updates the URL hash so the open state is shareable. */
+(function(){
+  function openCase(id, scroll){
+    var caseEl = document.getElementById(id);
+    if(!caseEl || !caseEl.classList.contains('project-case')) return false;
+    caseEl.classList.remove('ez-portfolio-hidden');
+    var btn = caseEl.querySelector('[data-project-toggle]');
+    var detail = document.getElementById(id + '-detail');
+    var isOpen = btn && btn.getAttribute('aria-expanded') === 'true';
+    if(!isOpen && btn){ btn.click(); }
+    else {
+      if(detail) detail.hidden = false;
+      caseEl.classList.add('is-open');
+      if(btn){
+        btn.setAttribute('aria-expanded', 'true');
+        var label = btn.querySelector('.project-action > span:first-child');
+        if(label) label.textContent = 'Close case study';
+      }
+    }
+    if(scroll){ setTimeout(function(){ caseEl.scrollIntoView({behavior:'smooth', block:'start'}); }, 80); }
+    return true;
+  }
+  function syncHashFromEvent(e){
+    var btn = e.target.closest ? e.target.closest('[data-project-toggle]') : null;
+    if(!btn) return;
+    var caseEl = btn.closest('.project-case');
+    if(!caseEl || !caseEl.id) return;
+    try{
+      if(btn.getAttribute('aria-expanded') === 'true'){
+        history.replaceState(null, '', '#' + caseEl.id);
+      } else if(location.hash === '#' + caseEl.id){
+        history.replaceState(null, '', location.pathname + location.search);
+      }
+    }catch(err){}
+  }
+  document.addEventListener('click', syncHashFromEvent);
+  function openFromHash(){
+    var id = (location.hash || '').replace('#','');
+    if(id) openCase(id, true);
+  }
+  if(document.readyState === 'complete'){ setTimeout(openFromHash, 350); }
+  else { window.addEventListener('load', function(){ setTimeout(openFromHash, 350); }); }
+})();
 }());
