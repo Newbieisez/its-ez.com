@@ -113,7 +113,37 @@ makePlatform('impartner','IMP','Impartner','Partner Relationship Management Syst
 makePlatform('allbound','ALL','Allbound','Partner Relationship Management System','Partner portal, content, onboarding, co-selling and engagement for channel ecosystems.',['partner','enablement','operations'],['Recruit','Onboard','Enable','Co-sell','Measure'],'partner'),
 makePlatform('channeltivity','CH','Channeltivity','Partner Relationship Management System','Channel partner management, enablement, deal registration and portal workflows.',['partner','enablement','operations'],['Recruit','Onboard','Register','Enable','Measure'],'partner'),
 makePlatform('crossbeam','XB','Crossbeam','Ecosystem Intelligence System','Account mapping and partner ecosystem data for co-selling and partnership opportunity identification.',['partner','revenue','operations'],['Map','Match','Prioritize','Co-sell','Measure'],'partner'),
-makePlatform('partnerstack','PS','PartnerStack','Partner Ecosystem Platform','Partner recruitment, programs, referrals, commissions and ecosystem growth workflows.',['partner','revenue','operations'],['Recruit','Activate','Track','Reward','Grow'],'partner')
+makePlatform('partnerstack','PS','PartnerStack','Partner Ecosystem Platform','Partner recruitment, programs, referrals, commissions and ecosystem growth workflows.',['partner','revenue','operations'],['Recruit','Activate','Track','Reward','Grow'],'partner'),
+makePlatform('agentforce','AF','Agentforce','Enterprise Agent Platform','Salesforce-native AI agents for service, sales, IT and operations with enterprise governance.',['automation','revenue','operations'],['Deploy','Orchestrate','Govern','Measure','Scale'],'automation',[
+['Service agents','Deploy AI agents for customer service with Salesforce data and guardrails.'],
+['Sales agents','Automate pipeline generation, qualification and follow-up inside CRM.'],
+['IT/HR agents','Handle employee requests, onboarding and IT support autonomously.'],
+['Multi-agent orchestration','Coordinate specialized agents across business processes.'],
+['Agent governance','Enterprise controls, audit trails and human approval workflows.']]),
+makePlatform('chatgpt-work','CGW','ChatGPT Work','Enterprise AI Work System','Autonomous agents that execute multi-step business tasks across connected apps and data.',['automation','operations','revenue','enablement'],['Connect','Delegate','Execute','Monitor','Measure'],'automation',[
+['Cross-app workflows','Execute tasks spanning Slack, Drive, CRM, email and calendars.'],
+['Scheduled agents','Run recurring business processes on autopilot.'],
+['Live dashboards','Turn projects into real-time operational views.'],
+['Document collaboration','Co-edit with AI in shared workspaces.'],
+['Enterprise controls','Permissions, audit logs and admin governance.']]),
+makePlatform('comet','COM','Perplexity Comet','AI Browser System','Chromium-based browser with built-in AI assistant for research, automation and task execution.',['research','operations','automation'],['Browse','Research','Automate','Summarize','Act'],'research',[
+['Agentic browsing','Automate multi-tab research and form filling.'],
+['Tab intelligence','Summarize and synthesize across open tabs.'],
+['Structured outputs','Generate presentations, spreadsheets and dashboards from web research.'],
+['Task automation','Delegate repetitive browser workflows to AI.'],
+['Research synthesis','Combine sources into actionable briefs.']]),
+makePlatform('veo','VEO','Google Veo 3.1','AI Video Generation System','Best-in-class AI video generation with native audio, dialogue and 4K output.',['creation','enablement'],['Prompt','Generate','Direct','Refine','Publish'],'creation',[
+['Text-to-video','Generate cinematic video from text descriptions.'],
+['Native audio','Synchronized dialogue, music and sound effects in one pass.'],
+['4K output','Highest resolution available in AI video generation.'],
+['Marketing content','Create product videos, ads and social content.'],
+['Training video','Generate presenter-led learning content at scale.']]),
+makePlatform('openshell','OSH','NVIDIA OpenShell','Agent Safety Infrastructure','Open-source sandboxed runtime for safely running AI agents with production credentials.',['operations','automation'],['Isolate','Constrain','Monitor','Quarantine','Audit'],'automation',[
+['Sandboxed execution','Run agents with default-deny policies on files and network.'],
+['Credential protection','Replace secrets with opaque placeholders.'],
+['Hardware watchdog','Quarantine rogue agents in milliseconds.'],
+['Policy enforcement','Define what agents can and cannot access.'],
+['Audit trails','Complete logs of agent actions for compliance.']]),
 ];
 
 const filterConfig=[
