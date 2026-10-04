@@ -50,6 +50,8 @@
     {date:'SEP 28',name:'Claude Sonnet 5.5',type:'MODEL',status:'NEW',why:'Anthropic’s faster, lower-cost Sonnet upgrade for everyday agentic work, coding and polished business artifacts.',url:'https://www.anthropic.com/claude-sonnet-5-5'},
     {date:'SEP 22',name:'Claude Opus 5.5',type:'MODEL',status:'NEW',why:'Anthropic’s higher-end model for complex judgment, coding and long-running professional work.',url:'https://www.anthropic.com/claude-opus-5-5'},
     {date:'SEP 29',name:'GPT-6.1 Sol',type:'MODEL',status:'NEW',why:'OpenAI’s lower-cost upgrade for agentic coding, computer use and professional work, with multi-agent support in beta.',url:'https://developers.openai.com/api/docs/changelog'},
+    {date:'SEP 28',name:'NVIDIA Open Agent Safety Platform',type:'SAFETY',status:'NEW',why:'OpenShell and Sentry add enforceable runtime boundaries and independent monitoring for increasingly autonomous AI agents.',url:'https://developer.nvidia.com/blog/nvidia-open-agent-safety-platform-a-reference-for-continuous-in-silicon-agent-monitoring/'},
+    {date:'AUG 27',name:'Gemini Omni 1.1 Flash',type:'CREATIVE',status:'WATCH',why:'Google’s production-focused multimodal video model adds stronger editing control, scene extension and 4K upscaling.',url:'https://blog.google/innovation-and-ai/technology/developers-tools/build-with-gemini-omni-1-1-flash/'},
     {date:'MAY 19',name:'Google Antigravity 2.0',type:'BUILDER',status:'WATCH',why:'An agent-first development platform with parallel agents, dynamic subagents, scheduled tasks, CLI and SDK.',url:'https://blog.google/innovation-and-ai/technology/developers-tools/google-io-2026-developer-highlights/'}
   ];
 
