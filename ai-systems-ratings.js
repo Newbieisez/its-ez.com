@@ -28,14 +28,16 @@
   const scopeLabel=scope=>({full_platform:'Full platform',suite:'Suite-level',marketplace:'Marketplace',mobile_app:'Mobile app',browser_extension:'Browser extension',reference:'Reference',vendor_evidence:'Vendor evidence'}[scope]||String(scope||'Evidence'));
 
   function statusLabel(item){
-    if(!item||item.status==='collecting') return 'Collecting';
+    if(!item||item.status==='collecting') return 'Not Yet Rated';
     return item.status==='live'?'Live':'Provisional';
   }
   function chipMarkup(item){
     if(!item||item.status==='collecting'||num(item.score)===null){
-      return `<span class="ez-score-chip is-collecting"><strong>—</strong><span>EZ SCORE · COLLECTING</span></span>`;
+      return `<span class="ez-score-chip is-collecting"><strong>—</strong><span>NOT YET RATED</span></span>`;
     }
-    return `<span class="ez-score-chip is-${safe(item.status)}"><strong>${Number(item.score).toFixed(1)}</strong><span>EZ SCORE · ${safe(statusLabel(item).toUpperCase())}</span>${trendMarkup(item.trend)}</span>`;
+    const confBadge=(item.status==='provisional'&&item.evidenceType==='expert-provisional'&&item.provisionalConfidence)
+      ? `<em>${safe(item.provisionalConfidence)}</em>` : '';
+    return `<span class="ez-score-chip is-${safe(item.status)}"><strong>${Number(item.score).toFixed(1)}</strong><span>EZ SCORE · ${safe(statusLabel(item).toUpperCase())}</span>${confBadge}${trendMarkup(item.trend)}</span>`;
   }
 
   function decorateCards(){
@@ -48,7 +50,13 @@
       const confidence=num(item?.confidence);
       const reviewRecords=Number(item?.fullPlatformReviewCount||0);
       const sourceCount=Number(item?.fullPlatformSourceCount||0);
-      row.innerHTML=`${chipMarkup(item)}${confidence===null?'':`<span class="ez-score-confidence">${confidence.toFixed(1)}/10 evidence · ${reviewRecords.toLocaleString()} full-platform reviews · ${sourceCount} independent sources</span>`}`;
+      let meta='';
+      if(item?.evidenceType==='expert-provisional'){
+        meta=`<span class="ez-score-confidence">Expert assessment · ${safe(item.provisionalConfidence||'MEDIUM')} confidence</span>`;
+      } else if(confidence!==null){
+        meta=`<span class="ez-score-confidence">${confidence.toFixed(1)}/10 evidence · ${reviewRecords.toLocaleString()} full-platform reviews · ${sourceCount} independent sources</span>`;
+      }
+      row.innerHTML=`${chipMarkup(item)}${meta}`;
     });
   }
 
@@ -72,8 +80,13 @@
 
   function qualificationMarkup(item){
     if(item?.status==='live') return '<strong>Live score</strong><span>Validated by multiple independent full-platform review families with sufficient volume, freshness and source agreement.</span>';
+    if(item?.status==='provisional' && item?.evidenceType==='expert-provisional'){
+      const conf=item?.provisionalConfidence||'MEDIUM';
+      const note=safe(item?.provisionalNote||'Expert assessment based on product documentation, market evidence, and analyst evaluation.');
+      return `<strong>Provisional score · ${safe(conf)} confidence</strong><span>${note}<br><br>This is an expert assessment, not a review-data score. It will upgrade to a data-driven score when sufficient independent review evidence is available.</span>`;
+    }
     if(item?.status==='provisional') return '<strong>Provisional score</strong><span>Valid review evidence exists, but it has not yet cleared every Live threshold for independent-source depth, volume, freshness or agreement.</span>';
-    return '<strong>Collecting evidence</strong><span>There is not enough valid independent review evidence to publish a score yet.</span>';
+    return '<strong>Not yet rated</strong><span>Insufficient information for even a provisional assessment.</span>';
   }
 
   function renderDialogScore(id){
@@ -83,12 +96,17 @@
     const item=scoreFor(id);
     if(!item||item.status==='collecting'||num(item.score)===null){
       const empty=document.createElement('div');empty.className='ez-score-empty';
-      empty.innerHTML='<strong>EZ Score is collecting evidence.</strong><br>The engine will not publish a number until attributable review data is available. Missing evidence is never replaced with a filler score.';
+      empty.innerHTML='<strong>Not yet rated.</strong><br>Insufficient information for even a provisional assessment.';
       anchor.insertAdjacentElement('afterend',empty);return;
     }
     const panel=document.createElement('section');panel.className='ez-score-dialog';
     const confidence=num(item.confidence);
-    panel.innerHTML=`<div class="ez-score-dialog-head"><div class="ez-score-dialog-number"><strong>${Number(item.score).toFixed(1)}</strong><span>EZ SCORE / 10</span></div><div class="ez-score-dialog-summary"><strong>${Number(item.fullPlatformReviewCount||0).toLocaleString()} full-platform review records · ${Number(item.fullPlatformSourceCount||0)} independent full-platform sources</strong><span>Review sentiment is deduplicated by source family, adjusted for evidence scope and reliability, then checked for volume, freshness and cross-source agreement. Mobile and marketplace signals are downweighted.</span></div><span class="ez-score-dialog-status is-${safe(item.status)}">${safe(statusLabel(item))}${confidence===null?'':` · ${confidence.toFixed(1)} evidence`}</span></div><div class="ez-score-qualification">${qualificationMarkup(item)}</div><div class="ez-score-components">${componentMarkup(item)}</div><div class="ez-score-sources"><strong>Review source provenance</strong><div class="ez-score-source-list">${sourceMarkup(item)}</div><div class="ez-score-freshness">${safe(prettyDate(item.lastRefreshed||snapshot.generatedAt))}${num(item.trend)===null?'':` · Trend ${item.trend>0?'+':''}${Number(item.trend).toFixed(1)}`}</div></div>`;
+    const isExpert=item.evidenceType==='expert-provisional';
+    const summaryHtml=isExpert
+      ? `<strong>Expert provisional assessment</strong><span>Based on product documentation, market evidence, and analyst evaluation. Not derived from review data.</span>`
+      : `<strong>${Number(item.fullPlatformReviewCount||0).toLocaleString()} full-platform review records · ${Number(item.fullPlatformSourceCount||0)} independent full-platform sources</strong><span>Review sentiment is deduplicated by source family, adjusted for evidence scope and reliability, then checked for volume, freshness and cross-source agreement. Mobile and marketplace signals are downweighted.</span>`;
+    const statusExtra=isExpert&&item.provisionalConfidence?` · ${safe(item.provisionalConfidence)} confidence`:(confidence===null?'':` · ${confidence.toFixed(1)} evidence`);
+    panel.innerHTML=`<div class="ez-score-dialog-head"><div class="ez-score-dialog-number"><strong>${Number(item.score).toFixed(1)}</strong><span>EZ SCORE / 10</span></div><div class="ez-score-dialog-summary">${summaryHtml}</div><span class="ez-score-dialog-status is-${safe(item.status)}">${safe(statusLabel(item))}${statusExtra}</span></div><div class="ez-score-qualification">${qualificationMarkup(item)}</div><div class="ez-score-components">${componentMarkup(item)}</div><div class="ez-score-sources"><strong>Review source provenance</strong><div class="ez-score-source-list">${sourceMarkup(item)}</div><div class="ez-score-freshness">${safe(prettyDate(item.lastRefreshed||snapshot.generatedAt))}${num(item.trend)===null?'':` · Trend ${item.trend>0?'+':''}${Number(item.trend).toFixed(1)}`}</div></div>`;
     anchor.insertAdjacentElement('afterend',panel);
   }
 
