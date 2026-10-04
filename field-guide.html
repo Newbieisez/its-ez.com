@@ -25,9 +25,15 @@ h1 .r{color:var(--red)}
 .gate p{margin:0 0 18px;color:var(--muted)}
 .gate.done{display:none}
 /* ---- HubSpot embed: JS-applied light theme (see form script below) ---- */
-#hs-form-target{color:#f6f7f9;min-height:120px}
-#hs-form-target input[type=text],#hs-form-target input[type=email],#hs-form-target input[type=tel],
-#hs-form-target input:not([type]),#hs-form-target textarea,#hs-form-target select{background:#fff;color:#141414;border:1px solid #c9cdd4;border-radius:10px;padding:10px 12px;width:100%}
+.unlock-form{display:flex;flex-direction:column;gap:10px;max-width:560px}
+.unlock-form label{color:#f6f7f9;font-weight:700;font-size:.9rem}
+.unlock-form input{background:#fff;color:#141414;border:1px solid #c9cdd4;border-radius:10px;padding:12px 14px;width:100%;font-size:1rem;box-sizing:border-box}
+.unlock-form input::placeholder{color:#8a8f98}
+.unlock-form button{background:var(--red);color:#fff;border:0;border-radius:999px;padding:13px 30px;font-weight:900;font-size:.85rem;letter-spacing:.05em;text-transform:uppercase;cursor:pointer;align-self:flex-start;margin-top:6px}
+.unlock-form button:hover{background:#fff;color:#08090b}
+.unlock-form button:disabled{opacity:.6;cursor:wait}
+.form-note{font-size:.9rem;margin:6px 0 0}
+.form-note.error{color:#ff9a9a}
 /* ---- Bento grid ---- */
 .bento{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
 .bento-card{position:relative;display:block;border-radius:16px;overflow:hidden;border:1px solid var(--line);min-height:300px;background:#0d0e12;text-decoration:none!important;cursor:pointer}
@@ -66,7 +72,14 @@ footer a{color:var(--muted)}
 <div class="gate" id="gate">
 <h2>Get all ten guides</h2>
 <p>Drop your email and the full library unlocks. Your email stays with me — never sold, never shared. I only email when I have something useful. No schedule, no trash.</p>
-<div id="hs-form-target"></div>
+<form class="unlock-form" id="unlock-form" novalidate>
+<label for="uf-firstname">First name</label>
+<input type="text" id="uf-firstname" name="firstname" autocomplete="given-name" placeholder="First name">
+<label for="uf-email">Email *</label>
+<input type="email" id="uf-email" name="email" autocomplete="email" placeholder="you@company.com" required>
+<button type="submit" id="unlock-btn">Unlock the guides</button>
+<p class="form-note error" id="form-error" hidden></p>
+</form>
 </div>
 
 <div class="bento" id="bento">
@@ -92,42 +105,6 @@ footer a{color:var(--muted)}
 <p style="margin-top:32px"><a href="/">← Back home</a></p>
 </div></main>
 <footer><div class="wrap">© 2026 EZ Enablement LLC. <a href="support.html">Support</a> · <a href="licensing.html">Licensing</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></div></footer>
-<script src="https://js-na2.hsforms.net/forms/shell.js"></script>
-<script>
-window.addEventListener('load', function(){
-  function fallback(){
-    var t = document.getElementById('hs-form-target');
-    if(t && !t.querySelector('form') && !t.querySelector('iframe')){
-      t.setAttribute('data-region','na2');
-      t.setAttribute('data-form-id','6926993a-00bc-4ddb-9caa-acafebcc8617');
-      t.setAttribute('data-portal-id','247248749');
-      t.className = 'hs-form-frame';
-      var s = document.createElement('script');
-      s.src = 'https://js-na2.hsforms.net/forms/embed/247248749.js';
-      s.defer = true;
-      document.head.appendChild(s);
-    }
-  }
-  if(!window.hbspt || !hbspt.forms || !hbspt.forms.create){ fallback(); return; }
-  hbspt.forms.create({
-    region: 'na2',
-    portalId: '247248749',
-    formId: '6926993a-00bc-4ddb-9caa-acafebcc8617',
-    target: '#hs-form-target',
-    onFormReady: function($form){
-      try{
-        $form.find('h1,h2,h3,h4,p,span,div,label,legend,li').css('color','#f6f7f9');
-        $form.find('a').css('color','#ffffff');
-        $form.find('input[type=text],input[type=email],input[type=tel],input:not([type]),textarea,select').css({'background-color':'#ffffff','color':'#141414'});
-        $form.find('input[type=submit],.hs-button,button[type=submit]').css({'background-color':'#E7110E','color':'#ffffff','border':'none','border-radius':'999px','padding':'13px 30px','font-weight':'900','cursor':'pointer'});
-        $form.find('.hs-error-msgs,.hs-error-msg').css('color','#ff9a9a');
-      }catch(e){}
-    },
-    onFormSubmitted: function(){ try{ unlockLibrary(); }catch(e){} }
-  });
-  setTimeout(fallback, 6000);
-});
-</script>
 <script>
 var unlockLibrary = null;
 (function(){
@@ -148,11 +125,47 @@ var unlockLibrary = null;
       if(a.classList.contains('locked')){ e.preventDefault(); gate.scrollIntoView({behavior:'smooth'}); }
     });
   });
-  window.addEventListener('message', function(e){
-    try{
-      var d = typeof e.data==='string' ? JSON.parse(e.data) : e.data;
-      if(d && (d.eventName==='onFormSubmit'||d.eventName==='onFormSubmitted')) unlock();
-    }catch(err){}
+
+  var form = document.getElementById('unlock-form');
+  var errEl = document.getElementById('form-error');
+  var btn = document.getElementById('unlock-btn');
+  function showError(msg){ errEl.textContent = msg; errEl.hidden = false; }
+  form.addEventListener('submit', function(e){
+    e.preventDefault();
+    errEl.hidden = true;
+    var email = document.getElementById('uf-email').value.trim();
+    var firstname = document.getElementById('uf-firstname').value.trim();
+    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){ showError('Please enter a valid email address.'); return; }
+    btn.disabled = true; btn.textContent = 'Unlocking...';
+    fetch('https://api.hsforms.com/submissions/v3/integration/submit/247248749/6926993a-00bc-4ddb-9caa-acafebcc8617', {
+      method: 'POST',
+      headers: {'Content-Type': 'application/json'},
+      body: JSON.stringify({
+        fields: [
+          {name: 'email', value: email},
+          {name: 'firstname', value: firstname}
+        ],
+        context: {pageUri: window.location.href, pageName: document.title}
+      })
+    }).then(function(r){
+      return r.json().then(function(j){ return {status: r.status, body: j}; }).catch(function(){ return {status: r.status, body: null}; });
+    }).then(function(res){
+      if(res.status >= 200 && res.status < 300){
+        unlock();
+        document.getElementById('bento').scrollIntoView({behavior:'smooth'});
+      } else {
+        var msg = 'Something went wrong. Please try again.';
+        try{
+          if(res.body && res.body.errors && res.body.errors.length && res.body.errors[0].message) msg = res.body.errors[0].message;
+          else if(res.body && res.body.message) msg = res.body.message;
+        }catch(_){}
+        showError(msg);
+        btn.disabled = false; btn.textContent = 'Unlock the guides';
+      }
+    }).catch(function(){
+      showError('Could not reach the server. Check your connection and try again.');
+      btn.disabled = false; btn.textContent = 'Unlock the guides';
+    });
   });
 })();
 </script>
