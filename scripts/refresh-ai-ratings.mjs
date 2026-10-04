@@ -6,7 +6,8 @@ const SOURCE_FILES=['ai-systems.js','ai-systems-extended.js','ai-systems-categor
 const CONFIG_PATH=path.join(ROOT,'data','ai-rating-sources.json');
 const OUTPUT_PATH=path.join(ROOT,'data','ai-systems-ratings.json');
 const HISTORY_PATH=path.join(ROOT,'data','ai-systems-rating-history.json');
-const USER_AGENT='EZEnablement-AISystems-Ratings/2.0 (+https://its-ez.com/ai-systems.html)';
+const PROVISIONAL_PATH=path.join(ROOT,'data','ai-provisional-scores.json');
+const USER_AGENT='EZEnablement-AISystems-Ratings/3.0 (+https://its-ez.com/ai-systems.html)';
 
 const clamp=(value,min=0,max=10)=>Math.max(min,Math.min(max,Number(value)));
 const round=value=>Math.round(Number(value)*10)/10;
@@ -260,7 +261,7 @@ function composite(components,weights){
   return used?clamp(total/used):null;
 }
 
-function scoreItem(product,signals,config,history){
+function scoreItem(product,signals,config,history,provisionalScores){
   const sentiment=userSentiment(signals,config.defaults||{});
   const agreement=agreementScore(sentiment);
   const freshness=evidenceFreshness(sentiment);
@@ -279,13 +280,32 @@ function scoreItem(product,signals,config,history){
     &&Number(confidence||0)>=Number(policy.minimumLiveConfidence||6)
     &&Number(agreement||0)>=Number(policy.minimumLiveAgreement||6)
     &&Number(freshness||0)>=Number(policy.minimumLiveFreshness||5);
-  const status=qualifiesLive?'live':hasSentiment?'provisional':'collecting';
+  let status=qualifiesLive?'live':hasSentiment?'provisional':'collecting';
+  let finalScore=status==='collecting'?null:round(score);
+  let finalConfidence=confidence===null?null:round(confidence);
+  let provisionalNote=null;
+  let evidenceType='review-data';
+  
+  // v3.0: Use expert provisional scores when no review data exists
+  // This ensures every legitimate platform has a meaningful evaluation
+  // instead of showing null/0. Provisional scores are clearly labeled
+  // and never presented as review-based.
+  if(status==='collecting' && provisionalScores?.scores?.[product.id]){
+    const prov=provisionalScores.scores[product.id];
+    status='provisional';
+    finalScore=prov.score;
+    finalConfidence=null; // Confidence shown as HIGH/MEDIUM/EARLY, not numeric
+    provisionalNote=prov.note;
+    evidenceType='expert-provisional';
+  }
+  
   const prior=[...(history.items?.[product.id]||[])].reverse().find(row=>Number.isFinite(Number(row.score)));
   const trend=score!==null&&prior?round(score-Number(prior.score)):null;
   const sourceCount=new Set(signals.map(s=>s.label).filter(Boolean)).size;
   const independentSourceCount=new Set(signals.filter(s=>s.component==='userSentiment').map(s=>s.sourceFamily||s.label).filter(Boolean)).size;
   return {
-    id:product.id,name:product.name,status,score:status==='collecting'?null:round(score),confidence:confidence===null?null:round(confidence),
+    id:product.id,name:product.name,status,score:finalScore,confidence:finalConfidence,
+    provisionalNote,evidenceType,provisionalConfidence:provisionalScores?.scores?.[product.id]?.confidence||null,
     reviewCount:sentiment?.reviewCount||0,sourceCount,independentSourceCount,
     fullPlatformSourceCount:sentiment?.fullPlatformSourceCount||0,fullPlatformReviewCount:sentiment?.fullPlatformReviewCount||0,
     secondLargestFullPlatformReviewCount:sentiment?.secondLargestFullPlatformReviewCount||0,
@@ -297,11 +317,11 @@ function scoreItem(product,signals,config,history){
 }
 
 async function main(){
-  const [products,config,history]=await Promise.all([catalog(),readJson(CONFIG_PATH,{}),readJson(HISTORY_PATH,{schemaVersion:1,items:{}})]);
+  const [products,config,history,provisionalScores]=await Promise.all([catalog(),readJson(CONFIG_PATH,{}),readJson(HISTORY_PATH,{schemaVersion:1,items:{}}),readJson(PROVISIONAL_PATH,{scores:{}})]);
   const expected=Number(config.policy?.expectedCatalogSize||0);
   if(expected&&products.length!==expected)throw new Error(`Expected ${expected} AI Systems Library platforms; found ${products.length}.`);
   if(products.length<100)throw new Error(`AI Systems catalog unexpectedly small: ${products.length}.`);
-  const output={schemaVersion:2,methodologyVersion:'2.0',generatedAt:nowIso(),refreshHours:Number(config.policy?.refreshHours||6),items:{}};
+  const output={schemaVersion:3,methodologyVersion:'3.0',generatedAt:nowIso(),refreshHours:Number(config.policy?.refreshHours||6),items:{}};
   const failures=[];
   for(const product of products){
     const signals=[];
@@ -309,7 +329,7 @@ async function main(){
       try{const signal=await collectSource(source,config);if(signal)signals.push(signal);}
       catch(error){failures.push({id:product.id,source:source.label||source.type,error:String(error.message||error).slice(0,240)});}
     }
-    output.items[product.id]=scoreItem(product,signals,config,history);
+    output.items[product.id]=scoreItem(product,signals,config,history,provisionalScores);
   }
   const values=Object.values(output.items);
   output.summary={total:products.length,live:values.filter(x=>x.status==='live').length,provisional:values.filter(x=>x.status==='provisional').length,collecting:values.filter(x=>x.status==='collecting').length,sourceFailures:failures.length,fullPlatformReviewRecords:values.reduce((sum,x)=>sum+Number(x.fullPlatformReviewCount||0),0)};
@@ -326,6 +346,6 @@ async function main(){
     history.items[item.id]=kept.slice(-1460);
   }
   await fs.writeFile(HISTORY_PATH,JSON.stringify(history,null,2)+'\n');
-  console.log(`EZ Score v2 refresh: ${output.summary.live} live, ${output.summary.provisional} provisional, ${output.summary.collecting} collecting, ${output.summary.fullPlatformReviewRecords} full-platform review records, ${failures.length} source failures.`);
+  console.log(`EZ Score v3 refresh: ${output.summary.live} live, ${output.summary.provisional} provisional, ${output.summary.collecting} collecting, ${output.summary.fullPlatformReviewRecords} full-platform review records, ${failures.length} source failures.`);
 }
 await main();
