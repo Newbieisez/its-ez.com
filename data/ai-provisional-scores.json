@@ -1304,6 +1304,160 @@
       "note": "AI SDR. Early.",
       "evidenceType": "expert-provisional",
       "assessedAt": "2026-10-04"
+    },
+    "jason-ai": {
+      "score": 7.3,
+      "confidence": "MEDIUM",
+      "components": {
+        "functionalCapability": 7.5,
+        "workflowFit": 7.2,
+        "integrationReadiness": 7.0,
+        "marketEvidence": 7.0,
+        "productMaturity": 7.5
+      },
+      "note": "AI SDR by Reply.io. Automated prospecting with AI personalization.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-04"
+    },
+    "openai-dots": {
+      "score": 7.8,
+      "confidence": "EARLY",
+      "components": {
+        "functionalCapability": 8.0,
+        "workflowFit": 7.5,
+        "integrationReadiness": 7.5,
+        "marketEvidence": 7.0,
+        "productMaturity": 7.0
+      },
+      "note": "OpenAI's new agent platform. Early, but significant market signal.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-04"
+    },
+    "meta-muse": {
+      "score": 8.0,
+      "confidence": "MEDIUM",
+      "components": {
+        "functionalCapability": 8.2,
+        "workflowFit": 7.8,
+        "integrationReadiness": 8.0,
+        "marketEvidence": 7.8,
+        "productMaturity": 7.5
+      },
+      "note": "Meta's AI assistant. Deep integration with Meta ecosystem.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-04"
+    },
+    "google-antigravity": {
+      "score": 7.7,
+      "confidence": "EARLY",
+      "components": {
+        "functionalCapability": 8.0,
+        "workflowFit": 7.5,
+        "integrationReadiness": 7.5,
+        "marketEvidence": 6.8,
+        "productMaturity": 6.8
+      },
+      "note": "Google's agent development platform. Early stage, high potential.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-04"
+    },
+    "grok-team-bots": {
+      "score": 7.5,
+      "confidence": "EARLY",
+      "components": {
+        "functionalCapability": 7.8,
+        "workflowFit": 7.2,
+        "integrationReadiness": 7.0,
+        "marketEvidence": 7.0,
+        "productMaturity": 6.8
+      },
+      "note": "xAI team collaboration bots. Early, tied to X ecosystem.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-04"
+    },
+    "manus-2": {
+      "score": 7.8,
+      "confidence": "MEDIUM",
+      "components": {
+        "functionalCapability": 8.0,
+        "workflowFit": 7.8,
+        "integrationReadiness": 7.2,
+        "marketEvidence": 7.5,
+        "productMaturity": 7.0
+      },
+      "note": "Autonomous AI agent. Strong demo, growing adoption.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-04"
+    },
+    "agentforce": {
+      "score": 8.3,
+      "confidence": "MEDIUM",
+      "components": {
+        "functionalCapability": 8.5,
+        "workflowFit": 8.3,
+        "integrationReadiness": 9.0,
+        "marketEvidence": 8.0,
+        "productMaturity": 8.0
+      },
+      "note": "Salesforce enterprise agent platform. 7B work units delivered. Strong for Salesforce shops.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-04"
+    },
+    "chatgpt-work": {
+      "score": 8.2,
+      "confidence": "MEDIUM",
+      "components": {
+        "functionalCapability": 8.5,
+        "workflowFit": 8.0,
+        "integrationReadiness": 8.0,
+        "marketEvidence": 7.8,
+        "productMaturity": 7.5
+      },
+      "note": "OpenAI enterprise work agents. Cross-app task execution. Early enterprise adoption.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-04"
+    },
+    "comet": {
+      "score": 8.0,
+      "confidence": "MEDIUM",
+      "components": {
+        "functionalCapability": 8.2,
+        "workflowFit": 7.8,
+        "integrationReadiness": 7.5,
+        "marketEvidence": 7.8,
+        "productMaturity": 7.5
+      },
+      "note": "Perplexity AI browser. Leading browser-as-agent product. Strong research workflows.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-04"
+    },
+    "veo": {
+      "score": 8.5,
+      "confidence": "MEDIUM",
+      "components": {
+        "functionalCapability": 9.0,
+        "workflowFit": 8.0,
+        "integrationReadiness": 7.5,
+        "marketEvidence": 8.2,
+        "productMaturity": 8.0
+      },
+      "note": "Google Veo 3.1. Best AI video generation. Native audio, 4K. Post-Sora market leader.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-04"
+    },
+    "openshell": {
+      "score": 7.8,
+      "confidence": "EARLY",
+      "components": {
+        "functionalCapability": 8.0,
+        "workflowFit": 7.5,
+        "integrationReadiness": 7.8,
+        "marketEvidence": 7.0,
+        "productMaturity": 7.0
+      },
+      "note": "NVIDIA agent safety infrastructure. Open-source. Critical for enterprise agent deployment.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-04"
     }
   }
 }
