@@ -9,6 +9,13 @@
   add('strama-ai','STR','Strama.AI','AI Sales Outreach + SDR Orchestration System','AI sales outreach spanning lead sourcing, qualification, signal monitoring, multichannel engagement and follow-up in a team’s own voice.',['revenue','research','automation','revops'],['Discover','Qualify','Engage','Follow up','Measure'],'revops');
 
   const new2026 = [
+
+    ['openai-dots','DOT','OpenAI Dots','Always-On Agent System','Persistent AI agents with their own cloud computer, cross-app context and approval controls for ongoing work.',['automation','operations','research','creation'],['Delegate','Research','Act','Review','Continue'],'automation'],
+    ['meta-muse','MUSE','Meta Muse','Personal AI Agent System','A personal agent that can act across everyday apps from a dedicated secure virtual machine, with user-controlled access.',['automation','operations','research'],['Plan','Act','Coordinate','Learn','Review'],'automation'],
+    ['google-antigravity','AG','Google Antigravity','Agent-First Development System','Google’s agent-first builder for orchestrating multiple coding agents, subagents and scheduled software work across desktop, CLI and SDK surfaces.',['creation','automation','operations'],['Plan','Build','Parallelize','Test','Deploy'],'automation'],
+    ['grok-team-bots','GTB','Grok Team Bots','Shared AI Teammate System','Shareable Grok Bots that combine team context, tools, memory and approvals for recurring collaborative workflows.',['automation','knowledge','operations'],['Context','Share','Act','Approve','Learn'],'automation'],
+    ['manus-2','M2','Manus 2.0','General-Purpose Agent Workspace','A rebuilt agent architecture with Cascade, Cloud Computer, Automations, Manus Studio and Cue for long-running work and personal agents.',['automation','creation','operations','research'],['Brief','Build','Automate','Operate','Continue'],'automation'],
+
     ['hyperbound','HYP','Hyperbound','AI Sales Roleplay + Coaching System','AI roleplay, real-call scoring and reinforcement that connects practice to observable seller behavior.',['enablement','learning','coaching','revenue'],['Practice','Score','Coach','Reinforce','Measure'],'coaching'],
     ['attention','ATTN','Attention','AI Sales Execution + CRM Automation System','AI assistance for customer conversations, CRM updates, follow-up and sales execution workflows.',['revenue','coaching','automation','revops'],['Capture','Guide','Update','Follow up','Measure'],'revops'],
     ['revenue-io','RIO','Revenue.io','Revenue Execution + Conversation Intelligence System','Sales engagement, dialing, conversation intelligence and real-time coaching built around Salesforce execution.',['revenue','coaching','revops','automation'],['Engage','Call','Coach','Inspect','Forecast'],'revops'],
@@ -33,6 +40,52 @@
     ['heylee','HEY','Heylee','Conversation Intelligence + Revenue Automation System','Turns customer conversations into context, growth signals, coaching opportunities and automations.',['revenue','coaching','automation','operations'],['Listen','Analyze','Signal','Automate','Coach'],'coaching']
   ];
   new2026.forEach(args => add(...args));
+
+  const latestDrops = [
+    {date:'SEP 29',name:'OpenAI Dots',type:'AGENTS',status:'NEW',why:'Always-on agents with a cloud computer, cross-app context, custom rules and approval controls.',url:'https://help.openai.com/en/articles/6825453-chatgpt-release-notes'},
+    {date:'SEP 30',name:'Gemini 4 Argon',type:'MODEL',status:'NEW',why:'Google’s new frontier model for long-horizon professional work, coding, enterprise knowledge and cyber defense.',url:'https://blog.google/innovation-and-ai/models-and-research/gemini-models/gemini-4-argon/'},
+    {date:'SEP 8',name:'Meta Muse',type:'AGENT',status:'NEW',why:'A personal AI agent that takes action across everyday apps from a dedicated secure virtual machine.',url:'https://about.fb.com/news/2026/09/introducing-muse-personal-ai-agent/'},
+    {date:'SEP 28',name:'Grok Team Bots',type:'TEAM AGENTS',status:'NEW',why:'Shared AI teammates with common context, tools, memory and team-level workflows.',url:'https://x.ai/news/team-bots'},
+    {date:'SEP 28',name:'Manus 2.0 + Cue',type:'AGENTS',status:'NEW',why:'A rebuilt general-purpose agent stack with Cascade, Cloud Computer, Automations, Studio and personal-agent app Cue.',url:'https://manus.im/blog/introducing-manus-2-0'},
+    {date:'SEP 28',name:'Claude Sonnet 5.5',type:'MODEL',status:'NEW',why:'Anthropic’s faster, lower-cost Sonnet upgrade for everyday agentic work, coding and polished business artifacts.',url:'https://www.anthropic.com/claude-sonnet-5-5'},
+    {date:'SEP 22',name:'Claude Opus 5.5',type:'MODEL',status:'NEW',why:'Anthropic’s higher-end model for complex judgment, coding and long-running professional work.',url:'https://www.anthropic.com/claude-opus-5-5'},
+    {date:'SEP 29',name:'GPT-6.1 Sol',type:'MODEL',status:'NEW',why:'OpenAI’s lower-cost upgrade for agentic coding, computer use and professional work, with multi-agent support in beta.',url:'https://developers.openai.com/api/docs/changelog'},
+    {date:'MAY 19',name:'Google Antigravity 2.0',type:'BUILDER',status:'WATCH',why:'An agent-first development platform with parallel agents, dynamic subagents, scheduled tasks, CLI and SDK.',url:'https://blog.google/innovation-and-ai/technology/developers-tools/google-io-2026-developer-highlights/'}
+  ];
+
+  if (!document.querySelector('.latest-ai-drops')) {
+    const featured = document.querySelector('#featured');
+    if (featured) {
+      const section = document.createElement('section');
+      section.className='section latest-ai-drops';
+      section.id='latest-drops';
+      section.innerHTML=`<div class="wrap"><div class="section-head"><div><p class="eyebrow"><span></span> LATEST AI DROPS</p><h2>What changed lately.<br>What is worth watching.</h2></div><p>This is the fast-moving layer of the library: newly launched agents, frontier models and AI systems that materially change what teams can do. New does not automatically mean better. Each addition should earn its place through usefulness, workflow fit and evidence.</p></div><div class="latest-drop-grid">${latestDrops.map(d=>`<a class="latest-drop-card" href="${d.url}" target="_blank" rel="noopener"><div class="latest-drop-top"><span>${d.date}</span><b>${d.status}</b></div><small>${d.type}</small><h3>${d.name}</h3><p>${d.why}</p><strong>Read the release ↗</strong></a>`).join('')}</div><p class="latest-drop-note">Updated October 4, 2026 · Release claims are sourced from vendor announcements and reputable reporting, then evaluated separately for practical usefulness.</p></div>`;
+      featured.insertAdjacentElement('beforebegin',section);
+    }
+  }
+
+  const heroProof = document.querySelector('.hero-proof span:first-child strong');
+  if (heroProof) heroProof.textContent = platforms.length + '+';
+  const heroProofLabel = document.querySelector('.hero-proof span:first-child');
+  if (heroProofLabel) {
+    const strong = heroProofLabel.querySelector('strong');
+    heroProofLabel.innerHTML = '';
+    if (strong) heroProofLabel.appendChild(strong);
+    heroProofLabel.append(' platform systems');
+  }
+
+  if (!document.getElementById('latest-ai-drops-style')) {
+    const style=document.createElement('style');style.id='latest-ai-drops-style';style.textContent=`
+      .latest-ai-drops{background:#f3f3f1;color:#0b0b0d}.latest-ai-drops .section-head p{color:#5f5f66}
+      .latest-drop-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:14px}
+      .latest-drop-card{display:flex;min-height:250px;padding:22px;flex-direction:column;border:1px solid #d6d6d2;border-radius:20px;background:#fff;color:#0b0b0d;box-shadow:0 8px 22px rgba(0,0,0,.05);transition:transform .18s ease,border-color .18s ease,box-shadow .18s ease}
+      .latest-drop-card:hover{transform:translateY(-3px);border-color:#ef1717;box-shadow:0 14px 30px rgba(0,0,0,.08)}
+      .latest-drop-top{display:flex;justify-content:space-between;gap:12px;align-items:center}.latest-drop-top span{font-size:.62rem;font-weight:950;letter-spacing:.12em}.latest-drop-top b{padding:5px 8px;border-radius:999px;background:#0b0b0d;color:#fff;font-size:.52rem;letter-spacing:.1em}
+      .latest-drop-card small{margin-top:28px;color:#ef1717;font-size:.58rem;font-weight:950;letter-spacing:.12em}.latest-drop-card h3{margin:7px 0 9px;font-size:1.28rem;letter-spacing:-.035em}.latest-drop-card p{margin:0;color:#5f5f66;font-size:.76rem;line-height:1.55}.latest-drop-card strong{margin-top:auto;padding-top:22px;font-size:.68rem}.latest-drop-note{margin:18px 0 0;color:#77777d;font-size:.64rem;line-height:1.5}
+      @media(max-width:900px){.latest-drop-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}@media(max-width:560px){.latest-drop-grid{grid-template-columns:1fr}.latest-drop-card{min-height:0}}
+    `;document.head.appendChild(style);
+  }
+
 
   const library = document.querySelector('#library');
   const platformGridEl = document.querySelector('#platform-grid');
