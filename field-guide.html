@@ -24,18 +24,10 @@ h1 .r{color:var(--red)}
 .gate h2{margin:0 0 8px;font-size:1.4rem;color:#fff}
 .gate p{margin:0 0 18px;color:var(--muted)}
 .gate.done{display:none}
-/* ---- HubSpot embed: force every text node visible on dark ---- */
-#gate .hs-form-frame{color:#f6f7f9}
-#gate .hs-form-frame h1,#gate .hs-form-frame h2,#gate .hs-form-frame h3,#gate .hs-form-frame h4,
-#gate .hs-form-frame p,#gate .hs-form-frame span,#gate .hs-form-frame div,#gate .hs-form-frame label,
-#gate .hs-form-frame legend,#gate .hs-form-frame li{color:#f6f7f9!important}
-#gate .hs-form-frame input[type=text],#gate .hs-form-frame input[type=email],#gate .hs-form-frame input[type=tel],
-#gate .hs-form-frame input:not([type]),#gate .hs-form-frame textarea,#gate .hs-form-frame select{background:#fff!important;color:#141414!important;border:1px solid #c9cdd4!important;border-radius:10px;padding:10px 12px!important}
-#gate .hs-form-frame input::placeholder,#gate .hs-form-frame textarea::placeholder{color:#6b7280!important}
-#gate .hs-form-frame input[type=submit],#gate .hs-form-frame .hs-button,#gate .hs-form-frame button[type=submit]{background:#E7110E!important;border:none!important;color:#fff!important;font-weight:900!important;border-radius:999px!important;padding:13px 30px!important;letter-spacing:.04em;cursor:pointer}
-#gate .hs-form-frame .hs-error-msgs,#gate .hs-form-frame .hs-error-msg,#gate .hs-form-frame .hs_error_rollup,#gate .hs-form-frame .hs-form-field span.hs-error-msgs label{color:#ff9a9a!important}
-#gate .hs-form-frame a{color:#fff!important;text-decoration:underline!important}
-#gate .hs-form-frame .legal-consent-container p,#gate .hs-form-frame .legal-consent-container span{color:#aeb3bc!important;font-size:.8rem}
+/* ---- HubSpot embed: JS-applied light theme (see form script below) ---- */
+#hs-form-target{color:#f6f7f9;min-height:120px}
+#hs-form-target input[type=text],#hs-form-target input[type=email],#hs-form-target input[type=tel],
+#hs-form-target input:not([type]),#hs-form-target textarea,#hs-form-target select{background:#fff;color:#141414;border:1px solid #c9cdd4;border-radius:10px;padding:10px 12px;width:100%}
 /* ---- Bento grid ---- */
 .bento{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:36px}
 .bento-card{position:relative;display:block;border-radius:16px;overflow:hidden;border:1px solid var(--line);min-height:300px;background:#0d0e12;text-decoration:none!important;cursor:pointer}
@@ -74,8 +66,7 @@ footer a{color:var(--muted)}
 <div class="gate" id="gate">
 <h2>Get all ten guides</h2>
 <p>Drop your email and the full library unlocks. No spam, no drip sequence. Just the guides.</p>
-<script src="https://js-na2.hsforms.net/forms/embed/247248749.js" defer></script>
-<div class="hs-form-frame" data-region="na2" data-form-id="6926993a-00bc-4ddb-9caa-acafebcc8617" data-portal-id="247248749"></div>
+<div id="hs-form-target"></div>
 </div>
 
 <div class="bento" id="bento">
@@ -101,7 +92,30 @@ footer a{color:var(--muted)}
 <p style="margin-top:32px"><a href="/">← Back home</a></p>
 </div></main>
 <footer><div class="wrap">© 2026 EZ Enablement LLC. <a href="support.html">Support</a> · <a href="licensing.html">Licensing</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></div></footer>
+<script src="https://js-na2.hsforms.net/forms/embed/247248749.js" defer></script>
 <script>
+window.addEventListener('load', function(){
+  if(!window.hbspt || !hbspt.forms || !hbspt.forms.create) return;
+  hbspt.forms.create({
+    region: 'na2',
+    portalId: '247248749',
+    formId: '6926993a-00bc-4ddb-9caa-acafebcc8617',
+    target: '#hs-form-target',
+    onFormReady: function($form){
+      try{
+        $form.find('h1,h2,h3,h4,p,span,div,label,legend,li').css('color','#f6f7f9');
+        $form.find('a').css('color','#ffffff');
+        $form.find('input[type=text],input[type=email],input[type=tel],input:not([type]),textarea,select').css({'background-color':'#ffffff','color':'#141414'});
+        $form.find('input[type=submit],.hs-button,button[type=submit]').css({'background-color':'#E7110E','color':'#ffffff','border':'none','border-radius':'999px','padding':'13px 30px','font-weight':'900','cursor':'pointer'});
+        $form.find('.hs-error-msgs,.hs-error-msg').css('color','#ff9a9a');
+      }catch(e){}
+    },
+    onFormSubmitted: function(){ try{ unlockLibrary(); }catch(e){} }
+  });
+});
+</script>
+<script>
+var unlockLibrary = null;
 (function(){
   var lib = document.getElementById('library');
   var gate = document.getElementById('gate');
@@ -111,6 +125,7 @@ footer a{color:var(--muted)}
     try{ localStorage.setItem('fg_unlocked','1'); }catch(e){}
     document.querySelectorAll('.bento-card').forEach(function(a){ a.classList.remove('locked'); });
   }
+  unlockLibrary = unlock;
   try{ if(localStorage.getItem('fg_unlocked')==='1'){ unlock(); return; } }catch(e){}
   lib.classList.add('library-locked');
   document.querySelectorAll('.bento-card').forEach(function(a){
