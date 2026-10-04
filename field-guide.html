@@ -95,7 +95,20 @@ footer a{color:var(--muted)}
 <script src="https://js-na2.hsforms.net/forms/shell.js"></script>
 <script>
 window.addEventListener('load', function(){
-  if(!window.hbspt || !hbspt.forms || !hbspt.forms.create) return;
+  function fallback(){
+    var t = document.getElementById('hs-form-target');
+    if(t && !t.querySelector('form') && !t.querySelector('iframe')){
+      t.setAttribute('data-region','na2');
+      t.setAttribute('data-form-id','6926993a-00bc-4ddb-9caa-acafebcc8617');
+      t.setAttribute('data-portal-id','247248749');
+      t.className = 'hs-form-frame';
+      var s = document.createElement('script');
+      s.src = 'https://js-na2.hsforms.net/forms/embed/247248749.js';
+      s.defer = true;
+      document.head.appendChild(s);
+    }
+  }
+  if(!window.hbspt || !hbspt.forms || !hbspt.forms.create){ fallback(); return; }
   hbspt.forms.create({
     region: 'na2',
     portalId: '247248749',
@@ -112,6 +125,7 @@ window.addEventListener('load', function(){
     },
     onFormSubmitted: function(){ try{ unlockLibrary(); }catch(e){} }
   });
+  setTimeout(fallback, 6000);
 });
 </script>
 <script>
