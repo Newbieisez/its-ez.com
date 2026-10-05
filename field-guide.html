@@ -8,7 +8,7 @@
 <meta property="og:title" content="AI Field Guide | EZ Enablement">
 <meta property="og:description" content="Ten practical guides on using AI at work. Verification, prompting, ethics, accuracy, data rules, and more. Free.">
 <meta property="og:image" content="https://its-ez.com/assets/ez-social-preview-v2.jpg">
-<script type="text/javascript" id="hs-script-loader" async defer src="//js-na2.hs-scripts.com/247248749.js"></script>
+
 <style>
 :root{--bg:#08090b;--panel:#111318;--ink:#f6f7f9;--muted:#aeb3bc;--line:rgba(255,255,255,.13);--red:#E7110E;--max:1080px}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:Montserrat,Arial,Helvetica,sans-serif;line-height:1.65}
@@ -24,7 +24,7 @@ h1 .r{color:var(--red)}
 .gate h2{margin:0 0 8px;font-size:1.4rem;color:#fff}
 .gate p{margin:0 0 18px;color:var(--muted)}
 .gate.done{display:none}
-/* ---- HubSpot embed: JS-applied light theme (see form script below) ---- */
+/* ---- Email signup embed ---- */
 .unlock-form{display:flex;flex-direction:column;gap:10px;max-width:560px}
 .unlock-form label{color:#f6f7f9;font-weight:700;font-size:.9rem}
 .unlock-form input{background:#fff;color:#141414;border:1px solid #c9cdd4;border-radius:10px;padding:12px 14px;width:100%;font-size:1rem;box-sizing:border-box}
@@ -45,11 +45,11 @@ h1 .r{color:var(--red)}
 .bento-title{display:block;margin:6px 0 6px;font-size:1.25rem;font-weight:900;line-height:1.2;color:#fff}
 .featured .bento-title{font-size:1.7rem}
 .bento-meta{display:block;font-size:.8rem;color:#c9cdd4}
-.lock-badge{position:absolute;top:14px;right:14px;width:34px;height:34px;border-radius:50%;background:rgba(8,9,11,.72);border:1px solid var(--line);color:#fff;display:flex;align-items:center;justify-content:center}
-.bento-card:not(.locked) .lock-badge{display:none}
+
+
 .bento-card.locked img{filter:grayscale(.45) brightness(.62)}
-.bento-card.locked .unlock-hint{position:absolute;left:22px;top:18px;font-size:.75rem;font-weight:900;letter-spacing:.1em;color:#fff;background:rgba(8,9,11,.72);border:1px solid var(--line);padding:7px 12px;border-radius:999px}
-.bento-card:not(.locked) .unlock-hint{display:none}
+
+
 .bento-card.refcard{background:linear-gradient(145deg,#171016,#0b0c0f);border:1px solid var(--red)}
 .bento-card.refcard .bento-shade{background:none}
 .workshop{margin:56px 0 0;padding:36px;border:1px solid var(--red);border-radius:18px;background:linear-gradient(145deg,#161114,#0b0c0f)}
@@ -72,28 +72,21 @@ footer a{color:var(--muted)}
 <div class="gate" id="gate">
 <h2>Get all ten guides</h2>
 <p>Drop your email and the full library unlocks. Your email stays with me: never sold, never shared. I only email when I have something useful. No schedule, no trash.</p>
-<form class="unlock-form" id="unlock-form" novalidate>
-<label for="uf-firstname">First name</label>
-<input type="text" id="uf-firstname" name="firstname" autocomplete="given-name" placeholder="First name">
-<label for="uf-email">Email *</label>
-<input type="email" id="uf-email" name="email" autocomplete="email" placeholder="you@company.com" required>
-<button type="submit" id="unlock-btn">Unlock the guides</button>
-<p class="form-note error" id="form-error" hidden></p>
-</form>
+<script async data-uid="9fb5e21f6c" src="https://ez-enablement.kit.com/9fb5e21f6c/index.js"></script>
 </div>
 
 <div class="bento" id="bento">
-<a class="dl bento-card featured" href="https://drive.google.com/file/d/1mhl9b_Q1a95s_FBMz8_JtjVvZ-u31v0j/view?usp=drivesdk" target="_blank" rel="noopener"><img src="/assets/field-guide/fg-001-cover.svg" alt="The Evidence Check cover"><span class="bento-shade"></span><span class="unlock-hint">UNLOCK WITH EMAIL ABOVE</span><span class="lock-badge"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span><span class="bento-text"><span class="num">001</span><span class="bento-title">The Evidence Check</span><span class="bento-meta">8 pages · Checklist + worksheet</span></span></a>
-<a class="dl bento-card" href="https://drive.google.com/file/d/1oN9yhmGLESuk5gsgdMKzhS8LFnQ0FQtR/view?usp=drivesdk" target="_blank" rel="noopener"><img src="/assets/field-guide/fg-002-cover.svg" alt="The Prompt Builder cover"><span class="bento-shade"></span><span class="unlock-hint">UNLOCK WITH EMAIL ABOVE</span><span class="lock-badge"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span><span class="bento-text"><span class="num">002</span><span class="bento-title">The Prompt Builder</span><span class="bento-meta">8 pages · Framework + template</span></span></a>
-<a class="dl bento-card" href="https://drive.google.com/file/d/16bLH02C17U4E0H46UIAWF-AZ0HI18WCQ/view?usp=drivesdk" target="_blank" rel="noopener"><img src="/assets/field-guide/fg-003-cover.svg" alt="The Responsibility Check cover"><span class="bento-shade"></span><span class="unlock-hint">UNLOCK WITH EMAIL ABOVE</span><span class="lock-badge"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span><span class="bento-text"><span class="num">003</span><span class="bento-title">The Responsibility Check</span><span class="bento-meta">8 pages · Checklist + team rollout</span></span></a>
-<a class="dl bento-card" href="https://drive.google.com/file/d/1ScqjYNJ4Smq_X4TNlfEL5G00EYFw3A9l/view?usp=drivesdk" target="_blank" rel="noopener"><img src="/assets/field-guide/fg-004-cover.svg" alt="The Accuracy Test cover"><span class="bento-shade"></span><span class="unlock-hint">UNLOCK WITH EMAIL ABOVE</span><span class="lock-badge"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span><span class="bento-text"><span class="num">004</span><span class="bento-title">The Accuracy Test</span><span class="bento-meta">9 pages · Warning signs + exercises</span></span></a>
-<a class="dl bento-card" href="https://drive.google.com/file/d/19jR6vjRJLVR0UlH8H1s8Iwd-0RcZkUCJ/view?usp=drivesdk" target="_blank" rel="noopener"><img src="/assets/field-guide/fg-005-cover.svg" alt="The Data Rules cover"><span class="bento-shade"></span><span class="unlock-hint">UNLOCK WITH EMAIL ABOVE</span><span class="lock-badge"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span><span class="bento-text"><span class="num">005</span><span class="bento-title">The Data Rules</span><span class="bento-meta">9 pages · Never list + stranger test</span></span></a>
-<a class="dl bento-card" href="https://drive.google.com/file/d/1Aoc268G1LOrv0Vv0u8LvktMFbkVwTwY3/view?usp=drivesdk" target="_blank" rel="noopener"><img src="/assets/field-guide/fg-006-cover.svg" alt="Fix First cover"><span class="bento-shade"></span><span class="unlock-hint">UNLOCK WITH EMAIL ABOVE</span><span class="lock-badge"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span><span class="bento-text"><span class="num">006</span><span class="bento-title">Fix First</span><span class="bento-meta">8 pages · Five whys + mapping</span></span></a>
-<a class="dl bento-card" href="https://drive.google.com/file/d/1AxsoKdURxYW5g0Q_D49D222Lgy5qJxK3/view?usp=drivesdk" target="_blank" rel="noopener"><img src="/assets/field-guide/fg-007-cover.svg" alt="The Challenge Set cover"><span class="bento-shade"></span><span class="unlock-hint">UNLOCK WITH EMAIL ABOVE</span><span class="lock-badge"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span><span class="bento-text"><span class="num">007</span><span class="bento-title">The Challenge Set</span><span class="bento-meta">8 pages · Challenge prompts</span></span></a>
-<a class="dl bento-card" href="https://drive.google.com/file/d/19sWBIFtDsMplpANb_a_eZKNnKGPJLqX4/view?usp=drivesdk" target="_blank" rel="noopener"><img src="/assets/field-guide/fg-008-cover.svg" alt="The Human Line cover"><span class="bento-shade"></span><span class="unlock-hint">UNLOCK WITH EMAIL ABOVE</span><span class="lock-badge"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span><span class="bento-text"><span class="num">008</span><span class="bento-title">The Human Line</span><span class="bento-meta">9 pages · The line audit</span></span></a>
-<a class="dl bento-card" href="https://drive.google.com/file/d/19usbl4TR9152lSwwWTXydBOiXa9CftX1/view?usp=drivesdk" target="_blank" rel="noopener"><img src="/assets/field-guide/fg-009-cover.svg" alt="The Context Pack cover"><span class="bento-shade"></span><span class="unlock-hint">UNLOCK WITH EMAIL ABOVE</span><span class="lock-badge"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span><span class="bento-text"><span class="num">009</span><span class="bento-title">The Context Pack</span><span class="bento-meta">9 pages · Context template</span></span></a>
-<a class="dl bento-card" href="https://drive.google.com/file/d/1v1eImGO0tHkKqSgEoUluQ6Znuz6iukdX/view?usp=drivesdk" target="_blank" rel="noopener"><img src="/assets/field-guide/fg-010-cover.svg" alt="The Fluency Stack cover"><span class="bento-shade"></span><span class="unlock-hint">UNLOCK WITH EMAIL ABOVE</span><span class="lock-badge"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span><span class="bento-text"><span class="num">010</span><span class="bento-title">The Fluency Stack</span><span class="bento-meta">9 pages · 90-day plan</span></span></a>
-<a class="dl bento-card refcard" href="https://drive.google.com/file/d/1g3CwktXp93VHC3gM4nmptlkY9XxncTgT/view?usp=drivesdk" target="_blank" rel="noopener"><span class="bento-shade"></span><span class="unlock-hint">UNLOCK WITH EMAIL ABOVE</span><span class="lock-badge"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><rect x="4" y="10" width="16" height="11" rx="2"/><path d="M8 10V7a4 4 0 0 1 8 0v3"/></svg></span><span class="bento-text"><span class="num">REF</span><span class="bento-title">The Five Models, Side by Side</span><span class="bento-meta">2 pages · Reference card</span></span></a>
+<a class="dl bento-card featured" href="https://its-ez.com/field-guide/001-evidence-check.html" target="_blank" rel="noopener"><img src="/assets/field-guide/fg-001-cover.svg" alt="The Evidence Check cover"><span class="bento-shade"></span><span class="bento-text"><span class="num">001</span><span class="bento-title">The Evidence Check</span><span class="bento-meta">8 pages · Checklist + worksheet</span></span></a>
+<a class="dl bento-card" href="https://its-ez.com/field-guide/002-prompt-builder.html" target="_blank" rel="noopener"><img src="/assets/field-guide/fg-002-cover.svg" alt="The Prompt Builder cover"><span class="bento-shade"></span><span class="bento-text"><span class="num">002</span><span class="bento-title">The Prompt Builder</span><span class="bento-meta">8 pages · Framework + template</span></span></a>
+<a class="dl bento-card" href="https://its-ez.com/field-guide/003-responsibility-check.html" target="_blank" rel="noopener"><img src="/assets/field-guide/fg-003-cover.svg" alt="The Responsibility Check cover"><span class="bento-shade"></span><span class="bento-text"><span class="num">003</span><span class="bento-title">The Responsibility Check</span><span class="bento-meta">8 pages · Checklist + team rollout</span></span></a>
+<a class="dl bento-card" href="https://its-ez.com/field-guide/004-accuracy-test.html" target="_blank" rel="noopener"><img src="/assets/field-guide/fg-004-cover.svg" alt="The Accuracy Test cover"><span class="bento-shade"></span><span class="bento-text"><span class="num">004</span><span class="bento-title">The Accuracy Test</span><span class="bento-meta">9 pages · Warning signs + exercises</span></span></a>
+<a class="dl bento-card" href="https://its-ez.com/field-guide/005-data-rules.html" target="_blank" rel="noopener"><img src="/assets/field-guide/fg-005-cover.svg" alt="The Data Rules cover"><span class="bento-shade"></span><span class="bento-text"><span class="num">005</span><span class="bento-title">The Data Rules</span><span class="bento-meta">9 pages · Never list + stranger test</span></span></a>
+<a class="dl bento-card" href="https://its-ez.com/field-guide/006-fix-first.html" target="_blank" rel="noopener"><img src="/assets/field-guide/fg-006-cover.svg" alt="Fix First cover"><span class="bento-shade"></span><span class="bento-text"><span class="num">006</span><span class="bento-title">Fix First</span><span class="bento-meta">8 pages · Five whys + mapping</span></span></a>
+<a class="dl bento-card" href="https://its-ez.com/field-guide/007-challenge-set.html" target="_blank" rel="noopener"><img src="/assets/field-guide/fg-007-cover.svg" alt="The Challenge Set cover"><span class="bento-shade"></span><span class="bento-text"><span class="num">007</span><span class="bento-title">The Challenge Set</span><span class="bento-meta">8 pages · Challenge prompts</span></span></a>
+<a class="dl bento-card" href="https://its-ez.com/field-guide/008-human-line.html" target="_blank" rel="noopener"><img src="/assets/field-guide/fg-008-cover.svg" alt="The Human Line cover"><span class="bento-shade"></span><span class="bento-text"><span class="num">008</span><span class="bento-title">The Human Line</span><span class="bento-meta">9 pages · The line audit</span></span></a>
+<a class="dl bento-card" href="https://its-ez.com/field-guide/009-context-pack.html" target="_blank" rel="noopener"><img src="/assets/field-guide/fg-009-cover.svg" alt="The Context Pack cover"><span class="bento-shade"></span><span class="bento-text"><span class="num">009</span><span class="bento-title">The Context Pack</span><span class="bento-meta">9 pages · Context template</span></span></a>
+<a class="dl bento-card" href="https://its-ez.com/field-guide/010-fluency-stack.html" target="_blank" rel="noopener"><img src="/assets/field-guide/fg-010-cover.svg" alt="The Fluency Stack cover"><span class="bento-shade"></span><span class="bento-text"><span class="num">010</span><span class="bento-title">The Fluency Stack</span><span class="bento-meta">9 pages · 90-day plan</span></span></a>
+<a class="dl bento-card refcard" href="https://drive.google.com/file/d/1g3CwktXp93VHC3gM4nmptlkY9XxncTgT/view?usp=drivesdk" target="_blank" rel="noopener"><span class="bento-shade"></span><span class="bento-text"><span class="num">REF</span><span class="bento-title">The Five Models, Side by Side</span><span class="bento-meta">2 pages · Reference card</span></span></a>
 </div>
 
 <div class="workshop">
@@ -105,68 +98,5 @@ footer a{color:var(--muted)}
 <p style="margin-top:32px"><a href="/">← Back home</a></p>
 </div></main>
 <footer><div class="wrap">© 2026 EZ Enablement LLC. <a href="support.html">Support</a> · <a href="licensing.html">Licensing</a> · <a href="privacy.html">Privacy</a> · <a href="terms.html">Terms</a></div></footer>
-<script>
-var unlockLibrary = null;
-(function(){
-  var lib = document.getElementById('library');
-  var gate = document.getElementById('gate');
-  function unlock(){
-    lib.classList.remove('library-locked');
-    gate.classList.add('done');
-    try{ localStorage.setItem('fg_unlocked','1'); }catch(e){}
-    document.querySelectorAll('.bento-card').forEach(function(a){ a.classList.remove('locked'); });
-  }
-  unlockLibrary = unlock;
-  try{ if(localStorage.getItem('fg_unlocked')==='1'){ unlock(); return; } }catch(e){}
-  lib.classList.add('library-locked');
-  document.querySelectorAll('.bento-card').forEach(function(a){
-    a.classList.add('locked');
-    a.addEventListener('click', function(e){
-      if(a.classList.contains('locked')){ e.preventDefault(); gate.scrollIntoView({behavior:'smooth'}); }
-    });
-  });
 
-  var form = document.getElementById('unlock-form');
-  var errEl = document.getElementById('form-error');
-  var btn = document.getElementById('unlock-btn');
-  function showError(msg){ errEl.textContent = msg; errEl.hidden = false; }
-  form.addEventListener('submit', function(e){
-    e.preventDefault();
-    errEl.hidden = true;
-    var email = document.getElementById('uf-email').value.trim();
-    var firstname = document.getElementById('uf-firstname').value.trim();
-    if(!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)){ showError('Please enter a valid email address.'); return; }
-    btn.disabled = true; btn.textContent = 'Unlocking...';
-    fetch('https://api.hsforms.com/submissions/v3/integration/submit/247248749/6926993a-00bc-4ddb-9caa-acafebcc8617', {
-      method: 'POST',
-      headers: {'Content-Type': 'application/json'},
-      body: JSON.stringify({
-        fields: [
-          {name: 'email', value: email},
-          {name: 'firstname', value: firstname}
-        ],
-        context: {pageUri: window.location.href, pageName: document.title}
-      })
-    }).then(function(r){
-      return r.json().then(function(j){ return {status: r.status, body: j}; }).catch(function(){ return {status: r.status, body: null}; });
-    }).then(function(res){
-      if(res.status >= 200 && res.status < 300){
-        unlock();
-        document.getElementById('bento').scrollIntoView({behavior:'smooth'});
-      } else {
-        var msg = 'Something went wrong. Please try again.';
-        try{
-          if(res.body && res.body.errors && res.body.errors.length && res.body.errors[0].message) msg = res.body.errors[0].message;
-          else if(res.body && res.body.message) msg = res.body.message;
-        }catch(_){}
-        showError(msg);
-        btn.disabled = false; btn.textContent = 'Unlock the guides';
-      }
-    }).catch(function(){
-      showError('Could not reach the server. Check your connection and try again.');
-      btn.disabled = false; btn.textContent = 'Unlock the guides';
-    });
-  });
-})();
-</script>
 </body></html>
