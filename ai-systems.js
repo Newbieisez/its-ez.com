@@ -28,8 +28,9 @@ const workflowSets={
   partner:[['Recruit','Organize partner recruitment, segmentation and onboarding entry points.'],['Onboard','Deliver role- and partner-type-specific readiness.'],['Accredit','Track requirements, certifications and specialization progress.'],['Activate','Connect content, leads, plays and support to partner workflows.'],['Measure','Tie partner engagement and readiness to contribution and revenue.']]
 };
 
-function makePlatform(id,mark,name,system,best,cats,stages,primary,workflows){
-  return {id,mark,name,system,best,cats,stages,workflows:workflows||workflowSets[primary]};
+const OPENNESS_LABEL={'commercial-proprietary':'Commercial · proprietary','open-weight':'Open-weight','open-source':'Open source'};
+function makePlatform(id,mark,name,system,best,cats,stages,primary,workflows,openness){
+  return {id,mark,name,system,best,cats,stages,openness:openness||['commercial-proprietary'],workflows:workflows||workflowSets[primary]};
 }
 
 const platforms=[
@@ -106,7 +107,7 @@ makePlatform('smartsheet','SMS','Smartsheet','Enterprise Work Management System'
 
 makePlatform('zapier','ZAP','Zapier','No-Code Automation System','Connect applications, triggers, AI steps and actions without building custom integration infrastructure.',['automation','operations','revenue','enablement'],['Trigger','Transform','Route','Act','Monitor'],'automation'),
 makePlatform('make','MAKE','Make','Visual Automation System','Visual workflow automation across apps, data and AI steps for repeatable business processes.',['automation','operations','revenue','enablement'],['Trigger','Branch','Transform','Act','Monitor'],'automation'),
-makePlatform('n8n','N8N','n8n','Workflow Automation System','Flexible workflow automation for teams that want deeper control over integrations, logic and AI agents.',['automation','operations','revenue','enablement'],['Trigger','Orchestrate','Agent','Act','Observe'],'automation'),
+makePlatform('n8n','N8N','n8n','Workflow Automation System','Flexible workflow automation for teams that want deeper control over integrations, logic and AI agents. v2.42 (Sep 29) adds nested agent tools, an Agent Builder UX push and stronger MCP support — the shift from workflow tool to agent orchestration platform continues.',['automation','operations','revenue','enablement'],['Trigger','Orchestrate','Agent','Act','Observe'],'automation',undefined,['open-source']),
 makePlatform('workato','WK','Workato','Enterprise Automation System','Enterprise integration and workflow automation across applications, data and business processes.',['automation','operations','revenue'],['Connect','Orchestrate','Govern','Act','Measure'],'automation'),
 
 makePlatform('impartner','IMP','Impartner','Partner Relationship Management System','Partner portal, onboarding, enablement, marketing and channel management workflows.',['partner','enablement','learning','operations'],['Recruit','Onboard','Enable','Activate','Measure'],'partner'),
@@ -143,7 +144,7 @@ makePlatform('openshell','OSH','NVIDIA OpenShell','Agent Safety Infrastructure',
 ['Credential protection','Replace secrets with opaque placeholders.'],
 ['Hardware watchdog','Quarantine rogue agents in milliseconds.'],
 ['Policy enforcement','Define what agents can and cannot access.'],
-['Audit trails','Complete logs of agent actions for compliance.']]),
+['Audit trails','Complete logs of agent actions for compliance.']],['open-source']),
 ];
 
 const filterConfig=[
@@ -154,7 +155,13 @@ const extraStyle=document.createElement('style');
 extraStyle.textContent=`
 .library-controls{display:grid;grid-template-columns:minmax(220px,360px) 1fr;gap:14px;align-items:start;margin-bottom:24px}
 .system-search-wrap{position:relative}.system-search{width:100%;min-height:43px;border:1px solid var(--ink);border-radius:999px;background:#fff;padding:10px 42px 10px 16px;font:inherit;font-size:.78rem;outline:none}.system-search:focus{box-shadow:0 0 0 3px rgba(239,23,23,.12);border-color:var(--red)}
-.system-search-wrap:after{content:'⌕';position:absolute;right:16px;top:8px;font-size:1.15rem;font-weight:900}.library-controls .filter-row{margin:0}.library-status{display:flex;justify-content:space-between;gap:16px;align-items:center;margin:-8px 0 20px;color:var(--muted);font-size:.72rem}.library-status strong{color:var(--ink)}
+.system-search-wrap:after{content:'⌕';position:absolute;right:16px;top:8px;font-size:1.15rem;font-weight:900}.library-controls .filter-row{margin:0}.openness-row{display:flex;flex-wrap:wrap;gap:8px;align-items:center;margin-top:10px}
+.openness-label{font-size:.62rem;font-weight:950;letter-spacing:.12em;text-transform:uppercase;color:var(--muted);margin-right:2px}
+.ofilter{border:1px solid var(--ink);border-radius:999px;padding:9px 13px;background:transparent;font-size:.7rem;font-weight:900;cursor:pointer}
+.ofilter:hover,.ofilter.is-active{background:var(--ink);color:#fff}
+.dialog-openness{display:flex;flex-wrap:wrap;gap:6px;margin:12px 0 0}
+.dialog-openness span{padding:5px 10px;border:1px solid var(--ink);border-radius:999px;font-size:.58rem;font-weight:900;letter-spacing:.06em;text-transform:uppercase}
+.dialog-openness span:not(:first-child){border-color:var(--red);color:var(--red)}.library-status{display:flex;justify-content:space-between;gap:16px;align-items:center;margin:-8px 0 20px;color:var(--muted);font-size:.72rem}.library-status strong{color:var(--ink)}
 .platform-card[hidden]{display:none}.platform-empty{grid-column:1/-1;padding:34px;border:1px dashed var(--ink);border-radius:20px;background:#fff;text-align:center}.platform-empty strong{display:block;font-size:1.1rem}.platform-empty span{display:block;margin-top:6px;color:var(--muted);font-size:.8rem}
 @media(max-width:820px){.library-controls{grid-template-columns:1fr}.library-status{align-items:flex-start;flex-direction:column}.system-search{font-size:16px}}
 `;
@@ -169,6 +176,12 @@ const controls=document.createElement('div');
 controls.className='library-controls';
 controls.innerHTML=`<label class="system-search-wrap"><span class="skip-link">Search systems</span><input class="system-search" type="search" placeholder="Search tools, LMS, CRM, AI video, coaching…" aria-label="Search platform systems"></label><div class="filter-row" role="group" aria-label="Filter platform systems">${filterConfig.map(([value,label],i)=>`<button class="filter${i===0?' is-active':''}" type="button" data-filter="${value}" aria-pressed="${i===0?'true':'false'}">${label}</button>`).join('')}</div>`;
 oldFilterRow.replaceWith(controls);
+const opennessRow=document.createElement('div');
+opennessRow.className='openness-row';
+opennessRow.setAttribute('role','group');
+opennessRow.setAttribute('aria-label','Filter by model openness');
+opennessRow.innerHTML=`<span class="openness-label">Model openness</span>${[['all','All'],['commercial-proprietary','Commercial'],['open-weight','Open-weight'],['open-source','Open source']].map(([v,l],i)=>`<button class="ofilter${i===0?' is-active':''}" type="button" data-openness="${v}" aria-pressed="${i===0?'true':'false'}">${l}</button>`).join('')}`;
+controls.querySelector('.filter-row').insertAdjacentElement('afterend',opennessRow);
 const status=document.createElement('div');
 status.className='library-status';
 status.innerHTML=`<span><strong id="system-count">${platforms.length}</strong> platform systems across the modern enablement + GTM stack</span><span>Search by vendor, category or job to be done.</span>`;
@@ -177,13 +190,14 @@ controls.insertAdjacentElement('afterend',status);
 const filters=document.querySelectorAll('.filter');
 const searchInput=document.querySelector('.system-search');
 let activeFilter='all';
+let activeOpenness='all';
 let searchTerm='';
 
 function platformSearchText(p){
-  return [p.name,p.system,p.best,p.cats.join(' '),p.stages.join(' '),...p.workflows.flat()].join(' ').toLowerCase();
+  return [p.name,p.system,p.best,p.cats.join(' '),(p.openness||[]).join(' '),p.stages.join(' '),...p.workflows.flat()].join(' ').toLowerCase();
 }
 function renderPlatforms(){
-  const list=platforms.filter(p=>(activeFilter==='all'||p.cats.includes(activeFilter))&&(!searchTerm||platformSearchText(p).includes(searchTerm)));
+  const list=platforms.filter(p=>(activeFilter==='all'||p.cats.includes(activeFilter))&&(activeOpenness==='all'||(p.openness||[]).includes(activeOpenness))&&(!searchTerm||platformSearchText(p).includes(searchTerm)));
   document.querySelector('#system-count').textContent=list.length;
   if(!list.length){
     platformGrid.innerHTML=`<div class="platform-empty"><strong>No system matches that search.</strong><span>Try a vendor name, LMS, CRM, coaching, AI video, content, automation, partner or project.</span></div>`;
@@ -196,6 +210,19 @@ renderPlatforms();
 filters.forEach(btn=>btn.addEventListener('click',()=>{
   filters.forEach(b=>{b.classList.remove('is-active');b.setAttribute('aria-pressed','false')});
   btn.classList.add('is-active');btn.setAttribute('aria-pressed','true');activeFilter=btn.dataset.filter;renderPlatforms();
+}));
+const ofilters=document.querySelectorAll('.ofilter');
+function resetOpennessVisual(){
+  ofilters.forEach(b=>{b.classList.remove('is-active');b.setAttribute('aria-pressed','false')});
+  const allOpen=controls.querySelector('.ofilter[data-openness="all"]');
+  if(allOpen){allOpen.classList.add('is-active');allOpen.setAttribute('aria-pressed','true')}
+  activeOpenness='all';
+}
+ofilters.forEach(btn=>btn.addEventListener('click',()=>{
+  ofilters.forEach(b=>{b.classList.remove('is-active');b.setAttribute('aria-pressed','false')});
+  btn.classList.add('is-active');btn.setAttribute('aria-pressed','true');activeOpenness=btn.dataset.openness;
+  document.querySelectorAll('.outcome-card.is-active').forEach(c=>{c.classList.remove('is-active');c.setAttribute('aria-pressed','false')});
+  renderPlatforms();
 }));
 searchInput.addEventListener('input',()=>{searchTerm=searchInput.value.trim().toLowerCase();renderPlatforms()});
 
@@ -215,6 +242,11 @@ platformGrid.addEventListener('click',e=>{
   const trigger=e.target.closest('.open-system');if(!trigger)return;
   const p=platforms.find(item=>item.id===trigger.dataset.system);if(!p)return;
   dialogKicker.textContent=p.system;dialogTitle.textContent=p.name;dialogIntro.textContent=p.best;
+  let openChip=dialog.querySelector('.dialog-openness');
+  if(!openChip){openChip=document.createElement('div');openChip.className='dialog-openness';dialogTitle.insertAdjacentElement('afterend',openChip);}
+  const openVals=(p.openness||[]).filter(v=>OPENNESS_LABEL[v]);
+  openChip.style.display=openVals.length?'':'none';
+  openChip.innerHTML=openVals.map(v=>`<span>${OPENNESS_LABEL[v]}</span>`).join('');
   dialogStages.innerHTML=p.stages.map(s=>`<span>${s}</span>`).join('');
   dialogWorkflows.innerHTML=p.workflows.map(([title,body],i)=>`<div class="dialog-workflow"><strong>${String(i+1).padStart(2,'0')} / ${title}</strong><span>${body}</span></div>`).join('');
   dialog.showModal();
