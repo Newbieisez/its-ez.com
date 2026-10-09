@@ -1,17 +1,17 @@
 {
   "methodologyVersion": "3.0",
-  "generatedAt": "2026-10-04T00:00:00.000Z",
+  "generatedAt": "2026-10-09T00:00:00.000Z",
   "description": "Expert provisional assessments. Based on product documentation, market evidence, and analyst assessment. NOT based on fabricated review data. Clearly labeled PROVISIONAL.",
   "scores": {
     "chatgpt": {
-      "score": 9.0,
+      "score": 9,
       "confidence": "HIGH",
       "components": {
         "functionalCapability": 9.2,
-        "workflowFit": 9.0,
+        "workflowFit": 9,
         "integrationReadiness": 8.5,
         "marketEvidence": 9.5,
-        "productMaturity": 9.0
+        "productMaturity": 9
       },
       "note": "Market-defining AI platform. Broadest capability, massive adoption, extensive ecosystem.",
       "evidenceType": "expert-provisional",
@@ -23,7 +23,7 @@
       "components": {
         "functionalCapability": 9.3,
         "workflowFit": 8.8,
-        "integrationReadiness": 8.0,
+        "integrationReadiness": 8,
         "marketEvidence": 8.5,
         "productMaturity": 8.5
       },
@@ -37,7 +37,7 @@
       "components": {
         "functionalCapability": 8.8,
         "workflowFit": 8.5,
-        "integrationReadiness": 9.0,
+        "integrationReadiness": 9,
         "marketEvidence": 8.5,
         "productMaturity": 8.5
       },
@@ -52,7 +52,7 @@
         "functionalCapability": 8.5,
         "workflowFit": 8.8,
         "integrationReadiness": 9.2,
-        "marketEvidence": 9.0,
+        "marketEvidence": 9,
         "productMaturity": 8.8
       },
       "note": "Dominant in Microsoft 365 environments. Unmatched Office integration.",
@@ -60,13 +60,13 @@
       "assessedAt": "2026-10-04"
     },
     "perplexity": {
-      "score": 8.0,
+      "score": 8,
       "confidence": "MEDIUM",
       "components": {
         "functionalCapability": 8.7,
         "workflowFit": 8.2,
-        "integrationReadiness": 7.0,
-        "marketEvidence": 8.0,
+        "integrationReadiness": 7,
+        "marketEvidence": 8,
         "productMaturity": 7.5
       },
       "note": "Best-in-class AI search with citations. Rapid growth, evolving business model.",
@@ -74,14 +74,14 @@
       "assessedAt": "2026-10-04"
     },
     "notebooklm": {
-      "score": 8.0,
+      "score": 8,
       "confidence": "MEDIUM",
       "components": {
         "functionalCapability": 8.8,
-        "workflowFit": 8.0,
+        "workflowFit": 8,
         "integrationReadiness": 7.5,
         "marketEvidence": 7.5,
-        "productMaturity": 7.0
+        "productMaturity": 7
       },
       "note": "Exceptional source-grounded synthesis. Google backing, still maturing.",
       "evidenceType": "expert-provisional",
@@ -92,10 +92,10 @@
       "confidence": "HIGH",
       "components": {
         "functionalCapability": 8.8,
-        "workflowFit": 9.0,
+        "workflowFit": 9,
         "integrationReadiness": 8.5,
         "marketEvidence": 9.2,
-        "productMaturity": 9.0
+        "productMaturity": 9
       },
       "note": "Dominant visual design platform. Massive adoption, strong AI features.",
       "evidenceType": "expert-provisional",
@@ -107,7 +107,7 @@
       "components": {
         "functionalCapability": 8.2,
         "workflowFit": 7.8,
-        "integrationReadiness": 7.0,
+        "integrationReadiness": 7,
         "marketEvidence": 7.8,
         "productMaturity": 7.5
       },
@@ -119,11 +119,11 @@
       "score": 7.5,
       "confidence": "MEDIUM",
       "components": {
-        "functionalCapability": 8.0,
+        "functionalCapability": 8,
         "workflowFit": 7.5,
         "integrationReadiness": 6.8,
         "marketEvidence": 7.5,
-        "productMaturity": 7.0
+        "productMaturity": 7
       },
       "note": "Strong AI video generation. Competitive with Synthesia.",
       "evidenceType": "expert-provisional",
@@ -133,8 +133,8 @@
       "score": 8.2,
       "confidence": "MEDIUM",
       "components": {
-        "functionalCapability": 9.0,
-        "workflowFit": 8.0,
+        "functionalCapability": 9,
+        "workflowFit": 8,
         "integrationReadiness": 7.5,
         "marketEvidence": 8.2,
         "productMaturity": 7.5
@@ -144,14 +144,14 @@
       "assessedAt": "2026-10-04"
     },
     "descript": {
-      "score": 8.0,
+      "score": 8,
       "confidence": "MEDIUM",
       "components": {
         "functionalCapability": 8.5,
         "workflowFit": 8.2,
         "integrationReadiness": 7.2,
         "marketEvidence": 7.8,
-        "productMaturity": 8.0
+        "productMaturity": 8
       },
       "note": "Revolutionary transcript-based editing. Strong creator adoption.",
       "evidenceType": "expert-provisional",
@@ -161,11 +161,11 @@
       "score": 7.5,
       "confidence": "MEDIUM",
       "components": {
-        "functionalCapability": 8.0,
+        "functionalCapability": 8,
         "workflowFit": 7.8,
         "integrationReadiness": 6.5,
         "marketEvidence": 7.5,
-        "productMaturity": 7.0
+        "productMaturity": 7
       },
       "note": "Fast AI presentations. Good for quick business content.",
       "evidenceType": "expert-provisional",
@@ -192,8 +192,8 @@
         "functionalCapability": 7.5,
         "workflowFit": 7.2,
         "integrationReadiness": 6.5,
-        "marketEvidence": 7.0,
-        "productMaturity": 8.0
+        "marketEvidence": 7,
+        "productMaturity": 8
       },
       "note": "Established animated video. Solid but facing AI-native competition.",
       "evidenceType": "expert-provisional",
@@ -218,10 +218,10 @@
       "confidence": "HIGH",
       "components": {
         "functionalCapability": 8.5,
-        "workflowFit": 8.0,
+        "workflowFit": 8,
         "integrationReadiness": 7.5,
         "marketEvidence": 8.5,
-        "productMaturity": 9.0
+        "productMaturity": 9
       },
       "note": "Industry standard for e-learning authoring. Deep enterprise penetration.",
       "evidenceType": "expert-provisional",
@@ -235,7 +235,7 @@
         "workflowFit": 7.2,
         "integrationReadiness": 6.5,
         "marketEvidence": 6.8,
-        "productMaturity": 7.0
+        "productMaturity": 7
       },
       "note": "Personalized video for sales. Solid niche player.",
       "evidenceType": "expert-provisional",
@@ -248,7 +248,7 @@
         "functionalCapability": 8.7,
         "workflowFit": 8.3,
         "integrationReadiness": 8.5,
-        "marketEvidence": 8.0,
+        "marketEvidence": 8,
         "productMaturity": 7.8
       },
       "note": "Leading enterprise AI search. Strong Fortune 500 adoption.",
@@ -259,11 +259,11 @@
       "score": 8.3,
       "confidence": "HIGH",
       "components": {
-        "functionalCapability": 8.0,
+        "functionalCapability": 8,
         "workflowFit": 7.8,
         "integrationReadiness": 8.5,
         "marketEvidence": 8.8,
-        "productMaturity": 9.0
+        "productMaturity": 9
       },
       "note": "Standard team wiki. Atlassian ecosystem, massive install base.",
       "evidenceType": "expert-provisional",
@@ -277,7 +277,7 @@
         "workflowFit": 7.5,
         "integrationReadiness": 7.5,
         "marketEvidence": 7.2,
-        "productMaturity": 8.0
+        "productMaturity": 8
       },
       "note": "Solid knowledge management. Verified knowledge approach.",
       "evidenceType": "expert-provisional",
@@ -288,10 +288,10 @@
       "confidence": "MEDIUM",
       "components": {
         "functionalCapability": 8.2,
-        "workflowFit": 8.0,
-        "integrationReadiness": 8.0,
+        "workflowFit": 8,
+        "integrationReadiness": 8,
         "marketEvidence": 8.3,
-        "productMaturity": 8.0
+        "productMaturity": 8
       },
       "note": "Feature-rich work management. Strong SMB/mid-market adoption.",
       "evidenceType": "expert-provisional",
@@ -304,7 +304,7 @@
         "functionalCapability": 7.8,
         "workflowFit": 7.5,
         "integrationReadiness": 7.8,
-        "marketEvidence": 8.0,
+        "marketEvidence": 8,
         "productMaturity": 8.8
       },
       "note": "Enterprise work management. Solid but less innovative.",
@@ -318,7 +318,7 @@
         "functionalCapability": 8.3,
         "workflowFit": 7.8,
         "integrationReadiness": 8.8,
-        "marketEvidence": 9.0,
+        "marketEvidence": 9,
         "productMaturity": 9.2
       },
       "note": "Standard for software teams. Atlassian ecosystem dominance.",
@@ -329,9 +329,9 @@
       "score": 7.7,
       "confidence": "MEDIUM",
       "components": {
-        "functionalCapability": 8.0,
+        "functionalCapability": 8,
         "workflowFit": 8.2,
-        "integrationReadiness": 7.0,
+        "integrationReadiness": 7,
         "marketEvidence": 7.5,
         "productMaturity": 7.5
       },
@@ -360,8 +360,8 @@
         "functionalCapability": 8.5,
         "workflowFit": 8.8,
         "integrationReadiness": 8.5,
-        "marketEvidence": 9.0,
-        "productMaturity": 9.0
+        "marketEvidence": 9,
+        "productMaturity": 9
       },
       "note": "Standard for scheduling. Ubiquitous, reliable.",
       "evidenceType": "expert-provisional",
@@ -388,7 +388,7 @@
         "functionalCapability": 7.5,
         "workflowFit": 7.3,
         "integrationReadiness": 7.5,
-        "marketEvidence": 7.0,
+        "marketEvidence": 7,
         "productMaturity": 7.5
       },
       "note": "Document proposals. Solid mid-market player.",
@@ -403,7 +403,7 @@
         "workflowFit": 8.2,
         "integrationReadiness": 8.5,
         "marketEvidence": 8.5,
-        "productMaturity": 9.0
+        "productMaturity": 9
       },
       "note": "Leading sales engagement. Strong enterprise adoption.",
       "evidenceType": "expert-provisional",
@@ -417,7 +417,7 @@
         "workflowFit": 8.3,
         "integrationReadiness": 8.5,
         "marketEvidence": 8.6,
-        "productMaturity": 9.0
+        "productMaturity": 9
       },
       "note": "Sales execution leader. Deep platform.",
       "evidenceType": "expert-provisional",
@@ -443,7 +443,7 @@
       "components": {
         "functionalCapability": 7.7,
         "workflowFit": 7.5,
-        "integrationReadiness": 7.0,
+        "integrationReadiness": 7,
         "marketEvidence": 7.2,
         "productMaturity": 7.5
       },
@@ -458,7 +458,7 @@
         "functionalCapability": 7.5,
         "workflowFit": 7.3,
         "integrationReadiness": 6.8,
-        "marketEvidence": 7.0,
+        "marketEvidence": 7,
         "productMaturity": 6.8
       },
       "note": "Cold email at scale. Growing rapidly.",
@@ -470,7 +470,7 @@
       "confidence": "MEDIUM",
       "components": {
         "functionalCapability": 7.3,
-        "workflowFit": 7.0,
+        "workflowFit": 7,
         "integrationReadiness": 6.5,
         "marketEvidence": 6.8,
         "productMaturity": 6.5
@@ -484,7 +484,7 @@
       "confidence": "EARLY",
       "components": {
         "functionalCapability": 7.2,
-        "workflowFit": 7.0,
+        "workflowFit": 7,
         "integrationReadiness": 6.5,
         "marketEvidence": 6.5,
         "productMaturity": 6.5
@@ -501,7 +501,7 @@
         "workflowFit": 7.5,
         "integrationReadiness": 7.2,
         "marketEvidence": 7.5,
-        "productMaturity": 7.0
+        "productMaturity": 7
       },
       "note": "Email coaching AI. Strong sales community adoption.",
       "evidenceType": "expert-provisional",
@@ -515,7 +515,7 @@
         "workflowFit": 7.2,
         "integrationReadiness": 6.8,
         "marketEvidence": 6.8,
-        "productMaturity": 7.0
+        "productMaturity": 7
       },
       "note": "AI sales content. Solid for sequences.",
       "evidenceType": "expert-provisional",
@@ -527,7 +527,7 @@
       "components": {
         "functionalCapability": 7.6,
         "workflowFit": 7.4,
-        "integrationReadiness": 7.0,
+        "integrationReadiness": 7,
         "marketEvidence": 6.8,
         "productMaturity": 6.5
       },
@@ -539,9 +539,9 @@
       "score": 7.9,
       "confidence": "MEDIUM",
       "components": {
-        "functionalCapability": 8.0,
+        "functionalCapability": 8,
         "workflowFit": 7.8,
-        "integrationReadiness": 8.0,
+        "integrationReadiness": 8,
         "marketEvidence": 7.5,
         "productMaturity": 8.5
       },
@@ -556,7 +556,7 @@
         "functionalCapability": 7.7,
         "workflowFit": 7.5,
         "integrationReadiness": 7.2,
-        "marketEvidence": 7.0,
+        "marketEvidence": 7,
         "productMaturity": 7.2
       },
       "note": "Meeting assistant. Good for SMB.",
@@ -567,7 +567,7 @@
       "score": 7.8,
       "confidence": "MEDIUM",
       "components": {
-        "functionalCapability": 8.0,
+        "functionalCapability": 8,
         "workflowFit": 7.8,
         "integrationReadiness": 7.5,
         "marketEvidence": 7.8,
@@ -584,8 +584,8 @@
         "functionalCapability": 7.8,
         "workflowFit": 7.5,
         "integrationReadiness": 7.8,
-        "marketEvidence": 8.0,
-        "productMaturity": 8.0
+        "marketEvidence": 8,
+        "productMaturity": 8
       },
       "note": "Popular meeting assistant. Broad integrations.",
       "evidenceType": "expert-provisional",
@@ -613,7 +613,7 @@
         "workflowFit": 8.3,
         "integrationReadiness": 8.5,
         "marketEvidence": 8.5,
-        "productMaturity": 9.0
+        "productMaturity": 9
       },
       "note": "Revenue platform leader. Strong forecasting.",
       "evidenceType": "expert-provisional",
@@ -626,7 +626,7 @@
         "functionalCapability": 7.7,
         "workflowFit": 7.5,
         "integrationReadiness": 7.8,
-        "marketEvidence": 7.0,
+        "marketEvidence": 7,
         "productMaturity": 7.5
       },
       "note": "B2B attribution. Good for marketing teams.",
@@ -641,7 +641,7 @@
         "workflowFit": 7.6,
         "integrationReadiness": 7.5,
         "marketEvidence": 7.2,
-        "productMaturity": 7.0
+        "productMaturity": 7
       },
       "note": "Revenue analytics. Growing quickly.",
       "evidenceType": "expert-provisional",
@@ -654,8 +654,8 @@
         "functionalCapability": 7.6,
         "workflowFit": 7.4,
         "integrationReadiness": 7.2,
-        "marketEvidence": 7.0,
-        "productMaturity": 7.0
+        "marketEvidence": 7,
+        "productMaturity": 7
       },
       "note": "Community-led growth. Niche but valuable.",
       "evidenceType": "expert-provisional",
@@ -681,7 +681,7 @@
       "components": {
         "functionalCapability": 7.5,
         "workflowFit": 7.3,
-        "integrationReadiness": 7.0,
+        "integrationReadiness": 7,
         "marketEvidence": 7.5,
         "productMaturity": 7.8
       },
@@ -708,7 +708,7 @@
       "confidence": "EARLY",
       "components": {
         "functionalCapability": 7.3,
-        "workflowFit": 7.0,
+        "workflowFit": 7,
         "integrationReadiness": 6.5,
         "marketEvidence": 6.5,
         "productMaturity": 6.2
@@ -722,7 +722,7 @@
       "confidence": "EARLY",
       "components": {
         "functionalCapability": 7.2,
-        "workflowFit": 7.0,
+        "workflowFit": 7,
         "integrationReadiness": 6.5,
         "marketEvidence": 6.3,
         "productMaturity": 6.5
@@ -739,7 +739,7 @@
         "workflowFit": 7.5,
         "integrationReadiness": 7.2,
         "marketEvidence": 7.3,
-        "productMaturity": 7.0
+        "productMaturity": 7
       },
       "note": "AI phone calls. Impressive voice AI.",
       "evidenceType": "expert-provisional",
@@ -751,7 +751,7 @@
       "components": {
         "functionalCapability": 7.5,
         "workflowFit": 7.3,
-        "integrationReadiness": 7.0,
+        "integrationReadiness": 7,
         "marketEvidence": 6.8,
         "productMaturity": 7.2
       },
@@ -767,7 +767,7 @@
         "workflowFit": 7.7,
         "integrationReadiness": 7.5,
         "marketEvidence": 7.8,
-        "productMaturity": 8.0
+        "productMaturity": 8
       },
       "note": "Parallel dialing. Sales team staple.",
       "evidenceType": "expert-provisional",
@@ -792,7 +792,7 @@
       "confidence": "HIGH",
       "components": {
         "functionalCapability": 8.2,
-        "workflowFit": 8.0,
+        "workflowFit": 8,
         "integrationReadiness": 7.8,
         "marketEvidence": 8.3,
         "productMaturity": 8.8
@@ -802,13 +802,13 @@
       "assessedAt": "2026-10-04"
     },
     "showpad": {
-      "score": 8.0,
+      "score": 8,
       "confidence": "HIGH",
       "components": {
-        "functionalCapability": 8.0,
+        "functionalCapability": 8,
         "workflowFit": 7.8,
         "integrationReadiness": 7.8,
-        "marketEvidence": 8.0,
+        "marketEvidence": 8,
         "productMaturity": 8.8
       },
       "note": "Sales enablement. Strong content + coaching.",
@@ -823,7 +823,7 @@
         "workflowFit": 8.3,
         "integrationReadiness": 8.2,
         "marketEvidence": 8.8,
-        "productMaturity": 9.0
+        "productMaturity": 9
       },
       "note": "Enablement leader. Acquired Highspot.",
       "evidenceType": "expert-provisional",
@@ -835,7 +835,7 @@
       "components": {
         "functionalCapability": 8.3,
         "workflowFit": 8.1,
-        "integrationReadiness": 8.0,
+        "integrationReadiness": 8,
         "marketEvidence": 8.5,
         "productMaturity": 8.8
       },
@@ -847,7 +847,7 @@
       "score": 7.9,
       "confidence": "MEDIUM",
       "components": {
-        "functionalCapability": 8.0,
+        "functionalCapability": 8,
         "workflowFit": 7.8,
         "integrationReadiness": 7.5,
         "marketEvidence": 7.8,
@@ -863,7 +863,7 @@
       "components": {
         "functionalCapability": 7.9,
         "workflowFit": 7.7,
-        "integrationReadiness": 8.0,
+        "integrationReadiness": 8,
         "marketEvidence": 7.5,
         "productMaturity": 7.8
       },
@@ -892,7 +892,7 @@
         "functionalCapability": 7.6,
         "workflowFit": 7.4,
         "integrationReadiness": 7.2,
-        "marketEvidence": 7.0,
+        "marketEvidence": 7,
         "productMaturity": 7.5
       },
       "note": "Peer learning. Community approach.",
@@ -905,7 +905,7 @@
       "components": {
         "functionalCapability": 7.9,
         "workflowFit": 7.7,
-        "integrationReadiness": 7.0,
+        "integrationReadiness": 7,
         "marketEvidence": 7.5,
         "productMaturity": 7.5
       },
@@ -963,7 +963,7 @@
         "workflowFit": 7.5,
         "integrationReadiness": 7.5,
         "marketEvidence": 7.3,
-        "productMaturity": 8.0
+        "productMaturity": 8
       },
       "note": "External learning. Good for partners.",
       "evidenceType": "expert-provisional",
@@ -974,9 +974,9 @@
       "confidence": "MEDIUM",
       "components": {
         "functionalCapability": 8.3,
-        "workflowFit": 8.0,
+        "workflowFit": 8,
         "integrationReadiness": 8.5,
-        "marketEvidence": 8.0,
+        "marketEvidence": 8,
         "productMaturity": 8.2
       },
       "note": "Visual automation. Powerful, technical.",
@@ -984,7 +984,7 @@
       "assessedAt": "2026-10-04"
     },
     "n8n": {
-      "score": 8.0,
+      "score": 8,
       "confidence": "MEDIUM",
       "components": {
         "functionalCapability": 8.1,
@@ -1018,8 +1018,8 @@
         "functionalCapability": 7.6,
         "workflowFit": 7.4,
         "integrationReadiness": 7.5,
-        "marketEvidence": 7.0,
-        "productMaturity": 7.0
+        "marketEvidence": 7,
+        "productMaturity": 7
       },
       "note": "Browser automation. Good for scraping.",
       "evidenceType": "expert-provisional",
@@ -1032,7 +1032,7 @@
         "functionalCapability": 7.5,
         "workflowFit": 7.3,
         "integrationReadiness": 7.2,
-        "marketEvidence": 7.0,
+        "marketEvidence": 7,
         "productMaturity": 7.8
       },
       "note": "Partner portal. Solid for channel.",
@@ -1044,8 +1044,8 @@
       "confidence": "MEDIUM",
       "components": {
         "functionalCapability": 7.3,
-        "workflowFit": 7.0,
-        "integrationReadiness": 7.0,
+        "workflowFit": 7,
+        "integrationReadiness": 7,
         "marketEvidence": 6.5,
         "productMaturity": 7.5
       },
@@ -1089,7 +1089,7 @@
         "workflowFit": 7.7,
         "integrationReadiness": 7.8,
         "marketEvidence": 7.8,
-        "productMaturity": 8.0
+        "productMaturity": 8
       },
       "note": "Ecosystem-led growth. Network effect.",
       "evidenceType": "expert-provisional",
@@ -1103,7 +1103,7 @@
         "workflowFit": 7.6,
         "integrationReadiness": 7.8,
         "marketEvidence": 7.5,
-        "productMaturity": 8.0
+        "productMaturity": 8
       },
       "note": "CPQ + deal management. Salesforce-native.",
       "evidenceType": "expert-provisional",
@@ -1116,7 +1116,7 @@
         "functionalCapability": 7.6,
         "workflowFit": 7.4,
         "integrationReadiness": 7.2,
-        "marketEvidence": 7.0,
+        "marketEvidence": 7,
         "productMaturity": 7.3
       },
       "note": "Buyer collaboration. Digital sales rooms.",
@@ -1143,9 +1143,9 @@
       "components": {
         "functionalCapability": 7.4,
         "workflowFit": 7.2,
-        "integrationReadiness": 7.0,
+        "integrationReadiness": 7,
         "marketEvidence": 6.8,
-        "productMaturity": 7.0
+        "productMaturity": 7
       },
       "note": "Real-time coaching. Early.",
       "evidenceType": "expert-provisional",
@@ -1155,7 +1155,7 @@
       "score": 6.7,
       "confidence": "EARLY",
       "components": {
-        "functionalCapability": 7.0,
+        "functionalCapability": 7,
         "workflowFit": 6.8,
         "integrationReadiness": 6.5,
         "marketEvidence": 6.2,
@@ -1172,8 +1172,8 @@
         "functionalCapability": 6.8,
         "workflowFit": 6.5,
         "integrationReadiness": 6.2,
-        "marketEvidence": 6.0,
-        "productMaturity": 6.0
+        "marketEvidence": 6,
+        "productMaturity": 6
       },
       "note": "AI prospecting. Very early.",
       "evidenceType": "expert-provisional",
@@ -1184,7 +1184,7 @@
       "confidence": "EARLY",
       "components": {
         "functionalCapability": 7.2,
-        "workflowFit": 7.0,
+        "workflowFit": 7,
         "integrationReadiness": 6.8,
         "marketEvidence": 6.5,
         "productMaturity": 6.8
@@ -1199,7 +1199,7 @@
       "components": {
         "functionalCapability": 7.4,
         "workflowFit": 7.2,
-        "integrationReadiness": 7.0,
+        "integrationReadiness": 7,
         "marketEvidence": 6.8,
         "productMaturity": 7.2
       },
@@ -1225,7 +1225,7 @@
       "score": 6.7,
       "confidence": "EARLY",
       "components": {
-        "functionalCapability": 7.0,
+        "functionalCapability": 7,
         "workflowFit": 6.8,
         "integrationReadiness": 6.5,
         "marketEvidence": 6.2,
@@ -1242,7 +1242,7 @@
         "functionalCapability": 7.5,
         "workflowFit": 7.3,
         "integrationReadiness": 7.5,
-        "marketEvidence": 7.0,
+        "marketEvidence": 7,
         "productMaturity": 7.2
       },
       "note": "Qualified AI SDR. Conversational.",
@@ -1256,7 +1256,7 @@
         "functionalCapability": 7.6,
         "workflowFit": 7.4,
         "integrationReadiness": 7.2,
-        "marketEvidence": 7.0,
+        "marketEvidence": 7,
         "productMaturity": 7.5
       },
       "note": "AI spreadsheets. Interesting.",
@@ -1270,7 +1270,7 @@
         "functionalCapability": 6.9,
         "workflowFit": 6.7,
         "integrationReadiness": 6.3,
-        "marketEvidence": 6.0,
+        "marketEvidence": 6,
         "productMaturity": 6.2
       },
       "note": "AI video prospecting. Very early.",
@@ -1284,8 +1284,8 @@
         "functionalCapability": 6.8,
         "workflowFit": 6.5,
         "integrationReadiness": 6.2,
-        "marketEvidence": 6.0,
-        "productMaturity": 6.0
+        "marketEvidence": 6,
+        "productMaturity": 6
       },
       "note": "AI prospecting. Very early.",
       "evidenceType": "expert-provisional",
@@ -1311,8 +1311,8 @@
       "components": {
         "functionalCapability": 7.5,
         "workflowFit": 7.2,
-        "integrationReadiness": 7.0,
-        "marketEvidence": 7.0,
+        "integrationReadiness": 7,
+        "marketEvidence": 7,
         "productMaturity": 7.5
       },
       "note": "AI SDR by Reply.io. Automated prospecting with AI personalization.",
@@ -1323,23 +1323,23 @@
       "score": 7.8,
       "confidence": "EARLY",
       "components": {
-        "functionalCapability": 8.0,
+        "functionalCapability": 8,
         "workflowFit": 7.5,
         "integrationReadiness": 7.5,
-        "marketEvidence": 7.0,
-        "productMaturity": 7.0
+        "marketEvidence": 7,
+        "productMaturity": 7
       },
       "note": "OpenAI's new agent platform. Early, but significant market signal.",
       "evidenceType": "expert-provisional",
       "assessedAt": "2026-10-04"
     },
     "meta-muse": {
-      "score": 8.0,
+      "score": 8,
       "confidence": "MEDIUM",
       "components": {
         "functionalCapability": 8.2,
         "workflowFit": 7.8,
-        "integrationReadiness": 8.0,
+        "integrationReadiness": 8,
         "marketEvidence": 7.8,
         "productMaturity": 7.5
       },
@@ -1351,7 +1351,7 @@
       "score": 7.7,
       "confidence": "EARLY",
       "components": {
-        "functionalCapability": 8.0,
+        "functionalCapability": 8,
         "workflowFit": 7.5,
         "integrationReadiness": 7.5,
         "marketEvidence": 6.8,
@@ -1367,8 +1367,8 @@
       "components": {
         "functionalCapability": 7.8,
         "workflowFit": 7.2,
-        "integrationReadiness": 7.0,
-        "marketEvidence": 7.0,
+        "integrationReadiness": 7,
+        "marketEvidence": 7,
         "productMaturity": 6.8
       },
       "note": "xAI team collaboration bots. Early, tied to X ecosystem.",
@@ -1379,11 +1379,11 @@
       "score": 7.8,
       "confidence": "MEDIUM",
       "components": {
-        "functionalCapability": 8.0,
+        "functionalCapability": 8,
         "workflowFit": 7.8,
         "integrationReadiness": 7.2,
         "marketEvidence": 7.5,
-        "productMaturity": 7.0
+        "productMaturity": 7
       },
       "note": "Autonomous AI agent. Strong demo, growing adoption.",
       "evidenceType": "expert-provisional",
@@ -1395,9 +1395,9 @@
       "components": {
         "functionalCapability": 8.5,
         "workflowFit": 8.3,
-        "integrationReadiness": 9.0,
-        "marketEvidence": 8.0,
-        "productMaturity": 8.0
+        "integrationReadiness": 9,
+        "marketEvidence": 8,
+        "productMaturity": 8
       },
       "note": "Salesforce enterprise agent platform. 7B work units delivered. Strong for Salesforce shops.",
       "evidenceType": "expert-provisional",
@@ -1408,8 +1408,8 @@
       "confidence": "MEDIUM",
       "components": {
         "functionalCapability": 8.5,
-        "workflowFit": 8.0,
-        "integrationReadiness": 8.0,
+        "workflowFit": 8,
+        "integrationReadiness": 8,
         "marketEvidence": 7.8,
         "productMaturity": 7.5
       },
@@ -1418,7 +1418,7 @@
       "assessedAt": "2026-10-04"
     },
     "comet": {
-      "score": 8.0,
+      "score": 8,
       "confidence": "MEDIUM",
       "components": {
         "functionalCapability": 8.2,
@@ -1435,11 +1435,11 @@
       "score": 8.5,
       "confidence": "MEDIUM",
       "components": {
-        "functionalCapability": 9.0,
-        "workflowFit": 8.0,
+        "functionalCapability": 9,
+        "workflowFit": 8,
         "integrationReadiness": 7.5,
         "marketEvidence": 8.2,
-        "productMaturity": 8.0
+        "productMaturity": 8
       },
       "note": "Google Veo 3.1. Best AI video generation. Native audio, 4K. Post-Sora market leader.",
       "evidenceType": "expert-provisional",
@@ -1449,15 +1449,176 @@
       "score": 7.8,
       "confidence": "EARLY",
       "components": {
-        "functionalCapability": 8.0,
+        "functionalCapability": 8,
         "workflowFit": 7.5,
         "integrationReadiness": 7.8,
-        "marketEvidence": 7.0,
-        "productMaturity": 7.0
+        "marketEvidence": 7,
+        "productMaturity": 7
       },
       "note": "NVIDIA agent safety infrastructure. Open-source. Critical for enterprise agent deployment.",
       "evidenceType": "expert-provisional",
       "assessedAt": "2026-10-04"
+    },
+    "reflection-beam": {
+      "score": 8.1,
+      "confidence": "EARLY",
+      "note": "Frontier open-weight reasoning model; announced capabilities are strong, but independent validation and release details are still pending.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "mistral-large-4": {
+      "score": 8.3,
+      "confidence": "EARLY",
+      "note": "Large multimodal open-weight model with broad capability potential; public-preview and licensing details remain in motion.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "claude-haiku-5-5": {
+      "score": 8.5,
+      "confidence": "MEDIUM",
+      "note": "Fast, low-cost model tier positioned for classification, extraction, support and voice workflows; current platform coverage is still developing.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "gpt-6-family": {
+      "score": 9.1,
+      "confidence": "MEDIUM",
+      "note": "Frontier model family with broad reasoning, creation, coding and agent workflows; score is provisional pending a stable product-family definition.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "zai-glm-5-3": {
+      "score": 8.1,
+      "confidence": "EARLY",
+      "note": "Large open-weight reasoning model with strong reported scale and enterprise availability, but independent safety and performance evidence is limited.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "nano-banana-2-1": {
+      "score": 8.3,
+      "confidence": "MEDIUM",
+      "note": "Strong image generation and editing workflow with multimodal grounding and high-resolution output; evaluated as a specialist system.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "nova-2-5-sonic": {
+      "score": 8.1,
+      "confidence": "MEDIUM",
+      "note": "Promising real-time speech-to-speech model for voice agents with tool calling; production maturity is still emerging.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "microsoft-mai-voice": {
+      "score": 7.7,
+      "confidence": "EARLY",
+      "note": "Useful first-party speech stack with fast transcription and voice generation, but public-preview status limits production confidence.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "cohere-embed-5": {
+      "score": 8,
+      "confidence": "MEDIUM",
+      "note": "Enterprise retrieval embedding family with shared index/query space, multimodal inputs and self-hosting potential.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "tiny-aya": {
+      "score": 6.8,
+      "confidence": "EARLY",
+      "note": "Interesting multilingual research model with a noncommercial license; useful for research, not yet a general commercial default.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "aleph-alpha-kolibri": {
+      "score": 7.6,
+      "confidence": "EARLY",
+      "note": "Sovereign open-weight model with commercial-use potential and strong regional relevance; adoption and independent evidence are early.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "microsoft-mxc": {
+      "score": 8.2,
+      "confidence": "EARLY",
+      "note": "Important agent-containment infrastructure concept with strong governance value; ecosystem adoption and implementation depth require validation.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "microsoft-work-iq": {
+      "score": 8,
+      "confidence": "EARLY",
+      "note": "Governed CRM-grounded agent workflow with approval-routed write-back; public-preview maturity keeps confidence provisional.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "openai-agents-api": {
+      "score": 8.8,
+      "confidence": "MEDIUM",
+      "note": "Managed agent hosting with sessions, orchestration and hosted computer use; broad utility, with production controls still being assessed.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "codex-cloud": {
+      "score": 8.7,
+      "confidence": "MEDIUM",
+      "note": "Reusable hosted development environments that improve continuity and device flexibility for agent-assisted engineering.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "codex-cli": {
+      "score": 8.9,
+      "confidence": "MEDIUM",
+      "note": "Strong agentic coding workflow with voice, delegation, session resume and worktrees; score reflects capability, not independent review volume.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "codex-security-cloud": {
+      "score": 8.5,
+      "confidence": "EARLY",
+      "note": "High-value proactive repository scanning and prepared-fix workflow; product maturity and operating boundaries are still developing.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "claude-code-mods": {
+      "score": 7.6,
+      "confidence": "EARLY",
+      "note": "Powerful extension model for coding agents, offset by an explicit trust boundary and lack of sandboxing.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "agentforce-360": {
+      "score": 8.7,
+      "confidence": "MEDIUM",
+      "note": "Broad enterprise named-agent and orchestration system with CRM-native governance; metering and rollout maturity remain considerations.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "meta-enterprise": {
+      "score": 7.4,
+      "confidence": "EARLY",
+      "note": "Strategically important enterprise AI platform direction, but announcement-level evidence makes this an early provisional assessment.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "tab-assistant": {
+      "score": 7.2,
+      "confidence": "EARLY",
+      "note": "Distinctive always-on task-execution assistant with meaningful autonomy potential; market and reliability evidence are still limited.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "perplexity-retrieval": {
+      "score": 8,
+      "confidence": "MEDIUM",
+      "note": "Open retrieval stack with useful embedding and contextual-retrieval coverage; production adoption and documentation continue to mature.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "tii-falcon-emirati": {
+      "score": 7.1,
+      "confidence": "EARLY",
+      "note": "Regionally specialized Arabic language, speech and OCR models with strong local relevance; launch evidence and licensing remain limited.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
     }
   }
 }
