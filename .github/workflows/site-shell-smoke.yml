@@ -52,7 +52,7 @@ jobs:
           grep -F 'data-ez-label="Shop">Shop</a>' global-nav.js
           grep -F '<strong>Shop Products</strong>' global-nav.js
           test -f meet/index.html
-          grep -F 'calendly.com/itsez/executive-enablement-advisory-call' meet/index.html
+          grep -F 'calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ3ZENSgQHqxy5Vg2jN72DhOrdd6_3jo4bK8v34uoIrPOM4_Yt8GiYpEPbwh_q4eYJvoG_pB8LT8' meet/index.html
           if grep -F 'calendly.com/erezhaimowicz/g2e-2026-meet-with-ez' meet/index.html; then
             echo 'G2E 2026 booking link must stay off the meet page (event is over)' >&2
             exit 1
