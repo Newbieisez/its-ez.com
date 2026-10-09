@@ -319,7 +319,8 @@ function scoreItem(product,signals,config,history,provisionalScores){
 async function main(){
   const [products,config,history,provisionalScores]=await Promise.all([catalog(),readJson(CONFIG_PATH,{}),readJson(HISTORY_PATH,{schemaVersion:1,items:{}}),readJson(PROVISIONAL_PATH,{scores:{}})]);
   const expected=Number(config.policy?.expectedCatalogSize||0);
-  if(expected&&products.length<expected)throw new Error(`AI Systems Library unexpectedly shrank: expected at least ${expected} platforms; found ${products.length}.`);\n  if(expected&&products.length>expected)console.warn(`AI Systems Library grew from configured baseline ${expected} to ${products.length}; continuing with the expanded catalog.`);
+  if(expected&&products.length<expected)throw new Error(`AI Systems Library unexpectedly shrank: expected at least ${expected} platforms; found ${products.length}.`);
+  if(expected&&products.length>expected)console.warn(`AI Systems Library grew from configured baseline ${expected} to ${products.length}; continuing with the expanded catalog.`);
   if(products.length<100)throw new Error(`AI Systems catalog unexpectedly small: ${products.length}.`);
   const output={schemaVersion:3,methodologyVersion:'3.0',generatedAt:nowIso(),refreshHours:Number(config.policy?.refreshHours||6),items:{}};
   const failures=[];
