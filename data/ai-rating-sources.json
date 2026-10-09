@@ -1,9 +1,9 @@
 {
   "schemaVersion": 3,
-  "methodologyVersion": "2.0",
+  "methodologyVersion": "3.0",
   "policy": {
     "refreshHours": 6,
-    "expectedCatalogSize": 136,
+    "expectedCatalogSize": 159,
     "minimumLiveFullPlatformSources": 2,
     "minimumLiveFullPlatformReviews": 100,
     "minimumSecondSourceReviews": 20,
