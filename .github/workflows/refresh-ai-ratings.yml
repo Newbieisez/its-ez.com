@@ -15,6 +15,7 @@ on:
       - 'ai-systems-ratings.css'
       - 'scripts/refresh-ai-ratings.mjs'
       - 'data/ai-rating-sources.json'
+      - 'data/ai-provisional-scores.json'
       - '.github/workflows/refresh-ai-ratings.yml'
   pull_request:
     paths:
@@ -26,6 +27,7 @@ on:
       - 'ai-systems-ratings.css'
       - 'scripts/refresh-ai-ratings.mjs'
       - 'data/ai-rating-sources.json'
+      - 'data/ai-provisional-scores.json'
       - '.github/workflows/refresh-ai-ratings.yml'
 
 permissions:
@@ -65,7 +67,7 @@ jobs:
 
       - name: Validate output
         run: |
-          node -e "const x=require('./data/ai-systems-ratings.json'); const count=Object.keys(x.items||{}).length; if(!Number.isInteger(x.summary?.total)||x.summary.total<1) throw new Error('ratings inventory total must be a positive integer'); if(x.summary.total!==count) throw new Error('ratings summary total must match generated item records'); if(x.methodologyVersion!=='3.0') throw new Error('EZ Score methodology must be v3.0'); console.log(x.summary)"
+          node -e "const x=require('./data/ai-systems-ratings.json'); const items=Object.values(x.items||{}); const count=items.length; if(!Number.isInteger(x.summary?.total)||x.summary.total<1) throw new Error('ratings inventory total must be a positive integer'); if(x.summary.total!==count) throw new Error('ratings summary total must match generated item records'); if(x.methodologyVersion!=='3.0') throw new Error('EZ Score methodology must be v3.0'); const incomplete=items.filter(item=>item.status==='collecting'||!Number.isFinite(Number(item.score))); if(incomplete.length) throw new Error('ratings output contains '+incomplete.length+' incomplete score records: '+incomplete.slice(0,10).map(item=>item.id).join(', ')); console.log(x.summary)"
 
       - name: Commit changed snapshots
         if: github.event_name != 'pull_request'
