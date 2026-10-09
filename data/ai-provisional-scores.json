@@ -1,6 +1,6 @@
 {
   "methodologyVersion": "3.0",
-  "generatedAt": "2026-10-09T00:00:00.000Z",
+  "generatedAt": "2026-10-10T00:00:00.000Z",
   "description": "Expert provisional assessments. Based on product documentation, market evidence, and analyst assessment. NOT based on fabricated review data. Clearly labeled PROVISIONAL.",
   "scores": {
     "chatgpt": {
@@ -1841,6 +1841,160 @@
       "score": 7.1,
       "confidence": "EARLY",
       "note": "Emerging GTM intelligence capability with promising potential but limited independent market evidence.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "claude-sonnet-5-5": {
+      "score": 7.5,
+      "confidence": "EARLY",
+      "components": {
+        "functionalCapability": 8,
+        "workflowFit": 8,
+        "integrationReadiness": 9,
+        "marketEvidence": 6,
+        "productMaturity": 7
+      },
+      "note": "Anthropic's GA mid-tier model (Sep 28, 2026) on the Claude API plus AWS, GCP, Azure, and GitHub Copilot. Suited to enablement content work (docs, slides, sheets) and agentic research at half of Opus 5.5 pricing.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "embeddinggemma-2": {
+      "score": 6.5,
+      "confidence": "EARLY",
+      "components": {
+        "functionalCapability": 7,
+        "workflowFit": 6,
+        "integrationReadiness": 8,
+        "marketEvidence": 5,
+        "productMaturity": 6
+      },
+      "note": "Google DeepMind's open 740M-parameter multimodal embedding model (Oct 6, 2026), Apache 2.0, weights live on Hugging Face. Fits as the retrieval layer for on-device sales knowledge bases and playbook RAG.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "synthid-detector": {
+      "score": 6.0,
+      "confidence": "EARLY",
+      "components": {
+        "functionalCapability": 6,
+        "workflowFit": 5,
+        "integrationReadiness": 7,
+        "marketEvidence": 6,
+        "productMaturity": 6
+      },
+      "note": "Google's public watermark-verification portal (Oct 7, 2026) at synthid.com, covering Google, OpenAI, NVIDIA and Kakao marks with Apple planned. Useful for content authenticity checks but not a core enablement workflow tool.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "google-gemini-agent": {
+      "score": 6.5,
+      "confidence": "EARLY",
+      "components": {
+        "functionalCapability": 8,
+        "workflowFit": 9,
+        "integrationReadiness": 5,
+        "marketEvidence": 5,
+        "productMaturity": 5
+      },
+      "note": "Google Cloud's universal work agent announced Oct 8, 2026 by Thomas Kurian, currently in private preview with no GA date or pricing. Highest workflow fit of the four for GTM tasks, but still unproven beyond Google's launch claims.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "jetbrains-mellum-2-1": {
+      "score": 5.2,
+      "confidence": "EARLY",
+      "components": {
+        "functionalCapability": 7,
+        "workflowFit": 3,
+        "integrationReadiness": 6,
+        "marketEvidence": 5,
+        "productMaturity": 5
+      },
+      "note": "JetBrains released Mellum2.1 on Oct 8, 2026 as a 12B MoE open code model for coding agents under Apache 2.0, with weights on Hugging Face. Agentic RL post-training is the headline improvement, but all numbers are vendor-reported and one day old.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "liquid-d1": {
+      "score": 5.8,
+      "confidence": "EARLY",
+      "components": {
+        "functionalCapability": 7,
+        "workflowFit": 8,
+        "integrationReadiness": 6,
+        "marketEvidence": 4,
+        "productMaturity": 4
+      },
+      "note": "Liquid AI released open-weight d1-3B and experimental d1-omni-600M on Oct 7, 2026. Zero-output-token decision models with calibrated probability answers fit ticket triage, lead scoring, and agent guardrails well, but benchmarks are company-controlled and the omni checkpoint is explicitly early research.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "microsoft-mai-code": {
+      "score": 4.8,
+      "confidence": "EARLY",
+      "components": {
+        "functionalCapability": 7,
+        "workflowFit": 3,
+        "integrationReadiness": 6,
+        "marketEvidence": 4,
+        "productMaturity": 4
+      },
+      "note": "Microsoft announced local execution of MAI-Code-1.1-Flash on Windows on Oct 7, 2026: 137B total / 6.8B active MoE coding model at 3-bit quantization with 256K context. Copilot hybrid routing is only experimental and not yet shipped, so this is a developer-infrastructure play with minimal direct GTM value.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "claude-dashboards-motion": {
+      "score": 6.2,
+      "confidence": "EARLY",
+      "components": {
+        "functionalCapability": 7,
+        "workflowFit": 9,
+        "integrationReadiness": 6,
+        "marketEvidence": 5,
+        "productMaturity": 4
+      },
+      "note": "Anthropic launched Claude Dashboards (paid plans, live data connectors including Salesforce) and Claude Motion (Team/Enterprise, coded explainer animations) in beta on Oct 8, 2026. Pipeline dashboards without SQL and quick explainer video content are directly relevant to enablement workflows, but both features are day-old betas.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "personal-agent-protocol": {
+      "score": 3,
+      "confidence": "EARLY",
+      "components": {
+        "functionalCapability": 3,
+        "workflowFit": 5,
+        "integrationReadiness": 2,
+        "marketEvidence": 5,
+        "productMaturity": 1
+      },
+      "note": "Meta + Sierra announced Oct 6, 2026 an open standard for agent-to-business authentication and permissions, but no spec exists yet (v0.1 due later in Oct 2026). Major backers lend weight, but nothing is shippable for GTM workflows today.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "magnific-one": {
+      "score": 5,
+      "confidence": "EARLY",
+      "components": {
+        "functionalCapability": 6,
+        "workflowFit": 4,
+        "integrationReadiness": 5,
+        "marketEvidence": 5,
+        "productMaturity": 5
+      },
+      "note": "Official launch Oct 8, 2026: image model with built-in art direction plus Brand Kit, available now on Magnific paid plans via web, apps, and MCP. Real and shipping, but marginal fit for core sales-enablement workflows beyond marketing content.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "jev": {
+      "score": 5,
+      "confidence": "EARLY",
+      "components": {
+        "functionalCapability": 6,
+        "workflowFit": 7,
+        "integrationReadiness": 4,
+        "marketEvidence": 4,
+        "productMaturity": 3
+      },
+      "note": "TypeSafe AI's decision-only model (launched Sep 15, 2026) returns typed choices, scores, and probabilities with no text output - a natural fit for lead scoring, routing, and guardrail checks in GTM workflows. Still in early access behind a waitlist, so vendor claims lack independent verification.",
       "evidenceType": "expert-provisional",
       "assessedAt": "2026-10-09"
     }
