@@ -1619,6 +1619,230 @@
       "note": "Regionally specialized Arabic language, speech and OCR models with strong local relevance; launch evidence and licensing remain limited.",
       "evidenceType": "expert-provisional",
       "assessedAt": "2026-10-09"
+    },
+    "salesforce": {
+      "score": 8.9,
+      "confidence": "HIGH",
+      "note": "Enterprise CRM and platform standard with deep automation, data and ecosystem reach.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "hubspot": {
+      "score": 8.6,
+      "confidence": "HIGH",
+      "note": "Strong integrated CRM and GTM platform with broad mid-market adoption and workflow depth.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "dynamics": {
+      "score": 8.3,
+      "confidence": "MEDIUM",
+      "note": "Powerful enterprise CRM and business application suite with strong Microsoft ecosystem fit.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "zoho": {
+      "score": 7.8,
+      "confidence": "MEDIUM",
+      "note": "Broad, cost-efficient CRM and business suite with strong SMB and mid-market coverage.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "gong": {
+      "score": 8.8,
+      "confidence": "HIGH",
+      "note": "Leading conversation intelligence and revenue workflow platform with strong enterprise adoption.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "docebo": {
+      "score": 8.2,
+      "confidence": "MEDIUM",
+      "note": "Mature learning platform with strong enterprise learning and customer education capabilities.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "360learning": {
+      "score": 7.9,
+      "confidence": "MEDIUM",
+      "note": "Collaborative learning platform with strong knowledge-sharing and course-authoring workflow.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "cornerstone": {
+      "score": 8.4,
+      "confidence": "HIGH",
+      "note": "Established enterprise talent and learning platform with broad global deployment.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "degreed": {
+      "score": 7.8,
+      "confidence": "MEDIUM",
+      "note": "Skills and learning experience platform with useful aggregation and capability-building orientation.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "learnupon": {
+      "score": 7.7,
+      "confidence": "MEDIUM",
+      "note": "Practical LMS for customer, partner and employee learning with solid mid-market fit.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "absorb": {
+      "score": 8,
+      "confidence": "MEDIUM",
+      "note": "Mature LMS with broad administration, learning delivery and reporting capability.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "sana": {
+      "score": 8.1,
+      "confidence": "MEDIUM",
+      "note": "AI-forward learning and knowledge platform with strong workflow and content potential.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "notion": {
+      "score": 8.5,
+      "confidence": "HIGH",
+      "note": "Flexible knowledge and work platform with strong adoption, collaboration and AI-assisted workflows.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "asana": {
+      "score": 8.4,
+      "confidence": "HIGH",
+      "note": "Mature work management platform with strong planning, coordination and operating cadence.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "monday": {
+      "score": 8.2,
+      "confidence": "HIGH",
+      "note": "Flexible work management platform with broad business adoption and strong automation.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "zapier": {
+      "score": 8.7,
+      "confidence": "HIGH",
+      "note": "Widely adopted automation platform with broad app coverage and accessible workflow design.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "apollo": {
+      "score": 7.9,
+      "confidence": "MEDIUM",
+      "note": "Integrated prospecting and sales engagement platform with strong SMB and mid-market utility.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "zoominfo": {
+      "score": 8.5,
+      "confidence": "HIGH",
+      "note": "Major GTM data and intelligence platform with broad enterprise sales and marketing adoption.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "6sense": {
+      "score": 8.3,
+      "confidence": "MEDIUM",
+      "note": "Account-based orchestration and intent platform with strong enterprise GTM positioning.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "attio": {
+      "score": 7.8,
+      "confidence": "EARLY",
+      "note": "Modern flexible CRM with strong product experience and promising AI-native workflow design.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "close-crm": {
+      "score": 7.9,
+      "confidence": "MEDIUM",
+      "note": "Sales-focused CRM with strong calling, pipeline and small-team execution fit.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "folk-crm": {
+      "score": 7.4,
+      "confidence": "EARLY",
+      "note": "Flexible lightweight CRM for relationship-centric teams; useful but less mature at enterprise scale.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "hyperbound": {
+      "score": 7.6,
+      "confidence": "EARLY",
+      "note": "AI-assisted sales roleplay and coaching platform with promising practice workflow potential.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "revenue-io": {
+      "score": 7.5,
+      "confidence": "EARLY",
+      "note": "Revenue workflow and intelligence platform with useful GTM potential; market evidence remains developing.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "balto": {
+      "score": 7.8,
+      "confidence": "MEDIUM",
+      "note": "Real-time conversation guidance and coaching system with strong contact-center and sales use cases.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "amplemarket": {
+      "score": 7.5,
+      "confidence": "EARLY",
+      "note": "Prospecting and outbound workflow platform with useful enrichment and execution capabilities.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "sybill": {
+      "score": 7.7,
+      "confidence": "EARLY",
+      "note": "AI meeting intelligence and signal extraction platform with strong workflow usefulness.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "warmly": {
+      "score": 7.4,
+      "confidence": "EARLY",
+      "note": "Website and buyer-intent signal platform with practical GTM routing potential.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "cognism": {
+      "score": 8,
+      "confidence": "MEDIUM",
+      "note": "Global B2B data and intelligence provider with strong international coverage.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "lusha": {
+      "score": 7.7,
+      "confidence": "MEDIUM",
+      "note": "Accessible prospecting and contact intelligence platform with broad SMB and mid-market use.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "smartwinnr": {
+      "score": 7.2,
+      "confidence": "EARLY",
+      "note": "Sales performance and incentive platform with useful gamification and coaching applications.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
+    },
+    "substrata": {
+      "score": 7.1,
+      "confidence": "EARLY",
+      "note": "Emerging GTM intelligence capability with promising potential but limited independent market evidence.",
+      "evidenceType": "expert-provisional",
+      "assessedAt": "2026-10-09"
     }
   }
 }
