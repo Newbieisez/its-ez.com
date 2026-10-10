@@ -1,7 +1,7 @@
 {
   "schemaVersion": 3,
   "methodologyVersion": "3.0",
-  "generatedAt": "2026-10-10T12:30:27.300Z",
+  "generatedAt": "2026-10-10T21:42:52.368Z",
   "refreshHours": 6,
   "items": {
     "chatgpt": {
@@ -30,7 +30,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:27.301Z"
+      "lastRefreshed": "2026-10-10T21:42:52.369Z"
     },
     "claude": {
       "id": "claude",
@@ -58,7 +58,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:27.301Z"
+      "lastRefreshed": "2026-10-10T21:42:52.369Z"
     },
     "gemini": {
       "id": "gemini",
@@ -86,7 +86,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:27.301Z"
+      "lastRefreshed": "2026-10-10T21:42:52.369Z"
     },
     "copilot": {
       "id": "copilot",
@@ -114,7 +114,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:27.301Z"
+      "lastRefreshed": "2026-10-10T21:42:52.369Z"
     },
     "perplexity": {
       "id": "perplexity",
@@ -142,7 +142,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:27.301Z"
+      "lastRefreshed": "2026-10-10T21:42:52.369Z"
     },
     "notebooklm": {
       "id": "notebooklm",
@@ -170,7 +170,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:27.301Z"
+      "lastRefreshed": "2026-10-10T21:42:52.369Z"
     },
     "clay": {
       "id": "clay",
@@ -198,7 +198,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:27.301Z"
+      "lastRefreshed": "2026-10-10T21:42:52.369Z"
     },
     "salesforce": {
       "id": "salesforce",
@@ -209,7 +209,7 @@
       "provisionalNote": null,
       "evidenceType": "review-data",
       "provisionalConfidence": null,
-      "reviewCount": 353688,
+      "reviewCount": 353686,
       "sourceCount": 1,
       "independentSourceCount": 1,
       "fullPlatformSourceCount": 0,
@@ -233,23 +233,23 @@
           "scope": "mobile_app",
           "component": "userSentiment",
           "score": 9.5,
-          "reviewCount": 353688,
+          "reviewCount": 353686,
           "reliability": 0.9,
-          "observedAt": "2026-10-10T12:30:27.428Z"
+          "observedAt": "2026-10-10T21:42:52.566Z"
         }
       ],
-      "lastRefreshed": "2026-10-10T12:30:27.429Z"
+      "lastRefreshed": "2026-10-10T21:42:52.567Z"
     },
     "hubspot": {
       "id": "hubspot",
       "name": "HubSpot",
       "status": "live",
-      "score": 9.2,
-      "confidence": 9.1,
+      "score": 9,
+      "confidence": 9,
       "provisionalNote": null,
       "evidenceType": "review-data",
       "provisionalConfidence": null,
-      "reviewCount": 30033,
+      "reviewCount": 30031,
       "sourceCount": 3,
       "independentSourceCount": 3,
       "fullPlatformSourceCount": 2,
@@ -257,14 +257,14 @@
       "secondLargestFullPlatformReviewCount": 583,
       "components": {
         "userSentiment": 8.9,
-        "reviewConfidence": 9.1,
+        "reviewConfidence": 9,
         "sourceAgreement": 10,
-        "evidenceFreshness": 10,
+        "evidenceFreshness": 9,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
-      "trend": 0,
+      "trend": -0.2,
       "sources": [
         {
           "label": "G2",
@@ -295,19 +295,19 @@
           "scope": "mobile_app",
           "component": "userSentiment",
           "score": 9.5,
-          "reviewCount": 15708,
+          "reviewCount": 15706,
           "reliability": 0.9,
-          "observedAt": "2026-10-10T12:30:27.446Z"
+          "observedAt": "2026-10-10T21:42:52.603Z"
         }
       ],
-      "lastRefreshed": "2026-10-10T12:30:27.447Z"
+      "lastRefreshed": "2026-10-10T21:42:52.604Z"
     },
     "dynamics": {
       "id": "dynamics",
       "name": "Microsoft Dynamics 365",
       "status": "live",
-      "score": 8.4,
-      "confidence": 8.6,
+      "score": 8.3,
+      "confidence": 8.4,
       "provisionalNote": null,
       "evidenceType": "review-data",
       "provisionalConfidence": null,
@@ -319,14 +319,14 @@
       "secondLargestFullPlatformReviewCount": 1024,
       "components": {
         "userSentiment": 7.9,
-        "reviewConfidence": 8.6,
+        "reviewConfidence": 8.4,
         "sourceAgreement": 9.2,
-        "evidenceFreshness": 10,
+        "evidenceFreshness": 9,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
-      "trend": 0,
+      "trend": -0.1,
       "sources": [
         {
           "label": "G2",
@@ -359,17 +359,17 @@
           "score": 8.7,
           "reviewCount": 853,
           "reliability": 0.9,
-          "observedAt": "2026-10-10T12:30:27.532Z"
+          "observedAt": "2026-10-10T21:42:52.722Z"
         }
       ],
-      "lastRefreshed": "2026-10-10T12:30:27.533Z"
+      "lastRefreshed": "2026-10-10T21:42:52.722Z"
     },
     "zoho": {
       "id": "zoho",
       "name": "Zoho CRM",
       "status": "live",
-      "score": 8.7,
-      "confidence": 8.7,
+      "score": 8.6,
+      "confidence": 8.6,
       "provisionalNote": null,
       "evidenceType": "review-data",
       "provisionalConfidence": null,
@@ -381,14 +381,14 @@
       "secondLargestFullPlatformReviewCount": 1038,
       "components": {
         "userSentiment": 8.4,
-        "reviewConfidence": 8.7,
+        "reviewConfidence": 8.6,
         "sourceAgreement": 9.6,
-        "evidenceFreshness": 10,
+        "evidenceFreshness": 9,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
-      "trend": 0,
+      "trend": -0.1,
       "sources": [
         {
           "label": "G2",
@@ -421,17 +421,17 @@
           "score": 8.8,
           "reviewCount": 2691,
           "reliability": 0.9,
-          "observedAt": "2026-10-10T12:30:27.547Z"
+          "observedAt": "2026-10-10T21:42:52.897Z"
         }
       ],
-      "lastRefreshed": "2026-10-10T12:30:27.547Z"
+      "lastRefreshed": "2026-10-10T21:42:52.897Z"
     },
     "gong": {
       "id": "gong",
       "name": "Gong",
       "status": "live",
-      "score": 9.2,
-      "confidence": 9,
+      "score": 9.1,
+      "confidence": 8.9,
       "provisionalNote": null,
       "evidenceType": "review-data",
       "provisionalConfidence": null,
@@ -443,14 +443,14 @@
       "secondLargestFullPlatformReviewCount": 1183,
       "components": {
         "userSentiment": 9.1,
-        "reviewConfidence": 9,
+        "reviewConfidence": 8.9,
         "sourceAgreement": 9.4,
-        "evidenceFreshness": 10,
+        "evidenceFreshness": 9,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
-      "trend": 0,
+      "trend": -0.1,
       "sources": [
         {
           "label": "G2",
@@ -483,10 +483,10 @@
           "score": 7.9,
           "reviewCount": 113,
           "reliability": 0.9,
-          "observedAt": "2026-10-10T12:30:27.564Z"
+          "observedAt": "2026-10-10T21:42:53.170Z"
         }
       ],
-      "lastRefreshed": "2026-10-10T12:30:27.564Z"
+      "lastRefreshed": "2026-10-10T21:42:53.170Z"
     },
     "chorus": {
       "id": "chorus",
@@ -523,17 +523,17 @@
           "score": 5.7,
           "reviewCount": 37,
           "reliability": 0.9,
-          "observedAt": "2026-10-10T12:30:27.613Z"
+          "observedAt": "2026-10-10T21:42:53.261Z"
         }
       ],
-      "lastRefreshed": "2026-10-10T12:30:27.613Z"
+      "lastRefreshed": "2026-10-10T21:42:53.261Z"
     },
     "clari": {
       "id": "clari",
       "name": "Clari Forecast (Salesloft)",
       "status": "live",
-      "score": 8.9,
-      "confidence": 8.6,
+      "score": 8.8,
+      "confidence": 8.4,
       "provisionalNote": null,
       "evidenceType": "review-data",
       "provisionalConfidence": null,
@@ -545,14 +545,14 @@
       "secondLargestFullPlatformReviewCount": 119,
       "components": {
         "userSentiment": 9,
-        "reviewConfidence": 8.6,
+        "reviewConfidence": 8.4,
         "sourceAgreement": 8,
-        "evidenceFreshness": 10,
+        "evidenceFreshness": 9,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
-      "trend": 0,
+      "trend": -0.1,
       "sources": [
         {
           "label": "G2",
@@ -585,17 +585,17 @@
           "score": 9.3,
           "reviewCount": 1129,
           "reliability": 0.9,
-          "observedAt": "2026-10-10T12:30:27.627Z"
+          "observedAt": "2026-10-10T21:42:53.344Z"
         }
       ],
-      "lastRefreshed": "2026-10-10T12:30:27.628Z"
+      "lastRefreshed": "2026-10-10T21:42:53.344Z"
     },
     "outreach": {
       "id": "outreach",
       "name": "Outreach",
       "status": "live",
-      "score": 8.7,
-      "confidence": 8.8,
+      "score": 8.6,
+      "confidence": 8.7,
       "provisionalNote": null,
       "evidenceType": "review-data",
       "provisionalConfidence": null,
@@ -607,14 +607,14 @@
       "secondLargestFullPlatformReviewCount": 1047,
       "components": {
         "userSentiment": 8.4,
-        "reviewConfidence": 8.8,
+        "reviewConfidence": 8.7,
         "sourceAgreement": 9.4,
-        "evidenceFreshness": 10,
+        "evidenceFreshness": 9,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
-      "trend": 0,
+      "trend": -0.1,
       "sources": [
         {
           "label": "G2",
@@ -647,17 +647,17 @@
           "score": 6.9,
           "reviewCount": 26,
           "reliability": 0.9,
-          "observedAt": "2026-10-10T12:30:27.640Z"
+          "observedAt": "2026-10-10T21:42:53.462Z"
         }
       ],
-      "lastRefreshed": "2026-10-10T12:30:27.641Z"
+      "lastRefreshed": "2026-10-10T21:42:53.462Z"
     },
     "salesloft": {
       "id": "salesloft",
       "name": "Salesloft",
       "status": "live",
-      "score": 8.4,
-      "confidence": 8.9,
+      "score": 8.3,
+      "confidence": 8.7,
       "provisionalNote": null,
       "evidenceType": "review-data",
       "provisionalConfidence": null,
@@ -669,14 +669,14 @@
       "secondLargestFullPlatformReviewCount": 973,
       "components": {
         "userSentiment": 8.3,
-        "reviewConfidence": 8.9,
+        "reviewConfidence": 8.7,
         "sourceAgreement": 7,
-        "evidenceFreshness": 10,
+        "evidenceFreshness": 9,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
-      "trend": 0,
+      "trend": -0.1,
       "sources": [
         {
           "label": "G2",
@@ -709,10 +709,10 @@
           "score": 7.8,
           "reviewCount": 130,
           "reliability": 0.9,
-          "observedAt": "2026-10-10T12:30:27.685Z"
+          "observedAt": "2026-10-10T21:42:53.537Z"
         }
       ],
-      "lastRefreshed": "2026-10-10T12:30:27.685Z"
+      "lastRefreshed": "2026-10-10T21:42:53.538Z"
     },
     "rattle": {
       "id": "rattle",
@@ -740,7 +740,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:27.685Z"
+      "lastRefreshed": "2026-10-10T21:42:53.538Z"
     },
     "seismic": {
       "id": "seismic",
@@ -777,17 +777,17 @@
           "score": 7.9,
           "reviewCount": 60,
           "reliability": 0.9,
-          "observedAt": "2026-10-10T12:30:27.701Z"
+          "observedAt": "2026-10-10T21:42:53.641Z"
         }
       ],
-      "lastRefreshed": "2026-10-10T12:30:27.701Z"
+      "lastRefreshed": "2026-10-10T21:42:53.641Z"
     },
     "highspot": {
       "id": "highspot",
       "name": "Highspot by Seismic",
       "status": "live",
-      "score": 8.9,
-      "confidence": 8.1,
+      "score": 8.8,
+      "confidence": 7.9,
       "provisionalNote": null,
       "evidenceType": "review-data",
       "provisionalConfidence": null,
@@ -799,14 +799,14 @@
       "secondLargestFullPlatformReviewCount": 155,
       "components": {
         "userSentiment": 9.1,
-        "reviewConfidence": 8.1,
+        "reviewConfidence": 7.9,
         "sourceAgreement": 8.2,
-        "evidenceFreshness": 10,
+        "evidenceFreshness": 9,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
-      "trend": 0,
+      "trend": -0.1,
       "sources": [
         {
           "label": "G2",
@@ -839,17 +839,17 @@
           "score": 9.7,
           "reviewCount": 115,
           "reliability": 0.9,
-          "observedAt": "2026-10-10T12:30:27.747Z"
+          "observedAt": "2026-10-10T21:42:53.730Z"
         }
       ],
-      "lastRefreshed": "2026-10-10T12:30:27.747Z"
+      "lastRefreshed": "2026-10-10T21:42:53.730Z"
     },
     "allego": {
       "id": "allego",
       "name": "Allego",
       "status": "live",
-      "score": 8.7,
-      "confidence": 7.5,
+      "score": 8.6,
+      "confidence": 7.3,
       "provisionalNote": null,
       "evidenceType": "review-data",
       "provisionalConfidence": null,
@@ -861,14 +861,14 @@
       "secondLargestFullPlatformReviewCount": 53,
       "components": {
         "userSentiment": 8.9,
-        "reviewConfidence": 7.5,
+        "reviewConfidence": 7.3,
         "sourceAgreement": 8.4,
-        "evidenceFreshness": 10,
+        "evidenceFreshness": 9,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
-      "trend": 0,
+      "trend": -0.1,
       "sources": [
         {
           "label": "G2",
@@ -901,10 +901,10 @@
           "score": 9,
           "reviewCount": 295,
           "reliability": 0.9,
-          "observedAt": "2026-10-10T12:30:27.758Z"
+          "observedAt": "2026-10-10T21:42:53.876Z"
         }
       ],
-      "lastRefreshed": "2026-10-10T12:30:27.758Z"
+      "lastRefreshed": "2026-10-10T21:42:53.876Z"
     },
     "letter-ai": {
       "id": "letter-ai",
@@ -932,14 +932,14 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:27.759Z"
+      "lastRefreshed": "2026-10-10T21:42:53.876Z"
     },
     "mindtickle": {
       "id": "mindtickle",
       "name": "Mindtickle",
       "status": "live",
-      "score": 8.6,
-      "confidence": 7.9,
+      "score": 8.5,
+      "confidence": 7.8,
       "provisionalNote": null,
       "evidenceType": "review-data",
       "provisionalConfidence": null,
@@ -951,14 +951,14 @@
       "secondLargestFullPlatformReviewCount": 52,
       "components": {
         "userSentiment": 8.8,
-        "reviewConfidence": 7.9,
+        "reviewConfidence": 7.8,
         "sourceAgreement": 7.2,
-        "evidenceFreshness": 10,
+        "evidenceFreshness": 9,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
-      "trend": 0,
+      "trend": -0.1,
       "sources": [
         {
           "label": "G2",
@@ -991,10 +991,10 @@
           "score": 7.9,
           "reviewCount": 233,
           "reliability": 0.9,
-          "observedAt": "2026-10-10T12:30:27.770Z"
+          "observedAt": "2026-10-10T21:42:53.975Z"
         }
       ],
-      "lastRefreshed": "2026-10-10T12:30:27.770Z"
+      "lastRefreshed": "2026-10-10T21:42:53.976Z"
     },
     "showpad": {
       "id": "showpad",
@@ -1031,17 +1031,17 @@
           "score": 8.1,
           "reviewCount": 29,
           "reliability": 0.9,
-          "observedAt": "2026-10-10T12:30:27.810Z"
+          "observedAt": "2026-10-10T21:42:54.074Z"
         }
       ],
-      "lastRefreshed": "2026-10-10T12:30:27.810Z"
+      "lastRefreshed": "2026-10-10T21:42:54.074Z"
     },
     "spekit": {
       "id": "spekit",
       "name": "Spekit",
       "status": "live",
-      "score": 9,
-      "confidence": 6.9,
+      "score": 8.8,
+      "confidence": 6.8,
       "provisionalNote": null,
       "evidenceType": "review-data",
       "provisionalConfidence": null,
@@ -1053,14 +1053,14 @@
       "secondLargestFullPlatformReviewCount": 27,
       "components": {
         "userSentiment": 9.2,
-        "reviewConfidence": 6.9,
+        "reviewConfidence": 6.8,
         "sourceAgreement": 9.6,
-        "evidenceFreshness": 10,
+        "evidenceFreshness": 9,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
-      "trend": 0,
+      "trend": -0.2,
       "sources": [
         {
           "label": "G2",
@@ -1085,14 +1085,14 @@
           "observedAt": "2026-09-10T20:00:00Z"
         }
       ],
-      "lastRefreshed": "2026-10-10T12:30:27.810Z"
+      "lastRefreshed": "2026-10-10T21:42:54.074Z"
     },
     "workramp": {
       "id": "workramp",
       "name": "Confirm (formerly WorkRamp)",
       "status": "provisional",
-      "score": 7.7,
-      "confidence": 7.1,
+      "score": 7.6,
+      "confidence": 7,
       "provisionalNote": null,
       "evidenceType": "review-data",
       "provisionalConfidence": null,
@@ -1104,14 +1104,14 @@
       "secondLargestFullPlatformReviewCount": 22,
       "components": {
         "userSentiment": 7.8,
-        "reviewConfidence": 7.1,
+        "reviewConfidence": 7,
         "sourceAgreement": 5.6,
-        "evidenceFreshness": 10,
+        "evidenceFreshness": 9,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
-      "trend": 0,
+      "trend": -0.1,
       "sources": [
         {
           "label": "G2",
@@ -1144,17 +1144,17 @@
           "score": 6,
           "reviewCount": 14,
           "reliability": 0.9,
-          "observedAt": "2026-10-10T12:30:27.880Z"
+          "observedAt": "2026-10-10T21:42:54.176Z"
         }
       ],
-      "lastRefreshed": "2026-10-10T12:30:27.880Z"
+      "lastRefreshed": "2026-10-10T21:42:54.176Z"
     },
     "saleshood": {
       "id": "saleshood",
       "name": "SalesHood",
       "status": "live",
-      "score": 8.5,
-      "confidence": 7.3,
+      "score": 8.4,
+      "confidence": 7.2,
       "provisionalNote": null,
       "evidenceType": "review-data",
       "provisionalConfidence": null,
@@ -1166,14 +1166,14 @@
       "secondLargestFullPlatformReviewCount": 27,
       "components": {
         "userSentiment": 8.7,
-        "reviewConfidence": 7.3,
+        "reviewConfidence": 7.2,
         "sourceAgreement": 7.6,
-        "evidenceFreshness": 10,
+        "evidenceFreshness": 9,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
-      "trend": 0,
+      "trend": -0.1,
       "sources": [
         {
           "label": "G2",
@@ -1206,10 +1206,10 @@
           "score": 8.6,
           "reviewCount": 77,
           "reliability": 0.9,
-          "observedAt": "2026-10-10T12:30:27.950Z"
+          "observedAt": "2026-10-10T21:42:54.270Z"
         }
       ],
-      "lastRefreshed": "2026-10-10T12:30:27.950Z"
+      "lastRefreshed": "2026-10-10T21:42:54.270Z"
     },
     "second-nature": {
       "id": "second-nature",
@@ -1237,14 +1237,14 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:27.950Z"
+      "lastRefreshed": "2026-10-10T21:42:54.270Z"
     },
     "docebo": {
       "id": "docebo",
       "name": "Docebo",
       "status": "live",
-      "score": 8.1,
-      "confidence": 7.5,
+      "score": 8,
+      "confidence": 7.4,
       "provisionalNote": null,
       "evidenceType": "review-data",
       "provisionalConfidence": null,
@@ -1256,14 +1256,14 @@
       "secondLargestFullPlatformReviewCount": 53,
       "components": {
         "userSentiment": 7.8,
-        "reviewConfidence": 7.5,
+        "reviewConfidence": 7.4,
         "sourceAgreement": 9,
-        "evidenceFreshness": 10,
+        "evidenceFreshness": 9,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
-      "trend": 0,
+      "trend": -0.1,
       "sources": [
         {
           "label": "G2",
@@ -1296,21 +1296,21 @@
           "score": 4.4,
           "reviewCount": 464,
           "reliability": 0.9,
-          "observedAt": "2026-10-10T12:30:27.971Z"
+          "observedAt": "2026-10-10T21:42:54.291Z"
         }
       ],
-      "lastRefreshed": "2026-10-10T12:30:27.971Z"
+      "lastRefreshed": "2026-10-10T21:42:54.291Z"
     },
     "360learning": {
       "id": "360learning",
       "name": "360Learning",
       "status": "live",
-      "score": 8.6,
-      "confidence": 7.4,
+      "score": 8.5,
+      "confidence": 7.3,
       "provisionalNote": null,
       "evidenceType": "review-data",
       "provisionalConfidence": null,
-      "reviewCount": 7675,
+      "reviewCount": 7677,
       "sourceCount": 3,
       "independentSourceCount": 3,
       "fullPlatformSourceCount": 2,
@@ -1318,14 +1318,14 @@
       "secondLargestFullPlatformReviewCount": 48,
       "components": {
         "userSentiment": 8.9,
-        "reviewConfidence": 7.4,
+        "reviewConfidence": 7.3,
         "sourceAgreement": 7.4,
-        "evidenceFreshness": 10,
+        "evidenceFreshness": 9,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
-      "trend": 0,
+      "trend": -0.1,
       "sources": [
         {
           "label": "G2",
@@ -1356,12 +1356,12 @@
           "scope": "mobile_app",
           "component": "userSentiment",
           "score": 9.7,
-          "reviewCount": 7028,
+          "reviewCount": 7030,
           "reliability": 0.9,
-          "observedAt": "2026-10-10T12:30:27.982Z"
+          "observedAt": "2026-10-10T21:42:54.387Z"
         }
       ],
-      "lastRefreshed": "2026-10-10T12:30:27.982Z"
+      "lastRefreshed": "2026-10-10T21:42:54.387Z"
     },
     "cornerstone": {
       "id": "cornerstone",
@@ -1398,17 +1398,17 @@
           "score": 5.3,
           "reviewCount": 94,
           "reliability": 0.9,
-          "observedAt": "2026-10-10T12:30:27.999Z"
+          "observedAt": "2026-10-10T21:42:54.542Z"
         }
       ],
-      "lastRefreshed": "2026-10-10T12:30:27.999Z"
+      "lastRefreshed": "2026-10-10T21:42:54.542Z"
     },
     "degreed": {
       "id": "degreed",
       "name": "Degreed",
       "status": "provisional",
-      "score": 7.2,
-      "confidence": 6.3,
+      "score": 7.1,
+      "confidence": 6.1,
       "provisionalNote": null,
       "evidenceType": "review-data",
       "provisionalConfidence": null,
@@ -1420,14 +1420,14 @@
       "secondLargestFullPlatformReviewCount": 23,
       "components": {
         "userSentiment": 7.4,
-        "reviewConfidence": 6.3,
+        "reviewConfidence": 6.1,
         "sourceAgreement": 4.8,
-        "evidenceFreshness": 10,
+        "evidenceFreshness": 9,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
-      "trend": 0,
+      "trend": -0.1,
       "sources": [
         {
           "label": "G2",
@@ -1460,10 +1460,10 @@
           "score": 7.1,
           "reviewCount": 7,
           "reliability": 0.9,
-          "observedAt": "2026-10-10T12:30:28.010Z"
+          "observedAt": "2026-10-10T21:42:54.654Z"
         }
       ],
-      "lastRefreshed": "2026-10-10T12:30:28.010Z"
+      "lastRefreshed": "2026-10-10T21:42:54.654Z"
     },
     "thought-industries": {
       "id": "thought-industries",
@@ -1491,7 +1491,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.010Z"
+      "lastRefreshed": "2026-10-10T21:42:54.654Z"
     },
     "skilljar": {
       "id": "skilljar",
@@ -1519,7 +1519,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.010Z"
+      "lastRefreshed": "2026-10-10T21:42:54.654Z"
     },
     "learnupon": {
       "id": "learnupon",
@@ -1556,10 +1556,10 @@
           "score": 6,
           "reviewCount": 2,
           "reliability": 0.9,
-          "observedAt": "2026-10-10T12:30:28.022Z"
+          "observedAt": "2026-10-10T21:42:54.798Z"
         }
       ],
-      "lastRefreshed": "2026-10-10T12:30:28.022Z"
+      "lastRefreshed": "2026-10-10T21:42:54.798Z"
     },
     "absorb": {
       "id": "absorb",
@@ -1596,10 +1596,10 @@
           "score": 9.4,
           "reviewCount": 14,
           "reliability": 0.9,
-          "observedAt": "2026-10-10T12:30:28.034Z"
+          "observedAt": "2026-10-10T21:42:54.879Z"
         }
       ],
-      "lastRefreshed": "2026-10-10T12:30:28.034Z"
+      "lastRefreshed": "2026-10-10T21:42:54.879Z"
     },
     "sana": {
       "id": "sana",
@@ -1636,10 +1636,10 @@
           "score": 8.5,
           "reviewCount": 11,
           "reliability": 0.9,
-          "observedAt": "2026-10-10T12:30:28.112Z"
+          "observedAt": "2026-10-10T21:42:55.050Z"
         }
       ],
-      "lastRefreshed": "2026-10-10T12:30:28.112Z"
+      "lastRefreshed": "2026-10-10T21:42:55.050Z"
     },
     "glean": {
       "id": "glean",
@@ -1667,14 +1667,14 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.112Z"
+      "lastRefreshed": "2026-10-10T21:42:55.050Z"
     },
     "notion": {
       "id": "notion",
       "name": "Notion",
       "status": "live",
-      "score": 9.1,
-      "confidence": 9.1,
+      "score": 9,
+      "confidence": 9,
       "provisionalNote": null,
       "evidenceType": "review-data",
       "provisionalConfidence": null,
@@ -1686,14 +1686,14 @@
       "secondLargestFullPlatformReviewCount": 1192,
       "components": {
         "userSentiment": 9,
-        "reviewConfidence": 9.1,
+        "reviewConfidence": 9,
         "sourceAgreement": 9,
-        "evidenceFreshness": 10,
+        "evidenceFreshness": 9,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
-      "trend": 0,
+      "trend": -0.1,
       "sources": [
         {
           "label": "G2",
@@ -1718,7 +1718,7 @@
           "observedAt": "2026-09-10T20:00:00Z"
         }
       ],
-      "lastRefreshed": "2026-10-10T12:30:28.112Z"
+      "lastRefreshed": "2026-10-10T21:42:55.050Z"
     },
     "guru": {
       "id": "guru",
@@ -1746,7 +1746,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.112Z"
+      "lastRefreshed": "2026-10-10T21:42:55.050Z"
     },
     "confluence": {
       "id": "confluence",
@@ -1774,7 +1774,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.112Z"
+      "lastRefreshed": "2026-10-10T21:42:55.050Z"
     },
     "articulate": {
       "id": "articulate",
@@ -1802,7 +1802,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.112Z"
+      "lastRefreshed": "2026-10-10T21:42:55.050Z"
     },
     "canva": {
       "id": "canva",
@@ -1830,7 +1830,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.112Z"
+      "lastRefreshed": "2026-10-10T21:42:55.050Z"
     },
     "synthesia": {
       "id": "synthesia",
@@ -1858,7 +1858,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.112Z"
+      "lastRefreshed": "2026-10-10T21:42:55.050Z"
     },
     "heygen": {
       "id": "heygen",
@@ -1886,7 +1886,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.112Z"
+      "lastRefreshed": "2026-10-10T21:42:55.050Z"
     },
     "elevenlabs": {
       "id": "elevenlabs",
@@ -1914,7 +1914,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.112Z"
+      "lastRefreshed": "2026-10-10T21:42:55.050Z"
     },
     "gamma": {
       "id": "gamma",
@@ -1942,7 +1942,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.112Z"
+      "lastRefreshed": "2026-10-10T21:42:55.050Z"
     },
     "vyond": {
       "id": "vyond",
@@ -1970,7 +1970,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.112Z"
+      "lastRefreshed": "2026-10-10T21:42:55.050Z"
     },
     "descript": {
       "id": "descript",
@@ -1998,7 +1998,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.112Z"
+      "lastRefreshed": "2026-10-10T21:42:55.050Z"
     },
     "loom": {
       "id": "loom",
@@ -2026,7 +2026,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.112Z"
+      "lastRefreshed": "2026-10-10T21:42:55.050Z"
     },
     "scribe": {
       "id": "scribe",
@@ -2054,7 +2054,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.112Z"
+      "lastRefreshed": "2026-10-10T21:42:55.050Z"
     },
     "guidde": {
       "id": "guidde",
@@ -2082,14 +2082,14 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.112Z"
+      "lastRefreshed": "2026-10-10T21:42:55.050Z"
     },
     "asana": {
       "id": "asana",
       "name": "Asana",
       "status": "live",
-      "score": 9,
-      "confidence": 9.1,
+      "score": 8.8,
+      "confidence": 9,
       "provisionalNote": null,
       "evidenceType": "review-data",
       "provisionalConfidence": null,
@@ -2101,14 +2101,14 @@
       "secondLargestFullPlatformReviewCount": 3064,
       "components": {
         "userSentiment": 8.7,
-        "reviewConfidence": 9.1,
+        "reviewConfidence": 9,
         "sourceAgreement": 9.4,
-        "evidenceFreshness": 10,
+        "evidenceFreshness": 9,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
-      "trend": 0,
+      "trend": -0.2,
       "sources": [
         {
           "label": "G2",
@@ -2133,14 +2133,14 @@
           "observedAt": "2026-09-10T20:00:00Z"
         }
       ],
-      "lastRefreshed": "2026-10-10T12:30:28.113Z"
+      "lastRefreshed": "2026-10-10T21:42:55.050Z"
     },
     "monday": {
       "id": "monday",
       "name": "monday.com",
       "status": "live",
-      "score": 8.9,
-      "confidence": 9.1,
+      "score": 8.8,
+      "confidence": 9,
       "provisionalNote": null,
       "evidenceType": "review-data",
       "provisionalConfidence": null,
@@ -2152,14 +2152,14 @@
       "secondLargestFullPlatformReviewCount": 5063,
       "components": {
         "userSentiment": 8.9,
-        "reviewConfidence": 9.1,
+        "reviewConfidence": 9,
         "sourceAgreement": 7.8,
-        "evidenceFreshness": 10,
+        "evidenceFreshness": 9,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
-      "trend": 0,
+      "trend": -0.1,
       "sources": [
         {
           "label": "G2",
@@ -2184,7 +2184,7 @@
           "observedAt": "2026-09-10T20:00:00Z"
         }
       ],
-      "lastRefreshed": "2026-10-10T12:30:28.113Z"
+      "lastRefreshed": "2026-10-10T21:42:55.050Z"
     },
     "jira": {
       "id": "jira",
@@ -2212,7 +2212,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.113Z"
+      "lastRefreshed": "2026-10-10T21:42:55.050Z"
     },
     "clickup": {
       "id": "clickup",
@@ -2240,7 +2240,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.113Z"
+      "lastRefreshed": "2026-10-10T21:42:55.050Z"
     },
     "smartsheet": {
       "id": "smartsheet",
@@ -2268,14 +2268,14 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.113Z"
+      "lastRefreshed": "2026-10-10T21:42:55.050Z"
     },
     "zapier": {
       "id": "zapier",
       "name": "Zapier",
       "status": "live",
-      "score": 9.1,
-      "confidence": 8.6,
+      "score": 9,
+      "confidence": 8.5,
       "provisionalNote": null,
       "evidenceType": "review-data",
       "provisionalConfidence": null,
@@ -2287,14 +2287,14 @@
       "secondLargestFullPlatformReviewCount": 887,
       "components": {
         "userSentiment": 8.9,
-        "reviewConfidence": 8.6,
+        "reviewConfidence": 8.5,
         "sourceAgreement": 9.8,
-        "evidenceFreshness": 10,
+        "evidenceFreshness": 9,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
-      "trend": 0,
+      "trend": -0.1,
       "sources": [
         {
           "label": "G2",
@@ -2319,7 +2319,7 @@
           "observedAt": "2026-09-10T20:00:00Z"
         }
       ],
-      "lastRefreshed": "2026-10-10T12:30:28.113Z"
+      "lastRefreshed": "2026-10-10T21:42:55.050Z"
     },
     "make": {
       "id": "make",
@@ -2347,7 +2347,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.113Z"
+      "lastRefreshed": "2026-10-10T21:42:55.050Z"
     },
     "n8n": {
       "id": "n8n",
@@ -2384,15 +2384,15 @@
           "score": 10,
           "reviewCount": 0,
           "reliability": 1,
-          "observedAt": "2026-10-10T12:30:28.387Z",
+          "observedAt": "2026-10-10T21:42:55.445Z",
           "metadata": {
-            "stars": 206888,
-            "forks": 61042,
-            "pushedAt": "2026-10-10T11:26:29Z"
+            "stars": 206928,
+            "forks": 61050,
+            "pushedAt": "2026-10-10T21:12:27Z"
           }
         }
       ],
-      "lastRefreshed": "2026-10-10T12:30:28.387Z"
+      "lastRefreshed": "2026-10-10T21:42:55.445Z"
     },
     "workato": {
       "id": "workato",
@@ -2420,7 +2420,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.387Z"
+      "lastRefreshed": "2026-10-10T21:42:55.445Z"
     },
     "impartner": {
       "id": "impartner",
@@ -2448,7 +2448,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.387Z"
+      "lastRefreshed": "2026-10-10T21:42:55.445Z"
     },
     "allbound": {
       "id": "allbound",
@@ -2476,7 +2476,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.387Z"
+      "lastRefreshed": "2026-10-10T21:42:55.445Z"
     },
     "channeltivity": {
       "id": "channeltivity",
@@ -2504,7 +2504,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.387Z"
+      "lastRefreshed": "2026-10-10T21:42:55.445Z"
     },
     "crossbeam": {
       "id": "crossbeam",
@@ -2532,7 +2532,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.387Z"
+      "lastRefreshed": "2026-10-10T21:42:55.445Z"
     },
     "partnerstack": {
       "id": "partnerstack",
@@ -2560,7 +2560,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.387Z"
+      "lastRefreshed": "2026-10-10T21:42:55.445Z"
     },
     "agentforce": {
       "id": "agentforce",
@@ -2588,7 +2588,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.387Z"
+      "lastRefreshed": "2026-10-10T21:42:55.445Z"
     },
     "chatgpt-work": {
       "id": "chatgpt-work",
@@ -2616,7 +2616,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.387Z"
+      "lastRefreshed": "2026-10-10T21:42:55.445Z"
     },
     "comet": {
       "id": "comet",
@@ -2644,7 +2644,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.387Z"
+      "lastRefreshed": "2026-10-10T21:42:55.445Z"
     },
     "veo": {
       "id": "veo",
@@ -2672,7 +2672,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.387Z"
+      "lastRefreshed": "2026-10-10T21:42:55.445Z"
     },
     "openshell": {
       "id": "openshell",
@@ -2700,14 +2700,14 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.387Z"
+      "lastRefreshed": "2026-10-10T21:42:55.445Z"
     },
     "apollo": {
       "id": "apollo",
       "name": "Apollo",
       "status": "live",
-      "score": 9.1,
-      "confidence": 9.1,
+      "score": 8.9,
+      "confidence": 9,
       "provisionalNote": null,
       "evidenceType": "review-data",
       "provisionalConfidence": null,
@@ -2719,14 +2719,14 @@
       "secondLargestFullPlatformReviewCount": 662,
       "components": {
         "userSentiment": 9,
-        "reviewConfidence": 9.1,
+        "reviewConfidence": 9,
         "sourceAgreement": 8.2,
-        "evidenceFreshness": 10,
+        "evidenceFreshness": 9,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
-      "trend": 0,
+      "trend": -0.2,
       "sources": [
         {
           "label": "G2",
@@ -2751,18 +2751,18 @@
           "observedAt": "2026-09-10T20:00:00Z"
         }
       ],
-      "lastRefreshed": "2026-10-10T12:30:28.387Z"
+      "lastRefreshed": "2026-10-10T21:42:55.445Z"
     },
     "zoominfo": {
       "id": "zoominfo",
       "name": "ZoomInfo",
       "status": "live",
-      "score": 8.9,
-      "confidence": 9.1,
+      "score": 8.8,
+      "confidence": 9,
       "provisionalNote": null,
       "evidenceType": "review-data",
       "provisionalConfidence": null,
-      "reviewCount": 11952,
+      "reviewCount": 11953,
       "sourceCount": 3,
       "independentSourceCount": 3,
       "fullPlatformSourceCount": 2,
@@ -2770,14 +2770,14 @@
       "secondLargestFullPlatformReviewCount": 1881,
       "components": {
         "userSentiment": 8.7,
-        "reviewConfidence": 9.1,
+        "reviewConfidence": 9,
         "sourceAgreement": 8.4,
-        "evidenceFreshness": 10,
+        "evidenceFreshness": 9,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
-      "trend": 0,
+      "trend": -0.1,
       "sources": [
         {
           "label": "G2 ZoomInfo Sales",
@@ -2808,19 +2808,19 @@
           "scope": "mobile_app",
           "component": "userSentiment",
           "score": 9.3,
-          "reviewCount": 1039,
+          "reviewCount": 1040,
           "reliability": 0.9,
-          "observedAt": "2026-10-10T12:30:28.584Z"
+          "observedAt": "2026-10-10T21:42:55.578Z"
         }
       ],
-      "lastRefreshed": "2026-10-10T12:30:28.584Z"
+      "lastRefreshed": "2026-10-10T21:42:55.578Z"
     },
     "6sense": {
       "id": "6sense",
       "name": "6sense",
       "status": "live",
-      "score": 8.8,
-      "confidence": 8.5,
+      "score": 8.6,
+      "confidence": 8.3,
       "provisionalNote": null,
       "evidenceType": "review-data",
       "provisionalConfidence": null,
@@ -2832,14 +2832,14 @@
       "secondLargestFullPlatformReviewCount": 551,
       "components": {
         "userSentiment": 8.5,
-        "reviewConfidence": 8.5,
+        "reviewConfidence": 8.3,
         "sourceAgreement": 9.6,
-        "evidenceFreshness": 10,
+        "evidenceFreshness": 9,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
-      "trend": 0,
+      "trend": -0.2,
       "sources": [
         {
           "label": "G2 6sense Revenue Marketing",
@@ -2864,7 +2864,7 @@
           "observedAt": "2026-09-10T20:00:00Z"
         }
       ],
-      "lastRefreshed": "2026-10-10T12:30:28.584Z"
+      "lastRefreshed": "2026-10-10T21:42:55.578Z"
     },
     "common-room": {
       "id": "common-room",
@@ -2892,7 +2892,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.584Z"
+      "lastRefreshed": "2026-10-10T21:42:55.578Z"
     },
     "usergems": {
       "id": "usergems",
@@ -2920,7 +2920,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.584Z"
+      "lastRefreshed": "2026-10-10T21:42:55.578Z"
     },
     "bardeen": {
       "id": "bardeen",
@@ -2948,7 +2948,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.584Z"
+      "lastRefreshed": "2026-10-10T21:42:55.578Z"
     },
     "rows": {
       "id": "rows",
@@ -2976,7 +2976,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.584Z"
+      "lastRefreshed": "2026-10-10T21:42:55.578Z"
     },
     "attio": {
       "id": "attio",
@@ -3013,10 +3013,10 @@
           "score": 7.1,
           "reviewCount": 28,
           "reliability": 0.9,
-          "observedAt": "2026-10-10T12:30:28.807Z"
+          "observedAt": "2026-10-10T21:42:55.672Z"
         }
       ],
-      "lastRefreshed": "2026-10-10T12:30:28.807Z"
+      "lastRefreshed": "2026-10-10T21:42:55.672Z"
     },
     "close-crm": {
       "id": "close-crm",
@@ -3053,10 +3053,10 @@
           "score": 7,
           "reviewCount": 51,
           "reliability": 0.9,
-          "observedAt": "2026-10-10T12:30:28.820Z"
+          "observedAt": "2026-10-10T21:42:55.722Z"
         }
       ],
-      "lastRefreshed": "2026-10-10T12:30:28.820Z"
+      "lastRefreshed": "2026-10-10T21:42:55.723Z"
     },
     "folk-crm": {
       "id": "folk-crm",
@@ -3093,10 +3093,10 @@
           "score": 10,
           "reviewCount": 2,
           "reliability": 0.9,
-          "observedAt": "2026-10-10T12:30:28.899Z"
+          "observedAt": "2026-10-10T21:42:55.815Z"
         }
       ],
-      "lastRefreshed": "2026-10-10T12:30:28.899Z"
+      "lastRefreshed": "2026-10-10T21:42:55.815Z"
     },
     "reply": {
       "id": "reply",
@@ -3124,7 +3124,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.899Z"
+      "lastRefreshed": "2026-10-10T21:42:55.815Z"
     },
     "unify": {
       "id": "unify",
@@ -3152,7 +3152,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.899Z"
+      "lastRefreshed": "2026-10-10T21:42:55.815Z"
     },
     "regie-ai": {
       "id": "regie-ai",
@@ -3180,7 +3180,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.899Z"
+      "lastRefreshed": "2026-10-10T21:42:55.815Z"
     },
     "instantly": {
       "id": "instantly",
@@ -3217,10 +3217,10 @@
           "score": 5.9,
           "reviewCount": 36,
           "reliability": 0.9,
-          "observedAt": "2026-10-10T12:30:28.909Z"
+          "observedAt": "2026-10-10T21:42:55.906Z"
         }
       ],
-      "lastRefreshed": "2026-10-10T12:30:28.909Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "smartlead": {
       "id": "smartlead",
@@ -3248,7 +3248,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.909Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "lavender": {
       "id": "lavender",
@@ -3276,7 +3276,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.909Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "jason-ai": {
       "id": "jason-ai",
@@ -3304,7 +3304,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.909Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "artisan-ava": {
       "id": "artisan-ava",
@@ -3332,7 +3332,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.909Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "11x": {
       "id": "11x",
@@ -3360,7 +3360,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.909Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "aisdr": {
       "id": "aisdr",
@@ -3388,7 +3388,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.909Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "salesforge": {
       "id": "salesforge",
@@ -3416,7 +3416,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.909Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "qualified-piper": {
       "id": "qualified-piper",
@@ -3444,7 +3444,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.909Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "nooks": {
       "id": "nooks",
@@ -3472,7 +3472,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.909Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "bland-ai": {
       "id": "bland-ai",
@@ -3500,7 +3500,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.909Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "regal": {
       "id": "regal",
@@ -3528,7 +3528,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.909Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "granola": {
       "id": "granola",
@@ -3556,7 +3556,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.909Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "avoma": {
       "id": "avoma",
@@ -3584,7 +3584,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.909Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "fathom": {
       "id": "fathom",
@@ -3612,7 +3612,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.909Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "fireflies": {
       "id": "fireflies",
@@ -3640,7 +3640,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.909Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "qwilr": {
       "id": "qwilr",
@@ -3668,7 +3668,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.909Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "pandadoc": {
       "id": "pandadoc",
@@ -3696,7 +3696,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "docusign": {
       "id": "docusign",
@@ -3724,7 +3724,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "dealhub": {
       "id": "dealhub",
@@ -3752,7 +3752,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "dock": {
       "id": "dock",
@@ -3780,7 +3780,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "calendly": {
       "id": "calendly",
@@ -3808,7 +3808,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "sendspark": {
       "id": "sendspark",
@@ -3836,7 +3836,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "hockeystack": {
       "id": "hockeystack",
@@ -3864,7 +3864,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "dreamdata": {
       "id": "dreamdata",
@@ -3892,7 +3892,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "strama-ai": {
       "id": "strama-ai",
@@ -3920,7 +3920,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "openai-dots": {
       "id": "openai-dots",
@@ -3948,7 +3948,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "meta-muse": {
       "id": "meta-muse",
@@ -3976,7 +3976,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "google-antigravity": {
       "id": "google-antigravity",
@@ -4004,7 +4004,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "grok-team-bots": {
       "id": "grok-team-bots",
@@ -4032,7 +4032,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "manus-2": {
       "id": "manus-2",
@@ -4060,14 +4060,14 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "hyperbound": {
       "id": "hyperbound",
       "name": "Hyperbound",
       "status": "provisional",
-      "score": 8.2,
-      "confidence": 4,
+      "score": 8,
+      "confidence": 3.8,
       "provisionalNote": null,
       "evidenceType": "review-data",
       "provisionalConfidence": null,
@@ -4079,14 +4079,14 @@
       "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": 9,
-        "reviewConfidence": 4,
+        "reviewConfidence": 3.8,
         "sourceAgreement": null,
-        "evidenceFreshness": 10,
+        "evidenceFreshness": 9,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
-      "trend": 0,
+      "trend": -0.2,
       "sources": [
         {
           "label": "G2",
@@ -4100,7 +4100,7 @@
           "observedAt": "2026-09-10T20:00:00Z"
         }
       ],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "attention": {
       "id": "attention",
@@ -4128,14 +4128,14 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "revenue-io": {
       "id": "revenue-io",
       "name": "Revenue.io",
       "status": "live",
-      "score": 8.5,
-      "confidence": 7.4,
+      "score": 8.4,
+      "confidence": 7.2,
       "provisionalNote": null,
       "evidenceType": "review-data",
       "provisionalConfidence": null,
@@ -4147,14 +4147,14 @@
       "secondLargestFullPlatformReviewCount": 44,
       "components": {
         "userSentiment": 8.8,
-        "reviewConfidence": 7.4,
+        "reviewConfidence": 7.2,
         "sourceAgreement": 7.2,
-        "evidenceFreshness": 10,
+        "evidenceFreshness": 9,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
-      "trend": 0,
+      "trend": -0.1,
       "sources": [
         {
           "label": "G2",
@@ -4179,14 +4179,14 @@
           "observedAt": "2026-09-10T20:00:00Z"
         }
       ],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "balto": {
       "id": "balto",
       "name": "Balto",
       "status": "provisional",
-      "score": 9.1,
-      "confidence": 6.6,
+      "score": 9,
+      "confidence": 6.4,
       "provisionalNote": null,
       "evidenceType": "review-data",
       "provisionalConfidence": null,
@@ -4198,14 +4198,14 @@
       "secondLargestFullPlatformReviewCount": 4,
       "components": {
         "userSentiment": 9.6,
-        "reviewConfidence": 6.6,
+        "reviewConfidence": 6.4,
         "sourceAgreement": 9.2,
-        "evidenceFreshness": 10,
+        "evidenceFreshness": 9,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
-      "trend": 0,
+      "trend": -0.1,
       "sources": [
         {
           "label": "G2",
@@ -4230,14 +4230,14 @@
           "observedAt": "2026-09-10T20:00:00Z"
         }
       ],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "amplemarket": {
       "id": "amplemarket",
       "name": "Amplemarket",
       "status": "live",
-      "score": 8.6,
-      "confidence": 7.1,
+      "score": 8.5,
+      "confidence": 7,
       "provisionalNote": null,
       "evidenceType": "review-data",
       "provisionalConfidence": null,
@@ -4249,14 +4249,14 @@
       "secondLargestFullPlatformReviewCount": 21,
       "components": {
         "userSentiment": 8.9,
-        "reviewConfidence": 7.1,
+        "reviewConfidence": 7,
         "sourceAgreement": 8.2,
-        "evidenceFreshness": 10,
+        "evidenceFreshness": 9,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
-      "trend": 0,
+      "trend": -0.1,
       "sources": [
         {
           "label": "G2",
@@ -4281,7 +4281,7 @@
           "observedAt": "2026-09-10T20:00:00Z"
         }
       ],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "landbase": {
       "id": "landbase",
@@ -4309,14 +4309,14 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "sybill": {
       "id": "sybill",
       "name": "Sybill",
       "status": "provisional",
-      "score": 8.5,
-      "confidence": 4.4,
+      "score": 8.4,
+      "confidence": 4.3,
       "provisionalNote": null,
       "evidenceType": "review-data",
       "provisionalConfidence": null,
@@ -4328,14 +4328,14 @@
       "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": 9.3,
-        "reviewConfidence": 4.4,
+        "reviewConfidence": 4.3,
         "sourceAgreement": null,
-        "evidenceFreshness": 10,
+        "evidenceFreshness": 9,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
-      "trend": 0,
+      "trend": -0.1,
       "sources": [
         {
           "label": "G2",
@@ -4349,7 +4349,7 @@
           "observedAt": "2026-09-10T20:00:00Z"
         }
       ],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "persana-ai": {
       "id": "persana-ai",
@@ -4377,14 +4377,14 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "warmly": {
       "id": "warmly",
       "name": "Warmly",
       "status": "provisional",
-      "score": 8.4,
-      "confidence": 4.6,
+      "score": 8.2,
+      "confidence": 4.5,
       "provisionalNote": null,
       "evidenceType": "review-data",
       "provisionalConfidence": null,
@@ -4396,14 +4396,14 @@
       "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": 9.1,
-        "reviewConfidence": 4.6,
+        "reviewConfidence": 4.5,
         "sourceAgreement": null,
-        "evidenceFreshness": 10,
+        "evidenceFreshness": 9,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
-      "trend": 0,
+      "trend": -0.2,
       "sources": [
         {
           "label": "G2",
@@ -4417,14 +4417,14 @@
           "observedAt": "2026-09-10T20:00:00Z"
         }
       ],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "cognism": {
       "id": "cognism",
       "name": "Cognism",
       "status": "live",
-      "score": 8.7,
-      "confidence": 7.7,
+      "score": 8.6,
+      "confidence": 7.5,
       "provisionalNote": null,
       "evidenceType": "review-data",
       "provisionalConfidence": null,
@@ -4436,14 +4436,14 @@
       "secondLargestFullPlatformReviewCount": 47,
       "components": {
         "userSentiment": 8.8,
-        "reviewConfidence": 7.7,
+        "reviewConfidence": 7.5,
         "sourceAgreement": 8.8,
-        "evidenceFreshness": 10,
+        "evidenceFreshness": 9,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
-      "trend": 0,
+      "trend": -0.1,
       "sources": [
         {
           "label": "G2",
@@ -4468,14 +4468,14 @@
           "observedAt": "2026-09-10T20:00:00Z"
         }
       ],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "lusha": {
       "id": "lusha",
       "name": "Lusha",
       "status": "live",
-      "score": 8.8,
-      "confidence": 8.5,
+      "score": 8.7,
+      "confidence": 8.3,
       "provisionalNote": null,
       "evidenceType": "review-data",
       "provisionalConfidence": null,
@@ -4487,14 +4487,14 @@
       "secondLargestFullPlatformReviewCount": 361,
       "components": {
         "userSentiment": 8.5,
-        "reviewConfidence": 8.5,
+        "reviewConfidence": 8.3,
         "sourceAgreement": 9.6,
-        "evidenceFreshness": 10,
+        "evidenceFreshness": 9,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
-      "trend": 0,
+      "trend": -0.1,
       "sources": [
         {
           "label": "G2",
@@ -4519,7 +4519,7 @@
           "observedAt": "2026-09-10T20:00:00Z"
         }
       ],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "lemlist": {
       "id": "lemlist",
@@ -4547,7 +4547,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "seamless-ai": {
       "id": "seamless-ai",
@@ -4575,7 +4575,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "heyreach": {
       "id": "heyreach",
@@ -4603,7 +4603,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "la-growth-machine": {
       "id": "la-growth-machine",
@@ -4631,7 +4631,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "orum": {
       "id": "orum",
@@ -4659,7 +4659,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "zime": {
       "id": "zime",
@@ -4687,14 +4687,14 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "smartwinnr": {
       "id": "smartwinnr",
       "name": "SmartWinnr",
       "status": "provisional",
-      "score": 8.7,
-      "confidence": 4.6,
+      "score": 8.6,
+      "confidence": 4.5,
       "provisionalNote": null,
       "evidenceType": "review-data",
       "provisionalConfidence": null,
@@ -4706,14 +4706,14 @@
       "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": 9.6,
-        "reviewConfidence": 4.6,
+        "reviewConfidence": 4.5,
         "sourceAgreement": null,
-        "evidenceFreshness": 10,
+        "evidenceFreshness": 9,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
-      "trend": 0,
+      "trend": -0.1,
       "sources": [
         {
           "label": "G2",
@@ -4727,7 +4727,7 @@
           "observedAt": "2026-09-10T20:00:00Z"
         }
       ],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "exec": {
       "id": "exec",
@@ -4755,14 +4755,14 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "substrata": {
       "id": "substrata",
       "name": "Substrata",
       "status": "provisional",
-      "score": 8.9,
-      "confidence": 5.2,
+      "score": 8.8,
+      "confidence": 5.1,
       "provisionalNote": null,
       "evidenceType": "review-data",
       "provisionalConfidence": null,
@@ -4774,14 +4774,14 @@
       "secondLargestFullPlatformReviewCount": 0,
       "components": {
         "userSentiment": 9.8,
-        "reviewConfidence": 5.2,
+        "reviewConfidence": 5.1,
         "sourceAgreement": null,
-        "evidenceFreshness": 10,
+        "evidenceFreshness": 9,
         "integrationReadiness": null,
         "gtmFit": null,
         "marketMomentum": null
       },
-      "trend": 0,
+      "trend": -0.1,
       "sources": [
         {
           "label": "G2",
@@ -4795,7 +4795,7 @@
           "observedAt": "2026-09-10T20:00:00Z"
         }
       ],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "vibe-prospecting": {
       "id": "vibe-prospecting",
@@ -4823,7 +4823,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "heylee": {
       "id": "heylee",
@@ -4851,7 +4851,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "reflection-beam": {
       "id": "reflection-beam",
@@ -4879,7 +4879,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "mistral-large-4": {
       "id": "mistral-large-4",
@@ -4907,7 +4907,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "claude-haiku-5-5": {
       "id": "claude-haiku-5-5",
@@ -4935,7 +4935,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "claude-sonnet-5-5": {
       "id": "claude-sonnet-5-5",
@@ -4963,7 +4963,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "gpt-6-family": {
       "id": "gpt-6-family",
@@ -4991,7 +4991,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "zai-glm-5-3": {
       "id": "zai-glm-5-3",
@@ -5019,7 +5019,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "nano-banana-2-1": {
       "id": "nano-banana-2-1",
@@ -5047,7 +5047,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "nova-2-5-sonic": {
       "id": "nova-2-5-sonic",
@@ -5075,7 +5075,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "microsoft-mai-voice": {
       "id": "microsoft-mai-voice",
@@ -5103,7 +5103,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "cohere-embed-5": {
       "id": "cohere-embed-5",
@@ -5131,7 +5131,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "embeddinggemma-2": {
       "id": "embeddinggemma-2",
@@ -5159,7 +5159,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "tiny-aya": {
       "id": "tiny-aya",
@@ -5187,7 +5187,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "aleph-alpha-kolibri": {
       "id": "aleph-alpha-kolibri",
@@ -5215,7 +5215,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "microsoft-mxc": {
       "id": "microsoft-mxc",
@@ -5243,7 +5243,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "synthid-detector": {
       "id": "synthid-detector",
@@ -5271,7 +5271,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "microsoft-work-iq": {
       "id": "microsoft-work-iq",
@@ -5299,7 +5299,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "openai-agents-api": {
       "id": "openai-agents-api",
@@ -5327,7 +5327,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "codex-cloud": {
       "id": "codex-cloud",
@@ -5355,7 +5355,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "codex-cli": {
       "id": "codex-cli",
@@ -5383,7 +5383,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "codex-security-cloud": {
       "id": "codex-security-cloud",
@@ -5411,7 +5411,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "claude-code-mods": {
       "id": "claude-code-mods",
@@ -5439,7 +5439,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "agentforce-360": {
       "id": "agentforce-360",
@@ -5467,7 +5467,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "meta-enterprise": {
       "id": "meta-enterprise",
@@ -5495,7 +5495,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "tab-assistant": {
       "id": "tab-assistant",
@@ -5523,7 +5523,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "personal-agent-protocol": {
       "id": "personal-agent-protocol",
@@ -5551,7 +5551,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "perplexity-retrieval": {
       "id": "perplexity-retrieval",
@@ -5579,7 +5579,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "tii-falcon-emirati": {
       "id": "tii-falcon-emirati",
@@ -5607,7 +5607,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "google-gemini-agent": {
       "id": "google-gemini-agent",
@@ -5635,7 +5635,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "jetbrains-mellum-2-1": {
       "id": "jetbrains-mellum-2-1",
@@ -5663,7 +5663,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "liquid-d1": {
       "id": "liquid-d1",
@@ -5691,7 +5691,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "microsoft-mai-code": {
       "id": "microsoft-mai-code",
@@ -5719,7 +5719,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "claude-dashboards-motion": {
       "id": "claude-dashboards-motion",
@@ -5747,7 +5747,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "magnific-one": {
       "id": "magnific-one",
@@ -5775,7 +5775,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     },
     "jev": {
       "id": "jev",
@@ -5803,7 +5803,7 @@
       },
       "trend": null,
       "sources": [],
-      "lastRefreshed": "2026-10-10T12:30:28.910Z"
+      "lastRefreshed": "2026-10-10T21:42:55.906Z"
     }
   },
   "summary": {
