@@ -35,7 +35,7 @@
     if(!item||item.status==='collecting'||num(item.score)===null){
       return `<span class="ez-score-chip is-collecting"><strong>—</strong><span>NOT YET RATED</span></span>`;
     }
-    const confBadge=(item.provisionalConfidence)
+    const confBadge=(item.evidenceType==='expert-provisional' && item.provisionalConfidence)
       ? `<em>${safe(item.provisionalConfidence)}</em>` : '';
     return `<span class="ez-score-chip is-${safe(item.status)}"><strong>${Number(item.score).toFixed(1)}</strong><span>EZ SCORE</span>${confBadge}${trendMarkup(item.trend)}</span>`;
   }

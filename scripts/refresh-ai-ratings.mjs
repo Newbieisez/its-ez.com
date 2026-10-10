@@ -285,6 +285,7 @@ function scoreItem(product,signals,config,history,provisionalScores){
   let finalConfidence=confidence===null?null:round(confidence);
   let provisionalNote=null;
   let evidenceType='review-data';
+  let usedExpertProvisional=false;
   
   // v3.0: Use expert provisional scores when no review data exists
   // This ensures every legitimate platform has a meaningful evaluation
@@ -297,6 +298,7 @@ function scoreItem(product,signals,config,history,provisionalScores){
     finalConfidence=null; // Confidence shown as HIGH/MEDIUM/EARLY, not numeric
     provisionalNote=prov.note;
     evidenceType='expert-provisional';
+    usedExpertProvisional=true;
   }
   
   const prior=[...(history.items?.[product.id]||[])].reverse().find(row=>Number.isFinite(Number(row.score)));
@@ -305,7 +307,7 @@ function scoreItem(product,signals,config,history,provisionalScores){
   const independentSourceCount=new Set(signals.filter(s=>s.component==='userSentiment').map(s=>s.sourceFamily||s.label).filter(Boolean)).size;
   return {
     id:product.id,name:product.name,status,score:finalScore,confidence:finalConfidence,
-    provisionalNote,evidenceType,provisionalConfidence:provisionalScores?.scores?.[product.id]?.confidence||null,
+    provisionalNote,evidenceType,provisionalConfidence:usedExpertProvisional?(provisionalScores?.scores?.[product.id]?.confidence||null):null,
     reviewCount:sentiment?.reviewCount||0,sourceCount,independentSourceCount,
     fullPlatformSourceCount:sentiment?.fullPlatformSourceCount||0,fullPlatformReviewCount:sentiment?.fullPlatformReviewCount||0,
     secondLargestFullPlatformReviewCount:sentiment?.secondLargestFullPlatformReviewCount||0,
